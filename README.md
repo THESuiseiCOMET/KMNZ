@@ -21,7 +21,6 @@
 ├── auth.html               # 登录 / 注册
 ├── reset.html              # 重置密码
 ├── user.html               # 个人中心
-├── songcover.html          # 歌回封面导入
 ├── assets/
 │   ├── fonts/
 │   └── images/
@@ -32,7 +31,6 @@
     ├── data.js             # 成员数据
     ├── main.js             # 全站通用交互
     ├── profile.js          # 个人中心交互
-    ├── songcover.js        # 歌回页交互
     └── theme.js            # 主题初始化和切换
 ```
 

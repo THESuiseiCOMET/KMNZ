@@ -1,6 +1,5 @@
 (function () {
   window.KMNZ_CONFIG = Object.assign({
-    songcoverProxy: '',
     firebaseConfig: null
   }, window.KMNZ_CONFIG || {});
 

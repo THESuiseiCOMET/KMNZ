@@ -146,7 +146,6 @@
     const siteNav = document.getElementById('site-nav');
 
     if (siteNav) {
-      addSongcoverLink(siteNav);
       addThemeToggle(siteNav);
     }
 
@@ -172,24 +171,6 @@
     }
 
     window.updateAuthUI();
-  }
-
-  function addSongcoverLink(siteNav) {
-    const exists = Array.from(siteNav.querySelectorAll('a')).some((link) => /songcover\.html$/.test(link.getAttribute('href') || ''));
-    if (exists) return;
-
-    const links = Array.from(siteNav.querySelectorAll('a'));
-    const membersLink = links.find((link) => /members\.html$/.test(link.getAttribute('href') || ''));
-    const songLink = document.createElement('a');
-    songLink.href = 'songcover.html';
-    songLink.textContent = '歌回';
-    songLink.setAttribute('aria-label', '歌回');
-
-    if (membersLink && membersLink.parentNode) {
-      membersLink.parentNode.insertBefore(songLink, membersLink.nextSibling);
-    } else {
-      siteNav.appendChild(songLink);
-    }
   }
 
   function addThemeToggle(siteNav) {
