@@ -40,7 +40,7 @@ export default function App() {
         {page === 'music' && <Music />}
         {member && <MemberDetail member={member} onBack={() => navigate('members')} />}
       </main>
-      <footer className="site-footer"><div className="container">© 2025 KMNHZ-China · 非官方粉丝资料站</div></footer>
+      <footer className="site-footer"><div className="container">© 2025 KMNHZ-China</div></footer>
     </div>
   )
 }
