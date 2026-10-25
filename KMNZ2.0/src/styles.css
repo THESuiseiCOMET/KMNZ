@@ -697,3 +697,43 @@ html[data-theme="dark"] .member-name {
 @media (prefers-reduced-motion: reduce) {
   .hero-carousel .slide, .member-photo { transition: none; }
 }
+
+/* ===================================
+   KMNZ 2.0 主题切换动画
+   =================================== */
+
+/* 禁用 View Transition 默认淡入淡出 */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* 让新主题从旧主题上方扩散 */
+::view-transition-old(root) {
+  z-index: 0;
+}
+
+::view-transition-new(root) {
+  z-index: 1;
+}
+
+/* 主题图标 */
+.theme-toggle svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+  transition: transform 0.3s ease;
+}
+
+/* 鼠标悬停轻微旋转 */
+.theme-toggle:hover svg {
+  transform: rotate(20deg);
+}
+
+/* 减少动画模式 */
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle svg {
+    transition: none;
+  }
+}
