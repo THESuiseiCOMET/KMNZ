@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KMNZ — 资料站</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="KMNZ 资料站 — 成员、活动与媒体资源">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="index.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="KMNZ — 资料站">
+  <meta property="og:description" content="展示团体成员资料、活动与媒体资源。">
+  <meta property="og:image" content="assets/images/kmnz.jpg">
+  <meta property="og:url" content="index.html">
+  <meta property="og:type" content="website">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KMNZ — 资料站">
+  <meta name="twitter:description" content="展示团体成员资料、活动与媒体资源。">
+  <meta name="twitter:image" content="assets/images/kmnz.jpg">
+  <!-- Favicon / Touch icons -->
+  <link rel="icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="home">
+  <a class="skip-link sr-only" href="#main-content">跳过到主要内容</a>
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title">KMNZ</h1>
+    <button id="nav-toggle" class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="打开导航">☰</button>
+    <nav id="site-nav" class="site-nav" role="navigation" aria-label="主导航">
+      <a href="index.html">首页</a>
+      <a href="members.html">成员</a>
+      <a href="history.html">历程</a>
+      <a href="about.html">关于</a>
+      <button id="nav-auth-btn" class="nav-auth-btn" aria-haspopup="dialog">登录 / 注册</button>
+      <div id="nav-user" class="nav-user" hidden>
+        <img id="nav-user-avatar" src="assets/images/default4.png" alt="用户头像">
+        <span id="nav-user-id"></span>
+        <button id="nav-signout" class="nav-signout" aria-label="退出登录">退出</button>
+      </div>
+    </nav>
+  </div>
+</header>
+  <main class="container">
+    <div id="main-content">
+        <section class="hero">
+      <div class="hero-inner">
+        <h2>欢迎来到 KMNZ 资料站</h2>
+        <p>这里展示团体成员资料、活动与媒体资源。点击“成员”查看每位成员的详细介绍。</p>
+
+        <div class="hero-carousel" aria-roledescription="carousel">
+          <ul class="slides">
+            <li class="slide active"><img src="assets/images/kmnz.jpg" alt="KMNZ 海报 1"></li>
+            <li class="slide"><img src="assets/images/kmnz2.png" alt="KMNZ 海报 2"></li>
+            <li class="slide"><img src="assets/images/kmnz3.png" alt="KMNZ 海报 3"></li>
+            <li class="slide"><img src="assets/images/kmnz4.png" alt="KMNZ 海报 4"></li>
+          </ul>
+          <button class="carousel-control prev" aria-label="上一张">‹</button>
+          <button class="carousel-control next" aria-label="下一张">›</button>
+          <div class="carousel-indicators" role="tablist" aria-label="轮播指示器"></div>
+        </div>
+      </div>
+    </section>
+ 
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container">© 2025 KMNHZ-China</div>
+</footer>
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

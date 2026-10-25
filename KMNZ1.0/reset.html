@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>重置密码 — KMNZ</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">KMNZ</h1>
+      <button id="nav-toggle" class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="打开导航">☰</button>
+      <nav id="site-nav" class="site-nav" role="navigation" aria-label="主导航">
+        <a href="index.html">首页</a>
+        <a href="members.html">成员</a>
+        <a href="history.html">历程</a>
+        <a href="about.html">关于</a>
+        <button id="nav-auth-btn" class="nav-auth-btn" aria-haspopup="dialog">登录 / 注册</button>
+        <div id="nav-user" class="nav-user" hidden>
+          <img id="nav-user-avatar" src="assets/images/default4.png" alt="用户头像">
+          <span id="nav-user-id"></span>
+          <button id="nav-signout" class="nav-signout" aria-label="退出登录">退出</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-section">
+    <h2>重置密码</h2>
+    <p class="help">请输入注册时使用的邮箱或用户名，并填写新密码（示例中密码将保存在浏览器 localStorage）。</p>
+    <form id="reset-form" class="card reset-card">
+      <div class="field">
+        <label for="reset-email">邮箱 / 用户名</label>
+        <input type="email" id="reset-email" placeholder="you@example.com" required aria-required="true">
+      </div>
+      <div class="field">
+        <label for="reset-password">新密码</label>
+        <input type="password" id="reset-password" required aria-required="true" placeholder="至少 8 位">
+      </div>
+      <div class="field">
+        <label for="reset-password2">确认新密码</label>
+        <input type="password" id="reset-password2" required aria-required="true">
+      </div>
+      <div class="form-action"><button type="submit">重置并登录</button></div>
+      <div id="reset-status" class="status-line form-note"></div>
+    </form>
+  </main>
+
+  <footer class="site-footer"><div class="container">© 2025 KMNHZ-China</div></footer>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
