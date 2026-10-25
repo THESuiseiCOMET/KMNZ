@@ -1,35 +1,40 @@
-# KMNZ 2.0 — 开发中
+# KMNZ 2.0 — React 页面视觉迁移
 
-这是一个 React + TypeScript + Vite 的初始工程。目前提供响应式基础界面和全站常驻的 **播放器占位组件**；尚未连接 YouTube 或 Spotify。导航目前仅用于切换内容占位区，后续会添加实际页面路由与资料数据。
+当前正在把 KMNZ 1.0 的外观与内容迁移为 React + TypeScript + Vite 组件。
 
-## 本地启动
+## 已实现
+
+- 保留 1.0 视觉风格：导航栏、海报背景、4 图轮播、成员头像和手写体名字、时间线、相关链接
+- 浅色 / 深色主题切换与浏览器主题偏好
+- 首页、成员列表、成员详情、历程、关于，以及音乐占位页面
+- 1.0 静态资源拷贝到 `src/assets/`，由 Vite 按需打包
+- **2.0 没有登录、注册、用户中心和密码重置功能**
+
+## 待实现
+
+- React Router 路由与浏览器前进 / 后退、可分享的页面地址
+- YouTube 与 Spotify 官方嵌入播放器、全站连续播放与曲库
+- 内容更新、自动化测试、生产构建验证与线上部署
+
+## 本地开发
 
 ```bash
 npm install
 npm run dev
 ```
 
-测试生产构建：
+如需明确指定本地端口，可执行：
+
+```bash
+npm run dev -- --port 5180 --strictPort
+```
+
+构建：
 
 ```bash
 npm run build
-npm run preview
 ```
 
-## 计划
+Cloudflare Pages：根目录 `KMNZ2.0`，构建命令 `npm run build`，输出目录 `dist`。发布到 GitHub Pages 的子路径时配置 `VITE_BASE_PATH=/KMNZ/`。
 
-1. 迁移 1.0 的首页、成员、历程与关于内容
-2. React Router 和共享布局，实现切换页面时播放器组件不卸载
-3. YouTube IFrame API + Spotify 官方 Embed / iFrame API，分别遵守平台播放与展示规则
-4. 统一曲库、搜索和筛选
-5. GitHub Pages + Cloudflare Pages 部署
-
-**2.0 不设计账号、登录、注册或密码重置系统。**
-
-### Cloudflare Pages
-
-项目根目录填 `KMNZ2.0`，构建命令为 `npm run build`，输出目录为 `dist`，生产分支使用当前仓库默认分支 `分支`。
-
-### GitHub Pages（后续切换）
-
-GitHub Pages 项目网站在 `/KMNZ/` 子路径下，构建时需要将 `VITE_BASE_PATH` 配置为 `/KMNZ/`。当前仓库根目录仍运行 1.0，**不要直接把新构建产物覆盖根目录**。
+这是第一阶段迁移，尚未进行浏览器视觉对照验收。旧版仍保留在 `KMNZ1.0/`，根目录旧站不受本次修改影响。
