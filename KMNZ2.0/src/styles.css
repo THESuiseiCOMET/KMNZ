@@ -737,3 +737,26 @@ html[data-theme="dark"] .member-name {
     transition: none;
   }
 }
+
+/* Navigation wordmark: theme-aware and scaled for desktop/mobile. */
+.site-header .site-title.site-logo-button {
+  min-width: 0;
+  min-height: 44px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border: 0;
+  background: transparent;
+}
+.site-logo {
+  display: block;
+  width: auto;
+  height: 34px;
+  max-width: 140px;
+  object-fit: contain;
+}
+@media (max-width: 699px) {
+  .site-logo { height: 30px; }
+}

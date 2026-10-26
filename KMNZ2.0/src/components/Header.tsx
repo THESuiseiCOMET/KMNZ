@@ -2,6 +2,8 @@ import { useState } from 'react'
 import type { MouseEvent } from 'react'
 import { flushSync } from 'react-dom'
 import type { Section } from '../types'
+import logoBlack from '../assets/images/kmnz-logo-black.svg'
+import logoWhite from '../assets/images/kmnz-logo-white.svg'
 
 interface HeaderProps {
   page: Section
@@ -86,11 +88,18 @@ export default function Header({
       <header className="site-header">
         <div className="container">
           <button
-              className="site-title"
+              className="site-title site-logo-button"
               type="button"
               onClick={() => navigate('home')}
+              aria-label="返回 KMNZ 首页"
+              title="KMNZ 首页"
           >
-            KMNZ
+            <img
+                className="site-logo"
+                src={theme === 'dark' ? logoWhite : logoBlack}
+                alt="KMNZ"
+                draggable={false}
+            />
           </button>
 
           <button
