@@ -108,7 +108,7 @@ export default function Music({ selectedId, onSelect }: MusicProps) {
               <div className={'music-art music-art-' + item.platform}>
                 {item.platform === 'youtube' ? (
                   <img
-                    src={'https://i.ytimg.com/vi/' + item.platformId + '/hqdefault.jpg'}
+                      src={'https://i.ytimg.com/vi/' + item.platformId + '/mqdefault.jpg'}
                     alt=""
                     loading="lazy"
                     referrerPolicy="no-referrer"
