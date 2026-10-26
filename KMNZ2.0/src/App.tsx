@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import PlayerDock from './components/PlayerDock'
 import { members } from './data/members'
+import { adjacentTrack } from './lib/playerControls'
 import type { MusicEntry } from './data/music'
 import About from './pages/About'
 import History from './pages/History'
@@ -28,6 +29,9 @@ export default function App() {
     setPage(next)
     window.scrollTo(0, 0)
   }
+  function skipMusic(direction: -1 | 1) {
+    setCurrentMusic((current) => current ? adjacentTrack(current, direction) : current)
+  }
   const member = members.find((item) => page === 'member-' + item.id)
   const section: Section = member ? 'members' : page as Section
 
@@ -44,7 +48,7 @@ export default function App() {
         {member && <MemberDetail member={member} onBack={() => navigate('members')} />}
       </main>
       <footer className="site-footer"><div className="container">© 2026 KMNHZ-China</div></footer>
-      {currentMusic && <PlayerDock entry={currentMusic} onClose={() => setCurrentMusic(null)} />}
+      {currentMusic && <PlayerDock entry={currentMusic} onClose={() => setCurrentMusic(null)} onSkip={skipMusic} />}
     </div>
   )
 }

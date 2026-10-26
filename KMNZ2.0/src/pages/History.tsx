@@ -19,7 +19,6 @@ export default function History() {
             </li>
           ))}
         </ul>
-        <p className="help">资料内容移自 KMNZ 1.0，后续将补充更新与出处。</p>
       </section>
     </>
   )
