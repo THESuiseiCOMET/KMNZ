@@ -38,3 +38,17 @@ npm run build
 Cloudflare Pages：根目录 `KMNZ2.0`，构建命令 `npm run build`，输出目录 `dist`。发布到 GitHub Pages 的子路径时配置 `VITE_BASE_PATH=/KMNZ/`。
 
 这是第一阶段迁移，尚未进行浏览器视觉对照验收。旧版仍保留在 `KMNZ1.0/`，根目录旧站不受本次修改影响。
+
+## 音乐模块第一阶段（精选目录与播放）
+
+- `src/data/music.ts`：音乐条目数据源，区分 YouTube MV、Spotify 曲目与专辑；新增曲目无需改播放器组件。
+- `src/pages/Music.tsx`：音乐搜索、平台筛选、时期筛选、作品卡片。
+- `src/components/PlayerDock.tsx`：真实官方 iframe 嵌入，放在 `App` 根部；切换站内栏目不会卸载。
+- YouTube 视频嵌入保持可见且不小于 200 × 200；不使用隐藏播放器或第三方音频提取。
+- 关闭播放器会卸载嵌入并停止播放；切换曲目会加载新嵌入。
+- 受浏览器自动播放限制，点击卡片后仍可能需要点击播放器内的播放按钮。
+- Spotify 播放长度、会员/登录、地区等限制由 Spotify 处理，网站不能保证全曲播放或跨平台无缝续播。
+
+首版收录的是经过人工校核链接的少量官方条目，不代表完整 KMNZ 曲库。歌曲资源全部托管在平台方，本站不存储音频文件。
+
+**下一阶段：** 扩大历史曲目数据、成员筛选、分类、专辑详情、收藏与播放队列；后续再评估 YouTube IFrame API / Spotify iFrame API 的程序化播放控制。
