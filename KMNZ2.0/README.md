@@ -42,7 +42,7 @@ Cloudflare Pages：根目录 `KMNZ2.0`，构建命令 `npm run build`，输出�
 ## 音乐模块第一阶段（精选目录与播放）
 
 - `src/data/music.ts`：音乐条目数据源，区分 YouTube MV、Spotify 曲目与专辑；新增曲目无需改播放器组件。
-- `src/pages/Music.tsx`：YouTube / Spotify 两个独立栏目，展示精简曲目列表；暂不提供搜索和筛选。
+- `src/pages/Music.tsx`：音乐搜索、平台筛选、时期筛选、作品卡片。
 - `src/components/PlayerDock.tsx`：真实官方 iframe 嵌入，放在 `App` 根部；切换站内栏目不会卸载。
 - YouTube 视频嵌入保持可见且不小于 200 × 200；不使用隐藏播放器或第三方音频提取。
 - 关闭播放器会卸载嵌入并停止播放；切换曲目会加载新嵌入。
@@ -52,9 +52,3 @@ Cloudflare Pages：根目录 `KMNZ2.0`，构建命令 `npm run build`，输出�
 首版收录的是经过人工校核链接的少量官方条目，不代表完整 KMNZ 曲库。歌曲资源全部托管在平台方，本站不存储音频文件。
 
 **下一阶段：** 扩大历史曲目数据、成员筛选、分类、专辑详情、收藏与播放队列；后续再评估 YouTube IFrame API / Spotify iFrame API 的程序化播放控制。
-
-### 音乐页精简调整
-
-- YouTube 与 Spotify 分开显示，条目列表使用紧凑行布局。
-- 移除英文横幅、说明文字、数字统计、搜索框、时期筛选与长篇免责声明。
-- 保留官方链接、点击播放、可见播放器及跨站内页面持续挂载。
