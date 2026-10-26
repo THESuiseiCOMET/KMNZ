@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { musicCatalog } from '../data/music'
 import type { MusicEntry, MusicPlatform } from '../data/music'
 
@@ -57,10 +58,31 @@ function MusicRow({
 }
 
 export default function Music({ selectedId, onSelect }: MusicProps) {
+  const [search, setSearch] = useState('')
+  const query = search.trim().toLocaleLowerCase()
+  const matches = musicCatalog.filter((entry) =>
+    entry.title.toLocaleLowerCase().includes(query) ||
+    entry.artist.toLocaleLowerCase().includes(query)
+  )
+
   return (
     <div className="music-page">
+      <label className="music-search-wrap">
+        <svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-4-4" />
+        </svg>
+        <input
+          type="search"
+          aria-label="搜索音乐"
+          placeholder="搜索"
+          value={search}
+          onChange={(event) => setSearch(event.target.value)}
+        />
+      </label>
       {platforms.map((platform) => {
-        const items = musicCatalog.filter((entry) => entry.platform === platform.id)
+        const items = matches.filter((entry) => entry.platform === platform.id)
+        if (items.length === 0) return null
         return (
           <section key={platform.id} className="music-platform-section" aria-labelledby={`music-${platform.id}`}>
             <h2 id={`music-${platform.id}`} className="music-platform-heading">{platform.label}</h2>
@@ -77,6 +99,7 @@ export default function Music({ selectedId, onSelect }: MusicProps) {
           </section>
         )
       })}
+      {matches.length === 0 && <p className="music-no-results" role="status">没有找到相关音乐</p>}
     </div>
   )
 }
