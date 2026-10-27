@@ -62,5 +62,1231 @@
     "version": {
       "kind": "unspecified"
     }
+  },
+  {
+    "id": "song-kmnculture-verse",
+    "title": "VERSE",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNCULTURE"
+    }
+  },
+  {
+    "id": "song-kmnculture-new-days",
+    "title": "NEW DAYS",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNCULTURE"
+    }
+  },
+  {
+    "id": "song-kmnculture-mid-journey",
+    "title": "MID JOURNEY",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNCULTURE"
+    }
+  },
+  {
+    "id": "song-kmnculture-lunatic-beast",
+    "title": "LUNATIC BEAST",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNCULTURE"
+    }
+  },
+  {
+    "id": "song-kmnculture-be-noisy",
+    "title": "BE NOISY!",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNCULTURE"
+    }
+  },
+  {
+    "id": "song-kmnculture-meta-fiction",
+    "title": "META FICTION",
+    "artist": "KMNZ, Taku Takahashi (m-flo), Itaq, Yackle",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNCULTURE"
+    }
+  },
+  {
+    "id": "song-kmnculture-freely",
+    "title": "FREELY",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNCULTURE"
+    }
+  },
+  {
+    "id": "song-kmnculture-calling",
+    "title": "CALLING",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNCULTURE"
+    }
+  },
+  {
+    "id": "song-kmnculture-sunday-night-magic",
+    "title": "SUNDAY NIGHT MAGIC",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNCULTURE"
+    }
+  },
+  {
+    "id": "song-chunithm-all-justice-iii-4-glory-days",
+    "title": "Glory Days",
+    "artist": "KMNZ, Neko Hacker",
+    "version": {
+      "kind": "unspecified",
+      "label": "CHUNITHM ALL JUSTICE COLLECTION episode Ⅲ 4"
+    }
+  },
+  {
+    "id": "song-noisy-night-be-noisy",
+    "title": "BE NOISY!",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "NOISY NIGHT"
+    }
+  },
+  {
+    "id": "song-noisy-night-lunatic-beast",
+    "title": "LUNATIC BEAST",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "NOISY NIGHT"
+    }
+  },
+  {
+    "id": "song-noisy-night-sunday-night-magic",
+    "title": "SUNDAY NIGHT MAGIC",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "NOISY NIGHT"
+    }
+  },
+  {
+    "id": "song-virtuareal-best-01-remix-kick-it-feat-kmnz-kakeru-remix",
+    "title": "Kick it!!!! (feat. KMNZ) - Kakeru Remix",
+    "artist": "Batsu, USAGI Production, KMNZ",
+    "version": {
+      "kind": "remix",
+      "label": "VirtuaREAL BEST.01 (REMIX)"
+    }
+  },
+  {
+    "id": "song-our-days-mc-battle",
+    "title": "MC BATTLE",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "OUR DAYS"
+    }
+  },
+  {
+    "id": "song-our-days-kickin-the-pride",
+    "title": "Kickin The Pride",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "OUR DAYS"
+    }
+  },
+  {
+    "id": "song-our-days-our-days",
+    "title": "OUR DAYS",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "OUR DAYS"
+    }
+  },
+  {
+    "id": "song-augmentation-augmentation",
+    "title": "Augmentation",
+    "artist": "KMNZ, Moe Shop",
+    "version": {
+      "kind": "unspecified",
+      "label": "Augmentation"
+    }
+  },
+  {
+    "id": "song-kmnround-departures",
+    "title": "DEPARTURES",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNROUND"
+    }
+  },
+  {
+    "id": "song-kmnround-journey",
+    "title": "JOURNEY",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNROUND"
+    }
+  },
+  {
+    "id": "song-kmnround-tokonatsu-style",
+    "title": "TOKONATSU STYLE",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNROUND"
+    }
+  },
+  {
+    "id": "song-kmnround-awaken",
+    "title": "AWAKEN",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNROUND"
+    }
+  },
+  {
+    "id": "song-kmnround-letter",
+    "title": "LETTER",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNROUND"
+    }
+  },
+  {
+    "id": "song-kmnround-daydream",
+    "title": "DAYDREAM",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNROUND"
+    }
+  },
+  {
+    "id": "song-kmnround-and",
+    "title": "AND",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNROUND"
+    }
+  },
+  {
+    "id": "song-cont-d-cont-d",
+    "title": "Cont'd",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "Cont'd"
+    }
+  },
+  {
+    "id": "song-cont-d-metro",
+    "title": "METRO",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "Cont'd"
+    }
+  },
+  {
+    "id": "song-cont-d-synchronizer",
+    "title": "Synchronizer",
+    "artist": "KMNZ, Moe Shop",
+    "version": {
+      "kind": "unspecified",
+      "label": "Cont'd"
+    }
+  },
+  {
+    "id": "song-star-light-star-light",
+    "title": "STAR-LIGHT",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "STAR-LIGHT"
+    }
+  },
+  {
+    "id": "song-kmnverse-opening",
+    "title": "OPENING",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNVERSE"
+    }
+  },
+  {
+    "id": "song-kmnverse-r-u-game",
+    "title": "R U GAME?",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNVERSE"
+    }
+  },
+  {
+    "id": "song-kmnverse-melty-girl",
+    "title": "melty girl",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNVERSE"
+    }
+  },
+  {
+    "id": "song-kmnverse-starz",
+    "title": "sTarZ",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNVERSE"
+    }
+  },
+  {
+    "id": "song-kmnverse-retouch",
+    "title": "retouch",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNVERSE"
+    }
+  },
+  {
+    "id": "song-kmnverse-def-rag",
+    "title": "DEF / RAG",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNVERSE"
+    }
+  },
+  {
+    "id": "song-kmnverse-vr",
+    "title": "VR",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNVERSE"
+    }
+  },
+  {
+    "id": "song-kmnverse-galaxy",
+    "title": "GALAXY",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNVERSE"
+    }
+  },
+  {
+    "id": "song-posse-posse",
+    "title": "POSSE",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "POSSE"
+    }
+  },
+  {
+    "id": "song-posse-ride-on",
+    "title": "Ride On",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "POSSE"
+    }
+  },
+  {
+    "id": "song-posse-three-two-wan",
+    "title": "THREE, TWO, WAN!",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "POSSE"
+    }
+  },
+  {
+    "id": "song-kmnstreet-we-are-back",
+    "title": "WE ARE BACK",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNSTREET"
+    }
+  },
+  {
+    "id": "song-kmnstreet-skool",
+    "title": "SKOOL",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNSTREET"
+    }
+  },
+  {
+    "id": "song-kmnstreet-homey",
+    "title": "HOMEY",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNSTREET"
+    }
+  },
+  {
+    "id": "song-kmnstreet-back-to-the-kids",
+    "title": "Back to the kids",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNSTREET"
+    }
+  },
+  {
+    "id": "song-kmnstreet-overnight",
+    "title": "OVERNIGHT",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNSTREET"
+    }
+  },
+  {
+    "id": "song-kmnstreet-sunny-day-morning",
+    "title": "Sunny day morning",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNSTREET"
+    }
+  },
+  {
+    "id": "song-kmnstreet-practice",
+    "title": "PRACTICE",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNSTREET"
+    }
+  },
+  {
+    "id": "song-kmnstreet-haze",
+    "title": "HAZE",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNSTREET"
+    }
+  },
+  {
+    "id": "song-vr-vr",
+    "title": "VR",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "VR"
+    }
+  },
+  {
+    "id": "song-harmonics-miraizu",
+    "title": "未来図（VESPERBELL カスカ ＆ KMNZ LIZ）",
+    "artist": "KMNZ, VESPERBELL",
+    "version": {
+      "kind": "unspecified",
+      "label": "HARMONICS"
+    }
+  },
+  {
+    "id": "song-harmonics-fiction",
+    "title": "Fiction（KMNZ LITA ＆ HACHI）",
+    "artist": "KMNZ, HACHI",
+    "version": {
+      "kind": "unspecified",
+      "label": "HARMONICS"
+    }
+  },
+  {
+    "id": "song-harmonics-admit",
+    "title": "Admit (VESPERBELL ヨミ ＆ HACHI）",
+    "artist": "VESPERBELL, HACHI",
+    "version": {
+      "kind": "unspecified",
+      "label": "HARMONICS"
+    }
+  },
+  {
+    "id": "song-harmonics-overnight-batsu-remix",
+    "title": "OVERNIGHT - Batsu Remix",
+    "artist": "KMNZ, Batsu",
+    "version": {
+      "kind": "remix",
+      "label": "HARMONICS"
+    }
+  },
+  {
+    "id": "song-harmonics-rise-blacky-remix",
+    "title": "RISE - BlackY Remix",
+    "artist": "VESPERBELL, BlackY",
+    "version": {
+      "kind": "remix",
+      "label": "HARMONICS"
+    }
+  },
+  {
+    "id": "song-harmonics-bath-time-planetarium-gaze-hes-me-remix",
+    "title": "バスタイムプラネタリウム - gaze//he's me Remix",
+    "artist": "HACHI, gaze//he's me",
+    "version": {
+      "kind": "remix",
+      "label": "HARMONICS"
+    }
+  },
+  {
+    "id": "song-reverse-verse",
+    "title": "VERSE",
+    "artist": "KMNZ, Snail's House",
+    "version": {
+      "kind": "unspecified",
+      "label": "REVERSE"
+    }
+  },
+  {
+    "id": "song-reverse-mid-journey",
+    "title": "MID JOURNEY",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "REVERSE"
+    }
+  },
+  {
+    "id": "song-reverse-calling",
+    "title": "CALLING",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "REVERSE"
+    }
+  },
+  {
+    "id": "song-kaleidoscope-juou-mujin-singer-version",
+    "title": "獣謳無尽 - Singer ver.",
+    "artist": "picco, ど～ぱみん, KMNZ",
+    "version": {
+      "kind": "other",
+      "label": "Kaleidoscope"
+    }
+  },
+  {
+    "id": "song-stray-cute-stray-cute",
+    "title": "STRAY CUTE",
+    "artist": "暴力的にカワイイ, suisoh, KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "STRAY CUTE"
+    }
+  },
+  {
+    "id": "song-gnosina-recording-4",
+    "title": "堕天",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "gnosinA"
+    }
+  },
+  {
+    "id": "song-kmnrevival-augmentation-2025",
+    "title": "Augmentation 2025",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "other",
+      "label": "KMNREVIVAL"
+    }
+  },
+  {
+    "id": "song-kmnrevival-r-u-game-2025",
+    "title": "R U GAME? 2025",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "other",
+      "label": "KMNREVIVAL"
+    }
+  },
+  {
+    "id": "song-kmnrevival-tokonatsu-style-2025",
+    "title": "TOKONATSU STYLE 2025",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "other",
+      "label": "KMNREVIVAL"
+    }
+  },
+  {
+    "id": "song-kmnrevival-skool-2025",
+    "title": "SKOOL 2025",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "other",
+      "label": "KMNREVIVAL"
+    }
+  },
+  {
+    "id": "song-kmnrevival-we-are-back-2025",
+    "title": "WE ARE BACK 2025",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "other",
+      "label": "KMNREVIVAL"
+    }
+  },
+  {
+    "id": "song-kmnrevival-overnight-2025",
+    "title": "OVERNIGHT 2025",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "other",
+      "label": "KMNREVIVAL"
+    }
+  },
+  {
+    "id": "song-kmnrevival-kickin-the-pride-2025",
+    "title": "Kickin The Pride 2025",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "other",
+      "label": "KMNREVIVAL"
+    }
+  },
+  {
+    "id": "song-kmnrevival-star-light-2025",
+    "title": "STAR-LIGHT 2025",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "other",
+      "label": "KMNREVIVAL"
+    }
+  },
+  {
+    "id": "song-juou-mujin-juou-mujin",
+    "title": "獣謳無尽",
+    "artist": "picco, ど~ぱみん, KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "獣謳無尽"
+    }
+  },
+  {
+    "id": "song-bouryokutekini-kawaii-compilation-2-disc2-stray-cute",
+    "title": "STRAY CUTE",
+    "artist": "暴力的にカワイイ, suisoh, KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "暴力的にカワイイ 2nd Compilation Album (DISC.2)"
+    }
+  },
+  {
+    "id": "song-wave-wave",
+    "title": "WAVE",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "WAVE"
+    }
+  },
+  {
+    "id": "song-wave-get-ur-lit-on",
+    "title": "Get Ur lit on",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "WAVE"
+    }
+  },
+  {
+    "id": "song-wave-hero-in-the-heart",
+    "title": "Hero in the heart",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "WAVE"
+    }
+  },
+  {
+    "id": "song-satisfaction-satisfaction-feat-kmnz",
+    "title": "SATISFACTION (feat. KMNZ)",
+    "artist": "P*Light, DJ Noriken, KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "SATISFACTION"
+    }
+  },
+  {
+    "id": "song-satisfaction-satisfaction-feat-kmnz-instrumental",
+    "title": "SATISFACTION (feat. KMNZ) - Instrumental",
+    "artist": "P*Light, DJ Noriken, KMNZ",
+    "version": {
+      "kind": "other",
+      "label": "SATISFACTION"
+    }
+  },
+  {
+    "id": "song-mimimi-mimimi",
+    "title": "MiMiMi",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "MiMiMi"
+    }
+  },
+  {
+    "id": "song-mimimi-reload",
+    "title": "RELOAD",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "MiMiMi"
+    }
+  },
+  {
+    "id": "song-mimimi-q-u-e-s-t",
+    "title": "Q.U.E.S.T",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "MiMiMi"
+    }
+  },
+  {
+    "id": "song-starz-remix-starz-remix",
+    "title": "sTarZ - Remix",
+    "artist": "KMNZ, Batsu",
+    "version": {
+      "kind": "remix",
+      "label": "sTarZ (Remix)"
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-opening",
+    "title": "OPENING",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-r-u-game",
+    "title": "R U GAME?",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-melty-girl",
+    "title": "melty girl",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-starz",
+    "title": "sTarZ",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-retouch",
+    "title": "retouch",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-def-rag",
+    "title": "DEF/RAG",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-vr",
+    "title": "VR",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-galaxy",
+    "title": "GALAXY",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-journey",
+    "title": "JOURNEY",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-tokonatsu-style",
+    "title": "TOKONATSU STYLE",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-awaken",
+    "title": "AWAKEN",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-letter",
+    "title": "LETTER",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-daydream",
+    "title": "DAYDREAM",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-and",
+    "title": "AND",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-we-are-back",
+    "title": "WE ARE BACK",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-skool",
+    "title": "SKOOL",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-homey",
+    "title": "HOMEY",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-back-to-the-kids",
+    "title": "Back to the kids",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-overnight",
+    "title": "OVERNIGHT",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-sunny-day-morning",
+    "title": "Sunny day morning",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-practice",
+    "title": "PRACTICE",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-haze",
+    "title": "HAZE",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-mc-battle",
+    "title": "MC BATTLE",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-kickin-the-pride",
+    "title": "Kickin The Pride",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-our-days",
+    "title": "OUR DAYS",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-kmnz-the-best-buddy-star-light",
+    "title": "STAR-LIGHT",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNZ THE BEST \"BUDDY\""
+    }
+  },
+  {
+    "id": "song-rewire-recoat-feat-kmnz",
+    "title": "RECOAT (feat. KMNZ)",
+    "artist": "in the blue shirt, KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "REWIRE"
+    }
+  },
+  {
+    "id": "song-virtuareal-02-kick-it-feat-kmnz",
+    "title": "Kick it!!!! (feat. KMNZ)",
+    "artist": "Batsu, KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "VirtuaREAL.02"
+    }
+  },
+  {
+    "id": "song-kmnskool-practice",
+    "title": "PRACTICE",
+    "artist": "KMNZ, YACA IN DA HOUSE",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNSKOOL"
+    }
+  },
+  {
+    "id": "song-kmnskool-skool",
+    "title": "SKOOL",
+    "artist": "KMNZ, YACA IN DA HOUSE",
+    "version": {
+      "kind": "unspecified",
+      "label": "KMNSKOOL"
+    }
+  },
+  {
+    "id": "song-moon-engine-moon-engine",
+    "title": "Moon Engine",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "Moon Engine"
+    }
+  },
+  {
+    "id": "song-moon-engine-wanted",
+    "title": "WANTED",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "Moon Engine"
+    }
+  },
+  {
+    "id": "song-moon-engine-popsta",
+    "title": "POPSTA",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "Moon Engine"
+    }
+  },
+  {
+    "id": "song-spotlight-vol-1-needy",
+    "title": "NEEDY",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "SPOTLIGHT vol.1"
+    }
+  },
+  {
+    "id": "song-drops-drop-in",
+    "title": "DROP IN",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "DROPS"
+    }
+  },
+  {
+    "id": "song-drops-growl",
+    "title": "GROWL",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "DROPS"
+    }
+  },
+  {
+    "id": "song-glory-days-glory-days",
+    "title": "Glory Days",
+    "artist": "KMNZ, Neko Hacker",
+    "version": {
+      "kind": "unspecified",
+      "label": "Glory Days"
+    }
+  },
+  {
+    "id": "song-opener-opener",
+    "title": "OPENER",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "OPENER"
+    }
+  },
+  {
+    "id": "song-opener-banger",
+    "title": "Banger!!!",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "OPENER"
+    }
+  },
+  {
+    "id": "song-opener-the-after",
+    "title": "THE AFTER",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "OPENER"
+    }
+  },
+  {
+    "id": "song-asterisk-asterisk",
+    "title": "＊〜アスタリスク〜",
+    "artist": "BEASTY, Kenichi Chiba, KMNZ",
+    "version": {
+      "kind": "unspecified",
+      "label": "＊〜アスタリスク〜"
+    }
+  },
+  {
+    "id": "song-cherry-pick-cherry-pick-feat",
+    "title": "CHERRY PICK (feat. レオタードブタ)",
+    "artist": "KMNZ, レオタードブタ",
+    "version": {
+      "kind": "unspecified",
+      "label": "CHERRY PICK (feat. レオタードブタ)"
+    }
+  },
+  {
+    "id": "song-isekai-wear-studio-live",
+    "title": "異世界うぇあ (Studio Live Session)",
+    "artist": "長瀬有花, KMNZ",
+    "version": {
+      "kind": "live"
+    }
+  },
+  {
+    "id": "song-driving",
+    "title": "driving",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-ifif",
+    "title": "IFIF",
+    "artist": "YACA IN DA HOUSE, KMNZ LITA, KMNZ LIZ",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-tokonatsu-style-2025",
+    "title": "TOKONATSU STYLE 2025",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "other"
+    }
+  },
+  {
+    "id": "song-vr-studio-live",
+    "title": "VR (Studio Live Session)",
+    "artist": "KMNZ, 長瀬有花",
+    "version": {
+      "kind": "live"
+    }
+  },
+  {
+    "id": "song-fiction",
+    "title": "Fiction",
+    "artist": "HACHI, KMNZ LITA",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-beat-beast",
+    "title": "Beat＆Beast",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-3d-three-dimension",
+    "title": "3D - Three Dimension",
+    "artist": "KMNZ, 春猿火",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-we-are-back",
+    "title": "WE ARE BACK",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-augmentation-feat-moe-shop",
+    "title": "Augmentation (feat. Moe Shop)",
+    "artist": "KMNZ, Moe Shop",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-star-light",
+    "title": "STAR-LIGHT",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-cherry-pick",
+    "title": "CHERRY PICK",
+    "artist": "レオタードブタ, ぽんぽこ, KMNZ",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-glory-days",
+    "title": "Glory Days",
+    "artist": "KMNZ, Neko Hacker",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-practice",
+    "title": "PRACTICE",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-miraizu",
+    "title": "未来図",
+    "artist": "KMNZ LIZ, VESPERBELL カスカ",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-fuzzy-town",
+    "title": "ファジータウン",
+    "artist": "KMNZ, ORESAMA",
+    "version": {
+      "kind": "unspecified"
+    }
   }
 ]

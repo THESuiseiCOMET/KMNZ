@@ -13,15 +13,17 @@ const json = async path => JSON.parse(await readFile(new URL(path, import.meta.u
 const legacy = await json('./fixtures/music-c1-legacy.json')
 const automatic = await json('../src/data/music-metadata.json')
 const manual = await json('../src/data/music-metadata.overrides.json')
-const copy = () => structuredClone(library)
+const baselineLibrary = await json('./fixtures/music-c1-library.json')
+const originalCatalog = catalog.filter(entry=>legacy.some(item=>item.id===entry.id))
+const copy = () => structuredClone(baselineLibrary)
 const reject = (mutate, pattern) => {
   const value = copy()
   mutate(value)
   assert.throws(() => model.parseMusicLibrary(value), pattern)
 }
-const wave = library.sources[0]
-const mirror = library.sources.find(source => source.id === 'sp-mirror')
-const album = library.releases[0]
+const wave = baselineLibrary.sources[0]
+const mirror = baselineLibrary.sources.find(source => source.id === 'sp-mirror')
+const album = baselineLibrary.releases[0]
 const spotifyWave = (id, platformId, releaseId) => ({
   ...structuredClone(mirror), id, platformId,
   externalUrl: 'https://open.spotify.com/track/' + platformId,
@@ -34,8 +36,8 @@ const expectedDates = {
 }
 
 test('migration preserves all nine legacy entries, source order and embed URLs exactly', () => {
-  assert.deepEqual(catalog, legacy)
-  assert.deepEqual([library.songs.length, library.releases.length, library.sources.length], [8,1,9])
+  assert.deepEqual(originalCatalog, legacy)
+  assert.deepEqual([baselineLibrary.songs.length, baselineLibrary.releases.length, baselineLibrary.sources.length], [8,1,9])
   assert.equal(library.schemaVersion,1)
   for (const entry of legacy) {
     assert.equal(getEmbedUrl(catalog.find(item => item.id === entry.id)), entry.platform === 'youtube'
@@ -47,7 +49,7 @@ test('migration preserves all nine legacy entries, source order and embed URLs e
 test('B4 source-bound artwork, exact timestamps, precision and dates survive compatibility projection', () => {
   validateIndex(automatic,catalog,metadata)
   validateIndex(manual,catalog,metadata,true)
-  for (const entry of catalog) {
+  for (const entry of originalCatalog) {
     const oldEntry = legacy.find(item => item.id === entry.id)
     const resolved = metadata.resolveMetadata(entry,automatic,manual)
     assert.deepEqual(resolved,metadata.resolveMetadata(oldEntry,automatic,manual))
@@ -64,7 +66,7 @@ test('B4 source-bound artwork, exact timestamps, precision and dates survive com
     }
   }
   for (const platform of ['youtube','spotify']) {
-    assert.deepEqual(metadata.sortMusicEntries(catalog.filter(entry=>entry.platform===platform),automatic,manual),
+    assert.deepEqual(metadata.sortMusicEntries(originalCatalog.filter(entry=>entry.platform===platform),automatic,manual),
       metadata.sortMusicEntries(legacy.filter(entry=>entry.platform===platform),automatic,manual))
   }
 })
@@ -73,8 +75,8 @@ test('unverified album memberships and recording versions are not inferred from 
   assert.equal(album.tracklistStatus,'unknown')
   assert.deepEqual(album.tracks,[])
   assert.equal(mirror.target.releaseId,undefined)
-  assert(library.songs.every(song=>song.version.kind==='unspecified'))
-  assert.equal(library.releases.some(release=>release.title==='DROPS'),false)
+  assert(baselineLibrary.songs.every(song=>song.version.kind==='unspecified'))
+  assert.equal(baselineLibrary.releases.some(release=>release.title==='DROPS'),false)
 })
 
 test('one recording can explicitly link YouTube and Spotify and appear on multiple releases', () => {

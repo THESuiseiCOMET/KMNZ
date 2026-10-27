@@ -2,13 +2,12 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { getEmbedUrl } from '../data/music'
 import type { MusicEntry } from '../data/music'
 import { loadSpotifyApi, loadYouTubeApi } from '../lib/playerApi'
-import { playbackFinished } from '../lib/playerControls'
+import type { PlayerObservation } from '../types/playback'
 
 interface PlayerAdapter {
   play(): void
   pause(): void
-  restart(): void
-  setLoop(enabled: boolean): void
+  select(entry: MusicEntry, requestId: number): void
   setVolume?(volume: number): void
   destroy(): void
 }
@@ -37,6 +36,7 @@ function createFrame(entry: MusicEntry): HTMLIFrameElement {
   if (entry.platform === 'youtube') {
     url.searchParams.set('enablejsapi', '1')
     url.searchParams.set('origin', window.location.origin)
+    url.searchParams.set('controls', '0')
   }
   frame.src = url.toString()
   frame.title = entry.title + ' · ' + entry.platform + ' 播放器'
@@ -46,10 +46,21 @@ function createFrame(entry: MusicEntry): HTMLIFrameElement {
   return frame
 }
 
-export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () => void) {
+export interface OfficialPlayerOptions {
+  requestId: number
+  onEnded?: (requestId: number, sourceId: string) => void
+  onObservation?: (observation: PlayerObservation) => void
+}
+
+export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () => void, options?: OfficialPlayerOptions) {
   const hostRef = useRef<HTMLDivElement>(null)
   const adapterRef = useRef<PlayerAdapter | null>(null)
-  const settings = useRef({ loop, onNext })
+  const settings = useRef({ entry, loop, onNext, options })
+  const initFailed = useRef(false)
+  const [retryVersion, setRetryVersion] = useState(0)
+  const [canChangeSource, setCanChangeSource] = useState(false)
+  const [canRepeat, setCanRepeat] = useState(false)
+  const [error, setError] = useState<string | undefined>()
   const [ready, setReady] = useState(false)
   const [paused, setPaused] = useState(true)
   const [volumeSettings, setVolumeSettings] = useState(readVolume)
@@ -81,33 +92,71 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
     try { localStorage.setItem(volumeKey, JSON.stringify(volumeSettings)) } catch { /* unavailable */ }
   }, [volumeSettings])
 
-  useEffect(() => {
-    settings.current = { loop, onNext }
-    adapterRef.current?.setLoop(loop)
-  }, [loop, onNext])
+  settings.current = { entry, loop, onNext, options }
 
   useEffect(() => {
     const host = hostRef.current
     if (!host) return
+    const platform = settings.current.entry.platform
     let cancelled = false
-    let endTimer: number | undefined
     let volumeTimer: number | undefined
+    let active = { entry: settings.current.entry, requestId: settings.current.options?.requestId ?? 0 }
+    initFailed.current = false
     setReady(false)
     setPaused(true)
-    const frame = createFrame(entry)
-    host.replaceChildren(frame)
-    function finish() {
-      if (cancelled) return
-      if (settings.current.loop) adapterRef.current?.restart()
-      else settings.current.onNext()
+    setCanChangeSource(false)
+    setCanRepeat(false)
+    setError(undefined)
+    function report(status: PlayerObservation['status'], extra: Partial<PlayerObservation> = {}) {
+      if (!cancelled) settings.current.options?.onObservation?.({ requestId: active.requestId, sourceId: active.entry.id, status, ...extra })
     }
-    if (entry.platform === 'youtube') {
-      void loadYouTubeApi().then((api) => {
+    function failure(message: string, initialization = false) {
+      if (cancelled) return
+      if (initialization) active = { entry: settings.current.entry, requestId: settings.current.options?.requestId ?? 0 }
+      initFailed.current = initialization
+      setError(message)
+      setPaused(true)
+      report('error', { error: message, ...(initialization ? { canLoad: false } : {}) })
+    }
+    const target = platform === 'youtube' ? createFrame(active.entry) : document.createElement('div')
+    host.replaceChildren(target)
+    if (platform === 'youtube') {
+      void loadYouTubeApi().then(api => {
         if (cancelled) return
-        const player = new api.Player(frame, {
+        let initialized = false
+        let armed = false
+        let ended = false
+        let lastRequest: string | undefined
+        const matches = () => {
+          try { return new URL(player.getVideoUrl()).searchParams.get('v') === active.entry.platformId } catch { return false }
+        }
+        function select(next: MusicEntry, requestId: number) {
+          if (cancelled || !initialized || lastRequest === next.id + ':' + requestId) return
+          active = { entry: next, requestId }
+          lastRequest = next.id + ':' + requestId
+          armed = false
+          ended = false
+          setError(undefined)
+          setPaused(true)
+          report('loading', { canLoad: true })
+          try {
+            if (!matches()) player.loadVideoById(next.platformId)
+            else {
+              if (player.getPlayerState() === 0) player.seekTo(0, true)
+              player.playVideo()
+              if (player.getPlayerState() === 1) {
+                armed = true
+                setPaused(false)
+                report('playing', { uri: player.getVideoUrl() })
+              }
+            }
+          } catch { failure('YouTube 加载失败，可重新选择曲目重试') }
+        }
+        const player = new api.Player(target as HTMLIFrameElement, {
           events: {
-            onReady: (event) => {
+            onReady: event => {
               if (cancelled) return
+              initialized = true
               const volume = volumeRef.current.value
               event.target.setVolume(volume)
               if (volume === 0) event.target.mute()
@@ -118,116 +167,136 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
                 }
               }, 1000)
               setReady(true)
-              setPaused(event.target.getPlayerState() !== 1)
+              setCanChangeSource(true)
+              setCanRepeat(true)
+              select(settings.current.entry, settings.current.options?.requestId ?? 0)
             },
-            onStateChange: (event) => {
-              if (cancelled) return
-              if (event.data === 1) setPaused(false)
-              if (event.data === 0 || event.data === 2 || event.data === 5) setPaused(true)
-              if (event.data === 0) finish()
+            onStateChange: event => {
+              if (cancelled || !matches() || player.getPlayerState() !== event.data) return
+              if (event.data === 1) {
+                armed = true
+                ended = false
+                setPaused(false)
+                setError(undefined)
+                report('playing', { canLoad: true, uri: player.getVideoUrl() })
+              } else if (event.data === 2 || event.data === 5) {
+                setPaused(true)
+                report('paused', { uri: player.getVideoUrl() })
+              } else if (event.data === 0 && armed && !ended) {
+                ended = true
+                armed = false
+                setPaused(true)
+                const callback = settings.current.options?.onEnded
+                if (callback) callback(active.requestId, active.entry.id)
+                else if (settings.current.loop) { player.seekTo(0, true); player.playVideo() }
+                else settings.current.onNext()
+              }
+            },
+            onError: event => { if (!cancelled && matches()) failure('YouTube 视频不可用（' + event.data + '），可重试或切换曲目') },
+            onAutoplayBlocked: () => {
+              if (!cancelled) { setPaused(true); report('paused') }
             },
           },
         })
         adapterRef.current = {
-          play: () => player.playVideo(),
-          pause: () => player.pauseVideo(),
-          restart: () => { player.seekTo(0, true); player.playVideo() },
-          setLoop: () => {},
-          setVolume: (volume) => {
-            player.setVolume(volume)
-            if (volume === 0) player.mute()
-            else player.unMute()
-          },
+          select,
+          play: () => player.playVideo(), pause: () => player.pauseVideo(),
+          setVolume: volume => { player.setVolume(volume); if (volume === 0) player.mute(); else player.unMute() },
           destroy: () => player.destroy(),
         }
-      }).catch(() => { if (!cancelled) setReady(false) })
+      }).catch(() => { if (!cancelled) { setReady(false); failure('YouTube 控制接口不可用，请使用官方窗口或重新选择曲目', true) } })
     } else {
-      void loadSpotifyApi().then((api) => {
+      void loadSpotifyApi().then(api => {
         if (cancelled) return
-        const target = document.createElement('div')
-        host.replaceChildren(target)
-        api.createController(target, { uri: 'spotify:' + entry.kind + ':' + entry.platformId, width: '100%', height: 352 }, (controller) => {
+        const initial = settings.current.entry
+        api.createController(target, { uri: 'spotify:' + initial.kind + ':' + initial.platformId, width: '100%', height: 152 }, controller => {
           if (cancelled) { controller.destroy(); return }
-          let playingUri: string | undefined
-          let repeatUri: string | undefined
-          let hasPlayed = false
-          let ended = false
-          let pendingReplay: string | undefined
-          adapterRef.current = {
-            play: () => controller.play(),
-            pause: () => controller.pause(),
-            restart: () => {
-              const uri = repeatUri ?? playingUri
-              if (uri && uri !== playingUri) {
-                pendingReplay = uri
-                controller.pause()
-                controller.loadUri(uri)
-              } else {
-                controller.seek(0)
-                controller.play()
+          let initialized = false
+          let lastRequest: string | undefined
+          let loadedUri = 'spotify:' + initial.kind + ':' + initial.platformId
+          let confirmed = false
+          const canLoad = typeof controller.loadEntity === 'function' || typeof controller.loadUri === 'function'
+          const requestedUri = () => 'spotify:' + active.entry.kind + ':' + active.entry.platformId
+          const accepted = (uri: string | undefined) => Boolean(uri && (uri === requestedUri()
+            || active.entry.kind === 'album' && /^spotify:track:[A-Za-z0-9]{22}$/.test(uri)))
+          function select(next: MusicEntry, requestId: number) {
+            if (cancelled || !initialized || lastRequest === next.id + ':' + requestId) return
+            active = { entry: next, requestId }
+            lastRequest = next.id + ':' + requestId
+            confirmed = false
+            setPaused(true)
+            setError(undefined)
+            report('loading', { canLoad })
+            const uri = requestedUri()
+            if (uri !== loadedUri && !canLoad) { failure('Spotify 不支持远程切换，请使用官方播放条'); return }
+            try {
+              if (uri !== loadedUri) {
+                if (controller.loadEntity) controller.loadEntity(uri)
+                else controller.loadUri!(uri)
+                loadedUri = uri
               }
-            },
-            setLoop: (enabled) => { repeatUri = enabled ? (repeatUri ?? playingUri) : undefined },
-            destroy: () => controller.destroy(),
+              controller.play()
+            } catch { failure('Spotify 播放请求失败，请使用官方播放条') }
           }
+          adapterRef.current = { select, play: () => controller.play(), pause: () => controller.pause(), destroy: () => controller.destroy() }
           controller.addListener('ready', () => {
-            if (cancelled) return
+            if (cancelled || initialized) return
+            initialized = true
             setReady(true)
+            setCanChangeSource(canLoad)
+            select(settings.current.entry, settings.current.options?.requestId ?? 0)
           })
-          controller.addListener('playback_started', (event) => {
-            if (cancelled) return
-            window.clearTimeout(endTimer)
-            if (settings.current.loop && repeatUri && event.data.playingURI !== repeatUri) {
-              playingUri = event.data.playingURI
-              adapterRef.current?.restart()
-              return
-            }
-            playingUri = event.data.playingURI
+          controller.addListener('playback_started', event => {
+            if (cancelled || !accepted(event.data.playingURI)) return
+            confirmed = true
             setPaused(false)
-            if (settings.current.loop) repeatUri ??= playingUri
-            hasPlayed = true
-            ended = false
+            setError(undefined)
+            report('playing', { canLoad, uri: event.data.playingURI })
           })
-          controller.addListener('playback_update', (event) => {
+          controller.addListener('playback_update', event => {
             if (cancelled) return
             const state = event.data
-            playingUri = state.playingURI ?? playingUri
-            if (pendingReplay && state.playingURI === pendingReplay && state.duration > 0 && state.position < 1000) {
-              pendingReplay = undefined
-              controller.play()
+            if (!accepted(state.playingURI)) {
+              if (confirmed && state.playingURI) {
+                setError('Spotify 已切换到其他内容，请使用官方播放条')
+                setPaused(state.isPaused)
+                report('error', { uri: state.playingURI, error: 'Spotify 已切换到其他内容，请使用官方播放条' })
+              }
+              return
             }
-            if (!state.isPaused && !state.isBuffering && state.position > 0) hasPlayed = true
-            if (hasPlayed) setPaused(state.isPaused)
-            if (settings.current.loop) repeatUri ??= playingUri
-            if (state.position < state.duration - 1000) ended = false
-            if (!ended && playbackFinished(state, hasPlayed)) {
-              ended = true
-              window.clearTimeout(endTimer)
-              endTimer = window.setTimeout(finish, 500)
-            }
+            confirmed = true
+            setError(undefined)
+            const stopped = state.isPaused || !state.isBuffering && Number.isFinite(state.duration) && state.duration > 0
+              && Number.isFinite(state.position) && state.position >= state.duration
+            setPaused(stopped)
+            report(stopped ? 'paused' : state.isBuffering ? 'loading' : 'playing', { canLoad, uri: state.playingURI })
           })
         })
       }).catch(() => {
         if (cancelled) return
-        host.replaceChildren(createFrame(entry))
+        host.replaceChildren(createFrame(settings.current.entry))
         setReady(false)
+        failure('Spotify 控制接口不可用，请使用官方播放条或重新选择曲目', true)
       })
     }
     return () => {
       cancelled = true
-      window.clearTimeout(endTimer)
       window.clearInterval(volumeTimer)
       adapterRef.current?.destroy()
       adapterRef.current = null
       host.replaceChildren()
     }
-  }, [entry])
+  }, [entry.platform, retryVersion])
+
+  useEffect(() => {
+    if (adapterRef.current) adapterRef.current.select(entry, options?.requestId ?? 0)
+    else if (initFailed.current) { initFailed.current = false; setRetryVersion(value => value + 1) }
+  }, [entry.id, entry.platformId, options?.requestId])
 
   function togglePlayback() {
     if (!ready) return
-    if (paused) adapterRef.current?.play()
-    else adapterRef.current?.pause()
+    try { if (paused) adapterRef.current?.play(); else adapterRef.current?.pause() } catch { setError('播放控制失败，请使用官方窗口') }
   }
 
-  return { hostRef, ready, paused, togglePlayback, volume: volumeSettings.value, setVolume, adjustVolume, toggleMute }
+  return { hostRef, ready, paused, togglePlayback, volume: volumeSettings.value, setVolume, adjustVolume, toggleMute, canChangeSource, canRepeat, error }
 }

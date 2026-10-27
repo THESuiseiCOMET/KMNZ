@@ -4,7 +4,1329 @@
     "title": "KMNCULTURE",
     "artist": "KMNZ",
     "kind": "album",
-    "tracklistStatus": "unknown",
-    "tracks": []
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-kmnculture-verse",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-kmnculture-verse"
+        ]
+      },
+      {
+        "songId": "song-kmnculture-new-days",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-kmnculture-new-days"
+        ]
+      },
+      {
+        "songId": "song-kmnculture-mid-journey",
+        "discNumber": 1,
+        "trackNumber": 3,
+        "sourceIds": [
+          "sp-kmnculture-mid-journey"
+        ]
+      },
+      {
+        "songId": "song-kmnculture-lunatic-beast",
+        "discNumber": 1,
+        "trackNumber": 4,
+        "sourceIds": [
+          "sp-kmnculture-lunatic-beast"
+        ]
+      },
+      {
+        "songId": "song-kmnculture-be-noisy",
+        "discNumber": 1,
+        "trackNumber": 5,
+        "sourceIds": [
+          "sp-kmnculture-be-noisy"
+        ]
+      },
+      {
+        "songId": "song-kmnculture-meta-fiction",
+        "discNumber": 1,
+        "trackNumber": 6,
+        "sourceIds": [
+          "sp-kmnculture-meta-fiction"
+        ]
+      },
+      {
+        "songId": "song-kmnculture-freely",
+        "discNumber": 1,
+        "trackNumber": 7,
+        "sourceIds": [
+          "sp-kmnculture-freely"
+        ]
+      },
+      {
+        "songId": "song-kmnculture-calling",
+        "discNumber": 1,
+        "trackNumber": 8,
+        "sourceIds": [
+          "sp-kmnculture-calling"
+        ]
+      },
+      {
+        "songId": "song-kmnculture-sunday-night-magic",
+        "discNumber": 1,
+        "trackNumber": 9,
+        "sourceIds": [
+          "sp-kmnculture-sunday-night-magic"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-drops",
+    "title": "DROPS",
+    "artist": "KMNZ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-drops-drop-in",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-drops-drop-in"
+        ]
+      },
+      {
+        "songId": "song-drops-growl",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-drops-growl"
+        ]
+      },
+      {
+        "songId": "song-mirror",
+        "discNumber": 1,
+        "trackNumber": 3,
+        "sourceIds": [
+          "sp-mirror"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-chunithm-all-justice-iii-4",
+    "title": "CHUNITHM ALL JUSTICE COLLECTION episode Ⅲ 4",
+    "artist": "Various Artists",
+    "kind": "compilation",
+    "tracklistStatus": "partial",
+    "tracks": [
+      {
+        "songId": "song-chunithm-all-justice-iii-4-glory-days",
+        "discNumber": 1,
+        "trackNumber": 16,
+        "sourceIds": [
+          "sp-chunithm-all-justice-iii-4-glory-days"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-noisy-night",
+    "title": "NOISY NIGHT",
+    "artist": "KMNZ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-noisy-night-be-noisy",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-noisy-night-be-noisy",
+          "yt-be-noisy"
+        ]
+      },
+      {
+        "songId": "song-noisy-night-lunatic-beast",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-noisy-night-lunatic-beast"
+        ]
+      },
+      {
+        "songId": "song-noisy-night-sunday-night-magic",
+        "discNumber": 1,
+        "trackNumber": 3,
+        "sourceIds": [
+          "sp-noisy-night-sunday-night-magic"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-virtuareal-best-01-remix",
+    "title": "VirtuaREAL BEST.01 (REMIX)",
+    "artist": "Various Artists",
+    "kind": "compilation",
+    "tracklistStatus": "partial",
+    "tracks": [
+      {
+        "songId": "song-virtuareal-best-01-remix-kick-it-feat-kmnz-kakeru-remix",
+        "discNumber": 1,
+        "trackNumber": 23,
+        "sourceIds": [
+          "sp-virtuareal-best-01-remix-kick-it-feat-kmnz-kakeru-remix"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-our-days",
+    "title": "OUR DAYS",
+    "artist": "KMNZ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-our-days-mc-battle",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-our-days-mc-battle"
+        ]
+      },
+      {
+        "songId": "song-our-days-kickin-the-pride",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-our-days-kickin-the-pride"
+        ]
+      },
+      {
+        "songId": "song-our-days-our-days",
+        "discNumber": 1,
+        "trackNumber": 3,
+        "sourceIds": [
+          "sp-our-days-our-days"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-augmentation",
+    "title": "Augmentation",
+    "artist": "KMNZ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-augmentation-augmentation",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-augmentation-augmentation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-kmnround",
+    "title": "KMNROUND",
+    "artist": "KMNZ",
+    "kind": "album",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-kmnround-departures",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-kmnround-departures"
+        ]
+      },
+      {
+        "songId": "song-kmnround-journey",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-kmnround-journey"
+        ]
+      },
+      {
+        "songId": "song-kmnround-tokonatsu-style",
+        "discNumber": 1,
+        "trackNumber": 3,
+        "sourceIds": [
+          "sp-kmnround-tokonatsu-style"
+        ]
+      },
+      {
+        "songId": "song-kmnround-awaken",
+        "discNumber": 1,
+        "trackNumber": 4,
+        "sourceIds": [
+          "sp-kmnround-awaken"
+        ]
+      },
+      {
+        "songId": "song-kmnround-letter",
+        "discNumber": 1,
+        "trackNumber": 5,
+        "sourceIds": [
+          "sp-kmnround-letter"
+        ]
+      },
+      {
+        "songId": "song-kmnround-daydream",
+        "discNumber": 1,
+        "trackNumber": 6,
+        "sourceIds": [
+          "sp-kmnround-daydream"
+        ]
+      },
+      {
+        "songId": "song-kmnround-and",
+        "discNumber": 1,
+        "trackNumber": 7,
+        "sourceIds": [
+          "sp-kmnround-and"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-cont-d",
+    "title": "Cont'd",
+    "artist": "KMNZ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-cont-d-cont-d",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-cont-d-cont-d",
+          "yt-cont-d"
+        ]
+      },
+      {
+        "songId": "song-cont-d-metro",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-cont-d-metro",
+          "yt-metro"
+        ]
+      },
+      {
+        "songId": "song-cont-d-synchronizer",
+        "discNumber": 1,
+        "trackNumber": 3,
+        "sourceIds": [
+          "sp-cont-d-synchronizer",
+          "yt-synchronizer"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-star-light",
+    "title": "STAR-LIGHT",
+    "artist": "KMNZ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-star-light-star-light",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-star-light-star-light"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-kmnverse",
+    "title": "KMNVERSE",
+    "artist": "KMNZ",
+    "kind": "album",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-kmnverse-opening",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-kmnverse-opening",
+          "yt-opening"
+        ]
+      },
+      {
+        "songId": "song-kmnverse-r-u-game",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-kmnverse-r-u-game"
+        ]
+      },
+      {
+        "songId": "song-kmnverse-melty-girl",
+        "discNumber": 1,
+        "trackNumber": 3,
+        "sourceIds": [
+          "sp-kmnverse-melty-girl"
+        ]
+      },
+      {
+        "songId": "song-kmnverse-starz",
+        "discNumber": 1,
+        "trackNumber": 4,
+        "sourceIds": [
+          "sp-kmnverse-starz"
+        ]
+      },
+      {
+        "songId": "song-kmnverse-retouch",
+        "discNumber": 1,
+        "trackNumber": 5,
+        "sourceIds": [
+          "sp-kmnverse-retouch"
+        ]
+      },
+      {
+        "songId": "song-kmnverse-def-rag",
+        "discNumber": 1,
+        "trackNumber": 6,
+        "sourceIds": [
+          "sp-kmnverse-def-rag"
+        ]
+      },
+      {
+        "songId": "song-kmnverse-vr",
+        "discNumber": 1,
+        "trackNumber": 7,
+        "sourceIds": [
+          "sp-kmnverse-vr"
+        ]
+      },
+      {
+        "songId": "song-kmnverse-galaxy",
+        "discNumber": 1,
+        "trackNumber": 8,
+        "sourceIds": [
+          "sp-kmnverse-galaxy",
+          "yt-galaxy"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-posse",
+    "title": "POSSE",
+    "artist": "KMNZ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-posse-posse",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-posse-posse",
+          "yt-posse"
+        ]
+      },
+      {
+        "songId": "song-posse-ride-on",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-posse-ride-on",
+          "yt-ride-on"
+        ]
+      },
+      {
+        "songId": "song-posse-three-two-wan",
+        "discNumber": 1,
+        "trackNumber": 3,
+        "sourceIds": [
+          "sp-posse-three-two-wan",
+          "yt-three-two-wan"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-kmnstreet",
+    "title": "KMNSTREET",
+    "artist": "KMNZ",
+    "kind": "album",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-kmnstreet-we-are-back",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-kmnstreet-we-are-back"
+        ]
+      },
+      {
+        "songId": "song-kmnstreet-skool",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-kmnstreet-skool"
+        ]
+      },
+      {
+        "songId": "song-kmnstreet-homey",
+        "discNumber": 1,
+        "trackNumber": 3,
+        "sourceIds": [
+          "sp-kmnstreet-homey"
+        ]
+      },
+      {
+        "songId": "song-kmnstreet-back-to-the-kids",
+        "discNumber": 1,
+        "trackNumber": 4,
+        "sourceIds": [
+          "sp-kmnstreet-back-to-the-kids"
+        ]
+      },
+      {
+        "songId": "song-kmnstreet-overnight",
+        "discNumber": 1,
+        "trackNumber": 5,
+        "sourceIds": [
+          "sp-kmnstreet-overnight",
+          "yt-overnight"
+        ]
+      },
+      {
+        "songId": "song-kmnstreet-sunny-day-morning",
+        "discNumber": 1,
+        "trackNumber": 6,
+        "sourceIds": [
+          "sp-kmnstreet-sunny-day-morning"
+        ]
+      },
+      {
+        "songId": "song-kmnstreet-practice",
+        "discNumber": 1,
+        "trackNumber": 7,
+        "sourceIds": [
+          "sp-kmnstreet-practice"
+        ]
+      },
+      {
+        "songId": "song-kmnstreet-haze",
+        "discNumber": 1,
+        "trackNumber": 8,
+        "sourceIds": [
+          "sp-kmnstreet-haze"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-vr",
+    "title": "VR",
+    "artist": "KMNZ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-vr-vr",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-vr-vr",
+          "yt-vr-music-only",
+          "yt-vr"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-harmonics",
+    "title": "HARMONICS",
+    "artist": "KMNZ",
+    "kind": "ep",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-harmonics-miraizu",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-harmonics-miraizu"
+        ]
+      },
+      {
+        "songId": "song-harmonics-fiction",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-harmonics-fiction"
+        ]
+      },
+      {
+        "songId": "song-harmonics-admit",
+        "discNumber": 1,
+        "trackNumber": 3,
+        "sourceIds": [
+          "sp-harmonics-admit"
+        ]
+      },
+      {
+        "songId": "song-harmonics-overnight-batsu-remix",
+        "discNumber": 1,
+        "trackNumber": 4,
+        "sourceIds": [
+          "sp-harmonics-overnight-batsu-remix"
+        ]
+      },
+      {
+        "songId": "song-harmonics-rise-blacky-remix",
+        "discNumber": 1,
+        "trackNumber": 5,
+        "sourceIds": [
+          "sp-harmonics-rise-blacky-remix"
+        ]
+      },
+      {
+        "songId": "song-harmonics-bath-time-planetarium-gaze-hes-me-remix",
+        "discNumber": 1,
+        "trackNumber": 6,
+        "sourceIds": [
+          "sp-harmonics-bath-time-planetarium-gaze-hes-me-remix"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-reverse",
+    "title": "REVERSE",
+    "artist": "KMNZ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-reverse-verse",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-reverse-verse"
+        ]
+      },
+      {
+        "songId": "song-reverse-mid-journey",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-reverse-mid-journey",
+          "yt-mid-journey"
+        ]
+      },
+      {
+        "songId": "song-reverse-calling",
+        "discNumber": 1,
+        "trackNumber": 3,
+        "sourceIds": [
+          "sp-reverse-calling",
+          "yt-calling"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-kaleidoscope",
+    "title": "Kaleidoscope",
+    "artist": "picco",
+    "kind": "album",
+    "tracklistStatus": "partial",
+    "tracks": [
+      {
+        "songId": "song-kaleidoscope-juou-mujin-singer-version",
+        "discNumber": 2,
+        "trackNumber": 5,
+        "sourceIds": [
+          "sp-kaleidoscope-juou-mujin-singer-version"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-stray-cute",
+    "title": "STRAY CUTE",
+    "artist": "暴力的にカワイイ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-stray-cute-stray-cute",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-stray-cute-stray-cute"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-gnosina",
+    "title": "gnosinA",
+    "artist": "Various Artists",
+    "kind": "compilation",
+    "tracklistStatus": "partial",
+    "tracks": [
+      {
+        "songId": "song-gnosina-recording-4",
+        "discNumber": 1,
+        "trackNumber": 4,
+        "sourceIds": [
+          "sp-gnosina-recording-4"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-kmnrevival",
+    "title": "KMNREVIVAL",
+    "artist": "KMNZ",
+    "kind": "album",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-kmnrevival-augmentation-2025",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-kmnrevival-augmentation-2025"
+        ]
+      },
+      {
+        "songId": "song-kmnrevival-r-u-game-2025",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-kmnrevival-r-u-game-2025"
+        ]
+      },
+      {
+        "songId": "song-kmnrevival-tokonatsu-style-2025",
+        "discNumber": 1,
+        "trackNumber": 3,
+        "sourceIds": [
+          "sp-kmnrevival-tokonatsu-style-2025"
+        ]
+      },
+      {
+        "songId": "song-kmnrevival-skool-2025",
+        "discNumber": 1,
+        "trackNumber": 4,
+        "sourceIds": [
+          "sp-kmnrevival-skool-2025"
+        ]
+      },
+      {
+        "songId": "song-kmnrevival-we-are-back-2025",
+        "discNumber": 1,
+        "trackNumber": 5,
+        "sourceIds": [
+          "sp-kmnrevival-we-are-back-2025"
+        ]
+      },
+      {
+        "songId": "song-kmnrevival-overnight-2025",
+        "discNumber": 1,
+        "trackNumber": 6,
+        "sourceIds": [
+          "sp-kmnrevival-overnight-2025"
+        ]
+      },
+      {
+        "songId": "song-kmnrevival-kickin-the-pride-2025",
+        "discNumber": 1,
+        "trackNumber": 7,
+        "sourceIds": [
+          "sp-kmnrevival-kickin-the-pride-2025"
+        ]
+      },
+      {
+        "songId": "song-kmnrevival-star-light-2025",
+        "discNumber": 1,
+        "trackNumber": 8,
+        "sourceIds": [
+          "sp-kmnrevival-star-light-2025"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-juou-mujin",
+    "title": "獣謳無尽",
+    "artist": "picco",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-juou-mujin-juou-mujin",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-juou-mujin-juou-mujin"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-bouryokutekini-kawaii-compilation-2-disc2",
+    "title": "暴力的にカワイイ 2nd Compilation Album (DISC.2)",
+    "artist": "暴力的にカワイイ",
+    "kind": "compilation",
+    "tracklistStatus": "partial",
+    "tracks": [
+      {
+        "songId": "song-bouryokutekini-kawaii-compilation-2-disc2-stray-cute",
+        "discNumber": 1,
+        "trackNumber": 4,
+        "sourceIds": [
+          "sp-bouryokutekini-kawaii-compilation-2-disc2-stray-cute"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-wave",
+    "title": "WAVE",
+    "artist": "KMNZ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-wave-wave",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-wave-wave"
+        ]
+      },
+      {
+        "songId": "song-wave-get-ur-lit-on",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-wave-get-ur-lit-on"
+        ]
+      },
+      {
+        "songId": "song-wave-hero-in-the-heart",
+        "discNumber": 1,
+        "trackNumber": 3,
+        "sourceIds": [
+          "sp-wave-hero-in-the-heart"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-satisfaction",
+    "title": "SATISFACTION",
+    "artist": "P*Light",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-satisfaction-satisfaction-feat-kmnz",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-satisfaction-satisfaction-feat-kmnz"
+        ]
+      },
+      {
+        "songId": "song-satisfaction-satisfaction-feat-kmnz-instrumental",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-satisfaction-satisfaction-feat-kmnz-instrumental"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-mimimi",
+    "title": "MiMiMi",
+    "artist": "KMNZ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-mimimi-mimimi",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-mimimi-mimimi",
+          "yt-mimimi"
+        ]
+      },
+      {
+        "songId": "song-mimimi-reload",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-mimimi-reload",
+          "yt-reload"
+        ]
+      },
+      {
+        "songId": "song-mimimi-q-u-e-s-t",
+        "discNumber": 1,
+        "trackNumber": 3,
+        "sourceIds": [
+          "sp-mimimi-q-u-e-s-t"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-starz-remix",
+    "title": "sTarZ (Remix)",
+    "artist": "KMNZ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-starz-remix-starz-remix",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-starz-remix-starz-remix"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-kmnz-the-best-buddy",
+    "title": "KMNZ THE BEST \"BUDDY\"",
+    "artist": "KMNZ",
+    "kind": "album",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-kmnz-the-best-buddy-opening",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-opening"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-r-u-game",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-r-u-game"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-melty-girl",
+        "discNumber": 1,
+        "trackNumber": 3,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-melty-girl"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-starz",
+        "discNumber": 1,
+        "trackNumber": 4,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-starz"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-retouch",
+        "discNumber": 1,
+        "trackNumber": 5,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-retouch"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-def-rag",
+        "discNumber": 1,
+        "trackNumber": 6,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-def-rag"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-vr",
+        "discNumber": 1,
+        "trackNumber": 7,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-vr"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-galaxy",
+        "discNumber": 1,
+        "trackNumber": 8,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-galaxy"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-journey",
+        "discNumber": 1,
+        "trackNumber": 9,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-journey"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-tokonatsu-style",
+        "discNumber": 1,
+        "trackNumber": 10,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-tokonatsu-style"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-awaken",
+        "discNumber": 1,
+        "trackNumber": 11,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-awaken"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-letter",
+        "discNumber": 1,
+        "trackNumber": 12,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-letter"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-daydream",
+        "discNumber": 1,
+        "trackNumber": 13,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-daydream"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-and",
+        "discNumber": 1,
+        "trackNumber": 14,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-and"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-we-are-back",
+        "discNumber": 1,
+        "trackNumber": 15,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-we-are-back"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-skool",
+        "discNumber": 1,
+        "trackNumber": 16,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-skool"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-homey",
+        "discNumber": 1,
+        "trackNumber": 17,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-homey"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-back-to-the-kids",
+        "discNumber": 1,
+        "trackNumber": 18,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-back-to-the-kids"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-overnight",
+        "discNumber": 1,
+        "trackNumber": 19,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-overnight"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-sunny-day-morning",
+        "discNumber": 1,
+        "trackNumber": 20,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-sunny-day-morning"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-practice",
+        "discNumber": 1,
+        "trackNumber": 21,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-practice"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-haze",
+        "discNumber": 1,
+        "trackNumber": 22,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-haze"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-mc-battle",
+        "discNumber": 1,
+        "trackNumber": 23,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-mc-battle"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-kickin-the-pride",
+        "discNumber": 1,
+        "trackNumber": 24,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-kickin-the-pride"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-our-days",
+        "discNumber": 1,
+        "trackNumber": 25,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-our-days"
+        ]
+      },
+      {
+        "songId": "song-kmnz-the-best-buddy-star-light",
+        "discNumber": 1,
+        "trackNumber": 26,
+        "sourceIds": [
+          "sp-kmnz-the-best-buddy-star-light"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-rewire",
+    "title": "REWIRE",
+    "artist": "Various Artists",
+    "kind": "compilation",
+    "tracklistStatus": "partial",
+    "tracks": [
+      {
+        "songId": "song-rewire-recoat-feat-kmnz",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-rewire-recoat-feat-kmnz"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-virtuareal-02",
+    "title": "VirtuaREAL.02",
+    "artist": "Various Artists",
+    "kind": "compilation",
+    "tracklistStatus": "partial",
+    "tracks": [
+      {
+        "songId": "song-virtuareal-02-kick-it-feat-kmnz",
+        "discNumber": 1,
+        "trackNumber": 5,
+        "sourceIds": [
+          "sp-virtuareal-02-kick-it-feat-kmnz"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-kmnskool",
+    "title": "KMNSKOOL",
+    "artist": "KMNZ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-kmnskool-practice",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-kmnskool-practice"
+        ]
+      },
+      {
+        "songId": "song-kmnskool-skool",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-kmnskool-skool"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-moon-engine",
+    "title": "Moon Engine",
+    "artist": "KMNZ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-moon-engine-moon-engine",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-moon-engine-moon-engine",
+          "yt-moon-engine"
+        ]
+      },
+      {
+        "songId": "song-moon-engine-wanted",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-moon-engine-wanted",
+          "yt-wanted"
+        ]
+      },
+      {
+        "songId": "song-moon-engine-popsta",
+        "discNumber": 1,
+        "trackNumber": 3,
+        "sourceIds": [
+          "sp-moon-engine-popsta",
+          "yt-popsta"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-spotlight-vol-1",
+    "title": "SPOTLIGHT vol.1",
+    "artist": "Various Artists",
+    "kind": "compilation",
+    "tracklistStatus": "partial",
+    "tracks": [
+      {
+        "songId": "song-spotlight-vol-1-needy",
+        "discNumber": 1,
+        "trackNumber": 13,
+        "sourceIds": [
+          "sp-spotlight-vol-1-needy"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-glory-days",
+    "title": "Glory Days",
+    "artist": "KMNZ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-glory-days-glory-days",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-glory-days-glory-days"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-opener",
+    "title": "OPENER",
+    "artist": "KMNZ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-opener-opener",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-opener-opener",
+          "yt-opener"
+        ]
+      },
+      {
+        "songId": "song-opener-banger",
+        "discNumber": 1,
+        "trackNumber": 2,
+        "sourceIds": [
+          "sp-opener-banger",
+          "yt-banger"
+        ]
+      },
+      {
+        "songId": "song-opener-the-after",
+        "discNumber": 1,
+        "trackNumber": 3,
+        "sourceIds": [
+          "sp-opener-the-after",
+          "yt-the-after"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-asterisk",
+    "title": "＊〜アスタリスク〜",
+    "artist": "BEASTY",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-asterisk-asterisk",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-asterisk-asterisk"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "release-cherry-pick",
+    "title": "CHERRY PICK (feat. レオタードブタ)",
+    "artist": "KMNZ",
+    "kind": "single",
+    "tracklistStatus": "complete",
+    "tracks": [
+      {
+        "songId": "song-cherry-pick-cherry-pick-feat",
+        "discNumber": 1,
+        "trackNumber": 1,
+        "sourceIds": [
+          "sp-cherry-pick-cherry-pick-feat"
+        ]
+      }
+    ]
   }
 ]

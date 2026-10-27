@@ -14,8 +14,8 @@ interface HeaderProps {
 
 const navigation: { page: Section; label: string }[] = [
   { page: 'home', label: '首页' },
-  { page: 'members', label: '成员' },
   { page: 'music', label: '音乐' },
+  { page: 'members', label: '成员' },
   { page: 'history', label: '历程' },
   { page: 'about', label: '关于' },
 ]

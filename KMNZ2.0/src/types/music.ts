@@ -47,6 +47,7 @@ export type SourceTarget = { type: 'song'; songId: string; releaseId?: string }
 
 interface SourceFields {
   id: string
+  listed?: boolean
   platformId: string
   externalUrl: string
   display: { subtitle: string; year: number; era: MusicEra }

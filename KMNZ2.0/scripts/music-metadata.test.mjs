@@ -57,13 +57,16 @@ test('precision, calendar validation, Tokyo boundary and unknown dates',()=>{
 
 test('newest first, unknown last, stable ties, no mutation or legacy year guessing',()=>{
   const entries = catalog.filter(entry=>entry.platform==='youtube')
+  const originalOrder = entries.map(entry=>entry.id)
   const metadata = structuredClone(empty)
   metadata[entries[2].id].publishedAt = {value:'2025-05-25T00:00:00Z',...proof('youtube-data-api')}
   metadata[entries[3].id].publishedAt = {value:'2025-05-25T00:00:00Z',...proof('youtube-data-api')}
   metadata[entries[4].id].publishedAt = {value:'2025-05-26T00:00:00Z',...proof('youtube-data-api')}
   const sorted = helpers.sortMusicEntries(entries,metadata).map(entry=>entry.id)
   assert.deepEqual(sorted.slice(0,3),[entries[4].id,entries[2].id,entries[3].id])
-  assert.deepEqual(sorted.slice(3),[entries[0].id,entries[1].id,entries[5].id,entries[6].id])
+  const dated = new Set([entries[2].id,entries[3].id,entries[4].id])
+  assert.deepEqual(sorted.slice(3),originalOrder.filter(id=>!dated.has(id)))
+  assert.deepEqual(entries.map(entry=>entry.id),originalOrder)
   assert.equal(entries[0].id,'yt-wave')
 })
 
@@ -79,7 +82,7 @@ test('Spotify partial dates sort consistently without filling missing month/day 
 test('without credentials only oEmbed/images are requested; dates stay unknown; fresh rerun is cached',async()=>{
   const api=source()
   const result=await update({fetcher:api.fetcher})
-  assert.equal(api.calls.length,4)
+  assert.equal(api.calls.length,catalog.filter(entry=>entry.platform==='spotify').length * 2)
   for (const entry of catalog.filter(item=>item.platform==='youtube')) assert.equal(result[entry.id].publishedAt,undefined)
   for (const entry of catalog.filter(item=>item.platform==='spotify')) {
     assert.equal(result[entry.id].cover.width,640)

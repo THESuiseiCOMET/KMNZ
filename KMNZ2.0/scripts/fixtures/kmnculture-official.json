@@ -1,0 +1,91 @@
+{
+  "sourceUrl": "https://open.spotify.com/album/0034RJKaIQVPPA581qxaif",
+  "embedSourceUrl": "https://open.spotify.com/embed/album/0034RJKaIQVPPA581qxaif",
+  "verifiedAt": "2026-10-27T08:09:45.709Z",
+  "albumId": "0034RJKaIQVPPA581qxaif",
+  "title": "KMNCULTURE",
+  "releaseDate": "2025-01-06",
+  "tracks": [
+    {
+      "discNumber": 1,
+      "trackNumber": 1,
+      "title": "VERSE",
+      "artist": "KMNZ",
+      "platformId": "6k0IsjRMvpvxNzZHwQEiwn",
+      "url": "https://open.spotify.com/track/6k0IsjRMvpvxNzZHwQEiwn",
+      "releaseDate": "2025-01-06"
+    },
+    {
+      "discNumber": 1,
+      "trackNumber": 2,
+      "title": "NEW DAYS",
+      "artist": "KMNZ",
+      "platformId": "4e8AQFUM6HRNT97pySfvHR",
+      "url": "https://open.spotify.com/track/4e8AQFUM6HRNT97pySfvHR",
+      "releaseDate": "2025-01-06"
+    },
+    {
+      "discNumber": 1,
+      "trackNumber": 3,
+      "title": "MID JOURNEY",
+      "artist": "KMNZ",
+      "platformId": "0ENAkXRPrpPGMf4jNJWPid",
+      "url": "https://open.spotify.com/track/0ENAkXRPrpPGMf4jNJWPid",
+      "releaseDate": "2025-01-06"
+    },
+    {
+      "discNumber": 1,
+      "trackNumber": 4,
+      "title": "LUNATIC BEAST",
+      "artist": "KMNZ",
+      "platformId": "2jLVxRQNo45RyaO7BYSAXr",
+      "url": "https://open.spotify.com/track/2jLVxRQNo45RyaO7BYSAXr",
+      "releaseDate": "2025-01-06"
+    },
+    {
+      "discNumber": 1,
+      "trackNumber": 5,
+      "title": "BE NOISY!",
+      "artist": "KMNZ",
+      "platformId": "21KMOjGkMVAPfZYzzPdMpz",
+      "url": "https://open.spotify.com/track/21KMOjGkMVAPfZYzzPdMpz",
+      "releaseDate": "2025-01-06"
+    },
+    {
+      "discNumber": 1,
+      "trackNumber": 6,
+      "title": "META FICTION",
+      "artist": "KMNZ, Taku Takahashi (m-flo), Itaq, Yackle",
+      "platformId": "05tSHC61Fhxq2vMjQsOmfF",
+      "url": "https://open.spotify.com/track/05tSHC61Fhxq2vMjQsOmfF",
+      "releaseDate": "2025-01-06"
+    },
+    {
+      "discNumber": 1,
+      "trackNumber": 7,
+      "title": "FREELY",
+      "artist": "KMNZ",
+      "platformId": "60IjgoUifknYFaH974Jawe",
+      "url": "https://open.spotify.com/track/60IjgoUifknYFaH974Jawe",
+      "releaseDate": "2025-01-06"
+    },
+    {
+      "discNumber": 1,
+      "trackNumber": 8,
+      "title": "CALLING",
+      "artist": "KMNZ",
+      "platformId": "6M1rTyiplKXrCzl0PWIZDP",
+      "url": "https://open.spotify.com/track/6M1rTyiplKXrCzl0PWIZDP",
+      "releaseDate": "2025-01-06"
+    },
+    {
+      "discNumber": 1,
+      "trackNumber": 9,
+      "title": "SUNDAY NIGHT MAGIC",
+      "artist": "KMNZ",
+      "platformId": "1kD4mX5IHbhWUho7ie6x8M",
+      "url": "https://open.spotify.com/track/1kD4mX5IHbhWUho7ie6x8M",
+      "releaseDate": "2025-01-06"
+    }
+  ]
+}

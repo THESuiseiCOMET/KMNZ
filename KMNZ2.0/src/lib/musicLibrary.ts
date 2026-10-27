@@ -114,8 +114,9 @@ export function parseMusicLibrary(value: unknown): MusicLibrary {
   })
   array(root.sources, 'library.sources').forEach((value, i) => {
     const path = `sources[${i}]`
-    const source = object(value, path, ['id', 'platform', 'kind', 'platformId', 'externalUrl', 'display', 'target'])
+    const source = object(value, path, ['id', 'listed', 'platform', 'kind', 'platformId', 'externalUrl', 'display', 'target'])
     uniqueId(source.id, `${path}.id`, sourceIds)
+    if (source.listed !== undefined && typeof source.listed !== 'boolean') fail(`${path}.listed`, 'expected boolean')
     choice(source.platform, `${path}.platform`, ['youtube', 'spotify'])
     choice(source.kind, `${path}.kind`, source.platform === 'youtube' ? ['mv'] : ['track', 'album'])
     text(source.platformId, `${path}.platformId`)

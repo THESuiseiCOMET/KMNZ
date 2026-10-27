@@ -135,12 +135,3286 @@
     "externalUrl": "https://open.spotify.com/track/3vjYW1spy1frAE39zZR6Xx",
     "target": {
       "type": "song",
-      "songId": "song-mirror"
+      "songId": "song-mirror",
+      "releaseId": "release-drops"
     },
     "display": {
       "subtitle": "单曲 · 收录于 DROPS",
       "year": 2025,
       "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnculture-verse",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "6k0IsjRMvpvxNzZHwQEiwn",
+    "externalUrl": "https://open.spotify.com/track/6k0IsjRMvpvxNzZHwQEiwn",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnculture-verse",
+      "releaseId": "release-kmnculture"
+    },
+    "display": {
+      "subtitle": "KMNCULTURE",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnculture-new-days",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "4e8AQFUM6HRNT97pySfvHR",
+    "externalUrl": "https://open.spotify.com/track/4e8AQFUM6HRNT97pySfvHR",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnculture-new-days",
+      "releaseId": "release-kmnculture"
+    },
+    "display": {
+      "subtitle": "KMNCULTURE",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnculture-mid-journey",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "0ENAkXRPrpPGMf4jNJWPid",
+    "externalUrl": "https://open.spotify.com/track/0ENAkXRPrpPGMf4jNJWPid",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnculture-mid-journey",
+      "releaseId": "release-kmnculture"
+    },
+    "display": {
+      "subtitle": "KMNCULTURE",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnculture-lunatic-beast",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2jLVxRQNo45RyaO7BYSAXr",
+    "externalUrl": "https://open.spotify.com/track/2jLVxRQNo45RyaO7BYSAXr",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnculture-lunatic-beast",
+      "releaseId": "release-kmnculture"
+    },
+    "display": {
+      "subtitle": "KMNCULTURE",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnculture-be-noisy",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "21KMOjGkMVAPfZYzzPdMpz",
+    "externalUrl": "https://open.spotify.com/track/21KMOjGkMVAPfZYzzPdMpz",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnculture-be-noisy",
+      "releaseId": "release-kmnculture"
+    },
+    "display": {
+      "subtitle": "KMNCULTURE",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnculture-meta-fiction",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "05tSHC61Fhxq2vMjQsOmfF",
+    "externalUrl": "https://open.spotify.com/track/05tSHC61Fhxq2vMjQsOmfF",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnculture-meta-fiction",
+      "releaseId": "release-kmnculture"
+    },
+    "display": {
+      "subtitle": "KMNCULTURE",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnculture-freely",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "60IjgoUifknYFaH974Jawe",
+    "externalUrl": "https://open.spotify.com/track/60IjgoUifknYFaH974Jawe",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnculture-freely",
+      "releaseId": "release-kmnculture"
+    },
+    "display": {
+      "subtitle": "KMNCULTURE",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnculture-calling",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "6M1rTyiplKXrCzl0PWIZDP",
+    "externalUrl": "https://open.spotify.com/track/6M1rTyiplKXrCzl0PWIZDP",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnculture-calling",
+      "releaseId": "release-kmnculture"
+    },
+    "display": {
+      "subtitle": "KMNCULTURE",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnculture-sunday-night-magic",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "1kD4mX5IHbhWUho7ie6x8M",
+    "externalUrl": "https://open.spotify.com/track/1kD4mX5IHbhWUho7ie6x8M",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnculture-sunday-night-magic",
+      "releaseId": "release-kmnculture"
+    },
+    "display": {
+      "subtitle": "KMNCULTURE",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-drops",
+    "listed": false,
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "5uqDam637cLI8dRHhFyyqT",
+    "externalUrl": "https://open.spotify.com/album/5uqDam637cLI8dRHhFyyqT",
+    "target": {
+      "type": "release",
+      "releaseId": "release-drops"
+    },
+    "display": {
+      "subtitle": "DROPS",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-chunithm-all-justice-iii-4",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "0ar528FqvQHUAo6aFa6SdC",
+    "externalUrl": "https://open.spotify.com/album/0ar528FqvQHUAo6aFa6SdC",
+    "target": {
+      "type": "release",
+      "releaseId": "release-chunithm-all-justice-iii-4"
+    },
+    "display": {
+      "subtitle": "Official Compilation",
+      "year": 2022,
+      "era": "classic"
+    },
+    "listed": false
+  },
+  {
+    "id": "sp-chunithm-all-justice-iii-4-glory-days",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "5tjFASkgzH10MSvgaP8rRH",
+    "externalUrl": "https://open.spotify.com/track/5tjFASkgzH10MSvgaP8rRH",
+    "target": {
+      "type": "song",
+      "songId": "song-chunithm-all-justice-iii-4-glory-days",
+      "releaseId": "release-chunithm-all-justice-iii-4"
+    },
+    "display": {
+      "subtitle": "CHUNITHM ALL JUSTICE COLLECTION episode Ⅲ 4",
+      "year": 2022,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-noisy-night",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "0Gop7jnAjm2idxggd3DoHf",
+    "externalUrl": "https://open.spotify.com/album/0Gop7jnAjm2idxggd3DoHf",
+    "target": {
+      "type": "release",
+      "releaseId": "release-noisy-night"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2024,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-noisy-night-be-noisy",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "68odVFMKl1GB8L2p0PyKUr",
+    "externalUrl": "https://open.spotify.com/track/68odVFMKl1GB8L2p0PyKUr",
+    "target": {
+      "type": "song",
+      "songId": "song-noisy-night-be-noisy",
+      "releaseId": "release-noisy-night"
+    },
+    "display": {
+      "subtitle": "NOISY NIGHT",
+      "year": 2024,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-noisy-night-lunatic-beast",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "0uPohrxDeFq6ZL1nP2DN0m",
+    "externalUrl": "https://open.spotify.com/track/0uPohrxDeFq6ZL1nP2DN0m",
+    "target": {
+      "type": "song",
+      "songId": "song-noisy-night-lunatic-beast",
+      "releaseId": "release-noisy-night"
+    },
+    "display": {
+      "subtitle": "NOISY NIGHT",
+      "year": 2024,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-noisy-night-sunday-night-magic",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "35eXxcbgp2Xtg9u8TZmcaR",
+    "externalUrl": "https://open.spotify.com/track/35eXxcbgp2Xtg9u8TZmcaR",
+    "target": {
+      "type": "song",
+      "songId": "song-noisy-night-sunday-night-magic",
+      "releaseId": "release-noisy-night"
+    },
+    "display": {
+      "subtitle": "NOISY NIGHT",
+      "year": 2024,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-virtuareal-best-01-remix",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "0HCnz0qTYCZHHwL2TfBH4y",
+    "externalUrl": "https://open.spotify.com/album/0HCnz0qTYCZHHwL2TfBH4y",
+    "target": {
+      "type": "release",
+      "releaseId": "release-virtuareal-best-01-remix"
+    },
+    "display": {
+      "subtitle": "Official Compilation",
+      "year": 2021,
+      "era": "classic"
+    },
+    "listed": false
+  },
+  {
+    "id": "sp-virtuareal-best-01-remix-kick-it-feat-kmnz-kakeru-remix",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "0sGDc1Vp08NzNXuPDylwQn",
+    "externalUrl": "https://open.spotify.com/track/0sGDc1Vp08NzNXuPDylwQn",
+    "target": {
+      "type": "song",
+      "songId": "song-virtuareal-best-01-remix-kick-it-feat-kmnz-kakeru-remix",
+      "releaseId": "release-virtuareal-best-01-remix"
+    },
+    "display": {
+      "subtitle": "VirtuaREAL BEST.01 (REMIX)",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-our-days",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "0IKQnpzbtOcQvjCs8H267e",
+    "externalUrl": "https://open.spotify.com/album/0IKQnpzbtOcQvjCs8H267e",
+    "target": {
+      "type": "release",
+      "releaseId": "release-our-days"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-our-days-mc-battle",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2HYfoVDNh5LhN39ibyTgUA",
+    "externalUrl": "https://open.spotify.com/track/2HYfoVDNh5LhN39ibyTgUA",
+    "target": {
+      "type": "song",
+      "songId": "song-our-days-mc-battle",
+      "releaseId": "release-our-days"
+    },
+    "display": {
+      "subtitle": "OUR DAYS",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-our-days-kickin-the-pride",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "0MYdDFpILWehLWRN3k6kt4",
+    "externalUrl": "https://open.spotify.com/track/0MYdDFpILWehLWRN3k6kt4",
+    "target": {
+      "type": "song",
+      "songId": "song-our-days-kickin-the-pride",
+      "releaseId": "release-our-days"
+    },
+    "display": {
+      "subtitle": "OUR DAYS",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-our-days-our-days",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "7vWHQ6i01QHgz7qyttigxO",
+    "externalUrl": "https://open.spotify.com/track/7vWHQ6i01QHgz7qyttigxO",
+    "target": {
+      "type": "song",
+      "songId": "song-our-days-our-days",
+      "releaseId": "release-our-days"
+    },
+    "display": {
+      "subtitle": "OUR DAYS",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-augmentation",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "0PxCslPCQ1bnXEVOwppNiy",
+    "externalUrl": "https://open.spotify.com/album/0PxCslPCQ1bnXEVOwppNiy",
+    "target": {
+      "type": "release",
+      "releaseId": "release-augmentation"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2019,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-augmentation-augmentation",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "0q17SIpv40VnrNv5pbuLOb",
+    "externalUrl": "https://open.spotify.com/track/0q17SIpv40VnrNv5pbuLOb",
+    "target": {
+      "type": "song",
+      "songId": "song-augmentation-augmentation",
+      "releaseId": "release-augmentation"
+    },
+    "display": {
+      "subtitle": "Augmentation",
+      "year": 2019,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnround",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "0ql0RolALZB0zKRa0nGh7a",
+    "externalUrl": "https://open.spotify.com/album/0ql0RolALZB0zKRa0nGh7a",
+    "target": {
+      "type": "release",
+      "releaseId": "release-kmnround"
+    },
+    "display": {
+      "subtitle": "Official Album",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnround-departures",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "4jsGbFTgAQZOk3TUyfICc8",
+    "externalUrl": "https://open.spotify.com/track/4jsGbFTgAQZOk3TUyfICc8",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnround-departures",
+      "releaseId": "release-kmnround"
+    },
+    "display": {
+      "subtitle": "KMNROUND",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnround-journey",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "07JOu0ehf7SUD2TGo4achL",
+    "externalUrl": "https://open.spotify.com/track/07JOu0ehf7SUD2TGo4achL",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnround-journey",
+      "releaseId": "release-kmnround"
+    },
+    "display": {
+      "subtitle": "KMNROUND",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnround-tokonatsu-style",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "3GqxsTw9BGHKYQvdUZazIr",
+    "externalUrl": "https://open.spotify.com/track/3GqxsTw9BGHKYQvdUZazIr",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnround-tokonatsu-style",
+      "releaseId": "release-kmnround"
+    },
+    "display": {
+      "subtitle": "KMNROUND",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnround-awaken",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "5P0388wv7ocR1uKZKLweUi",
+    "externalUrl": "https://open.spotify.com/track/5P0388wv7ocR1uKZKLweUi",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnround-awaken",
+      "releaseId": "release-kmnround"
+    },
+    "display": {
+      "subtitle": "KMNROUND",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnround-letter",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2BJ8VCPr15Yvkh9fbUG7Mv",
+    "externalUrl": "https://open.spotify.com/track/2BJ8VCPr15Yvkh9fbUG7Mv",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnround-letter",
+      "releaseId": "release-kmnround"
+    },
+    "display": {
+      "subtitle": "KMNROUND",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnround-daydream",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "42oudOljJYBXX4XLur0cpG",
+    "externalUrl": "https://open.spotify.com/track/42oudOljJYBXX4XLur0cpG",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnround-daydream",
+      "releaseId": "release-kmnround"
+    },
+    "display": {
+      "subtitle": "KMNROUND",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnround-and",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "7me6Gd1W4FGLX18GgkZNDK",
+    "externalUrl": "https://open.spotify.com/track/7me6Gd1W4FGLX18GgkZNDK",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnround-and",
+      "releaseId": "release-kmnround"
+    },
+    "display": {
+      "subtitle": "KMNROUND",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-cont-d",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "0Rz7TBlGoLPLo2YDqXciJx",
+    "externalUrl": "https://open.spotify.com/album/0Rz7TBlGoLPLo2YDqXciJx",
+    "target": {
+      "type": "release",
+      "releaseId": "release-cont-d"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-cont-d-cont-d",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "7Jtmo7E9rhbHkFZ0wyxTpI",
+    "externalUrl": "https://open.spotify.com/track/7Jtmo7E9rhbHkFZ0wyxTpI",
+    "target": {
+      "type": "song",
+      "songId": "song-cont-d-cont-d",
+      "releaseId": "release-cont-d"
+    },
+    "display": {
+      "subtitle": "Cont'd",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-cont-d-metro",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "1isAtVhdby5UgmWUtsFApM",
+    "externalUrl": "https://open.spotify.com/track/1isAtVhdby5UgmWUtsFApM",
+    "target": {
+      "type": "song",
+      "songId": "song-cont-d-metro",
+      "releaseId": "release-cont-d"
+    },
+    "display": {
+      "subtitle": "Cont'd",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-cont-d-synchronizer",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "18LDE6r6J1CyG1VTysZULN",
+    "externalUrl": "https://open.spotify.com/track/18LDE6r6J1CyG1VTysZULN",
+    "target": {
+      "type": "song",
+      "songId": "song-cont-d-synchronizer",
+      "releaseId": "release-cont-d"
+    },
+    "display": {
+      "subtitle": "Cont'd",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-star-light",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "0v9Sr4I0mHJyvU9igQCHPa",
+    "externalUrl": "https://open.spotify.com/album/0v9Sr4I0mHJyvU9igQCHPa",
+    "target": {
+      "type": "release",
+      "releaseId": "release-star-light"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-star-light-star-light",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2E0I7zKJ7CIZxRvjPqMEib",
+    "externalUrl": "https://open.spotify.com/track/2E0I7zKJ7CIZxRvjPqMEib",
+    "target": {
+      "type": "song",
+      "songId": "song-star-light-star-light",
+      "releaseId": "release-star-light"
+    },
+    "display": {
+      "subtitle": "STAR-LIGHT",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnverse",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "0XAL0fKAalk8ctIjZeSDxS",
+    "externalUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS",
+    "target": {
+      "type": "release",
+      "releaseId": "release-kmnverse"
+    },
+    "display": {
+      "subtitle": "Official Album",
+      "year": 2019,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnverse-opening",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "6uYK5OaaDrIovihj7MTOiG",
+    "externalUrl": "https://open.spotify.com/track/6uYK5OaaDrIovihj7MTOiG",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnverse-opening",
+      "releaseId": "release-kmnverse"
+    },
+    "display": {
+      "subtitle": "KMNVERSE",
+      "year": 2019,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnverse-r-u-game",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "7mC8aAWS1M0ITMM4qztk9T",
+    "externalUrl": "https://open.spotify.com/track/7mC8aAWS1M0ITMM4qztk9T",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnverse-r-u-game",
+      "releaseId": "release-kmnverse"
+    },
+    "display": {
+      "subtitle": "KMNVERSE",
+      "year": 2019,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnverse-melty-girl",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2fbGItCtJna0dGC84XseNV",
+    "externalUrl": "https://open.spotify.com/track/2fbGItCtJna0dGC84XseNV",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnverse-melty-girl",
+      "releaseId": "release-kmnverse"
+    },
+    "display": {
+      "subtitle": "KMNVERSE",
+      "year": 2019,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnverse-starz",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "5EsQh2FBYTfbHAo9Qtx9pF",
+    "externalUrl": "https://open.spotify.com/track/5EsQh2FBYTfbHAo9Qtx9pF",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnverse-starz",
+      "releaseId": "release-kmnverse"
+    },
+    "display": {
+      "subtitle": "KMNVERSE",
+      "year": 2019,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnverse-retouch",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "4dqkgZg9w1vOkV949IZqll",
+    "externalUrl": "https://open.spotify.com/track/4dqkgZg9w1vOkV949IZqll",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnverse-retouch",
+      "releaseId": "release-kmnverse"
+    },
+    "display": {
+      "subtitle": "KMNVERSE",
+      "year": 2019,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnverse-def-rag",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "4f1RhMkYRGQXNCMX81nFMC",
+    "externalUrl": "https://open.spotify.com/track/4f1RhMkYRGQXNCMX81nFMC",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnverse-def-rag",
+      "releaseId": "release-kmnverse"
+    },
+    "display": {
+      "subtitle": "KMNVERSE",
+      "year": 2019,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnverse-vr",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "79flIbkdcN831BhDEwgmMZ",
+    "externalUrl": "https://open.spotify.com/track/79flIbkdcN831BhDEwgmMZ",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnverse-vr",
+      "releaseId": "release-kmnverse"
+    },
+    "display": {
+      "subtitle": "KMNVERSE",
+      "year": 2019,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnverse-galaxy",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "1G0YKZJZwhlkNhw0DfQZWt",
+    "externalUrl": "https://open.spotify.com/track/1G0YKZJZwhlkNhw0DfQZWt",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnverse-galaxy",
+      "releaseId": "release-kmnverse"
+    },
+    "display": {
+      "subtitle": "KMNVERSE",
+      "year": 2019,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-posse",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "18JCzKdHEU7e9Cw4dCSnOt",
+    "externalUrl": "https://open.spotify.com/album/18JCzKdHEU7e9Cw4dCSnOt",
+    "target": {
+      "type": "release",
+      "releaseId": "release-posse"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-posse-posse",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "15g816vpjj6RWr9VVASTK7",
+    "externalUrl": "https://open.spotify.com/track/15g816vpjj6RWr9VVASTK7",
+    "target": {
+      "type": "song",
+      "songId": "song-posse-posse",
+      "releaseId": "release-posse"
+    },
+    "display": {
+      "subtitle": "POSSE",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-posse-ride-on",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "5l2alZl3t6dIbMtlig6Jwl",
+    "externalUrl": "https://open.spotify.com/track/5l2alZl3t6dIbMtlig6Jwl",
+    "target": {
+      "type": "song",
+      "songId": "song-posse-ride-on",
+      "releaseId": "release-posse"
+    },
+    "display": {
+      "subtitle": "POSSE",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-posse-three-two-wan",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "1bCA44NvixsU3u7rbdImVM",
+    "externalUrl": "https://open.spotify.com/track/1bCA44NvixsU3u7rbdImVM",
+    "target": {
+      "type": "song",
+      "songId": "song-posse-three-two-wan",
+      "releaseId": "release-posse"
+    },
+    "display": {
+      "subtitle": "POSSE",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnstreet",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "1B4X0Xi9yIXERF0Tel6y7T",
+    "externalUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T",
+    "target": {
+      "type": "release",
+      "releaseId": "release-kmnstreet"
+    },
+    "display": {
+      "subtitle": "Official Album",
+      "year": 2022,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnstreet-we-are-back",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "0Ku6a3bgdkjx2PEZLSDr1A",
+    "externalUrl": "https://open.spotify.com/track/0Ku6a3bgdkjx2PEZLSDr1A",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnstreet-we-are-back",
+      "releaseId": "release-kmnstreet"
+    },
+    "display": {
+      "subtitle": "KMNSTREET",
+      "year": 2022,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnstreet-skool",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "35gww1ee05HQSgvKtPWM7g",
+    "externalUrl": "https://open.spotify.com/track/35gww1ee05HQSgvKtPWM7g",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnstreet-skool",
+      "releaseId": "release-kmnstreet"
+    },
+    "display": {
+      "subtitle": "KMNSTREET",
+      "year": 2022,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnstreet-homey",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "3QVJnjByWUrDoRMonexEA0",
+    "externalUrl": "https://open.spotify.com/track/3QVJnjByWUrDoRMonexEA0",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnstreet-homey",
+      "releaseId": "release-kmnstreet"
+    },
+    "display": {
+      "subtitle": "KMNSTREET",
+      "year": 2022,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnstreet-back-to-the-kids",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "7M3EMtRITfWQgpHJRSRmkC",
+    "externalUrl": "https://open.spotify.com/track/7M3EMtRITfWQgpHJRSRmkC",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnstreet-back-to-the-kids",
+      "releaseId": "release-kmnstreet"
+    },
+    "display": {
+      "subtitle": "KMNSTREET",
+      "year": 2022,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnstreet-overnight",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "6g6LG2UpSK7Y2h8XQSRNf6",
+    "externalUrl": "https://open.spotify.com/track/6g6LG2UpSK7Y2h8XQSRNf6",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnstreet-overnight",
+      "releaseId": "release-kmnstreet"
+    },
+    "display": {
+      "subtitle": "KMNSTREET",
+      "year": 2022,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnstreet-sunny-day-morning",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "6QNqKMi4j451v3RLVHNRIW",
+    "externalUrl": "https://open.spotify.com/track/6QNqKMi4j451v3RLVHNRIW",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnstreet-sunny-day-morning",
+      "releaseId": "release-kmnstreet"
+    },
+    "display": {
+      "subtitle": "KMNSTREET",
+      "year": 2022,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnstreet-practice",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "07hHdbIDlagAZ2xefykqKc",
+    "externalUrl": "https://open.spotify.com/track/07hHdbIDlagAZ2xefykqKc",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnstreet-practice",
+      "releaseId": "release-kmnstreet"
+    },
+    "display": {
+      "subtitle": "KMNSTREET",
+      "year": 2022,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnstreet-haze",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "10ypHOt9zHQPtK7YnMxAbQ",
+    "externalUrl": "https://open.spotify.com/track/10ypHOt9zHQPtK7YnMxAbQ",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnstreet-haze",
+      "releaseId": "release-kmnstreet"
+    },
+    "display": {
+      "subtitle": "KMNSTREET",
+      "year": 2022,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-vr",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "1FhgWBh4tVQgfFsGVh4OTU",
+    "externalUrl": "https://open.spotify.com/album/1FhgWBh4tVQgfFsGVh4OTU",
+    "target": {
+      "type": "release",
+      "releaseId": "release-vr"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2018,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-vr-vr",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2enLz8bnJCG9Ffn1cVjpOD",
+    "externalUrl": "https://open.spotify.com/track/2enLz8bnJCG9Ffn1cVjpOD",
+    "target": {
+      "type": "song",
+      "songId": "song-vr-vr",
+      "releaseId": "release-vr"
+    },
+    "display": {
+      "subtitle": "VR",
+      "year": 2018,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-harmonics",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "1WsiufVxz5jEklfPOzxPeR",
+    "externalUrl": "https://open.spotify.com/album/1WsiufVxz5jEklfPOzxPeR",
+    "target": {
+      "type": "release",
+      "releaseId": "release-harmonics"
+    },
+    "display": {
+      "subtitle": "Official EP",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-harmonics-miraizu",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "3ofQWsnU8MnSiGqjRuBdEv",
+    "externalUrl": "https://open.spotify.com/track/3ofQWsnU8MnSiGqjRuBdEv",
+    "target": {
+      "type": "song",
+      "songId": "song-harmonics-miraizu",
+      "releaseId": "release-harmonics"
+    },
+    "display": {
+      "subtitle": "HARMONICS",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-harmonics-fiction",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2U6xWO3pC7VUIwMvBlUfRy",
+    "externalUrl": "https://open.spotify.com/track/2U6xWO3pC7VUIwMvBlUfRy",
+    "target": {
+      "type": "song",
+      "songId": "song-harmonics-fiction",
+      "releaseId": "release-harmonics"
+    },
+    "display": {
+      "subtitle": "HARMONICS",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-harmonics-admit",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "1pPHz3HOeeOJbHTXvfztLJ",
+    "externalUrl": "https://open.spotify.com/track/1pPHz3HOeeOJbHTXvfztLJ",
+    "target": {
+      "type": "song",
+      "songId": "song-harmonics-admit",
+      "releaseId": "release-harmonics"
+    },
+    "display": {
+      "subtitle": "HARMONICS",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-harmonics-overnight-batsu-remix",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "0A0tf50RkT7fI3gn2MLgn1",
+    "externalUrl": "https://open.spotify.com/track/0A0tf50RkT7fI3gn2MLgn1",
+    "target": {
+      "type": "song",
+      "songId": "song-harmonics-overnight-batsu-remix",
+      "releaseId": "release-harmonics"
+    },
+    "display": {
+      "subtitle": "HARMONICS",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-harmonics-rise-blacky-remix",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2nyMruhuQnEjVdjRINWtkc",
+    "externalUrl": "https://open.spotify.com/track/2nyMruhuQnEjVdjRINWtkc",
+    "target": {
+      "type": "song",
+      "songId": "song-harmonics-rise-blacky-remix",
+      "releaseId": "release-harmonics"
+    },
+    "display": {
+      "subtitle": "HARMONICS",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-harmonics-bath-time-planetarium-gaze-hes-me-remix",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "72SdxU9dmEGg4hnDFvt6SX",
+    "externalUrl": "https://open.spotify.com/track/72SdxU9dmEGg4hnDFvt6SX",
+    "target": {
+      "type": "song",
+      "songId": "song-harmonics-bath-time-planetarium-gaze-hes-me-remix",
+      "releaseId": "release-harmonics"
+    },
+    "display": {
+      "subtitle": "HARMONICS",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-reverse",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "1XK9SlstIJNSJw7Q8H8o4G",
+    "externalUrl": "https://open.spotify.com/album/1XK9SlstIJNSJw7Q8H8o4G",
+    "target": {
+      "type": "release",
+      "releaseId": "release-reverse"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2024,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-reverse-verse",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2GUtlmnabs3GlnnJCltzIG",
+    "externalUrl": "https://open.spotify.com/track/2GUtlmnabs3GlnnJCltzIG",
+    "target": {
+      "type": "song",
+      "songId": "song-reverse-verse",
+      "releaseId": "release-reverse"
+    },
+    "display": {
+      "subtitle": "REVERSE",
+      "year": 2024,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-reverse-mid-journey",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "6e8PYMA3WUZ1XjxtYf0bQp",
+    "externalUrl": "https://open.spotify.com/track/6e8PYMA3WUZ1XjxtYf0bQp",
+    "target": {
+      "type": "song",
+      "songId": "song-reverse-mid-journey",
+      "releaseId": "release-reverse"
+    },
+    "display": {
+      "subtitle": "REVERSE",
+      "year": 2024,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-reverse-calling",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "6jkfh9LaqArUBzldlCz3I6",
+    "externalUrl": "https://open.spotify.com/track/6jkfh9LaqArUBzldlCz3I6",
+    "target": {
+      "type": "song",
+      "songId": "song-reverse-calling",
+      "releaseId": "release-reverse"
+    },
+    "display": {
+      "subtitle": "REVERSE",
+      "year": 2024,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kaleidoscope",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "2wKnaPatmLAYiuaACTnKBi",
+    "externalUrl": "https://open.spotify.com/album/2wKnaPatmLAYiuaACTnKBi",
+    "target": {
+      "type": "release",
+      "releaseId": "release-kaleidoscope"
+    },
+    "display": {
+      "subtitle": "Official Album",
+      "year": 2026,
+      "era": "new"
+    },
+    "listed": false
+  },
+  {
+    "id": "sp-kaleidoscope-juou-mujin-singer-version",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "5n6wI5EcbwVIfUY8UFRmxL",
+    "externalUrl": "https://open.spotify.com/track/5n6wI5EcbwVIfUY8UFRmxL",
+    "target": {
+      "type": "song",
+      "songId": "song-kaleidoscope-juou-mujin-singer-version",
+      "releaseId": "release-kaleidoscope"
+    },
+    "display": {
+      "subtitle": "Kaleidoscope",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-stray-cute",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "34QFkF3i8u9xyZ4q34Z2Yg",
+    "externalUrl": "https://open.spotify.com/album/34QFkF3i8u9xyZ4q34Z2Yg",
+    "target": {
+      "type": "release",
+      "releaseId": "release-stray-cute"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-stray-cute-stray-cute",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "36GjKN01jBhEDtaYbUsXKe",
+    "externalUrl": "https://open.spotify.com/track/36GjKN01jBhEDtaYbUsXKe",
+    "target": {
+      "type": "song",
+      "songId": "song-stray-cute-stray-cute",
+      "releaseId": "release-stray-cute"
+    },
+    "display": {
+      "subtitle": "STRAY CUTE",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-gnosina",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "3eCF0exiGc0gRCwza1JElL",
+    "externalUrl": "https://open.spotify.com/album/3eCF0exiGc0gRCwza1JElL",
+    "target": {
+      "type": "release",
+      "releaseId": "release-gnosina"
+    },
+    "display": {
+      "subtitle": "Official Compilation",
+      "year": 2023,
+      "era": "classic"
+    },
+    "listed": false
+  },
+  {
+    "id": "sp-gnosina-recording-4",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "0KlaUg5DGBF47W0IRvT0BF",
+    "externalUrl": "https://open.spotify.com/track/0KlaUg5DGBF47W0IRvT0BF",
+    "target": {
+      "type": "song",
+      "songId": "song-gnosina-recording-4",
+      "releaseId": "release-gnosina"
+    },
+    "display": {
+      "subtitle": "gnosinA",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnrevival",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "471fgtGzHBrVufJWkJdHf1",
+    "externalUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1",
+    "target": {
+      "type": "release",
+      "releaseId": "release-kmnrevival"
+    },
+    "display": {
+      "subtitle": "Official Album",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnrevival-augmentation-2025",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2cUUQbqzal5gcLBRi5huYS",
+    "externalUrl": "https://open.spotify.com/track/2cUUQbqzal5gcLBRi5huYS",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnrevival-augmentation-2025",
+      "releaseId": "release-kmnrevival"
+    },
+    "display": {
+      "subtitle": "KMNREVIVAL",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnrevival-r-u-game-2025",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "762Rs8zDaEKyb83ixlWHFi",
+    "externalUrl": "https://open.spotify.com/track/762Rs8zDaEKyb83ixlWHFi",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnrevival-r-u-game-2025",
+      "releaseId": "release-kmnrevival"
+    },
+    "display": {
+      "subtitle": "KMNREVIVAL",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnrevival-tokonatsu-style-2025",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "3LhDpKEeNsK2XESSjMIZ5n",
+    "externalUrl": "https://open.spotify.com/track/3LhDpKEeNsK2XESSjMIZ5n",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnrevival-tokonatsu-style-2025",
+      "releaseId": "release-kmnrevival"
+    },
+    "display": {
+      "subtitle": "KMNREVIVAL",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnrevival-skool-2025",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "6TuVV1f5S6ssL4hpMxSsJ0",
+    "externalUrl": "https://open.spotify.com/track/6TuVV1f5S6ssL4hpMxSsJ0",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnrevival-skool-2025",
+      "releaseId": "release-kmnrevival"
+    },
+    "display": {
+      "subtitle": "KMNREVIVAL",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnrevival-we-are-back-2025",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "3ENgPKTNOc51lgp7ZOzaS3",
+    "externalUrl": "https://open.spotify.com/track/3ENgPKTNOc51lgp7ZOzaS3",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnrevival-we-are-back-2025",
+      "releaseId": "release-kmnrevival"
+    },
+    "display": {
+      "subtitle": "KMNREVIVAL",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnrevival-overnight-2025",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "3j5B1yDpo1alkxL054IxE0",
+    "externalUrl": "https://open.spotify.com/track/3j5B1yDpo1alkxL054IxE0",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnrevival-overnight-2025",
+      "releaseId": "release-kmnrevival"
+    },
+    "display": {
+      "subtitle": "KMNREVIVAL",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnrevival-kickin-the-pride-2025",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "10E3g92wXqecV25ZAPDSwu",
+    "externalUrl": "https://open.spotify.com/track/10E3g92wXqecV25ZAPDSwu",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnrevival-kickin-the-pride-2025",
+      "releaseId": "release-kmnrevival"
+    },
+    "display": {
+      "subtitle": "KMNREVIVAL",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-kmnrevival-star-light-2025",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2zv3EYUHCXI9Su4556I7Mh",
+    "externalUrl": "https://open.spotify.com/track/2zv3EYUHCXI9Su4556I7Mh",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnrevival-star-light-2025",
+      "releaseId": "release-kmnrevival"
+    },
+    "display": {
+      "subtitle": "KMNREVIVAL",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-juou-mujin",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "48klDK10Dm1z6PbYTs12n0",
+    "externalUrl": "https://open.spotify.com/album/48klDK10Dm1z6PbYTs12n0",
+    "target": {
+      "type": "release",
+      "releaseId": "release-juou-mujin"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-juou-mujin-juou-mujin",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "3QGIjL37twzdlGLyi3PCOZ",
+    "externalUrl": "https://open.spotify.com/track/3QGIjL37twzdlGLyi3PCOZ",
+    "target": {
+      "type": "song",
+      "songId": "song-juou-mujin-juou-mujin",
+      "releaseId": "release-juou-mujin"
+    },
+    "display": {
+      "subtitle": "獣謳無尽",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-bouryokutekini-kawaii-compilation-2-disc2",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "4dcZXdidmKCzcw98VWCjxI",
+    "externalUrl": "https://open.spotify.com/album/4dcZXdidmKCzcw98VWCjxI",
+    "target": {
+      "type": "release",
+      "releaseId": "release-bouryokutekini-kawaii-compilation-2-disc2"
+    },
+    "display": {
+      "subtitle": "Official Album",
+      "year": 2026,
+      "era": "new"
+    },
+    "listed": false
+  },
+  {
+    "id": "sp-bouryokutekini-kawaii-compilation-2-disc2-stray-cute",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "3UZ9ntExVNyBEHYmq9e4z1",
+    "externalUrl": "https://open.spotify.com/track/3UZ9ntExVNyBEHYmq9e4z1",
+    "target": {
+      "type": "song",
+      "songId": "song-bouryokutekini-kawaii-compilation-2-disc2-stray-cute",
+      "releaseId": "release-bouryokutekini-kawaii-compilation-2-disc2"
+    },
+    "display": {
+      "subtitle": "暴力的にカワイイ 2nd Compilation Album (DISC.2)",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-wave",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "4E06eYfvC17NbUEgMLW6dz",
+    "externalUrl": "https://open.spotify.com/album/4E06eYfvC17NbUEgMLW6dz",
+    "target": {
+      "type": "release",
+      "releaseId": "release-wave"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-wave-wave",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "7ihjUSR7CPFnpjyPFgIbS6",
+    "externalUrl": "https://open.spotify.com/track/7ihjUSR7CPFnpjyPFgIbS6",
+    "target": {
+      "type": "song",
+      "songId": "song-wave-wave",
+      "releaseId": "release-wave"
+    },
+    "display": {
+      "subtitle": "WAVE",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-wave-get-ur-lit-on",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "6qUURc2Nrp2U4cji5Dsfc0",
+    "externalUrl": "https://open.spotify.com/track/6qUURc2Nrp2U4cji5Dsfc0",
+    "target": {
+      "type": "song",
+      "songId": "song-wave-get-ur-lit-on",
+      "releaseId": "release-wave"
+    },
+    "display": {
+      "subtitle": "WAVE",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-wave-hero-in-the-heart",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "5NodIILnsio7nKNbCUZGbl",
+    "externalUrl": "https://open.spotify.com/track/5NodIILnsio7nKNbCUZGbl",
+    "target": {
+      "type": "song",
+      "songId": "song-wave-hero-in-the-heart",
+      "releaseId": "release-wave"
+    },
+    "display": {
+      "subtitle": "WAVE",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-satisfaction",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "4fyAfJWowGodlCaGgvRbeq",
+    "externalUrl": "https://open.spotify.com/album/4fyAfJWowGodlCaGgvRbeq",
+    "target": {
+      "type": "release",
+      "releaseId": "release-satisfaction"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-satisfaction-satisfaction-feat-kmnz",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "6tCnKAJeASAlXOGYMDR5cw",
+    "externalUrl": "https://open.spotify.com/track/6tCnKAJeASAlXOGYMDR5cw",
+    "target": {
+      "type": "song",
+      "songId": "song-satisfaction-satisfaction-feat-kmnz",
+      "releaseId": "release-satisfaction"
+    },
+    "display": {
+      "subtitle": "SATISFACTION",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-satisfaction-satisfaction-feat-kmnz-instrumental",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "36ZiK8tSoNrXhypCKwX6LT",
+    "externalUrl": "https://open.spotify.com/track/36ZiK8tSoNrXhypCKwX6LT",
+    "target": {
+      "type": "song",
+      "songId": "song-satisfaction-satisfaction-feat-kmnz-instrumental",
+      "releaseId": "release-satisfaction"
+    },
+    "display": {
+      "subtitle": "SATISFACTION",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-mimimi",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "4Q5RV37hjqWhAVVcts63YP",
+    "externalUrl": "https://open.spotify.com/album/4Q5RV37hjqWhAVVcts63YP",
+    "target": {
+      "type": "release",
+      "releaseId": "release-mimimi"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-mimimi-mimimi",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "4dYyQAPpCxaxfYK8jLhdca",
+    "externalUrl": "https://open.spotify.com/track/4dYyQAPpCxaxfYK8jLhdca",
+    "target": {
+      "type": "song",
+      "songId": "song-mimimi-mimimi",
+      "releaseId": "release-mimimi"
+    },
+    "display": {
+      "subtitle": "MiMiMi",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-mimimi-reload",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "61eJ2XIBcseqqnhBJrbDbX",
+    "externalUrl": "https://open.spotify.com/track/61eJ2XIBcseqqnhBJrbDbX",
+    "target": {
+      "type": "song",
+      "songId": "song-mimimi-reload",
+      "releaseId": "release-mimimi"
+    },
+    "display": {
+      "subtitle": "MiMiMi",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-mimimi-q-u-e-s-t",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "10esrMHzgE6FXDJaD0kaiJ",
+    "externalUrl": "https://open.spotify.com/track/10esrMHzgE6FXDJaD0kaiJ",
+    "target": {
+      "type": "song",
+      "songId": "song-mimimi-q-u-e-s-t",
+      "releaseId": "release-mimimi"
+    },
+    "display": {
+      "subtitle": "MiMiMi",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-starz-remix",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "4rsU5BjR9hXts6DjIogbrP",
+    "externalUrl": "https://open.spotify.com/album/4rsU5BjR9hXts6DjIogbrP",
+    "target": {
+      "type": "release",
+      "releaseId": "release-starz-remix"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2022,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-starz-remix-starz-remix",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "4K8e0ArlkoqZ3XAgNO8uiA",
+    "externalUrl": "https://open.spotify.com/track/4K8e0ArlkoqZ3XAgNO8uiA",
+    "target": {
+      "type": "song",
+      "songId": "song-starz-remix-starz-remix",
+      "releaseId": "release-starz-remix"
+    },
+    "display": {
+      "subtitle": "sTarZ (Remix)",
+      "year": 2022,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "4VUsRUXEQWQ8wDSEie9lKQ",
+    "externalUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ",
+    "target": {
+      "type": "release",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "Official Album",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-opening",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2kkukqAQYxhahtUEKJsiZm",
+    "externalUrl": "https://open.spotify.com/track/2kkukqAQYxhahtUEKJsiZm",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-opening",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-r-u-game",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "5Ebg0qAFCqIYIscYxsiyXq",
+    "externalUrl": "https://open.spotify.com/track/5Ebg0qAFCqIYIscYxsiyXq",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-r-u-game",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-melty-girl",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2oos51KC9V41gRKw9u7LRk",
+    "externalUrl": "https://open.spotify.com/track/2oos51KC9V41gRKw9u7LRk",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-melty-girl",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-starz",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "49mYdJCmsyJneLs5sMTgkX",
+    "externalUrl": "https://open.spotify.com/track/49mYdJCmsyJneLs5sMTgkX",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-starz",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-retouch",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "1tRhZUWxISyJZmNXnmPpZt",
+    "externalUrl": "https://open.spotify.com/track/1tRhZUWxISyJZmNXnmPpZt",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-retouch",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-def-rag",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "5j5LqbgnYVqZ6LEKcndL0r",
+    "externalUrl": "https://open.spotify.com/track/5j5LqbgnYVqZ6LEKcndL0r",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-def-rag",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-vr",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "1fCcOyyHHbcpzsl9pb204c",
+    "externalUrl": "https://open.spotify.com/track/1fCcOyyHHbcpzsl9pb204c",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-vr",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-galaxy",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "61Ujz7kBNj1shglM9WHWRY",
+    "externalUrl": "https://open.spotify.com/track/61Ujz7kBNj1shglM9WHWRY",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-galaxy",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-journey",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2iXBJmChMihGRgn54J8Gm1",
+    "externalUrl": "https://open.spotify.com/track/2iXBJmChMihGRgn54J8Gm1",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-journey",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-tokonatsu-style",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "6K5H9Za7FOtKmzFUw40WQo",
+    "externalUrl": "https://open.spotify.com/track/6K5H9Za7FOtKmzFUw40WQo",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-tokonatsu-style",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-awaken",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "5YnlBx5NbBCyTMxdXoywU7",
+    "externalUrl": "https://open.spotify.com/track/5YnlBx5NbBCyTMxdXoywU7",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-awaken",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-letter",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "6lqVmeCgz2YpHDUcRcvOPl",
+    "externalUrl": "https://open.spotify.com/track/6lqVmeCgz2YpHDUcRcvOPl",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-letter",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-daydream",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "7nLsQKFuzdcNrDUlwRwodx",
+    "externalUrl": "https://open.spotify.com/track/7nLsQKFuzdcNrDUlwRwodx",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-daydream",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-and",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "0cqatTxhtjIHnEL7Rs3L7A",
+    "externalUrl": "https://open.spotify.com/track/0cqatTxhtjIHnEL7Rs3L7A",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-and",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-we-are-back",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "3thBAAI13d96I1ABt4C7mI",
+    "externalUrl": "https://open.spotify.com/track/3thBAAI13d96I1ABt4C7mI",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-we-are-back",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-skool",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "25FsXMlBF8jBLaOIOuMfE1",
+    "externalUrl": "https://open.spotify.com/track/25FsXMlBF8jBLaOIOuMfE1",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-skool",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-homey",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "53WUMpewyWhjd2L4ucqhtM",
+    "externalUrl": "https://open.spotify.com/track/53WUMpewyWhjd2L4ucqhtM",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-homey",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-back-to-the-kids",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "5DIyMVxFlIFMkMrNIuDzXY",
+    "externalUrl": "https://open.spotify.com/track/5DIyMVxFlIFMkMrNIuDzXY",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-back-to-the-kids",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-overnight",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "1pyOCl9XcuGjDZUrtylbqz",
+    "externalUrl": "https://open.spotify.com/track/1pyOCl9XcuGjDZUrtylbqz",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-overnight",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-sunny-day-morning",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "1RWq8cyfN0FuDAKxcd7FAX",
+    "externalUrl": "https://open.spotify.com/track/1RWq8cyfN0FuDAKxcd7FAX",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-sunny-day-morning",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-practice",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2ZkoYYHrkagNL27y75wIlb",
+    "externalUrl": "https://open.spotify.com/track/2ZkoYYHrkagNL27y75wIlb",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-practice",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-haze",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "7ppjpuFmTncGKuEF6Q1nBA",
+    "externalUrl": "https://open.spotify.com/track/7ppjpuFmTncGKuEF6Q1nBA",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-haze",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-mc-battle",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "0NfYDA0z9HTW9mpkxXotjN",
+    "externalUrl": "https://open.spotify.com/track/0NfYDA0z9HTW9mpkxXotjN",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-mc-battle",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-kickin-the-pride",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "1qlBhYIom6WQxVHGEqjALh",
+    "externalUrl": "https://open.spotify.com/track/1qlBhYIom6WQxVHGEqjALh",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-kickin-the-pride",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-our-days",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2sVw7lf3kM6TfU4Lmo5Xbk",
+    "externalUrl": "https://open.spotify.com/track/2sVw7lf3kM6TfU4Lmo5Xbk",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-our-days",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnz-the-best-buddy-star-light",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "7v5Lub6uVpidyNZEyuzzkh",
+    "externalUrl": "https://open.spotify.com/track/7v5Lub6uVpidyNZEyuzzkh",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnz-the-best-buddy-star-light",
+      "releaseId": "release-kmnz-the-best-buddy"
+    },
+    "display": {
+      "subtitle": "KMNZ THE BEST \"BUDDY\"",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-rewire",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "4YuJYluQF9E9X8oRu0wpgH",
+    "externalUrl": "https://open.spotify.com/album/4YuJYluQF9E9X8oRu0wpgH",
+    "target": {
+      "type": "release",
+      "releaseId": "release-rewire"
+    },
+    "display": {
+      "subtitle": "Official Compilation",
+      "year": 2020,
+      "era": "classic"
+    },
+    "listed": false
+  },
+  {
+    "id": "sp-rewire-recoat-feat-kmnz",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2huoEVqQ9LQ2yhz3XmXRKh",
+    "externalUrl": "https://open.spotify.com/track/2huoEVqQ9LQ2yhz3XmXRKh",
+    "target": {
+      "type": "song",
+      "songId": "song-rewire-recoat-feat-kmnz",
+      "releaseId": "release-rewire"
+    },
+    "display": {
+      "subtitle": "REWIRE",
+      "year": 2020,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-virtuareal-02",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "4Z86Wuuyd74Sjr8M0VKA8i",
+    "externalUrl": "https://open.spotify.com/album/4Z86Wuuyd74Sjr8M0VKA8i",
+    "target": {
+      "type": "release",
+      "releaseId": "release-virtuareal-02"
+    },
+    "display": {
+      "subtitle": "Official Compilation",
+      "year": 2020,
+      "era": "classic"
+    },
+    "listed": false
+  },
+  {
+    "id": "sp-virtuareal-02-kick-it-feat-kmnz",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "14pNcAFDleAwcjhpJcfQY1",
+    "externalUrl": "https://open.spotify.com/track/14pNcAFDleAwcjhpJcfQY1",
+    "target": {
+      "type": "song",
+      "songId": "song-virtuareal-02-kick-it-feat-kmnz",
+      "releaseId": "release-virtuareal-02"
+    },
+    "display": {
+      "subtitle": "VirtuaREAL.02",
+      "year": 2020,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnskool",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "52JACFDdBYApnjIKBacna1",
+    "externalUrl": "https://open.spotify.com/album/52JACFDdBYApnjIKBacna1",
+    "target": {
+      "type": "release",
+      "releaseId": "release-kmnskool"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnskool-practice",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2ZoqTsnOqgbvZxm6mhYXBf",
+    "externalUrl": "https://open.spotify.com/track/2ZoqTsnOqgbvZxm6mhYXBf",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnskool-practice",
+      "releaseId": "release-kmnskool"
+    },
+    "display": {
+      "subtitle": "KMNSKOOL",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-kmnskool-skool",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "4DUT2QHJwyBub8r8Pc5arJ",
+    "externalUrl": "https://open.spotify.com/track/4DUT2QHJwyBub8r8Pc5arJ",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnskool-skool",
+      "releaseId": "release-kmnskool"
+    },
+    "display": {
+      "subtitle": "KMNSKOOL",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-moon-engine",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "5B5GLSdIbJxtO8U1d9W8ze",
+    "externalUrl": "https://open.spotify.com/album/5B5GLSdIbJxtO8U1d9W8ze",
+    "target": {
+      "type": "release",
+      "releaseId": "release-moon-engine"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-moon-engine-moon-engine",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "59qwVLtRZ2AsPci8c4TJb2",
+    "externalUrl": "https://open.spotify.com/track/59qwVLtRZ2AsPci8c4TJb2",
+    "target": {
+      "type": "song",
+      "songId": "song-moon-engine-moon-engine",
+      "releaseId": "release-moon-engine"
+    },
+    "display": {
+      "subtitle": "Moon Engine",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-moon-engine-wanted",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "6rFjqUKOWsP30wuhfaFolW",
+    "externalUrl": "https://open.spotify.com/track/6rFjqUKOWsP30wuhfaFolW",
+    "target": {
+      "type": "song",
+      "songId": "song-moon-engine-wanted",
+      "releaseId": "release-moon-engine"
+    },
+    "display": {
+      "subtitle": "Moon Engine",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-moon-engine-popsta",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "6RtcDHnUX4JECN7nNwSWdv",
+    "externalUrl": "https://open.spotify.com/track/6RtcDHnUX4JECN7nNwSWdv",
+    "target": {
+      "type": "song",
+      "songId": "song-moon-engine-popsta",
+      "releaseId": "release-moon-engine"
+    },
+    "display": {
+      "subtitle": "Moon Engine",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-spotlight-vol-1",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "5BJv8uW7Rc8312AtDLRNgq",
+    "externalUrl": "https://open.spotify.com/album/5BJv8uW7Rc8312AtDLRNgq",
+    "target": {
+      "type": "release",
+      "releaseId": "release-spotlight-vol-1"
+    },
+    "display": {
+      "subtitle": "Official Compilation",
+      "year": 2021,
+      "era": "classic"
+    },
+    "listed": false
+  },
+  {
+    "id": "sp-spotlight-vol-1-needy",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "50UGvawnEqh9aTdgyRSZnr",
+    "externalUrl": "https://open.spotify.com/track/50UGvawnEqh9aTdgyRSZnr",
+    "target": {
+      "type": "song",
+      "songId": "song-spotlight-vol-1-needy",
+      "releaseId": "release-spotlight-vol-1"
+    },
+    "display": {
+      "subtitle": "SPOTLIGHT vol.1",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-drops-drop-in",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "6az8iS77d06PzldooDY88V",
+    "externalUrl": "https://open.spotify.com/track/6az8iS77d06PzldooDY88V",
+    "target": {
+      "type": "song",
+      "songId": "song-drops-drop-in",
+      "releaseId": "release-drops"
+    },
+    "display": {
+      "subtitle": "DROPS",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-drops-growl",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "06k5M7AT17VaRZSyIsM3xE",
+    "externalUrl": "https://open.spotify.com/track/06k5M7AT17VaRZSyIsM3xE",
+    "target": {
+      "type": "song",
+      "songId": "song-drops-growl",
+      "releaseId": "release-drops"
+    },
+    "display": {
+      "subtitle": "DROPS",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-glory-days",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "5zqmkXqAs3E3npko0WhdEQ",
+    "externalUrl": "https://open.spotify.com/album/5zqmkXqAs3E3npko0WhdEQ",
+    "target": {
+      "type": "release",
+      "releaseId": "release-glory-days"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-glory-days-glory-days",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "3Jyjf3yWUklCoEsEXu8sxZ",
+    "externalUrl": "https://open.spotify.com/track/3Jyjf3yWUklCoEsEXu8sxZ",
+    "target": {
+      "type": "song",
+      "songId": "song-glory-days-glory-days",
+      "releaseId": "release-glory-days"
+    },
+    "display": {
+      "subtitle": "Glory Days",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-opener",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "6as2nPn2GWvLbD04XO447M",
+    "externalUrl": "https://open.spotify.com/album/6as2nPn2GWvLbD04XO447M",
+    "target": {
+      "type": "release",
+      "releaseId": "release-opener"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-opener-opener",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "4bMgFz63tA9rPVmU0WWPdu",
+    "externalUrl": "https://open.spotify.com/track/4bMgFz63tA9rPVmU0WWPdu",
+    "target": {
+      "type": "song",
+      "songId": "song-opener-opener",
+      "releaseId": "release-opener"
+    },
+    "display": {
+      "subtitle": "OPENER",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-opener-banger",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "4c8sgWGyPqlQeO7d9rpKRB",
+    "externalUrl": "https://open.spotify.com/track/4c8sgWGyPqlQeO7d9rpKRB",
+    "target": {
+      "type": "song",
+      "songId": "song-opener-banger",
+      "releaseId": "release-opener"
+    },
+    "display": {
+      "subtitle": "OPENER",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-opener-the-after",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "2X4C12x6jmr5r3dJPwxaDn",
+    "externalUrl": "https://open.spotify.com/track/2X4C12x6jmr5r3dJPwxaDn",
+    "target": {
+      "type": "song",
+      "songId": "song-opener-the-after",
+      "releaseId": "release-opener"
+    },
+    "display": {
+      "subtitle": "OPENER",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-asterisk",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "7G2IJPWIGvOdkaK9O9dAZU",
+    "externalUrl": "https://open.spotify.com/album/7G2IJPWIGvOdkaK9O9dAZU",
+    "target": {
+      "type": "release",
+      "releaseId": "release-asterisk"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-asterisk-asterisk",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "78x5y1czypkoDehkfa7tJ1",
+    "externalUrl": "https://open.spotify.com/track/78x5y1czypkoDehkfa7tJ1",
+    "target": {
+      "type": "song",
+      "songId": "song-asterisk-asterisk",
+      "releaseId": "release-asterisk"
+    },
+    "display": {
+      "subtitle": "＊〜アスタリスク〜",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "sp-cherry-pick",
+    "platform": "spotify",
+    "kind": "album",
+    "platformId": "7K2CBj5JZGkJ4vmB8sIBEE",
+    "externalUrl": "https://open.spotify.com/album/7K2CBj5JZGkJ4vmB8sIBEE",
+    "target": {
+      "type": "release",
+      "releaseId": "release-cherry-pick"
+    },
+    "display": {
+      "subtitle": "Official Single",
+      "year": 2018,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "sp-cherry-pick-cherry-pick-feat",
+    "platform": "spotify",
+    "kind": "track",
+    "platformId": "7GxonXoquuqqMsOGmyOiZr",
+    "externalUrl": "https://open.spotify.com/track/7GxonXoquuqqMsOGmyOiZr",
+    "target": {
+      "type": "song",
+      "songId": "song-cherry-pick-cherry-pick-feat",
+      "releaseId": "release-cherry-pick"
+    },
+    "display": {
+      "subtitle": "CHERRY PICK (feat. レオタードブタ)",
+      "year": 2018,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-the-after",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "0_BmqKhNtF8",
+    "externalUrl": "https://www.youtube.com/watch?v=0_BmqKhNtF8",
+    "target": {
+      "type": "song",
+      "songId": "song-opener-the-after",
+      "releaseId": "release-opener"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-isekai-wear-studio-live",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "2lwBuFatJ5I",
+    "externalUrl": "https://www.youtube.com/watch?v=2lwBuFatJ5I",
+    "target": {
+      "type": "song",
+      "songId": "song-isekai-wear-studio-live"
+    },
+    "display": {
+      "subtitle": "Studio Live Session",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-wanted",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "2QWD8NbEGac",
+    "externalUrl": "https://www.youtube.com/watch?v=2QWD8NbEGac",
+    "target": {
+      "type": "song",
+      "songId": "song-moon-engine-wanted",
+      "releaseId": "release-moon-engine"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-driving",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "45T9N21JuOE",
+    "externalUrl": "https://www.youtube.com/watch?v=45T9N21JuOE",
+    "target": {
+      "type": "song",
+      "songId": "song-driving"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-ride-on",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "4KulaqIoHhs",
+    "externalUrl": "https://www.youtube.com/watch?v=4KulaqIoHhs",
+    "target": {
+      "type": "song",
+      "songId": "song-posse-ride-on",
+      "releaseId": "release-posse"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-ifif",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "AFp_HSyar-Y",
+    "externalUrl": "https://www.youtube.com/watch?v=AFp_HSyar-Y",
+    "target": {
+      "type": "song",
+      "songId": "song-ifif"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2018,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-tokonatsu-style-2025",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "Av_lAz5s_Ic",
+    "externalUrl": "https://www.youtube.com/watch?v=Av_lAz5s_Ic",
+    "target": {
+      "type": "song",
+      "songId": "song-tokonatsu-style-2025"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-metro",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "BhgelQ0WLHQ",
+    "externalUrl": "https://www.youtube.com/watch?v=BhgelQ0WLHQ",
+    "target": {
+      "type": "song",
+      "songId": "song-cont-d-metro",
+      "releaseId": "release-cont-d"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-vr-studio-live",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "cCxP0EbdXF0",
+    "externalUrl": "https://www.youtube.com/watch?v=cCxP0EbdXF0",
+    "target": {
+      "type": "song",
+      "songId": "song-vr-studio-live"
+    },
+    "display": {
+      "subtitle": "Studio Live Session",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-fiction",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "CXQN1eVmzMA",
+    "externalUrl": "https://www.youtube.com/watch?v=CXQN1eVmzMA",
+    "target": {
+      "type": "song",
+      "songId": "song-fiction"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-beat-beast",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "e32NiSfMFTI",
+    "externalUrl": "https://www.youtube.com/watch?v=e32NiSfMFTI",
+    "target": {
+      "type": "song",
+      "songId": "song-beat-beast"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2020,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-opening",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "F11ofqsnuNY",
+    "externalUrl": "https://www.youtube.com/watch?v=F11ofqsnuNY",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnverse-opening",
+      "releaseId": "release-kmnverse"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2019,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-overnight",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "FJ1X-R9V2fA",
+    "externalUrl": "https://www.youtube.com/watch?v=FJ1X-R9V2fA",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnstreet-overnight",
+      "releaseId": "release-kmnstreet"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2022,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-popsta",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "G_Le1WrMu0g",
+    "externalUrl": "https://www.youtube.com/watch?v=G_Le1WrMu0g",
+    "target": {
+      "type": "song",
+      "songId": "song-moon-engine-popsta",
+      "releaseId": "release-moon-engine"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-cont-d",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "I5ldJc-T7vE",
+    "externalUrl": "https://www.youtube.com/watch?v=I5ldJc-T7vE",
+    "target": {
+      "type": "song",
+      "songId": "song-cont-d-cont-d",
+      "releaseId": "release-cont-d"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-three-two-wan",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "jZssphmSVww",
+    "externalUrl": "https://www.youtube.com/watch?v=jZssphmSVww",
+    "target": {
+      "type": "song",
+      "songId": "song-posse-three-two-wan",
+      "releaseId": "release-posse"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-3d-three-dimension",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "lsThiIWT2s0",
+    "externalUrl": "https://www.youtube.com/watch?v=lsThiIWT2s0",
+    "target": {
+      "type": "song",
+      "songId": "song-3d-three-dimension"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2020,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-vr-music-only",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "lYQGWVSVl_Y",
+    "externalUrl": "https://www.youtube.com/watch?v=lYQGWVSVl_Y",
+    "target": {
+      "type": "song",
+      "songId": "song-vr-vr",
+      "releaseId": "release-vr"
+    },
+    "display": {
+      "subtitle": "Official Music Video · Music Only",
+      "year": 2018,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-be-noisy",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "mkp_QPtwSVc",
+    "externalUrl": "https://www.youtube.com/watch?v=mkp_QPtwSVc",
+    "target": {
+      "type": "song",
+      "songId": "song-noisy-night-be-noisy",
+      "releaseId": "release-noisy-night"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2024,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-calling",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "mSmcimGZZqM",
+    "externalUrl": "https://www.youtube.com/watch?v=mSmcimGZZqM",
+    "target": {
+      "type": "song",
+      "songId": "song-reverse-calling",
+      "releaseId": "release-reverse"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2024,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-we-are-back",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "mz5l0NHfj3Q",
+    "externalUrl": "https://www.youtube.com/watch?v=mz5l0NHfj3Q",
+    "target": {
+      "type": "song",
+      "songId": "song-we-are-back"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-vr",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "nhFgmVDPNlo",
+    "externalUrl": "https://www.youtube.com/watch?v=nhFgmVDPNlo",
+    "target": {
+      "type": "song",
+      "songId": "song-vr-vr",
+      "releaseId": "release-vr"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2019,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-banger",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "o5NxNNLT-q4",
+    "externalUrl": "https://www.youtube.com/watch?v=o5NxNNLT-q4",
+    "target": {
+      "type": "song",
+      "songId": "song-opener-banger",
+      "releaseId": "release-opener"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-augmentation-feat-moe-shop",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "PbGddpIfXeQ",
+    "externalUrl": "https://www.youtube.com/watch?v=PbGddpIfXeQ",
+    "target": {
+      "type": "song",
+      "songId": "song-augmentation-feat-moe-shop"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2019,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-moon-engine",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "pVn8V2kEvmQ",
+    "externalUrl": "https://www.youtube.com/watch?v=pVn8V2kEvmQ",
+    "target": {
+      "type": "song",
+      "songId": "song-moon-engine-moon-engine",
+      "releaseId": "release-moon-engine"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-galaxy",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "qL7F5MDcCQo",
+    "externalUrl": "https://www.youtube.com/watch?v=qL7F5MDcCQo",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnverse-galaxy",
+      "releaseId": "release-kmnverse"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2020,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-opener",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "SJcnSAK-pak",
+    "externalUrl": "https://www.youtube.com/watch?v=SJcnSAK-pak",
+    "target": {
+      "type": "song",
+      "songId": "song-opener-opener",
+      "releaseId": "release-opener"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-mid-journey",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "SsywhDWUS_Q",
+    "externalUrl": "https://www.youtube.com/watch?v=SsywhDWUS_Q",
+    "target": {
+      "type": "song",
+      "songId": "song-reverse-mid-journey",
+      "releaseId": "release-reverse"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2024,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-star-light",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "tQmVd75MMXY",
+    "externalUrl": "https://www.youtube.com/watch?v=tQmVd75MMXY",
+    "target": {
+      "type": "song",
+      "songId": "song-star-light"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-posse",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "tR4jmnavtDk",
+    "externalUrl": "https://www.youtube.com/watch?v=tR4jmnavtDk",
+    "target": {
+      "type": "song",
+      "songId": "song-posse-posse",
+      "releaseId": "release-posse"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2025,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-synchronizer",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "TsILoCA8Mm4",
+    "externalUrl": "https://www.youtube.com/watch?v=TsILoCA8Mm4",
+    "target": {
+      "type": "song",
+      "songId": "song-cont-d-synchronizer",
+      "releaseId": "release-cont-d"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-mimimi",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "UCs1CQ59uoE",
+    "externalUrl": "https://www.youtube.com/watch?v=UCs1CQ59uoE",
+    "target": {
+      "type": "song",
+      "songId": "song-mimimi-mimimi",
+      "releaseId": "release-mimimi"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-cherry-pick",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "VIAeoxvevaM",
+    "externalUrl": "https://www.youtube.com/watch?v=VIAeoxvevaM",
+    "target": {
+      "type": "song",
+      "songId": "song-cherry-pick"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2018,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-glory-days",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "xjKvf0QClII",
+    "externalUrl": "https://www.youtube.com/watch?v=xjKvf0QClII",
+    "target": {
+      "type": "song",
+      "songId": "song-glory-days"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-practice",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "ZEActnTQ68M",
+    "externalUrl": "https://www.youtube.com/watch?v=ZEActnTQ68M",
+    "target": {
+      "type": "song",
+      "songId": "song-practice"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2021,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-reload",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "ZEhcGNJgc6Q",
+    "externalUrl": "https://www.youtube.com/watch?v=ZEhcGNJgc6Q",
+    "target": {
+      "type": "song",
+      "songId": "song-mimimi-reload",
+      "releaseId": "release-mimimi"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2026,
+      "era": "new"
+    }
+  },
+  {
+    "id": "yt-miraizu",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "_PK2wC3v-qQ",
+    "externalUrl": "https://www.youtube.com/watch?v=_PK2wC3v-qQ",
+    "target": {
+      "type": "song",
+      "songId": "song-miraizu"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2023,
+      "era": "classic"
+    }
+  },
+  {
+    "id": "yt-fuzzy-town",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "_U2-SRW-wiw",
+    "externalUrl": "https://www.youtube.com/watch?v=_U2-SRW-wiw",
+    "target": {
+      "type": "song",
+      "songId": "song-fuzzy-town"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2020,
+      "era": "classic"
     }
   }
 ]

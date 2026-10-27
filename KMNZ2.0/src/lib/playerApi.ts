@@ -1,4 +1,6 @@
 export interface YouTubePlayer {
+  loadVideoById(videoId: string): void
+  getVideoUrl(): string
   playVideo(): void
   pauseVideo(): void
   getPlayerState(): number
@@ -14,7 +16,7 @@ export interface YouTubePlayer {
 interface YouTubeEvent { target: YouTubePlayer; data?: number }
 export interface YouTubeApi {
   Player: new (frame: HTMLIFrameElement, options: {
-    events: { onReady(event: YouTubeEvent): void; onStateChange(event: YouTubeEvent): void }
+    events: { onReady(event: YouTubeEvent): void; onStateChange(event: YouTubeEvent): void; onError?(event: YouTubeEvent): void; onAutoplayBlocked?(): void }
   }) => YouTubePlayer
 }
 
@@ -29,7 +31,8 @@ export interface SpotifyController {
   play(): void
   pause(): void
   seek(seconds: number): void
-  loadUri(uri: string): void
+  loadUri?(uri: string): void
+  loadEntity?(uri: string): void
   destroy(): void
   addListener(event: 'ready', listener: () => void): void
   addListener(event: 'playback_started', listener: (event: { data: { playingURI: string } }) => void): void

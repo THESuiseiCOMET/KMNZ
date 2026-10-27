@@ -153,5 +153,3867 @@
       "verifiedAt": "2026-10-27T05:56:43.296Z",
       "sourceUrl": "https://open.spotify.com/track/3vjYW1spy1frAE39zZR6Xx"
     }
+  },
+  "sp-kmnculture-verse": {
+    "platformId": "6k0IsjRMvpvxNzZHwQEiwn",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02c3862da277d06dce2fa6b224",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/album/0034RJKaIQVPPA581qxaif"
+    },
+    "releaseDate": {
+      "value": "2025-01-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/track/6k0IsjRMvpvxNzZHwQEiwn"
+    }
+  },
+  "sp-kmnculture-new-days": {
+    "platformId": "4e8AQFUM6HRNT97pySfvHR",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02c3862da277d06dce2fa6b224",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/album/0034RJKaIQVPPA581qxaif"
+    },
+    "releaseDate": {
+      "value": "2025-01-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/track/4e8AQFUM6HRNT97pySfvHR"
+    }
+  },
+  "sp-kmnculture-mid-journey": {
+    "platformId": "0ENAkXRPrpPGMf4jNJWPid",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02c3862da277d06dce2fa6b224",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/album/0034RJKaIQVPPA581qxaif"
+    },
+    "releaseDate": {
+      "value": "2025-01-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/track/0ENAkXRPrpPGMf4jNJWPid"
+    }
+  },
+  "sp-kmnculture-lunatic-beast": {
+    "platformId": "2jLVxRQNo45RyaO7BYSAXr",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02c3862da277d06dce2fa6b224",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/album/0034RJKaIQVPPA581qxaif"
+    },
+    "releaseDate": {
+      "value": "2025-01-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/track/2jLVxRQNo45RyaO7BYSAXr"
+    }
+  },
+  "sp-kmnculture-be-noisy": {
+    "platformId": "21KMOjGkMVAPfZYzzPdMpz",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02c3862da277d06dce2fa6b224",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/album/0034RJKaIQVPPA581qxaif"
+    },
+    "releaseDate": {
+      "value": "2025-01-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/track/21KMOjGkMVAPfZYzzPdMpz"
+    }
+  },
+  "sp-kmnculture-meta-fiction": {
+    "platformId": "05tSHC61Fhxq2vMjQsOmfF",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02c3862da277d06dce2fa6b224",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/album/0034RJKaIQVPPA581qxaif"
+    },
+    "releaseDate": {
+      "value": "2025-01-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/track/05tSHC61Fhxq2vMjQsOmfF"
+    }
+  },
+  "sp-kmnculture-freely": {
+    "platformId": "60IjgoUifknYFaH974Jawe",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02c3862da277d06dce2fa6b224",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/album/0034RJKaIQVPPA581qxaif"
+    },
+    "releaseDate": {
+      "value": "2025-01-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/track/60IjgoUifknYFaH974Jawe"
+    }
+  },
+  "sp-kmnculture-calling": {
+    "platformId": "6M1rTyiplKXrCzl0PWIZDP",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02c3862da277d06dce2fa6b224",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/album/0034RJKaIQVPPA581qxaif"
+    },
+    "releaseDate": {
+      "value": "2025-01-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/track/6M1rTyiplKXrCzl0PWIZDP"
+    }
+  },
+  "sp-kmnculture-sunday-night-magic": {
+    "platformId": "1kD4mX5IHbhWUho7ie6x8M",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02c3862da277d06dce2fa6b224",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/album/0034RJKaIQVPPA581qxaif"
+    },
+    "releaseDate": {
+      "value": "2025-01-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T08:09:45.709Z",
+      "sourceUrl": "https://open.spotify.com/track/1kD4mX5IHbhWUho7ie6x8M"
+    }
+  },
+  "sp-drops": {
+    "platformId": "5uqDam637cLI8dRHhFyyqT",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02cac7cde695126b200c58052c",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T09:49:11.511Z",
+      "sourceUrl": "https://open.spotify.com/album/5uqDam637cLI8dRHhFyyqT"
+    },
+    "releaseDate": {
+      "value": "2025-06-13",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T09:49:11.511Z",
+      "sourceUrl": "https://open.spotify.com/album/5uqDam637cLI8dRHhFyyqT"
+    }
+  },
+  "sp-chunithm-all-justice-iii-4": {
+    "platformId": "0ar528FqvQHUAo6aFa6SdC",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02dcb5a1615af4ce086c138505",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:55.118Z",
+      "sourceUrl": "https://open.spotify.com/album/0ar528FqvQHUAo6aFa6SdC"
+    },
+    "releaseDate": {
+      "value": "2022-04-28",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0ar528FqvQHUAo6aFa6SdC"
+    }
+  },
+  "sp-chunithm-all-justice-iii-4-glory-days": {
+    "platformId": "5tjFASkgzH10MSvgaP8rRH",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02dcb5a1615af4ce086c138505",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:55.118Z",
+      "sourceUrl": "https://open.spotify.com/album/0ar528FqvQHUAo6aFa6SdC"
+    },
+    "releaseDate": {
+      "value": "2022-04-28",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0ar528FqvQHUAo6aFa6SdC"
+    }
+  },
+  "sp-noisy-night": {
+    "platformId": "0Gop7jnAjm2idxggd3DoHf",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e023e59bc03cd26d5bd28ad6d46",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:55.203Z",
+      "sourceUrl": "https://open.spotify.com/album/0Gop7jnAjm2idxggd3DoHf"
+    },
+    "releaseDate": {
+      "value": "2024-11-11",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0Gop7jnAjm2idxggd3DoHf"
+    }
+  },
+  "sp-noisy-night-be-noisy": {
+    "platformId": "68odVFMKl1GB8L2p0PyKUr",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e023e59bc03cd26d5bd28ad6d46",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:55.203Z",
+      "sourceUrl": "https://open.spotify.com/album/0Gop7jnAjm2idxggd3DoHf"
+    },
+    "releaseDate": {
+      "value": "2024-11-11",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0Gop7jnAjm2idxggd3DoHf"
+    }
+  },
+  "sp-noisy-night-lunatic-beast": {
+    "platformId": "0uPohrxDeFq6ZL1nP2DN0m",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e023e59bc03cd26d5bd28ad6d46",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:55.203Z",
+      "sourceUrl": "https://open.spotify.com/album/0Gop7jnAjm2idxggd3DoHf"
+    },
+    "releaseDate": {
+      "value": "2024-11-11",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0Gop7jnAjm2idxggd3DoHf"
+    }
+  },
+  "sp-noisy-night-sunday-night-magic": {
+    "platformId": "35eXxcbgp2Xtg9u8TZmcaR",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e023e59bc03cd26d5bd28ad6d46",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:55.203Z",
+      "sourceUrl": "https://open.spotify.com/album/0Gop7jnAjm2idxggd3DoHf"
+    },
+    "releaseDate": {
+      "value": "2024-11-11",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0Gop7jnAjm2idxggd3DoHf"
+    }
+  },
+  "sp-virtuareal-best-01-remix": {
+    "platformId": "0HCnz0qTYCZHHwL2TfBH4y",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e028ccae52312e907a82a46a55d",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:55.306Z",
+      "sourceUrl": "https://open.spotify.com/album/0HCnz0qTYCZHHwL2TfBH4y"
+    },
+    "releaseDate": {
+      "value": "2021-09-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0HCnz0qTYCZHHwL2TfBH4y"
+    }
+  },
+  "sp-virtuareal-best-01-remix-kick-it-feat-kmnz-kakeru-remix": {
+    "platformId": "0sGDc1Vp08NzNXuPDylwQn",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e028ccae52312e907a82a46a55d",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:55.306Z",
+      "sourceUrl": "https://open.spotify.com/album/0HCnz0qTYCZHHwL2TfBH4y"
+    },
+    "releaseDate": {
+      "value": "2021-09-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0HCnz0qTYCZHHwL2TfBH4y"
+    }
+  },
+  "sp-our-days": {
+    "platformId": "0IKQnpzbtOcQvjCs8H267e",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0249772ff5aefacf2911f3a007",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:44:10.196Z",
+      "sourceUrl": "https://open.spotify.com/album/0IKQnpzbtOcQvjCs8H267e"
+    },
+    "releaseDate": {
+      "value": "2023-09-15",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0IKQnpzbtOcQvjCs8H267e"
+    }
+  },
+  "sp-our-days-mc-battle": {
+    "platformId": "2HYfoVDNh5LhN39ibyTgUA",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0249772ff5aefacf2911f3a007",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:44:10.196Z",
+      "sourceUrl": "https://open.spotify.com/album/0IKQnpzbtOcQvjCs8H267e"
+    },
+    "releaseDate": {
+      "value": "2023-09-15",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0IKQnpzbtOcQvjCs8H267e"
+    }
+  },
+  "sp-our-days-kickin-the-pride": {
+    "platformId": "0MYdDFpILWehLWRN3k6kt4",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0249772ff5aefacf2911f3a007",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:44:10.196Z",
+      "sourceUrl": "https://open.spotify.com/album/0IKQnpzbtOcQvjCs8H267e"
+    },
+    "releaseDate": {
+      "value": "2023-09-15",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0IKQnpzbtOcQvjCs8H267e"
+    }
+  },
+  "sp-our-days-our-days": {
+    "platformId": "7vWHQ6i01QHgz7qyttigxO",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0249772ff5aefacf2911f3a007",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:44:10.196Z",
+      "sourceUrl": "https://open.spotify.com/album/0IKQnpzbtOcQvjCs8H267e"
+    },
+    "releaseDate": {
+      "value": "2023-09-15",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0IKQnpzbtOcQvjCs8H267e"
+    }
+  },
+  "sp-augmentation": {
+    "platformId": "0PxCslPCQ1bnXEVOwppNiy",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02f465de0eff7c92f15bfaa1f2",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:56.951Z",
+      "sourceUrl": "https://open.spotify.com/album/0PxCslPCQ1bnXEVOwppNiy"
+    },
+    "releaseDate": {
+      "value": "2019-04-08",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0PxCslPCQ1bnXEVOwppNiy"
+    }
+  },
+  "sp-augmentation-augmentation": {
+    "platformId": "0q17SIpv40VnrNv5pbuLOb",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02f465de0eff7c92f15bfaa1f2",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:56.951Z",
+      "sourceUrl": "https://open.spotify.com/album/0PxCslPCQ1bnXEVOwppNiy"
+    },
+    "releaseDate": {
+      "value": "2019-04-08",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0PxCslPCQ1bnXEVOwppNiy"
+    }
+  },
+  "sp-kmnround": {
+    "platformId": "0ql0RolALZB0zKRa0nGh7a",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02645c0856c5fb8785f93d7c8f",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:57.104Z",
+      "sourceUrl": "https://open.spotify.com/album/0ql0RolALZB0zKRa0nGh7a"
+    },
+    "releaseDate": {
+      "value": "2021-04-10",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0ql0RolALZB0zKRa0nGh7a"
+    }
+  },
+  "sp-kmnround-departures": {
+    "platformId": "4jsGbFTgAQZOk3TUyfICc8",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02645c0856c5fb8785f93d7c8f",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:57.104Z",
+      "sourceUrl": "https://open.spotify.com/album/0ql0RolALZB0zKRa0nGh7a"
+    },
+    "releaseDate": {
+      "value": "2021-04-10",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0ql0RolALZB0zKRa0nGh7a"
+    }
+  },
+  "sp-kmnround-journey": {
+    "platformId": "07JOu0ehf7SUD2TGo4achL",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02645c0856c5fb8785f93d7c8f",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:57.104Z",
+      "sourceUrl": "https://open.spotify.com/album/0ql0RolALZB0zKRa0nGh7a"
+    },
+    "releaseDate": {
+      "value": "2021-04-10",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0ql0RolALZB0zKRa0nGh7a"
+    }
+  },
+  "sp-kmnround-tokonatsu-style": {
+    "platformId": "3GqxsTw9BGHKYQvdUZazIr",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02645c0856c5fb8785f93d7c8f",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:57.104Z",
+      "sourceUrl": "https://open.spotify.com/album/0ql0RolALZB0zKRa0nGh7a"
+    },
+    "releaseDate": {
+      "value": "2021-04-10",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0ql0RolALZB0zKRa0nGh7a"
+    }
+  },
+  "sp-kmnround-awaken": {
+    "platformId": "5P0388wv7ocR1uKZKLweUi",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02645c0856c5fb8785f93d7c8f",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:57.104Z",
+      "sourceUrl": "https://open.spotify.com/album/0ql0RolALZB0zKRa0nGh7a"
+    },
+    "releaseDate": {
+      "value": "2021-04-10",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0ql0RolALZB0zKRa0nGh7a"
+    }
+  },
+  "sp-kmnround-letter": {
+    "platformId": "2BJ8VCPr15Yvkh9fbUG7Mv",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02645c0856c5fb8785f93d7c8f",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:57.104Z",
+      "sourceUrl": "https://open.spotify.com/album/0ql0RolALZB0zKRa0nGh7a"
+    },
+    "releaseDate": {
+      "value": "2021-04-10",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0ql0RolALZB0zKRa0nGh7a"
+    }
+  },
+  "sp-kmnround-daydream": {
+    "platformId": "42oudOljJYBXX4XLur0cpG",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02645c0856c5fb8785f93d7c8f",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:57.104Z",
+      "sourceUrl": "https://open.spotify.com/album/0ql0RolALZB0zKRa0nGh7a"
+    },
+    "releaseDate": {
+      "value": "2021-04-10",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0ql0RolALZB0zKRa0nGh7a"
+    }
+  },
+  "sp-kmnround-and": {
+    "platformId": "7me6Gd1W4FGLX18GgkZNDK",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02645c0856c5fb8785f93d7c8f",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:57.104Z",
+      "sourceUrl": "https://open.spotify.com/album/0ql0RolALZB0zKRa0nGh7a"
+    },
+    "releaseDate": {
+      "value": "2021-04-10",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0ql0RolALZB0zKRa0nGh7a"
+    }
+  },
+  "sp-cont-d": {
+    "platformId": "0Rz7TBlGoLPLo2YDqXciJx",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02c05b95c33965540956c7ba42",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:57.346Z",
+      "sourceUrl": "https://open.spotify.com/album/0Rz7TBlGoLPLo2YDqXciJx"
+    },
+    "releaseDate": {
+      "value": "2026-07-03",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0Rz7TBlGoLPLo2YDqXciJx"
+    }
+  },
+  "sp-cont-d-cont-d": {
+    "platformId": "7Jtmo7E9rhbHkFZ0wyxTpI",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02c05b95c33965540956c7ba42",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:57.346Z",
+      "sourceUrl": "https://open.spotify.com/album/0Rz7TBlGoLPLo2YDqXciJx"
+    },
+    "releaseDate": {
+      "value": "2026-07-03",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0Rz7TBlGoLPLo2YDqXciJx"
+    }
+  },
+  "sp-cont-d-metro": {
+    "platformId": "1isAtVhdby5UgmWUtsFApM",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02c05b95c33965540956c7ba42",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:57.346Z",
+      "sourceUrl": "https://open.spotify.com/album/0Rz7TBlGoLPLo2YDqXciJx"
+    },
+    "releaseDate": {
+      "value": "2026-07-03",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0Rz7TBlGoLPLo2YDqXciJx"
+    }
+  },
+  "sp-cont-d-synchronizer": {
+    "platformId": "18LDE6r6J1CyG1VTysZULN",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02c05b95c33965540956c7ba42",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:57.346Z",
+      "sourceUrl": "https://open.spotify.com/album/0Rz7TBlGoLPLo2YDqXciJx"
+    },
+    "releaseDate": {
+      "value": "2026-07-03",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0Rz7TBlGoLPLo2YDqXciJx"
+    }
+  },
+  "sp-star-light": {
+    "platformId": "0v9Sr4I0mHJyvU9igQCHPa",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e026ddf731e17dc8345994544e3",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:58.267Z",
+      "sourceUrl": "https://open.spotify.com/album/0v9Sr4I0mHJyvU9igQCHPa"
+    },
+    "releaseDate": {
+      "value": "2023-07-29",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0v9Sr4I0mHJyvU9igQCHPa"
+    }
+  },
+  "sp-star-light-star-light": {
+    "platformId": "2E0I7zKJ7CIZxRvjPqMEib",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e026ddf731e17dc8345994544e3",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:58.267Z",
+      "sourceUrl": "https://open.spotify.com/album/0v9Sr4I0mHJyvU9igQCHPa"
+    },
+    "releaseDate": {
+      "value": "2023-07-29",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0v9Sr4I0mHJyvU9igQCHPa"
+    }
+  },
+  "sp-kmnverse": {
+    "platformId": "0XAL0fKAalk8ctIjZeSDxS",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02dd5bd1ad3825d4169551931d",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:58.803Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    },
+    "releaseDate": {
+      "value": "2019-11-22",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    }
+  },
+  "sp-kmnverse-opening": {
+    "platformId": "6uYK5OaaDrIovihj7MTOiG",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02dd5bd1ad3825d4169551931d",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:58.803Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    },
+    "releaseDate": {
+      "value": "2019-11-22",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    }
+  },
+  "sp-kmnverse-r-u-game": {
+    "platformId": "7mC8aAWS1M0ITMM4qztk9T",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02dd5bd1ad3825d4169551931d",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:58.803Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    },
+    "releaseDate": {
+      "value": "2019-11-22",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    }
+  },
+  "sp-kmnverse-melty-girl": {
+    "platformId": "2fbGItCtJna0dGC84XseNV",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02dd5bd1ad3825d4169551931d",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:58.803Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    },
+    "releaseDate": {
+      "value": "2019-11-22",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    }
+  },
+  "sp-kmnverse-starz": {
+    "platformId": "5EsQh2FBYTfbHAo9Qtx9pF",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02dd5bd1ad3825d4169551931d",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:58.803Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    },
+    "releaseDate": {
+      "value": "2019-11-22",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    }
+  },
+  "sp-kmnverse-retouch": {
+    "platformId": "4dqkgZg9w1vOkV949IZqll",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02dd5bd1ad3825d4169551931d",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:58.803Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    },
+    "releaseDate": {
+      "value": "2019-11-22",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    }
+  },
+  "sp-kmnverse-def-rag": {
+    "platformId": "4f1RhMkYRGQXNCMX81nFMC",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02dd5bd1ad3825d4169551931d",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:58.803Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    },
+    "releaseDate": {
+      "value": "2019-11-22",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    }
+  },
+  "sp-kmnverse-vr": {
+    "platformId": "79flIbkdcN831BhDEwgmMZ",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02dd5bd1ad3825d4169551931d",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:58.803Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    },
+    "releaseDate": {
+      "value": "2019-11-22",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    }
+  },
+  "sp-kmnverse-galaxy": {
+    "platformId": "1G0YKZJZwhlkNhw0DfQZWt",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02dd5bd1ad3825d4169551931d",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:58.803Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    },
+    "releaseDate": {
+      "value": "2019-11-22",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/0XAL0fKAalk8ctIjZeSDxS"
+    }
+  },
+  "sp-posse": {
+    "platformId": "18JCzKdHEU7e9Cw4dCSnOt",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0291e3797105e49e2e60654533",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:58.903Z",
+      "sourceUrl": "https://open.spotify.com/album/18JCzKdHEU7e9Cw4dCSnOt"
+    },
+    "releaseDate": {
+      "value": "2025-11-05",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/18JCzKdHEU7e9Cw4dCSnOt"
+    }
+  },
+  "sp-posse-posse": {
+    "platformId": "15g816vpjj6RWr9VVASTK7",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0291e3797105e49e2e60654533",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:58.903Z",
+      "sourceUrl": "https://open.spotify.com/album/18JCzKdHEU7e9Cw4dCSnOt"
+    },
+    "releaseDate": {
+      "value": "2025-11-05",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/18JCzKdHEU7e9Cw4dCSnOt"
+    }
+  },
+  "sp-posse-ride-on": {
+    "platformId": "5l2alZl3t6dIbMtlig6Jwl",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0291e3797105e49e2e60654533",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:58.903Z",
+      "sourceUrl": "https://open.spotify.com/album/18JCzKdHEU7e9Cw4dCSnOt"
+    },
+    "releaseDate": {
+      "value": "2025-11-05",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/18JCzKdHEU7e9Cw4dCSnOt"
+    }
+  },
+  "sp-posse-three-two-wan": {
+    "platformId": "1bCA44NvixsU3u7rbdImVM",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0291e3797105e49e2e60654533",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:58.903Z",
+      "sourceUrl": "https://open.spotify.com/album/18JCzKdHEU7e9Cw4dCSnOt"
+    },
+    "releaseDate": {
+      "value": "2025-11-05",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/18JCzKdHEU7e9Cw4dCSnOt"
+    }
+  },
+  "sp-kmnstreet": {
+    "platformId": "1B4X0Xi9yIXERF0Tel6y7T",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02ea73f8334ad199e1148f22c3",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:59.817Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    },
+    "releaseDate": {
+      "value": "2022-06-12",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    }
+  },
+  "sp-kmnstreet-we-are-back": {
+    "platformId": "0Ku6a3bgdkjx2PEZLSDr1A",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02ea73f8334ad199e1148f22c3",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:59.817Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    },
+    "releaseDate": {
+      "value": "2022-06-12",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    }
+  },
+  "sp-kmnstreet-skool": {
+    "platformId": "35gww1ee05HQSgvKtPWM7g",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02ea73f8334ad199e1148f22c3",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:59.817Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    },
+    "releaseDate": {
+      "value": "2022-06-12",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    }
+  },
+  "sp-kmnstreet-homey": {
+    "platformId": "3QVJnjByWUrDoRMonexEA0",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02ea73f8334ad199e1148f22c3",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:59.817Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    },
+    "releaseDate": {
+      "value": "2022-06-12",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    }
+  },
+  "sp-kmnstreet-back-to-the-kids": {
+    "platformId": "7M3EMtRITfWQgpHJRSRmkC",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02ea73f8334ad199e1148f22c3",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:59.817Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    },
+    "releaseDate": {
+      "value": "2022-06-12",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    }
+  },
+  "sp-kmnstreet-overnight": {
+    "platformId": "6g6LG2UpSK7Y2h8XQSRNf6",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02ea73f8334ad199e1148f22c3",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:59.817Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    },
+    "releaseDate": {
+      "value": "2022-06-12",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    }
+  },
+  "sp-kmnstreet-sunny-day-morning": {
+    "platformId": "6QNqKMi4j451v3RLVHNRIW",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02ea73f8334ad199e1148f22c3",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:59.817Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    },
+    "releaseDate": {
+      "value": "2022-06-12",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    }
+  },
+  "sp-kmnstreet-practice": {
+    "platformId": "07hHdbIDlagAZ2xefykqKc",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02ea73f8334ad199e1148f22c3",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:59.817Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    },
+    "releaseDate": {
+      "value": "2022-06-12",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    }
+  },
+  "sp-kmnstreet-haze": {
+    "platformId": "10ypHOt9zHQPtK7YnMxAbQ",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02ea73f8334ad199e1148f22c3",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:59.817Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    },
+    "releaseDate": {
+      "value": "2022-06-12",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1B4X0Xi9yIXERF0Tel6y7T"
+    }
+  },
+  "sp-vr": {
+    "platformId": "1FhgWBh4tVQgfFsGVh4OTU",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02cc41ad4793c817d654ff9992",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:59.911Z",
+      "sourceUrl": "https://open.spotify.com/album/1FhgWBh4tVQgfFsGVh4OTU"
+    },
+    "releaseDate": {
+      "value": "2018-08-07",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1FhgWBh4tVQgfFsGVh4OTU"
+    }
+  },
+  "sp-vr-vr": {
+    "platformId": "2enLz8bnJCG9Ffn1cVjpOD",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02cc41ad4793c817d654ff9992",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:37:59.911Z",
+      "sourceUrl": "https://open.spotify.com/album/1FhgWBh4tVQgfFsGVh4OTU"
+    },
+    "releaseDate": {
+      "value": "2018-08-07",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1FhgWBh4tVQgfFsGVh4OTU"
+    }
+  },
+  "sp-harmonics": {
+    "platformId": "1WsiufVxz5jEklfPOzxPeR",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025fc229a97ec8810876af4e53",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:00.451Z",
+      "sourceUrl": "https://open.spotify.com/album/1WsiufVxz5jEklfPOzxPeR"
+    },
+    "releaseDate": {
+      "value": "2023-03-10",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1WsiufVxz5jEklfPOzxPeR"
+    }
+  },
+  "sp-harmonics-miraizu": {
+    "platformId": "3ofQWsnU8MnSiGqjRuBdEv",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025fc229a97ec8810876af4e53",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:00.451Z",
+      "sourceUrl": "https://open.spotify.com/album/1WsiufVxz5jEklfPOzxPeR"
+    },
+    "releaseDate": {
+      "value": "2023-03-10",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1WsiufVxz5jEklfPOzxPeR"
+    }
+  },
+  "sp-harmonics-fiction": {
+    "platformId": "2U6xWO3pC7VUIwMvBlUfRy",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025fc229a97ec8810876af4e53",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:00.451Z",
+      "sourceUrl": "https://open.spotify.com/album/1WsiufVxz5jEklfPOzxPeR"
+    },
+    "releaseDate": {
+      "value": "2023-03-10",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1WsiufVxz5jEklfPOzxPeR"
+    }
+  },
+  "sp-harmonics-admit": {
+    "platformId": "1pPHz3HOeeOJbHTXvfztLJ",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025fc229a97ec8810876af4e53",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:00.451Z",
+      "sourceUrl": "https://open.spotify.com/album/1WsiufVxz5jEklfPOzxPeR"
+    },
+    "releaseDate": {
+      "value": "2023-03-10",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1WsiufVxz5jEklfPOzxPeR"
+    }
+  },
+  "sp-harmonics-overnight-batsu-remix": {
+    "platformId": "0A0tf50RkT7fI3gn2MLgn1",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025fc229a97ec8810876af4e53",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:00.451Z",
+      "sourceUrl": "https://open.spotify.com/album/1WsiufVxz5jEklfPOzxPeR"
+    },
+    "releaseDate": {
+      "value": "2023-03-10",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1WsiufVxz5jEklfPOzxPeR"
+    }
+  },
+  "sp-harmonics-rise-blacky-remix": {
+    "platformId": "2nyMruhuQnEjVdjRINWtkc",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025fc229a97ec8810876af4e53",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:00.451Z",
+      "sourceUrl": "https://open.spotify.com/album/1WsiufVxz5jEklfPOzxPeR"
+    },
+    "releaseDate": {
+      "value": "2023-03-10",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1WsiufVxz5jEklfPOzxPeR"
+    }
+  },
+  "sp-harmonics-bath-time-planetarium-gaze-hes-me-remix": {
+    "platformId": "72SdxU9dmEGg4hnDFvt6SX",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025fc229a97ec8810876af4e53",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:00.451Z",
+      "sourceUrl": "https://open.spotify.com/album/1WsiufVxz5jEklfPOzxPeR"
+    },
+    "releaseDate": {
+      "value": "2023-03-10",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1WsiufVxz5jEklfPOzxPeR"
+    }
+  },
+  "sp-reverse": {
+    "platformId": "1XK9SlstIJNSJw7Q8H8o4G",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025f8f46e4f7d0e36bc770fda3",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:00.542Z",
+      "sourceUrl": "https://open.spotify.com/album/1XK9SlstIJNSJw7Q8H8o4G"
+    },
+    "releaseDate": {
+      "value": "2024-06-03",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1XK9SlstIJNSJw7Q8H8o4G"
+    }
+  },
+  "sp-reverse-verse": {
+    "platformId": "2GUtlmnabs3GlnnJCltzIG",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025f8f46e4f7d0e36bc770fda3",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:00.542Z",
+      "sourceUrl": "https://open.spotify.com/album/1XK9SlstIJNSJw7Q8H8o4G"
+    },
+    "releaseDate": {
+      "value": "2024-06-03",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1XK9SlstIJNSJw7Q8H8o4G"
+    }
+  },
+  "sp-reverse-mid-journey": {
+    "platformId": "6e8PYMA3WUZ1XjxtYf0bQp",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025f8f46e4f7d0e36bc770fda3",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:00.542Z",
+      "sourceUrl": "https://open.spotify.com/album/1XK9SlstIJNSJw7Q8H8o4G"
+    },
+    "releaseDate": {
+      "value": "2024-06-03",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1XK9SlstIJNSJw7Q8H8o4G"
+    }
+  },
+  "sp-reverse-calling": {
+    "platformId": "6jkfh9LaqArUBzldlCz3I6",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025f8f46e4f7d0e36bc770fda3",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:00.542Z",
+      "sourceUrl": "https://open.spotify.com/album/1XK9SlstIJNSJw7Q8H8o4G"
+    },
+    "releaseDate": {
+      "value": "2024-06-03",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/1XK9SlstIJNSJw7Q8H8o4G"
+    }
+  },
+  "sp-kaleidoscope": {
+    "platformId": "2wKnaPatmLAYiuaACTnKBi",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0272d5c4c4b466dab555e8ad37",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:01.595Z",
+      "sourceUrl": "https://open.spotify.com/album/2wKnaPatmLAYiuaACTnKBi"
+    },
+    "releaseDate": {
+      "value": "2026-06-30",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/2wKnaPatmLAYiuaACTnKBi"
+    }
+  },
+  "sp-kaleidoscope-juou-mujin-singer-version": {
+    "platformId": "5n6wI5EcbwVIfUY8UFRmxL",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0272d5c4c4b466dab555e8ad37",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:01.595Z",
+      "sourceUrl": "https://open.spotify.com/album/2wKnaPatmLAYiuaACTnKBi"
+    },
+    "releaseDate": {
+      "value": "2026-06-30",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/2wKnaPatmLAYiuaACTnKBi"
+    }
+  },
+  "sp-stray-cute": {
+    "platformId": "34QFkF3i8u9xyZ4q34Z2Yg",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e021051de633cb71c0fd87e741d",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:01.688Z",
+      "sourceUrl": "https://open.spotify.com/album/34QFkF3i8u9xyZ4q34Z2Yg"
+    },
+    "releaseDate": {
+      "value": "2026-09-23",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/34QFkF3i8u9xyZ4q34Z2Yg"
+    }
+  },
+  "sp-stray-cute-stray-cute": {
+    "platformId": "36GjKN01jBhEDtaYbUsXKe",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e021051de633cb71c0fd87e741d",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:01.688Z",
+      "sourceUrl": "https://open.spotify.com/album/34QFkF3i8u9xyZ4q34Z2Yg"
+    },
+    "releaseDate": {
+      "value": "2026-09-23",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/34QFkF3i8u9xyZ4q34Z2Yg"
+    }
+  },
+  "sp-gnosina": {
+    "platformId": "3eCF0exiGc0gRCwza1JElL",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0253e4c7cb06b7adc832a349b3",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:45:11.494Z",
+      "sourceUrl": "https://open.spotify.com/album/3eCF0exiGc0gRCwza1JElL"
+    },
+    "releaseDate": {
+      "value": "2023-10-25",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/3eCF0exiGc0gRCwza1JElL"
+    }
+  },
+  "sp-gnosina-recording-4": {
+    "platformId": "0KlaUg5DGBF47W0IRvT0BF",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0253e4c7cb06b7adc832a349b3",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:45:11.494Z",
+      "sourceUrl": "https://open.spotify.com/album/3eCF0exiGc0gRCwza1JElL"
+    },
+    "releaseDate": {
+      "value": "2023-10-25",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/3eCF0exiGc0gRCwza1JElL"
+    }
+  },
+  "sp-kmnrevival": {
+    "platformId": "471fgtGzHBrVufJWkJdHf1",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e022412c4261530b625326260d2",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:02.256Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    },
+    "releaseDate": {
+      "value": "2025-09-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    }
+  },
+  "sp-kmnrevival-augmentation-2025": {
+    "platformId": "2cUUQbqzal5gcLBRi5huYS",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e022412c4261530b625326260d2",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:02.256Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    },
+    "releaseDate": {
+      "value": "2025-09-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    }
+  },
+  "sp-kmnrevival-r-u-game-2025": {
+    "platformId": "762Rs8zDaEKyb83ixlWHFi",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e022412c4261530b625326260d2",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:02.256Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    },
+    "releaseDate": {
+      "value": "2025-09-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    }
+  },
+  "sp-kmnrevival-tokonatsu-style-2025": {
+    "platformId": "3LhDpKEeNsK2XESSjMIZ5n",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e022412c4261530b625326260d2",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:02.256Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    },
+    "releaseDate": {
+      "value": "2025-09-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    }
+  },
+  "sp-kmnrevival-skool-2025": {
+    "platformId": "6TuVV1f5S6ssL4hpMxSsJ0",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e022412c4261530b625326260d2",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:02.256Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    },
+    "releaseDate": {
+      "value": "2025-09-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    }
+  },
+  "sp-kmnrevival-we-are-back-2025": {
+    "platformId": "3ENgPKTNOc51lgp7ZOzaS3",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e022412c4261530b625326260d2",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:02.256Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    },
+    "releaseDate": {
+      "value": "2025-09-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    }
+  },
+  "sp-kmnrevival-overnight-2025": {
+    "platformId": "3j5B1yDpo1alkxL054IxE0",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e022412c4261530b625326260d2",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:02.256Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    },
+    "releaseDate": {
+      "value": "2025-09-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    }
+  },
+  "sp-kmnrevival-kickin-the-pride-2025": {
+    "platformId": "10E3g92wXqecV25ZAPDSwu",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e022412c4261530b625326260d2",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:02.256Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    },
+    "releaseDate": {
+      "value": "2025-09-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    }
+  },
+  "sp-kmnrevival-star-light-2025": {
+    "platformId": "2zv3EYUHCXI9Su4556I7Mh",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e022412c4261530b625326260d2",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:02.256Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    },
+    "releaseDate": {
+      "value": "2025-09-06",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/471fgtGzHBrVufJWkJdHf1"
+    }
+  },
+  "sp-juou-mujin": {
+    "platformId": "48klDK10Dm1z6PbYTs12n0",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02d80950ca5a0eaae24120aaa2",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:45:11.609Z",
+      "sourceUrl": "https://open.spotify.com/album/48klDK10Dm1z6PbYTs12n0"
+    },
+    "releaseDate": {
+      "value": "2026-03-19",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/48klDK10Dm1z6PbYTs12n0"
+    }
+  },
+  "sp-juou-mujin-juou-mujin": {
+    "platformId": "3QGIjL37twzdlGLyi3PCOZ",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02d80950ca5a0eaae24120aaa2",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:45:11.609Z",
+      "sourceUrl": "https://open.spotify.com/album/48klDK10Dm1z6PbYTs12n0"
+    },
+    "releaseDate": {
+      "value": "2026-03-19",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/48klDK10Dm1z6PbYTs12n0"
+    }
+  },
+  "sp-bouryokutekini-kawaii-compilation-2-disc2": {
+    "platformId": "4dcZXdidmKCzcw98VWCjxI",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02d93ab67141bca076d548bc16",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:02.432Z",
+      "sourceUrl": "https://open.spotify.com/album/4dcZXdidmKCzcw98VWCjxI"
+    },
+    "releaseDate": {
+      "value": "2026-09-23",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4dcZXdidmKCzcw98VWCjxI"
+    }
+  },
+  "sp-bouryokutekini-kawaii-compilation-2-disc2-stray-cute": {
+    "platformId": "3UZ9ntExVNyBEHYmq9e4z1",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02d93ab67141bca076d548bc16",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:02.432Z",
+      "sourceUrl": "https://open.spotify.com/album/4dcZXdidmKCzcw98VWCjxI"
+    },
+    "releaseDate": {
+      "value": "2026-09-23",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4dcZXdidmKCzcw98VWCjxI"
+    }
+  },
+  "sp-wave": {
+    "platformId": "4E06eYfvC17NbUEgMLW6dz",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e021d1781b2064e8005778a210c",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:03.496Z",
+      "sourceUrl": "https://open.spotify.com/album/4E06eYfvC17NbUEgMLW6dz"
+    },
+    "releaseDate": {
+      "value": "2025-08-13",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4E06eYfvC17NbUEgMLW6dz"
+    }
+  },
+  "sp-wave-wave": {
+    "platformId": "7ihjUSR7CPFnpjyPFgIbS6",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e021d1781b2064e8005778a210c",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:03.496Z",
+      "sourceUrl": "https://open.spotify.com/album/4E06eYfvC17NbUEgMLW6dz"
+    },
+    "releaseDate": {
+      "value": "2025-08-13",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4E06eYfvC17NbUEgMLW6dz"
+    }
+  },
+  "sp-wave-get-ur-lit-on": {
+    "platformId": "6qUURc2Nrp2U4cji5Dsfc0",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e021d1781b2064e8005778a210c",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:03.496Z",
+      "sourceUrl": "https://open.spotify.com/album/4E06eYfvC17NbUEgMLW6dz"
+    },
+    "releaseDate": {
+      "value": "2025-08-13",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4E06eYfvC17NbUEgMLW6dz"
+    }
+  },
+  "sp-wave-hero-in-the-heart": {
+    "platformId": "5NodIILnsio7nKNbCUZGbl",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e021d1781b2064e8005778a210c",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:03.496Z",
+      "sourceUrl": "https://open.spotify.com/album/4E06eYfvC17NbUEgMLW6dz"
+    },
+    "releaseDate": {
+      "value": "2025-08-13",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4E06eYfvC17NbUEgMLW6dz"
+    }
+  },
+  "sp-satisfaction": {
+    "platformId": "4fyAfJWowGodlCaGgvRbeq",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0265c27afe342b710681e1e3ac",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:03.801Z",
+      "sourceUrl": "https://open.spotify.com/album/4fyAfJWowGodlCaGgvRbeq"
+    },
+    "releaseDate": {
+      "value": "2025-05-17",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4fyAfJWowGodlCaGgvRbeq"
+    }
+  },
+  "sp-satisfaction-satisfaction-feat-kmnz": {
+    "platformId": "6tCnKAJeASAlXOGYMDR5cw",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0265c27afe342b710681e1e3ac",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:03.801Z",
+      "sourceUrl": "https://open.spotify.com/album/4fyAfJWowGodlCaGgvRbeq"
+    },
+    "releaseDate": {
+      "value": "2025-05-17",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4fyAfJWowGodlCaGgvRbeq"
+    }
+  },
+  "sp-satisfaction-satisfaction-feat-kmnz-instrumental": {
+    "platformId": "36ZiK8tSoNrXhypCKwX6LT",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0265c27afe342b710681e1e3ac",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:03.801Z",
+      "sourceUrl": "https://open.spotify.com/album/4fyAfJWowGodlCaGgvRbeq"
+    },
+    "releaseDate": {
+      "value": "2025-05-17",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4fyAfJWowGodlCaGgvRbeq"
+    }
+  },
+  "sp-mimimi": {
+    "platformId": "4Q5RV37hjqWhAVVcts63YP",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02384bdb21ea99d2c6af6d5bf5",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:03.884Z",
+      "sourceUrl": "https://open.spotify.com/album/4Q5RV37hjqWhAVVcts63YP"
+    },
+    "releaseDate": {
+      "value": "2026-09-26",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4Q5RV37hjqWhAVVcts63YP"
+    }
+  },
+  "sp-mimimi-mimimi": {
+    "platformId": "4dYyQAPpCxaxfYK8jLhdca",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02384bdb21ea99d2c6af6d5bf5",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:03.884Z",
+      "sourceUrl": "https://open.spotify.com/album/4Q5RV37hjqWhAVVcts63YP"
+    },
+    "releaseDate": {
+      "value": "2026-09-26",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4Q5RV37hjqWhAVVcts63YP"
+    }
+  },
+  "sp-mimimi-reload": {
+    "platformId": "61eJ2XIBcseqqnhBJrbDbX",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02384bdb21ea99d2c6af6d5bf5",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:03.884Z",
+      "sourceUrl": "https://open.spotify.com/album/4Q5RV37hjqWhAVVcts63YP"
+    },
+    "releaseDate": {
+      "value": "2026-09-26",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4Q5RV37hjqWhAVVcts63YP"
+    }
+  },
+  "sp-mimimi-q-u-e-s-t": {
+    "platformId": "10esrMHzgE6FXDJaD0kaiJ",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02384bdb21ea99d2c6af6d5bf5",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:03.884Z",
+      "sourceUrl": "https://open.spotify.com/album/4Q5RV37hjqWhAVVcts63YP"
+    },
+    "releaseDate": {
+      "value": "2026-09-26",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4Q5RV37hjqWhAVVcts63YP"
+    }
+  },
+  "sp-starz-remix": {
+    "platformId": "4rsU5BjR9hXts6DjIogbrP",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02294cd6406b21c4738df9e0ca",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:04.588Z",
+      "sourceUrl": "https://open.spotify.com/album/4rsU5BjR9hXts6DjIogbrP"
+    },
+    "releaseDate": {
+      "value": "2022-06-23",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4rsU5BjR9hXts6DjIogbrP"
+    }
+  },
+  "sp-starz-remix-starz-remix": {
+    "platformId": "4K8e0ArlkoqZ3XAgNO8uiA",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02294cd6406b21c4738df9e0ca",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:04.588Z",
+      "sourceUrl": "https://open.spotify.com/album/4rsU5BjR9hXts6DjIogbrP"
+    },
+    "releaseDate": {
+      "value": "2022-06-23",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4rsU5BjR9hXts6DjIogbrP"
+    }
+  },
+  "sp-kmnz-the-best-buddy": {
+    "platformId": "4VUsRUXEQWQ8wDSEie9lKQ",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-opening": {
+    "platformId": "2kkukqAQYxhahtUEKJsiZm",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-r-u-game": {
+    "platformId": "5Ebg0qAFCqIYIscYxsiyXq",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-melty-girl": {
+    "platformId": "2oos51KC9V41gRKw9u7LRk",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-starz": {
+    "platformId": "49mYdJCmsyJneLs5sMTgkX",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-retouch": {
+    "platformId": "1tRhZUWxISyJZmNXnmPpZt",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-def-rag": {
+    "platformId": "5j5LqbgnYVqZ6LEKcndL0r",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-vr": {
+    "platformId": "1fCcOyyHHbcpzsl9pb204c",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-galaxy": {
+    "platformId": "61Ujz7kBNj1shglM9WHWRY",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-journey": {
+    "platformId": "2iXBJmChMihGRgn54J8Gm1",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-tokonatsu-style": {
+    "platformId": "6K5H9Za7FOtKmzFUw40WQo",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-awaken": {
+    "platformId": "5YnlBx5NbBCyTMxdXoywU7",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-letter": {
+    "platformId": "6lqVmeCgz2YpHDUcRcvOPl",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-daydream": {
+    "platformId": "7nLsQKFuzdcNrDUlwRwodx",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-and": {
+    "platformId": "0cqatTxhtjIHnEL7Rs3L7A",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-we-are-back": {
+    "platformId": "3thBAAI13d96I1ABt4C7mI",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-skool": {
+    "platformId": "25FsXMlBF8jBLaOIOuMfE1",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-homey": {
+    "platformId": "53WUMpewyWhjd2L4ucqhtM",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-back-to-the-kids": {
+    "platformId": "5DIyMVxFlIFMkMrNIuDzXY",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-overnight": {
+    "platformId": "1pyOCl9XcuGjDZUrtylbqz",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-sunny-day-morning": {
+    "platformId": "1RWq8cyfN0FuDAKxcd7FAX",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-practice": {
+    "platformId": "2ZkoYYHrkagNL27y75wIlb",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-haze": {
+    "platformId": "7ppjpuFmTncGKuEF6Q1nBA",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-mc-battle": {
+    "platformId": "0NfYDA0z9HTW9mpkxXotjN",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-kickin-the-pride": {
+    "platformId": "1qlBhYIom6WQxVHGEqjALh",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-our-days": {
+    "platformId": "2sVw7lf3kM6TfU4Lmo5Xbk",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-kmnz-the-best-buddy-star-light": {
+    "platformId": "7v5Lub6uVpidyNZEyuzzkh",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0211662f68619f9e642708a000",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.342Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    },
+    "releaseDate": {
+      "value": "2023-12-02",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4VUsRUXEQWQ8wDSEie9lKQ"
+    }
+  },
+  "sp-rewire": {
+    "platformId": "4YuJYluQF9E9X8oRu0wpgH",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e026d812b85f6bdeab35bec2c95",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.420Z",
+      "sourceUrl": "https://open.spotify.com/album/4YuJYluQF9E9X8oRu0wpgH"
+    },
+    "releaseDate": {
+      "value": "2020-12-27",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4YuJYluQF9E9X8oRu0wpgH"
+    }
+  },
+  "sp-rewire-recoat-feat-kmnz": {
+    "platformId": "2huoEVqQ9LQ2yhz3XmXRKh",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e026d812b85f6bdeab35bec2c95",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.420Z",
+      "sourceUrl": "https://open.spotify.com/album/4YuJYluQF9E9X8oRu0wpgH"
+    },
+    "releaseDate": {
+      "value": "2020-12-27",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4YuJYluQF9E9X8oRu0wpgH"
+    }
+  },
+  "sp-virtuareal-02": {
+    "platformId": "4Z86Wuuyd74Sjr8M0VKA8i",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02509b4f75235f1727e2ade372",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.648Z",
+      "sourceUrl": "https://open.spotify.com/album/4Z86Wuuyd74Sjr8M0VKA8i"
+    },
+    "releaseDate": {
+      "value": "2020-07-31",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4Z86Wuuyd74Sjr8M0VKA8i"
+    }
+  },
+  "sp-virtuareal-02-kick-it-feat-kmnz": {
+    "platformId": "14pNcAFDleAwcjhpJcfQY1",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02509b4f75235f1727e2ade372",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:05.648Z",
+      "sourceUrl": "https://open.spotify.com/album/4Z86Wuuyd74Sjr8M0VKA8i"
+    },
+    "releaseDate": {
+      "value": "2020-07-31",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/4Z86Wuuyd74Sjr8M0VKA8i"
+    }
+  },
+  "sp-kmnskool": {
+    "platformId": "52JACFDdBYApnjIKBacna1",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02eaa2b5f4681638ded52c1978",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:06.680Z",
+      "sourceUrl": "https://open.spotify.com/album/52JACFDdBYApnjIKBacna1"
+    },
+    "releaseDate": {
+      "value": "2021-12-17",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/52JACFDdBYApnjIKBacna1"
+    }
+  },
+  "sp-kmnskool-practice": {
+    "platformId": "2ZoqTsnOqgbvZxm6mhYXBf",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02eaa2b5f4681638ded52c1978",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:06.680Z",
+      "sourceUrl": "https://open.spotify.com/album/52JACFDdBYApnjIKBacna1"
+    },
+    "releaseDate": {
+      "value": "2021-12-17",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/52JACFDdBYApnjIKBacna1"
+    }
+  },
+  "sp-kmnskool-skool": {
+    "platformId": "4DUT2QHJwyBub8r8Pc5arJ",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02eaa2b5f4681638ded52c1978",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:06.680Z",
+      "sourceUrl": "https://open.spotify.com/album/52JACFDdBYApnjIKBacna1"
+    },
+    "releaseDate": {
+      "value": "2021-12-17",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/52JACFDdBYApnjIKBacna1"
+    }
+  },
+  "sp-moon-engine": {
+    "platformId": "5B5GLSdIbJxtO8U1d9W8ze",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02921dbc0dfed777ffeeb45dc9",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:07.022Z",
+      "sourceUrl": "https://open.spotify.com/album/5B5GLSdIbJxtO8U1d9W8ze"
+    },
+    "releaseDate": {
+      "value": "2026-04-05",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/5B5GLSdIbJxtO8U1d9W8ze"
+    }
+  },
+  "sp-moon-engine-moon-engine": {
+    "platformId": "59qwVLtRZ2AsPci8c4TJb2",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02921dbc0dfed777ffeeb45dc9",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:07.022Z",
+      "sourceUrl": "https://open.spotify.com/album/5B5GLSdIbJxtO8U1d9W8ze"
+    },
+    "releaseDate": {
+      "value": "2026-04-05",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/5B5GLSdIbJxtO8U1d9W8ze"
+    }
+  },
+  "sp-moon-engine-wanted": {
+    "platformId": "6rFjqUKOWsP30wuhfaFolW",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02921dbc0dfed777ffeeb45dc9",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:07.022Z",
+      "sourceUrl": "https://open.spotify.com/album/5B5GLSdIbJxtO8U1d9W8ze"
+    },
+    "releaseDate": {
+      "value": "2026-04-05",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/5B5GLSdIbJxtO8U1d9W8ze"
+    }
+  },
+  "sp-moon-engine-popsta": {
+    "platformId": "6RtcDHnUX4JECN7nNwSWdv",
+    "cover": {
+      "url": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02921dbc0dfed777ffeeb45dc9",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:07.022Z",
+      "sourceUrl": "https://open.spotify.com/album/5B5GLSdIbJxtO8U1d9W8ze"
+    },
+    "releaseDate": {
+      "value": "2026-04-05",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/5B5GLSdIbJxtO8U1d9W8ze"
+    }
+  },
+  "sp-spotlight-vol-1": {
+    "platformId": "5BJv8uW7Rc8312AtDLRNgq",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e025576d5db2a7fd935790deb0e",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:07.330Z",
+      "sourceUrl": "https://open.spotify.com/album/5BJv8uW7Rc8312AtDLRNgq"
+    },
+    "releaseDate": {
+      "value": "2021-03-24",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/5BJv8uW7Rc8312AtDLRNgq"
+    }
+  },
+  "sp-spotlight-vol-1-needy": {
+    "platformId": "50UGvawnEqh9aTdgyRSZnr",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e025576d5db2a7fd935790deb0e",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:07.330Z",
+      "sourceUrl": "https://open.spotify.com/album/5BJv8uW7Rc8312AtDLRNgq"
+    },
+    "releaseDate": {
+      "value": "2021-03-24",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/5BJv8uW7Rc8312AtDLRNgq"
+    }
+  },
+  "sp-drops-drop-in": {
+    "platformId": "6az8iS77d06PzldooDY88V",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02cac7cde695126b200c58052c",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:07.615Z",
+      "sourceUrl": "https://open.spotify.com/album/5uqDam637cLI8dRHhFyyqT"
+    },
+    "releaseDate": {
+      "value": "2025-06-13",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/5uqDam637cLI8dRHhFyyqT"
+    }
+  },
+  "sp-drops-growl": {
+    "platformId": "06k5M7AT17VaRZSyIsM3xE",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02cac7cde695126b200c58052c",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:07.615Z",
+      "sourceUrl": "https://open.spotify.com/album/5uqDam637cLI8dRHhFyyqT"
+    },
+    "releaseDate": {
+      "value": "2025-06-13",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/5uqDam637cLI8dRHhFyyqT"
+    }
+  },
+  "sp-glory-days": {
+    "platformId": "5zqmkXqAs3E3npko0WhdEQ",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02a045923d9be8221100999fd8",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:08.333Z",
+      "sourceUrl": "https://open.spotify.com/album/5zqmkXqAs3E3npko0WhdEQ"
+    },
+    "releaseDate": {
+      "value": "2021-08-27",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/5zqmkXqAs3E3npko0WhdEQ"
+    }
+  },
+  "sp-glory-days-glory-days": {
+    "platformId": "3Jyjf3yWUklCoEsEXu8sxZ",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02a045923d9be8221100999fd8",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:08.333Z",
+      "sourceUrl": "https://open.spotify.com/album/5zqmkXqAs3E3npko0WhdEQ"
+    },
+    "releaseDate": {
+      "value": "2021-08-27",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/5zqmkXqAs3E3npko0WhdEQ"
+    }
+  },
+  "sp-opener": {
+    "platformId": "6as2nPn2GWvLbD04XO447M",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0260b562ad000411d548017bd8",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:08.591Z",
+      "sourceUrl": "https://open.spotify.com/album/6as2nPn2GWvLbD04XO447M"
+    },
+    "releaseDate": {
+      "value": "2026-01-11",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/6as2nPn2GWvLbD04XO447M"
+    }
+  },
+  "sp-opener-opener": {
+    "platformId": "4bMgFz63tA9rPVmU0WWPdu",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0260b562ad000411d548017bd8",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:08.591Z",
+      "sourceUrl": "https://open.spotify.com/album/6as2nPn2GWvLbD04XO447M"
+    },
+    "releaseDate": {
+      "value": "2026-01-11",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/6as2nPn2GWvLbD04XO447M"
+    }
+  },
+  "sp-opener-banger": {
+    "platformId": "4c8sgWGyPqlQeO7d9rpKRB",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0260b562ad000411d548017bd8",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:08.591Z",
+      "sourceUrl": "https://open.spotify.com/album/6as2nPn2GWvLbD04XO447M"
+    },
+    "releaseDate": {
+      "value": "2026-01-11",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/6as2nPn2GWvLbD04XO447M"
+    }
+  },
+  "sp-opener-the-after": {
+    "platformId": "2X4C12x6jmr5r3dJPwxaDn",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0260b562ad000411d548017bd8",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:08.591Z",
+      "sourceUrl": "https://open.spotify.com/album/6as2nPn2GWvLbD04XO447M"
+    },
+    "releaseDate": {
+      "value": "2026-01-11",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/6as2nPn2GWvLbD04XO447M"
+    }
+  },
+  "sp-asterisk": {
+    "platformId": "7G2IJPWIGvOdkaK9O9dAZU",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0290f759b18a4b790d3836e98b",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:09.381Z",
+      "sourceUrl": "https://open.spotify.com/album/7G2IJPWIGvOdkaK9O9dAZU"
+    },
+    "releaseDate": {
+      "value": "2026-09-19",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/7G2IJPWIGvOdkaK9O9dAZU"
+    }
+  },
+  "sp-asterisk-asterisk": {
+    "platformId": "78x5y1czypkoDehkfa7tJ1",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0290f759b18a4b790d3836e98b",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:09.381Z",
+      "sourceUrl": "https://open.spotify.com/album/7G2IJPWIGvOdkaK9O9dAZU"
+    },
+    "releaseDate": {
+      "value": "2026-09-19",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/7G2IJPWIGvOdkaK9O9dAZU"
+    }
+  },
+  "sp-cherry-pick": {
+    "platformId": "7K2CBj5JZGkJ4vmB8sIBEE",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02592a72dc254087f1f50ff472",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:10.069Z",
+      "sourceUrl": "https://open.spotify.com/album/7K2CBj5JZGkJ4vmB8sIBEE"
+    },
+    "releaseDate": {
+      "value": "2018-09-07",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/7K2CBj5JZGkJ4vmB8sIBEE"
+    }
+  },
+  "sp-cherry-pick-cherry-pick-feat": {
+    "platformId": "7GxonXoquuqqMsOGmyOiZr",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02592a72dc254087f1f50ff472",
+      "width": 300,
+      "height": 300,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:10.069Z",
+      "sourceUrl": "https://open.spotify.com/album/7K2CBj5JZGkJ4vmB8sIBEE"
+    },
+    "releaseDate": {
+      "value": "2018-09-07",
+      "precision": "day",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://open.spotify.com/album/7K2CBj5JZGkJ4vmB8sIBEE"
+    }
+  },
+  "yt-the-after": {
+    "platformId": "0_BmqKhNtF8",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/0_BmqKhNtF8/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:10.285Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=0_BmqKhNtF8"
+    },
+    "publishedAt": {
+      "value": "2026-03-25T05:00:06-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=0_BmqKhNtF8"
+    }
+  },
+  "yt-isekai-wear-studio-live": {
+    "platformId": "2lwBuFatJ5I",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/2lwBuFatJ5I/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:10.478Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=2lwBuFatJ5I"
+    },
+    "publishedAt": {
+      "value": "2023-08-13T05:00:11-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=2lwBuFatJ5I"
+    }
+  },
+  "yt-wanted": {
+    "platformId": "2QWD8NbEGac",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/2QWD8NbEGac/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:11.203Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=2QWD8NbEGac"
+    },
+    "publishedAt": {
+      "value": "2026-06-05T05:00:06-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=2QWD8NbEGac"
+    }
+  },
+  "yt-driving": {
+    "platformId": "45T9N21JuOE",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/45T9N21JuOE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:11.369Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=45T9N21JuOE"
+    },
+    "publishedAt": {
+      "value": "2021-12-31T04:50:11-08:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=45T9N21JuOE"
+    }
+  },
+  "yt-ride-on": {
+    "platformId": "4KulaqIoHhs",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/4KulaqIoHhs/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:11.550Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=4KulaqIoHhs"
+    },
+    "publishedAt": {
+      "value": "2025-11-11T03:30:06-08:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=4KulaqIoHhs"
+    }
+  },
+  "yt-ifif": {
+    "platformId": "AFp_HSyar-Y",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/AFp_HSyar-Y/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:12.011Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=AFp_HSyar-Y"
+    },
+    "publishedAt": {
+      "value": "2018-09-13T17:08:58-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=AFp_HSyar-Y"
+    }
+  },
+  "yt-tokonatsu-style-2025": {
+    "platformId": "Av_lAz5s_Ic",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/Av_lAz5s_Ic/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:12.087Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=Av_lAz5s_Ic"
+    },
+    "publishedAt": {
+      "value": "2025-07-04T05:00:06-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=Av_lAz5s_Ic"
+    }
+  },
+  "yt-metro": {
+    "platformId": "BhgelQ0WLHQ",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/BhgelQ0WLHQ/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:12.332Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=BhgelQ0WLHQ"
+    },
+    "publishedAt": {
+      "value": "2026-08-14T04:00:16-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=BhgelQ0WLHQ"
+    }
+  },
+  "yt-vr-studio-live": {
+    "platformId": "cCxP0EbdXF0",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/cCxP0EbdXF0/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:12.497Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=cCxP0EbdXF0"
+    },
+    "publishedAt": {
+      "value": "2023-08-12T05:00:09-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=cCxP0EbdXF0"
+    }
+  },
+  "yt-fiction": {
+    "platformId": "CXQN1eVmzMA",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/CXQN1eVmzMA/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:13.010Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=CXQN1eVmzMA"
+    },
+    "publishedAt": {
+      "value": "2023-03-31T04:00:09-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=CXQN1eVmzMA"
+    }
+  },
+  "yt-beat-beast": {
+    "platformId": "e32NiSfMFTI",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/e32NiSfMFTI/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:13.187Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=e32NiSfMFTI"
+    },
+    "publishedAt": {
+      "value": "2020-06-29T04:30:03-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=e32NiSfMFTI"
+    }
+  },
+  "yt-opening": {
+    "platformId": "F11ofqsnuNY",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/F11ofqsnuNY/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:13.353Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=F11ofqsnuNY"
+    },
+    "publishedAt": {
+      "value": "2019-11-21T05:00:12-08:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=F11ofqsnuNY"
+    }
+  },
+  "yt-overnight": {
+    "platformId": "FJ1X-R9V2fA",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/FJ1X-R9V2fA/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:13.454Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=FJ1X-R9V2fA"
+    },
+    "publishedAt": {
+      "value": "2022-10-02T05:00:14-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=FJ1X-R9V2fA"
+    }
+  },
+  "yt-popsta": {
+    "platformId": "G_Le1WrMu0g",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/G_Le1WrMu0g/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:13.869Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=G_Le1WrMu0g"
+    },
+    "publishedAt": {
+      "value": "2026-06-10T05:00:06-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=G_Le1WrMu0g"
+    }
+  },
+  "yt-cont-d": {
+    "platformId": "I5ldJc-T7vE",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/I5ldJc-T7vE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:14.034Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=I5ldJc-T7vE"
+    },
+    "publishedAt": {
+      "value": "2026-07-31T05:00:06-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=I5ldJc-T7vE"
+    }
+  },
+  "yt-three-two-wan": {
+    "platformId": "jZssphmSVww",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/jZssphmSVww/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:14.121Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=jZssphmSVww"
+    },
+    "publishedAt": {
+      "value": "2025-11-21T04:00:06-08:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=jZssphmSVww"
+    }
+  },
+  "yt-3d-three-dimension": {
+    "platformId": "lsThiIWT2s0",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/lsThiIWT2s0/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:14.404Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=lsThiIWT2s0"
+    },
+    "publishedAt": {
+      "value": "2020-09-24T04:00:12-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=lsThiIWT2s0"
+    }
+  },
+  "yt-vr-music-only": {
+    "platformId": "lYQGWVSVl_Y",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/lYQGWVSVl_Y/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:14.776Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=lYQGWVSVl_Y"
+    },
+    "publishedAt": {
+      "value": "2018-08-06T08:02:09-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=lYQGWVSVl_Y"
+    }
+  },
+  "yt-be-noisy": {
+    "platformId": "mkp_QPtwSVc",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/mkp_QPtwSVc/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:14.907Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=mkp_QPtwSVc"
+    },
+    "publishedAt": {
+      "value": "2024-09-16T04:30:07-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=mkp_QPtwSVc"
+    }
+  },
+  "yt-calling": {
+    "platformId": "mSmcimGZZqM",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/mSmcimGZZqM/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:14.992Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=mSmcimGZZqM"
+    },
+    "publishedAt": {
+      "value": "2024-06-12T05:00:07-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=mSmcimGZZqM"
+    }
+  },
+  "yt-we-are-back": {
+    "platformId": "mz5l0NHfj3Q",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/mz5l0NHfj3Q/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:15.406Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=mz5l0NHfj3Q"
+    },
+    "publishedAt": {
+      "value": "2023-04-15T05:00:08-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=mz5l0NHfj3Q"
+    }
+  },
+  "yt-vr": {
+    "platformId": "nhFgmVDPNlo",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/nhFgmVDPNlo/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:15.801Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=nhFgmVDPNlo"
+    },
+    "publishedAt": {
+      "value": "2019-03-01T05:28:42-08:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=nhFgmVDPNlo"
+    }
+  },
+  "yt-banger": {
+    "platformId": "o5NxNNLT-q4",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/o5NxNNLT-q4/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:15.952Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=o5NxNNLT-q4"
+    },
+    "publishedAt": {
+      "value": "2026-05-06T05:00:06-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=o5NxNNLT-q4"
+    }
+  },
+  "yt-augmentation-feat-moe-shop": {
+    "platformId": "PbGddpIfXeQ",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/PbGddpIfXeQ/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:16.033Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=PbGddpIfXeQ"
+    },
+    "publishedAt": {
+      "value": "2019-04-08T01:00:04-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=PbGddpIfXeQ"
+    }
+  },
+  "yt-moon-engine": {
+    "platformId": "pVn8V2kEvmQ",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/pVn8V2kEvmQ/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:16.435Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=pVn8V2kEvmQ"
+    },
+    "publishedAt": {
+      "value": "2026-05-29T04:00:06-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=pVn8V2kEvmQ"
+    }
+  },
+  "yt-galaxy": {
+    "platformId": "qL7F5MDcCQo",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/qL7F5MDcCQo/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:16.661Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=qL7F5MDcCQo"
+    },
+    "publishedAt": {
+      "value": "2020-03-13T06:00:12-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=qL7F5MDcCQo"
+    }
+  },
+  "yt-opener": {
+    "platformId": "SJcnSAK-pak",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/SJcnSAK-pak/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:16.758Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=SJcnSAK-pak"
+    },
+    "publishedAt": {
+      "value": "2026-01-10T03:00:06-08:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=SJcnSAK-pak"
+    }
+  },
+  "yt-mid-journey": {
+    "platformId": "SsywhDWUS_Q",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/SsywhDWUS_Q/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:17.125Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=SsywhDWUS_Q"
+    },
+    "publishedAt": {
+      "value": "2024-06-23T05:00:07-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=SsywhDWUS_Q"
+    }
+  },
+  "yt-star-light": {
+    "platformId": "tQmVd75MMXY",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/tQmVd75MMXY/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:17.307Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=tQmVd75MMXY"
+    },
+    "publishedAt": {
+      "value": "2023-11-04T05:00:10-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=tQmVd75MMXY"
+    }
+  },
+  "yt-posse": {
+    "platformId": "tR4jmnavtDk",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/tR4jmnavtDk/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:17.496Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=tR4jmnavtDk"
+    },
+    "publishedAt": {
+      "value": "2025-09-30T05:00:06-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=tR4jmnavtDk"
+    }
+  },
+  "yt-synchronizer": {
+    "platformId": "TsILoCA8Mm4",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/TsILoCA8Mm4/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:17.688Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=TsILoCA8Mm4"
+    },
+    "publishedAt": {
+      "value": "2026-08-07T05:00:06-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=TsILoCA8Mm4"
+    }
+  },
+  "yt-mimimi": {
+    "platformId": "UCs1CQ59uoE",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/UCs1CQ59uoE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:18.297Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=UCs1CQ59uoE"
+    },
+    "publishedAt": {
+      "value": "2026-09-28T04:00:06-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=UCs1CQ59uoE"
+    }
+  },
+  "yt-cherry-pick": {
+    "platformId": "VIAeoxvevaM",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/VIAeoxvevaM/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:18.382Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=VIAeoxvevaM"
+    },
+    "publishedAt": {
+      "value": "2018-08-01T21:44:50-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=VIAeoxvevaM"
+    }
+  },
+  "yt-glory-days": {
+    "platformId": "xjKvf0QClII",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/xjKvf0QClII/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:18.478Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=xjKvf0QClII"
+    },
+    "publishedAt": {
+      "value": "2021-08-17T05:00:12-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=xjKvf0QClII"
+    }
+  },
+  "yt-practice": {
+    "platformId": "ZEActnTQ68M",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/ZEActnTQ68M/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:18.554Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=ZEActnTQ68M"
+    },
+    "publishedAt": {
+      "value": "2021-12-17T04:45:14-08:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=ZEActnTQ68M"
+    }
+  },
+  "yt-reload": {
+    "platformId": "ZEhcGNJgc6Q",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/ZEhcGNJgc6Q/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:19.088Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=ZEhcGNJgc6Q"
+    },
+    "publishedAt": {
+      "value": "2026-10-17T05:00:07-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=ZEhcGNJgc6Q"
+    }
+  },
+  "yt-miraizu": {
+    "platformId": "_PK2wC3v-qQ",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/_PK2wC3v-qQ/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:19.536Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=_PK2wC3v-qQ"
+    },
+    "publishedAt": {
+      "value": "2023-03-24T04:00:09-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=_PK2wC3v-qQ"
+    }
+  },
+  "yt-fuzzy-town": {
+    "platformId": "_U2-SRW-wiw",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/_U2-SRW-wiw/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:38:19.614Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=_U2-SRW-wiw"
+    },
+    "publishedAt": {
+      "value": "2020-09-24T04:00:28-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-27T11:47:27.386Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=_U2-SRW-wiw"
+    }
   }
 }

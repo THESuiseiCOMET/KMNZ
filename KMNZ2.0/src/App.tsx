@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useReducer, useState } from 'react'
 import Header from './components/Header'
 import PlayerDock from './components/PlayerDock'
 import { members } from './data/members'
-import { adjacentTrack } from './lib/playerControls'
-import type { MusicEntry } from './data/music'
+import { musicCatalog } from './data/music'
+import { currentQueueItem, emptyQueue, queueAvailability, queueReducer } from './lib/playbackQueue'
+import type { PlaybackSelection, PlayerObservation } from './types/playback'
 import About from './pages/About'
 import History from './pages/History'
 import Home from './pages/Home'
@@ -18,7 +19,13 @@ function getInitialTheme(): 'light' | 'dark' {
 export default function App() {
   const [page, setPage] = useState<Page>('home')
   const [theme, setTheme] = useState<'light' | 'dark'>(getInitialTheme)
-  const [currentMusic, setCurrentMusic] = useState<MusicEntry | null>(null)
+  const [queue, dispatch] = useReducer(queueReducer, emptyQueue)
+  const current = currentQueueItem(queue)
+  const currentMusic = musicCatalog.find(entry => entry.id === current?.sourceId) ?? null
+  const available = queueAvailability(queue)
+  const selectMusic = useCallback((selection: PlaybackSelection) => dispatch({ type: 'select', selection }), [])
+  const observeMusic = useCallback((observation: PlayerObservation) => dispatch({ type: 'observe', observation }), [])
+  const finishMusic = useCallback((requestId: number, sourceId: string) => dispatch({ type: 'ended', requestId, sourceId }), [])
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme
@@ -30,7 +37,7 @@ export default function App() {
     window.scrollTo(0, 0)
   }
   function skipMusic(direction: -1 | 1) {
-    setCurrentMusic((current) => current ? adjacentTrack(current, direction) : current)
+    dispatch({ type: 'move', direction })
   }
   const member = members.find((item) => page === 'member-' + item.id)
   const section: Section = member ? 'members' : page as Section
@@ -44,11 +51,10 @@ export default function App() {
         {page === 'members' && <Members onOpenMember={(id) => navigate(('member-' + id) as Page)} />}
         {page === 'history' && <History />}
         {page === 'about' && <About />}
-        {page === 'music' && <Music selectedId={currentMusic?.id ?? null} onSelect={setCurrentMusic} />}
+        {page === 'music' && <Music selectedId={currentMusic?.id ?? null} onSelect={selectMusic} />}
         {member && <MemberDetail member={member} onBack={() => navigate('members')} />}
       </main>
-      <footer className="site-footer"><div className="container">© 2026 KMNHZ-China</div></footer>
-      {currentMusic && <PlayerDock entry={currentMusic} onClose={() => setCurrentMusic(null)} onSkip={skipMusic} />}
+      {currentMusic && <PlayerDock entry={currentMusic} onClose={() => dispatch({ type: 'close' })} onSkip={skipMusic} requestId={queue.requestId} mode={queue.mode} onModeChange={mode => dispatch({ type: 'mode', mode })} canPrevious={available.previous} canNext={available.next} onEnded={finishMusic} onObservation={observeMusic} />}
     </div>
   )
 }

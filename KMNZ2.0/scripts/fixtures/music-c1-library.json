@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "songs": [
+    {
+      "id": "song-wave",
+      "title": "WAVE",
+      "artist": "KMNZ",
+      "version": {
+        "kind": "unspecified"
+      }
+    },
+    {
+      "id": "song-growl",
+      "title": "GROWL",
+      "artist": "KMNZ",
+      "version": {
+        "kind": "unspecified"
+      }
+    },
+    {
+      "id": "song-drop-in",
+      "title": "DROP IN",
+      "artist": "KMNZ",
+      "version": {
+        "kind": "unspecified"
+      }
+    },
+    {
+      "id": "song-meta-fiction",
+      "title": "META FICTION",
+      "artist": "KMNZ",
+      "version": {
+        "kind": "unspecified"
+      }
+    },
+    {
+      "id": "song-new-days",
+      "title": "NEW DAYS",
+      "artist": "KMNZ",
+      "version": {
+        "kind": "unspecified"
+      }
+    },
+    {
+      "id": "song-verse",
+      "title": "VERSE",
+      "artist": "KMNZ",
+      "version": {
+        "kind": "unspecified"
+      }
+    },
+    {
+      "id": "song-our-days",
+      "title": "OUR DAYS",
+      "artist": "KMNZ",
+      "version": {
+        "kind": "unspecified"
+      }
+    },
+    {
+      "id": "song-mirror",
+      "title": "MIRROR",
+      "artist": "KMNZ",
+      "version": {
+        "kind": "unspecified"
+      }
+    }
+  ],
+  "releases": [
+    {
+      "id": "release-kmnculture",
+      "title": "KMNCULTURE",
+      "artist": "KMNZ",
+      "kind": "album",
+      "tracklistStatus": "unknown",
+      "tracks": []
+    }
+  ],
+  "sources": [
+    {
+      "id": "yt-wave",
+      "platform": "youtube",
+      "kind": "mv",
+      "platformId": "MehG9Ms8ygU",
+      "externalUrl": "https://www.youtube.com/watch?v=MehG9Ms8ygU",
+      "target": {
+        "type": "song",
+        "songId": "song-wave"
+      },
+      "display": {
+        "subtitle": "Official Music Video · Prod. by TAK",
+        "year": 2025,
+        "era": "new"
+      }
+    },
+    {
+      "id": "yt-growl",
+      "platform": "youtube",
+      "kind": "mv",
+      "platformId": "nzxSbWcePIk",
+      "externalUrl": "https://www.youtube.com/watch?v=nzxSbWcePIk",
+      "target": {
+        "type": "song",
+        "songId": "song-growl"
+      },
+      "display": {
+        "subtitle": "Official Music Video",
+        "year": 2025,
+        "era": "new"
+      }
+    },
+    {
+      "id": "yt-drop-in",
+      "platform": "youtube",
+      "kind": "mv",
+      "platformId": "RQumQQBVCao",
+      "externalUrl": "https://www.youtube.com/watch?v=RQumQQBVCao",
+      "target": {
+        "type": "song",
+        "songId": "song-drop-in"
+      },
+      "display": {
+        "subtitle": "Official Music Video · Prod. by E TICKET PRODUCTION",
+        "year": 2025,
+        "era": "new"
+      }
+    },
+    {
+      "id": "yt-meta-fiction",
+      "platform": "youtube",
+      "kind": "mv",
+      "platformId": "0fhRwHwNCX8",
+      "externalUrl": "https://www.youtube.com/watch?v=0fhRwHwNCX8",
+      "target": {
+        "type": "song",
+        "songId": "song-meta-fiction"
+      },
+      "display": {
+        "subtitle": "Official Music Video · Prod. by ☆Taku Takahashi",
+        "year": 2024,
+        "era": "new"
+      }
+    },
+    {
+      "id": "yt-new-days",
+      "platform": "youtube",
+      "kind": "mv",
+      "platformId": "L2rDaGCCXSE",
+      "externalUrl": "https://www.youtube.com/watch?v=L2rDaGCCXSE",
+      "target": {
+        "type": "song",
+        "songId": "song-new-days"
+      },
+      "display": {
+        "subtitle": "Official Music Video · Prod. by ミツキヨ",
+        "year": 2024,
+        "era": "new"
+      }
+    },
+    {
+      "id": "yt-verse",
+      "platform": "youtube",
+      "kind": "mv",
+      "platformId": "ZGlm8HqSkkU",
+      "externalUrl": "https://www.youtube.com/watch?v=ZGlm8HqSkkU",
+      "target": {
+        "type": "song",
+        "songId": "song-verse"
+      },
+      "display": {
+        "subtitle": "Official Music Video · Prod. by Snail's House",
+        "year": 2024,
+        "era": "new"
+      }
+    },
+    {
+      "id": "yt-our-days",
+      "platform": "youtube",
+      "kind": "mv",
+      "platformId": "NFTnvgDcI2E",
+      "externalUrl": "https://www.youtube.com/watch?v=NFTnvgDcI2E",
+      "target": {
+        "type": "song",
+        "songId": "song-our-days"
+      },
+      "display": {
+        "subtitle": "Official Music Video · Prod. by nerdwitchkomugichan",
+        "year": 2023,
+        "era": "classic"
+      }
+    },
+    {
+      "id": "sp-kmnculture",
+      "platform": "spotify",
+      "kind": "album",
+      "platformId": "0034RJKaIQVPPA581qxaif",
+      "externalUrl": "https://open.spotify.com/album/0034RJKaIQVPPA581qxaif",
+      "target": {
+        "type": "release",
+        "releaseId": "release-kmnculture"
+      },
+      "display": {
+        "subtitle": "专辑 · 9 首作品",
+        "year": 2025,
+        "era": "new"
+      }
+    },
+    {
+      "id": "sp-mirror",
+      "platform": "spotify",
+      "kind": "track",
+      "platformId": "3vjYW1spy1frAE39zZR6Xx",
+      "externalUrl": "https://open.spotify.com/track/3vjYW1spy1frAE39zZR6Xx",
+      "target": {
+        "type": "song",
+        "songId": "song-mirror"
+      },
+      "display": {
+        "subtitle": "单曲 · 收录于 DROPS",
+        "year": 2025,
+        "era": "new"
+      }
+    }
+  ]
+}
