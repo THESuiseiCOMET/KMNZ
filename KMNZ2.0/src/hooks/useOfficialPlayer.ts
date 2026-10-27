@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { getEmbedUrl } from '../data/music'
 import type { MusicEntry } from '../data/music'
 import { loadSpotifyApi, loadYouTubeApi } from '../lib/playerApi'
@@ -9,7 +9,26 @@ interface PlayerAdapter {
   pause(): void
   restart(): void
   setLoop(enabled: boolean): void
+  setVolume?(volume: number): void
   destroy(): void
+}
+
+interface VolumeSettings { value: number; previous: number }
+const volumeKey = 'kmnzPlayerVolume'
+
+function readVolume(): VolumeSettings {
+  try {
+    const saved: unknown = JSON.parse(localStorage.getItem(volumeKey) ?? 'null')
+    if (saved && typeof saved === 'object' && 'value' in saved && 'previous' in saved
+      && typeof saved.value === 'number' && Number.isFinite(saved.value)
+      && typeof saved.previous === 'number' && Number.isFinite(saved.previous)) {
+      return {
+        value: Math.max(0, Math.min(100, Math.round(saved.value))),
+        previous: Math.max(1, Math.min(100, Math.round(saved.previous))),
+      }
+    }
+  } catch { /* unavailable */ }
+  return { value: 70, previous: 70 }
 }
 
 function createFrame(entry: MusicEntry): HTMLIFrameElement {
@@ -33,6 +52,34 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
   const settings = useRef({ loop, onNext })
   const [ready, setReady] = useState(false)
   const [paused, setPaused] = useState(true)
+  const [volumeSettings, setVolumeSettings] = useState(readVolume)
+  const volumeRef = useRef(volumeSettings)
+  const volumeChangedAt = useRef(0)
+
+  const updateVolume = useCallback((value: number, apply = true) => {
+    if (!Number.isFinite(value)) return
+    const volume = Math.max(0, Math.min(100, Math.round(value)))
+    const current = volumeRef.current
+    if (apply) {
+      volumeChangedAt.current = Date.now()
+      adapterRef.current?.setVolume?.(volume)
+    }
+    const next = { value: volume, previous: volume > 0 ? volume : current.previous }
+    if (next.value === current.value && next.previous === current.previous) return
+    volumeRef.current = next
+    setVolumeSettings(next)
+  }, [])
+
+  const setVolume = useCallback((value: number) => updateVolume(value), [updateVolume])
+  const adjustVolume = useCallback((delta: number) => updateVolume(volumeRef.current.value + delta), [updateVolume])
+  const toggleMute = useCallback(() => {
+    const current = volumeRef.current
+    updateVolume(current.value === 0 ? current.previous : 0)
+  }, [updateVolume])
+
+  useEffect(() => {
+    try { localStorage.setItem(volumeKey, JSON.stringify(volumeSettings)) } catch { /* unavailable */ }
+  }, [volumeSettings])
 
   useEffect(() => {
     settings.current = { loop, onNext }
@@ -44,6 +91,7 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
     if (!host) return
     let cancelled = false
     let endTimer: number | undefined
+    let volumeTimer: number | undefined
     setReady(false)
     setPaused(true)
     const frame = createFrame(entry)
@@ -60,6 +108,15 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
           events: {
             onReady: (event) => {
               if (cancelled) return
+              const volume = volumeRef.current.value
+              event.target.setVolume(volume)
+              if (volume === 0) event.target.mute()
+              else event.target.unMute()
+              volumeTimer = window.setInterval(() => {
+                if (!cancelled && Date.now() - volumeChangedAt.current >= 1000) {
+                  updateVolume(event.target.isMuted() ? 0 : event.target.getVolume(), false)
+                }
+              }, 1000)
               setReady(true)
               setPaused(event.target.getPlayerState() !== 1)
             },
@@ -76,6 +133,11 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
           pause: () => player.pauseVideo(),
           restart: () => { player.seekTo(0, true); player.playVideo() },
           setLoop: () => {},
+          setVolume: (volume) => {
+            player.setVolume(volume)
+            if (volume === 0) player.mute()
+            else player.unMute()
+          },
           destroy: () => player.destroy(),
         }
       }).catch(() => { if (!cancelled) setReady(false) })
@@ -154,6 +216,7 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
     return () => {
       cancelled = true
       window.clearTimeout(endTimer)
+      window.clearInterval(volumeTimer)
       adapterRef.current?.destroy()
       adapterRef.current = null
       host.replaceChildren()
@@ -166,5 +229,5 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
     else adapterRef.current?.pause()
   }
 
-  return { hostRef, ready, paused, togglePlayback }
+  return { hostRef, ready, paused, togglePlayback, volume: volumeSettings.value, setVolume, adjustVolume, toggleMute }
 }

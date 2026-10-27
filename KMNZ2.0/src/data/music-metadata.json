@@ -1,0 +1,109 @@
+{
+  "yt-wave": {
+    "platformId": "MehG9Ms8ygU",
+    "attempts": {
+      "youtube-data-api": {
+        "checkedAt": "2026-10-26T15:15:25.847Z",
+        "status": "no-credentials"
+      }
+    }
+  },
+  "yt-growl": {
+    "platformId": "nzxSbWcePIk",
+    "attempts": {
+      "youtube-data-api": {
+        "checkedAt": "2026-10-26T15:15:25.847Z",
+        "status": "no-credentials"
+      }
+    }
+  },
+  "yt-drop-in": {
+    "platformId": "RQumQQBVCao",
+    "attempts": {
+      "youtube-data-api": {
+        "checkedAt": "2026-10-26T15:15:25.847Z",
+        "status": "no-credentials"
+      }
+    }
+  },
+  "yt-meta-fiction": {
+    "platformId": "0fhRwHwNCX8",
+    "attempts": {
+      "youtube-data-api": {
+        "checkedAt": "2026-10-26T15:15:25.847Z",
+        "status": "no-credentials"
+      }
+    }
+  },
+  "yt-new-days": {
+    "platformId": "L2rDaGCCXSE",
+    "attempts": {
+      "youtube-data-api": {
+        "checkedAt": "2026-10-26T15:15:25.847Z",
+        "status": "no-credentials"
+      }
+    }
+  },
+  "yt-verse": {
+    "platformId": "ZGlm8HqSkkU",
+    "attempts": {
+      "youtube-data-api": {
+        "checkedAt": "2026-10-26T15:15:25.847Z",
+        "status": "no-credentials"
+      }
+    }
+  },
+  "yt-our-days": {
+    "platformId": "NFTnvgDcI2E",
+    "attempts": {
+      "youtube-data-api": {
+        "checkedAt": "2026-10-26T15:15:25.847Z",
+        "status": "no-credentials"
+      }
+    }
+  },
+  "sp-kmnculture": {
+    "platformId": "0034RJKaIQVPPA581qxaif",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02c3862da277d06dce2fa6b224",
+      "width": 300,
+      "height": 300,
+      "source": "spotify-oembed",
+      "status": "verified",
+      "verifiedAt": "2026-10-26T15:15:25.847Z",
+      "sourceUrl": "https://open.spotify.com/album/0034RJKaIQVPPA581qxaif"
+    },
+    "attempts": {
+      "spotify-oembed": {
+        "checkedAt": "2026-10-26T15:15:25.847Z",
+        "status": "ok"
+      },
+      "spotify-web-api": {
+        "checkedAt": "2026-10-26T15:15:25.847Z",
+        "status": "no-credentials"
+      }
+    }
+  },
+  "sp-mirror": {
+    "platformId": "3vjYW1spy1frAE39zZR6Xx",
+    "cover": {
+      "url": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02cac7cde695126b200c58052c",
+      "width": 300,
+      "height": 300,
+      "source": "spotify-oembed",
+      "status": "verified",
+      "verifiedAt": "2026-10-26T15:15:25.847Z",
+      "sourceUrl": "https://open.spotify.com/track/3vjYW1spy1frAE39zZR6Xx"
+    },
+    "attempts": {
+      "spotify-oembed": {
+        "checkedAt": "2026-10-26T15:15:25.847Z",
+        "status": "ok"
+      },
+      "spotify-web-api": {
+        "checkedAt": "2026-10-26T15:15:25.847Z",
+        "status": "no-credentials"
+      }
+    }
+  }
+}

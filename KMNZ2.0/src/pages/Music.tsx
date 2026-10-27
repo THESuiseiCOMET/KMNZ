@@ -1,6 +1,12 @@
 import { useMemo, useState } from 'react'
 import { musicCatalog } from '../data/music'
 import type { MusicEntry, MusicPlatform } from '../data/music'
+import playIcon from '../assets/icons/play.svg'
+import externalIcon from '../assets/icons/external-link.svg'
+import spotifyIcon from '../assets/icons/brand-spotify.svg'
+import MusicCover from '../components/MusicCover'
+import { getMusicMetadata, sortMusicByDate } from '../data/musicMetadata'
+import { musicDate } from '../lib/musicMetadata'
 
 interface MusicProps {
   selectedId: string | null
@@ -18,14 +24,14 @@ export default function Music({ selectedId, onSelect }: MusicProps) {
 
   const filtered = useMemo(() => {
     const query = search.trim().toLocaleLowerCase()
-    return musicCatalog
+    return sortMusicByDate(musicCatalog
       .filter((item) => item.platform === platform)
       .filter((item) => {
         if (!query) return true
         return [item.title, item.subtitle, item.artist, String(item.year), sourceLabel[item.platform]]
           .some((value) => value.toLocaleLowerCase().includes(query))
       })
-      .sort((a, b) => b.year - a.year)
+    )
   }, [search, platform])
 
   return (
@@ -61,38 +67,38 @@ export default function Music({ selectedId, onSelect }: MusicProps) {
 
       {filtered.length > 0 ? (
         <div className="music-grid">
-          {filtered.map((item) => (
-            <article className={selectedId === item.id ? 'music-card selected' : 'music-card'} key={item.id}>
-              <button
-                type="button"
-                className={'music-art music-art-' + item.platform}
-                aria-label={'播放 ' + item.title}
-                onClick={() => onSelect(item)}
-              >
-                {item.platform === 'youtube' ? (
-                  <img
-                    src={'https://i.ytimg.com/vi/' + item.platformId + '/mqdefault.jpg'}
-                    alt=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer"
-                  />
-                ) : (
-                  <span aria-hidden="true">♫</span>
-                )}
-              </button>
-              <div className="music-card-body">
-                <h3>{item.title}</h3>
-                <div className="music-card-actions">
-                  <button type="button" className="music-play" onClick={() => onSelect(item)} aria-label={'播放 ' + item.title}>
-                    ▶ 播放
-                  </button>
-                  <a href={item.externalUrl} target="_blank" rel="noopener noreferrer" className="music-external" aria-label={'在 ' + sourceLabel[item.platform] + ' 打开 ' + item.title}>
-                    官方链接 <span aria-hidden="true">↗</span>
-                  </a>
+          {filtered.map((item) => {
+            const metadata = getMusicMetadata(item)
+            const date = musicDate(item, metadata)
+            return (
+              <article className={selectedId === item.id ? 'music-card selected' : 'music-card'} key={item.id}>
+                <button
+                  type="button"
+                  className={'music-art music-art-' + item.platform}
+                  aria-label={'播放 ' + item.title}
+                  onClick={() => onSelect(item)}
+                >
+                  <MusicCover entry={item} metadata={metadata} />
+                </button>
+                <div className="music-card-body">
+                  <div className="music-card-title">
+                    <h3>{item.title}</h3>
+                    {item.platform === 'spotify' && <span className="music-source-mark" role="img" aria-label="Spotify" style={{ maskImage: `url("${spotifyIcon}")`, WebkitMaskImage: `url("${spotifyIcon}")` }} />}
+                  </div>
+                  {date && <time className="music-card-date" dateTime={date.dateTime}>{date.label}</time>}
+                  <div className="music-card-actions">
+                    <button type="button" className="music-play" onClick={() => onSelect(item)} aria-label={'播放 ' + item.title}>
+                      <span className="music-card-icon" style={{ maskImage: `url("${playIcon}")`, WebkitMaskImage: `url("${playIcon}")` }} aria-hidden="true" />
+                      播放
+                    </button>
+                    <a href={item.externalUrl} target="_blank" rel="noopener noreferrer" className="music-external" aria-label={'在 ' + sourceLabel[item.platform] + ' 打开 ' + item.title}>
+                      <span className="music-card-icon" style={{ maskImage: `url("${externalIcon}")`, WebkitMaskImage: `url("${externalIcon}")` }} aria-hidden="true" />
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            )
+          })}
         </div>
       ) : (
         <div className="music-empty" role="status">

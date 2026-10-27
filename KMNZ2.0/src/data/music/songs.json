@@ -1,0 +1,66 @@
+[
+  {
+    "id": "song-wave",
+    "title": "WAVE",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-growl",
+    "title": "GROWL",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-drop-in",
+    "title": "DROP IN",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-meta-fiction",
+    "title": "META FICTION",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-new-days",
+    "title": "NEW DAYS",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-verse",
+    "title": "VERSE",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-our-days",
+    "title": "OUR DAYS",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified"
+    }
+  },
+  {
+    "id": "song-mirror",
+    "title": "MIRROR",
+    "artist": "KMNZ",
+    "version": {
+      "kind": "unspecified"
+    }
+  }
+]

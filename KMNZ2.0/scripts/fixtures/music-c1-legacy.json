@@ -1,0 +1,110 @@
+[
+  {
+    "id": "yt-wave",
+    "title": "WAVE",
+    "subtitle": "Official Music Video · Prod. by TAK",
+    "artist": "KMNZ",
+    "year": 2025,
+    "platform": "youtube",
+    "kind": "mv",
+    "era": "new",
+    "platformId": "MehG9Ms8ygU",
+    "externalUrl": "https://www.youtube.com/watch?v=MehG9Ms8ygU"
+  },
+  {
+    "id": "yt-growl",
+    "title": "GROWL",
+    "subtitle": "Official Music Video",
+    "artist": "KMNZ",
+    "year": 2025,
+    "platform": "youtube",
+    "kind": "mv",
+    "era": "new",
+    "platformId": "nzxSbWcePIk",
+    "externalUrl": "https://www.youtube.com/watch?v=nzxSbWcePIk"
+  },
+  {
+    "id": "yt-drop-in",
+    "title": "DROP IN",
+    "subtitle": "Official Music Video · Prod. by E TICKET PRODUCTION",
+    "artist": "KMNZ",
+    "year": 2025,
+    "platform": "youtube",
+    "kind": "mv",
+    "era": "new",
+    "platformId": "RQumQQBVCao",
+    "externalUrl": "https://www.youtube.com/watch?v=RQumQQBVCao"
+  },
+  {
+    "id": "yt-meta-fiction",
+    "title": "META FICTION",
+    "subtitle": "Official Music Video · Prod. by ☆Taku Takahashi",
+    "artist": "KMNZ",
+    "year": 2024,
+    "platform": "youtube",
+    "kind": "mv",
+    "era": "new",
+    "platformId": "0fhRwHwNCX8",
+    "externalUrl": "https://www.youtube.com/watch?v=0fhRwHwNCX8"
+  },
+  {
+    "id": "yt-new-days",
+    "title": "NEW DAYS",
+    "subtitle": "Official Music Video · Prod. by ミツキヨ",
+    "artist": "KMNZ",
+    "year": 2024,
+    "platform": "youtube",
+    "kind": "mv",
+    "era": "new",
+    "platformId": "L2rDaGCCXSE",
+    "externalUrl": "https://www.youtube.com/watch?v=L2rDaGCCXSE"
+  },
+  {
+    "id": "yt-verse",
+    "title": "VERSE",
+    "subtitle": "Official Music Video · Prod. by Snail's House",
+    "artist": "KMNZ",
+    "year": 2024,
+    "platform": "youtube",
+    "kind": "mv",
+    "era": "new",
+    "platformId": "ZGlm8HqSkkU",
+    "externalUrl": "https://www.youtube.com/watch?v=ZGlm8HqSkkU"
+  },
+  {
+    "id": "yt-our-days",
+    "title": "OUR DAYS",
+    "subtitle": "Official Music Video · Prod. by nerdwitchkomugichan",
+    "artist": "KMNZ",
+    "year": 2023,
+    "platform": "youtube",
+    "kind": "mv",
+    "era": "classic",
+    "platformId": "NFTnvgDcI2E",
+    "externalUrl": "https://www.youtube.com/watch?v=NFTnvgDcI2E"
+  },
+  {
+    "id": "sp-kmnculture",
+    "title": "KMNCULTURE",
+    "subtitle": "专辑 · 9 首作品",
+    "artist": "KMNZ",
+    "year": 2025,
+    "platform": "spotify",
+    "kind": "album",
+    "era": "new",
+    "platformId": "0034RJKaIQVPPA581qxaif",
+    "externalUrl": "https://open.spotify.com/album/0034RJKaIQVPPA581qxaif"
+  },
+  {
+    "id": "sp-mirror",
+    "title": "MIRROR",
+    "subtitle": "单曲 · 收录于 DROPS",
+    "artist": "KMNZ",
+    "year": 2025,
+    "platform": "spotify",
+    "kind": "track",
+    "era": "new",
+    "platformId": "3vjYW1spy1frAE39zZR6Xx",
+    "externalUrl": "https://open.spotify.com/track/3vjYW1spy1frAE39zZR6Xx"
+  }
+]

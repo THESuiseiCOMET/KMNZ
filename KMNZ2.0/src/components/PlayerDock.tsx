@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import type { KeyboardEvent, PointerEvent } from 'react'
 import type { MusicEntry } from '../data/music'
 import { clampPlayerPosition } from '../lib/playerControls'
@@ -9,7 +9,8 @@ import nextIcon from '../assets/icons/skip-forward.svg'
 import loopIcon from '../assets/icons/repeat-1.svg'
 import playIcon from '../assets/icons/play.svg'
 import pauseIcon from '../assets/icons/pause.svg'
-import gripIcon from '../assets/icons/grip-horizontal.svg'
+import volumeIcon from '../assets/icons/volume-2.svg'
+import mutedIcon from '../assets/icons/volume-x.svg'
 
 interface PlayerDockProps {
   entry: MusicEntry
@@ -26,9 +27,47 @@ export default function PlayerDock({ entry, onClose, onSkip }: PlayerDockProps) 
   const [loop, setLoop] = useState(false)
   const [position, setPosition] = useState<PlayerPosition | null>(null)
   const [dragging, setDragging] = useState(false)
+  const [volumeOpen, setVolumeOpen] = useState(false)
+  const volumeId = useId()
+  const volumeControlRef = useRef<HTMLDivElement>(null)
+  const volumeButtonRef = useRef<HTMLButtonElement>(null)
   const panelRef = useRef<HTMLElement>(null)
   const dragRef = useRef<{ pointerId: number; clientX: number; clientY: number; x: number; y: number } | null>(null)
-  const { hostRef, ready, paused, togglePlayback } = useOfficialPlayer(entry, loop, () => onSkip(1))
+  const { hostRef, ready, paused, togglePlayback, volume, setVolume, adjustVolume, toggleMute } = useOfficialPlayer(entry, loop, () => onSkip(1))
+
+  useEffect(() => {
+    setVolumeOpen(false)
+  }, [entry.platform])
+
+  useEffect(() => {
+    if (!volumeOpen) return
+    function closeOutside(event: globalThis.PointerEvent) {
+      if (event.target instanceof Node && !volumeControlRef.current?.contains(event.target)) setVolumeOpen(false)
+    }
+    function closeWithEscape(event: globalThis.KeyboardEvent) {
+      if (event.key !== 'Escape') return
+      setVolumeOpen(false)
+      volumeButtonRef.current?.focus({ preventScroll: true })
+    }
+    document.addEventListener('pointerdown', closeOutside)
+    document.addEventListener('keydown', closeWithEscape)
+    return () => {
+      document.removeEventListener('pointerdown', closeOutside)
+      document.removeEventListener('keydown', closeWithEscape)
+    }
+  }, [volumeOpen])
+
+  useEffect(() => {
+    const control = volumeControlRef.current
+    if (!control || !ready) return
+    function changeWithWheel(event: WheelEvent) {
+      if (event.deltaY === 0 || event.ctrlKey) return
+      event.preventDefault()
+      adjustVolume(event.deltaY < 0 ? 5 : -5)
+    }
+    control.addEventListener('wheel', changeWithWheel, { passive: false })
+    return () => control.removeEventListener('wheel', changeWithWheel)
+  }, [entry.platform, ready, adjustVolume])
 
   function constrain(next: PlayerPosition): PlayerPosition {
     const rect = panelRef.current?.getBoundingClientRect()
@@ -122,13 +161,9 @@ export default function PlayerDock({ entry, onClose, onSkip }: PlayerDockProps) 
           onLostPointerCapture={stopDrag}
           onKeyDown={moveWithKeyboard}
         >
-          <PlayerIcon source={gripIcon} />
           <strong>{entry.title}</strong>
         </button>
         <div className="music-player-actions">
-          <a href={entry.externalUrl} target="_blank" rel="noopener noreferrer" title="在官方平台打开">
-            <span className="sr-only">在官方平台打开 {entry.title}</span>↗
-          </a>
           <button type="button" onClick={onClose} aria-label="关闭播放器并停止播放" title="关闭播放器">×</button>
         </div>
       </div>
@@ -137,6 +172,29 @@ export default function PlayerDock({ entry, onClose, onSkip }: PlayerDockProps) 
         <button type="button" onClick={() => onSkip(-1)} aria-label="上一首" title="上一首"><PlayerIcon source={previousIcon} /></button>
         <button type="button" className="music-player-toggle" onClick={togglePlayback} disabled={!ready} aria-label={paused ? '播放歌曲' : '暂停歌曲'} title={paused ? '播放' : '暂停'}><PlayerIcon source={paused ? playIcon : pauseIcon} /></button>
         <button type="button" onClick={() => onSkip(1)} aria-label="下一首" title="下一首"><PlayerIcon source={nextIcon} /></button>
+        {entry.platform === 'youtube' && (
+          <div className="music-player-volume" ref={volumeControlRef}>
+            <button
+              ref={volumeButtonRef}
+              type="button"
+              aria-label="音量控制"
+              title={'音量 ' + volume + '%'}
+              aria-expanded={volumeOpen}
+              aria-controls={volumeId}
+              disabled={!ready}
+              onClick={() => setVolumeOpen(!volumeOpen)}
+            ><PlayerIcon source={volume === 0 ? mutedIcon : volumeIcon} /></button>
+            {volumeOpen && (
+              <div id={volumeId} className="music-player-volume-popover" role="group" aria-label="音量">
+                <button type="button" onClick={toggleMute} aria-label={volume === 0 ? '恢复音量' : '静音'} title={volume === 0 ? '恢复音量' : '静音'} aria-pressed={volume === 0}>
+                  <PlayerIcon source={volume === 0 ? mutedIcon : volumeIcon} />
+                </button>
+                <input type="range" min="0" max="100" step="1" value={volume} onChange={(event) => setVolume(Number(event.target.value))} aria-label="音量" aria-valuetext={volume + '%'} />
+                <output>{volume}%</output>
+              </div>
+            )}
+          </div>
+        )}
       </div>
       <div className={entry.platform === 'youtube' ? 'music-player-frame youtube-frame' : 'music-player-frame spotify-frame'}>
         <div ref={hostRef} className="music-player-embed" />
