@@ -9,6 +9,7 @@ interface PlayerAdapter {
   pause(): void
   select(entry: MusicEntry, requestId: number): void
   setVolume?(volume: number): void
+  seekTo?(seconds: number): boolean
   destroy(): void
 }
 
@@ -63,6 +64,7 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
   const [error, setError] = useState<string | undefined>()
   const [ready, setReady] = useState(false)
   const [paused, setPaused] = useState(true)
+  const [timeline, setTimeline] = useState({ sourceId: entry.id, requestId: options?.requestId ?? 0, currentTime: 0, duration: 0 })
   const [volumeSettings, setVolumeSettings] = useState(readVolume)
   const volumeRef = useRef(volumeSettings)
   const volumeChangedAt = useRef(0)
@@ -107,6 +109,10 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
     setCanChangeSource(false)
     setCanRepeat(false)
     setError(undefined)
+    function resetTimeline() {
+      setTimeline({ sourceId: active.entry.id, requestId: active.requestId, currentTime: 0, duration: 0 })
+    }
+    resetTimeline()
     function report(status: PlayerObservation['status'], extra: Partial<PlayerObservation> = {}) {
       if (!cancelled) settings.current.options?.onObservation?.({ requestId: active.requestId, sourceId: active.entry.id, status, ...extra })
     }
@@ -116,6 +122,7 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
       initFailed.current = initialization
       setError(message)
       setPaused(true)
+      resetTimeline()
       report('error', { error: message, ...(initialization ? { canLoad: false } : {}) })
     }
     const target = platform === 'youtube' ? createFrame(active.entry) : document.createElement('div')
@@ -130,9 +137,20 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
         const matches = () => {
           try { return new URL(player.getVideoUrl()).searchParams.get('v') === active.entry.platformId } catch { return false }
         }
+        function syncTimeline() {
+          if (cancelled || !initialized || !matches() || player.getPlayerState() === -1
+            || active.entry.id !== settings.current.entry.id || active.requestId !== (settings.current.options?.requestId ?? 0)) return
+          try {
+            const duration = player.getDuration()
+            const currentTime = player.getCurrentTime()
+            if (!Number.isFinite(duration) || duration <= 0 || !Number.isFinite(currentTime)) { resetTimeline(); return }
+            setTimeline({ sourceId: active.entry.id, requestId: active.requestId, currentTime: Math.max(0, Math.min(duration, currentTime)), duration })
+          } catch { resetTimeline() }
+        }
         function select(next: MusicEntry, requestId: number) {
           if (cancelled || !initialized || lastRequest === next.id + ':' + requestId) return
           active = { entry: next, requestId }
+          resetTimeline()
           lastRequest = next.id + ':' + requestId
           armed = false
           ended = false
@@ -162,6 +180,7 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
               if (volume === 0) event.target.mute()
               else event.target.unMute()
               volumeTimer = window.setInterval(() => {
+                syncTimeline()
                 if (!cancelled && Date.now() - volumeChangedAt.current >= 1000) {
                   updateVolume(event.target.isMuted() ? 0 : event.target.getVolume(), false)
                 }
@@ -173,6 +192,7 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
             },
             onStateChange: event => {
               if (cancelled || !matches() || player.getPlayerState() !== event.data) return
+              syncTimeline()
               if (event.data === 1) {
                 armed = true
                 ended = false
@@ -202,6 +222,12 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
           select,
           play: () => player.playVideo(), pause: () => player.pauseVideo(),
           setVolume: volume => { player.setVolume(volume); if (volume === 0) player.mute(); else player.unMute() },
+          seekTo: seconds => {
+            if (cancelled || !initialized || !matches() || active.entry.id !== settings.current.entry.id
+              || active.requestId !== (settings.current.options?.requestId ?? 0)) return false
+            player.seekTo(seconds, true)
+            return true
+          },
           destroy: () => player.destroy(),
         }
       }).catch(() => { if (!cancelled) { setReady(false); failure('YouTube 控制接口不可用，请使用官方窗口或重新选择曲目', true) } })
@@ -298,5 +324,25 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
     try { if (paused) adapterRef.current?.play(); else adapterRef.current?.pause() } catch { setError('播放控制失败，请使用官方窗口') }
   }
 
-  return { hostRef, ready, paused, togglePlayback, volume: volumeSettings.value, setVolume, adjustVolume, toggleMute, canChangeSource, canRepeat, error }
+  const currentTimeline = entry.platform === 'youtube' && timeline.sourceId === entry.id && timeline.requestId === (options?.requestId ?? 0)
+  const duration = currentTimeline ? timeline.duration : 0
+  const currentTime = currentTimeline ? timeline.currentTime : 0
+  const canSeek = ready && duration > 0 && typeof adapterRef.current?.seekTo === 'function'
+
+  function seekTo(seconds: number): boolean {
+    if (!canSeek || !Number.isFinite(seconds) || timeline.sourceId !== settings.current.entry.id
+      || timeline.requestId !== (settings.current.options?.requestId ?? 0)) return false
+    const targetTime = Math.max(0, Math.min(duration, seconds))
+    try {
+      if (!adapterRef.current?.seekTo?.(targetTime)) return false
+      setTimeline(current => current.sourceId === timeline.sourceId && current.requestId === timeline.requestId
+        ? { ...current, currentTime: targetTime } : current)
+      return true
+    } catch {
+      setError('进度跳转失败，请重试')
+      return false
+    }
+  }
+
+  return { hostRef, ready, paused, togglePlayback, volume: volumeSettings.value, setVolume, adjustVolume, toggleMute, canChangeSource, canRepeat, error, currentTime, duration, canSeek, seekTo }
 }

@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import type { MouseEvent } from 'react'
 import { flushSync } from 'react-dom'
+import FullscreenToggle from './FullscreenToggle'
 import type { Section } from '../types'
 import logoBlack from '../assets/images/kmnz-logo-black.svg'
 import logoWhite from '../assets/images/kmnz-logo-white.svg'
@@ -10,6 +11,11 @@ interface HeaderProps {
   onNavigate: (next: Section) => void
   theme: 'light' | 'dark'
   onToggleTheme: () => void
+  onThemeSettled?: (theme: 'light' | 'dark') => void
+  onOpenSettings?: () => void
+  onHideNavigation?: () => void
+  navigationNear?: boolean
+  concealed?: boolean
 }
 
 const navigation: { page: Section; label: string }[] = [
@@ -24,9 +30,15 @@ export default function Header({
                                  page,
                                  onNavigate,
                                  theme,
-                                 onToggleTheme
+                                 onToggleTheme,
+                                 onThemeSettled,
+                                 onOpenSettings,
+                                 onHideNavigation,
+                                 navigationNear = false,
+                                 concealed = false
                                }: HeaderProps) {
   const [open, setOpen] = useState(false)
+  const themeRequest = useRef(0)
 
   function navigate(next: Section) {
     onNavigate(next)
@@ -35,12 +47,16 @@ export default function Header({
 
   // 从主题按钮的位置向外扩散切换主题
   function handleThemeChange(event: MouseEvent<HTMLButtonElement>) {
+    const request = ++themeRequest.current
     const rect = event.currentTarget.getBoundingClientRect()
 
     const x = rect.left + rect.width / 2
     const y = rect.top + rect.height / 2
 
     const nextTheme = theme === 'dark' ? 'light' : 'dark'
+    function showPeek() {
+      if (request === themeRequest.current) onThemeSettled?.(nextTheme)
+    }
 
     function applyTheme() {
       document.documentElement.dataset.theme = nextTheme
@@ -55,10 +71,12 @@ export default function Header({
         window.matchMedia('(prefers-reduced-motion: reduce)').matches
     ) {
       applyTheme()
+      showPeek()
       return
     }
 
     const transition = document.startViewTransition(applyTheme)
+    void transition.finished.then(showPeek, showPeek)
 
     void transition.ready.then(() => {
       const radius = Math.hypot(
@@ -85,7 +103,7 @@ export default function Header({
   }
 
   return (
-      <header className="site-header">
+      <header className="site-header" inert={concealed} aria-hidden={concealed || undefined}>
         <div className="container">
           <button
               className="site-title site-logo-button"
@@ -102,6 +120,7 @@ export default function Header({
             />
           </button>
 
+          <div className="header-player-slot" aria-hidden="true" />
           <button
               className="nav-toggle"
               type="button"
@@ -131,6 +150,7 @@ export default function Header({
                 </button>
             ))}
 
+            <div className="header-preferences">
             {/* 深浅色主题切换按钮 */}
             <button
                 className="theme-toggle"
@@ -166,6 +186,17 @@ export default function Header({
                 )}
               </svg>
             </button>
+          <FullscreenToggle />
+          <button type="button" className="settings-toggle" aria-label="播放设置" title="播放设置" onClick={onOpenSettings}>
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" aria-hidden="true">
+              <path d="m9 3-.5 2.1-1.8 1L4.6 5.5l-3 5.2 1.6 1.5v2.1l-1.6 1.4 3 5.2 2.1-.6 1.8 1L9 23h6l.5-2.1 1.8-1 2.1.6 3-5.2-1.6-1.4v-2.1l1.6-1.5-3-5.2-2.1.6-1.8-1L15 3Z" transform="translate(1 0) scale(.92)" />
+              <circle cx="12" cy="12" r="3.1" />
+            </svg>
+          </button>
+          {onHideNavigation && <button type="button" className={'navigation-toggle' + (navigationNear ? ' is-near' : '')} aria-label="隐藏顶部导航栏" title="隐藏顶部导航栏" onClick={onHideNavigation}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6" /></svg>
+          </button>}
+            </div>
           </nav>
         </div>
       </header>

@@ -4,6 +4,8 @@ export interface YouTubePlayer {
   playVideo(): void
   pauseVideo(): void
   getPlayerState(): number
+  getCurrentTime(): number
+  getDuration(): number
   setVolume(volume: number): void
   getVolume(): number
   mute(): void

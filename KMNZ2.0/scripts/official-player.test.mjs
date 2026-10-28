@@ -7,6 +7,76 @@ const spotify=music.musicCatalog.filter(entry=>entry.platform==='spotify')
 const uri=entry=>'spotify:'+entry.kind+':'+entry.platformId
 const update=(entry,extra={})=>({data:{playingURI:uri(entry),isPaused:false,isBuffering:false,position:1000,duration:30000,...extra}})
 
+test('YouTube timeline uses official times; seeking clamps to duration without restarting paused playback',async()=>{
+  const api=youtubeApi();const h=harness(api,youtube[0])
+  assert.equal(h.render().canSeek,false)
+  await tick();const player=api.players[0];player.ready()
+  assert.equal(h.render().seekTo(10),false)
+  player.duration=180;player.currentTime=12.5;player.emit(1)
+  assert.equal(h.render().currentTime,12.5);assert.equal(h.render().duration,180)
+  assert.equal(h.render().canSeek,true)
+  player.currentTime=25;h.poll();assert.equal(h.render().currentTime,25)
+  player.emit(2)
+  const before=player.calls.length
+  assert.equal(h.render().seekTo(90),true)
+  assert.deepEqual(player.calls.slice(before),[['seek',90]])
+  assert.equal(h.render().currentTime,90);assert.equal(h.render().paused,true)
+  assert.equal(h.render().seekTo(1000),true);assert.equal(h.render().currentTime,180)
+  assert.equal(h.render().seekTo(-8),true);assert.equal(h.render().currentTime,0)
+  const count=player.calls.length
+  assert.equal(h.render().seekTo(NaN),false);assert.equal(h.render().seekTo(Infinity),false)
+  assert.equal(player.calls.length,count);assert.equal(h.completions.length,0)
+  assert.equal(api.players.length,1);assert.equal(h.intervalCount,1)
+  h.unmount();assert.equal(h.intervalCount,0)
+})
+
+test('switching tracks invalidates old drag callbacks and ignores stale source progress',async()=>{
+  const api=youtubeApi();const h=harness(api,youtube[0])
+  h.render();await tick();const player=api.players[0];player.ready()
+  player.duration=200;player.currentTime=50;player.emit(1)
+  const oldSeek=h.render().seekTo
+  h.render(youtube[1],2)
+  assert.equal(h.render().currentTime,0);assert.equal(h.render().duration,0)
+  assert.equal(h.render().canSeek,false)
+  const before=player.calls.length
+  assert.equal(oldSeek(90),false);assert.equal(player.calls.length,before)
+  player.videoId=youtube[0].platformId;player.duration=200;player.currentTime=51;player.emit(1);h.poll()
+  assert.equal(h.render().duration,0)
+  player.videoId=youtube[1].platformId;player.duration=100;player.currentTime=5;player.emit(1)
+  assert.equal(h.render().duration,100);assert.equal(h.render().currentTime,5)
+  h.render(youtube[1],3)
+  assert.equal(h.render().canSeek,false)
+  player.emit(1);assert.equal(h.render().canSeek,true)
+  assert.equal(api.players.length,1)
+  h.unmount()
+})
+
+test('invalid times, video failures and failed seeks do not fake progress or queue transitions',async()=>{
+  const api=youtubeApi();const h=harness(api,youtube[0])
+  h.render();await tick();const player=api.players[0];player.ready()
+  for(const duration of [0,-1,NaN,Infinity]) {
+    player.duration=duration;player.currentTime=12;player.emit(1)
+    assert.equal(h.render().canSeek,false);assert.equal(h.render().currentTime,0)
+  }
+  player.duration=100;player.currentTime=NaN;h.poll();assert.equal(h.render().canSeek,false)
+  player.currentTime=12;h.poll();assert.equal(h.render().canSeek,true)
+  player.seekTo=()=>{throw new Error('offline')}
+  assert.equal(h.render().seekTo(70),false);assert.equal(h.render().currentTime,12)
+  assert(h.render().error.includes('进度跳转失败'))
+  player.events.onError({target:player,data:100})
+  assert.equal(h.render().canSeek,false);assert.equal(h.completions.length,0)
+  h.unmount()
+})
+
+test('Spotify music retains native progress instead of claiming unsupported podcast seeking',async()=>{
+  const api=spotifyApi();const h=harness(api,spotify[1])
+  h.render();await tick();const controller=api.controllers[0];controller.listeners.ready()
+  controller.listeners.playback_update(update(spotify[1]))
+  assert.equal(h.render().canSeek,false);assert.equal(h.render().seekTo(10),false)
+  assert.deepEqual(controller.calls,['play'])
+  h.unmount()
+})
+
 test('Spotify album and track selections request playback once after ready; blocked starts remain paused',async()=>{
   for(const entry of [spotify.find(entry=>entry.kind==='album'),spotify.find(entry=>entry.kind==='track')]) {
     const api=spotifyApi();const h=harness(api,entry)

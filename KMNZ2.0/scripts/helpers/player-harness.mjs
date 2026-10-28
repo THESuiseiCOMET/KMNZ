@@ -33,13 +33,15 @@ export function harness(api,initialEntry=music.musicCatalog[0],{storage=new Map(
 export function youtubeApi() {
   const players=[]
   const api={Player:class {
-    constructor(frame,options){this.frame=frame;this.events=options.events;this.calls=[];this.videoId=new URL(frame.src).searchParams.get('v')??frame.src.split('/embed/')[1].split('?')[0];this.state=5;this.volume=100;this.muted=false;players.push(this)}
+    constructor(frame,options){this.frame=frame;this.events=options.events;this.calls=[];this.videoId=new URL(frame.src).searchParams.get('v')??frame.src.split('/embed/')[1].split('?')[0];this.state=5;this.volume=100;this.muted=false;this.currentTime=0;this.duration=0;players.push(this)}
     getVideoUrl(){return 'https://www.youtube.com/watch?v='+this.videoId}
     getPlayerState(){return this.state}
-    loadVideoById(id){this.videoId=id;this.state=-1;this.calls.push(['load',id])}
+    getCurrentTime(){return this.currentTime}
+    getDuration(){return this.duration}
+    loadVideoById(id){this.videoId=id;this.state=-1;this.currentTime=0;this.duration=0;this.calls.push(['load',id])}
     playVideo(){this.calls.push('play')}
     pauseVideo(){this.calls.push('pause')}
-    seekTo(value){this.calls.push(['seek',value])}
+    seekTo(value){this.currentTime=value;this.calls.push(['seek',value])}
     setVolume(value){this.volume=value;this.calls.push(['volume',value])}
     getVolume(){return this.volume}
     mute(){this.muted=true;this.calls.push('mute')}

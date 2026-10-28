@@ -1,12 +1,14 @@
 import { useEffect, useId, useRef, useState } from 'react'
-import type { KeyboardEvent, PointerEvent } from 'react'
+import type { CSSProperties, KeyboardEvent, PointerEvent } from 'react'
 import type { MusicEntry } from '../data/music'
 import type { PlaybackMode, PlayerObservation } from '../types/playback'
 import { clampPlayerPosition } from '../lib/playerControls'
 import type { PlayerPosition } from '../lib/playerControls'
+import type { PlayerPresentation } from '../lib/playbackPreferences'
 import { useOfficialPlayer } from '../hooks/useOfficialPlayer'
 import { getMusicMetadata } from '../data/musicMetadata'
 import MusicCover from './MusicCover'
+import PlayerProgress from './PlayerProgress'
 import previousIcon from '../assets/icons/skip-back.svg'
 import nextIcon from '../assets/icons/skip-forward.svg'
 import loopIcon from '../assets/icons/repeat-1.svg'
@@ -26,6 +28,8 @@ interface PlayerDockProps {
   canNext?: boolean
   onEnded?: (requestId: number, sourceId: string) => void
   onObservation?: (observation: PlayerObservation) => void
+  presentation?: PlayerPresentation
+  videoFrosted?: boolean
 }
 
 function PlayerIcon({ source }: { source: string }) {
@@ -33,7 +37,7 @@ function PlayerIcon({ source }: { source: string }) {
   return <span className="music-player-icon" style={{ maskImage: mask, WebkitMaskImage: mask }} aria-hidden="true" />
 }
 
-export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode = 'sequence', onModeChange, canPrevious = true, canNext = true, onEnded, onObservation }: PlayerDockProps) {
+export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode = 'sequence', onModeChange, canPrevious = true, canNext = true, onEnded, onObservation, presentation = 'floating', videoFrosted = true }: PlayerDockProps) {
   const loop = mode === 'repeat-one'
   const [position, setPosition] = useState<PlayerPosition | null>(null)
   const [dragging, setDragging] = useState(false)
@@ -43,7 +47,10 @@ export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode
   const volumeButtonRef = useRef<HTMLButtonElement>(null)
   const panelRef = useRef<HTMLElement>(null)
   const dragRef = useRef<{ pointerId: number; clientX: number; clientY: number; x: number; y: number } | null>(null)
-  const { hostRef, ready, paused, togglePlayback, volume, setVolume, adjustVolume, toggleMute, canChangeSource, canRepeat, error } = useOfficialPlayer(entry, loop, () => onSkip(1), { requestId, onEnded, onObservation })
+  const presentationRef = useRef(presentation)
+  presentationRef.current = presentation
+  const [controlBar, setControlBar] = useState<{ x: number; width: number } | null>(null)
+  const { hostRef, ready, paused, togglePlayback, volume, setVolume, adjustVolume, toggleMute, canChangeSource, canRepeat, error, currentTime, duration, canSeek, seekTo } = useOfficialPlayer(entry, loop, () => onSkip(1), { requestId, onEnded, onObservation })
 
   useEffect(() => {
     setVolumeOpen(false)
@@ -93,6 +100,7 @@ export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode
 
   useEffect(() => {
     function keepInView() {
+      if (presentationRef.current === 'cinema') return
       setPosition((current) => {
         if (!current) return current
         const next = constrain(current)
@@ -113,7 +121,32 @@ export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode
     }
   }, [])
 
+  useEffect(() => {
+    setVolumeOpen(false)
+    if (presentation === 'cinema') {
+      dragRef.current = null
+      setDragging(false)
+    } else setPosition(current => current ? constrain(current) : current)
+  }, [presentation])
+
+  useEffect(() => {
+    if (presentation !== 'cinema') return
+    const slot = document.querySelector('.header-player-slot')
+    if (!slot) return
+    function update() {
+      const rect = slot!.getBoundingClientRect()
+      const next = { x: rect.left + rect.width / 2, width: Math.max(96, Math.min(264, rect.width - 8)) }
+      setControlBar(current => current?.x === next.x && current.width === next.width ? current : next)
+    }
+    update()
+    const observer = new ResizeObserver(update)
+    observer.observe(slot)
+    window.addEventListener('resize', update)
+    return () => { observer.disconnect(); window.removeEventListener('resize', update) }
+  }, [presentation])
+
   function startDrag(event: PointerEvent<HTMLButtonElement>) {
+    if (presentation === 'cinema') return
     if (event.button !== 0 || !event.isPrimary) return
     const rect = panelRef.current?.getBoundingClientRect()
     if (!rect) return
@@ -138,6 +171,7 @@ export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode
   }
 
   function moveWithKeyboard(event: KeyboardEvent<HTMLButtonElement>) {
+    if (presentation === 'cinema') return
     if (event.key === 'Home') { event.preventDefault(); setPosition(null); return }
     const directions: Record<string, PlayerPosition> = {
       ArrowLeft: { x: -1, y: 0 }, ArrowRight: { x: 1, y: 0 },
@@ -154,16 +188,18 @@ export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode
   return (
     <aside
       ref={panelRef}
-      className={'music-player-panel' + (dragging ? ' is-dragging' : '')}
+      className={'music-player-panel' + (presentation === 'cinema' ? ' is-cinema' : '') + (presentation === 'cinema' && videoFrosted ? ' is-video-frosted' : '') + (dragging ? ' is-dragging' : '')}
       aria-label="当前音乐播放器"
-      style={position ? { left: position.x, top: position.y, right: 'auto', bottom: 'auto' } : undefined}
+      style={presentation === 'cinema' && controlBar ? { '--cinema-control-x': controlBar.x + 'px', '--cinema-control-width': controlBar.width + 'px' } as CSSProperties
+        : presentation === 'floating' && position ? { left: position.x, top: position.y, right: 'auto', bottom: 'auto' } : undefined}
     >
       <div className="music-player-heading">
         <button
           type="button"
           className="music-player-drag-handle"
-          aria-label="移动播放器"
-          title={entry.title + ' · 拖动播放器'}
+          aria-label={presentation === 'cinema' ? '当前曲目' : '移动播放器'}
+          title={presentation === 'cinema' ? entry.title : entry.title + ' · 拖动播放器'}
+          disabled={presentation === 'cinema'}
           onPointerDown={startDrag}
           onPointerMove={moveDrag}
           onPointerUp={stopDrag}
@@ -177,7 +213,7 @@ export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode
           <button type="button" onClick={onClose} aria-label="关闭播放器并停止播放" title="关闭播放器">×</button>
         </div>
       </div>
-      <div className="music-player-controls" role="group" aria-label="播放控制">
+      <div className="music-player-controls" role="group" aria-label={presentation === 'cinema' ? entry.title + ' · 播放控制' : '播放控制'}>
         <button type="button" className="music-player-loop" onClick={() => onModeChange?.(loop ? 'sequence' : 'repeat-one')} aria-label={loop ? '关闭单曲循环' : '开启单曲循环'} title={ready && canRepeat ? (loop ? '关闭单曲循环' : '开启单曲循环') : '循环控制暂不可用'} aria-pressed={loop} disabled={!ready || !canRepeat}><PlayerIcon source={loopIcon} /></button>
         <button type="button" onClick={() => onSkip(-1)} aria-label="上一首" title="上一首" disabled={!canPrevious || !canChangeSource}><PlayerIcon source={previousIcon} /></button>
         <button type="button" className="music-player-toggle" onClick={togglePlayback} disabled={!ready} aria-label={paused ? '播放歌曲' : '暂停歌曲'} title={error ?? (paused ? '播放' : '暂停')}><PlayerIcon source={paused ? playIcon : pauseIcon} /></button>
@@ -206,12 +242,15 @@ export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode
           </div>
         )}
       </div>
+      {entry.platform === 'youtube' && <PlayerProgress key={entry.id + ':' + requestId}
+        currentTime={currentTime} duration={duration} canSeek={canSeek} onSeek={seekTo} />}
       {entry.platform === 'spotify' && <div className="music-player-spotify-cover" role="img" aria-label={entry.title + ' 封面'}>
         <MusicCover entry={entry} metadata={getMusicMetadata(entry)} />
       </div>}
       <div className={entry.platform === 'youtube' ? 'music-player-frame youtube-frame' : 'music-player-frame spotify-frame'}>
         <div ref={hostRef} className="music-player-embed" />
       </div>
+      {entry.platform === 'youtube' && <div className="cinema-video-glass" aria-hidden="true" />}
     </aside>
   )
 }
