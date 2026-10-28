@@ -7,10 +7,14 @@
 | 想修改什么 | 文件 | 在文件中找什么 |
 | --- | --- | --- |
 | 顶部导航按钮名称与顺序 | `src/components/Header.tsx` | `const navigation` |
+| 导航涂鸦字体、悬停喷漆描边 | `src/components/Header.tsx`、`src/styles.css` | `.nav-street-label`、`--nav-outline-shift`、`--nav-outline-duration`、`--nav-tag-tilt` |
+| 点击导航后的粉笔圈选中效果 | `src/components/Header.tsx`、`src/styles.css` | `.nav-chalk-ring`、`--nav-chalk-width`、`--nav-chalk-duration`、`nav-chalk-draw` |
+| 导航图标悬停动画 | `src/styles.css` | `.settings-toggle`、`.navigation-toggle` |
+| 页面左右滑动与动态模糊 | `src/hooks/usePageTransition.ts`、`src/styles.css` | `page-slide-in`、`page-slide-out`、`--page-enter-x`、`--page-exit-x` |
 | 顶部 Logo、返回首页按钮 | `src/components/Header.tsx` | `site-logo`、`navigate('home')` |
 | 顶部导航排版、Logo 大小 | `src/styles.css` | `.site-header`、`.site-title`、`.site-logo` |
 | 深色/浅色切换、圆形辐射动画 | `src/components/Header.tsx`、`src/styles.css` | `handleThemeChange`、`::view-transition` |
-| 黑白 Logo 图片 | `src/assets/images/kmnz-logo-black.svg`、`kmnz-logo-white.svg` | 替换对应资源 |
+| 黑白 Logo 图片 | `src/assets/images/KMNZLOGOB.webp`、`KMNZLOGOW.webp` | B 黑色用于浅色主题，W 白色用于深色主题；导航与音频可视化共用 |
 | 首页背景与可视化布局 | `src/pages/Home.tsx`、`src/styles.css` | `Home`、`.hero` |
 | 首页四图轮播 | `src/components/HeroCarousel.tsx` | `posters`、`4000` |
 | 成员头像、介绍、名单 | `src/data/members.ts` | `members` |
@@ -24,6 +28,8 @@
 | Spotify 分组、已确认曲目搜索与播放来源选择 | `src/lib/musicViews.ts` | `createMusicViews`、`spotifySections`、`releaseDetail` |
 | Spotify 统一大卡片与“全部／专辑／EP”分类 | `src/pages/Music.tsx`、`src/lib/musicViews.ts`、`src/styles.css` | `spotifyCategory`、`spotifyCards`、`music-categories` |
 | 音乐页面、卡片、搜索和筛选按钮 | `src/pages/Music.tsx` | `music-toolbar`、`music-grid`、`music-card` |
+| 音乐平台官方字标、半宽按钮、分类滑块 | `src/pages/Music.tsx`、`src/styles.css` | `platformLogos`、`.music-platform-labels`、`.music-switch-indicator` |
+| 平台及分类的内容过渡 | `src/hooks/usePageTransition.ts`、`src/styles.css` | `musicTransition`、`music-slide-in`、`music-slide-out` |
 | 音乐封面加载、失败回退与无封面占位 | `src/components/MusicCover.tsx`、`src/lib/musicMetadata.ts` | `coverCandidates`、`validCoverSize`、`mqdefault.jpg` |
 | 音乐卡片大小、封面裁剪和间距 | `src/styles.css` | `.music-card`、`.music-art img`、`.music-grid` |
 | 音乐卡片播放胶囊与圆形外链按钮 | `src/pages/Music.tsx`、`src/styles.css` | `.music-play`、`.music-external`、`.music-card-icon` |
@@ -39,6 +45,8 @@
 | 页面元数据兼容层 | `src/data/musicMetadata.ts` | `getMusicMetadata`、`sortMusicByDate` |
 | 日期校验、日本时间显示和稳定排序 | `src/lib/musicMetadata.ts` | `validPublishedAt`、`validReleaseDate`、`musicDate`、`sortMusicEntries` |
 | 全站常驻播放器内容 | `src/components/PlayerDock.tsx` | `PlayerDock` |
+| 导航栏右侧展开的图标设置 | `src/components/PlaybackSettings.tsx`、`src/components/Header.tsx`、`src/styles.css` | `SettingIcon`、`.playback-settings`、`.playback-setting-icon` |
+| 观影模式顶部播放控件 | `src/components/PlayerDock.tsx`、`src/styles.css` | `createPortal`、`.header-player-slot`、`.cinema-player-chrome` |
 | 播放器标题居中、关闭与标题栏拖动 | `src/components/PlayerDock.tsx`、`src/styles.css` | `music-player-heading`、`music-player-drag-handle` |
 | YouTube 音量、静音与本地保存 | `src/hooks/useOfficialPlayer.ts` | `kmnzPlayerVolume`、`setVolume`、`toggleMute` |
 | 音量弹层、滑条与局部滚轮调节 | `src/components/PlayerDock.tsx`、`src/styles.css` | `music-player-volume`、`changeWithWheel` |
@@ -55,7 +63,9 @@
 
 - `src/assets/images/`：成员图片、首页海报、Logo 等素材。
 - `src/assets/fonts/`：本地字体资源。
+- 导航显示 `HOME / MUSIC / MEMBERS / HISTORY / ABOUT`，复用成员页的本地 `PermanentMarker.ttf`，不新增字体资源。标签主体轻微倾斜、交错角度；悬停和键盘焦点触发两层断续描边持续循环晃动，移开淡出，不改变导航栏高度。文字层来自 `navigation` 配置，新增页面自动套用样式及动画；按钮名称与可见英文一致，装饰层不重复朗读，减少动态效果偏好下不晃动。成员页面及其字体样式保留。
 - `src/assets/icons/`：平台与播放器 SVG 图标；Lucide 图标许可证见同目录 `LICENSE-lucide.txt`。
+- `src/assets/icons/youtube-logo-light.svg`、`youtube-logo-dark.svg`：YouTube 官方品牌组件的完整 SVG 路径，分别使用黑／白字标和原红色图标；来源为 [YouTube 品牌资源](https://brand.youtube/youtube-logo) 及其公开组件脚本。`spotify-logo-light.svg`、`spotify-logo-dark.svg`：直接取自 [Spotify 官方完整 Logo 下载包](https://developer.spotify.com/images/guidelines/design/2024-spotify-full-logo.zip) 的 Black／White RGB SVG，保留完整图标与字标。
 - `public/favicon.ico`：浏览器标签图标。
 - 首页恢复原欢迎标题、介绍和四图轮播，图片及排列顺序见 `src/components/HeroCarousel.tsx`。默认背景与轮播第一张统一使用 `src/assets/images/kmnz1.avif`；轮播其余三张使用 `kmnz2.avif`、`kmnz3.avif`、`kmnz4.avif`，保留原图顺序和布局。旧 JPG／PNG 原图保留但不再引用，不进入网页构建。
 - 成员使用的头像文件，以 `src/data/members.ts` 的 import 为准。
@@ -225,9 +235,9 @@ YouTube 卡片沿用 16:9 封面，复用四角圆角与悬停放大；48px 液�
 
 ## 播放设置与影院模式
 
-`src/components/PlaybackSettings.tsx` 提供顶部设置图标打开的原生对话框，可选择浮窗／影院模式及各模式独立的封面背景磨砂开关；影院模式另有“视频磨砂”开关，独立保存，旧设置自动使用默认值。`src/lib/playbackPreferences.ts` 校验并读取本地偏好；默认浮窗＋磨砂，存储不可用时正常降级。`scripts/playback-preferences.test.mjs` 验证解析、独立开关和存储失败。
+`src/components/PlaybackSettings.tsx` 位于导航齿轮旁，向右展开单图标设置栏，以裁切、位移及透明度动画收放，不改变导航高度；窄屏在齿轮下方展开以避免越界。图标切换浮窗／影院、背景磨砂、影院视频磨砂和音频可视化，状态、悬停标题与可访问名称保持同步。音频来源、设备及电平放在音频图标的小面板里。再次点击齿轮、点击外部或 Esc 关闭，关闭后不可聚焦；不使用模态遮罩。`scripts/playback-settings.test.mjs` 验证独立偏好、音频开始／取消、关闭与监听清理。`src/lib/playbackPreferences.ts` 校验并读取本地偏好；默认浮窗＋磨砂，存储不可用时正常降级。`scripts/playback-preferences.test.mjs` 验证解析、独立开关和存储失败。
 
-影院模式通过 `PlayerDock` 布局类把原控制按钮缩小并固定在 Logo 与右侧导航之间的空位，进度线收紧在同一导航高度内；导航保持原高度，设置图标紧邻主题按钮右侧。控制区随可用宽度调整，同一个 YouTube 媒体 host 固定在导航下方的背景层，影院 iframe 按 16:9 等比放大、居中裁切以覆盖背景区域，横屏裁切上下、竖屏裁切左右，浮窗尺寸规则保持原样；磨砂玻璃层不拦截点击，主内容层仍可浏览音乐、成员、历程和关于页面；Spotify 沿用官方封面背景与右下角原生播放条。选歌不强制改变滚动位置；只改变布局，不重新创建 iframe／控制器，不修改队列和进度。原浮窗的拖动位置保留。影院有当前播放条目时卸载首页文案与轮播，暂停时保持，关闭播放或返回浮窗后恢复。影院“视频磨砂”使用覆盖在真实 iframe 上方的 `backdrop-filter`，视频本身不复制、不抓帧；玻璃层保持透明，不再叠加灰白／黑色主题蒙层；关闭时移除模糊，视频保留原始色彩和对比度，前景页面和导航控件保持清晰。Spotify 保留平台原生进度控制，页面底部预留空间避免遮挡内容。
+影院模式使用 `PlayerDock` 的 Portal 把原控制界面放入 Logo 与右侧导航之间的 `.header-player-slot`，随导航布局，不再依赖固定屏幕坐标；媒体 host 留在原位置，切换模式不重建 iframe。进度线收紧在同一导航高度内，保留播放按钮外观、导航高度、音量及切歌交互。控制区随可用宽度调整，同一个 YouTube 媒体 host 固定在导航下方的背景层，影院 iframe 按 16:9 等比放大、居中裁切以覆盖背景区域，横屏裁切上下、竖屏裁切左右，浮窗尺寸规则保持原样；磨砂玻璃层不拦截点击，主内容层仍可浏览音乐、成员、历程和关于页面；Spotify 沿用官方封面背景与右下角原生播放条。选歌不强制改变滚动位置；只改变布局，不重新创建 iframe／控制器，不修改队列和进度。原浮窗的拖动位置保留。影院有当前播放条目时卸载首页文案与轮播，暂停时保持，关闭播放或返回浮窗后恢复。影院“视频磨砂”使用覆盖在真实 iframe 上方的 `backdrop-filter`，视频本身不复制、不抓帧；玻璃层保持透明，不再叠加灰白／黑色主题蒙层；关闭时移除模糊，视频保留原始色彩和对比度，前景页面和导航控件保持清晰。Spotify 保留平台原生进度控制，页面底部预留空间避免遮挡内容。
 
 ## YouTube 小窗进度条
 
@@ -241,7 +251,7 @@ YouTube 卡片沿用 16:9 封面，复用四角圆角与悬停放大；48px 液�
 
 `src/lib/audioCapture.ts` 仅将共享音轨送入本地 Web Audio 分析器，不录制、不上传、不连接扬声器而造成重复播放；拒绝整屏／窗口来源，无音轨和初始化失败时释放全部资源。`src/hooks/useAudioVisualizer.ts` 管理单次请求、过期结果、取消、结束共享与卸载清理。浏览器可能同时要求共享视频轨，它不用于抓帧或渲染；浏览器和受保护媒体是否提供有效音轨需实际确认，静音不模拟信号。
 
-`src/lib/audioGeometry.ts` 用实际频谱生成最初较平缓的环形线条，低频控制轻微外扩；已移除交替长短尖刺及李萨如／延迟相位曲线的计算与绘制。`src/components/AudioVisualizer.tsx` 用 Canvas 绘制，复用黑白 SVG 图标，深色白图／浅色黑图，淡入至低透明度，收到信号时慢速旋转。静音不绘制假波形；限制像素密度，减少动态效果偏好下停止旋转并降低线条强度。
+`src/lib/audioGeometry.ts` 用实际频谱生成最初较平缓的环形线条，低频控制轻微外扩；已移除交替长短尖刺及李萨如／延迟相位曲线的计算与绘制。`src/components/AudioVisualizer.tsx` 用 Canvas 绘制，与导航共用提供的 `KMNZLOGOB.webp`／`KMNZLOGOW.webp` 透明原图，深色 W 白图／浅色 B 黑图，淡入至低透明度，开启可视化后持续慢速旋转。原图直接复制，不裁剪或重新压缩；原 SVG 留存但不再引用。无信号时绘制静态基础圆环，有有效音频信号时才按真实频谱变形；保留当前圆环大小、线宽、透明度与旋转速度，不伪造音频起伏。限制像素密度，减少动态效果偏好下停止旋转并降低线条强度。
 
 `Home.tsx` 保留默认 Hero 背景大图，首页显示欢迎标题、介绍和原四图轮播；开启可视化后整体隐藏这些内容并直接绘制，不使用轮播容器、边框或卡片，关闭后恢复原首页。影院播放继续沿用原视频／封面背景。`AudioVisualizer.tsx` 只负责首页绘图及尺寸变化，不再接管导航、页面焦点、滚动、Esc 或浏览器全屏，不显示等待文字。离开首页只卸载绘图，采集和音乐持续；关闭开关或输入断开才停止采集。未保存自动采集开关，不自动请求共享。
 
@@ -251,7 +261,7 @@ YouTube 卡片沿用 16:9 封面，复用四角圆角与悬停放大；48px 液�
 
 `useAudioVisualizer.ts` 管理两种采集来源及设备读取的过期结果和清理；App 传递选择，`PlaybackSettings.tsx` 显示读取、选择、连接和错误状态。只在用户操作时请求授权，关闭设置会丢弃待处理结果；播放、停播和页面导航不会主动关闭已开启的采集。输入来源不持久化设备标识。立体声混音需要 Windows 已启用并由浏览器列出；Realtek 立体声混音是否包含当前输出取决于实际声音路由，虚拟输入由对应软件决定。该路线不调用屏幕共享，但浏览器仍可能显示音频输入使用标识。测试覆盖指定设备、无视频、无默认回退、枚举权限释放、断开、重复及过期请求。
 
-`src/lib/audioSignal.ts` 每 120ms 读取实际浮点输入，向设置显示输入电平和等待／接收／无信号／输入静音／分析暂停状态。无信号时提示检查对应声卡路由；分析暂停可通过用户点击恢复，不伪装已经收到声音。监测与采集会话同寿命，离开首页仍检测，停止或卸载释放计时器。`audioGeometry.ts` 去除输入直流偏移并采用浮点采样，避免 8 位量化丢失弱信号或静音时画出固定圆环；保留平缓环形、主题及播放控件。设备输出未改变，官方嵌入播放器仍由原控制器管理。
+`src/lib/audioSignal.ts` 每 120ms 读取实际浮点输入，向设置显示输入电平和等待／接收／无信号／输入静音／分析暂停状态。无信号时提示检查对应声卡路由；分析暂停可通过用户点击恢复，不伪装已经收到声音。监测与采集会话同寿命，离开首页仍检测，停止或卸载释放计时器。`audioGeometry.ts` 去除输入直流偏移并采用浮点采样，避免 8 位量化丢失弱信号或将静音误判为有效声音；无信号基础圆环仅由绘图层显示。保留平缓环形、主题及播放控件。设备输出未改变，官方嵌入播放器仍由原控制器管理。
 
 
 ## 导航网页全屏按钮
@@ -260,7 +270,11 @@ YouTube 卡片沿用 16:9 封面，复用四角圆角与悬停放大；48px 液�
 
 ## 独立导航隐藏
 
-`App.tsx` 管理临时导航显隐，`Header.tsx` 在设置按钮右侧提供收起箭头；收起时导航滑出并不可聚焦，恢复箭头跟随收起按钮的实际坐标和尺寸，点击或 Esc 恢复，焦点返回收起按钮。展开向上、收起向下，共用按钮样式；鼠标距按钮 48px 内显现，远离淡出，键盘焦点和触屏保持可操作。浏览器原生全屏和设置对话框的 Esc 优先；不改变网页全屏、播放器模式、播放队列或采集会话。影院视频随导航高度铺开，顶部播放控件随导航隐藏；浮窗保持原样。`styles.css` 用同一可见导航高度变量调整首页和影院背景；首页背景采用动态视口高度并随 main 剩余空间伸展，移除已不存在的旧页脚高度预留及重复规则。导航收放时背景与可视化高度同步过渡，保留原图等比铺满和底部定位；减少动态效果偏好下关闭过渡。
+导航当前项使用 `.nav-chalk-ring` 绘制两条略有偏差的 SVG 椭圆线，噪声蒙版形成粉笔颗粒，沿实际按钮宽高缩放，不占排版空间。点击切换时立即描画并保留，再点当前导航也重画；旧选中项的圈自动移除。页面过渡仅捕获 `#main-content`，导航保持实时显示，让粉笔圈与页面滑动模糊同时进行。移除顶部导航滑块及矩形选中背景，保留音乐页的平台与分类滑块、用户微调后的字体及悬停参数。颜色沿用主题，装饰层不接收点击或重复朗读；减少动态效果偏好下直接显示完整圈。
+
+`src/hooks/useNavigationIndicator.ts` 继续供音乐页的平台与分类滑块使用，按当前按钮实际坐标及宽高定位，尺寸变化和字体加载后重新测量，卸载清理监听；顶部导航不再使用该 Hook。新增顶部导航项沿用 `Header.tsx` 的 `navigation` 配置，自动套用描边和圈选效果。齿轮悬停旋转 24°，收起／展开箭头分别上移／下移 3px，移开归位。键盘焦点沿用反馈，减少动态效果偏好下停止这些动画。`scripts/navigation-indicator.test.mjs` 保留尺寸、新增选项、布局变化与监听清理验证。
+
+`App.tsx` 管理临时导航显隐，`Header.tsx` 在网页全屏与设置按钮之间提供常驻收起箭头；收起时导航滑出并不可聚焦，恢复箭头跟随收起按钮的实际坐标和尺寸，点击或 Esc 恢复，焦点返回收起按钮。展开与收起沿用原箭头方向及共用样式；收起按钮常驻显示，只有展开按钮在鼠标距按钮 48px 内显现、远离淡出，键盘焦点和触屏保持可操作。浏览器原生全屏和设置对话框的 Esc 优先；不改变网页全屏、播放器模式、播放队列或采集会话。影院视频随导航高度铺开，顶部播放控件随导航隐藏；浮窗保持原样。`styles.css` 用同一可见导航高度变量调整首页和影院背景；首页背景采用动态视口高度并随 main 剩余空间伸展，移除已不存在的旧页脚高度预留及重复规则。导航收放时背景与可视化高度同步过渡，保留原图等比铺满和底部定位；减少动态效果偏好下关闭过渡。
 
 
 `src/hooks/useNavigationControl.ts` 和 `src/lib/navigationControl.ts` 跟踪按钮、导航变换及窗口尺寸，抵消收起时的导航位移，并在窄屏下限制恢复按钮留在可见范围；靠近区域随位置变化，卸载清理鼠标、滚动及尺寸监听。`scripts/navigation-control.test.mjs` 验证坐标、边界、靠近检测与清理。
@@ -269,6 +283,10 @@ YouTube 卡片沿用 16:9 封面，复用四角圆角与悬停放大；48px 液�
 
 
 ## 地址路由与刷新恢复
+
+音乐页平台按钮左右各占一半，完整品牌标识居中并随主题选择本地 SVG。平台和 Spotify 分类使用 `useNavigationIndicator.ts` 的可配置选择器测量滑块；切换栏文字／标识与滑块分层，文字快照始终置于滑块上方。`useSiteRoute.ts` 把前后 `MusicRoute` 交给同一个 `usePageTransition.ts`：平台切换用 320ms 左右滑动、淡入淡出和 6px 动态模糊，分类筛选用 220ms、18px 位移和 3px 模糊；只有 `.music-results` 参与内容过渡，搜索和切换栏位置保留。方向读取按钮顺序，浏览器前进／后退沿用相同规则；搜索和详情操作不触发分类过渡。重复选中当前平台／分类取消未完成的旧目标，快速连续切换只提交最后一次选择，不改播放队列或重建播放器；主题、降级和减少动态效果偏好沿用原处理。
+
+`src/hooks/usePageTransition.ts` 通过浏览器 View Transitions 为主页面切换及前进／后退添加左右滑动、淡入淡出和动态模糊；方向读取导航按钮实际顺序，成员详情返回反向。导航选中滑块单独参与位置过渡，不移动播放器、不创建额外 iframe；主题切换继续使用原圆形扩散。快速连续操作取消过期动画和更新，失败、安全降级及减少动态效果偏好下直接切换；站内搜索、分类和平台筛选不触发整页动画。`useSiteRoute.ts` 保留原地址与滚动恢复顺序，动画更新回调内提交新页面。`scripts/page-transition.test.mjs` 验证方向、快速切换、失败降级和卸载清理。
 
 `src/lib/siteRoute.ts` 定义 /KMNZ/ 下的 Hash 地址，覆盖主导航、成员详情、YouTube／Spotify、分类、搜索和发行详情；未知成员、无效来源和损坏编码安全回退。`src/hooks/useSiteRoute.ts` 管理初始化、地址规范化、前进／后退及当前标签页内的滚动位置；搜索更新替换当前历史项，页面／平台／专辑切换新增历史项，详情返回优先使用原列表历史。`Music.tsx` 通过可选路由属性接入，单独渲染仍保留兼容行为。页面切换不卸载全站播放器。
 

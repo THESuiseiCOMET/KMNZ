@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
 import type { AudioCaptureSession } from '../lib/audioCapture'
 import { audioShape, audioSignalThreshold } from '../lib/audioGeometry'
-import logoBlack from '../assets/images/kmnz-logo-black.svg'
-import logoWhite from '../assets/images/kmnz-logo-white.svg'
+import logoBlack from '../assets/images/KMNZLOGOB.webp'
+import logoWhite from '../assets/images/KMNZLOGOW.webp'
 
 interface AudioVisualizerProps {
   session: AudioCaptureSession
@@ -26,7 +26,7 @@ export default function AudioVisualizer({ session, theme }: AudioVisualizerProps
       width = rect.width; height = rect.height
       scale = Math.min(window.devicePixelRatio || 1, 2)
       element!.width = Math.round(width * scale); element!.height = Math.round(height * scale)
-      if (logo.current) logo.current.style.width = Math.min(Math.min(width, height) * .35, 380) + 'px'
+      if (logo.current) logo.current.style.width = Math.min(Math.min(width, height) * .50, 380) + 'px'
     }
     const observer = new ResizeObserver(resize)
     observer.observe(element)
@@ -39,23 +39,23 @@ export default function AudioVisualizer({ session, theme }: AudioVisualizerProps
       const signal = shape.rms >= audioSignalThreshold && state.context === 'running' && !state.muted
       context!.setTransform(scale, 0, 0, scale, 0, 0)
       context!.clearRect(0, 0, width, height)
-      const radius = Math.min(width, height) * .235
+      const radius = Math.min(width, height) * .325
       context!.translate(width / 2, height / 2)
       context!.strokeStyle = theme === 'dark' ? '#f0efeb' : '#171717'
       context!.lineJoin = 'round'
       const strength = reduced.matches ? .65 : 1
+      context!.globalAlpha = .99 * strength
+      context!.lineWidth = 4
+      context!.beginPath()
       if (signal && shape.ring.length) {
-        context!.globalAlpha = .78 * strength
-        context!.lineWidth = 1.5
-        context!.beginPath()
         shape.ring.forEach((point, index) => {
           const x = point.x * radius, y = point.y * radius
           if (index === 0) context!.moveTo(x, y); else context!.lineTo(x, y)
         })
         context!.closePath()
-        context!.stroke()
-      }
-      if (signal && !reduced.matches && last) angle += Math.min(time - last, 50) * .0024
+      } else context!.arc(0, 0, radius, 0, Math.PI * 2)
+      context!.stroke()
+      if (!reduced.matches && last) angle += Math.min(time - last, 50) * .0050
       if (logo.current) logo.current.style.transform = `rotate(${angle}deg)`
       last = time
       raf = requestAnimationFrame(draw)

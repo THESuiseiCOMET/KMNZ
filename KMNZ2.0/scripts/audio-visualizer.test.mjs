@@ -244,7 +244,7 @@ const viewCode=ts.transpileModule(viewSource,{compilerOptions:{module:ts.ModuleK
 function visualizerHarness({reduced=false,silent=false}={}) {
   const restore=[]
   function install(key,value){const previous=Object.getOwnPropertyDescriptor(globalThis,key);restore.push(()=>previous?Object.defineProperty(globalThis,key,previous):delete globalThis[key]);Object.defineProperty(globalThis,key,{configurable:true,value})}
-  const effects=[],cleanups=[],refs=[];let cursor=0,nextFrame=0,frame,disconnected=false,strokes=0,resizeCallback
+  const effects=[],cleanups=[],refs=[];let cursor=0,nextFrame=0,frame,disconnected=false,strokes=0,circles=0,resizeCallback
   const fullscreen={id:'browser-fullscreen'}
   const documentMock={documentElement:{style:{overflow:'auto'}},fullscreenElement:fullscreen}
   install('document',documentMock)
@@ -260,7 +260,7 @@ function visualizerHarness({reduced=false,silent=false}={}) {
     if(name==='../lib/audioGeometry')return {audioShape,audioSignalThreshold}
     return {default:name}
   },module,module.exports)
-  const context={setTransform(){},clearRect(){},translate(){},beginPath(){},moveTo(){},lineTo(){},closePath(){},stroke(){strokes++}}
+  const context={setTransform(){},clearRect(){},translate(){},beginPath(){},moveTo(){},lineTo(){},closePath(){},arc(){circles++},stroke(){strokes++}}
   const image={style:{}}
   let bounds={width:1280,height:720}
   const canvas={getContext:()=>context,getBoundingClientRect:()=>bounds}
@@ -268,15 +268,15 @@ function visualizerHarness({reduced=false,silent=false}={}) {
   const tree=module.exports.default({session:{analyser,sampleRate:48000,getState:()=>({context:'running',muted:false})},theme:'dark'})
   function attach(value){if(!value||typeof value!=='object')return;if(value.props?.ref)value.props.ref.current=value.type==='canvas'?canvas:image;const children=value.props?.children;for(const child of Array.isArray(children)?children:[children])attach(child)}
   attach(tree);effects.forEach(fn=>cleanups.push(fn()))
-  return {step(time){const fn=frame;frame=null;fn?.(time)},get rotation(){return image.style.transform},get strokes(){return strokes},get dimensions(){return [canvas.width,canvas.height]},
+  return {step(time){const fn=frame;frame=null;fn?.(time)},get rotation(){return image.style.transform},get strokes(){return strokes},get circles(){return circles},get dimensions(){return [canvas.width,canvas.height]},
     resize(width,height){bounds={width,height};resizeCallback()},
     cleanup(){cleanups.forEach(fn=>fn?.());assert.equal(documentMock.documentElement.style.overflow,'auto');assert.equal(documentMock.fullscreenElement,fullscreen);assert(disconnected);assert.equal(frame,null);restore.reverse().forEach(fn=>fn())}}
 }
 
-test('normal motion rotates only with actual signal; reduced motion and silence stop rotation',()=>{
-  for(const [options,rotates] of [[{},true],[{reduced:true},false],[{silent:true},false]]) {
+test('idle visualization keeps a static ring and rotation; reduced motion stops rotation with or without signal',()=>{
+  for(const [options,rotates] of [[{},true],[{reduced:true},false],[{silent:true},true],[{silent:true,reduced:true},false]]) {
     const h=visualizerHarness(options)
-    try {h.step(100);h.step(200);assert.equal(h.rotation!=='rotate(0deg)',rotates);assert.equal(h.strokes>0,!options.silent)}
+    try {h.step(100);h.step(200);assert.equal(h.rotation!=='rotate(0deg)',rotates);assert(h.strokes>0);assert.equal(h.circles>0,Boolean(options.silent))}
     finally {h.cleanup()}
   }
 })

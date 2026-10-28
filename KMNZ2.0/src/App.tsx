@@ -8,6 +8,7 @@ import AudioVisualizer from './components/AudioVisualizer'
 import { useAudioVisualizer } from './hooks/useAudioVisualizer'
 import { useNavigationControl } from './hooks/useNavigationControl'
 import { useSiteRoute } from './hooks/useSiteRoute'
+import { usePageTransition } from './hooks/usePageTransition'
 import { usePlaybackPersistence } from './hooks/usePlaybackPersistence'
 import { readPlaybackSession } from './lib/playbackSession'
 import type { VisualizationAudioSource } from './lib/audioCapture'
@@ -31,7 +32,8 @@ function getInitialTheme(): 'light' | 'dark' {
   return document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light'
 }
 export default function App() {
-  const { route, navigate, changeMusic, backFromRelease } = useSiteRoute(routedReleases)
+  const transitionPage = usePageTransition()
+  const { route, navigate, changeMusic, backFromRelease } = useSiteRoute(routedReleases, transitionPage)
   const page: Page = route.page
   const [theme, setTheme] = useState<'light' | 'dark'>(getInitialTheme)
   const [playbackPreferences, setPlaybackPreferences] = useState(readPlaybackPreferences)
@@ -92,6 +94,7 @@ export default function App() {
     dispatch({ type: 'move', direction })
   }
   function toggleNavigation(hidden: boolean) {
+    if (hidden) closeSettings()
     setNavigationHidden(hidden)
     setThemePeek({ theme, id: ++themePeekId.current, artwork: hidden ? 'close' : 'open' })
   }
@@ -101,11 +104,21 @@ export default function App() {
   const member = members.find((item) => page === 'member-' + item.id)
   const section: Section = member ? 'members' : page as Section
 
+  function closeSettings() {
+    setSettingsOpen(false)
+    if ((visualizer.pending || visualizer.loadingInputs) && !visualizer.session) visualizer.stop()
+  }
+  const settingsPanel = <PlaybackSettings open={settingsOpen} settings={playbackPreferences} onChange={setPlaybackPreferences} onClose={closeSettings}
+    visualizationEnabled={Boolean(visualizer.session)} visualizationPending={visualizer.pending} visualizationError={visualizer.error} onStopVisualization={visualizer.stop}
+    audioSource={visualizationSource} onAudioSourceChange={setVisualizationSource} audioInputs={visualizer.inputs} loadingInputs={visualizer.loadingInputs} inputError={visualizer.inputError} onReadInputs={visualizer.refreshInputs}
+    audioSignal={visualizer.signal} onResumeAudio={visualizer.resume}
+    onStartVisualization={async () => { if (await visualizer.start(visualizationSource)) { setSettingsOpen(false); showHomeVisualization() } }} />
+
   return (
     <div className={(page === 'home' ? 'app is-home' : 'app') + (currentMusic ? ' with-music-player has-playback-backdrop' : '') + (cinemaActive ? ' is-cinema-session' : '') + (navigationHidden ? ' is-navigation-hidden' : '')} data-player-platform={currentMusic?.platform}>
       <PlaybackBackdrop entry={currentMusic} frosted={playbackPreferences.frosted[presentation]} />
       <a className="skip-link sr-only" href="#main-content" onClick={event => { event.preventDefault(); document.getElementById('main-content')?.focus() }}>跳过到主要内容</a>
-      <Header page={section} theme={theme} concealed={navigationHidden} navigationNear={navigationControl.near} onHideNavigation={() => toggleNavigation(true)} onNavigate={navigate} onToggleTheme={() => { setThemePeek(null); setTheme(theme === 'dark' ? 'light' : 'dark') }} onThemeSettled={showThemePeek} onOpenSettings={() => setSettingsOpen(true)} />
+      <Header page={section} theme={theme} concealed={navigationHidden} onHideNavigation={() => toggleNavigation(true)} onNavigate={navigate} onToggleTheme={() => { setThemePeek(null); setTheme(theme === 'dark' ? 'light' : 'dark') }} onThemeSettled={showThemePeek} settingsOpen={settingsOpen} settingsPanel={settingsPanel} onOpenSettings={() => settingsOpen ? closeSettings() : setSettingsOpen(true)} />
       {navigationHidden && <button ref={restoreNavigation} type="button" className={'navigation-toggle show-navigation' + (navigationControl.near ? ' is-near' : '')} style={navigationControl.position} aria-label="显示顶部导航栏" title="显示顶部导航栏" onClick={() => toggleNavigation(false)}>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
       </button>}
@@ -119,11 +132,6 @@ export default function App() {
         {member && <MemberDetail member={member} onBack={() => navigate('members')} />}
       </main>
       <ThemePeek key={themePeek?.artwork ?? 'theme'} id={themePeek?.id} theme={theme} artwork={themePeek?.artwork} playerActive={Boolean(currentMusic) && !cinemaActive} onFinished={finishThemePeek} />
-      <PlaybackSettings open={settingsOpen} settings={playbackPreferences} onChange={setPlaybackPreferences} onClose={() => { setSettingsOpen(false); if ((visualizer.pending || visualizer.loadingInputs) && !visualizer.session) visualizer.stop() }}
-        visualizationEnabled={Boolean(visualizer.session)} visualizationPending={visualizer.pending} visualizationError={visualizer.error} onStopVisualization={visualizer.stop}
-        audioSource={visualizationSource} onAudioSourceChange={setVisualizationSource} audioInputs={visualizer.inputs} loadingInputs={visualizer.loadingInputs} inputError={visualizer.inputError} onReadInputs={visualizer.refreshInputs}
-        audioSignal={visualizer.signal} onResumeAudio={visualizer.resume}
-        onStartVisualization={async () => { if (await visualizer.start(visualizationSource)) { setSettingsOpen(false); showHomeVisualization() } }} />
     </div>
   )
 }

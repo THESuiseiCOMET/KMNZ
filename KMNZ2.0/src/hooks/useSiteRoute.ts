@@ -15,7 +15,7 @@ function saveScroll(hash: string) {
   } catch { /* unavailable */ }
 }
 
-export function useSiteRoute(releaseIds: ReadonlySet<string>) {
+export function useSiteRoute(releaseIds: ReadonlySet<string>, transition?: (from: Page, to: Page, update: () => void, music?: { from: MusicRoute; to: MusicRoute }) => void) {
   const [route, setRoute] = useState(() => parseSiteRoute(window.location.hash, releaseIds))
   const latest = useRef(route)
   latest.current = route
@@ -26,15 +26,22 @@ export function useSiteRoute(releaseIds: ReadonlySet<string>) {
   }, [])
   const go = useCallback((next: SiteRoute, replace = false) => {
     const before = siteRouteHash(latest.current), hash = siteRouteHash(next)
-    if (hash === before) return
+    if (hash === before) {
+      transition?.(latest.current.page, next.page, () => {}, { from: latest.current.music, to: next.music })
+      return
+    }
     saveScroll(before)
-    const url = window.location.pathname + window.location.search + hash
-    if (replace) window.history.replaceState(window.history.state, '', url)
-    else window.history.pushState({ kmnzFrom: before }, '', url)
-    latest.current = next
-    setRoute(next)
-    if (!replace) { window.cancelAnimationFrame(frame.current); frame.current = window.requestAnimationFrame(() => window.scrollTo(0, 0)) }
-  }, [])
+    const update = () => {
+      const url = window.location.pathname + window.location.search + hash
+      if (replace) window.history.replaceState(window.history.state, '', url)
+      else window.history.pushState({ kmnzFrom: before }, '', url)
+      latest.current = next
+      setRoute(next)
+      if (!replace) { window.cancelAnimationFrame(frame.current); frame.current = window.requestAnimationFrame(() => window.scrollTo(0, 0)) }
+    }
+    if (transition) transition(latest.current.page, next.page, update, { from: latest.current.music, to: next.music })
+    else update()
+  }, [transition])
 
   useEffect(() => {
     const previous = window.history.scrollRestoration
@@ -48,10 +55,14 @@ export function useSiteRoute(releaseIds: ReadonlySet<string>) {
       if (hash === before) return
       saveScroll(before)
       if (next.page !== 'music') next.music = latest.current.music
-      latest.current = next
-      setRoute(next)
-      if (hash !== window.location.hash) window.history.replaceState(window.history.state, '', window.location.pathname + window.location.search + hash)
-      scrollToRoute(hash)
+      const update = () => {
+        latest.current = next
+        setRoute(next)
+        if (hash !== window.location.hash) window.history.replaceState(window.history.state, '', window.location.pathname + window.location.search + hash)
+        scrollToRoute(hash)
+      }
+      if (transition) transition(latest.current.page, next.page, update, { from: latest.current.music, to: next.music })
+      else update()
     }
     function remember() { saveScroll(siteRouteHash(latest.current)) }
     window.addEventListener('hashchange', changed)
@@ -64,12 +75,15 @@ export function useSiteRoute(releaseIds: ReadonlySet<string>) {
       window.removeEventListener('popstate', changed)
       window.removeEventListener('pagehide', remember)
     }
-  }, [releaseIds, scrollToRoute])
+  }, [releaseIds, scrollToRoute, transition])
 
   const navigate = useCallback((page: Page) => {
-    if (latest.current.page === page) window.scrollTo(0, 0)
+    if (latest.current.page === page) {
+      if (transition) transition(page, page, () => window.scrollTo(0, 0))
+      else window.scrollTo(0, 0)
+    }
     else go({ ...latest.current, page })
-  }, [go])
+  }, [go, transition])
   const changeMusic = useCallback((music: MusicRoute, replace = false) => go({ page: 'music', music }, replace), [go])
   const backFromRelease = useCallback(() => {
     const current = latest.current

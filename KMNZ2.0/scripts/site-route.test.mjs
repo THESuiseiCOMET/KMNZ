@@ -27,7 +27,7 @@ test('unknown and malformed routes safely normalize without inventing members or
 
 const source=await readFile(new URL('../src/hooks/useSiteRoute.ts',import.meta.url),'utf8')
 const code=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText
-function harness(initial='#/music/spotify?q=KMNZ') {
+function harness(initial='#/music/spotify?q=KMNZ',transition) {
   const prior=new Map(['window','sessionStorage'].map(name=>[name,Object.getOwnPropertyDescriptor(globalThis,name)]))
   const slots=[],effects=[],listeners=new Map(),frames=new Map(),store=new Map();let cursor=0,frameId=0,index=0
   const location={pathname:'/KMNZ/',search:'',hash:initial}
@@ -42,7 +42,7 @@ function harness(initial='#/music/spotify?q=KMNZ') {
   const react={useState(value){const i=cursor++;slots[i]??={value:typeof value==='function'?value():value};return [slots[i].value,next=>{slots[i].value=next}]},useRef(value){const i=cursor++;return slots[i]??={current:value}},useCallback(fn){cursor++;return fn},useEffect(fn,deps){const i=cursor++;if(!slots[i]||deps.some((v,j)=>!Object.is(v,slots[i].deps[j])))effects.push(()=>{slots[i]?.cleanup?.();slots[i]={deps,cleanup:fn()}})}}
   const module={exports:{}}
   new Function('require','module','exports',code)(name=>name==='react'?react:routes,module,module.exports)
-  return {render(){cursor=0;const result=module.exports.useSiteRoute(releases);effects.splice(0).forEach(fn=>fn());return result},win,entries,store,
+  return {render(){cursor=0;const result=module.exports.useSiteRoute(releases,transition);effects.splice(0).forEach(fn=>fn());return result},win,entries,store,
     flush(){const pending=[...frames.values()];frames.clear();pending.forEach(fn=>fn())},
     cleanup(){slots.forEach(slot=>slot?.cleanup?.());assert.equal(listeners.size,0);assert.equal(frames.size,0);assert.equal(history.scrollRestoration,'auto');for(const [name,value] of prior)if(value)Object.defineProperty(globalThis,name,value);else delete globalThis[name]}}
 }
@@ -67,4 +67,48 @@ test('release back uses browser history when available and supports directly ope
   } finally {h.cleanup()}
   const direct=harness('#/music/spotify/release/sp-album-1')
   try {let view=direct.render();view.backFromRelease();view=direct.render();assert.equal(view.route.music.releaseSourceId,null);assert.equal(direct.entries.length,1)}finally{direct.cleanup()}
+})
+
+test('animated route commits preserve history and restored scroll while same-page actions remain immediate',()=>{
+  const pending=[],calls=[]
+  const h=harness('#/music/spotify?q=KMNZ',(from,to,update)=>{
+    calls.push([from,to]);if(from===to)update();else pending.splice(0,pending.length,update)
+  })
+  try {
+    let view=h.render();h.flush();h.win.scrollY=240
+    view.navigate('about');assert.equal(h.entries.length,1);assert.equal(h.render().route.page,'music')
+    pending.shift()();view=h.render();h.flush();assert.equal(view.route.page,'about');assert.equal(h.win.scrollY,0)
+    h.win.history.back();assert.equal(h.render().route.page,'about')
+    pending.shift()();view=h.render();h.flush();assert.equal(view.route.page,'music');assert.equal(h.win.scrollY,240)
+    view.changeMusic({...view.route.music,search:'MIRROR'},true);view=h.render();assert.equal(view.route.music.search,'MIRROR')
+    view.navigate('music');assert.equal(h.win.scrollY,0);assert.equal(pending.length,0)
+    assert.deepEqual(calls,[['music','about'],['about','music'],['about','music'],['music','music'],['music','music']])
+    while(pending.length)pending.shift()()
+  } finally {h.cleanup()}
+})
+
+test('music route motion receives platform/category changes and repeated active choices cancel pending navigation',()=>{
+  const calls=[],pending=[]
+  const h=harness('#/music/youtube',(from,to,update,music)=>{
+    calls.push({from,to,music})
+    pending.splice(0,pending.length)
+    if(music && (music.from.platform!==music.to.platform || music.from.category!==music.to.category))pending.push(update)
+    else update()
+  })
+  try {
+    let view=h.render();h.flush()
+    view.changeMusic({...view.route.music,platform:'spotify'})
+    assert.equal(pending.length,1);assert.equal(h.entries.length,1)
+    view.changeMusic({...view.route.music,platform:'youtube'})
+    assert.equal(pending.length,0);assert.equal(h.render().route.music.platform,'youtube')
+    view.changeMusic({...view.route.music,platform:'spotify'});pending.shift()();view=h.render();h.flush()
+    assert.equal(view.route.music.platform,'spotify')
+    view.changeMusic({...view.route.music,category:'ep'});pending.shift()();view=h.render();h.flush()
+    assert.equal(view.route.music.category,'ep')
+    assert.equal(calls.at(-1).music.from.category,'all');assert.equal(calls.at(-1).music.to.category,'ep')
+    assert(calls.every(call=>call.from==='music' && call.to==='music'))
+    const count=h.entries.length
+    view.changeMusic({...view.route.music,search:'MIRROR'},true);view=h.render()
+    assert.equal(view.route.music.search,'MIRROR');assert.equal(h.entries.length,count)
+  } finally {h.cleanup()}
 })

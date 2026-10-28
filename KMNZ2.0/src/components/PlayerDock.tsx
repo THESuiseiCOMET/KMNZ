@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef, useState } from 'react'
-import type { CSSProperties, KeyboardEvent, PointerEvent } from 'react'
+import { createPortal } from 'react-dom'
+import type { KeyboardEvent, PointerEvent } from 'react'
 import type { MusicEntry } from '../data/music'
 import type { PlaybackMode, PlayerObservation, PlaybackResume, PlayerCheckpoint } from '../types/playback'
 import { clampPlayerPosition } from '../lib/playerControls'
@@ -51,7 +52,7 @@ export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode
   const dragRef = useRef<{ pointerId: number; clientX: number; clientY: number; x: number; y: number } | null>(null)
   const presentationRef = useRef(presentation)
   presentationRef.current = presentation
-  const [controlBar, setControlBar] = useState<{ x: number; width: number } | null>(null)
+  const [controlHost, setControlHost] = useState<Element | null>(null)
   const { hostRef, ready, paused, togglePlayback, volume, setVolume, adjustVolume, toggleMute, canChangeSource, canRepeat, error, currentTime, duration, canSeek, seekTo } = useOfficialPlayer(entry, loop, () => onSkip(1), { requestId, onEnded, onObservation, onCheckpoint, resume })
 
   useEffect(() => {
@@ -86,7 +87,7 @@ export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode
     }
     control.addEventListener('wheel', changeWithWheel, { passive: false })
     return () => control.removeEventListener('wheel', changeWithWheel)
-  }, [entry.platform, ready, adjustVolume])
+  }, [entry.platform, ready, adjustVolume, controlHost])
 
   function constrain(next: PlayerPosition): PlayerPosition {
     const rect = panelRef.current?.getBoundingClientRect()
@@ -132,19 +133,7 @@ export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode
   }, [presentation])
 
   useEffect(() => {
-    if (presentation !== 'cinema') return
-    const slot = document.querySelector('.header-player-slot')
-    if (!slot) return
-    function update() {
-      const rect = slot!.getBoundingClientRect()
-      const next = { x: rect.left + rect.width / 2, width: Math.max(96, Math.min(264, rect.width - 8)) }
-      setControlBar(current => current?.x === next.x && current.width === next.width ? current : next)
-    }
-    update()
-    const observer = new ResizeObserver(update)
-    observer.observe(slot)
-    window.addEventListener('resize', update)
-    return () => { observer.disconnect(); window.removeEventListener('resize', update) }
+    setControlHost(presentation === 'cinema' ? document.querySelector('.header-player-slot') : null)
   }, [presentation])
 
   function startDrag(event: PointerEvent<HTMLButtonElement>) {
@@ -187,14 +176,7 @@ export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode
     setPosition(constrain({ x: rect.left + direction.x * step, y: rect.top + direction.y * step }))
   }
 
-  return (
-    <aside
-      ref={panelRef}
-      className={'music-player-panel' + (presentation === 'cinema' ? ' is-cinema' : '') + (presentation === 'cinema' && videoFrosted ? ' is-video-frosted' : '') + (dragging ? ' is-dragging' : '')}
-      aria-label="当前音乐播放器"
-      style={presentation === 'cinema' && controlBar ? { '--cinema-control-x': controlBar.x + 'px', '--cinema-control-width': controlBar.width + 'px' } as CSSProperties
-        : presentation === 'floating' && position ? { left: position.x, top: position.y, right: 'auto', bottom: 'auto' } : undefined}
-    >
+  const chrome = <div className={presentation === 'cinema' ? 'is-cinema cinema-player-chrome' : 'music-player-chrome'}>
       <div className="music-player-heading">
         <button
           type="button"
@@ -246,6 +228,16 @@ export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode
       </div>
       {entry.platform === 'youtube' && <PlayerProgress key={entry.id + ':' + requestId}
         currentTime={currentTime} duration={duration} canSeek={canSeek} onSeek={seekTo} />}
+    </div>
+
+  return (
+    <aside
+      ref={panelRef}
+      className={'music-player-panel' + (presentation === 'cinema' ? ' is-cinema' : '') + (presentation === 'cinema' && videoFrosted ? ' is-video-frosted' : '') + (dragging ? ' is-dragging' : '')}
+      aria-label="当前音乐播放器"
+      style={presentation === 'floating' && position ? { left: position.x, top: position.y, right: 'auto', bottom: 'auto' } : undefined}
+    >
+      {presentation === 'cinema' && controlHost ? createPortal(chrome, controlHost) : chrome}
       {entry.platform === 'spotify' && <div className="music-player-spotify-cover" role="img" aria-label={entry.title + ' 封面'}>
         <MusicCover entry={entry} metadata={getMusicMetadata(entry)} />
       </div>}

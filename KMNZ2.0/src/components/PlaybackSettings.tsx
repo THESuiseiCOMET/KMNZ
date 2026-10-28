@@ -1,5 +1,5 @@
-import { useEffect, useId, useRef } from 'react'
-import type { PlaybackPreferences, PlayerPresentation } from '../lib/playbackPreferences'
+import { useEffect, useRef } from 'react'
+import type { PlaybackPreferences } from '../lib/playbackPreferences'
 import type { AudioInputDevice, VisualizationAudioSource } from '../lib/audioCapture'
 import type { AudioSignal } from '../lib/audioSignal'
 
@@ -23,48 +23,65 @@ interface PlaybackSettingsProps {
   onResumeAudio?: () => void
 }
 
+function SettingIcon({ kind }: { kind: 'cinema' | 'floating' | 'background' | 'video' | 'visualizer' | 'audio' }) {
+  return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    {kind === 'cinema' && <><rect x="3" y="4" width="18" height="13" rx="2" /><path d="M8 21h8m-4-4v4" /></>}
+    {kind === 'floating' && <><rect x="3" y="4" width="18" height="16" rx="2" /><rect x="12" y="11" width="7" height="6" rx="1" /></>}
+    {kind === 'background' && <><rect x="3" y="3" width="18" height="18" rx="3" /><path d="m4 16 5-5 5 5 3-3 4 4M8 7h.01M16 6v3m-2-1.5h4" /></>}
+    {kind === 'video' && <><path d="m16 9 5-3v12l-5-3" /><rect x="3" y="6" width="13" height="12" rx="2" /><path d="M6 9v6m4-6v6m3-6v6" /></>}
+    {kind === 'visualizer' && <path d="M3 10v4m4-7v10m5-14v18m5-14v10m4-7v4" />}
+    {kind === 'audio' && <><path d="M4 4v16m8-16v16m8-16v16" /><path d="M1 8h6m2 8h6m2-8h6" /></>}
+  </svg>
+}
+
 export default function PlaybackSettings({ open, settings, onChange, onClose, visualizationEnabled = false, visualizationPending = false, visualizationError, onStartVisualization, onStopVisualization,
   audioSource = { kind: 'tab' }, onAudioSourceChange, audioInputs = [], loadingInputs = false, inputError, onReadInputs, audioSignal, onResumeAudio }: PlaybackSettingsProps) {
-  const dialog = useRef<HTMLDialogElement>(null)
-  const titleId = useId()
+  const root = useRef<HTMLDivElement>(null)
+  const audioDetails = useRef<HTMLDetailsElement>(null)
   useEffect(() => {
-    if (open && !dialog.current?.open) dialog.current?.showModal()
-    else if (!open && dialog.current?.open) dialog.current.close()
-  }, [open])
+    if (!open) {
+      if (audioDetails.current) audioDetails.current.open = false
+      return
+    }
+    function outside(event: PointerEvent) {
+      if (event.target instanceof Node && !root.current?.closest('.header-settings')?.contains(event.target)) onClose()
+    }
+    function escape(event: KeyboardEvent) {
+      if (event.key !== 'Escape' || event.defaultPrevented) return
+      event.stopPropagation()
+      onClose()
+      root.current?.closest('.header-settings')?.querySelector<HTMLButtonElement>('.settings-toggle')?.focus({ preventScroll: true })
+    }
+    document.addEventListener('pointerdown', outside)
+    document.addEventListener('keydown', escape)
+    return () => {
+      document.removeEventListener('pointerdown', outside)
+      document.removeEventListener('keydown', escape)
+    }
+  }, [open, onClose])
+  useEffect(() => {
+    if (open && (visualizationError || inputError) && audioDetails.current) audioDetails.current.open = true
+  }, [open, visualizationError, inputError])
 
-  function choose(presentation: PlayerPresentation) { onChange({ ...settings, presentation }) }
-  return <dialog ref={dialog} className="playback-settings" aria-labelledby={titleId}
-    onCancel={onClose} onClose={onClose} onClick={event => { if (event.target === event.currentTarget) onClose() }}>
-    <div className="playback-settings-heading">
-      <h2 id={titleId}>播放设置</h2>
-      <button type="button" className="playback-settings-close" onClick={onClose} aria-label="关闭播放设置">×</button>
-    </div>
-    <fieldset className="playback-settings-modes">
-      <legend>播放模式</legend>
-      {([['floating', '浮窗模式'], ['cinema', '影院模式']] as const).map(([value, label]) => <label key={value}>
-        <input type="radio" name="player-presentation" value={value} checked={settings.presentation === value} onChange={() => choose(value)} />
-        <span>{label}</span>
-      </label>)}
-    </fieldset>
-    <label className="playback-settings-frosted">
-      <span>背景磨砂</span>
-      <input type="checkbox" role="switch" checked={settings.frosted[settings.presentation]}
-        onChange={event => onChange({ ...settings, frosted: { ...settings.frosted, [settings.presentation]: event.target.checked } })} />
-    </label>
-    {settings.presentation === 'cinema' && <label className="playback-settings-frosted">
-      <span>视频磨砂</span>
-      <input type="checkbox" role="switch" checked={settings.cinemaVideoFrosted}
-        onChange={event => onChange({ ...settings, cinemaVideoFrosted: event.target.checked })} />
-    </label>}
-    <div className="playback-settings-visualizer">
-      <label className="playback-settings-frosted">
-        <span>音频可视化</span>
-        <input type="checkbox" role="switch" checked={visualizationEnabled || visualizationPending} disabled={loadingInputs}
-          onChange={event => { if (event.target.checked) onStartVisualization?.(); else onStopVisualization?.() }} />
-      </label>
+  const cinema = settings.presentation === 'cinema'
+  const active = visualizationEnabled || visualizationPending
+  return <div ref={root} id="playback-settings" className="playback-settings" data-open={open} aria-hidden={!open} inert={!open}>
+    <div className="playback-settings-icons" role="group" aria-label="播放设置">
+      <button type="button" className="playback-setting-icon" aria-label={cinema ? '切换到浮窗模式' : '切换到影院模式'} title={cinema ? '影院模式 · 点击切换浮窗' : '浮窗模式 · 点击切换影院'} aria-pressed={cinema}
+        onClick={() => onChange({ ...settings, presentation: cinema ? 'floating' : 'cinema' })}><SettingIcon kind={cinema ? 'cinema' : 'floating'} /></button>
+      <button type="button" className="playback-setting-icon" role="switch" aria-label="背景磨砂" title="背景磨砂" aria-checked={settings.frosted[settings.presentation]}
+        onClick={() => onChange({ ...settings, frosted: { ...settings.frosted, [settings.presentation]: !settings.frosted[settings.presentation] } })}><SettingIcon kind="background" /></button>
+      {cinema && <button type="button" className="playback-setting-icon" role="switch" aria-label="视频磨砂" title="视频磨砂" aria-checked={settings.cinemaVideoFrosted}
+        onClick={() => onChange({ ...settings, cinemaVideoFrosted: !settings.cinemaVideoFrosted })}><SettingIcon kind="video" /></button>}
+      <button type="button" className="playback-setting-icon" role="switch" aria-label="音频可视化" title={visualizationPending ? '取消连接音频' : '音频可视化'} aria-checked={active} aria-busy={visualizationPending} disabled={loadingInputs}
+        onClick={() => { if (active) onStopVisualization?.(); else onStartVisualization?.() }}><SettingIcon kind="visualizer" /></button>
+      <details ref={audioDetails} className="playback-audio-options">
+        <summary className="playback-setting-icon" aria-label="音频来源" title="音频来源"><SettingIcon kind="audio" /></summary>
+        <div className="playback-settings-audio-panel">
+          <div className="playback-settings-visualizer">
       <label className="playback-settings-input">
         <span>音频来源</span>
-        <select value={audioSource.kind} disabled={visualizationEnabled || visualizationPending || loadingInputs}
+        <select value={audioSource.kind} disabled={active || loadingInputs}
           onChange={event => onAudioSourceChange?.(event.target.value === 'input' ? { kind: 'input', deviceId: '' } : { kind: 'tab' })}>
           <option value="tab">标签页共享</option>
           <option value="input">音频输入（立体声混音）</option>
@@ -96,6 +113,9 @@ export default function PlaybackSettings({ open, settings, onChange, onClose, vi
       </div>}
       <p>{audioSource.kind === 'tab' ? '选择当前标签页，并勾选共享标签页音频。' : '仅分析所选输入，不播放或上传采集到的声音。'}</p>
       {visualizationError && <p role="alert">{visualizationError}</p>}
+          </div>
+        </div>
+      </details>
     </div>
-  </dialog>
+  </div>
 }

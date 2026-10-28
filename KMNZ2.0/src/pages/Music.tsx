@@ -11,6 +11,11 @@ import type { MusicRoute } from '../lib/siteRoute'
 import playIcon from '../assets/icons/play.svg'
 import youtubeIcon from '../assets/icons/brand-youtube.svg'
 import spotifyIcon from '../assets/icons/brand-spotify.svg'
+import youtubeLogoLight from '../assets/icons/youtube-logo-light.svg'
+import youtubeLogoDark from '../assets/icons/youtube-logo-dark.svg'
+import spotifyLogoLight from '../assets/icons/spotify-logo-light.svg'
+import spotifyLogoDark from '../assets/icons/spotify-logo-dark.svg'
+import { useNavigationIndicator } from '../hooks/useNavigationIndicator'
 import MusicCover from '../components/MusicCover'
 import MusicReleaseDetail from '../components/MusicReleaseDetail'
 import { getMusicMetadata, sortMusicByDate } from '../data/musicMetadata'
@@ -28,6 +33,10 @@ const sourceLabel: Record<MusicPlatform, string> = {
   youtube: 'YouTube',
   spotify: 'Spotify',
 }
+const platformLogos = {
+  youtube: { light: youtubeLogoLight, dark: youtubeLogoDark },
+  spotify: { light: spotifyLogoLight, dark: spotifyLogoDark },
+}
 const views = createMusicViews(musicLibrary, musicCatalog)
 const queueSelections = createQueueSelections(musicLibrary)
 
@@ -35,6 +44,8 @@ export default function Music({ selectedId, onSelect, route, onRouteChange, onRe
   const [localRoute, setLocalRoute] = useState<MusicRoute>(defaultMusicRoute)
   const currentRoute = route ?? localRoute
   const { search, platform, category: spotifyCategory, releaseSourceId } = currentRoute
+  const platformIndicator = useNavigationIndicator(platform, false, '.music-tab[aria-pressed="true"]', '.music-tab')
+  const categoryIndicator = useNavigationIndicator(spotifyCategory, platform === 'spotify' && !releaseSourceId, '.music-category[aria-pressed="true"]', '.music-category')
   function updateRoute(patch: Partial<MusicRoute>, replace = false) {
     const next = { ...currentRoute, ...patch }
     if (onRouteChange) onRouteChange(next, replace)
@@ -133,27 +144,37 @@ export default function Music({ selectedId, onSelect, route, onRouteChange, onRe
           <input type="search" value={search} onChange={(event) => setSearch(event.target.value)} placeholder="搜索" />
         </label>}
 
-        <div className="music-tabs" role="group" aria-label="音乐平台">
+        <div ref={platformIndicator.linksRef} className={'music-tabs' + (platformIndicator.indicator ? ' has-indicator' : '')} role="group" aria-label="音乐平台">
+          {platformIndicator.indicator && <span className="music-switch-indicator music-platform-indicator" aria-hidden="true" style={{ width: platformIndicator.indicator.width, height: platformIndicator.indicator.height, transform: `translate(${platformIndicator.indicator.left}px, ${platformIndicator.indicator.top}px)` }} />}
+          <div className="music-platform-labels">
           {(['youtube', 'spotify'] as const).map((value) => (
             <button
               type="button"
               key={value}
+              aria-label={sourceLabel[value]}
+              data-segment-value={value}
               aria-pressed={platform === value}
               className={platform === value ? 'music-tab active' : 'music-tab'}
               onClick={() => updateRoute({ platform: value, releaseSourceId: null })}
             >
-              {sourceLabel[value]}
+              <img className={'music-platform-logo music-platform-logo-light music-platform-logo-' + value} src={platformLogos[value].light} alt="" aria-hidden="true" draggable={false} />
+              <img className={'music-platform-logo music-platform-logo-dark music-platform-logo-' + value} src={platformLogos[value].dark} alt="" aria-hidden="true" draggable={false} />
             </button>
           ))}
+          </div>
         </div>
-        {platform === 'spotify' && !detail && <div className="music-categories" role="group" aria-label="Spotify 分类">
+        {platform === 'spotify' && !detail && <div ref={categoryIndicator.linksRef} className={'music-categories' + (categoryIndicator.indicator ? ' has-indicator' : '')} role="group" aria-label="Spotify 分类">
+          {categoryIndicator.indicator && <span className="music-switch-indicator music-category-indicator" aria-hidden="true" style={{ width: categoryIndicator.indicator.width, height: categoryIndicator.indicator.height, transform: `translate(${categoryIndicator.indicator.left}px, ${categoryIndicator.indicator.top}px)` }} />}
+          <div className="music-category-labels">
           {([['all', '全部'], ['albums', '专辑'], ['ep', 'EP']] as const).map(([value, label]) => (
-            <button type="button" key={value} className="music-category" aria-pressed={spotifyCategory === value}
+            <button type="button" key={value} className="music-category" data-segment-value={value} aria-pressed={spotifyCategory === value}
               onClick={() => setSpotifyCategory(value)}>{label}</button>
           ))}
+          </div>
         </div>}
       </div>
 
+      <div className="music-results">
       {detail ? <MusicReleaseDetail detail={detail} selectedId={selectedId} onSelect={selectFromAlbum} onBack={() => {
         returnSourceId.current ??= releaseSourceId
         if (onReleaseBack) onReleaseBack()
@@ -166,6 +187,7 @@ export default function Music({ selectedId, onSelect, route, onRouteChange, onRe
           <button type="button" onClick={() => setSearch('')}>清除搜索</button>
         </div>
       )}
+      </div>
     </section>
   )
 }
