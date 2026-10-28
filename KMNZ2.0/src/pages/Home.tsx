@@ -1,5 +1,5 @@
-import HeroCarousel from '../components/HeroCarousel'
 import type { ReactNode } from 'react'
+import HeroCarousel from '../components/HeroCarousel'
 
 export default function Home({ visualizer }: { visualizer?: ReactNode }) {
   return (

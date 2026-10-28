@@ -1,5 +1,6 @@
 export interface YouTubePlayer {
-  loadVideoById(videoId: string): void
+  loadVideoById(videoId: string, startSeconds?: number): void
+  cueVideoById(videoId: string, startSeconds?: number): void
   getVideoUrl(): string
   playVideo(): void
   pauseVideo(): void

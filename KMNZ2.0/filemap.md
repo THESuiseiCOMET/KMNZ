@@ -11,8 +11,8 @@
 | 顶部导航排版、Logo 大小 | `src/styles.css` | `.site-header`、`.site-title`、`.site-logo` |
 | 深色/浅色切换、圆形辐射动画 | `src/components/Header.tsx`、`src/styles.css` | `handleThemeChange`、`::view-transition` |
 | 黑白 Logo 图片 | `src/assets/images/kmnz-logo-black.svg`、`kmnz-logo-white.svg` | 替换对应资源 |
-| 首页文字及布局 | `src/pages/Home.tsx` | `Home` |
-| 首页轮播图片、顺序、间隔 | `src/components/HeroCarousel.tsx` | `posters`、`4000` |
+| 首页背景与可视化布局 | `src/pages/Home.tsx`、`src/styles.css` | `Home`、`.hero` |
+| 首页四图轮播 | `src/components/HeroCarousel.tsx` | `posters`、`4000` |
 | 成员头像、介绍、名单 | `src/data/members.ts` | `members` |
 | 成员卡片和详情排版 | `src/components/MemberCard.tsx`、`src/pages/Members.tsx`、`src/pages/MemberDetail.tsx` | 对应组件 |
 | 历程事件 | `src/data/timeline.ts` | `timeline` |
@@ -57,7 +57,7 @@
 - `src/assets/fonts/`：本地字体资源。
 - `src/assets/icons/`：平台与播放器 SVG 图标；Lucide 图标许可证见同目录 `LICENSE-lucide.txt`。
 - `public/favicon.ico`：浏览器标签图标。
-- 首页轮播实际使用的图片文件及排列顺序，以 `src/components/HeroCarousel.tsx` 内的 `posters` 数组为准。
+- 首页恢复原欢迎标题、介绍和四图轮播，图片及排列顺序见 `src/components/HeroCarousel.tsx`。默认背景与轮播第一张统一使用 `src/assets/images/kmnz1.avif`；轮播其余三张使用 `kmnz2.avif`、`kmnz3.avif`、`kmnz4.avif`，保留原图顺序和布局。旧 JPG／PNG 原图保留但不再引用，不进入网页构建。
 - 成员使用的头像文件，以 `src/data/members.ts` 的 import 为准。
 
 ## 其他重要文件
@@ -243,7 +243,7 @@ YouTube 卡片沿用 16:9 封面，复用四角圆角与悬停放大；48px 液�
 
 `src/lib/audioGeometry.ts` 用实际频谱生成最初较平缓的环形线条，低频控制轻微外扩；已移除交替长短尖刺及李萨如／延迟相位曲线的计算与绘制。`src/components/AudioVisualizer.tsx` 用 Canvas 绘制，复用黑白 SVG 图标，深色白图／浅色黑图，淡入至低透明度，收到信号时慢速旋转。静音不绘制假波形；限制像素密度，减少动态效果偏好下停止旋转并降低线条强度。
 
-`Home.tsx` 保留默认 Hero 背景大图，开启可视化后卸载欢迎标题、介绍及整个轮播窗口，直接绘制可视化，不使用轮播容器、边框或卡片；关闭后恢复正常首页。影院播放继续沿用原视频／封面背景。`AudioVisualizer.tsx` 只负责首页绘图及尺寸变化，不再接管导航、页面焦点、滚动、Esc 或浏览器全屏，不显示等待文字。离开首页只卸载绘图，采集和音乐持续；关闭开关或输入断开才停止采集。未保存自动采集开关，不自动请求共享。
+`Home.tsx` 保留默认 Hero 背景大图，首页显示欢迎标题、介绍和原四图轮播；开启可视化后整体隐藏这些内容并直接绘制，不使用轮播容器、边框或卡片，关闭后恢复原首页。影院播放继续沿用原视频／封面背景。`AudioVisualizer.tsx` 只负责首页绘图及尺寸变化，不再接管导航、页面焦点、滚动、Esc 或浏览器全屏，不显示等待文字。离开首页只卸载绘图，采集和音乐持续；关闭开关或输入断开才停止采集。未保存自动采集开关，不自动请求共享。
 
 ## 立体声混音／虚拟音频输入
 
@@ -266,3 +266,12 @@ YouTube 卡片沿用 16:9 封面，复用四角圆角与悬停放大；48px 液�
 `src/hooks/useNavigationControl.ts` 和 `src/lib/navigationControl.ts` 跟踪按钮、导航变换及窗口尺寸，抵消收起时的导航位移，并在窄屏下限制恢复按钮留在可见范围；靠近区域随位置变化，卸载清理鼠标、滚动及尺寸监听。`scripts/navigation-control.test.mjs` 验证坐标、边界、靠近检测与清理。
 
 `src/assets/images/LITACLOSE.png`、`LITAOPEN.png` 使用提供的透明原图。导航收起／展开分别触发对应图片；复用同一个 `ThemePeek.tsx` 和现有动画、1 秒停留、NEROB／TINAW 主题位置偏移及播放器避让，不新增独立动画层。快速切换替换旧图片并清理旧计时器，完成后恢复原主题角色的悬停回顶行为。`scripts/theme-peek-artwork.test.mjs` 核对两张 LITA 与原角色使用相同宿主和位置。
+
+
+## 地址路由与刷新恢复
+
+`src/lib/siteRoute.ts` 定义 /KMNZ/ 下的 Hash 地址，覆盖主导航、成员详情、YouTube／Spotify、分类、搜索和发行详情；未知成员、无效来源和损坏编码安全回退。`src/hooks/useSiteRoute.ts` 管理初始化、地址规范化、前进／后退及当前标签页内的滚动位置；搜索更新替换当前历史项，页面／平台／专辑切换新增历史项，详情返回优先使用原列表历史。`Music.tsx` 通过可选路由属性接入，单独渲染仍保留兼容行为。页面切换不卸载全站播放器。
+
+`src/lib/playbackSession.ts` 和 `src/hooks/usePlaybackPersistence.ts` 将来源 ID、队列、模式、真实进度及播放意图保存在 sessionStorage；刷新读取时依据当前音乐库重新校验来源和专辑曲序，不信任缓存中的关系字段。关闭播放器清除记录，过期回调不覆盖新曲，损坏数据或存储受限时正常降级。`useOfficialPlayer.ts` 在原轮询／官方事件中发送 `PlayerCheckpoint`；YouTube 使用官方 loadVideoById／cueVideoById 的 startSeconds 恢复播放或暂停，不重建额外 iframe。恢复等待期间不以初始零秒覆盖已保存的进度。Spotify 只恢复当前选择的曲目／专辑入口和队列，不调用仅明确支持播客的 seek；音乐秒数和原生专辑内部曲目位置无法保证恢复。自动播放被拦截时保持暂停，沿用原播放按钮继续。没有持久化或自动重新申请音频可视化采集权限。
+
+`scripts/site-route.test.mjs` 验证路由、查询编码、历史、专辑返回和滚动；`scripts/playback-session.test.mjs` 验证队列／专辑恢复、暂停、无效数据和存储故障；`scripts/playback-persistence.test.mjs` 验证切歌、页面退出保存及关闭后的过期回调。播放器测试覆盖恢复请求、进度、自动播放受阻及同一控制器复用。

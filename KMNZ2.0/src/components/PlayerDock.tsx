@@ -1,7 +1,7 @@
 import { useEffect, useId, useRef, useState } from 'react'
 import type { CSSProperties, KeyboardEvent, PointerEvent } from 'react'
 import type { MusicEntry } from '../data/music'
-import type { PlaybackMode, PlayerObservation } from '../types/playback'
+import type { PlaybackMode, PlayerObservation, PlaybackResume, PlayerCheckpoint } from '../types/playback'
 import { clampPlayerPosition } from '../lib/playerControls'
 import type { PlayerPosition } from '../lib/playerControls'
 import type { PlayerPresentation } from '../lib/playbackPreferences'
@@ -28,6 +28,8 @@ interface PlayerDockProps {
   canNext?: boolean
   onEnded?: (requestId: number, sourceId: string) => void
   onObservation?: (observation: PlayerObservation) => void
+  onCheckpoint?: (checkpoint: PlayerCheckpoint) => void
+  resume?: PlaybackResume
   presentation?: PlayerPresentation
   videoFrosted?: boolean
 }
@@ -37,7 +39,7 @@ function PlayerIcon({ source }: { source: string }) {
   return <span className="music-player-icon" style={{ maskImage: mask, WebkitMaskImage: mask }} aria-hidden="true" />
 }
 
-export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode = 'sequence', onModeChange, canPrevious = true, canNext = true, onEnded, onObservation, presentation = 'floating', videoFrosted = true }: PlayerDockProps) {
+export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode = 'sequence', onModeChange, canPrevious = true, canNext = true, onEnded, onObservation, onCheckpoint, resume, presentation = 'floating', videoFrosted = true }: PlayerDockProps) {
   const loop = mode === 'repeat-one'
   const [position, setPosition] = useState<PlayerPosition | null>(null)
   const [dragging, setDragging] = useState(false)
@@ -50,7 +52,7 @@ export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode
   const presentationRef = useRef(presentation)
   presentationRef.current = presentation
   const [controlBar, setControlBar] = useState<{ x: number; width: number } | null>(null)
-  const { hostRef, ready, paused, togglePlayback, volume, setVolume, adjustVolume, toggleMute, canChangeSource, canRepeat, error, currentTime, duration, canSeek, seekTo } = useOfficialPlayer(entry, loop, () => onSkip(1), { requestId, onEnded, onObservation })
+  const { hostRef, ready, paused, togglePlayback, volume, setVolume, adjustVolume, toggleMute, canChangeSource, canRepeat, error, currentTime, duration, canSeek, seekTo } = useOfficialPlayer(entry, loop, () => onSkip(1), { requestId, onEnded, onObservation, onCheckpoint, resume })
 
   useEffect(() => {
     setVolumeOpen(false)

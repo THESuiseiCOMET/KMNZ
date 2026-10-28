@@ -331,7 +331,7 @@ textarea:focus {
   display: flex;
   color: var(--hero-foreground);
   background-color: var(--bg);
-  background-image: url("./assets/images/kmnz.jpg");
+  background-image: url("./assets/images/kmnz1.avif");
   background-position: center 35%;
   background-size: 100% auto;
 }

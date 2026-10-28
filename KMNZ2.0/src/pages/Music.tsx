@@ -6,6 +6,8 @@ import { createMusicViews } from '../lib/musicViews'
 import type { SpotifyCategory } from '../lib/musicViews'
 import { createQueueSelections } from '../lib/playbackQueue'
 import type { PlaybackSelection } from '../types/playback'
+import { defaultMusicRoute } from '../lib/siteRoute'
+import type { MusicRoute } from '../lib/siteRoute'
 import playIcon from '../assets/icons/play.svg'
 import youtubeIcon from '../assets/icons/brand-youtube.svg'
 import spotifyIcon from '../assets/icons/brand-spotify.svg'
@@ -17,6 +19,9 @@ import { musicDate } from '../lib/musicMetadata'
 interface MusicProps {
   selectedId: string | null
   onSelect: (selection: PlaybackSelection) => void
+  route?: MusicRoute
+  onRouteChange?: (route: MusicRoute, replace?: boolean) => void
+  onReleaseBack?: () => void
 }
 
 const sourceLabel: Record<MusicPlatform, string> = {
@@ -26,16 +31,23 @@ const sourceLabel: Record<MusicPlatform, string> = {
 const views = createMusicViews(musicLibrary, musicCatalog)
 const queueSelections = createQueueSelections(musicLibrary)
 
-export default function Music({ selectedId, onSelect }: MusicProps) {
-  const [search, setSearch] = useState('')
-  const [platform, setPlatform] = useState<MusicPlatform>('youtube')
-  const [spotifyCategory, setSpotifyCategory] = useState<SpotifyCategory>('all')
-  const [releaseSourceId, setReleaseSourceId] = useState<string | null>(null)
+export default function Music({ selectedId, onSelect, route, onRouteChange, onReleaseBack }: MusicProps) {
+  const [localRoute, setLocalRoute] = useState<MusicRoute>(defaultMusicRoute)
+  const currentRoute = route ?? localRoute
+  const { search, platform, category: spotifyCategory, releaseSourceId } = currentRoute
+  function updateRoute(patch: Partial<MusicRoute>, replace = false) {
+    const next = { ...currentRoute, ...patch }
+    if (onRouteChange) onRouteChange(next, replace)
+    else setLocalRoute(next)
+  }
+  const setReleaseSourceId = (id: string | null) => updateRoute({ releaseSourceId: id })
+  const setSearch = (search: string) => updateRoute({ search }, true)
+  const setSpotifyCategory = (category: SpotifyCategory) => updateRoute({ category })
   const albumButtons = useRef(new Map<string, HTMLButtonElement>())
   const returnSourceId = useRef<string | null>(null)
   useEffect(() => {
     if (!releaseSourceId && returnSourceId.current) {
-      albumButtons.current.get(returnSourceId.current)?.focus()
+      albumButtons.current.get(returnSourceId.current)?.focus({ preventScroll: Boolean(onRouteChange) })
       returnSourceId.current = null
     }
   }, [releaseSourceId])
@@ -128,7 +140,7 @@ export default function Music({ selectedId, onSelect }: MusicProps) {
               key={value}
               aria-pressed={platform === value}
               className={platform === value ? 'music-tab active' : 'music-tab'}
-              onClick={() => { setPlatform(value); setReleaseSourceId(null) }}
+              onClick={() => updateRoute({ platform: value, releaseSourceId: null })}
             >
               {sourceLabel[value]}
             </button>
@@ -144,7 +156,8 @@ export default function Music({ selectedId, onSelect }: MusicProps) {
 
       {detail ? <MusicReleaseDetail detail={detail} selectedId={selectedId} onSelect={selectFromAlbum} onBack={() => {
         returnSourceId.current ??= releaseSourceId
-        setReleaseSourceId(null)
+        if (onReleaseBack) onReleaseBack()
+        else setReleaseSourceId(null)
       }} /> : hasResults ? (
         <div className="music-grid">{(platform === 'youtube' ? filtered : spotify).map(renderCard)}</div>
       ) : (

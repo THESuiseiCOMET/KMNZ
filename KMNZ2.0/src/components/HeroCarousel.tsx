@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import poster1 from '../assets/images/kmnz.jpg'
-import poster2 from '../assets/images/kmnz2.png'
-import poster3 from '../assets/images/kmnz3.png'
-import poster4 from '../assets/images/kmnz4.png'
+import poster1 from '../assets/images/kmnz1.avif'
+import poster2 from '../assets/images/kmnz2.avif'
+import poster3 from '../assets/images/kmnz3.avif'
+import poster4 from '../assets/images/kmnz4.avif'
 
 const posters = [
   { source: poster1, alt: 'KMNZ 海报 1', label: 'K' },

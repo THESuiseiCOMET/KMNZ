@@ -12,7 +12,7 @@ test('navigation actions select supplied LITA artwork and retain the exact theme
   Object.defineProperty(globalThis,'window',{configurable:true,value:{innerWidth:1280,innerHeight:900}})
   const react={useState:value=>[typeof value==='function'?value():value,()=>{}],useRef:()=>({current:null}),useCallback:fn=>fn,useEffect(){},useReducer:()=>[peek.initialPeek,()=>{}]}
   const node=(type,props)=>({type,props}),module={exports:{}}
-  new Function('require','module','exports',code)(name=>name==='react'?react:name==='react/jsx-runtime'?{jsx:node,jsxs:node}:name==='../lib/themePeek'?peek:{default:name},module,module.exports)
+  new Function('require','module','exports',code)(name=>name==='react'?react:name==='react/jsx-runtime'?{jsx:node,jsxs:node}:name==='../lib/themePeek'?peek:{__esModule:true,default:name},module,module.exports)
   try {
     for(const theme of ['light','dark']) {
       const normal=module.exports.default({theme,onFinished(){}})

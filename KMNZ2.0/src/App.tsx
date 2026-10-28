@@ -7,10 +7,14 @@ import PlaybackSettings from './components/PlaybackSettings'
 import AudioVisualizer from './components/AudioVisualizer'
 import { useAudioVisualizer } from './hooks/useAudioVisualizer'
 import { useNavigationControl } from './hooks/useNavigationControl'
+import { useSiteRoute } from './hooks/useSiteRoute'
+import { usePlaybackPersistence } from './hooks/usePlaybackPersistence'
+import { readPlaybackSession } from './lib/playbackSession'
 import type { VisualizationAudioSource } from './lib/audioCapture'
 import { playbackPreferencesKey, readPlaybackPreferences } from './lib/playbackPreferences'
 import { members } from './data/members'
 import { musicCatalog } from './data/music'
+import { musicLibrary } from './data/musicLibrary'
 import { currentQueueItem, emptyQueue, queueAvailability, queueReducer } from './lib/playbackQueue'
 import type { PlaybackSelection, PlayerObservation } from './types/playback'
 import About from './pages/About'
@@ -21,11 +25,14 @@ import Members from './pages/Members'
 import Music from './pages/Music'
 import type { Page, Section } from './types'
 
+const routedReleases = new Set(musicLibrary.sources.filter(source => source.platform === 'spotify' && source.kind === 'album').map(source => source.id))
+
 function getInitialTheme(): 'light' | 'dark' {
   return document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light'
 }
 export default function App() {
-  const [page, setPage] = useState<Page>('home')
+  const { route, navigate, changeMusic, backFromRelease } = useSiteRoute(routedReleases)
+  const page: Page = route.page
   const [theme, setTheme] = useState<'light' | 'dark'>(getInitialTheme)
   const [playbackPreferences, setPlaybackPreferences] = useState(readPlaybackPreferences)
   const [settingsOpen, setSettingsOpen] = useState(false)
@@ -44,7 +51,9 @@ export default function App() {
   const finishThemePeek = useCallback((id: number) => {
     setThemePeek(current => current?.id === id ? null : current)
   }, [])
-  const [queue, dispatch] = useReducer(queueReducer, emptyQueue)
+  const [restoredPlayback] = useState(() => readPlaybackSession(musicLibrary, musicCatalog))
+  const [queue, dispatch] = useReducer(queueReducer, restoredPlayback?.queue ?? emptyQueue)
+  const rememberPlayback = usePlaybackPersistence(queue, restoredPlayback?.checkpoint ?? null)
   const current = currentQueueItem(queue)
   const currentMusic = musicCatalog.find(entry => entry.id === current?.sourceId) ?? null
   const available = queueAvailability(queue)
@@ -79,10 +88,6 @@ export default function App() {
     return () => document.removeEventListener('keydown', restore)
   }, [navigationHidden])
 
-  function navigate(next: Page) {
-    setPage(next)
-    window.scrollTo(0, 0)
-  }
   function skipMusic(direction: -1 | 1) {
     dispatch({ type: 'move', direction })
   }
@@ -91,27 +96,26 @@ export default function App() {
     setThemePeek({ theme, id: ++themePeekId.current, artwork: hidden ? 'close' : 'open' })
   }
   const showHomeVisualization = useCallback(() => {
-    setPage('home')
-    window.scrollTo(0, 0)
-  }, [])
+    navigate('home')
+  }, [navigate])
   const member = members.find((item) => page === 'member-' + item.id)
   const section: Section = member ? 'members' : page as Section
 
   return (
     <div className={(page === 'home' ? 'app is-home' : 'app') + (currentMusic ? ' with-music-player has-playback-backdrop' : '') + (cinemaActive ? ' is-cinema-session' : '') + (navigationHidden ? ' is-navigation-hidden' : '')} data-player-platform={currentMusic?.platform}>
       <PlaybackBackdrop entry={currentMusic} frosted={playbackPreferences.frosted[presentation]} />
-      <a className="skip-link sr-only" href="#main-content">跳过到主要内容</a>
+      <a className="skip-link sr-only" href="#main-content" onClick={event => { event.preventDefault(); document.getElementById('main-content')?.focus() }}>跳过到主要内容</a>
       <Header page={section} theme={theme} concealed={navigationHidden} navigationNear={navigationControl.near} onHideNavigation={() => toggleNavigation(true)} onNavigate={navigate} onToggleTheme={() => { setThemePeek(null); setTheme(theme === 'dark' ? 'light' : 'dark') }} onThemeSettled={showThemePeek} onOpenSettings={() => setSettingsOpen(true)} />
       {navigationHidden && <button ref={restoreNavigation} type="button" className={'navigation-toggle show-navigation' + (navigationControl.near ? ' is-near' : '')} style={navigationControl.position} aria-label="显示顶部导航栏" title="显示顶部导航栏" onClick={() => toggleNavigation(false)}>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
       </button>}
-      {currentMusic && <PlayerDock entry={currentMusic} onClose={() => dispatch({ type: 'close' })} onSkip={skipMusic} requestId={queue.requestId} mode={queue.mode} onModeChange={mode => dispatch({ type: 'mode', mode })} canPrevious={available.previous} canNext={available.next} onEnded={finishMusic} onObservation={observeMusic} presentation={presentation} videoFrosted={playbackPreferences.cinemaVideoFrosted} />}
-      <main id="main-content" className="container">
+      {currentMusic && <PlayerDock entry={currentMusic} onClose={() => dispatch({ type: 'close' })} onSkip={skipMusic} requestId={queue.requestId} mode={queue.mode} onModeChange={mode => dispatch({ type: 'mode', mode })} canPrevious={available.previous} canNext={available.next} onEnded={finishMusic} onObservation={observeMusic} onCheckpoint={rememberPlayback} resume={restoredPlayback?.resume} presentation={presentation} videoFrosted={playbackPreferences.cinemaVideoFrosted} />}
+      <main id="main-content" className="container" tabIndex={-1}>
         {page === 'home' && (!cinemaActive || homeVisualization) && <Home visualizer={homeVisualization && visualizer.session ? <AudioVisualizer session={visualizer.session} theme={theme} /> : undefined} />}
         {page === 'members' && <Members onOpenMember={(id) => navigate(('member-' + id) as Page)} />}
         {page === 'history' && <History />}
         {page === 'about' && <About />}
-        {page === 'music' && <Music selectedId={currentMusic?.id ?? null} onSelect={selectMusic} />}
+        {page === 'music' && <Music selectedId={currentMusic?.id ?? null} onSelect={selectMusic} route={route.music} onRouteChange={changeMusic} onReleaseBack={backFromRelease} />}
         {member && <MemberDetail member={member} onBack={() => navigate('members')} />}
       </main>
       <ThemePeek key={themePeek?.artwork ?? 'theme'} id={themePeek?.id} theme={theme} artwork={themePeek?.artwork} playerActive={Boolean(currentMusic) && !cinemaActive} onFinished={finishThemePeek} />

@@ -6,7 +6,7 @@ const source=await readFile(new URL('../../src/hooks/useOfficialPlayer.ts',impor
 const code=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText
 export const tick=()=>new Promise(resolve=>setImmediate(resolve))
 
-export function harness(api,initialEntry=music.musicCatalog[0],{storage=new Map(),onObservation,onEnded}={}) {
+export function harness(api,initialEntry=music.musicCatalog[0],{storage=new Map(),onObservation,onEnded,onCheckpoint,resume}={}) {
   const slots=[];let cursor=0;let effects=[];let entry=initialEntry;let requestId=1;let loop=false;let now=2000
   const observations=[];const completions=[];const intervals=new Map();let timerId=0
   const host={children:[],replacements:0,replaceChildren(...children){this.children=children;this.replacements++}}
@@ -22,7 +22,7 @@ export function harness(api,initialEntry=music.musicCatalog[0],{storage=new Map(
   new Function('require','module','exports','window','document','localStorage','Date',code)(
     name=>{if(!(name in dependencies))throw new Error('Unexpected dependency: '+name);return dependencies[name]},module,module.exports,win,
     {createElement:tag=>({tag})},{getItem:key=>storage.get(key)??null,setItem:(key,value)=>storage.set(key,value)},{now:()=>now})
-  const options={requestId,onObservation:event=>{observations.push(event);onObservation?.(event)},onEnded:(id,sourceId)=>{completions.push({requestId:id,sourceId});onEnded?.(id,sourceId)}}
+  const options={requestId,resume,onCheckpoint,onObservation:event=>{observations.push(event);onObservation?.(event)},onEnded:(id,sourceId)=>{completions.push({requestId:id,sourceId});onEnded?.(id,sourceId)}}
   return {
     render(value=entry,id=requestId,nextLoop=loop){entry=value;requestId=id;loop=nextLoop;options.requestId=id;cursor=0;const result=module.exports.useOfficialPlayer(entry,loop,()=>{},options);result.hostRef.current=host;const pending=effects;effects=[];pending.forEach(fn=>fn());return result},
     unmount(){slots.forEach(slot=>slot?.cleanup?.())},poll(){now+=1001;[...intervals.values()].forEach(fn=>fn())},
@@ -38,7 +38,8 @@ export function youtubeApi() {
     getPlayerState(){return this.state}
     getCurrentTime(){return this.currentTime}
     getDuration(){return this.duration}
-    loadVideoById(id){this.videoId=id;this.state=-1;this.currentTime=0;this.duration=0;this.calls.push(['load',id])}
+    loadVideoById(id,start){this.videoId=id;this.state=-1;this.currentTime=start??0;this.duration=0;this.calls.push(start===undefined?['load',id]:['load',id,start])}
+    cueVideoById(id,start){this.videoId=id;this.state=5;this.currentTime=start??0;this.duration=0;this.calls.push(['cue',id,start])}
     playVideo(){this.calls.push('play')}
     pauseVideo(){this.calls.push('pause')}
     seekTo(value){this.currentTime=value;this.calls.push(['seek',value])}

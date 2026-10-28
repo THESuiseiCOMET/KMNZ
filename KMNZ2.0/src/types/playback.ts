@@ -26,6 +26,9 @@ export interface PlaybackSelection {
 export type PlaybackMode = 'sequence' | 'repeat-one'
 export type PlaybackStatus = 'idle' | 'loading' | 'playing' | 'paused' | 'ended' | 'error'
 
+export interface PlayerCheckpoint { sourceId: string; requestId: number; seconds: number; duration: number; paused: boolean }
+export interface PlaybackResume { sourceId: string; requestId: number; seconds: number; autoplay: boolean }
+
 export interface PlayerObservation {
   requestId: number
   sourceId: string

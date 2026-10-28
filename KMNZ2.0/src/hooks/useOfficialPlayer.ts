@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { getEmbedUrl } from '../data/music'
 import type { MusicEntry } from '../data/music'
 import { loadSpotifyApi, loadYouTubeApi } from '../lib/playerApi'
-import type { PlayerObservation } from '../types/playback'
+import type { PlayerObservation, PlaybackResume, PlayerCheckpoint } from '../types/playback'
 
 interface PlayerAdapter {
   play(): void
@@ -31,9 +31,10 @@ function readVolume(): VolumeSettings {
   return { value: 70, previous: 70 }
 }
 
-function createFrame(entry: MusicEntry): HTMLIFrameElement {
+function createFrame(entry: MusicEntry, resume?: PlaybackResume): HTMLIFrameElement {
   const frame = document.createElement('iframe')
   const url = new URL(getEmbedUrl(entry))
+  if (resume && (entry.platform === 'youtube' || !resume.autoplay)) url.searchParams.set('autoplay', '0')
   if (entry.platform === 'youtube') {
     url.searchParams.set('enablejsapi', '1')
     url.searchParams.set('origin', window.location.origin)
@@ -51,6 +52,8 @@ export interface OfficialPlayerOptions {
   requestId: number
   onEnded?: (requestId: number, sourceId: string) => void
   onObservation?: (observation: PlayerObservation) => void
+  onCheckpoint?: (checkpoint: PlayerCheckpoint) => void
+  resume?: PlaybackResume
 }
 
 export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () => void, options?: OfficialPlayerOptions) {
@@ -125,7 +128,11 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
       resetTimeline()
       report('error', { error: message, ...(initialization ? { canLoad: false } : {}) })
     }
-    const target = platform === 'youtube' ? createFrame(active.entry) : document.createElement('div')
+    function resumeFor(next: MusicEntry, requestId: number) {
+      const resume = settings.current.options?.resume
+      return resume?.sourceId === next.id && resume.requestId === requestId && Number.isFinite(resume.seconds) && resume.seconds >= 0 ? resume : undefined
+    }
+    const target = platform === 'youtube' ? createFrame(active.entry, resumeFor(active.entry, active.requestId)) : document.createElement('div')
     host.replaceChildren(target)
     if (platform === 'youtube') {
       void loadYouTubeApi().then(api => {
@@ -134,6 +141,7 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
         let armed = false
         let ended = false
         let lastRequest: string | undefined
+        let pendingResume: PlaybackResume | undefined
         const matches = () => {
           try { return new URL(player.getVideoUrl()).searchParams.get('v') === active.entry.platformId } catch { return false }
         }
@@ -144,7 +152,10 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
             const duration = player.getDuration()
             const currentTime = player.getCurrentTime()
             if (!Number.isFinite(duration) || duration <= 0 || !Number.isFinite(currentTime)) { resetTimeline(); return }
+            if (pendingResume && currentTime < Math.min(pendingResume.seconds, duration) - 1) return
+            pendingResume = undefined
             setTimeline({ sourceId: active.entry.id, requestId: active.requestId, currentTime: Math.max(0, Math.min(duration, currentTime)), duration })
+            settings.current.options?.onCheckpoint?.({ sourceId: active.entry.id, requestId: active.requestId, seconds: Math.max(0, Math.min(duration, currentTime)), duration, paused: ![1,3].includes(player.getPlayerState()) })
           } catch { resetTimeline() }
         }
         function select(next: MusicEntry, requestId: number) {
@@ -158,7 +169,12 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
           setPaused(true)
           report('loading', { canLoad: true })
           try {
-            if (!matches()) player.loadVideoById(next.platformId)
+            const resume = resumeFor(next, requestId)
+            pendingResume = resume
+            if (resume) {
+              if (resume.autoplay) player.loadVideoById(next.platformId, resume.seconds)
+              else player.cueVideoById(next.platformId, resume.seconds)
+            } else if (!matches()) player.loadVideoById(next.platformId)
             else {
               if (player.getPlayerState() === 0) player.seekTo(0, true)
               player.playVideo()
@@ -226,6 +242,7 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
             if (cancelled || !initialized || !matches() || active.entry.id !== settings.current.entry.id
               || active.requestId !== (settings.current.options?.requestId ?? 0)) return false
             player.seekTo(seconds, true)
+            pendingResume = undefined
             return true
           },
           destroy: () => player.destroy(),
@@ -261,7 +278,8 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
                 else controller.loadUri!(uri)
                 loadedUri = uri
               }
-              controller.play()
+              if (resumeFor(next, requestId)?.autoplay === false) controller.pause()
+              else controller.play()
             } catch { failure('Spotify 播放请求失败，请使用官方播放条') }
           }
           adapterRef.current = { select, play: () => controller.play(), pause: () => controller.pause(), destroy: () => controller.destroy() }
@@ -295,12 +313,15 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
             const stopped = state.isPaused || !state.isBuffering && Number.isFinite(state.duration) && state.duration > 0
               && Number.isFinite(state.position) && state.position >= state.duration
             setPaused(stopped)
+            if (Number.isFinite(state.position) && state.position >= 0 && Number.isFinite(state.duration) && state.duration > 0) {
+              settings.current.options?.onCheckpoint?.({ sourceId: active.entry.id, requestId: active.requestId, seconds: Math.min(state.position, state.duration) / 1000, duration: state.duration / 1000, paused: stopped })
+            }
             report(stopped ? 'paused' : state.isBuffering ? 'loading' : 'playing', { canLoad, uri: state.playingURI })
           })
         })
       }).catch(() => {
         if (cancelled) return
-        host.replaceChildren(createFrame(settings.current.entry))
+        host.replaceChildren(createFrame(settings.current.entry, resumeFor(settings.current.entry, settings.current.options?.requestId ?? 0)))
         setReady(false)
         failure('Spotify 控制接口不可用，请使用官方播放条或重新选择曲目', true)
       })
@@ -337,6 +358,7 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
       if (!adapterRef.current?.seekTo?.(targetTime)) return false
       setTimeline(current => current.sourceId === timeline.sourceId && current.requestId === timeline.requestId
         ? { ...current, currentTime: targetTime } : current)
+      settings.current.options?.onCheckpoint?.({ sourceId: timeline.sourceId, requestId: timeline.requestId, seconds: targetTime, duration, paused })
       return true
     } catch {
       setError('进度跳转失败，请重试')

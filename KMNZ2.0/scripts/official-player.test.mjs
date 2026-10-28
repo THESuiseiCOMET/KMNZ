@@ -324,3 +324,47 @@ test('YouTube end events drive the real queue once while retaining the same play
   assert.deepEqual(player.calls.slice(-2),[['seek',0],'play'])
   h.unmount()
 })
+
+test('YouTube refresh loads the saved second once and persists only confirmed source progress',async()=>{
+  const api=youtubeApi(),points=[]
+  const resume={sourceId:youtube[0].id,requestId:1,seconds:65.25,autoplay:true}
+  const h=harness(api,youtube[0],{resume,onCheckpoint:point=>points.push(point)})
+  try {
+    h.render();await tick();const player=api.players[0]
+    assert.equal(new URL(player.frame.src).searchParams.get('autoplay'),'0')
+    player.ready();assert(player.calls.some(call=>Array.isArray(call)&&call[0]==='load'&&call[2]===65.25))
+    assert.equal(h.render().paused,true)
+    player.duration=180;player.currentTime=0;player.emit(5);assert.equal(points.length,0)
+    player.currentTime=65.5;player.emit(1);assert.equal(h.render().paused,false)
+    assert.equal(points.at(-1).seconds,65.5);assert.equal(points.at(-1).paused,false)
+    player.events.onAutoplayBlocked();assert.equal(h.render().paused,true)
+    h.render(youtube[1],2);player.videoId=youtube[0].platformId;player.emit(1)
+    assert.equal(points.at(-1).sourceId,youtube[0].id)
+    assert.equal(api.players.length,1);assert.equal(h.intervalCount,1)
+  } finally {h.unmount()}
+})
+
+test('paused refresh cues YouTube at its saved second without issuing play or recreating the controller',async()=>{
+  const api=youtubeApi(),resume={sourceId:youtube[0].id,requestId:1,seconds:42,autoplay:false}
+  const h=harness(api,youtube[0],{resume})
+  try {
+    h.render();await tick();const player=api.players[0];player.ready()
+    assert(player.calls.some(call=>Array.isArray(call)&&call[0]==='cue'&&call[2]===42))
+    assert(!player.calls.includes('play'));assert.equal(h.render().paused,true)
+    h.render().togglePlayback();assert.equal(player.calls.at(-1),'play')
+    h.render(youtube[0],2);assert.equal(player.calls.filter(call=>Array.isArray(call)&&call[0]==='cue').length,1)
+    assert.equal(api.players.length,1)
+  } finally {h.unmount()}
+})
+
+test('Spotify paused refresh retains the selected entity and uses native music controls without seeking',async()=>{
+  const api=spotifyApi(),entry=spotify.find(item=>item.kind==='track'),points=[]
+  const h=harness(api,entry,{resume:{sourceId:entry.id,requestId:1,seconds:0,autoplay:false},onCheckpoint:point=>points.push(point)})
+  try {
+    h.render();await tick();const controller=api.controllers[0];controller.listeners.ready()
+    assert.deepEqual(controller.calls,['pause']);assert.equal(controller.options.uri,uri(entry))
+    controller.listeners.playback_update(update(entry,{isPaused:true,position:12000,duration:180000}))
+    assert.equal(points.at(-1).seconds,12);assert.equal(points.at(-1).paused,true)
+    assert.equal(h.render().canSeek,false);h.render().togglePlayback();assert.equal(controller.calls.at(-1),'play')
+  } finally {h.unmount()}
+})
