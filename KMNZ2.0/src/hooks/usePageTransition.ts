@@ -1,15 +1,19 @@
 import { useCallback, useEffect, useRef } from 'react'
 import { flushSync } from 'react-dom'
+import { prepareVisibleMusicCards } from '../lib/musicCardTransition'
 import type { Page } from '../types'
 import type { MusicRoute } from '../lib/siteRoute'
 
 export function usePageTransition() {
   const active = useRef<ViewTransition | null>(null)
   const request = useRef(0)
+  const cardCleanup = useRef<(() => void) | null>(null)
 
   useEffect(() => () => {
     request.current++
     active.current?.skipTransition()
+    cardCleanup.current?.()
+    cardCleanup.current = null
     delete document.documentElement.dataset.pageTransition
     delete document.documentElement.dataset.musicTransition
   }, [])
@@ -18,14 +22,21 @@ export function usePageTransition() {
     const id = ++request.current
     active.current?.skipTransition()
     active.current = null
+    cardCleanup.current?.()
+    cardCleanup.current = null
     const root = document.documentElement
     delete root.dataset.pageTransition
     delete root.dataset.musicTransition
     let committed = false
+    let animateCards = false
     const apply = () => {
       if (id !== request.current || committed) return
       committed = true
       flushSync(update)
+      if (animateCards) {
+        cardCleanup.current?.()
+        cardCleanup.current = prepareVisibleMusicCards()
+      }
     }
     const kind = from !== to ? 'page' : from === 'music' && music
       ? music.from.platform !== music.to.platform ? 'platform'
@@ -48,9 +59,15 @@ export function usePageTransition() {
     const direction = before >= 0 && after >= 0 && after < before || kind === 'page' && from.startsWith('member-') && to === 'members' ? 'backward' : 'forward'
     if (kind === 'page') root.dataset.pageTransition = direction
     else root.dataset.musicTransition = `${kind}-${direction}`
+    if (kind === 'category') {
+      animateCards = true
+      cardCleanup.current = prepareVisibleMusicCards()
+    }
     const clear = () => {
       if (id !== request.current) return
       active.current = null
+      cardCleanup.current?.()
+      cardCleanup.current = null
       delete root.dataset.pageTransition
       delete root.dataset.musicTransition
     }

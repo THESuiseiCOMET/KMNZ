@@ -50,7 +50,7 @@
 | 日期校验、日本时间显示和稳定排序 | `src/lib/musicMetadata.ts` | `validPublishedAt`、`validReleaseDate`、`musicDate`、`sortMusicEntries` |
 | 全站常驻播放器内容 | `src/components/PlayerDock.tsx` | `PlayerDock` |
 | 浮窗视频与控件顺序、圆角及间距 | `src/styles.css` | `.music-player-panel:not(.is-cinema)`、`order`、`border-radius: 10px`、`gap: 8px` |
-| 导航栏右侧展开的图标设置 | `src/components/PlaybackSettings.tsx`、`src/components/Header.tsx`、`src/styles.css` | `SettingIcon`、`.playback-settings`、`.playback-setting-icon` |
+| 导航栏右侧展开的图标设置 | `src/components/PlaybackControls.tsx`、`src/components/Header.tsx`、`src/styles.css` | `SettingIcon`、`.playback-settings`、`.playback-setting-icon` |
 | 观影模式顶部播放控件 | `src/components/PlayerDock.tsx`、`src/styles.css` | `createPortal`、`.header-player-slot`、`.cinema-player-chrome` |
 | 播放器标题居中、关闭与标题栏拖动 | `src/components/PlayerDock.tsx`、`src/styles.css` | `music-player-heading`、`music-player-drag-handle` |
 | YouTube 音量、静音与本地保存 | `src/hooks/useOfficialPlayer.ts` | `kmnzPlayerVolume`、`setVolume`、`toggleMute` |
@@ -253,7 +253,7 @@ YouTube 卡片沿用 16:9 封面，复用四角圆角与悬停放大；48px 液�
 
 YouTube 浮窗按标题、视频、播放控件、进度条排列；通过 CSS 调整顺序，不移动或重建媒体 host。视频左右各留 12px、四角 10px 圆角，保持 16:9；浮窗控件统一居中、间隔 8px，音量面板向上展开以避开底边。影院导航控件沿用原布局和间距。
 
-`src/components/PlaybackSettings.tsx` 位于导航齿轮旁，向右展开单图标设置栏，以裁切、位移及透明度动画收放，不改变导航高度；窄屏在齿轮下方展开以避免越界。图标切换浮窗／影院、背景磨砂、影院视频磨砂和音频可视化，状态、悬停标题与可访问名称保持同步。音频来源、设备及电平放在音频图标的小面板里。再次点击齿轮、点击外部或 Esc 关闭，关闭后不可聚焦；不使用模态遮罩。`scripts/playback-settings.test.mjs` 验证独立偏好、音频开始／取消、关闭与监听清理。`src/lib/playbackPreferences.ts` 校验并读取本地偏好；默认浮窗＋磨砂，存储不可用时正常降级。`scripts/playback-preferences.test.mjs` 验证解析、独立开关和存储失败。
+`src/components/PlaybackControls.tsx` 直接提供模式、当前模式磨砂与可视化图标开关，不再使用齿轮或设置面板。播放模式、影院视频磨砂与浮窗封面磨砂独立保存在 `src/lib/playbackPreferences.ts`；`scripts/playback-controls.test.mjs` 与偏好测试验证开关状态、直接共享、取消及旧偏好迁移。
 
 影院模式使用 `PlayerDock` 的 Portal 把原控制界面放入 Logo 与右侧导航之间的 `.header-player-slot`，随导航布局，不再依赖固定屏幕坐标；媒体 host 留在原位置，切换模式不重建 iframe。进度线收紧在同一导航高度内，保留播放按钮外观、导航高度、音量及切歌交互。控制区随可用宽度调整，同一个 YouTube 媒体 host 固定在导航下方的背景层，影院 iframe 按 16:9 等比放大、居中裁切以覆盖背景区域，横屏裁切上下、竖屏裁切左右，浮窗尺寸规则保持原样；磨砂玻璃层不拦截点击，主内容层仍可浏览音乐、成员、历程和关于页面；Spotify 沿用官方封面背景与右下角原生播放条。选歌不强制改变滚动位置；只改变布局，不重新创建 iframe／控制器，不修改队列和进度。原浮窗的拖动位置保留。影院有当前播放条目时卸载首页文案与轮播，暂停时保持，关闭播放或返回浮窗后恢复。影院“视频磨砂”使用覆盖在真实 iframe 上方的 `backdrop-filter`，视频本身不复制、不抓帧；玻璃层保持透明，不再叠加灰白／黑色主题蒙层；关闭时移除模糊，视频保留原始色彩和对比度，前景页面和导航控件保持清晰。Spotify 保留平台原生进度控制，页面底部预留空间避免遮挡内容。
 
@@ -265,19 +265,19 @@ YouTube 浮窗按标题、视频、播放控件、进度条排列；通过 CSS �
 
 ## 首页音频可视化
 
-`src/components/PlaybackSettings.tsx` 提供独立的“音频可视化”开关，不依赖本站是否正在播放，也不限定浮窗／影院模式；开关开启才请求所选来源，取消、失败则恢复关闭，等待期间可取消。不再提供可视化专属全屏模式或显示位置选择。
+`src/components/PlaybackControls.tsx` 提供独立的“音频可视化”开关，不依赖本站是否正在播放，也不限定浮窗／影院模式；开关开启才请求所选来源，取消、失败则恢复关闭，等待期间可取消。不再提供可视化专属全屏模式或显示位置选择。
 
-`src/lib/audioCapture.ts` 仅将共享音轨送入本地 Web Audio 分析器，不录制、不上传、不连接扬声器而造成重复播放；拒绝整屏／窗口来源，无音轨和初始化失败时释放全部资源。`src/hooks/useAudioVisualizer.ts` 管理单次请求、过期结果、取消、结束共享与卸载清理。浏览器可能同时要求共享视频轨，它不用于抓帧或渲染；浏览器和受保护媒体是否提供有效音轨需实际确认，静音不模拟信号。
+`src/lib/audioCapture.ts` 仅将共享音轨送入本地 Web Audio 分析器，不录制、不上传、不连接扬声器而造成重复播放；拒绝整屏／窗口来源，无音轨和初始化失败时释放全部资源。`src/hooks/useAudioVisualizer.ts` 管理单次请求、过期结果、取消、结束共享与卸载清理。浏览器选择器仍要求视频轨；确认标签页来源并建立音频分析后立即停止不用的视频轨，只监听音轨结束，减少无用画面采集，不重建播放器、不模拟全屏。实际 Edge 验收表明仅保留音轨时网页全屏仍可能受限为标签页内全屏；浏览器窗口全屏应由 F11 操作，不能把 document.fullscreenElement 当成浏览器窗口全屏成功的证据。视频轨不会用于抓帧或渲染，停止它不停止音频分析；浏览器和受保护媒体是否提供有效音轨需实际确认，静音不模拟信号。
 
 `src/lib/audioGeometry.ts` 用实际频谱生成最初较平缓的环形线条，低频控制轻微外扩；已移除交替长短尖刺及李萨如／延迟相位曲线的计算与绘制。`src/components/AudioVisualizer.tsx` 用 Canvas 绘制，与导航共用提供的 `KMNZLOGOB.webp`／`KMNZLOGOW.webp` 透明原图，深色 W 白图／浅色 B 黑图，淡入至低透明度，开启可视化后持续慢速旋转。原图直接复制，不裁剪或重新压缩；原 SVG 留存但不再引用。无信号时绘制静态基础圆环，有有效音频信号时才按真实频谱变形；保留当前圆环大小、线宽、透明度与旋转速度，不伪造音频起伏。限制像素密度，减少动态效果偏好下停止旋转并降低线条强度。
 
 `Home.tsx` 保留默认 Hero 背景大图，首页显示欢迎标题、介绍和原四图轮播；开启可视化后整体隐藏这些内容并直接绘制，不使用轮播容器、边框或卡片，关闭后恢复原首页。影院播放继续沿用原视频／封面背景。`AudioVisualizer.tsx` 只负责首页绘图及尺寸变化，不再接管导航、页面焦点、滚动、Esc 或浏览器全屏，不显示等待文字。离开首页只卸载绘图，采集和音乐持续；关闭开关或输入断开才停止采集。未保存自动采集开关，不自动请求共享。
 
-## 立体声混音／虚拟音频输入
+## 音频采集兼容辅助函数
 
-设置新增“音频来源”和“输入设备”选择，保留标签页共享。用户明确点击“读取输入设备”后枚举音频输入；若尚无设备名称，会请求输入授权，短暂打开默认输入并在读完名称后立即释放。列表去掉默认／通讯别名及重复设备，不自动选择麦克风。用户选择明确的设备后，`audioCapture.ts` 使用 `getUserMedia` 的 exact deviceId 和 video:false；关闭回声消除、降噪及自动增益，不录制、不上传、不回放采集输入。设备缺失、权限拒绝或断开时提示重选，不降级到默认输入。
+`src/lib/audioCapture.ts` 保留经过测试的底层输入设备辅助函数，但当前 App、导航和 `useAudioVisualizer.ts` 不再调用它们，只开放标签页共享，不读取设备或请求麦克风权限。
 
-`useAudioVisualizer.ts` 管理两种采集来源及设备读取的过期结果和清理；App 传递选择，`PlaybackSettings.tsx` 显示读取、选择、连接和错误状态。只在用户操作时请求授权，关闭设置会丢弃待处理结果；播放、停播和页面导航不会主动关闭已开启的采集。输入来源不持久化设备标识。立体声混音需要 Windows 已启用并由浏览器列出；Realtek 立体声混音是否包含当前输出取决于实际声音路由，虚拟输入由对应软件决定。该路线不调用屏幕共享，但浏览器仍可能显示音频输入使用标识。测试覆盖指定设备、无视频、无默认回退、枚举权限释放、断开、重复及过期请求。
+`useAudioVisualizer.ts` 直接请求标签页共享，处理授权失败、停止共享、重复点击和过期结果清理。原输入采集辅助函数测试保留，设备断开、无默认回退及权限释放仍有覆盖；它们不构成当前网页的可选音频来源。
 
 `src/lib/audioSignal.ts` 每 120ms 读取实际浮点输入，向设置显示输入电平和等待／接收／无信号／输入静音／分析暂停状态。无信号时提示检查对应声卡路由；分析暂停可通过用户点击恢复，不伪装已经收到声音。监测与采集会话同寿命，离开首页仍检测，停止或卸载释放计时器。`audioGeometry.ts` 去除输入直流偏移并采用浮点采样，避免 8 位量化丢失弱信号或将静音误判为有效声音；无信号基础圆环仅由绘图层显示。保留平缓环形、主题及播放控件。设备输出未改变，官方嵌入播放器仍由原控制器管理。
 
@@ -358,3 +358,45 @@ scripts/update-music-metadata.mjs 的校验保留覆盖索引中来源为 youtub
 按用户提供的视频 ID 追加《水星》（LITA、YACA）、《さらしもの》（somunia、LITA）、《Stormy》（NERO、VESPERBELL ヨミ）和《come again》（LITA、TINA），保留各自歌曲身份与合作署名，不关联未经核实的发行或 Spotify 来源。成员筛选只写 KMNZ 成员，come again 单条来源进入 LITA、TINA 两个筛选。三条日期与封面依据已有官方 API 导出写入自动元数据；somunia 视频日期来自官方观看页的完整 datePublished／uploadDate，封面经实际尺寸检查后与日期一起新增到人工覆盖，不冒充 API 数据。原有条目、人工字段及播放器保持不变。
 
 `scripts/fixtures/music-extra-covers.json` 保存精简核对事实；`scripts/music-extra-covers.test.mjs` 验证唯一来源、合作成员、日期来源、封面回退、搜索和队列兼容。
+
+
+## 导航浮层与覆盖式滚动条
+
+导航采用固定定位的半透明纯色浮层。影院 YouTube 视频和视频磨砂层独立覆盖整个视口，不再读取导航高度计算顶部、尺寸或裁切；导航收放只移动导航本身，保留播放控制、主题和恢复箭头。影院 Spotify 保留官方封面背景，YouTube 影院不额外叠加缩略图。浮窗恢复当前曲目的封面背景及独立磨砂值；旧 frosted.floating 偏好可以迁移，影院视频磨砂仍独立保存。
+
+`src/components/PageScrollbar.tsx` 和 `src/lib/pageScrollbar.ts` 提供不占排版宽度的右侧滚动条，原生页面滚动仍负责滚轮、触摸和键盘。浮层同步真实滚动位置与内容高度，支持拖动、轨道点击及键盘，路由和导航收放不因滚动条显隐改变可用宽度。ResizeObserver 与帧回调在卸载时清理。`scripts/page-scrollbar.test.mjs` 覆盖轨道映射、长短页面、边界和键盘操作；直接控制与偏好测试覆盖旧值迁移及两种模式的独立开关。
+
+
+## 音乐页面切换性能
+
+`src/lib/musicMetadata.ts` 复用 Asia/Tokyo 日期格式器；排序直接比较经校验的原始视频时间戳和发行日期，不生成展示文字，保持日期精度、未知值置后及同日稳定顺序。`src/data/musicMetadata.ts` 按静态条目对象缓存解析元数据和卡片日期，模块重新加载时缓存自然重建，条目 ID 或平台 ID 相同的不同对象不会串用结果。`Music.tsx` 仅筛选、排序当前平台，切回音乐页面复用日期结果；卡片节点按实际列表、路由、选中状态和回调缓存，切换滑块的尺寸测量不会重新构造全部卡片，不减少条目、不改封面和动画，不触碰播放状态或队列。`scripts/music-performance.test.mjs` 验证无格式化排序、时区和精度、缓存身份隔离及非活动平台不执行计算。
+
+
+## 分类切换动画性能
+
+`src/lib/musicCardTransition.ts` 在分类切换前、更新后只标记与当前视口相交的卡片；先批量读取矩形再设置标记，避免读写交错。`usePageTransition.ts` 沿用既有 View Transitions，只为标记卡片生成独立快照，屏幕外曲目正常保留但不创建动画图层。原有入场、退场、重排和筛选滑块动效保留；完成、快速切换、失败及卸载时清理临时标记，不触碰队列和播放器。测试见 `scripts/music-card-transition.test.mjs` 及原页面过渡测试。
+
+
+## 导航直接播放控制
+
+`src/components/PlaybackControls.tsx` 取代旧设置面板，直接接入 Header，依次提供模式、当前模式磨砂和可视化开关，后接主题、网页全屏和收起按钮。浮窗背景封面与影院视频分别保存磨砂偏好；Spotify 影院封面使用影院磨砂值。导航继续使用纯色半透明背景，视频仍覆盖整个视口。`useAudioVisualizer.ts` 只请求标签页音频，不再连接输入设备或读取设备列表，允许无播放时开启、再次点击取消、失败后重试，保留过期请求清理。
+
+桌面导航文字与控制区采用独立间距，窄屏缩小按钮横向占位，移动端保持同一行六个控制并保留原导航高度。`scripts/playback-controls.test.mjs`、偏好测试及页面渲染测试覆盖开关顺序、模式独立性、共享状态与旧偏好迁移。
+
+
+## 全屏背景尺寸稳定
+
+首页背景以视口为参照，采用 fixed 背景、cover 等比铺满和居中裁切，不随 Hero 高度缓动重新定位。注册 `--visible-header-height` 为长度属性，仅在导航收放时插值；首页、可视化及页面留白直接读取同一高度，不再分别对视口驱动的高度执行第二次缓动。网页全屏与 F11 尺寸变化直接适配新视口，长宽比变化仍遵守等比裁切，不拉伸图片。原导航收放、减少动态效果设置和播放器保持不变。
+
+
+## Spotify 右侧曲目展开
+
+`Music.tsx` 的 Spotify 名称仅作文字展示；封面使用已有 releaseSourceId 路由在音乐主内容区右侧展开 `MusicReleaseDetail.tsx`，列表、搜索与 LP／EP 筛选继续保留，封面中央播放按钮独立播放。侧栏复用 C1 已确认曲目和 C3 专辑顺序队列，不新增播放器或资料。关闭面板恢复封面焦点，深链接和刷新仍使用原路由；`useSiteRoute.ts` 对只变更展开专辑的导航及历史返回保留滚动位置。桌面卡片保持原三列、原宽度；曲目面板在主内容区外侧的右边留白中独立展开，不挤占网格。右侧留白不足时使用右侧浮层，不改变列表原有响应式列数；保留关闭和官方链接，未知关系仍显示原有空状态。
+
+
+共享选择器取消或拒绝授权（NotAllowedError／AbortError）时，`useAudioVisualizer.ts` 静默回到关闭状态，不生成“未开启音频共享”的文字或提示框，仍可再次点击重试；实际采集故障的错误处理保留。音频可视化回归测试覆盖这两种取消结果与后续重试。
+
+
+## Spotify 专用悬窗顺序
+
+`resolvePlayerPresentation` 在 App 和 PlayerDock 中统一将 Spotify 固定为浮窗，保留用户保存的 YouTube 观影偏好。Spotify 播放时模式按钮不可切换，磨砂按钮继续控制浮窗背景；不隐藏首页或把控件传送到导航。Spotify 悬窗按封面、官方 Embed、自定义控制行排列，没有重复歌名栏或无效循环按钮；关闭按钮位于下一首右侧。封面按钮承接原指针及键盘拖动、边界限制和触控处理，官方媒体 host 仍为同一节点，模式切换不重建 iframe。YouTube 的标题、循环、音量、进度条、观影布局及控制样式保持原样。

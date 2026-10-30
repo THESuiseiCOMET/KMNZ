@@ -17,7 +17,7 @@ function harness() {
 
 test('deselecting a filter retains the measured pill bounds so it can fade away without jumping to zero', () => {
   const h = harness(), calls = []
-  const props = { label: 'YouTube 分类', options: [['original', '原创'], ['cover', '翻唱']], active: null, onChange: value => calls.push(value) }
+  const props = { label: 'YouTube 分类', options: [['original', 'Original'], ['cover', 'Cover']], active: null, onChange: value => calls.push(value) }
   const first = h.render(props)
   assert(!first.props.children[0].props.className.includes('is-visible'))
   const bounds = { width: 68, height: 36, left: 72, top: 0 }

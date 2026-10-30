@@ -252,7 +252,7 @@ test('real detail rendering and original YouTube cards',async t=>{
     const {default:SingleRow}=await server.ssrLoadModule('/src/components/MusicSingleRow.tsx')
     const {default:PlayerDock}=await server.ssrLoadModule('/src/components/PlayerDock.tsx')
     const {default:Backdrop}=await server.ssrLoadModule('/src/components/PlaybackBackdrop.tsx')
-    const {default:Settings}=await server.ssrLoadModule('/src/components/PlaybackSettings.tsx')
+    const {default:Settings}=await server.ssrLoadModule('/src/components/PlaybackControls.tsx')
     const {default:Header}=await server.ssrLoadModule('/src/components/Header.tsx')
     const {default:AudioVisualizer}=await server.ssrLoadModule('/src/components/AudioVisualizer.tsx')
     const {default:Home}=await server.ssrLoadModule('/src/pages/Home.tsx')
@@ -265,7 +265,7 @@ test('real detail rendering and original YouTube cards',async t=>{
         for(const name of ['YouTube','Spotify'])assert(tabs.some(tab=>tab.includes('aria-label="'+name+'"')))
         assert(tabs.find(tab=>tab.includes('aria-label="'+(platform==='youtube'?'YouTube':'Spotify')+'"')).includes('aria-pressed="true"'))
         assert.equal((html.match(/class="music-platform-logo /g)??[]).length,4)
-        assert(html.includes('music-platform-labels'));assert(html.includes('class="music-results"'))
+        assert(html.includes('music-platform-labels'));assert(html.includes('class="music-results music-browse'))
         assert(!html.includes('<iframe'))
         if(platform==='spotify') {
           assert(html.includes('aria-label="Spotify 分类"'))
@@ -275,8 +275,22 @@ test('real detail rendering and original YouTube cards',async t=>{
         } else assert(!html.includes('aria-label="Spotify 分类"'))
       }
     })
+    await t.test('Spotify expanded tracks coexist with cards, search and LP filtering without another player',()=>{
+      const route={platform:'spotify',category:'ep',search:'DROPS',releaseSourceId:'sp-drops'}
+      const html=renderToStaticMarkup(createElement(Music,{selectedId:null,onSelect:()=>{},route}))
+      assert(html.includes('music-browse has-release-panel'))
+      assert(html.includes('<aside class="music-release-pane" id="music-release-pane"'))
+      assert.equal((html.match(/<article\b/g)??[]).length,1)
+      assert(html.includes('aria-label="展开 DROPS 曲目" aria-expanded="true" aria-controls="music-release-pane"'))
+      assert(html.includes('aria-label="关闭专辑曲目"'))
+      assert(html.includes('type="search"'));assert(html.includes('Spotify 分类'))
+      assert(html.includes('>LP</span>'));assert(html.includes('>EP</span>'))
+      assert(!html.includes('music-release-title-button'));assert(!html.includes('返回 Spotify'))
+      assert.equal((html.match(/class="music-track(?: selected)?"/g)??[]).length,3)
+      assert(!html.includes('<iframe'));assert(!html.includes('music-player-embed'))
+    })
     await t.test('visualizer switch is independent of playback and replaces home content while retaining its background',()=>{
-      const props={open:false,settings:{presentation:'cinema',frosted:{floating:true,cinema:true},cinemaVideoFrosted:true},onChange:()=>{},onClose:()=>{}}
+      const props={open:false,settings:{presentation:'cinema',cinemaVideoFrosted:true,floatingBackgroundFrosted:true},onChange:()=>{},onClose:()=>{}}
       for(const presentation of ['floating','cinema']) {
         const initial=renderToStaticMarkup(createElement(Settings,{...props,settings:{...props.settings,presentation}}))
         const toggle=initial.match(/<button[^>]*aria-label="音频可视化"[^>]+>/)?.[0]
@@ -288,21 +302,10 @@ test('real detail rendering and original YouTube cards',async t=>{
       assert(ready.match(/<button[^>]*aria-label="音频可视化"[^>]*aria-checked="true"/))
       assert(ready.includes('role="alert">未取得音轨'))
       const pending=renderToStaticMarkup(createElement(Settings,{...props,visualizationPending:true}))
-      assert(pending.includes('等待音频共享'))
-      const inputProps={...props,audioSource:{kind:'input',deviceId:''},audioInputs:[{deviceId:'stereo-mix',label:'立体声混音 (Realtek)'}]}
-      const input=renderToStaticMarkup(createElement(Settings,inputProps))
-      assert(input.includes('音频来源'));assert(input.includes('读取输入设备'));assert(input.includes('立体声混音 (Realtek)'))
-      assert(input.includes('role="switch"'))
-      const selected=renderToStaticMarkup(createElement(Settings,{...inputProps,audioSource:{kind:'input',deviceId:'stereo-mix'}}))
-      assert(!selected.includes('勾选共享标签页音频'))
-      const silentInput=renderToStaticMarkup(createElement(Settings,{...inputProps,visualizationEnabled:true,audioSignal:{status:'silent',decibels:-100}}))
-      assert(silentInput.includes('音频输入电平'));assert(silentInput.includes('未收到有效音频'))
-      assert(silentInput.includes('对应声卡的输出'));assert(silentInput.includes('value="-90"'))
-      const suspendedInput=renderToStaticMarkup(createElement(Settings,{...inputProps,visualizationEnabled:true,audioSignal:{status:'suspended',decibels:-100}}))
-      assert(suspendedInput.includes('恢复音频分析'))
-      const receivingInput=renderToStaticMarkup(createElement(Settings,{...inputProps,visualizationEnabled:true,audioSignal:{status:'receiving',decibels:-42}}))
-      assert(receivingInput.includes('正在接收音频'));assert(receivingInput.includes('value="-42"'))
-      assert(!receivingInput.includes('对应声卡的输出'))
+      assert(pending.includes('aria-busy="true"'))
+      for(const html of [ready,pending]) {
+        assert(!html.includes('<select'));assert(!html.includes('<details'));assert(!html.includes('读取输入设备'));assert(!html.includes('立体声混音'))
+      }
       for(const theme of ['light','dark']) {
         const html=renderToStaticMarkup(createElement(AudioVisualizer,{session:{analyser:{},sampleRate:48000},theme}))
         const logo=theme==='dark'?'KMNZLOGOW.webp':'KMNZLOGOB.webp'
@@ -322,8 +325,8 @@ test('real detail rendering and original YouTube cards',async t=>{
       assert(!replacement.includes('这里展示团体成员资料'));assert(!replacement.includes('hero-inner'))
       assert(!replacement.includes('hero-carousel'));assert(!replacement.includes('等待音频信号'))
     })
-    await t.test('navigation places collapse between fullscreen and settings with a separate center control slot',()=>{
-      const html=renderToStaticMarkup(createElement(Header,{page:'home',theme:'light',onNavigate:()=>{},onToggleTheme:()=>{},onOpenSettings:()=>{},onHideNavigation:()=>{}}))
+    await t.test('navigation keeps six ordered controls and a separate center player slot',()=>{
+      const html=renderToStaticMarkup(createElement(Header,{page:'home',theme:'light',onNavigate:()=>{},onToggleTheme:()=>{},playbackControls:createElement(Settings,{settings:{presentation:'floating',cinemaVideoFrosted:true,floatingBackgroundFrosted:true},onChange:()=>{}}),onHideNavigation:()=>{}}))
       const nav=html.match(/<nav\b[\s\S]*?<\/nav>/)?.[0]
       assert(nav)
       assert(!nav.includes('class="navigation-indicator"'))
@@ -337,22 +340,20 @@ test('real detail rendering and original YouTube cards',async t=>{
       assert.equal((about.match(/class="nav-chalk-ring"/g)??[]).length,1)
       assert(about.match(/<button\b[^>]*aria-label="ABOUT"[\s\S]*?<\/button>/)?.[0].includes('class="nav-chalk-ring"'))
       assert(nav.indexOf('class="fullscreen-toggle"')>nav.indexOf('class="theme-toggle"'))
-      assert(nav.indexOf('class="settings-toggle"')>nav.indexOf('class="fullscreen-toggle"'))
+      assert(!nav.includes('settings-toggle'));assert(!nav.includes('播放设置'))
       assert(nav.indexOf('class="navigation-toggle"')>nav.indexOf('class="fullscreen-toggle"'))
-      assert(nav.indexOf('class="settings-toggle"')>nav.indexOf('class="navigation-toggle"'))
+      const labels=['切换到影院模式','背景磨砂','音频可视化','切换到深色主题','进入网页全屏','隐藏顶部导航栏']
+      for(let i=1;i<labels.length;i++)assert(nav.indexOf('aria-label="'+labels[i]+'"')>nav.indexOf('aria-label="'+labels[i-1]+'"'))
       assert(nav.includes('隐藏顶部导航栏'))
       assert(nav.includes('进入网页全屏'));assert.equal((nav.match(/fullscreen-corner-/g)??[]).length,2)
       assert(html.indexOf('class="header-player-slot"')<html.indexOf('<nav'))
       assert(!nav.includes('header-player-slot'))
     })
-    await t.test('compact settings expose icon toggles and preserve accessible states without a modal or extra players',()=>{
-      const html=renderToStaticMarkup(createElement(Settings,{open:false,settings:{presentation:'cinema',frosted:{floating:true,cinema:false},cinemaVideoFrosted:true},onChange:()=>{},onClose:()=>{}}))
-      assert(html.includes('播放设置'));assert(html.includes('浮窗模式'));assert(html.includes('影院模式'))
-      assert(html.match(/<button[^>]*aria-label="切换到浮窗模式"[^>]*>/)?.[0].includes('aria-pressed="true"'))
-      assert(html.includes('data-open="false"'));assert(html.includes('inert=""'))
-      assert(!html.includes('<dialog'));assert(!html.includes('<fieldset'));assert(!html.includes('type="radio"'))
-      assert(html.includes('role="switch"'))
-      assert(!html.includes('<iframe'))
+    await t.test('direct toolbar exposes three icon controls without a panel or extra players',()=>{
+      const html=renderToStaticMarkup(createElement(Settings,{settings:{presentation:'cinema',cinemaVideoFrosted:true,floatingBackgroundFrosted:true},onChange:()=>{}}))
+      assert.equal((html.match(/<button\b/g)??[]).length,3)
+      assert(html.includes('aria-label="切换到浮窗模式"'));assert(html.includes('aria-pressed="true"'))
+      assert(!html.includes('<dialog'));assert(!html.includes('<select'));assert(!html.includes('playback-settings'));assert(!html.includes('<iframe'))
     })
     await t.test('cinema video glass is independent of cover frost and keeps one media host',()=>{
       const entry=toMusicCatalog(currentLibrary).find(entry=>entry.platform==='youtube')
@@ -363,9 +364,10 @@ test('real detail rendering and original YouTube cards',async t=>{
         assert(html.includes('class="cinema-video-glass" aria-hidden="true"'))
       }
       for(const presentation of ['floating','cinema']) {
-        const html=renderToStaticMarkup(createElement(Settings,{open:false,settings:{presentation,frosted:{floating:true,cinema:false},cinemaVideoFrosted:true},onChange:()=>{},onClose:()=>{}}))
+        const html=renderToStaticMarkup(createElement(Settings,{open:false,settings:{presentation,cinemaVideoFrosted:true},onChange:()=>{},onClose:()=>{}}))
         assert.equal(html.includes('视频磨砂'),presentation==='cinema')
-        assert.equal((html.match(/role="switch"/g)??[]).length,presentation==='cinema'?3:2)
+        assert.equal(html.includes('背景磨砂'),presentation==='floating')
+        assert.equal((html.match(/role="switch"/g)??[]).length,2)
       }
     })
     await t.test('cinema and floating layouts retain one official host and the original controls for both platforms',()=>{
@@ -375,30 +377,28 @@ test('real detail rendering and original YouTube cards',async t=>{
         const props={entry,onClose:()=>{},onSkip:()=>{}}
         const floating=renderToStaticMarkup(createElement(PlayerDock,props))
         const cinema=renderToStaticMarkup(createElement(PlayerDock,{...props,presentation:'cinema'}))
-        assert(cinema.includes('music-player-panel is-cinema'))
+        if(platform==='youtube') assert(cinema.includes('music-player-panel is-cinema'))
+        else { assert.equal(cinema,floating);assert(!cinema.includes('is-cinema'));assert(!cinema.includes('music-player-loop'));assert(!cinema.includes('music-player-heading')) }
         for(const html of [floating,cinema]) {
           assert.equal((html.match(/class="music-player-embed"/g)??[]).length,1)
-          for(const label of ['上一首','下一首','播放歌曲','开启单曲循环']) assert(html.includes('aria-label="'+label+'"'))
+          for(const label of ['上一首','下一首','播放歌曲',...(platform==='youtube'?['开启单曲循环']:[])]) assert(html.includes('aria-label="'+label+'"'))
           assert(html.includes('class="music-player-toggle"'))
         }
-        assert(cinema.includes('aria-label="当前曲目"'))
+        assert.equal(cinema.includes('aria-label="当前曲目"'),platform==='youtube')
         assert(floating.includes('aria-label="移动播放器"'))
       }
     })
-    await t.test('cover backgrounds offer frosted and clear presentations without a second media source',()=>{
+    await t.test('YouTube does not create a thumbnail background behind the live cinema video',()=>{
       const entry=toMusicCatalog(currentLibrary).find(entry=>entry.platform==='youtube')
-      for(const [frosted,label] of [[true,'is-frosted'],[false,'is-clear']]) {
-        const html=renderToStaticMarkup(createElement(Backdrop,{entry,frosted}))
-        assert(html.includes(label));assert.equal((html.match(/<img\b/g)??[]).length,1)
-        assert(!html.includes('<iframe'));assert(!html.includes('<video'))
-      }
+      assert.equal(renderToStaticMarkup(createElement(Backdrop,{entry})), '')
     })
-    await t.test('playback backdrop uses official artwork for either platform without adding players or controls',()=>{
+    await t.test('floating mode reuses official covers for both platforms with contextual frost and no extra hosts',()=>{
       const catalog=toMusicCatalog(currentLibrary)
       for(const platform of ['youtube','spotify']) {
         const entry=catalog.find(entry=>entry.platform===platform)
-        const html=renderToStaticMarkup(createElement(Backdrop,{entry}))
+        const html=renderToStaticMarkup(createElement(Backdrop,{entry,presentation:'floating',frosted:true}))
         assert(html.includes('playback-backdrop-'+platform))
+        assert(html.includes('is-frosted'))
         assert(html.includes('aria-hidden="true"'))
         assert.equal((html.match(/<img\b/g)??[]).length,1)
         assert(!/<(?:iframe|video|audio|button|input)\b/.test(html))
@@ -497,7 +497,11 @@ test('real detail rendering and original YouTube cards',async t=>{
       assert(html.includes('aria-label="MIRROR 封面"'))
       assert(html.includes('image-cdn-ak.spotifycdn.com/image/ab67616d00001e02cac7cde695126b200c58052c'))
       assert.equal((html.match(/class="music-player-embed"/g)??[]).length,1)
-      for(const label of ['移动播放器','关闭播放器并停止播放','开启单曲循环','上一首','播放歌曲','下一首']) assert(html.includes('aria-label="'+label+'"'))
+      for(const label of ['移动播放器','关闭播放器并停止播放','上一首','播放歌曲','下一首']) assert(html.includes('aria-label="'+label+'"'))
+      assert(!html.includes('music-player-heading'));assert(!html.includes('music-player-loop'))
+      assert(html.indexOf('music-player-spotify-cover')<html.indexOf('music-player-frame spotify-frame'))
+      assert(html.indexOf('music-player-frame spotify-frame')<html.indexOf('class="music-player-controls"'))
+      assert(html.indexOf('aria-label="下一首"')<html.indexOf('aria-label="关闭播放器并停止播放"'))
       const youtube=renderDock(catalog[0])
       assert(!youtube.includes('music-player-spotify-cover'))
       assert(youtube.includes('music-player-frame youtube-frame'))
@@ -528,7 +532,7 @@ test('real detail rendering and original YouTube cards',async t=>{
         assert(html.includes('aria-label="在 YouTube 打开 '+entry.title.replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll("'",'&#x27;')+'"'))
       }
       assert(!html.includes('class="music-play"'))
-      assert(html.includes('placeholder="搜索"'))
+      assert(!html.includes('placeholder="搜索"'));assert(html.includes('type="search"'));assert(html.includes('sr-only">搜索'))
       assert(!html.includes('music-spotify-sections'))
       assert(!html.includes('<iframe'))
     })

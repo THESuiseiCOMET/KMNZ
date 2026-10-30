@@ -10,7 +10,8 @@ import spotifyIcon from '../assets/icons/brand-spotify.svg'
 
 const releaseLabels = { album: '专辑', ep: 'EP', single: '单曲', compilation: '精选集', unknown: '发行' }
 
-export default function MusicReleaseDetail({ detail, selectedId, onSelect, onBack }: {
+export default function MusicReleaseDetail({ detail, selectedId, onSelect, onBack, panel = false }: {
+  panel?: boolean
   detail: ReleaseView
   selectedId: string | null
   onSelect: (entry: MusicEntry, position?: { discNumber: number; trackNumber: number }) => void
@@ -20,14 +21,14 @@ export default function MusicReleaseDetail({ detail, selectedId, onSelect, onBac
   const metadata = getMusicMetadata(entry)
   const date = musicDate(entry, metadata)
   const heading = useRef<HTMLHeadingElement>(null)
-  useEffect(() => { heading.current?.focus() }, [entry.id])
+  useEffect(() => { heading.current?.focus({ preventScroll: !panel || window.matchMedia('(min-width: 900px)').matches }) }, [entry.id, panel])
   const multipleDiscs = new Set(tracks.map(track => track.discNumber)).size > 1 || tracks.some(track => track.discNumber > 1)
 
   return (
     <section className="music-release-detail" aria-labelledby="music-release-title">
-      <button type="button" className="music-release-back" onClick={onBack}>
-        <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2"><path d="m12 5-7 7 7 7M5 12h14" /></svg>
-        返回 Spotify
+      <button type="button" className={panel ? 'music-release-close' : 'music-release-back'} aria-label={panel ? '关闭专辑曲目' : undefined} onClick={onBack}>
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2"><path d={panel ? 'm6 6 12 12M18 6 6 18' : 'm12 5-7 7 7 7M5 12h14'} /></svg>
+        {!panel && '返回 Spotify'}
       </button>
       <div className="music-release-header">
         <div className="music-art music-art-spotify music-release-cover">

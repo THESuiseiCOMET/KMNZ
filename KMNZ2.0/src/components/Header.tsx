@@ -12,9 +12,7 @@ interface HeaderProps {
   theme: 'light' | 'dark'
   onToggleTheme: () => void
   onThemeSettled?: (theme: 'light' | 'dark') => void
-  onOpenSettings?: () => void
-  settingsOpen?: boolean
-  settingsPanel?: ReactNode
+  playbackControls?: ReactNode
   onHideNavigation?: () => void
   concealed?: boolean
 }
@@ -33,9 +31,7 @@ export default function Header({
                                  theme,
                                  onToggleTheme,
                                  onThemeSettled,
-                                 onOpenSettings,
-                                 settingsOpen = false,
-                                 settingsPanel,
+                                 playbackControls,
                                  onHideNavigation,
                                  concealed = false
                                }: HeaderProps) {
@@ -179,6 +175,7 @@ export default function Header({
             </div>
 
             <div className="header-preferences">
+            {playbackControls}
             {/* 深浅色主题切换按钮 */}
             <button
                 className="theme-toggle"
@@ -218,15 +215,7 @@ export default function Header({
           {onHideNavigation && <button type="button" className="navigation-toggle" aria-label="隐藏顶部导航栏" title="隐藏顶部导航栏" onClick={onHideNavigation}>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6" /></svg>
           </button>}
-          <div className="header-settings">
-          <button type="button" className="settings-toggle" aria-label="播放设置" title="播放设置" aria-expanded={settingsOpen} aria-controls="playback-settings" onClick={onOpenSettings}>
-            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" aria-hidden="true">
-              <path d="m9 3-.5 2.1-1.8 1L4.6 5.5l-3 5.2 1.6 1.5v2.1l-1.6 1.4 3 5.2 2.1-.6 1.8 1L9 23h6l.5-2.1 1.8-1 2.1.6 3-5.2-1.6-1.4v-2.1l1.6-1.5-3-5.2-2.1.6-1.8-1L15 3Z" transform="translate(1 0) scale(.92)" />
-              <circle cx="12" cy="12" r="3.1" />
-            </svg>
-          </button>
-          {settingsPanel}
-          </div>
+
             </div>
           </nav>
         </div>

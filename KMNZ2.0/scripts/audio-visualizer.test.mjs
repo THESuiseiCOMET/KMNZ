@@ -40,6 +40,11 @@ test('capture requests a browser tab with audio and never connects sound to spea
   assert.deepEqual(session.getState(),{context:'running',muted:false})
   assert.equal(h.analyser.fftSize,2048)
   assert.equal(h.calls.filter(call=>call==='connect-analyser').length,1)
+  assert.equal(h.video.readyState,'ended')
+  assert.equal(h.video.listenerCount,0)
+  assert.equal(h.sound.readyState,'live')
+  assert.equal(h.sound.listenerCount,1)
+  assert.equal(h.context.state,'running')
   session.stop();session.stop()
   assert.equal(h.calls.filter(call=>call==='close-context').length,1)
   assert.equal(h.video.listenerCount,0);assert.equal(h.sound.listenerCount,0)
@@ -56,15 +61,30 @@ test('missing audio, wrong surface and context errors clean every captured track
   }
 })
 
-test('ending either shared track ends one session and releases its resources',async()=>{
-  for(const kind of ['video','sound']) {
-    const h=environment(),session=await captureTabAudio(h.env)
-    let ended=0;session.onEnded(()=>ended++)
-    h[kind].end();h[kind].end()
-    assert.equal(ended,1)
-    assert.equal(h.context.state,'closed')
-    assert.equal(h.video.readyState,'ended');assert.equal(h.sound.readyState,'ended')
-  }
+test('releasing unused tab video leaves audio analysis alive',async()=>{
+  const h=environment(),session=await captureTabAudio(h.env)
+  let ended=0;session.onEnded(()=>ended++)
+  h.video.end()
+  assert.equal(ended,0)
+  assert.equal(h.sound.readyState,'live')
+  assert.equal(h.context.state,'running')
+  assert.deepEqual(session.getState(),{context:'running',muted:false})
+  assert.equal(h.calls.filter(call=>call==='disconnect-source').length,0)
+  session.stop()
+  assert.equal(ended,0)
+  assert.equal(h.sound.readyState,'ended')
+  assert.equal(h.context.state,'closed')
+})
+
+test('ending shared audio ends exactly one session and releases all remaining resources',async()=>{
+  const h=environment(),session=await captureTabAudio(h.env)
+  let ended=0;session.onEnded(()=>ended++)
+  h.sound.end();h.sound.end()
+  assert.equal(ended,1)
+  assert.equal(h.context.state,'closed')
+  assert.equal(h.video.readyState,'ended');assert.equal(h.sound.readyState,'ended')
+  assert.equal(h.sound.listenerCount,0)
+  session.stop();assert.equal(h.calls.filter(call=>call==='close-context').length,1)
 })
 
 test('sharing that ends during initialization never produces an active session',async()=>{
@@ -197,7 +217,7 @@ function hookHarness() {
   new Function('require','module','exports',hookCode)(name=>name==='react'?react:{captureErrorMessage,captureTabAudio(){return capture('tab')},captureInputAudio(id){return capture(id)},readAudioInputs(){inputReads++;return new Promise(resolve=>{resolveInputs=resolve})}},module,module.exports)
   let stopped=0,ended
   const session={stop(){stopped++},onEnded(fn){ended=fn}}
-  return {render(){cursor=0;return module.exports.useAudioVisualizer()},resolve(){resolveCapture(session)},reject(){rejectCapture(new Error('denied'))},resolveInputs(devices){resolveInputs(devices)},sourceCalls,get inputReads(){return inputReads},end(){ended()},unmount(){cleanups.forEach(fn=>fn?.())},get stopped(){return stopped},get calls(){return calls}}
+  return {render(){cursor=0;return module.exports.useAudioVisualizer()},resolve(){resolveCapture(session)},reject(reason=new Error('denied')){rejectCapture(reason)},resolveInputs(devices){resolveInputs(devices)},sourceCalls,get inputReads(){return inputReads},end(){ended()},unmount(){cleanups.forEach(fn=>fn?.())},get stopped(){return stopped},get calls(){return calls}}
 }
 
 test('rapid activation requests share one chooser and do not fabricate an active session',async()=>{
@@ -220,23 +240,17 @@ test('rejection stays inactive and track-end restores the idle presentation',asy
   const h=hookHarness(),first=h.render().start();h.reject()
   assert.equal(await first,false);assert.equal(h.render().session,null);assert.equal(h.render().error,'denied')
   const second=h.render().start();h.resolve();await second;h.end()
-  assert.equal(h.render().session,null);assert.match(h.render().error,/共享已结束/)
+  assert.equal(h.render().session,null);assert.equal(h.render().error,null)
 })
 
-test('input activation routes to the chosen device, and disconnection retains the player but ends analysis',async()=>{
-  const h=hookHarness(),first=h.render().start({kind:'input',deviceId:'stereo-mix'})
-  assert.deepEqual(h.sourceCalls,['stereo-mix']);h.resolve();assert.equal(await first,true)
-  h.end();assert.equal(h.render().session,null);assert.match(h.render().error,/音频输入已断开/)
-})
-
-test('device lookup is explicit, single-flight and discards a result after closing',async()=>{
-  const h=hookHarness();assert.equal(h.inputReads,0)
-  const lookup=h.render().refreshInputs();await h.render().refreshInputs();assert.equal(h.inputReads,1)
-  assert.equal(await h.render().start(),false)
-  h.render().stop();h.resolveInputs([{deviceId:'stereo-mix',label:'立体声混音'}]);await lookup
-  assert.deepEqual(h.render().inputs,[]);assert.equal(h.render().loadingInputs,false)
-  const next=h.render().refreshInputs();h.resolveInputs([{deviceId:'stereo-mix',label:'立体声混音'}]);await next
-  assert.equal(h.render().inputs[0].deviceId,'stereo-mix')
+test('visualizer always requests tab audio and exposes no input device configuration',async()=>{
+  const h=hookHarness(),hook=h.render()
+  assert.equal('refreshInputs' in hook,false);assert.equal('inputs' in hook,false)
+  const first=hook.start({kind:'input',deviceId:'old-saved-device'})
+  assert.deepEqual(h.sourceCalls,['tab']);assert.equal(h.inputReads,0)
+  h.resolve();assert.equal(await first,true)
+  h.end();assert.equal(h.render().session,null);assert.equal(h.render().error,null)
+  h.render().stop();assert.equal(h.render().error,null)
 })
 
 const viewSource=await readFile(new URL('../src/components/AudioVisualizer.tsx',import.meta.url),'utf8')
@@ -287,4 +301,15 @@ test('home visualization follows available size and unmount releases drawing wit
     h.step(100);assert(h.strokes>0);assert.deepEqual(h.dimensions,[1280,720])
     h.resize(390,844);h.step(200);assert.deepEqual(h.dimensions,[390,844])
   } finally {h.cleanup()}
+})
+
+test('declining or cancelling tab sharing silently returns to idle and permits retry',async()=>{
+  for(const name of ['NotAllowedError','AbortError']){
+    const h=hookHarness(),first=h.render().start()
+    const error=new Error('permission declined');error.name=name;h.reject(error)
+    assert.equal(await first,false)
+    assert.equal(h.render().session,null);assert.equal(h.render().pending,false);assert.equal(h.render().error,null)
+    const retry=h.render().start();h.resolve();assert.equal(await retry,true);assert.equal(h.calls,2)
+    h.render().stop();h.unmount()
+  }
 })

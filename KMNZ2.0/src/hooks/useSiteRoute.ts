@@ -4,6 +4,12 @@ import type { MusicRoute, SiteRoute } from '../lib/siteRoute'
 import type { Page } from '../types'
 
 const scrollKey = 'kmnzRouteScroll'
+function releasePanelChange(from: SiteRoute, to: SiteRoute): boolean {
+  return from.page === 'music' && to.page === 'music'
+    && from.music.platform === 'spotify' && to.music.platform === 'spotify'
+    && from.music.releaseSourceId !== to.music.releaseSourceId
+    && siteRouteHash({ ...from, music: { ...from.music, releaseSourceId: null } }) === siteRouteHash({ ...to, music: { ...to.music, releaseSourceId: null } })
+}
 function storedScroll(hash: string): number {
   try { const map = JSON.parse(sessionStorage.getItem(scrollKey) ?? '{}'); const value = map[hash]; return typeof value === 'number' && Number.isFinite(value) && value >= 0 ? value : 0 } catch { return 0 }
 }
@@ -31,13 +37,15 @@ export function useSiteRoute(releaseIds: ReadonlySet<string>, transition?: (from
       return
     }
     saveScroll(before)
+    const keepScroll = releasePanelChange(latest.current, next)
+    if (keepScroll) window.cancelAnimationFrame(frame.current)
     const update = () => {
       const url = window.location.pathname + window.location.search + hash
       if (replace) window.history.replaceState(window.history.state, '', url)
       else window.history.pushState({ kmnzFrom: before }, '', url)
       latest.current = next
       setRoute(next)
-      if (!replace) { window.cancelAnimationFrame(frame.current); frame.current = window.requestAnimationFrame(() => window.scrollTo(0, 0)) }
+      if (!replace && !keepScroll) { window.cancelAnimationFrame(frame.current); frame.current = window.requestAnimationFrame(() => window.scrollTo(0, 0)) }
     }
     if (transition) transition(latest.current.page, next.page, update, { from: latest.current.music, to: next.music })
     else update()
@@ -55,11 +63,13 @@ export function useSiteRoute(releaseIds: ReadonlySet<string>, transition?: (from
       if (hash === before) return
       saveScroll(before)
       if (next.page !== 'music') next.music = latest.current.music
+      const keepScroll = releasePanelChange(latest.current, next)
+      if (keepScroll) window.cancelAnimationFrame(frame.current)
       const update = () => {
         latest.current = next
         setRoute(next)
         if (hash !== window.location.hash) window.history.replaceState(window.history.state, '', window.location.pathname + window.location.search + hash)
-        scrollToRoute(hash)
+        if (!keepScroll) scrollToRoute(hash)
       }
       if (transition) transition(latest.current.page, next.page, update, { from: latest.current.music, to: next.music })
       else update()

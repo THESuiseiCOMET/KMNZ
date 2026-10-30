@@ -97,10 +97,19 @@ export function resolveMetadata(entry: MusicEntry, automatic: MusicMetadataIndex
   }
 }
 
+let youtubeDateFormatter: Intl.DateTimeFormat | undefined
+
+function dateOrder(entry: MusicEntry, metadata: MusicMetadata): string | number | null {
+  if (entry.platform === 'youtube' && metadata.publishedAt) return Date.parse(metadata.publishedAt.value)
+  if (entry.platform === 'spotify' && metadata.releaseDate) return metadata.releaseDate.value
+  return null
+}
+
 export function musicDate(entry: MusicEntry, metadata: MusicMetadata): { label: string; dateTime: string; order: string | number } | null {
   if (entry.platform === 'youtube' && metadata.publishedAt) {
     const value = metadata.publishedAt.value
-    const parts = new Intl.DateTimeFormat('en-CA', {timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit'}).formatToParts(new Date(value))
+    youtubeDateFormatter ??= new Intl.DateTimeFormat('en-CA', {timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit'})
+    const parts = youtubeDateFormatter.formatToParts(new Date(value))
     const part = (type: Intl.DateTimeFormatPartTypes) => parts.find(item => item.type === type)?.value ?? ''
     return { label: [part('year'), part('month'), part('day')].join('.'), dateTime: value, order: Date.parse(value) }
   }
@@ -112,11 +121,11 @@ export function musicDate(entry: MusicEntry, metadata: MusicMetadata): { label: 
 }
 
 export function sortMusicEntries(entries: MusicEntry[], metadata: MusicMetadataIndex, manual: MusicMetadataIndex = {}): MusicEntry[] {
-  return entries.map((entry, index) => ({entry, index, date: musicDate(entry, resolveMetadata(entry, metadata, manual))}))
+  return entries.map((entry, index) => ({entry, index, order: dateOrder(entry, resolveMetadata(entry, metadata, manual))}))
     .sort((a, b) => {
-      if (!a.date || !b.date) return Number(Boolean(b.date)) - Number(Boolean(a.date)) || a.index - b.index
-      const order = typeof a.date.order === 'number' && typeof b.date.order === 'number'
-        ? b.date.order - a.date.order : String(b.date.order).localeCompare(String(a.date.order))
+      if (a.order === null || b.order === null) return Number(b.order !== null) - Number(a.order !== null) || a.index - b.index
+      const order = typeof a.order === 'number' && typeof b.order === 'number'
+        ? b.order - a.order : String(b.order).localeCompare(String(a.order))
       return order || a.index - b.index
     }).map(item => item.entry)
 }

@@ -9,6 +9,7 @@ const code = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKi
 function harness({ supported = true, reduced = false, throws = false } = {}) {
   const prior = ['window', 'document'].map(name => [name, Object.getOwnPropertyDescriptor(globalThis, name)])
   const transitions = [], cleanups = [], root = { dataset: {} }
+  let cardPreparations = 0, cardReleases = 0
   const pages = ['home', 'music', 'members', 'history', 'about', 'future-page']
   const document = {
     documentElement: root,
@@ -30,10 +31,10 @@ function harness({ supported = true, reduced = false, throws = false } = {}) {
   Object.defineProperty(globalThis, 'window', { configurable: true, value: { matchMedia: () => ({ matches: reduced }) } })
   const react = { useRef: value => ({ current: value }), useCallback: fn => fn, useEffect: fn => cleanups.push(fn()) }
   const module = { exports: {} }
-  new Function('require', 'module', 'exports', code)(name => name === 'react' ? react : { flushSync: fn => fn() }, module, module.exports)
+  new Function('require', 'module', 'exports', code)(name => name === 'react' ? react : name === '../lib/musicCardTransition' ? { prepareVisibleMusicCards() { cardPreparations++; return () => cardReleases++ } } : { flushSync: fn => fn() }, module, module.exports)
   const run = module.exports.usePageTransition()
   return {
-    run, root, transitions,
+    run, root, transitions, cards: () => ({ prepared: cardPreparations, released: cardReleases }),
     async cleanup() {
       cleanups.forEach(fn => fn?.())
       for (const transition of transitions) transition.finish()
@@ -192,4 +193,30 @@ test('YouTube primary, period and member toggles animate results, including dese
       h.transitions.at(-1).commit();h.transitions.at(-1).finish();await Promise.resolve()
     }
   } finally {await h.cleanup()}
+})
+
+test('category transitions capture visible cards before and after the update and release markers on completion', async () => {
+  const h = harness(), from = musicRoute({ youtubeCategory: 'original' }), to = musicRoute({ youtubeCategory: 'cover' })
+  try {
+    h.run('music', 'music', () => {}, { from, to })
+    assert.deepEqual(h.cards(), { prepared: 1, released: 0 })
+    h.transitions[0].commit()
+    assert.deepEqual(h.cards(), { prepared: 2, released: 1 })
+    h.transitions[0].finish(); await Promise.resolve()
+    assert.deepEqual(h.cards(), { prepared: 2, released: 2 })
+  } finally { await h.cleanup() }
+})
+
+test('rapid category switches and unmount clean only their own captures; reduced motion never prepares snapshots', async () => {
+  const h = harness(), from = musicRoute({ youtubeCategory: 'original' }), to = musicRoute({ youtubeCategory: 'cover' })
+  h.run('music', 'music', () => {}, { from, to })
+  h.run('music', 'music', () => {}, { from, to })
+  assert.deepEqual(h.cards(), { prepared: 2, released: 1 })
+  h.transitions[0].commit(); h.transitions[0].finish(); await Promise.resolve()
+  assert.deepEqual(h.cards(), { prepared: 2, released: 1 })
+  await h.cleanup()
+  assert.deepEqual(h.cards(), { prepared: 2, released: 2 })
+  const reduced = harness({ reduced: true })
+  try { reduced.run('music', 'music', () => {}, { from, to }); assert.deepEqual(reduced.cards(), { prepared: 0, released: 0 }) }
+  finally { await reduced.cleanup() }
 })

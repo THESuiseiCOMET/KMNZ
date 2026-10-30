@@ -5,6 +5,7 @@ import type { MusicEntry } from '../data/music'
 import type { PlaybackMode, PlayerObservation, PlaybackResume, PlayerCheckpoint } from '../types/playback'
 import { clampPlayerPosition } from '../lib/playerControls'
 import type { PlayerPosition } from '../lib/playerControls'
+import { resolvePlayerPresentation } from '../lib/playbackPreferences'
 import type { PlayerPresentation } from '../lib/playbackPreferences'
 import { useOfficialPlayer } from '../hooks/useOfficialPlayer'
 import { getMusicMetadata } from '../data/musicMetadata'
@@ -40,7 +41,9 @@ function PlayerIcon({ source }: { source: string }) {
   return <span className="music-player-icon" style={{ maskImage: mask, WebkitMaskImage: mask }} aria-hidden="true" />
 }
 
-export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode = 'sequence', onModeChange, canPrevious = true, canNext = true, onEnded, onObservation, onCheckpoint, resume, presentation = 'floating', videoFrosted = true }: PlayerDockProps) {
+export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode = 'sequence', onModeChange, canPrevious = true, canNext = true, onEnded, onObservation, onCheckpoint, resume, presentation: preferredPresentation = 'floating', videoFrosted = true }: PlayerDockProps) {
+  const presentation = resolvePlayerPresentation(entry.platform, preferredPresentation)
+  const spotify = entry.platform === 'spotify'
   const loop = mode === 'repeat-one'
   const [position, setPosition] = useState<PlayerPosition | null>(null)
   const [dragging, setDragging] = useState(false)
@@ -177,7 +180,7 @@ export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode
   }
 
   const chrome = <div className={presentation === 'cinema' ? 'is-cinema cinema-player-chrome' : 'music-player-chrome'}>
-      <div className="music-player-heading">
+      {!spotify && <div className="music-player-heading">
         <button
           type="button"
           className="music-player-drag-handle"
@@ -196,12 +199,15 @@ export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode
         <div className="music-player-actions">
           <button type="button" onClick={onClose} aria-label="关闭播放器并停止播放" title="关闭播放器">×</button>
         </div>
-      </div>
+      </div>}
       <div className="music-player-controls" role="group" aria-label={presentation === 'cinema' ? entry.title + ' · 播放控制' : '播放控制'}>
-        <button type="button" className="music-player-loop" onClick={() => onModeChange?.(loop ? 'sequence' : 'repeat-one')} aria-label={loop ? '关闭单曲循环' : '开启单曲循环'} title={ready && canRepeat ? (loop ? '关闭单曲循环' : '开启单曲循环') : '循环控制暂不可用'} aria-pressed={loop} disabled={!ready || !canRepeat}><PlayerIcon source={loopIcon} /></button>
+        {!spotify && <button type="button" className="music-player-loop" onClick={() => onModeChange?.(loop ? 'sequence' : 'repeat-one')} aria-label={loop ? '关闭单曲循环' : '开启单曲循环'} title={ready && canRepeat ? (loop ? '关闭单曲循环' : '开启单曲循环') : '循环控制暂不可用'} aria-pressed={loop} disabled={!ready || !canRepeat}><PlayerIcon source={loopIcon} /></button>}
         <button type="button" onClick={() => onSkip(-1)} aria-label="上一首" title="上一首" disabled={!canPrevious || !canChangeSource}><PlayerIcon source={previousIcon} /></button>
         <button type="button" className="music-player-toggle" onClick={togglePlayback} disabled={!ready} aria-label={paused ? '播放歌曲' : '暂停歌曲'} title={error ?? (paused ? '播放' : '暂停')}><PlayerIcon source={paused ? playIcon : pauseIcon} /></button>
         <button type="button" onClick={() => onSkip(1)} aria-label="下一首" title="下一首" disabled={!canNext || !canChangeSource}><PlayerIcon source={nextIcon} /></button>
+        {spotify && <button type="button" className="music-player-close" onClick={onClose} aria-label="关闭播放器并停止播放" title="关闭播放器">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+        </button>}
         {entry.platform === 'youtube' && (
           <div className="music-player-volume" ref={volumeControlRef}>
             <button
@@ -233,17 +239,20 @@ export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode
   return (
     <aside
       ref={panelRef}
-      className={'music-player-panel' + (presentation === 'cinema' ? ' is-cinema' : '') + (presentation === 'cinema' && videoFrosted ? ' is-video-frosted' : '') + (dragging ? ' is-dragging' : '')}
+      className={'music-player-panel' + (presentation === 'cinema' ? ' is-cinema' : '') + (presentation === 'cinema' && videoFrosted ? ' is-video-frosted' : '') + (dragging ? ' is-dragging' : '') + (spotify ? ' music-player-panel-spotify' : '')}
       aria-label="当前音乐播放器"
       style={presentation === 'floating' && position ? { left: position.x, top: position.y, right: 'auto', bottom: 'auto' } : undefined}
     >
-      {presentation === 'cinema' && controlHost ? createPortal(chrome, controlHost) : chrome}
-      {entry.platform === 'spotify' && <div className="music-player-spotify-cover" role="img" aria-label={entry.title + ' 封面'}>
-        <MusicCover entry={entry} metadata={getMusicMetadata(entry)} />
-      </div>}
+      {!spotify && (presentation === 'cinema' && controlHost ? createPortal(chrome, controlHost) : chrome)}
+      {spotify && <button type="button" className="music-player-spotify-cover music-player-cover-drag" aria-label="移动播放器" title="拖动播放器"
+        onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={stopDrag} onPointerCancel={stopDrag} onLostPointerCapture={stopDrag} onKeyDown={moveWithKeyboard}
+        onDragStart={event => event.preventDefault()}>
+        <span className="music-player-cover-image" role="img" aria-label={entry.title + ' 封面'}><MusicCover entry={entry} metadata={getMusicMetadata(entry)} /></span>
+      </button>}
       <div className={entry.platform === 'youtube' ? 'music-player-frame youtube-frame' : 'music-player-frame spotify-frame'}>
         <div ref={hostRef} className="music-player-embed" />
       </div>
+      {spotify && chrome}
       {entry.platform === 'youtube' && <div className="cinema-video-glass" aria-hidden="true" />}
     </aside>
   )

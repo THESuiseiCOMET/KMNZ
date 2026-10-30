@@ -39,7 +39,7 @@ function harness(initial='#/music/spotify?q=KMNZ',transition) {
   const win={location,history,scrollY:0,scrollTo(_x,y){this.scrollY=y},requestAnimationFrame(fn){frames.set(++frameId,fn);return frameId},cancelAnimationFrame(id){frames.delete(id)},addEventListener(name,fn){listeners.set(name,fn)},removeEventListener(name){listeners.delete(name)}}
   Object.defineProperty(globalThis,'window',{configurable:true,value:win})
   Object.defineProperty(globalThis,'sessionStorage',{configurable:true,value:{getItem:key=>store.get(key)??null,setItem:(key,value)=>store.set(key,value)}})
-  const react={useState(value){const i=cursor++;slots[i]??={value:typeof value==='function'?value():value};return [slots[i].value,next=>{slots[i].value=next}]},useRef(value){const i=cursor++;return slots[i]??={current:value}},useCallback(fn){cursor++;return fn},useEffect(fn,deps){const i=cursor++;if(!slots[i]||deps.some((v,j)=>!Object.is(v,slots[i].deps[j])))effects.push(()=>{slots[i]?.cleanup?.();slots[i]={deps,cleanup:fn()}})}}
+  const react={useState(value){const i=cursor++;slots[i]??={value:typeof value==='function'?value():value};return [slots[i].value,next=>{slots[i].value=next}]},useRef(value){const i=cursor++;return slots[i]??={current:value}},useCallback(fn,deps){const i=cursor++;if(!slots[i]||deps.some((value,j)=>!Object.is(value,slots[i].deps[j])))slots[i]={deps,value:fn};return slots[i].value},useEffect(fn,deps){const i=cursor++;if(!slots[i]||deps.some((v,j)=>!Object.is(v,slots[i].deps[j])))effects.push(()=>{slots[i]?.cleanup?.();slots[i]={deps,cleanup:fn()}})}}
   const module={exports:{}}
   new Function('require','module','exports',code)(name=>name==='react'?react:routes,module,module.exports)
   return {render(){cursor=0;const result=module.exports.useSiteRoute(releases,transition);effects.splice(0).forEach(fn=>fn());return result},win,entries,store,
@@ -134,5 +134,24 @@ test('YouTube filters restore both levels after history navigation and refresh, 
     assert.equal(view.route.music.search,'Boarding');assert.equal(h.win.location.pathname,'/KMNZ/')
     view.navigate('about');view=h.render();view.navigate('music');view=h.render()
     assert.equal(view.route.music.youtubeGroup,'lita-liz')
+  } finally {h.cleanup()}
+})
+
+test('opening, switching and closing Spotify track panels preserve list scroll and browser history',()=>{
+  const h=harness('#/music/spotify?category=ep&q=DROPS')
+  try {
+    let view=h.render();h.flush();h.win.scrollY=480
+    view.changeMusic({...view.route.music,releaseSourceId:'sp-album-1'});view=h.render();h.flush()
+    assert.equal(h.win.scrollY,480);assert.equal(view.route.music.releaseSourceId,'sp-album-1')
+    assert.equal(view.route.music.search,'DROPS');assert.equal(view.route.music.category,'ep')
+    h.win.scrollY=640;view.backFromRelease();view=h.render();h.flush()
+    assert.equal(h.win.scrollY,640);assert.equal(view.route.music.releaseSourceId,null)
+    view.changeMusic({...view.route.music,releaseSourceId:'sp-album-1'});view=h.render();h.flush()
+    view.changeMusic({...view.route.music,releaseSourceId:'sp-second-album'});view=h.render();h.flush()
+    assert.equal(view.route.music.releaseSourceId,'sp-second-album');assert.equal(h.win.scrollY,640)
+    view.backFromRelease();view=h.render();h.flush()
+    assert.equal(view.route.music.releaseSourceId,null);assert.equal(h.win.scrollY,640)
+    view.changeMusic({...view.route.music,platform:'youtube'});view=h.render();h.flush()
+    assert.equal(h.win.scrollY,0)
   } finally {h.cleanup()}
 })

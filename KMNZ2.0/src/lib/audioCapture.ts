@@ -93,7 +93,7 @@ async function analyseStream(stream: MediaStream, environment: AnalysisEnvironme
   const stop = () => {
     if (stopped) return
     stopped = true
-    tracks.forEach(track => { track.removeEventListener('ended', handleEnded); track.stop() })
+    tracks.forEach(track => { track.removeEventListener('ended', handleEnded); if (track.readyState !== 'ended') track.stop() })
     source?.disconnect()
     analyser?.disconnect()
     if (context && context.state !== 'closed') void context.close().catch(() => {})
@@ -118,7 +118,9 @@ async function analyseStream(stream: MediaStream, environment: AnalysisEnvironme
     source.connect(analyser)
     await context.resume()
     if (tracks.some(track => track.readyState !== 'live')) throw new Error(selected.kind === 'tab' ? '音频共享已结束，请重新开启。' : '音频输入已断开，请重新选择设备。')
-    tracks.forEach(track => track.addEventListener('ended', handleEnded))
+    // Keep only audio: visible tab capture forces Chromium's fullscreen-within-tab.
+    if (selected.kind === 'tab') stream.getVideoTracks().forEach(track => track.stop())
+    audio.forEach(track => track.addEventListener('ended', handleEnded))
     return {
       analyser, sampleRate: context.sampleRate, sourceKind: selected.kind,
       getState: () => ({ context: context!.state, muted: audio.some(track => track.muted) }),
