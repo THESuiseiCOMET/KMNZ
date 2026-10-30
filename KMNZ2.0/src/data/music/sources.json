@@ -13,6 +13,13 @@
       "subtitle": "Official Music Video · Prod. by TAK",
       "year": 2025,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -29,6 +36,13 @@
       "subtitle": "Official Music Video",
       "year": 2025,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -45,6 +59,13 @@
       "subtitle": "Official Music Video · Prod. by E TICKET PRODUCTION",
       "year": 2025,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -61,6 +82,13 @@
       "subtitle": "Official Music Video · Prod. by ☆Taku Takahashi",
       "year": 2024,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -77,6 +105,13 @@
       "subtitle": "Official Music Video · Prod. by ミツキヨ",
       "year": 2024,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -93,6 +128,13 @@
       "subtitle": "Official Music Video · Prod. by Snail's House",
       "year": 2024,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -109,6 +151,13 @@
       "subtitle": "Official Music Video · Prod. by nerdwitchkomugichan",
       "year": 2023,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -1421,7 +1470,8 @@
       "subtitle": "Official Single",
       "year": 2026,
       "era": "new"
-    }
+    },
+    "listed": false
   },
   {
     "id": "sp-stray-cute-stray-cute",
@@ -1434,6 +1484,7 @@
       "songId": "song-stray-cute-stray-cute",
       "releaseId": "release-stray-cute"
     },
+    "listed": false,
     "display": {
       "subtitle": "STRAY CUTE",
       "year": 2026,
@@ -2802,6 +2853,13 @@
       "subtitle": "Official Music Video",
       "year": 2026,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -2818,6 +2876,13 @@
       "subtitle": "Studio Live Session",
       "year": 2023,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -2835,6 +2900,13 @@
       "subtitle": "Official Music Video",
       "year": 2026,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=2QWD8NbEGac"
+      ]
     }
   },
   {
@@ -2851,6 +2923,13 @@
       "subtitle": "Official Music Video",
       "year": 2021,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -2868,6 +2947,13 @@
       "subtitle": "Official Music Video",
       "year": 2025,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -2884,6 +2970,13 @@
       "subtitle": "Official Music Video",
       "year": 2018,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -2900,6 +2993,13 @@
       "subtitle": "Official Music Video",
       "year": 2025,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -2917,6 +3017,13 @@
       "subtitle": "Official Music Video",
       "year": 2026,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -2933,6 +3040,13 @@
       "subtitle": "Studio Live Session",
       "year": 2023,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -2949,6 +3063,17 @@
       "subtitle": "Official Music Video",
       "year": 2023,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3",
+        "https://www.youtube.com/watch?v=CXQN1eVmzMA"
+      ],
+      "performers": [
+        "LITA"
+      ]
     }
   },
   {
@@ -2965,6 +3090,13 @@
       "subtitle": "Official Music Video",
       "year": 2020,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -2982,6 +3114,13 @@
       "subtitle": "Official Music Video",
       "year": 2019,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -2999,6 +3138,13 @@
       "subtitle": "Official Music Video",
       "year": 2022,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -3016,6 +3162,13 @@
       "subtitle": "Official Music Video",
       "year": 2026,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -3033,6 +3186,13 @@
       "subtitle": "Official Music Video",
       "year": 2026,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -3050,6 +3210,13 @@
       "subtitle": "Official Music Video",
       "year": 2025,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -3066,6 +3233,13 @@
       "subtitle": "Official Music Video",
       "year": 2020,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -3083,6 +3257,13 @@
       "subtitle": "Official Music Video · Music Only",
       "year": 2018,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -3100,6 +3281,13 @@
       "subtitle": "Official Music Video",
       "year": 2024,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -3117,6 +3305,13 @@
       "subtitle": "Official Music Video",
       "year": 2024,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -3133,6 +3328,13 @@
       "subtitle": "Official Music Video",
       "year": 2023,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -3150,6 +3352,13 @@
       "subtitle": "Official Music Video",
       "year": 2019,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -3167,6 +3376,13 @@
       "subtitle": "Official Music Video",
       "year": 2026,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -3183,6 +3399,13 @@
       "subtitle": "Official Music Video",
       "year": 2019,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -3200,6 +3423,13 @@
       "subtitle": "Official Music Video",
       "year": 2026,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -3217,6 +3447,13 @@
       "subtitle": "Official Music Video",
       "year": 2020,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -3234,6 +3471,13 @@
       "subtitle": "Official Music Video",
       "year": 2026,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -3251,6 +3495,13 @@
       "subtitle": "Official Music Video",
       "year": 2024,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -3267,6 +3518,13 @@
       "subtitle": "Official Music Video",
       "year": 2023,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -3284,6 +3542,13 @@
       "subtitle": "Official Music Video",
       "year": 2025,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -3301,6 +3566,13 @@
       "subtitle": "Official Music Video",
       "year": 2026,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -3318,6 +3590,13 @@
       "subtitle": "Official Music Video",
       "year": 2026,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aVVZFVNmlDBVDKLhR6mnZi"
+      ]
     }
   },
   {
@@ -3334,6 +3613,13 @@
       "subtitle": "Official Music Video",
       "year": 2018,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -3350,6 +3636,13 @@
       "subtitle": "Official Music Video",
       "year": 2021,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -3366,6 +3659,13 @@
       "subtitle": "Official Music Video",
       "year": 2021,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
     }
   },
   {
@@ -3383,6 +3683,13 @@
       "subtitle": "Official Music Video",
       "year": 2026,
       "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=ZEhcGNJgc6Q"
+      ]
     }
   },
   {
@@ -3399,6 +3706,17 @@
       "subtitle": "Official Music Video",
       "year": 2023,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3",
+        "https://www.youtube.com/watch?v=_PK2wC3v-qQ"
+      ],
+      "performers": [
+        "LIZ"
+      ]
     }
   },
   {
@@ -3415,6 +3733,5937 @@
       "subtitle": "Official Music Video",
       "year": 2020,
       "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-boarding-tina",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "tUXZqCTGk_o",
+    "externalUrl": "https://www.youtube.com/watch?v=tUXZqCTGk_o",
+    "target": {
+      "type": "song",
+      "songId": "song-boarding-tina"
+    },
+    "display": {
+      "subtitle": "Official Music Video",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "performers": [
+        "TINA"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=tUXZqCTGk_o"
+      ]
+    }
+  },
+  {
+    "id": "yt-overnight-batsu-remix",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "KkQ1yTGXunI",
+    "externalUrl": "https://www.youtube.com/watch?v=KkQ1yTGXunI",
+    "target": {
+      "type": "song",
+      "songId": "song-harmonics-overnight-batsu-remix"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2023,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-empty-release",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "MgEjEqDceD4",
+    "externalUrl": "https://www.youtube.com/watch?v=MgEjEqDceD4",
+    "target": {
+      "type": "song",
+      "songId": "song-empty-release"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2023,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-kickin-the-pride",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "qnumu_Cipjc",
+    "externalUrl": "https://www.youtube.com/watch?v=qnumu_Cipjc",
+    "target": {
+      "type": "song",
+      "songId": "song-our-days-kickin-the-pride"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2023,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-mc-battle",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "NVdQZ1k00N4",
+    "externalUrl": "https://www.youtube.com/watch?v=NVdQZ1k00N4",
+    "target": {
+      "type": "song",
+      "songId": "song-our-days-mc-battle"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2023,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-invader-liz",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "eS0lah0LnD8",
+    "externalUrl": "https://www.youtube.com/watch?v=eS0lah0LnD8",
+    "target": {
+      "type": "song",
+      "songId": "song-invader-feat-liz"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2023,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-sirbiz-lita",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "Ry6fZqvlr1Q",
+    "externalUrl": "https://www.youtube.com/watch?v=Ry6fZqvlr1Q",
+    "target": {
+      "type": "song",
+      "songId": "song-sirbiz-feat-lita"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-sunny-day-morning",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "tRFdH6qgiT8",
+    "externalUrl": "https://www.youtube.com/watch?v=tRFdH6qgiT8",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnstreet-sunny-day-morning"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-homey",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "ooXLGSjBy_c",
+    "externalUrl": "https://www.youtube.com/watch?v=ooXLGSjBy_c",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnstreet-homey"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-we-are-back-audio",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "u9kefr7oqr4",
+    "externalUrl": "https://www.youtube.com/watch?v=u9kefr7oqr4",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnstreet-we-are-back"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-back-to-the-kids",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "K4k-FfyDsYU",
+    "externalUrl": "https://www.youtube.com/watch?v=K4k-FfyDsYU",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnstreet-back-to-the-kids"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-haze",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "RqSWZlksaXQ",
+    "externalUrl": "https://www.youtube.com/watch?v=RqSWZlksaXQ",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnstreet-haze"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-skool",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "aSJKXIYUCRk",
+    "externalUrl": "https://www.youtube.com/watch?v=aSJKXIYUCRk",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnstreet-skool"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-girl-liz",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "Uig3_lcy2Cw",
+    "externalUrl": "https://www.youtube.com/watch?v=Uig3_lcy2Cw",
+    "target": {
+      "type": "song",
+      "songId": "song-girl-feat-liz"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-kick-it-kakeru-remix",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "7QSTfuAGVcU",
+    "externalUrl": "https://www.youtube.com/watch?v=7QSTfuAGVcU",
+    "target": {
+      "type": "song",
+      "songId": "song-virtuareal-best-01-remix-kick-it-feat-kmnz-kakeru-remix"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-in-my-room-liz",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "wxe8qFT3Yhc",
+    "externalUrl": "https://www.youtube.com/watch?v=wxe8qFT3Yhc",
+    "target": {
+      "type": "song",
+      "songId": "song-in-my-room-feat-liz"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-my-wife-liz",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "66ygwoPMoFg",
+    "externalUrl": "https://www.youtube.com/watch?v=66ygwoPMoFg",
+    "target": {
+      "type": "song",
+      "songId": "song-my-wife-feat-liz"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-shirazu-shirazu-liz",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "Vz_kj1jeGcg",
+    "externalUrl": "https://www.youtube.com/watch?v=Vz_kj1jeGcg",
+    "target": {
+      "type": "song",
+      "songId": "song-shirazu-shirazu-feat-liz"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-and",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "ktWo7PtehlU",
+    "externalUrl": "https://www.youtube.com/watch?v=ktWo7PtehlU",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnround-and"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-daydream",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "xIRQ7ssPek8",
+    "externalUrl": "https://www.youtube.com/watch?v=xIRQ7ssPek8",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnround-daydream"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-letter",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "n5_K3Kc6UZY",
+    "externalUrl": "https://www.youtube.com/watch?v=n5_K3Kc6UZY",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnround-letter"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-awaken",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "wsX6BQIKAAU",
+    "externalUrl": "https://www.youtube.com/watch?v=wsX6BQIKAAU",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnround-awaken"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-tokonatsu-style",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "NrQ9fEWmVmE",
+    "externalUrl": "https://www.youtube.com/watch?v=NrQ9fEWmVmE",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnround-tokonatsu-style"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-journey",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "nTzfh-lgWis",
+    "externalUrl": "https://www.youtube.com/watch?v=nTzfh-lgWis",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnround-journey"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-departures",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "nUfknIkY6Yc",
+    "externalUrl": "https://www.youtube.com/watch?v=nUfknIkY6Yc",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnround-departures"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-needy",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "HEpk27FV4Zw",
+    "externalUrl": "https://www.youtube.com/watch?v=HEpk27FV4Zw",
+    "target": {
+      "type": "song",
+      "songId": "song-spotlight-vol-1-needy"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-recoat",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "yQwt_tQVqu8",
+    "externalUrl": "https://www.youtube.com/watch?v=yQwt_tQVqu8",
+    "target": {
+      "type": "song",
+      "songId": "song-rewire-recoat-feat-kmnz"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-kick-it",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "gVtx4VzVAWI",
+    "externalUrl": "https://www.youtube.com/watch?v=gVtx4VzVAWI",
+    "target": {
+      "type": "song",
+      "songId": "song-virtuareal-02-kick-it-feat-kmnz"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-one-by-one-liz",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "t3u6fo4EVJU",
+    "externalUrl": "https://www.youtube.com/watch?v=t3u6fo4EVJU",
+    "target": {
+      "type": "song",
+      "songId": "song-one-by-one-feat-liz"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-r-u-game",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "pAE7pK1Rej0",
+    "externalUrl": "https://www.youtube.com/watch?v=pAE7pK1Rej0",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnverse-r-u-game"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-retouch",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "W6bWHRpgkuI",
+    "externalUrl": "https://www.youtube.com/watch?v=W6bWHRpgkuI",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnverse-retouch"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-starz",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "zxMOXJyu9lc",
+    "externalUrl": "https://www.youtube.com/watch?v=zxMOXJyu9lc",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnverse-starz"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-def-rag",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "9fQGGPnnNxg",
+    "externalUrl": "https://www.youtube.com/watch?v=9fQGGPnnNxg",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnverse-def-rag"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-melty-girl",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "vRL8UKd9Vr8",
+    "externalUrl": "https://www.youtube.com/watch?v=vRL8UKd9Vr8",
+    "target": {
+      "type": "song",
+      "songId": "song-kmnverse-melty-girl"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-home-sweet-home-liz",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "tE-J5q8OCF0",
+    "externalUrl": "https://www.youtube.com/watch?v=tE-J5q8OCF0",
+    "target": {
+      "type": "song",
+      "songId": "song-home-sweet-home-feat-liz"
+    },
+    "display": {
+      "subtitle": "官方原创合集",
+      "year": 2019,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-liz",
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aBPmxkVa1EKxAxtNSsi0h3"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-2ae3b4014f50",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "Qk9W5QT0RFc",
+    "externalUrl": "https://www.youtube.com/watch?v=Qk9W5QT0RFc",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-2ae3b4014f50"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 不可思議/wonderboy",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-9712963306e4",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "I3QNp7NnQpE",
+    "externalUrl": "https://www.youtube.com/watch?v=I3QNp7NnQpE",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-9712963306e4"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 唾奇",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-ceaf1457fb9d",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "ZSDbjx_lhKY",
+    "externalUrl": "https://www.youtube.com/watch?v=ZSDbjx_lhKY",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-ceaf1457fb9d"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: BIM feat. kZm, SIRUP",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-9d04a73fa12b",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "6Az5pIkB9E4",
+    "externalUrl": "https://www.youtube.com/watch?v=6Az5pIkB9E4",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-9d04a73fa12b"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: KREVA",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-af6cc462d906",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "D60mNg5ZDi0",
+    "externalUrl": "https://www.youtube.com/watch?v=D60mNg5ZDi0",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-af6cc462d906"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, KMNZ TINA · Original: ヤングスキニー feat. 戦慄かなの",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita",
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-a71fbe21de58",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "KsDh4kfVj_M",
+    "externalUrl": "https://www.youtube.com/watch?v=KsDh4kfVj_M",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-a71fbe21de58"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, KMNZ NERO · Original: SPICY CHOCOLATE feat. R-指定 & CHEHON",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita",
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-82fba96f5e54",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "pRIidGiIpNY",
+    "externalUrl": "https://www.youtube.com/watch?v=pRIidGiIpNY",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-82fba96f5e54"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 椎名林檎",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-aa03cb8f3739",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "LVr1ZKf2XTE",
+    "externalUrl": "https://www.youtube.com/watch?v=LVr1ZKf2XTE",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-aa03cb8f3739"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: SOUL'd OUT",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-6afee015c4b5",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "bwnuJIH_YzE",
+    "externalUrl": "https://www.youtube.com/watch?v=bwnuJIH_YzE",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-6afee015c4b5"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: EXILE",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-1e33850fd870",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "943z5wflYI4",
+    "externalUrl": "https://www.youtube.com/watch?v=943z5wflYI4",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-1e33850fd870"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: EVISBEATS feat. 田我流",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-1143c459a763",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "c0LUOC6VysY",
+    "externalUrl": "https://www.youtube.com/watch?v=c0LUOC6VysY",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-1143c459a763"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: SUSHIBOYS",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-da59b20549ac",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "rF2xO6fm6o8",
+    "externalUrl": "https://www.youtube.com/watch?v=rF2xO6fm6o8",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-da59b20549ac"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: TOCCHI",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-5075a2269b0c",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "yMK8liI9fTA",
+    "externalUrl": "https://www.youtube.com/watch?v=yMK8liI9fTA",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-5075a2269b0c"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 向井秀徳と椎名林檎",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-e361b1f321d9",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "7J6SXJp65jc",
+    "externalUrl": "https://www.youtube.com/watch?v=7J6SXJp65jc",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-e361b1f321d9"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: KREVA",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-e096c9d2514e",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "uoKqwHrkUmA",
+    "externalUrl": "https://www.youtube.com/watch?v=uoKqwHrkUmA",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-e096c9d2514e"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: STUTS, BIM, RYO-Z",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-e5940578d62e",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "_6zYHhCYWZo",
+    "externalUrl": "https://www.youtube.com/watch?v=_6zYHhCYWZo",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-e5940578d62e"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 青山テルマ feat.SoulJa",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-f175d5349c22",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "HjMp4wlrWjg",
+    "externalUrl": "https://www.youtube.com/watch?v=HjMp4wlrWjg",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-f175d5349c22"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: chelmico",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-fc9b3471dcc3",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "ir64M0THn0c",
+    "externalUrl": "https://www.youtube.com/watch?v=ir64M0THn0c",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-fc9b3471dcc3"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 荒井由実",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-6d64192c202e",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "F2lF-K1iLmw",
+    "externalUrl": "https://www.youtube.com/watch?v=F2lF-K1iLmw",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-6d64192c202e"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 宇多田ヒカル",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-408a8b5b7423",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "7fLM1P06qTA",
+    "externalUrl": "https://www.youtube.com/watch?v=7fLM1P06qTA",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-408a8b5b7423"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: SKRYU",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-aee8209e37e4",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "W6_T1tvUftQ",
+    "externalUrl": "https://www.youtube.com/watch?v=W6_T1tvUftQ",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-aee8209e37e4"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: こっちのけんと",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-e81df3469cb2",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "OB1OxoHYa3s",
+    "externalUrl": "https://www.youtube.com/watch?v=OB1OxoHYa3s",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-e81df3469cb2"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: MINMI",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-4e4fa70b0105",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "_h_ZpDiw4Lw",
+    "externalUrl": "https://www.youtube.com/watch?v=_h_ZpDiw4Lw",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-4e4fa70b0105"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 東京事変",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-5e46d87782b0",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "8H1abFkSLss",
+    "externalUrl": "https://www.youtube.com/watch?v=8H1abFkSLss",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-5e46d87782b0"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: SOUL'd OUT",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-30fef4d54512",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "eGdl-Hkz85k",
+    "externalUrl": "https://www.youtube.com/watch?v=eGdl-Hkz85k",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-30fef4d54512"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: OZworld",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-2a5f78c7a602",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "j85bFjcOxHA",
+    "externalUrl": "https://www.youtube.com/watch?v=j85bFjcOxHA",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-2a5f78c7a602"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: Creepy Nuts",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-b84077eefa06",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "jJG31kNad3U",
+    "externalUrl": "https://www.youtube.com/watch?v=jJG31kNad3U",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-b84077eefa06"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: PUNPEE",
+      "year": 2023,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-c87d25024b7d",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "jecxPkwotVk",
+    "externalUrl": "https://www.youtube.com/watch?v=jecxPkwotVk",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-c87d25024b7d"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: Creepy Nuts",
+      "year": 2023,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-06d05965c473",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "4_f3TaVUTuk",
+    "externalUrl": "https://www.youtube.com/watch?v=4_f3TaVUTuk",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-06d05965c473"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: あっこゴリラ",
+      "year": 2023,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-d5c40612663d",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "m8Rns8qlvLk",
+    "externalUrl": "https://www.youtube.com/watch?v=m8Rns8qlvLk",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-d5c40612663d"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: EVISBEATS",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-d9a5d8f4e950",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "Ux7KNEoh5kA",
+    "externalUrl": "https://www.youtube.com/watch?v=Ux7KNEoh5kA",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-d9a5d8f4e950"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 奥華子",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-c011b396b17a",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "XoQB8H5zq0g",
+    "externalUrl": "https://www.youtube.com/watch?v=XoQB8H5zq0g",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-c011b396b17a"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: ちゃんみな",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-5f3707d8cbb6",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "wwkiKF9PAU4",
+    "externalUrl": "https://www.youtube.com/watch?v=wwkiKF9PAU4",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-5f3707d8cbb6"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 星野源",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-2c2126789ea4",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "hJ99UCTEMZQ",
+    "externalUrl": "https://www.youtube.com/watch?v=hJ99UCTEMZQ",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-2c2126789ea4"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 東京事変",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-123d3f7f8510",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "DM4SrUaD2zM",
+    "externalUrl": "https://www.youtube.com/watch?v=DM4SrUaD2zM",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-123d3f7f8510"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: スカートとPUNPEE",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-c9294ba7772c",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "gdYvNyZmxRI",
+    "externalUrl": "https://www.youtube.com/watch?v=gdYvNyZmxRI",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-c9294ba7772c"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: どんぐりず",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-6d492fab3395",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "AslflKDQH0A",
+    "externalUrl": "https://www.youtube.com/watch?v=AslflKDQH0A",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-6d492fab3395"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: ナノウ",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-47ac6b7dc1fe",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "Me0F_GFmpDM",
+    "externalUrl": "https://www.youtube.com/watch?v=Me0F_GFmpDM",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-47ac6b7dc1fe"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 椎名林檎",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-cea9d8da0ffe",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "VXZj27DBoS4",
+    "externalUrl": "https://www.youtube.com/watch?v=VXZj27DBoS4",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-cea9d8da0ffe"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: buzzG feet.GUMI",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-6669f81c89e9",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "leKGj-YJquI",
+    "externalUrl": "https://www.youtube.com/watch?v=leKGj-YJquI",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-6669f81c89e9"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 倉橋ヨエコ",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-486b4e84ae27",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "LCHhj2YGlqY",
+    "externalUrl": "https://www.youtube.com/watch?v=LCHhj2YGlqY",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-486b4e84ae27"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: Creepy Nuts(R-指定＆DJ松永)",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-09171de45257",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "MbkDZ01m0xg",
+    "externalUrl": "https://www.youtube.com/watch?v=MbkDZ01m0xg",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-09171de45257"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: あいみょん",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-456dbd62e00c",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "2k4IzEZ4wn8",
+    "externalUrl": "https://www.youtube.com/watch?v=2k4IzEZ4wn8",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-456dbd62e00c"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 椎名林檎",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-67fdba54099c",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "BsRyon6uAis",
+    "externalUrl": "https://www.youtube.com/watch?v=BsRyon6uAis",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-67fdba54099c"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 大柴広己",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-98b12caf3991",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "CYxyO8si018",
+    "externalUrl": "https://www.youtube.com/watch?v=CYxyO8si018",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-98b12caf3991"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 宇多田ヒカル",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-53edc655319e",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "UHuIHCrqUAA",
+    "externalUrl": "https://www.youtube.com/watch?v=UHuIHCrqUAA",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-53edc655319e"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: SIRUP",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-5b6fda9121a1",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "eyKtWC9qdJA",
+    "externalUrl": "https://www.youtube.com/watch?v=eyKtWC9qdJA",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-5b6fda9121a1"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: Suchmos",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-8c7b51a377d4",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "pKVv6NXGzr0",
+    "externalUrl": "https://www.youtube.com/watch?v=pKVv6NXGzr0",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-8c7b51a377d4"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: キリンジ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-0091b1388f6f",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "zsmSY3bICm4",
+    "externalUrl": "https://www.youtube.com/watch?v=zsmSY3bICm4",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-0091b1388f6f"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: iri",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-2508ac5798df",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "6E_egdSI30o",
+    "externalUrl": "https://www.youtube.com/watch?v=6E_egdSI30o",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-2508ac5798df"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: BASI",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-61572018a292",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "DxOLshjv9j4",
+    "externalUrl": "https://www.youtube.com/watch?v=DxOLshjv9j4",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-61572018a292"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: Doughnuts Hole",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-4b2ad2df8ccf",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "0rKTlVxMp_o",
+    "externalUrl": "https://www.youtube.com/watch?v=0rKTlVxMp_o",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-4b2ad2df8ccf"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: Vaundy",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-7455c246c951",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "D2MaWakV2RU",
+    "externalUrl": "https://www.youtube.com/watch?v=D2MaWakV2RU",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-7455c246c951"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: すこっぷ",
+      "year": 2019,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-01bf994e6be1",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "tOmoHL2gL5I",
+    "externalUrl": "https://www.youtube.com/watch?v=tOmoHL2gL5I",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-01bf994e6be1"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 鎮座DOPENESS",
+      "year": 2019,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-16a25844c5ae",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "VhyOgpL-NTg",
+    "externalUrl": "https://www.youtube.com/watch?v=VhyOgpL-NTg",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-16a25844c5ae"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 椎名林檎",
+      "year": 2019,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-9722ce50028f",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "qjpMiegDnPw",
+    "externalUrl": "https://www.youtube.com/watch?v=qjpMiegDnPw",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-9722ce50028f"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 蝶々P",
+      "year": 2019,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-0328d5869fcc",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "VrxmX_gVmnI",
+    "externalUrl": "https://www.youtube.com/watch?v=VrxmX_gVmnI",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-0328d5869fcc"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: くるり",
+      "year": 2018,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-f7dcc9c7a218",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "fTFW0ziumfM",
+    "externalUrl": "https://www.youtube.com/watch?v=fTFW0ziumfM",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-f7dcc9c7a218"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 椎名林檎",
+      "year": 2018,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-9d9c9d7766ba",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "Co1Nx3YC8fM",
+    "externalUrl": "https://www.youtube.com/watch?v=Co1Nx3YC8fM",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-9d9c9d7766ba"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: コレサワ",
+      "year": 2018,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-dc3f980a5241",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "dFI4axmXFGo",
+    "externalUrl": "https://www.youtube.com/watch?v=dFI4axmXFGo",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-dc3f980a5241"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: 東京事変",
+      "year": 2018,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-37a2474162bf",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "AoBQYdzVLug",
+    "externalUrl": "https://www.youtube.com/watch?v=AoBQYdzVLug",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-37a2474162bf"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA · Original: EGO-WRAPPIN'",
+      "year": 2018,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59aG-rxSrjKqDv2vqYENkPT8"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-d88d9cb01397",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "utHgT3i8Dj8",
+    "externalUrl": "https://www.youtube.com/watch?v=utHgT3i8Dj8",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-d88d9cb01397"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: OddRe:",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-5720974ffee6",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "vXxHT2hyBNI",
+    "externalUrl": "https://www.youtube.com/watch?v=vXxHT2hyBNI",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-5720974ffee6"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: SUSHIBOYS",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-951c284b2158",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "07c93sMYrYE",
+    "externalUrl": "https://www.youtube.com/watch?v=07c93sMYrYE",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-951c284b2158"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA, KMNZ NERO · Original: HIMEHINA",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina",
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-4bc829ad525e",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "tVU2Ozdvsfo",
+    "externalUrl": "https://www.youtube.com/watch?v=tVU2Ozdvsfo",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-4bc829ad525e"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: GADORO",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-2c52a1a82331",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "KdbOWsemi-4",
+    "externalUrl": "https://www.youtube.com/watch?v=KdbOWsemi-4",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-2c52a1a82331"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: yama",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-99e16c3333ea",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "BErJ70wqaZI",
+    "externalUrl": "https://www.youtube.com/watch?v=BErJ70wqaZI",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-99e16c3333ea"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: 米津玄師",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-9a3ef6b2e11d",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "ogYOHWGcg0I",
+    "externalUrl": "https://www.youtube.com/watch?v=ogYOHWGcg0I",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-9a3ef6b2e11d"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: back number",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-472f308810da",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "ykGeIkXPVJM",
+    "externalUrl": "https://www.youtube.com/watch?v=ykGeIkXPVJM",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-472f308810da"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: Official髭男dism",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-5f22f67d5fc1",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "kBg5uw3dJ5s",
+    "externalUrl": "https://www.youtube.com/watch?v=kBg5uw3dJ5s",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-5f22f67d5fc1"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: Kobo Kanaeru",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-13d1b67fbb7c",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "Ax9mtPuSmuk",
+    "externalUrl": "https://www.youtube.com/watch?v=Ax9mtPuSmuk",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-13d1b67fbb7c"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: SIRUP",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-211b305b581c",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "OyKRClWgtwo",
+    "externalUrl": "https://www.youtube.com/watch?v=OyKRClWgtwo",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-211b305b581c"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: CHEHON",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-fa335580f4d6",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "KIQ83b3odlA",
+    "externalUrl": "https://www.youtube.com/watch?v=KIQ83b3odlA",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-fa335580f4d6"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: SKRYU",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-dfda852ebb99",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "iOxejRT8EAU",
+    "externalUrl": "https://www.youtube.com/watch?v=iOxejRT8EAU",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-dfda852ebb99"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: Superfly",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-02a67b37cd68",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "Duab6SVdleY",
+    "externalUrl": "https://www.youtube.com/watch?v=Duab6SVdleY",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-02a67b37cd68"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: 藤井風",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-48cd5ad0f773",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "hgbnWLRfZ-c",
+    "externalUrl": "https://www.youtube.com/watch?v=hgbnWLRfZ-c",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-48cd5ad0f773"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: Eve",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-a4ea405cfd7f",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "_Wv9KzNybVs",
+    "externalUrl": "https://www.youtube.com/watch?v=_Wv9KzNybVs",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-a4ea405cfd7f"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: 米津玄師",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-86cc09d177ec",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "Jdt6XR1Eclk",
+    "externalUrl": "https://www.youtube.com/watch?v=Jdt6XR1Eclk",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-86cc09d177ec"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: aiko",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-2d09c24cb667",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "EG_BVGUPxsI",
+    "externalUrl": "https://www.youtube.com/watch?v=EG_BVGUPxsI",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-2d09c24cb667"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: UNISON SQUARE GARDEN",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-607ea4655908",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "WL-VZrXGalo",
+    "externalUrl": "https://www.youtube.com/watch?v=WL-VZrXGalo",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-607ea4655908"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: Vaundy",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-452eca383624",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "J5FhYkcY6U4",
+    "externalUrl": "https://www.youtube.com/watch?v=J5FhYkcY6U4",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-452eca383624"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: King Gnu",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-f81cb1d4c25b",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "gvWSyr1gBtU",
+    "externalUrl": "https://www.youtube.com/watch?v=gvWSyr1gBtU",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-f81cb1d4c25b"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: imase",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-761315fb4654",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "XP8A9hcoMPA",
+    "externalUrl": "https://www.youtube.com/watch?v=XP8A9hcoMPA",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-761315fb4654"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: Official髭男dism",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-d756d839e404",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "-djyV7TJHZM",
+    "externalUrl": "https://www.youtube.com/watch?v=-djyV7TJHZM",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-d756d839e404"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO · Original: Ado",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-b3723fc507e9",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "FFLYHWCcxS8",
+    "externalUrl": "https://www.youtube.com/watch?v=FFLYHWCcxS8",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-b3723fc507e9"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: Orangestar",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-be029c5c3db1",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "u1LWGCiGCHE",
+    "externalUrl": "https://www.youtube.com/watch?v=u1LWGCiGCHE",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-be029c5c3db1"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: Giga & TeddyLoid",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-df989cbab306",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "LOnNzke3j5E",
+    "externalUrl": "https://www.youtube.com/watch?v=LOnNzke3j5E",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-df989cbab306"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: FAKE TYPE.",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-9fcdf87a7da1",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "F59pi4ymkNE",
+    "externalUrl": "https://www.youtube.com/watch?v=F59pi4ymkNE",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-9fcdf87a7da1"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: Mom",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-b9c6af470564",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "HxbMxOTJvxw",
+    "externalUrl": "https://www.youtube.com/watch?v=HxbMxOTJvxw",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-b9c6af470564"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: REOL",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-240e3a0657f5",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "bNGkNKGOMRI",
+    "externalUrl": "https://www.youtube.com/watch?v=bNGkNKGOMRI",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-240e3a0657f5"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: NOMELON NOLEMON",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-7e0613b8f521",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "thJ1JsunRbE",
+    "externalUrl": "https://www.youtube.com/watch?v=thJ1JsunRbE",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-7e0613b8f521"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: wowaka",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-827e6f813699",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "gI7PL2wLvJ4",
+    "externalUrl": "https://www.youtube.com/watch?v=gI7PL2wLvJ4",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-827e6f813699"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: 広瀬香美",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-4378b122c9f0",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "NQDig3e10eg",
+    "externalUrl": "https://www.youtube.com/watch?v=NQDig3e10eg",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-4378b122c9f0"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: youまん",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-1db2eebbf22f",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "eA5ucnsM4CQ",
+    "externalUrl": "https://www.youtube.com/watch?v=eA5ucnsM4CQ",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-1db2eebbf22f"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: ツミキ feat.初音ミク",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-f91fe48a3626",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "QMCgOaR25aQ",
+    "externalUrl": "https://www.youtube.com/watch?v=QMCgOaR25aQ",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-f91fe48a3626"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: Giga",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-cc3b3863c980",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "G6Gog8dXE8U",
+    "externalUrl": "https://www.youtube.com/watch?v=G6Gog8dXE8U",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-cc3b3863c980"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: nqrse",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-98e47107b9f4",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "8VwSVY7_M9g",
+    "externalUrl": "https://www.youtube.com/watch?v=8VwSVY7_M9g",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-98e47107b9f4"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: SPARTA",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-c2b9369b9b82",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "FK-JPVha820",
+    "externalUrl": "https://www.youtube.com/watch?v=FK-JPVha820",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-c2b9369b9b82"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: Ayase",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-9847a0cbc84d",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "o_0TZbWjYVc",
+    "externalUrl": "https://www.youtube.com/watch?v=o_0TZbWjYVc",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-9847a0cbc84d"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: 星街すいせい",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-4a388e8884f2",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "fBz5oBoe2cg",
+    "externalUrl": "https://www.youtube.com/watch?v=fBz5oBoe2cg",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-4a388e8884f2"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: Aiobahn +81 feat. KOTOKO",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-10dc36bb93a3",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "H8gE7dCoOLg",
+    "externalUrl": "https://www.youtube.com/watch?v=H8gE7dCoOLg",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-10dc36bb93a3"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: いよわ feat.初音ミク",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-d0d7ca3abf72",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "6JqzF5kt5y0",
+    "externalUrl": "https://www.youtube.com/watch?v=6JqzF5kt5y0",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-d0d7ca3abf72"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: Giga",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-0c957c2e0d40",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "g_Mo5VQEbE0",
+    "externalUrl": "https://www.youtube.com/watch?v=g_Mo5VQEbE0",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-0c957c2e0d40"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: さユり",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-daa61d0dd105",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "vnEv8A8Q5tQ",
+    "externalUrl": "https://www.youtube.com/watch?v=vnEv8A8Q5tQ",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-daa61d0dd105"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: ヨルシカ",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-48bda074f942",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "w4rrLYMidT4",
+    "externalUrl": "https://www.youtube.com/watch?v=w4rrLYMidT4",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-48bda074f942"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: すりぃ feat.鏡音レン",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-a3fd758cfb5d",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "jwIug5fFmjw",
+    "externalUrl": "https://www.youtube.com/watch?v=jwIug5fFmjw",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-a3fd758cfb5d"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: 25時、ナイトコードで。 × 鏡音レン",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-8bf0b8ee81aa",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "5yZv6_XV7Qc",
+    "externalUrl": "https://www.youtube.com/watch?v=5yZv6_XV7Qc",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-8bf0b8ee81aa"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: ずっと真夜中でいいのに。",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59bADP8j5riYZggQHQh46u2Z"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-92913217c4b4",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "hm-GdWKrdq4",
+    "externalUrl": "https://www.youtube.com/watch?v=hm-GdWKrdq4",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-92913217c4b4"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: 青栗鼠",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=hm-GdWKrdq4"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-f578d4a7bb4a",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "TVgzJczX_ng",
+    "externalUrl": "https://www.youtube.com/watch?v=TVgzJczX_ng",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-f578d4a7bb4a"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: FAKE TYPE.",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=TVgzJczX_ng"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-2cc293c8a679",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "ZJovw_yRLCc",
+    "externalUrl": "https://www.youtube.com/watch?v=ZJovw_yRLCc",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-2cc293c8a679"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: キタニタツヤ",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=ZJovw_yRLCc"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-cc82b290849b",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "mgIqn9JTm78",
+    "externalUrl": "https://www.youtube.com/watch?v=mgIqn9JTm78",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-cc82b290849b"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: はるまきごはん",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=mgIqn9JTm78"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-0472212c3422",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "bl-oprJVBQY",
+    "externalUrl": "https://www.youtube.com/watch?v=bl-oprJVBQY",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-0472212c3422"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: 原口沙輔",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=bl-oprJVBQY"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-4c69e95f332f",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "M0ENoub4VNI",
+    "externalUrl": "https://www.youtube.com/watch?v=M0ENoub4VNI",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-4c69e95f332f"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: きさら",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=M0ENoub4VNI"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-ff920db9dee4",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "FAQFkhbt_mc",
+    "externalUrl": "https://www.youtube.com/watch?v=FAQFkhbt_mc",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-ff920db9dee4"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ TINA · Original: 晴いちばん",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=FAQFkhbt_mc"
+      ]
+    }
+  },
+  {
+    "id": "yt-original-tina-419812fd5b2c",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "FoKcuP4YrGM",
+    "externalUrl": "https://www.youtube.com/watch?v=FoKcuP4YrGM",
+    "target": {
+      "type": "song",
+      "songId": "song-original-tina-419812fd5b2c"
+    },
+    "display": {
+      "subtitle": "Original · KMNZ TINA · Beat by WICSTONE",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "original",
+      "originalGroup": "lita-tina-nero",
+      "performers": [
+        "TINA"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=FoKcuP4YrGM"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-e7605152af69",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "1cDVw_J7kNE",
+    "externalUrl": "https://www.youtube.com/watch?v=1cDVw_J7kNE",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-e7605152af69"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2023,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=1cDVw_J7kNE",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-d08590eda4ef",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "qeVMmg0mZt4",
+    "externalUrl": "https://www.youtube.com/watch?v=qeVMmg0mZt4",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-d08590eda4ef"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2023,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=qeVMmg0mZt4",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-663e45ac46c4",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "A6vUEwOhe_Y",
+    "externalUrl": "https://www.youtube.com/watch?v=A6vUEwOhe_Y",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-663e45ac46c4"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2023,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=A6vUEwOhe_Y",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-afac6cec708d",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "u9tUEUGSfug",
+    "externalUrl": "https://www.youtube.com/watch?v=u9tUEUGSfug",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-afac6cec708d"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2023,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=u9tUEUGSfug",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-38cb4de0a15f",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "WpBWd85nvkU",
+    "externalUrl": "https://www.youtube.com/watch?v=WpBWd85nvkU",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-38cb4de0a15f"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2023,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=WpBWd85nvkU",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-c47f0f47ef16",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "P_PEOYLIkBM",
+    "externalUrl": "https://www.youtube.com/watch?v=P_PEOYLIkBM",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-c47f0f47ef16"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2023,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=P_PEOYLIkBM",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-1e305605e330",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "CXagIMii7a0",
+    "externalUrl": "https://www.youtube.com/watch?v=CXagIMii7a0",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-1e305605e330"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2023,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=CXagIMii7a0",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-b28b8b0931b1",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "BaKkmuUvVuo",
+    "externalUrl": "https://www.youtube.com/watch?v=BaKkmuUvVuo",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-b28b8b0931b1"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2023,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=BaKkmuUvVuo",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-6e96bae442b3",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "_ydkBh0dU08",
+    "externalUrl": "https://www.youtube.com/watch?v=_ydkBh0dU08",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-6e96bae442b3"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2023,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=_ydkBh0dU08",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-1ba6c5834fda",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "H_YShL1IyQc",
+    "externalUrl": "https://www.youtube.com/watch?v=H_YShL1IyQc",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-1ba6c5834fda"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=H_YShL1IyQc",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-f700294d7efb",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "fkRff84VlhY",
+    "externalUrl": "https://www.youtube.com/watch?v=fkRff84VlhY",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-f700294d7efb"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=fkRff84VlhY",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-38144b4bf6b1",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "aqk4w6IOkcA",
+    "externalUrl": "https://www.youtube.com/watch?v=aqk4w6IOkcA",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-38144b4bf6b1"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=aqk4w6IOkcA",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-7ee955bb8927",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "xU7KuHLnExA",
+    "externalUrl": "https://www.youtube.com/watch?v=xU7KuHLnExA",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-7ee955bb8927"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=xU7KuHLnExA",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-12386aa69c76",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "xNy1l89Fxwc",
+    "externalUrl": "https://www.youtube.com/watch?v=xNy1l89Fxwc",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-12386aa69c76"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=xNy1l89Fxwc",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-dc828fbab5d5",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "CSC1-weuFRc",
+    "externalUrl": "https://www.youtube.com/watch?v=CSC1-weuFRc",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-dc828fbab5d5"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=CSC1-weuFRc",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-90ea64ffa97a",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "TvJJltlxyJs",
+    "externalUrl": "https://www.youtube.com/watch?v=TvJJltlxyJs",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-90ea64ffa97a"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=TvJJltlxyJs",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-b000a7bbab1f",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "Rz7QVJ6FgJY",
+    "externalUrl": "https://www.youtube.com/watch?v=Rz7QVJ6FgJY",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-b000a7bbab1f"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=Rz7QVJ6FgJY",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-6cfb9b0bfb42",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "X3OghDrxnB0",
+    "externalUrl": "https://www.youtube.com/watch?v=X3OghDrxnB0",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-6cfb9b0bfb42"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=X3OghDrxnB0",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-6988b7c299a1",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "5t8WxONtvDQ",
+    "externalUrl": "https://www.youtube.com/watch?v=5t8WxONtvDQ",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-6988b7c299a1"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=5t8WxONtvDQ",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-21ed6846d7a9",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "d94br4mbGwk",
+    "externalUrl": "https://www.youtube.com/watch?v=d94br4mbGwk",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-21ed6846d7a9"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=d94br4mbGwk",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-985dcaddb44a",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "YRBaMomGqXY",
+    "externalUrl": "https://www.youtube.com/watch?v=YRBaMomGqXY",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-985dcaddb44a"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=YRBaMomGqXY",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-a39071e195a1",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "QE5oq44-SPA",
+    "externalUrl": "https://www.youtube.com/watch?v=QE5oq44-SPA",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-a39071e195a1"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=QE5oq44-SPA",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-eb9c3d92d094",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "2NsUJ_lIegg",
+    "externalUrl": "https://www.youtube.com/watch?v=2NsUJ_lIegg",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-eb9c3d92d094"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=2NsUJ_lIegg",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-f2e99600492b",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "rCq-hE1oGDU",
+    "externalUrl": "https://www.youtube.com/watch?v=rCq-hE1oGDU",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-f2e99600492b"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=rCq-hE1oGDU",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-24ad4d2c3b8c",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "NUsIXU52Dwg",
+    "externalUrl": "https://www.youtube.com/watch?v=NUsIXU52Dwg",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-24ad4d2c3b8c"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=NUsIXU52Dwg",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-295cee7c15dc",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "gyr1krGnd1k",
+    "externalUrl": "https://www.youtube.com/watch?v=gyr1krGnd1k",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-295cee7c15dc"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=gyr1krGnd1k",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-d270430ad0e9",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "CcMRnj_fVjs",
+    "externalUrl": "https://www.youtube.com/watch?v=CcMRnj_fVjs",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-d270430ad0e9"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=CcMRnj_fVjs",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-c8517dfff058",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "cDJdqsOhsco",
+    "externalUrl": "https://www.youtube.com/watch?v=cDJdqsOhsco",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-c8517dfff058"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=cDJdqsOhsco",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-2d30d59e03d6",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "GlJgB3ClSi0",
+    "externalUrl": "https://www.youtube.com/watch?v=GlJgB3ClSi0",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-2d30d59e03d6"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=GlJgB3ClSi0",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-b999d50dfa6b",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "hi_v8kEbfSA",
+    "externalUrl": "https://www.youtube.com/watch?v=hi_v8kEbfSA",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-b999d50dfa6b"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=hi_v8kEbfSA",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-708f2a95ddd6",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "upSSq4Dxp7k",
+    "externalUrl": "https://www.youtube.com/watch?v=upSSq4Dxp7k",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-708f2a95ddd6"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=upSSq4Dxp7k",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-0774e1bdc1ff",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "DROMLqABx_8",
+    "externalUrl": "https://www.youtube.com/watch?v=DROMLqABx_8",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-0774e1bdc1ff"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=DROMLqABx_8",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-beb02afd4fd0",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "lZ6ozqwtekI",
+    "externalUrl": "https://www.youtube.com/watch?v=lZ6ozqwtekI",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-beb02afd4fd0"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2021,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=lZ6ozqwtekI",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-86796197e06d",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "QGyA4wgmRxs",
+    "externalUrl": "https://www.youtube.com/watch?v=QGyA4wgmRxs",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-86796197e06d"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=QGyA4wgmRxs",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-84907d71e6d5",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "RwiPk8z5qZs",
+    "externalUrl": "https://www.youtube.com/watch?v=RwiPk8z5qZs",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-84907d71e6d5"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=RwiPk8z5qZs",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-0bcc8170a990",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "4NOijye9fpk",
+    "externalUrl": "https://www.youtube.com/watch?v=4NOijye9fpk",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-0bcc8170a990"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=4NOijye9fpk",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-1565447578c5",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "8EGX3SawkEg",
+    "externalUrl": "https://www.youtube.com/watch?v=8EGX3SawkEg",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-1565447578c5"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=8EGX3SawkEg",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-37586a501871",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "G8qsSHb5ETI",
+    "externalUrl": "https://www.youtube.com/watch?v=G8qsSHb5ETI",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-37586a501871"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=G8qsSHb5ETI",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-f0230d2dd1ec",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "ObxjUIeEGuY",
+    "externalUrl": "https://www.youtube.com/watch?v=ObxjUIeEGuY",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-f0230d2dd1ec"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=ObxjUIeEGuY",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-8c2513f8cde1",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "R4lL_dpHo4M",
+    "externalUrl": "https://www.youtube.com/watch?v=R4lL_dpHo4M",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-8c2513f8cde1"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=R4lL_dpHo4M",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-e5e2faaa7928",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "1JcXPIm5M_A",
+    "externalUrl": "https://www.youtube.com/watch?v=1JcXPIm5M_A",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-e5e2faaa7928"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=1JcXPIm5M_A",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-e7a60b34e47f",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "zjWv0pBglbE",
+    "externalUrl": "https://www.youtube.com/watch?v=zjWv0pBglbE",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-e7a60b34e47f"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=zjWv0pBglbE",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-184a64138382",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "VHYdHIfLgks",
+    "externalUrl": "https://www.youtube.com/watch?v=VHYdHIfLgks",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-184a64138382"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=VHYdHIfLgks",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-280ca884eb50",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "VINGxIVqdpA",
+    "externalUrl": "https://www.youtube.com/watch?v=VINGxIVqdpA",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-280ca884eb50"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=VINGxIVqdpA",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-b9f050103ddf",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "e-nUnwzyg9Y",
+    "externalUrl": "https://www.youtube.com/watch?v=e-nUnwzyg9Y",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-b9f050103ddf"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=e-nUnwzyg9Y",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-51c7719cc915",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "PUog0Kdm40I",
+    "externalUrl": "https://www.youtube.com/watch?v=PUog0Kdm40I",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-51c7719cc915"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=PUog0Kdm40I",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-a280b5fab320",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "rske8cWGSo8",
+    "externalUrl": "https://www.youtube.com/watch?v=rske8cWGSo8",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-a280b5fab320"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=rske8cWGSo8",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-add7cbc4cbdf",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "abCmrPAE84A",
+    "externalUrl": "https://www.youtube.com/watch?v=abCmrPAE84A",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-add7cbc4cbdf"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=abCmrPAE84A",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-4b3f919f144b",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "QVTHOS4AuNw",
+    "externalUrl": "https://www.youtube.com/watch?v=QVTHOS4AuNw",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-4b3f919f144b"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=QVTHOS4AuNw",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-fc901873f44f",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "mCXCwkT6rHM",
+    "externalUrl": "https://www.youtube.com/watch?v=mCXCwkT6rHM",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-fc901873f44f"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=mCXCwkT6rHM",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-48bc263ec86f",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "_inDyZDC1RQ",
+    "externalUrl": "https://www.youtube.com/watch?v=_inDyZDC1RQ",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-48bc263ec86f"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=_inDyZDC1RQ",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-ad0faf4760bc",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "1eeNiN0-1gU",
+    "externalUrl": "https://www.youtube.com/watch?v=1eeNiN0-1gU",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-ad0faf4760bc"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=1eeNiN0-1gU",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-348f510c86e4",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "UElujB_pplk",
+    "externalUrl": "https://www.youtube.com/watch?v=UElujB_pplk",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-348f510c86e4"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=UElujB_pplk",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-f339e263244d",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "5pYhr-kXsqo",
+    "externalUrl": "https://www.youtube.com/watch?v=5pYhr-kXsqo",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-f339e263244d"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=5pYhr-kXsqo",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-452f8bb6e57e",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "tXsdchxawek",
+    "externalUrl": "https://www.youtube.com/watch?v=tXsdchxawek",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-452f8bb6e57e"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=tXsdchxawek",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-f636c09003d1",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "esnI03Ue-hE",
+    "externalUrl": "https://www.youtube.com/watch?v=esnI03Ue-hE",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-f636c09003d1"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=esnI03Ue-hE",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-66c81b96bf4f",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "AV5XfMoMfZs",
+    "externalUrl": "https://www.youtube.com/watch?v=AV5XfMoMfZs",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-66c81b96bf4f"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=AV5XfMoMfZs",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-8c38e7240a4c",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "O4_3z373T_E",
+    "externalUrl": "https://www.youtube.com/watch?v=O4_3z373T_E",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-8c38e7240a4c"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=O4_3z373T_E",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-5340c57c3a73",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "KakHiTt028w",
+    "externalUrl": "https://www.youtube.com/watch?v=KakHiTt028w",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-5340c57c3a73"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=KakHiTt028w",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-54dc1f1b27b0",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "uHTexbiJgVk",
+    "externalUrl": "https://www.youtube.com/watch?v=uHTexbiJgVk",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-54dc1f1b27b0"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=uHTexbiJgVk",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-a6f17bfc46d9",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "_EJF7RhBe-U",
+    "externalUrl": "https://www.youtube.com/watch?v=_EJF7RhBe-U",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-a6f17bfc46d9"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2019,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=_EJF7RhBe-U",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-e1d1f928e3ae",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "yB2YtqVn4ro",
+    "externalUrl": "https://www.youtube.com/watch?v=yB2YtqVn4ro",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-e1d1f928e3ae"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2019,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=yB2YtqVn4ro",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-15b863b4d6ee",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "OaMyT_WXPoE",
+    "externalUrl": "https://www.youtube.com/watch?v=OaMyT_WXPoE",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-15b863b4d6ee"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2019,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=OaMyT_WXPoE",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-6a77f3778003",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "eTEVPS3p6k0",
+    "externalUrl": "https://www.youtube.com/watch?v=eTEVPS3p6k0",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-6a77f3778003"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2019,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=eTEVPS3p6k0",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-9e0c059b6dbc",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "NSk7CsjMeRU",
+    "externalUrl": "https://www.youtube.com/watch?v=NSk7CsjMeRU",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-9e0c059b6dbc"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2019,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=NSk7CsjMeRU",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-d590e5345b79",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "yaSUpATSDWw",
+    "externalUrl": "https://www.youtube.com/watch?v=yaSUpATSDWw",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-d590e5345b79"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2019,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=yaSUpATSDWw",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-e2fb0c1b5453",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "7cWkHlwxZEk",
+    "externalUrl": "https://www.youtube.com/watch?v=7cWkHlwxZEk",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-e2fb0c1b5453"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2019,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=7cWkHlwxZEk",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-ab925c103b6a",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "tu-2Ik0pg_I",
+    "externalUrl": "https://www.youtube.com/watch?v=tu-2Ik0pg_I",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-ab925c103b6a"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2019,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=tu-2Ik0pg_I",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-60fee6de3ec7",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "9EINRLL6Lug",
+    "externalUrl": "https://www.youtube.com/watch?v=9EINRLL6Lug",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-60fee6de3ec7"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2019,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=9EINRLL6Lug",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-ea2ee6fd28f8",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "mMsQXpfP4Ro",
+    "externalUrl": "https://www.youtube.com/watch?v=mMsQXpfP4Ro",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-ea2ee6fd28f8"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2019,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=mMsQXpfP4Ro",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-29fc34352f5e",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "NFp3KSTYirM",
+    "externalUrl": "https://www.youtube.com/watch?v=NFp3KSTYirM",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-29fc34352f5e"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2019,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=NFp3KSTYirM",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-d1a8fe20384e",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "dIsAIyTm0Gs",
+    "externalUrl": "https://www.youtube.com/watch?v=dIsAIyTm0Gs",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-d1a8fe20384e"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2018,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=dIsAIyTm0Gs",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-79369f049e15",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "aIisOUoZIhc",
+    "externalUrl": "https://www.youtube.com/watch?v=aIisOUoZIhc",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-79369f049e15"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2018,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=aIisOUoZIhc",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-7c6835edd528",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "RLpRiyblt-s",
+    "externalUrl": "https://www.youtube.com/watch?v=RLpRiyblt-s",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-7c6835edd528"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2018,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=RLpRiyblt-s",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-4f4635e4c35c",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "nQQ6BUvsdFQ",
+    "externalUrl": "https://www.youtube.com/watch?v=nQQ6BUvsdFQ",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-4f4635e4c35c"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2018,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=nQQ6BUvsdFQ",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-a7cbbe259ae2",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "VEsIJeJ9pl0",
+    "externalUrl": "https://www.youtube.com/watch?v=VEsIJeJ9pl0",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-a7cbbe259ae2"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2018,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=VEsIJeJ9pl0",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-9b0e4e5eefe0",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "QIBY5NPmNDs",
+    "externalUrl": "https://www.youtube.com/watch?v=QIBY5NPmNDs",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-9b0e4e5eefe0"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2018,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=QIBY5NPmNDs",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-1cae68a7c256",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "ggO4A8viiPI",
+    "externalUrl": "https://www.youtube.com/watch?v=ggO4A8viiPI",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-1cae68a7c256"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2018,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=ggO4A8viiPI",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-2f463642feee",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "3PqeQQxTGhI",
+    "externalUrl": "https://www.youtube.com/watch?v=3PqeQQxTGhI",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-2f463642feee"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2018,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=3PqeQQxTGhI",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-66cc1eac9577",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "PPkbBhQ6Cq4",
+    "externalUrl": "https://www.youtube.com/watch?v=PPkbBhQ6Cq4",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-66cc1eac9577"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2018,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=PPkbBhQ6Cq4",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-3e6a5a11d142",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "EIbvKSUeta0",
+    "externalUrl": "https://www.youtube.com/watch?v=EIbvKSUeta0",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-3e6a5a11d142"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2018,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=EIbvKSUeta0",
+        "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZOlExjD1-oSVRXsMwVuCFs"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-liz-53899c5e4b55",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "puq0ZayTaAs",
+    "externalUrl": "https://www.youtube.com/watch?v=puq0ZayTaAs",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-liz-53899c5e4b55"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, KMNZ LIZ",
+      "year": 2018,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita",
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=puq0ZayTaAs",
+        "https://www.youtube.com/@KMNZLIZ/videos"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-45db63d5f3f9",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "DFkSCdbwdZY",
+    "externalUrl": "https://www.youtube.com/watch?v=DFkSCdbwdZY",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-45db63d5f3f9"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, YACA",
+      "year": 2018,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=DFkSCdbwdZY"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-1f1f9bfaf915",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "z8sPS1kyOv0",
+    "externalUrl": "https://www.youtube.com/watch?v=z8sPS1kyOv0",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-1f1f9bfaf915"
+    },
+    "display": {
+      "subtitle": "Cover · somunia, KMNZ LITA",
+      "year": 2022,
+      "era": "classic"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=z8sPS1kyOv0"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-18097a3ace39",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "vt_A0P9jhYI",
+    "externalUrl": "https://www.youtube.com/watch?v=vt_A0P9jhYI",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-18097a3ace39"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ NERO, VESPERBELL ヨミ",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=vt_A0P9jhYI"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-e966b4e06994",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "yTASHD-MWwE",
+    "externalUrl": "https://www.youtube.com/watch?v=yTASHD-MWwE",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-e966b4e06994"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, KMNZ TINA",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita",
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=yTASHD-MWwE"
+      ]
     }
   }
 ]

@@ -105,5 +105,1960 @@
         "status": "no-credentials"
       }
     }
+  },
+  "yt-overnight-batsu-remix": {
+    "platformId": "KkQ1yTGXunI",
+    "publishedAt": {
+      "value": "2023-11-19T10:00:12Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=KkQ1yTGXunI"
+    }
+  },
+  "yt-empty-release": {
+    "platformId": "MgEjEqDceD4",
+    "publishedAt": {
+      "value": "2023-10-03T10:02:13Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=MgEjEqDceD4"
+    }
+  },
+  "yt-kickin-the-pride": {
+    "platformId": "qnumu_Cipjc",
+    "publishedAt": {
+      "value": "2023-09-14T10:00:43Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=qnumu_Cipjc"
+    }
+  },
+  "yt-mc-battle": {
+    "platformId": "NVdQZ1k00N4",
+    "publishedAt": {
+      "value": "2023-09-14T10:00:24Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=NVdQZ1k00N4"
+    }
+  },
+  "yt-invader-liz": {
+    "platformId": "eS0lah0LnD8",
+    "publishedAt": {
+      "value": "2023-08-20T10:03:59Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=eS0lah0LnD8"
+    }
+  },
+  "yt-sirbiz-lita": {
+    "platformId": "Ry6fZqvlr1Q",
+    "publishedAt": {
+      "value": "2022-10-28T10:00:11Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=Ry6fZqvlr1Q"
+    }
+  },
+  "yt-sunny-day-morning": {
+    "platformId": "tRFdH6qgiT8",
+    "publishedAt": {
+      "value": "2022-08-12T10:08:52Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=tRFdH6qgiT8"
+    }
+  },
+  "yt-homey": {
+    "platformId": "ooXLGSjBy_c",
+    "publishedAt": {
+      "value": "2022-08-12T10:05:28Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=ooXLGSjBy_c"
+    }
+  },
+  "yt-we-are-back-audio": {
+    "platformId": "u9kefr7oqr4",
+    "publishedAt": {
+      "value": "2022-08-12T10:05:17Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=u9kefr7oqr4"
+    }
+  },
+  "yt-back-to-the-kids": {
+    "platformId": "K4k-FfyDsYU",
+    "publishedAt": {
+      "value": "2022-08-12T10:04:46Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=K4k-FfyDsYU"
+    }
+  },
+  "yt-haze": {
+    "platformId": "RqSWZlksaXQ",
+    "publishedAt": {
+      "value": "2022-08-12T10:04:12Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=RqSWZlksaXQ"
+    }
+  },
+  "yt-skool": {
+    "platformId": "aSJKXIYUCRk",
+    "publishedAt": {
+      "value": "2022-08-12T10:02:07Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=aSJKXIYUCRk"
+    }
+  },
+  "yt-girl-liz": {
+    "platformId": "Uig3_lcy2Cw",
+    "publishedAt": {
+      "value": "2022-03-25T10:08:10Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=Uig3_lcy2Cw"
+    }
+  },
+  "yt-kick-it-kakeru-remix": {
+    "platformId": "7QSTfuAGVcU",
+    "publishedAt": {
+      "value": "2021-09-01T10:08:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=7QSTfuAGVcU"
+    }
+  },
+  "yt-in-my-room-liz": {
+    "platformId": "wxe8qFT3Yhc",
+    "publishedAt": {
+      "value": "2021-07-03T10:00:13Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=wxe8qFT3Yhc"
+    }
+  },
+  "yt-my-wife-liz": {
+    "platformId": "66ygwoPMoFg",
+    "publishedAt": {
+      "value": "2021-06-19T10:03:11Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=66ygwoPMoFg"
+    }
+  },
+  "yt-shirazu-shirazu-liz": {
+    "platformId": "Vz_kj1jeGcg",
+    "publishedAt": {
+      "value": "2021-04-30T11:00:16Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=Vz_kj1jeGcg"
+    }
+  },
+  "yt-and": {
+    "platformId": "ktWo7PtehlU",
+    "publishedAt": {
+      "value": "2021-04-09T10:13:11Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=ktWo7PtehlU"
+    }
+  },
+  "yt-daydream": {
+    "platformId": "xIRQ7ssPek8",
+    "publishedAt": {
+      "value": "2021-04-09T10:13:11Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=xIRQ7ssPek8"
+    }
+  },
+  "yt-letter": {
+    "platformId": "n5_K3Kc6UZY",
+    "publishedAt": {
+      "value": "2021-04-09T10:13:11Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=n5_K3Kc6UZY"
+    }
+  },
+  "yt-awaken": {
+    "platformId": "wsX6BQIKAAU",
+    "publishedAt": {
+      "value": "2021-04-09T10:13:11Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=wsX6BQIKAAU"
+    }
+  },
+  "yt-tokonatsu-style": {
+    "platformId": "NrQ9fEWmVmE",
+    "publishedAt": {
+      "value": "2021-04-09T10:13:11Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=NrQ9fEWmVmE"
+    }
+  },
+  "yt-journey": {
+    "platformId": "nTzfh-lgWis",
+    "publishedAt": {
+      "value": "2021-04-09T10:13:11Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=nTzfh-lgWis"
+    }
+  },
+  "yt-departures": {
+    "platformId": "nUfknIkY6Yc",
+    "publishedAt": {
+      "value": "2021-04-09T10:13:11Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=nUfknIkY6Yc"
+    }
+  },
+  "yt-needy": {
+    "platformId": "HEpk27FV4Zw",
+    "publishedAt": {
+      "value": "2021-03-23T15:02:57Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=HEpk27FV4Zw"
+    }
+  },
+  "yt-recoat": {
+    "platformId": "yQwt_tQVqu8",
+    "publishedAt": {
+      "value": "2020-12-26T10:01:20Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=yQwt_tQVqu8"
+    }
+  },
+  "yt-kick-it": {
+    "platformId": "gVtx4VzVAWI",
+    "publishedAt": {
+      "value": "2020-07-30T10:07:07Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=gVtx4VzVAWI"
+    }
+  },
+  "yt-one-by-one-liz": {
+    "platformId": "t3u6fo4EVJU",
+    "publishedAt": {
+      "value": "2020-06-18T11:00:15Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=t3u6fo4EVJU"
+    }
+  },
+  "yt-r-u-game": {
+    "platformId": "pAE7pK1Rej0",
+    "publishedAt": {
+      "value": "2020-03-05T10:06:10Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=pAE7pK1Rej0"
+    }
+  },
+  "yt-retouch": {
+    "platformId": "W6bWHRpgkuI",
+    "publishedAt": {
+      "value": "2020-03-05T10:06:01Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=W6bWHRpgkuI"
+    }
+  },
+  "yt-starz": {
+    "platformId": "zxMOXJyu9lc",
+    "publishedAt": {
+      "value": "2020-03-05T10:06:01Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=zxMOXJyu9lc"
+    }
+  },
+  "yt-def-rag": {
+    "platformId": "9fQGGPnnNxg",
+    "publishedAt": {
+      "value": "2020-03-05T10:06:00Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=9fQGGPnnNxg"
+    }
+  },
+  "yt-melty-girl": {
+    "platformId": "vRL8UKd9Vr8",
+    "publishedAt": {
+      "value": "2020-03-05T10:06:00Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=vRL8UKd9Vr8"
+    }
+  },
+  "yt-home-sweet-home-liz": {
+    "platformId": "tE-J5q8OCF0",
+    "publishedAt": {
+      "value": "2019-04-10T12:00:10Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:09:22.562Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=tE-J5q8OCF0"
+    }
+  },
+  "yt-cover-liz-e7605152af69": {
+    "platformId": "1cDVw_J7kNE",
+    "publishedAt": {
+      "value": "2023-12-27T11:00:01Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=1cDVw_J7kNE"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/1cDVw_J7kNE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:44.222Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=1cDVw_J7kNE"
+    }
+  },
+  "yt-cover-liz-d08590eda4ef": {
+    "platformId": "qeVMmg0mZt4",
+    "publishedAt": {
+      "value": "2023-11-20T12:00:49Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=qeVMmg0mZt4"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/qeVMmg0mZt4/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:44.612Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=qeVMmg0mZt4"
+    }
+  },
+  "yt-cover-liz-663e45ac46c4": {
+    "platformId": "A6vUEwOhe_Y",
+    "publishedAt": {
+      "value": "2023-09-29T12:00:15Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=A6vUEwOhe_Y"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/A6vUEwOhe_Y/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:44.338Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=A6vUEwOhe_Y"
+    }
+  },
+  "yt-cover-liz-afac6cec708d": {
+    "platformId": "u9tUEUGSfug",
+    "publishedAt": {
+      "value": "2023-08-18T12:00:57Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=u9tUEUGSfug"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/u9tUEUGSfug/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:44.430Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=u9tUEUGSfug"
+    }
+  },
+  "yt-cover-liz-38cb4de0a15f": {
+    "platformId": "WpBWd85nvkU",
+    "publishedAt": {
+      "value": "2023-06-16T12:16:42Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=WpBWd85nvkU"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/WpBWd85nvkU/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:44.520Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=WpBWd85nvkU"
+    }
+  },
+  "yt-cover-liz-c47f0f47ef16": {
+    "platformId": "P_PEOYLIkBM",
+    "publishedAt": {
+      "value": "2023-05-08T12:00:15Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=P_PEOYLIkBM"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/P_PEOYLIkBM/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:44.701Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=P_PEOYLIkBM"
+    }
+  },
+  "yt-cover-liz-1e305605e330": {
+    "platformId": "CXagIMii7a0",
+    "publishedAt": {
+      "value": "2023-02-28T12:00:09Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=CXagIMii7a0"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/CXagIMii7a0/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:45.329Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=CXagIMii7a0"
+    }
+  },
+  "yt-cover-liz-b28b8b0931b1": {
+    "platformId": "BaKkmuUvVuo",
+    "publishedAt": {
+      "value": "2023-02-08T12:00:15Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=BaKkmuUvVuo"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/BaKkmuUvVuo/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:45.680Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=BaKkmuUvVuo"
+    }
+  },
+  "yt-cover-liz-6e96bae442b3": {
+    "platformId": "_ydkBh0dU08",
+    "publishedAt": {
+      "value": "2023-01-06T12:00:16Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=_ydkBh0dU08"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/_ydkBh0dU08/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:45.813Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=_ydkBh0dU08"
+    }
+  },
+  "yt-cover-liz-1ba6c5834fda": {
+    "platformId": "H_YShL1IyQc",
+    "publishedAt": {
+      "value": "2022-11-14T12:00:19Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=H_YShL1IyQc"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/H_YShL1IyQc/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:45.978Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=H_YShL1IyQc"
+    }
+  },
+  "yt-cover-liz-f700294d7efb": {
+    "platformId": "fkRff84VlhY",
+    "publishedAt": {
+      "value": "2022-10-05T12:00:23Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=fkRff84VlhY"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/fkRff84VlhY/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:45.895Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=fkRff84VlhY"
+    }
+  },
+  "yt-cover-liz-38144b4bf6b1": {
+    "platformId": "aqk4w6IOkcA",
+    "publishedAt": {
+      "value": "2022-09-09T12:00:01Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=aqk4w6IOkcA"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/aqk4w6IOkcA/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:45.551Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=aqk4w6IOkcA"
+    }
+  },
+  "yt-cover-liz-7ee955bb8927": {
+    "platformId": "xU7KuHLnExA",
+    "publishedAt": {
+      "value": "2022-08-28T12:00:34Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=xU7KuHLnExA"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/xU7KuHLnExA/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:46.439Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=xU7KuHLnExA"
+    }
+  },
+  "yt-cover-liz-12386aa69c76": {
+    "platformId": "xNy1l89Fxwc",
+    "publishedAt": {
+      "value": "2022-07-17T12:00:28Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=xNy1l89Fxwc"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/xNy1l89Fxwc/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:47.198Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=xNy1l89Fxwc"
+    }
+  },
+  "yt-cover-liz-dc828fbab5d5": {
+    "platformId": "CSC1-weuFRc",
+    "publishedAt": {
+      "value": "2022-05-29T12:00:10Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=CSC1-weuFRc"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/CSC1-weuFRc/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:46.546Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=CSC1-weuFRc"
+    }
+  },
+  "yt-cover-liz-90ea64ffa97a": {
+    "platformId": "TvJJltlxyJs",
+    "publishedAt": {
+      "value": "2022-04-29T12:00:14Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=TvJJltlxyJs"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/TvJJltlxyJs/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:46.979Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=TvJJltlxyJs"
+    }
+  },
+  "yt-cover-liz-b000a7bbab1f": {
+    "platformId": "Rz7QVJ6FgJY",
+    "publishedAt": {
+      "value": "2022-03-01T12:00:18Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=Rz7QVJ6FgJY"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/Rz7QVJ6FgJY/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:46.757Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=Rz7QVJ6FgJY"
+    }
+  },
+  "yt-cover-liz-6cfb9b0bfb42": {
+    "platformId": "X3OghDrxnB0",
+    "publishedAt": {
+      "value": "2022-02-14T12:00:24Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=X3OghDrxnB0"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/X3OghDrxnB0/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:46.894Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=X3OghDrxnB0"
+    }
+  },
+  "yt-cover-liz-6988b7c299a1": {
+    "platformId": "5t8WxONtvDQ",
+    "publishedAt": {
+      "value": "2022-02-02T12:00:05Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=5t8WxONtvDQ"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/5t8WxONtvDQ/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:47.412Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=5t8WxONtvDQ"
+    }
+  },
+  "yt-cover-liz-21ed6846d7a9": {
+    "platformId": "d94br4mbGwk",
+    "publishedAt": {
+      "value": "2022-01-18T12:00:32Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=d94br4mbGwk"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/d94br4mbGwk/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:47.605Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=d94br4mbGwk"
+    }
+  },
+  "yt-cover-liz-985dcaddb44a": {
+    "platformId": "YRBaMomGqXY",
+    "publishedAt": {
+      "value": "2021-12-01T12:00:15Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=YRBaMomGqXY"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/YRBaMomGqXY/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:47.828Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=YRBaMomGqXY"
+    }
+  },
+  "yt-cover-liz-a39071e195a1": {
+    "platformId": "QE5oq44-SPA",
+    "publishedAt": {
+      "value": "2021-11-01T12:00:20Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=QE5oq44-SPA"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/QE5oq44-SPA/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:48.026Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=QE5oq44-SPA"
+    }
+  },
+  "yt-cover-liz-eb9c3d92d094": {
+    "platformId": "2NsUJ_lIegg",
+    "publishedAt": {
+      "value": "2021-10-07T12:00:02Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=2NsUJ_lIegg"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/2NsUJ_lIegg/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:48.118Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=2NsUJ_lIegg"
+    }
+  },
+  "yt-cover-liz-f2e99600492b": {
+    "platformId": "rCq-hE1oGDU",
+    "publishedAt": {
+      "value": "2021-09-27T12:00:33Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=rCq-hE1oGDU"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/rCq-hE1oGDU/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:48.229Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=rCq-hE1oGDU"
+    }
+  },
+  "yt-cover-liz-24ad4d2c3b8c": {
+    "platformId": "NUsIXU52Dwg",
+    "publishedAt": {
+      "value": "2021-07-30T12:00:19Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=NUsIXU52Dwg"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/NUsIXU52Dwg/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:48.532Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=NUsIXU52Dwg"
+    }
+  },
+  "yt-cover-liz-295cee7c15dc": {
+    "platformId": "gyr1krGnd1k",
+    "publishedAt": {
+      "value": "2021-07-21T12:00:32Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=gyr1krGnd1k"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/gyr1krGnd1k/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:48.447Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=gyr1krGnd1k"
+    }
+  },
+  "yt-cover-liz-d270430ad0e9": {
+    "platformId": "CcMRnj_fVjs",
+    "publishedAt": {
+      "value": "2021-07-12T12:00:05Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=CcMRnj_fVjs"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/CcMRnj_fVjs/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:49.131Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=CcMRnj_fVjs"
+    }
+  },
+  "yt-cover-liz-c8517dfff058": {
+    "platformId": "cDJdqsOhsco",
+    "publishedAt": {
+      "value": "2021-04-05T12:00:08Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=cDJdqsOhsco"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/cDJdqsOhsco/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:49.381Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=cDJdqsOhsco"
+    }
+  },
+  "yt-cover-liz-2d30d59e03d6": {
+    "platformId": "GlJgB3ClSi0",
+    "publishedAt": {
+      "value": "2021-03-27T12:00:04Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=GlJgB3ClSi0"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/GlJgB3ClSi0/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:49.038Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=GlJgB3ClSi0"
+    }
+  },
+  "yt-cover-liz-b999d50dfa6b": {
+    "platformId": "hi_v8kEbfSA",
+    "publishedAt": {
+      "value": "2021-03-15T12:00:16Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=hi_v8kEbfSA"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/hi_v8kEbfSA/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:49.291Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=hi_v8kEbfSA"
+    }
+  },
+  "yt-cover-liz-708f2a95ddd6": {
+    "platformId": "upSSq4Dxp7k",
+    "publishedAt": {
+      "value": "2021-02-20T12:00:18Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=upSSq4Dxp7k"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/upSSq4Dxp7k/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:49.684Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=upSSq4Dxp7k"
+    }
+  },
+  "yt-cover-liz-0774e1bdc1ff": {
+    "platformId": "DROMLqABx_8",
+    "publishedAt": {
+      "value": "2021-01-15T12:00:03Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=DROMLqABx_8"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/DROMLqABx_8/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:49.936Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=DROMLqABx_8"
+    }
+  },
+  "yt-cover-liz-beb02afd4fd0": {
+    "platformId": "lZ6ozqwtekI",
+    "publishedAt": {
+      "value": "2021-01-08T12:00:14Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=lZ6ozqwtekI"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/lZ6ozqwtekI/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:50.057Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=lZ6ozqwtekI"
+    }
+  },
+  "yt-cover-liz-86796197e06d": {
+    "platformId": "QGyA4wgmRxs",
+    "publishedAt": {
+      "value": "2020-12-24T12:00:07Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=QGyA4wgmRxs"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/QGyA4wgmRxs/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:50.142Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=QGyA4wgmRxs"
+    }
+  },
+  "yt-cover-liz-84907d71e6d5": {
+    "platformId": "RwiPk8z5qZs",
+    "publishedAt": {
+      "value": "2020-12-15T12:00:14Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=RwiPk8z5qZs"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/RwiPk8z5qZs/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:50.332Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=RwiPk8z5qZs"
+    }
+  },
+  "yt-cover-liz-0bcc8170a990": {
+    "platformId": "4NOijye9fpk",
+    "publishedAt": {
+      "value": "2020-12-09T12:00:01Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=4NOijye9fpk"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/4NOijye9fpk/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:50.443Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=4NOijye9fpk"
+    }
+  },
+  "yt-cover-liz-1565447578c5": {
+    "platformId": "8EGX3SawkEg",
+    "publishedAt": {
+      "value": "2020-11-30T13:00:02Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=8EGX3SawkEg"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/8EGX3SawkEg/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:50.849Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=8EGX3SawkEg"
+    }
+  },
+  "yt-cover-liz-37586a501871": {
+    "platformId": "G8qsSHb5ETI",
+    "publishedAt": {
+      "value": "2020-11-18T12:00:05Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=G8qsSHb5ETI"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/G8qsSHb5ETI/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:50.982Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=G8qsSHb5ETI"
+    }
+  },
+  "yt-cover-liz-f0230d2dd1ec": {
+    "platformId": "ObxjUIeEGuY",
+    "publishedAt": {
+      "value": "2020-10-30T12:00:10Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=ObxjUIeEGuY"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/ObxjUIeEGuY/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:51.089Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=ObxjUIeEGuY"
+    }
+  },
+  "yt-cover-liz-8c2513f8cde1": {
+    "platformId": "R4lL_dpHo4M",
+    "publishedAt": {
+      "value": "2020-10-05T12:00:05Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=R4lL_dpHo4M"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/R4lL_dpHo4M/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:51.172Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=R4lL_dpHo4M"
+    }
+  },
+  "yt-cover-liz-e5e2faaa7928": {
+    "platformId": "1JcXPIm5M_A",
+    "publishedAt": {
+      "value": "2020-09-25T12:00:00Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=1JcXPIm5M_A"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/1JcXPIm5M_A/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:51.537Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=1JcXPIm5M_A"
+    }
+  },
+  "yt-cover-liz-e7a60b34e47f": {
+    "platformId": "zjWv0pBglbE",
+    "publishedAt": {
+      "value": "2020-09-22T12:00:26Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=zjWv0pBglbE"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/zjWv0pBglbE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:51.355Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=zjWv0pBglbE"
+    }
+  },
+  "yt-cover-liz-184a64138382": {
+    "platformId": "VHYdHIfLgks",
+    "publishedAt": {
+      "value": "2020-09-14T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=VHYdHIfLgks"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/VHYdHIfLgks/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:51.873Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=VHYdHIfLgks"
+    }
+  },
+  "yt-cover-liz-280ca884eb50": {
+    "platformId": "VINGxIVqdpA",
+    "publishedAt": {
+      "value": "2020-09-07T12:00:13Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=VINGxIVqdpA"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/VINGxIVqdpA/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:52.264Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=VINGxIVqdpA"
+    }
+  },
+  "yt-cover-liz-b9f050103ddf": {
+    "platformId": "e-nUnwzyg9Y",
+    "publishedAt": {
+      "value": "2020-08-21T12:00:31Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=e-nUnwzyg9Y"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/e-nUnwzyg9Y/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:52.065Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=e-nUnwzyg9Y"
+    }
+  },
+  "yt-cover-liz-51c7719cc915": {
+    "platformId": "PUog0Kdm40I",
+    "publishedAt": {
+      "value": "2020-08-11T12:00:08Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=PUog0Kdm40I"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/PUog0Kdm40I/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:52.350Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=PUog0Kdm40I"
+    }
+  },
+  "yt-cover-liz-a280b5fab320": {
+    "platformId": "rske8cWGSo8",
+    "publishedAt": {
+      "value": "2020-07-27T12:00:30Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=rske8cWGSo8"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/rske8cWGSo8/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:52.159Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=rske8cWGSo8"
+    }
+  },
+  "yt-cover-liz-add7cbc4cbdf": {
+    "platformId": "abCmrPAE84A",
+    "publishedAt": {
+      "value": "2020-07-03T12:00:00Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=abCmrPAE84A"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/abCmrPAE84A/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:52.530Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=abCmrPAE84A"
+    }
+  },
+  "yt-cover-liz-4b3f919f144b": {
+    "platformId": "QVTHOS4AuNw",
+    "publishedAt": {
+      "value": "2020-06-13T12:00:05Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=QVTHOS4AuNw"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/QVTHOS4AuNw/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:52.842Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=QVTHOS4AuNw"
+    }
+  },
+  "yt-cover-liz-fc901873f44f": {
+    "platformId": "mCXCwkT6rHM",
+    "publishedAt": {
+      "value": "2020-05-29T12:00:27Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=mCXCwkT6rHM"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/mCXCwkT6rHM/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:53.162Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=mCXCwkT6rHM"
+    }
+  },
+  "yt-cover-liz-48bc263ec86f": {
+    "platformId": "_inDyZDC1RQ",
+    "publishedAt": {
+      "value": "2020-05-26T12:00:12Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=_inDyZDC1RQ"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/_inDyZDC1RQ/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:53.070Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=_inDyZDC1RQ"
+    }
+  },
+  "yt-cover-liz-ad0faf4760bc": {
+    "platformId": "1eeNiN0-1gU",
+    "publishedAt": {
+      "value": "2020-05-16T12:00:02Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=1eeNiN0-1gU"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/1eeNiN0-1gU/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:53.566Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=1eeNiN0-1gU"
+    }
+  },
+  "yt-cover-liz-348f510c86e4": {
+    "platformId": "UElujB_pplk",
+    "publishedAt": {
+      "value": "2020-04-28T12:00:18Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=UElujB_pplk"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/UElujB_pplk/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:53.655Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=UElujB_pplk"
+    }
+  },
+  "yt-cover-liz-f339e263244d": {
+    "platformId": "5pYhr-kXsqo",
+    "publishedAt": {
+      "value": "2020-04-16T12:00:08Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=5pYhr-kXsqo"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/5pYhr-kXsqo/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:53.379Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=5pYhr-kXsqo"
+    }
+  },
+  "yt-cover-liz-452f8bb6e57e": {
+    "platformId": "tXsdchxawek",
+    "publishedAt": {
+      "value": "2020-03-29T12:00:15Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=tXsdchxawek"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/tXsdchxawek/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:53.855Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=tXsdchxawek"
+    }
+  },
+  "yt-cover-liz-f636c09003d1": {
+    "platformId": "esnI03Ue-hE",
+    "publishedAt": {
+      "value": "2020-03-22T11:00:13Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=esnI03Ue-hE"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/esnI03Ue-hE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:54.389Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=esnI03Ue-hE"
+    }
+  },
+  "yt-cover-liz-66c81b96bf4f": {
+    "platformId": "AV5XfMoMfZs",
+    "publishedAt": {
+      "value": "2020-03-07T13:00:03Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=AV5XfMoMfZs"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/AV5XfMoMfZs/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:54.280Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=AV5XfMoMfZs"
+    }
+  },
+  "yt-cover-liz-8c38e7240a4c": {
+    "platformId": "O4_3z373T_E",
+    "publishedAt": {
+      "value": "2020-02-22T13:30:01Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=O4_3z373T_E"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/O4_3z373T_E/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:54.176Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=O4_3z373T_E"
+    }
+  },
+  "yt-cover-liz-5340c57c3a73": {
+    "platformId": "KakHiTt028w",
+    "publishedAt": {
+      "value": "2020-02-14T12:00:05Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=KakHiTt028w"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/KakHiTt028w/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:54.559Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=KakHiTt028w"
+    }
+  },
+  "yt-cover-liz-54dc1f1b27b0": {
+    "platformId": "uHTexbiJgVk",
+    "publishedAt": {
+      "value": "2020-01-17T12:00:10Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=uHTexbiJgVk"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/uHTexbiJgVk/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:54.658Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=uHTexbiJgVk"
+    }
+  },
+  "yt-cover-liz-a6f17bfc46d9": {
+    "platformId": "_EJF7RhBe-U",
+    "publishedAt": {
+      "value": "2019-11-30T10:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=_EJF7RhBe-U"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/_EJF7RhBe-U/mqdefault.jpg",
+      "width": 320,
+      "height": 180,
+      "verifiedAt": "2026-10-30T12:49:54.897Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=_EJF7RhBe-U"
+    }
+  },
+  "yt-cover-liz-e1d1f928e3ae": {
+    "platformId": "yB2YtqVn4ro",
+    "publishedAt": {
+      "value": "2019-10-19T12:00:11Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=yB2YtqVn4ro"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/yB2YtqVn4ro/mqdefault.jpg",
+      "width": 320,
+      "height": 180,
+      "verifiedAt": "2026-10-30T12:49:55.143Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=yB2YtqVn4ro"
+    }
+  },
+  "yt-cover-liz-15b863b4d6ee": {
+    "platformId": "OaMyT_WXPoE",
+    "publishedAt": {
+      "value": "2019-10-05T12:30:01Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=OaMyT_WXPoE"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/OaMyT_WXPoE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:55.357Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=OaMyT_WXPoE"
+    }
+  },
+  "yt-cover-liz-6a77f3778003": {
+    "platformId": "eTEVPS3p6k0",
+    "publishedAt": {
+      "value": "2019-09-15T12:00:10Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=eTEVPS3p6k0"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/eTEVPS3p6k0/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:55.274Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=eTEVPS3p6k0"
+    }
+  },
+  "yt-cover-liz-9e0c059b6dbc": {
+    "platformId": "NSk7CsjMeRU",
+    "publishedAt": {
+      "value": "2019-08-03T11:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=NSk7CsjMeRU"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/NSk7CsjMeRU/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:55.660Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=NSk7CsjMeRU"
+    }
+  },
+  "yt-cover-liz-d590e5345b79": {
+    "platformId": "yaSUpATSDWw",
+    "publishedAt": {
+      "value": "2019-07-27T12:30:03Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=yaSUpATSDWw"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/yaSUpATSDWw/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:55.843Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=yaSUpATSDWw"
+    }
+  },
+  "yt-cover-liz-e2fb0c1b5453": {
+    "platformId": "7cWkHlwxZEk",
+    "publishedAt": {
+      "value": "2019-06-25T11:00:02Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=7cWkHlwxZEk"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/7cWkHlwxZEk/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:56.017Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=7cWkHlwxZEk"
+    }
+  },
+  "yt-cover-liz-ab925c103b6a": {
+    "platformId": "tu-2Ik0pg_I",
+    "publishedAt": {
+      "value": "2019-06-17T11:30:02Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=tu-2Ik0pg_I"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/tu-2Ik0pg_I/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:56.377Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=tu-2Ik0pg_I"
+    }
+  },
+  "yt-cover-liz-60fee6de3ec7": {
+    "platformId": "9EINRLL6Lug",
+    "publishedAt": {
+      "value": "2019-04-04T11:00:00Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=9EINRLL6Lug"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/9EINRLL6Lug/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:56.566Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=9EINRLL6Lug"
+    }
+  },
+  "yt-cover-liz-ea2ee6fd28f8": {
+    "platformId": "mMsQXpfP4Ro",
+    "publishedAt": {
+      "value": "2019-02-01T13:20:04Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=mMsQXpfP4Ro"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/mMsQXpfP4Ro/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:56.650Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=mMsQXpfP4Ro"
+    }
+  },
+  "yt-cover-liz-29fc34352f5e": {
+    "platformId": "NFp3KSTYirM",
+    "publishedAt": {
+      "value": "2019-01-14T11:00:04Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=NFp3KSTYirM"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/NFp3KSTYirM/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:56.461Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=NFp3KSTYirM"
+    }
+  },
+  "yt-cover-liz-d1a8fe20384e": {
+    "platformId": "dIsAIyTm0Gs",
+    "publishedAt": {
+      "value": "2018-12-14T13:13:12Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=dIsAIyTm0Gs"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/dIsAIyTm0Gs/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:56.826Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=dIsAIyTm0Gs"
+    }
+  },
+  "yt-cover-liz-79369f049e15": {
+    "platformId": "aIisOUoZIhc",
+    "publishedAt": {
+      "value": "2018-11-16T11:15:16Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=aIisOUoZIhc"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/aIisOUoZIhc/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:57.154Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=aIisOUoZIhc"
+    }
+  },
+  "yt-cover-liz-7c6835edd528": {
+    "platformId": "RLpRiyblt-s",
+    "publishedAt": {
+      "value": "2018-10-25T10:41:27Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=RLpRiyblt-s"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/RLpRiyblt-s/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:57.288Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=RLpRiyblt-s"
+    }
+  },
+  "yt-cover-liz-4f4635e4c35c": {
+    "platformId": "nQQ6BUvsdFQ",
+    "publishedAt": {
+      "value": "2018-10-11T12:00:04Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=nQQ6BUvsdFQ"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/nQQ6BUvsdFQ/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:57.387Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=nQQ6BUvsdFQ"
+    }
+  },
+  "yt-cover-liz-a7cbbe259ae2": {
+    "platformId": "VEsIJeJ9pl0",
+    "publishedAt": {
+      "value": "2018-09-23T00:00:04Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=VEsIJeJ9pl0"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/VEsIJeJ9pl0/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:57.607Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=VEsIJeJ9pl0"
+    }
+  },
+  "yt-cover-liz-9b0e4e5eefe0": {
+    "platformId": "QIBY5NPmNDs",
+    "publishedAt": {
+      "value": "2018-09-02T08:48:32Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=QIBY5NPmNDs"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/QIBY5NPmNDs/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:57.512Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=QIBY5NPmNDs"
+    }
+  },
+  "yt-cover-liz-1cae68a7c256": {
+    "platformId": "ggO4A8viiPI",
+    "publishedAt": {
+      "value": "2018-08-22T21:55:29Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=ggO4A8viiPI"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/ggO4A8viiPI/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:57.762Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=ggO4A8viiPI"
+    }
+  },
+  "yt-cover-liz-2f463642feee": {
+    "platformId": "3PqeQQxTGhI",
+    "publishedAt": {
+      "value": "2018-07-24T10:51:28Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=3PqeQQxTGhI"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/3PqeQQxTGhI/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:58.298Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=3PqeQQxTGhI"
+    }
+  },
+  "yt-cover-liz-66cc1eac9577": {
+    "platformId": "PPkbBhQ6Cq4",
+    "publishedAt": {
+      "value": "2018-07-09T02:50:29Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=PPkbBhQ6Cq4"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/PPkbBhQ6Cq4/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:58.097Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=PPkbBhQ6Cq4"
+    }
+  },
+  "yt-cover-liz-3e6a5a11d142": {
+    "platformId": "EIbvKSUeta0",
+    "publishedAt": {
+      "value": "2018-07-02T12:00:02Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=EIbvKSUeta0"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/EIbvKSUeta0/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:58.521Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=EIbvKSUeta0"
+    }
+  },
+  "yt-cover-liz-53899c5e4b55": {
+    "platformId": "puq0ZayTaAs",
+    "publishedAt": {
+      "value": "2018-07-27T13:01:28Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T12:46:59.2870935Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=puq0ZayTaAs"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/puq0ZayTaAs/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "verifiedAt": "2026-10-30T12:49:58.707Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=puq0ZayTaAs"
+    }
+  },
+  "yt-cover-45db63d5f3f9": {
+    "platformId": "DFkSCdbwdZY",
+    "publishedAt": {
+      "value": "2018-11-06T07:50:03Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=DFkSCdbwdZY",
+      "verifiedAt": "2026-10-30T13:36:55.225Z"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/DFkSCdbwdZY/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=DFkSCdbwdZY",
+      "verifiedAt": "2026-10-30T13:36:55.225Z"
+    }
+  },
+  "yt-cover-18097a3ace39": {
+    "platformId": "vt_A0P9jhYI",
+    "publishedAt": {
+      "value": "2026-10-28T11:00:11Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=vt_A0P9jhYI",
+      "verifiedAt": "2026-10-30T13:36:57.174Z"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/vt_A0P9jhYI/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=vt_A0P9jhYI",
+      "verifiedAt": "2026-10-30T13:36:57.174Z"
+    }
+  },
+  "yt-cover-e966b4e06994": {
+    "platformId": "yTASHD-MWwE",
+    "publishedAt": {
+      "value": "2025-04-09T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=yTASHD-MWwE",
+      "verifiedAt": "2026-10-30T13:36:58.313Z"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/yTASHD-MWwE/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "youtube-data-api",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=yTASHD-MWwE",
+      "verifiedAt": "2026-10-30T13:36:58.313Z"
+    }
   }
 }

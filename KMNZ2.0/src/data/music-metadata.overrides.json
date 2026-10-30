@@ -1,4 +1,1154 @@
 {
+  "yt-cover-d88d9cb01397": {
+    "platformId": "utHgT3i8Dj8",
+    "publishedAt": {
+      "value": "2026-09-18T12:00:07Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=utHgT3i8Dj8"
+    }
+  },
+  "yt-cover-5720974ffee6": {
+    "platformId": "vXxHT2hyBNI",
+    "publishedAt": {
+      "value": "2026-08-25T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=vXxHT2hyBNI"
+    }
+  },
+  "yt-cover-951c284b2158": {
+    "platformId": "07c93sMYrYE",
+    "publishedAt": {
+      "value": "2026-07-03T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=07c93sMYrYE"
+    }
+  },
+  "yt-cover-4bc829ad525e": {
+    "platformId": "tVU2Ozdvsfo",
+    "publishedAt": {
+      "value": "2026-06-26T11:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=tVU2Ozdvsfo"
+    }
+  },
+  "yt-cover-2c52a1a82331": {
+    "platformId": "KdbOWsemi-4",
+    "publishedAt": {
+      "value": "2026-06-19T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=KdbOWsemi-4"
+    }
+  },
+  "yt-cover-99e16c3333ea": {
+    "platformId": "BErJ70wqaZI",
+    "publishedAt": {
+      "value": "2026-01-16T10:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=BErJ70wqaZI"
+    }
+  },
+  "yt-cover-9a3ef6b2e11d": {
+    "platformId": "ogYOHWGcg0I",
+    "publishedAt": {
+      "value": "2025-12-21T12:01:35Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=ogYOHWGcg0I"
+    }
+  },
+  "yt-cover-472f308810da": {
+    "platformId": "ykGeIkXPVJM",
+    "publishedAt": {
+      "value": "2025-11-14T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=ykGeIkXPVJM"
+    }
+  },
+  "yt-cover-5f22f67d5fc1": {
+    "platformId": "kBg5uw3dJ5s",
+    "publishedAt": {
+      "value": "2025-10-17T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=kBg5uw3dJ5s"
+    }
+  },
+  "yt-cover-13d1b67fbb7c": {
+    "platformId": "Ax9mtPuSmuk",
+    "publishedAt": {
+      "value": "2025-09-12T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=Ax9mtPuSmuk"
+    }
+  },
+  "yt-cover-211b305b581c": {
+    "platformId": "OyKRClWgtwo",
+    "publishedAt": {
+      "value": "2025-08-08T10:30:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=OyKRClWgtwo"
+    }
+  },
+  "yt-cover-fa335580f4d6": {
+    "platformId": "KIQ83b3odlA",
+    "publishedAt": {
+      "value": "2025-07-13T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=KIQ83b3odlA"
+    }
+  },
+  "yt-cover-dfda852ebb99": {
+    "platformId": "iOxejRT8EAU",
+    "publishedAt": {
+      "value": "2025-06-04T11:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=iOxejRT8EAU"
+    }
+  },
+  "yt-cover-02a67b37cd68": {
+    "platformId": "Duab6SVdleY",
+    "publishedAt": {
+      "value": "2025-05-12T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=Duab6SVdleY"
+    }
+  },
+  "yt-cover-48cd5ad0f773": {
+    "platformId": "hgbnWLRfZ-c",
+    "publishedAt": {
+      "value": "2025-02-25T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=hgbnWLRfZ-c"
+    }
+  },
+  "yt-cover-a4ea405cfd7f": {
+    "platformId": "_Wv9KzNybVs",
+    "publishedAt": {
+      "value": "2025-01-20T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=_Wv9KzNybVs"
+    }
+  },
+  "yt-cover-86cc09d177ec": {
+    "platformId": "Jdt6XR1Eclk",
+    "publishedAt": {
+      "value": "2024-12-31T12:00:18Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=Jdt6XR1Eclk"
+    }
+  },
+  "yt-cover-2d09c24cb667": {
+    "platformId": "EG_BVGUPxsI",
+    "publishedAt": {
+      "value": "2024-11-18T12:30:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=EG_BVGUPxsI"
+    }
+  },
+  "yt-cover-607ea4655908": {
+    "platformId": "WL-VZrXGalo",
+    "publishedAt": {
+      "value": "2024-10-06T12:00:27Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=WL-VZrXGalo"
+    }
+  },
+  "yt-cover-452eca383624": {
+    "platformId": "J5FhYkcY6U4",
+    "publishedAt": {
+      "value": "2024-09-05T12:00:07Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=J5FhYkcY6U4"
+    }
+  },
+  "yt-cover-f81cb1d4c25b": {
+    "platformId": "gvWSyr1gBtU",
+    "publishedAt": {
+      "value": "2024-07-29T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=gvWSyr1gBtU"
+    }
+  },
+  "yt-cover-761315fb4654": {
+    "platformId": "XP8A9hcoMPA",
+    "publishedAt": {
+      "value": "2024-06-26T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=XP8A9hcoMPA"
+    }
+  },
+  "yt-cover-d756d839e404": {
+    "platformId": "-djyV7TJHZM",
+    "publishedAt": {
+      "value": "2024-06-01T12:00:07Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=-djyV7TJHZM"
+    }
+  },
+  "yt-cover-b3723fc507e9": {
+    "platformId": "FFLYHWCcxS8",
+    "publishedAt": {
+      "value": "2026-09-11T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=FFLYHWCcxS8"
+    }
+  },
+  "yt-cover-be029c5c3db1": {
+    "platformId": "u1LWGCiGCHE",
+    "publishedAt": {
+      "value": "2026-08-28T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=u1LWGCiGCHE"
+    }
+  },
+  "yt-cover-df989cbab306": {
+    "platformId": "LOnNzke3j5E",
+    "publishedAt": {
+      "value": "2026-07-10T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=LOnNzke3j5E"
+    }
+  },
+  "yt-cover-9fcdf87a7da1": {
+    "platformId": "F59pi4ymkNE",
+    "publishedAt": {
+      "value": "2026-04-17T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=F59pi4ymkNE"
+    }
+  },
+  "yt-cover-b9c6af470564": {
+    "platformId": "HxbMxOTJvxw",
+    "publishedAt": {
+      "value": "2026-03-20T11:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=HxbMxOTJvxw"
+    }
+  },
+  "yt-cover-240e3a0657f5": {
+    "platformId": "bNGkNKGOMRI",
+    "publishedAt": {
+      "value": "2026-02-11T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=bNGkNKGOMRI"
+    }
+  },
+  "yt-cover-7e0613b8f521": {
+    "platformId": "thJ1JsunRbE",
+    "publishedAt": {
+      "value": "2026-01-23T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=thJ1JsunRbE"
+    }
+  },
+  "yt-cover-827e6f813699": {
+    "platformId": "gI7PL2wLvJ4",
+    "publishedAt": {
+      "value": "2025-12-12T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=gI7PL2wLvJ4"
+    }
+  },
+  "yt-cover-4378b122c9f0": {
+    "platformId": "NQDig3e10eg",
+    "publishedAt": {
+      "value": "2025-11-06T15:00:51Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=NQDig3e10eg"
+    }
+  },
+  "yt-cover-1db2eebbf22f": {
+    "platformId": "eA5ucnsM4CQ",
+    "publishedAt": {
+      "value": "2025-10-10T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=eA5ucnsM4CQ"
+    }
+  },
+  "yt-cover-f91fe48a3626": {
+    "platformId": "QMCgOaR25aQ",
+    "publishedAt": {
+      "value": "2025-09-19T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=QMCgOaR25aQ"
+    }
+  },
+  "yt-cover-cc3b3863c980": {
+    "platformId": "G6Gog8dXE8U",
+    "publishedAt": {
+      "value": "2025-08-22T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=G6Gog8dXE8U"
+    }
+  },
+  "yt-cover-98e47107b9f4": {
+    "platformId": "8VwSVY7_M9g",
+    "publishedAt": {
+      "value": "2025-06-11T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=8VwSVY7_M9g"
+    }
+  },
+  "yt-cover-c2b9369b9b82": {
+    "platformId": "FK-JPVha820",
+    "publishedAt": {
+      "value": "2025-03-04T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=FK-JPVha820"
+    }
+  },
+  "yt-cover-9847a0cbc84d": {
+    "platformId": "o_0TZbWjYVc",
+    "publishedAt": {
+      "value": "2025-01-27T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=o_0TZbWjYVc"
+    }
+  },
+  "yt-cover-4a388e8884f2": {
+    "platformId": "fBz5oBoe2cg",
+    "publishedAt": {
+      "value": "2025-01-07T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=fBz5oBoe2cg"
+    }
+  },
+  "yt-cover-10dc36bb93a3": {
+    "platformId": "H8gE7dCoOLg",
+    "publishedAt": {
+      "value": "2024-11-25T12:00:23Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=H8gE7dCoOLg"
+    }
+  },
+  "yt-cover-d0d7ca3abf72": {
+    "platformId": "6JqzF5kt5y0",
+    "publishedAt": {
+      "value": "2024-11-07T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=6JqzF5kt5y0"
+    }
+  },
+  "yt-cover-0c957c2e0d40": {
+    "platformId": "g_Mo5VQEbE0",
+    "publishedAt": {
+      "value": "2024-09-26T13:16:39Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=g_Mo5VQEbE0"
+    }
+  },
+  "yt-cover-daa61d0dd105": {
+    "platformId": "vnEv8A8Q5tQ",
+    "publishedAt": {
+      "value": "2024-08-28T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=vnEv8A8Q5tQ"
+    }
+  },
+  "yt-cover-48bda074f942": {
+    "platformId": "w4rrLYMidT4",
+    "publishedAt": {
+      "value": "2024-07-18T12:00:07Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=w4rrLYMidT4"
+    }
+  },
+  "yt-cover-a3fd758cfb5d": {
+    "platformId": "jwIug5fFmjw",
+    "publishedAt": {
+      "value": "2024-06-19T12:00:07Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=jwIug5fFmjw"
+    }
+  },
+  "yt-cover-8bf0b8ee81aa": {
+    "platformId": "5yZv6_XV7Qc",
+    "publishedAt": {
+      "value": "2024-05-29T12:00:07Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=5yZv6_XV7Qc"
+    }
+  },
+  "yt-cover-92913217c4b4": {
+    "platformId": "hm-GdWKrdq4",
+    "publishedAt": {
+      "value": "2025-10-03T11:01:02Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=hm-GdWKrdq4"
+    }
+  },
+  "yt-cover-f578d4a7bb4a": {
+    "platformId": "TVgzJczX_ng",
+    "publishedAt": {
+      "value": "2025-02-20T10:00:24Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=TVgzJczX_ng"
+    }
+  },
+  "yt-cover-2cc293c8a679": {
+    "platformId": "ZJovw_yRLCc",
+    "publishedAt": {
+      "value": "2024-08-13T13:00:35Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=ZJovw_yRLCc"
+    }
+  },
+  "yt-cover-cc82b290849b": {
+    "platformId": "mgIqn9JTm78",
+    "publishedAt": {
+      "value": "2026-02-02T10:01:08Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=mgIqn9JTm78"
+    }
+  },
+  "yt-cover-0472212c3422": {
+    "platformId": "bl-oprJVBQY",
+    "publishedAt": {
+      "value": "2026-03-30T11:00:41Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=bl-oprJVBQY"
+    }
+  },
+  "yt-cover-4c69e95f332f": {
+    "platformId": "M0ENoub4VNI",
+    "publishedAt": {
+      "value": "2026-04-07T11:00:41Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=M0ENoub4VNI"
+    }
+  },
+  "yt-cover-ff920db9dee4": {
+    "platformId": "FAQFkhbt_mc",
+    "publishedAt": {
+      "value": "2026-08-19T03:00:37Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=FAQFkhbt_mc"
+    }
+  },
+  "yt-original-tina-419812fd5b2c": {
+    "platformId": "FoKcuP4YrGM",
+    "publishedAt": {
+      "value": "2026-05-25T15:00:27Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=FoKcuP4YrGM"
+    }
+  },
+  "yt-cover-2ae3b4014f50": {
+    "platformId": "Qk9W5QT0RFc",
+    "publishedAt": {
+      "value": "2026-09-25T12:00:11Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=Qk9W5QT0RFc"
+    }
+  },
+  "yt-cover-9712963306e4": {
+    "platformId": "I3QNp7NnQpE",
+    "publishedAt": {
+      "value": "2026-09-04T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=I3QNp7NnQpE"
+    }
+  },
+  "yt-cover-ceaf1457fb9d": {
+    "platformId": "ZSDbjx_lhKY",
+    "publishedAt": {
+      "value": "2026-07-24T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=ZSDbjx_lhKY"
+    }
+  },
+  "yt-cover-9d04a73fa12b": {
+    "platformId": "6Az5pIkB9E4",
+    "publishedAt": {
+      "value": "2026-05-01T11:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=6Az5pIkB9E4"
+    }
+  },
+  "yt-cover-af6cc462d906": {
+    "platformId": "D60mNg5ZDi0",
+    "publishedAt": {
+      "value": "2026-03-27T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=D60mNg5ZDi0"
+    }
+  },
+  "yt-cover-a71fbe21de58": {
+    "platformId": "KsDh4kfVj_M",
+    "publishedAt": {
+      "value": "2026-03-13T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=KsDh4kfVj_M"
+    }
+  },
+  "yt-cover-82fba96f5e54": {
+    "platformId": "pRIidGiIpNY",
+    "publishedAt": {
+      "value": "2026-02-28T11:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=pRIidGiIpNY"
+    }
+  },
+  "yt-cover-aa03cb8f3739": {
+    "platformId": "LVr1ZKf2XTE",
+    "publishedAt": {
+      "value": "2026-01-30T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=LVr1ZKf2XTE"
+    }
+  },
+  "yt-cover-6afee015c4b5": {
+    "platformId": "bwnuJIH_YzE",
+    "publishedAt": {
+      "value": "2025-12-27T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=bwnuJIH_YzE"
+    }
+  },
+  "yt-cover-1e33850fd870": {
+    "platformId": "943z5wflYI4",
+    "publishedAt": {
+      "value": "2025-12-05T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=943z5wflYI4"
+    }
+  },
+  "yt-cover-1143c459a763": {
+    "platformId": "c0LUOC6VysY",
+    "publishedAt": {
+      "value": "2025-10-24T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=c0LUOC6VysY"
+    }
+  },
+  "yt-cover-da59b20549ac": {
+    "platformId": "rF2xO6fm6o8",
+    "publishedAt": {
+      "value": "2025-09-26T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=rF2xO6fm6o8"
+    }
+  },
+  "yt-cover-5075a2269b0c": {
+    "platformId": "yMK8liI9fTA",
+    "publishedAt": {
+      "value": "2025-08-19T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=yMK8liI9fTA"
+    }
+  },
+  "yt-cover-e361b1f321d9": {
+    "platformId": "7J6SXJp65jc",
+    "publishedAt": {
+      "value": "2025-07-18T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=7J6SXJp65jc"
+    }
+  },
+  "yt-cover-e096c9d2514e": {
+    "platformId": "uoKqwHrkUmA",
+    "publishedAt": {
+      "value": "2025-06-29T10:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=uoKqwHrkUmA"
+    }
+  },
+  "yt-cover-e5940578d62e": {
+    "platformId": "_6zYHhCYWZo",
+    "publishedAt": {
+      "value": "2025-05-28T11:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=_6zYHhCYWZo"
+    }
+  },
+  "yt-cover-f175d5349c22": {
+    "platformId": "HjMp4wlrWjg",
+    "publishedAt": {
+      "value": "2025-05-08T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=HjMp4wlrWjg"
+    }
+  },
+  "yt-cover-fc9b3471dcc3": {
+    "platformId": "ir64M0THn0c",
+    "publishedAt": {
+      "value": "2025-02-18T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=ir64M0THn0c"
+    }
+  },
+  "yt-cover-6d64192c202e": {
+    "platformId": "F2lF-K1iLmw",
+    "publishedAt": {
+      "value": "2025-01-14T12:00:27Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=F2lF-K1iLmw"
+    }
+  },
+  "yt-cover-408a8b5b7423": {
+    "platformId": "7fLM1P06qTA",
+    "publishedAt": {
+      "value": "2024-12-09T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=7fLM1P06qTA"
+    }
+  },
+  "yt-cover-aee8209e37e4": {
+    "platformId": "W6_T1tvUftQ",
+    "publishedAt": {
+      "value": "2024-11-13T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=W6_T1tvUftQ"
+    }
+  },
+  "yt-cover-e81df3469cb2": {
+    "platformId": "OB1OxoHYa3s",
+    "publishedAt": {
+      "value": "2024-10-16T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=OB1OxoHYa3s"
+    }
+  },
+  "yt-cover-4e4fa70b0105": {
+    "platformId": "_h_ZpDiw4Lw",
+    "publishedAt": {
+      "value": "2024-09-12T12:00:07Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=_h_ZpDiw4Lw"
+    }
+  },
+  "yt-cover-5e46d87782b0": {
+    "platformId": "8H1abFkSLss",
+    "publishedAt": {
+      "value": "2024-08-08T12:00:07Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=8H1abFkSLss"
+    }
+  },
+  "yt-cover-30fef4d54512": {
+    "platformId": "eGdl-Hkz85k",
+    "publishedAt": {
+      "value": "2024-07-09T12:00:06Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=eGdl-Hkz85k"
+    }
+  },
+  "yt-cover-2a5f78c7a602": {
+    "platformId": "j85bFjcOxHA",
+    "publishedAt": {
+      "value": "2024-06-15T12:00:07Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=j85bFjcOxHA"
+    }
+  },
+  "yt-cover-b84077eefa06": {
+    "platformId": "jJG31kNad3U",
+    "publishedAt": {
+      "value": "2023-06-04T12:00:26Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=jJG31kNad3U"
+    }
+  },
+  "yt-cover-c87d25024b7d": {
+    "platformId": "jecxPkwotVk",
+    "publishedAt": {
+      "value": "2023-03-20T12:00:35Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=jecxPkwotVk"
+    }
+  },
+  "yt-cover-06d05965c473": {
+    "platformId": "4_f3TaVUTuk",
+    "publishedAt": {
+      "value": "2023-01-11T12:00:03Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=4_f3TaVUTuk"
+    }
+  },
+  "yt-cover-d5c40612663d": {
+    "platformId": "m8Rns8qlvLk",
+    "publishedAt": {
+      "value": "2022-11-08T12:00:35Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=m8Rns8qlvLk"
+    }
+  },
+  "yt-cover-d9a5d8f4e950": {
+    "platformId": "Ux7KNEoh5kA",
+    "publishedAt": {
+      "value": "2022-09-13T12:00:15Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=Ux7KNEoh5kA"
+    }
+  },
+  "yt-cover-c011b396b17a": {
+    "platformId": "XoQB8H5zq0g",
+    "publishedAt": {
+      "value": "2022-06-30T12:00:18Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=XoQB8H5zq0g"
+    }
+  },
+  "yt-cover-5f3707d8cbb6": {
+    "platformId": "wwkiKF9PAU4",
+    "publishedAt": {
+      "value": "2022-04-04T12:00:33Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=wwkiKF9PAU4"
+    }
+  },
+  "yt-cover-2c2126789ea4": {
+    "platformId": "hJ99UCTEMZQ",
+    "publishedAt": {
+      "value": "2022-02-28T12:00:36Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=hJ99UCTEMZQ"
+    }
+  },
+  "yt-cover-123d3f7f8510": {
+    "platformId": "DM4SrUaD2zM",
+    "publishedAt": {
+      "value": "2022-01-25T12:00:13Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=DM4SrUaD2zM"
+    }
+  },
+  "yt-cover-c9294ba7772c": {
+    "platformId": "gdYvNyZmxRI",
+    "publishedAt": {
+      "value": "2021-11-02T11:30:08Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=gdYvNyZmxRI"
+    }
+  },
+  "yt-cover-6d492fab3395": {
+    "platformId": "AslflKDQH0A",
+    "publishedAt": {
+      "value": "2021-10-14T12:00:10Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=AslflKDQH0A"
+    }
+  },
+  "yt-cover-47ac6b7dc1fe": {
+    "platformId": "Me0F_GFmpDM",
+    "publishedAt": {
+      "value": "2021-08-08T12:00:08Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=Me0F_GFmpDM"
+    }
+  },
+  "yt-cover-cea9d8da0ffe": {
+    "platformId": "VXZj27DBoS4",
+    "publishedAt": {
+      "value": "2021-06-30T12:00:28Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=VXZj27DBoS4"
+    }
+  },
+  "yt-cover-6669f81c89e9": {
+    "platformId": "leKGj-YJquI",
+    "publishedAt": {
+      "value": "2021-06-11T12:00:17Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=leKGj-YJquI"
+    }
+  },
+  "yt-cover-486b4e84ae27": {
+    "platformId": "LCHhj2YGlqY",
+    "publishedAt": {
+      "value": "2021-04-12T12:00:18Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=LCHhj2YGlqY"
+    }
+  },
+  "yt-cover-09171de45257": {
+    "platformId": "MbkDZ01m0xg",
+    "publishedAt": {
+      "value": "2021-03-23T12:00:05Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=MbkDZ01m0xg"
+    }
+  },
+  "yt-cover-456dbd62e00c": {
+    "platformId": "2k4IzEZ4wn8",
+    "publishedAt": {
+      "value": "2021-03-11T12:00:00Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=2k4IzEZ4wn8"
+    }
+  },
+  "yt-cover-67fdba54099c": {
+    "platformId": "BsRyon6uAis",
+    "publishedAt": {
+      "value": "2021-02-16T12:00:11Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=BsRyon6uAis"
+    }
+  },
+  "yt-cover-98b12caf3991": {
+    "platformId": "CYxyO8si018",
+    "publishedAt": {
+      "value": "2020-12-14T12:00:03Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=CYxyO8si018"
+    }
+  },
+  "yt-cover-53edc655319e": {
+    "platformId": "UHuIHCrqUAA",
+    "publishedAt": {
+      "value": "2020-10-02T12:00:07Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=UHuIHCrqUAA"
+    }
+  },
+  "yt-cover-5b6fda9121a1": {
+    "platformId": "eyKtWC9qdJA",
+    "publishedAt": {
+      "value": "2020-09-10T12:00:08Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=eyKtWC9qdJA"
+    }
+  },
+  "yt-cover-8c7b51a377d4": {
+    "platformId": "pKVv6NXGzr0",
+    "publishedAt": {
+      "value": "2020-07-31T12:00:14Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=pKVv6NXGzr0"
+    }
+  },
+  "yt-cover-0091b1388f6f": {
+    "platformId": "zsmSY3bICm4",
+    "publishedAt": {
+      "value": "2020-07-16T12:00:18Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=zsmSY3bICm4"
+    }
+  },
+  "yt-cover-2508ac5798df": {
+    "platformId": "6E_egdSI30o",
+    "publishedAt": {
+      "value": "2020-06-26T12:00:01Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=6E_egdSI30o"
+    }
+  },
+  "yt-cover-61572018a292": {
+    "platformId": "DxOLshjv9j4",
+    "publishedAt": {
+      "value": "2020-06-04T12:00:11Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=DxOLshjv9j4"
+    }
+  },
+  "yt-cover-4b2ad2df8ccf": {
+    "platformId": "0rKTlVxMp_o",
+    "publishedAt": {
+      "value": "2020-05-14T12:00:00Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=0rKTlVxMp_o"
+    }
+  },
+  "yt-cover-7455c246c951": {
+    "platformId": "D2MaWakV2RU",
+    "publishedAt": {
+      "value": "2019-07-18T13:30:04Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=D2MaWakV2RU"
+    }
+  },
+  "yt-cover-01bf994e6be1": {
+    "platformId": "tOmoHL2gL5I",
+    "publishedAt": {
+      "value": "2019-06-02T11:00:07Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=tOmoHL2gL5I"
+    }
+  },
+  "yt-cover-16a25844c5ae": {
+    "platformId": "VhyOgpL-NTg",
+    "publishedAt": {
+      "value": "2019-03-10T10:00:07Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=VhyOgpL-NTg"
+    }
+  },
+  "yt-cover-9722ce50028f": {
+    "platformId": "qjpMiegDnPw",
+    "publishedAt": {
+      "value": "2019-01-31T12:00:08Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=qjpMiegDnPw"
+    }
+  },
+  "yt-cover-0328d5869fcc": {
+    "platformId": "VrxmX_gVmnI",
+    "publishedAt": {
+      "value": "2018-11-30T10:01:09Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=VrxmX_gVmnI"
+    }
+  },
+  "yt-cover-f7dcc9c7a218": {
+    "platformId": "fTFW0ziumfM",
+    "publishedAt": {
+      "value": "2018-09-09T11:15:00Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=fTFW0ziumfM"
+    }
+  },
+  "yt-cover-9d9c9d7766ba": {
+    "platformId": "Co1Nx3YC8fM",
+    "publishedAt": {
+      "value": "2018-07-25T10:03:54Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=Co1Nx3YC8fM"
+    }
+  },
+  "yt-cover-dc3f980a5241": {
+    "platformId": "dFI4axmXFGo",
+    "publishedAt": {
+      "value": "2018-07-19T09:00:03Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=dFI4axmXFGo"
+    }
+  },
+  "yt-cover-37a2474162bf": {
+    "platformId": "AoBQYdzVLug",
+    "publishedAt": {
+      "value": "2018-07-09T09:20:38Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T11:43:28Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=AoBQYdzVLug"
+    }
+  },
   "yt-wave": {
     "platformId": "MehG9Ms8ygU",
     "publishedAt": {
@@ -4014,6 +5164,44 @@
       "status": "verified",
       "verifiedAt": "2026-10-27T11:47:27.386Z",
       "sourceUrl": "https://www.youtube.com/watch?v=_U2-SRW-wiw"
+    }
+  },
+  "yt-boarding-tina": {
+    "platformId": "tUXZqCTGk_o",
+    "cover": {
+      "url": "https://i.ytimg.com/vi/tUXZqCTGk_o/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T08:19:12.605Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=tUXZqCTGk_o"
+    },
+    "publishedAt": {
+      "value": "2026-07-17T04:00:26-07:00",
+      "source": "manual",
+      "status": "verified",
+      "verifiedAt": "2026-10-30T08:19:12.605Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=tUXZqCTGk_o"
+    }
+  },
+  "yt-cover-1f1f9bfaf915": {
+    "platformId": "z8sPS1kyOv0",
+    "publishedAt": {
+      "value": "2022-05-20T05:00:11-07:00",
+      "source": "manual",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=z8sPS1kyOv0",
+      "verifiedAt": "2026-10-30T13:36:56.209Z"
+    },
+    "cover": {
+      "url": "https://i.ytimg.com/vi/z8sPS1kyOv0/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720,
+      "source": "manual",
+      "status": "verified",
+      "sourceUrl": "https://www.youtube.com/watch?v=z8sPS1kyOv0",
+      "verifiedAt": "2026-10-30T13:36:56.209Z"
     }
   }
 }

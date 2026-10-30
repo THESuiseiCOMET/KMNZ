@@ -112,3 +112,27 @@ test('music route motion receives platform/category changes and repeated active 
     assert.equal(view.route.music.search,'MIRROR');assert.equal(h.entries.length,count)
   } finally {h.cleanup()}
 })
+
+test('YouTube filters restore both levels after history navigation and refresh, preserving /KMNZ/ and search',()=>{
+  const h=harness('#/music/youtube')
+  try {
+    let view=h.render();h.flush()
+    view.changeMusic(routes.changeMusicFilter(view.route.music,{type:'youtube',value:'original'}));view=h.render();h.flush()
+    view.changeMusic(routes.changeMusicFilter(view.route.music,{type:'group',value:'lita-liz'}));view=h.render();h.flush()
+    assert.equal(h.win.location.hash,'#/music/youtube?category=original&group=lita-liz')
+    const refreshed=parse(h.win.location.hash,releases)
+    assert.equal(refreshed.music.youtubeGroup,'lita-liz')
+    view.changeMusic({...view.route.music,search:'Boarding'},true);view=h.render();h.flush()
+    view.changeMusic(routes.changeMusicFilter(view.route.music,{type:'youtube',value:'cover'}));view=h.render();h.flush()
+    assert.equal(view.route.music.youtubeGroup,null)
+    view.changeMusic(routes.changeMusicFilter(view.route.music,{type:'member',value:'LIZ'}));view=h.render();h.flush()
+    assert.equal(view.route.music.youtubeMember,'LIZ')
+    h.win.history.back();view=h.render();h.flush()
+    assert.equal(view.route.music.youtubeCategory,'cover');assert.equal(view.route.music.youtubeMember,null)
+    h.win.history.back();view=h.render();h.flush()
+    assert.equal(view.route.music.youtubeCategory,'original');assert.equal(view.route.music.youtubeGroup,'lita-liz')
+    assert.equal(view.route.music.search,'Boarding');assert.equal(h.win.location.pathname,'/KMNZ/')
+    view.navigate('about');view=h.render();view.navigate('music');view=h.render()
+    assert.equal(view.route.music.youtubeGroup,'lita-liz')
+  } finally {h.cleanup()}
+})

@@ -1,5 +1,17 @@
 export type MusicPlatform = 'youtube' | 'spotify'
 export type MediaKind = 'mv' | 'track' | 'album'
+export type YouTubeCategory = 'all' | 'original' | 'cover'
+export type OriginalGroup = 'lita-liz' | 'lita-tina-nero' | 'special'
+export type KMNZMember = 'LITA' | 'LIZ' | 'TINA' | 'NERO'
+export type MusicMemberCode = KMNZMember | Lowercase<KMNZMember>
+export interface YouTubeClassification {
+  contentType: Exclude<YouTubeCategory, 'all'>
+  originalGroup?: OriginalGroup
+  coverMembers?: MusicMemberCode[]
+  performers?: MusicMemberCode[]
+  evidenceUrls: string[]
+}
+
 export type MusicEra = 'new' | 'classic'
 
 export interface MusicEntry {
@@ -13,6 +25,7 @@ export interface MusicEntry {
   era: MusicEra
   platformId: string
   externalUrl: string
+  bilibiliUrl?: string
 }
 
 export interface Song {
@@ -54,7 +67,7 @@ interface SourceFields {
 }
 
 export type MusicSource = SourceFields & (
-  { platform: 'youtube'; kind: 'mv'; target: Extract<SourceTarget, { type: 'song' }> }
+  { platform: 'youtube'; kind: 'mv'; classification?: YouTubeClassification; bilibiliUrl?: string; target: Extract<SourceTarget, { type: 'song' }> }
   | { platform: 'spotify'; kind: 'track'; target: Extract<SourceTarget, { type: 'song' }> }
   | { platform: 'spotify'; kind: 'album'; target: Extract<SourceTarget, { type: 'release' }> }
 )

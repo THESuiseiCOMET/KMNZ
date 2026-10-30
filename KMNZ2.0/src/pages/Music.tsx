@@ -1,21 +1,24 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { musicCatalog } from '../data/music'
+import type { CSSProperties } from 'react'
 import type { MusicEntry, MusicPlatform } from '../data/music'
 import { musicLibrary } from '../data/musicLibrary'
 import { createMusicViews } from '../lib/musicViews'
-import type { SpotifyCategory } from '../lib/musicViews'
 import { createQueueSelections } from '../lib/playbackQueue'
 import type { PlaybackSelection } from '../types/playback'
-import { defaultMusicRoute } from '../lib/siteRoute'
-import type { MusicRoute } from '../lib/siteRoute'
+import { defaultMusicRoute, changeMusicFilter } from '../lib/siteRoute'
+import type { MusicRoute, MusicFilterAction } from '../lib/siteRoute'
 import playIcon from '../assets/icons/play.svg'
 import youtubeIcon from '../assets/icons/brand-youtube.svg'
+import bilibiliIcon from '../assets/icons/brand-bilibili.svg'
+import { validBilibiliVideoUrl } from '../lib/musicLibrary'
 import spotifyIcon from '../assets/icons/brand-spotify.svg'
 import youtubeLogoLight from '../assets/icons/youtube-logo-light.svg'
 import youtubeLogoDark from '../assets/icons/youtube-logo-dark.svg'
 import spotifyLogoLight from '../assets/icons/spotify-logo-light.svg'
 import spotifyLogoDark from '../assets/icons/spotify-logo-dark.svg'
 import { useNavigationIndicator } from '../hooks/useNavigationIndicator'
+import MusicFilterGroup from '../components/MusicFilterGroup'
 import MusicCover from '../components/MusicCover'
 import MusicReleaseDetail from '../components/MusicReleaseDetail'
 import { getMusicMetadata, sortMusicByDate } from '../data/musicMetadata'
@@ -43,9 +46,8 @@ const queueSelections = createQueueSelections(musicLibrary)
 export default function Music({ selectedId, onSelect, route, onRouteChange, onReleaseBack }: MusicProps) {
   const [localRoute, setLocalRoute] = useState<MusicRoute>(defaultMusicRoute)
   const currentRoute = route ?? localRoute
-  const { search, platform, category: spotifyCategory, releaseSourceId } = currentRoute
+  const { search, platform, category: spotifyCategory, youtubeCategory = 'all', youtubeGroup = null, youtubeMember = null, releaseSourceId } = currentRoute
   const platformIndicator = useNavigationIndicator(platform, false, '.music-tab[aria-pressed="true"]', '.music-tab')
-  const categoryIndicator = useNavigationIndicator(spotifyCategory, platform === 'spotify' && !releaseSourceId, '.music-category[aria-pressed="true"]', '.music-category')
   function updateRoute(patch: Partial<MusicRoute>, replace = false) {
     const next = { ...currentRoute, ...patch }
     if (onRouteChange) onRouteChange(next, replace)
@@ -53,7 +55,7 @@ export default function Music({ selectedId, onSelect, route, onRouteChange, onRe
   }
   const setReleaseSourceId = (id: string | null) => updateRoute({ releaseSourceId: id })
   const setSearch = (search: string) => updateRoute({ search }, true)
-  const setSpotifyCategory = (category: SpotifyCategory) => updateRoute({ category })
+  const filter = (action: MusicFilterAction) => updateRoute(changeMusicFilter(currentRoute, action))
   const albumButtons = useRef(new Map<string, HTMLButtonElement>())
   const returnSourceId = useRef<string | null>(null)
   useEffect(() => {
@@ -63,17 +65,7 @@ export default function Music({ selectedId, onSelect, route, onRouteChange, onRe
     }
   }, [releaseSourceId])
 
-  const filtered = useMemo(() => {
-    const query = search.trim().toLocaleLowerCase()
-    return sortMusicByDate(musicCatalog
-      .filter((item) => item.platform === platform)
-      .filter((item) => {
-        if (!query) return true
-        return [item.title, item.subtitle, item.artist, String(item.year), sourceLabel[item.platform]]
-          .some((value) => value.toLocaleLowerCase().includes(query))
-      })
-    )
-  }, [search, platform])
+  const filtered = useMemo(() => sortMusicByDate(views.youtubeCards(search, youtubeCategory, youtubeGroup, youtubeMember)), [search, youtubeCategory, youtubeGroup, youtubeMember])
   const spotify = useMemo(() => sortMusicByDate(views.spotifyCards(search, spotifyCategory)), [search, spotifyCategory])
   const detail = platform === 'spotify' && releaseSourceId ? views.releaseDetail(releaseSourceId) : null
 
@@ -89,7 +81,7 @@ export default function Music({ selectedId, onSelect, route, onRouteChange, onRe
     if (selection) onSelect(selection)
   }
 
-  function renderCard(item: MusicEntry) {
+  function renderCard(item: MusicEntry, position: number) {
     const metadata = getMusicMetadata(item)
     const date = musicDate(item, metadata)
     const isRelease = item.platform === 'spotify' && item.kind === 'album'
@@ -97,7 +89,8 @@ export default function Music({ selectedId, onSelect, route, onRouteChange, onRe
     const selected = selectedId === item.id || isRelease && selectedId !== null
       && views.sourceRelease(selectedId)?.id === views.sourceRelease(item.id)?.id
     return (
-      <article className={'music-card music-card-' + item.platform + (selected ? ' selected' : '')} key={item.id}>
+      <article className={'music-card music-card-' + item.platform + (selected ? ' selected' : '')} key={item.id}
+        style={{ '--music-card-transition': 'music-card-' + item.id, '--music-card-transition-class': 'music-filter-card music-filter-step-' + Math.min(position, 5) } as CSSProperties}>
         <div className="music-art-frame">
           <button
           type="button"
@@ -123,9 +116,14 @@ export default function Music({ selectedId, onSelect, route, onRouteChange, onRe
           </div>
 
           {date && <time className="music-card-date" dateTime={date.dateTime}>{date.label}</time>}
-          {item.platform === 'youtube' && <a href={item.externalUrl} target="_blank" rel="noopener noreferrer" className="music-external music-youtube-link" aria-label={'在 YouTube 打开 ' + item.title}>
-            <span className="music-source-mark" style={{ maskImage: `url("${youtubeIcon}")`, WebkitMaskImage: `url("${youtubeIcon}")` }} aria-hidden="true" />
-          </a>}
+          {item.platform === 'youtube' && <div className="music-source-links">
+            <a href={item.externalUrl} target="_blank" rel="noopener noreferrer" className="music-external music-youtube-link" aria-label={'在 YouTube 打开 ' + item.title}>
+              <span className="music-source-mark" style={{ maskImage: `url("${youtubeIcon}")`, WebkitMaskImage: `url("${youtubeIcon}")` }} aria-hidden="true" />
+            </a>
+            {validBilibiliVideoUrl(item.bilibiliUrl) && <a href={item.bilibiliUrl} target="_blank" rel="noopener noreferrer" className="music-external music-bilibili-link" aria-label={'在 Bilibili 查看转载视频：' + item.title}>
+              <span className="music-source-mark" style={{ maskImage: `url("${bilibiliIcon}")`, WebkitMaskImage: `url("${bilibiliIcon}")` }} aria-hidden="true" />
+            </a>}
+          </div>}
         </div>
       </article>
     )
@@ -155,7 +153,7 @@ export default function Music({ selectedId, onSelect, route, onRouteChange, onRe
               data-segment-value={value}
               aria-pressed={platform === value}
               className={platform === value ? 'music-tab active' : 'music-tab'}
-              onClick={() => updateRoute({ platform: value, releaseSourceId: null })}
+              onClick={() => filter({ type: 'platform', value })}
             >
               <img className={'music-platform-logo music-platform-logo-light music-platform-logo-' + value} src={platformLogos[value].light} alt="" aria-hidden="true" draggable={false} />
               <img className={'music-platform-logo music-platform-logo-dark music-platform-logo-' + value} src={platformLogos[value].dark} alt="" aria-hidden="true" draggable={false} />
@@ -163,14 +161,19 @@ export default function Music({ selectedId, onSelect, route, onRouteChange, onRe
           ))}
           </div>
         </div>
-        {platform === 'spotify' && !detail && <div ref={categoryIndicator.linksRef} className={'music-categories' + (categoryIndicator.indicator ? ' has-indicator' : '')} role="group" aria-label="Spotify 分类">
-          {categoryIndicator.indicator && <span className="music-switch-indicator music-category-indicator" aria-hidden="true" style={{ width: categoryIndicator.indicator.width, height: categoryIndicator.indicator.height, transform: `translate(${categoryIndicator.indicator.left}px, ${categoryIndicator.indicator.top}px)` }} />}
-          <div className="music-category-labels">
-          {([['all', '全部'], ['albums', '专辑'], ['ep', 'EP']] as const).map(([value, label]) => (
-            <button type="button" key={value} className="music-category" data-segment-value={value} aria-pressed={spotifyCategory === value}
-              onClick={() => setSpotifyCategory(value)}>{label}</button>
-          ))}
-          </div>
+        {!detail && <div className="music-filter-bar">
+          {platform === 'spotify' ? <MusicFilterGroup key="spotify" label="Spotify 分类"
+            options={[['albums', '专辑'], ['ep', 'EP']] as const} active={spotifyCategory === 'all' ? null : spotifyCategory}
+            onChange={value => filter({ type: 'spotify', value })} />
+            : <MusicFilterGroup key="youtube" label="YouTube 分类"
+              options={[ ['original', '原创'], ['cover', '翻唱']] as const} active={youtubeCategory === 'all' ? null : youtubeCategory}
+              onChange={value => filter({ type: 'youtube', value })} />}
+          {platform === 'youtube' && youtubeCategory === 'original' && <MusicFilterGroup secondary key="original" label="原创分类"
+            options={[ ['lita-liz', 'LITA & LIZ'], ['lita-tina-nero', 'LITA & TINA & NERO']] as const}
+            active={youtubeGroup === 'special' ? null : youtubeGroup} onChange={value => filter({ type: 'group', value })} />}
+          {platform === 'youtube' && youtubeCategory === 'cover' && <MusicFilterGroup secondary key="cover" label="翻唱成员"
+            options={[ ['LITA', 'LITA'], ['LIZ', 'LIZ'], ['TINA', 'TINA'], ['NERO', 'NERO']] as const}
+            active={youtubeMember} onChange={value => filter({ type: 'member', value })} />}
         </div>}
       </div>
 
@@ -184,7 +187,7 @@ export default function Music({ selectedId, onSelect, route, onRouteChange, onRe
       ) : (
         <div className="music-empty" role="status">
           <p>未找到歌曲</p>
-          <button type="button" onClick={() => setSearch('')}>清除搜索</button>
+          <button type="button" onClick={() => search ? setSearch('') : updateRoute({ category: 'all', youtubeCategory: 'all', youtubeGroup: null, youtubeMember: null })}>{search ? '清除搜索' : '清除筛选'}</button>
         </div>
       )}
       </div>

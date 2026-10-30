@@ -1,0 +1,67 @@
+[
+  {
+    "videoId": "DFkSCdbwdZY",
+    "title": "水星",
+    "artist": "KMNZ LITA, YACA",
+    "members": [
+      "lita"
+    ],
+    "era": "classic",
+    "credit": "MC: KMNZ LITA, YACA(YACA IN DA HOUSE)",
+    "sourceId": "yt-cover-45db63d5f3f9",
+    "songId": "song-cover-45db63d5f3f9",
+    "publishedAt": "2018-11-06T07:50:03Z",
+    "officialTitle": "水星 - tofubeats feat, オノマトペ大臣(Cover)  / KMNZ LITA with YACA",
+    "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+    "dateSource": "youtube-data-api"
+  },
+  {
+    "videoId": "z8sPS1kyOv0",
+    "title": "さらしもの",
+    "artist": "somunia, KMNZ LITA",
+    "members": [
+      "lita"
+    ],
+    "era": "classic",
+    "credit": "covered by somunia × KMNZ LITA",
+    "sourceId": "yt-cover-1f1f9bfaf915",
+    "songId": "song-cover-1f1f9bfaf915",
+    "publishedAt": "2022-05-20T05:00:11-07:00",
+    "officialTitle": "さらしもの feat.PUNPEE - 星野源 (cover)｜somunia × KMNZ LITA",
+    "channelId": "UCqhnvjASWaS1eF_023Y--DQ",
+    "dateSource": "manual"
+  },
+  {
+    "videoId": "vt_A0P9jhYI",
+    "title": "Stormy",
+    "artist": "KMNZ NERO, VESPERBELL ヨミ",
+    "members": [
+      "nero"
+    ],
+    "era": "new",
+    "credit": "VESPERBELL ヨミ",
+    "sourceId": "yt-cover-18097a3ace39",
+    "songId": "song-cover-18097a3ace39",
+    "publishedAt": "2026-10-28T11:00:11Z",
+    "officialTitle": "Stormy - Nissy × SKY-HI (Cover) / KMNZ NERO×VESPERBELL ヨミ",
+    "channelId": "UC3cuxhq3Cv-9h5wNXvWHspg",
+    "dateSource": "youtube-data-api"
+  },
+  {
+    "videoId": "yTASHD-MWwE",
+    "title": "come again",
+    "artist": "KMNZ LITA, KMNZ TINA",
+    "members": [
+      "lita",
+      "tina"
+    ],
+    "era": "new",
+    "credit": "KMNZ TINA",
+    "sourceId": "yt-cover-e966b4e06994",
+    "songId": "song-cover-e966b4e06994",
+    "publishedAt": "2025-04-09T12:00:06Z",
+    "officialTitle": "come again - m-flo (Cover) / KMNZ LITA × TINA",
+    "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+    "dateSource": "youtube-data-api"
+  }
+]

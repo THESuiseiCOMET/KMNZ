@@ -1,4 +1,4 @@
-import type { MediaKind, MusicEntry, MusicLibrary, MusicPlatform, MusicSource } from '../types/music'
+import type { MediaKind, MusicEntry, MusicLibrary, MusicPlatform, MusicSource, KMNZMember, YouTubeClassification } from '../types/music'
 
 type ObjectValue = Record<string, unknown>
 
@@ -62,6 +62,28 @@ export function parseMusicSourceUrl(value: string): { platform: MusicPlatform; k
   } catch { return null }
 }
 
+export function validBilibiliVideoUrl(value: unknown): value is string {
+  if (typeof value !== 'string' || value !== value.trim() || /[\\\s]/.test(value)) return false
+  try {
+    const url = new URL(value)
+    return url.protocol === 'https:' && !url.username && !url.password && !url.port
+      && ['www.bilibili.com', 'bilibili.com'].includes(url.hostname)
+      && /^\/video\/(?:BV1[1-9A-HJ-NP-Za-km-z]{9}|av[1-9]\d*)\/?$/.test(url.pathname)
+  } catch { return false }
+}
+
+export function normalizeKMNZMember(value: unknown): KMNZMember | null {
+  const members: readonly KMNZMember[] = ['LITA', 'LIZ', 'TINA', 'NERO']
+  return members.find(member => value === member || value === member.toLowerCase()) ?? null
+}
+
+export function youtubeCoverMembers(classification?: YouTubeClassification): KMNZMember[] {
+  if (classification?.contentType !== 'cover') return []
+  const members = [...(classification.coverMembers ?? []), ...(classification.performers ?? [])]
+    .map(normalizeKMNZMember).filter((member): member is KMNZMember => member !== null)
+  return [...new Set(members)]
+}
+
 export function parseMusicLibrary(value: unknown): MusicLibrary {
   const root = object(value, 'library', ['schemaVersion', 'songs', 'releases', 'sources'])
   if (root.schemaVersion !== 1) fail('library.schemaVersion', 'unsupported schema version')
@@ -114,7 +136,7 @@ export function parseMusicLibrary(value: unknown): MusicLibrary {
   })
   array(root.sources, 'library.sources').forEach((value, i) => {
     const path = `sources[${i}]`
-    const source = object(value, path, ['id', 'listed', 'platform', 'kind', 'platformId', 'externalUrl', 'display', 'target'])
+    const source = object(value, path, ['id', 'listed', 'platform', 'kind', 'platformId', 'externalUrl', 'display', 'target', 'classification', 'bilibiliUrl'])
     uniqueId(source.id, `${path}.id`, sourceIds)
     if (source.listed !== undefined && typeof source.listed !== 'boolean') fail(`${path}.listed`, 'expected boolean')
     choice(source.platform, `${path}.platform`, ['youtube', 'spotify'])
@@ -125,6 +147,38 @@ export function parseMusicLibrary(value: unknown): MusicLibrary {
     platformKeys.add(key)
     text(source.externalUrl, `${path}.externalUrl`)
     if (parseMusicSourceUrl(source.externalUrl)?.key !== key) fail(`${path}.externalUrl`, 'URL does not match platform ID')
+    if (source.bilibiliUrl !== undefined && (source.platform !== 'youtube' || !validBilibiliVideoUrl(source.bilibiliUrl))) {
+      fail(`${path}.bilibiliUrl`, 'expected trusted HTTPS Bilibili video URL on YouTube source')
+    }
+    if (source.classification !== undefined) {
+      if (source.platform !== 'youtube') fail(`${path}.classification`, 'YouTube only')
+      const classification = object(source.classification, `${path}.classification`, ['contentType', 'originalGroup', 'coverMembers', 'performers', 'evidenceUrls'])
+      choice(classification.contentType, `${path}.classification.contentType`, ['original', 'cover'])
+      if (classification.originalGroup !== undefined) {
+        if (classification.contentType !== 'original') fail(`${path}.classification.originalGroup`, 'original only')
+        choice(classification.originalGroup, `${path}.classification.originalGroup`, ['lita-liz', 'lita-tina-nero', 'special'])
+      }
+      for (const field of ['coverMembers', 'performers'] as const) {
+        if (classification[field] === undefined) continue
+        if (field === 'coverMembers' && classification.contentType !== 'cover') fail(`${path}.classification.coverMembers`, 'cover only')
+        const members = array(classification[field], `${path}.classification.${field}`)
+        const normalized = members.map(member => {
+          const value = normalizeKMNZMember(member)
+          if (!value) fail(`${path}.classification.${field}`, 'expected LITA | LIZ | TINA | NERO (uppercase or lowercase)')
+          return value
+        })
+        if (!members.length || new Set(normalized).size !== members.length) fail(`${path}.classification.${field}`, 'expected unique confirmed members')
+      }
+      const evidence = array(classification.evidenceUrls, `${path}.classification.evidenceUrls`)
+      if (!evidence.length || new Set(evidence).size !== evidence.length) fail(`${path}.classification.evidenceUrls`, 'expected unique evidence URLs')
+      for (const value of evidence) {
+        text(value, `${path}.classification.evidenceUrls`)
+        try {
+          const url = new URL(value)
+          if (url.protocol !== 'https:' || url.username || url.password || url.port) throw new Error()
+        } catch { fail(`${path}.classification.evidenceUrls`, 'expected HTTPS evidence URL') }
+      }
+    }
     const display = object(source.display, `${path}.display`, ['subtitle', 'year', 'era'])
     text(display.subtitle, `${path}.display.subtitle`)
     if (!Number.isInteger(display.year) || Number(display.year) < 1000 || Number(display.year) > 9999) fail(`${path}.display.year`, 'invalid legacy year')
@@ -184,6 +238,7 @@ export function toMusicCatalog(library: MusicLibrary): MusicEntry[] {
     const item = source.target.type === 'song' ? index.songs.get(source.target.songId)! : index.releases.get(source.target.releaseId)!
     return { id: source.id, title: item.title, subtitle: source.display.subtitle, artist: item.artist,
       year: source.display.year, platform: source.platform, kind: source.kind, era: source.display.era,
-      platformId: source.platformId, externalUrl: source.externalUrl }
+      platformId: source.platformId, externalUrl: source.externalUrl,
+      ...(source.platform === 'youtube' && source.bilibiliUrl ? { bilibiliUrl: source.bilibiliUrl } : {}) }
   })
 }

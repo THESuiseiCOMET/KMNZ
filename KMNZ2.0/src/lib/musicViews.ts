@@ -1,5 +1,5 @@
-import type { MusicEntry, MusicLibrary, MusicRelease, ReleaseTrack, Song } from '../types/music'
-import { createMusicLibraryIndex, toMusicCatalog } from './musicLibrary'
+import type { MusicEntry, MusicLibrary, MusicRelease, ReleaseTrack, Song, YouTubeCategory, OriginalGroup, KMNZMember } from '../types/music'
+import { createMusicLibraryIndex, toMusicCatalog, youtubeCoverMembers } from './musicLibrary'
 
 export interface ReleaseTrackView extends ReleaseTrack {
   song: Song
@@ -44,6 +44,21 @@ export function createMusicViews(library: MusicLibrary, catalog = toMusicCatalog
       return { ...track, song: index.songs.get(track.songId)!, playback: available.find(entry => entry.platform === 'spotify') ?? available[0] }
     })
     return { release, entry, tracks }
+  }
+
+  function youtubeCards(search: string, category: YouTubeCategory = 'all', group: OriginalGroup | null = null, member: KMNZMember | null = null): MusicEntry[] {
+    const query = search.trim().toLocaleLowerCase()
+    const seen = new Set<string>()
+    return catalog.filter(entry => {
+      const source = index.sources.get(entry.id)
+      if (source?.platform !== 'youtube' || source.listed === false || seen.has(source.platformId)) return false
+      seen.add(source.platformId)
+      const classification = source.classification
+      if (category !== 'all' && classification?.contentType !== category) return false
+      if (category === 'original' && group && classification?.originalGroup !== group) return false
+      if (category === 'cover' && member && !youtubeCoverMembers(classification).includes(member)) return false
+      return !query || matchesEntry(entry, query)
+    })
   }
 
   function spotifySections(search: string): { albums: MusicEntry[]; singles: MusicEntry[] } {
@@ -91,5 +106,5 @@ export function createMusicViews(library: MusicLibrary, catalog = toMusicCatalog
       : category === 'ep' ? [...singles.values()] : [...sections.albums, ...singles.values()]
   }
 
-  return { releaseDetail, spotifySections, spotifyCards, sourceRelease, releaseEntryForSource }
+  return { youtubeCards, releaseDetail, spotifySections, spotifyCards, sourceRelease, releaseEntryForSource }
 }

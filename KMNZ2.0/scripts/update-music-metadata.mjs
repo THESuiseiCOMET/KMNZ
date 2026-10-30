@@ -95,7 +95,14 @@ export function validateIndex(index, catalog, helpers, manual = false) {
       if (!(key in record)) continue
       if (record[key] === null && manual) continue
       if (!effective[key]) throw new Error('Invalid ' + key + ': ' + id)
-      if (manual && record[key].source !== 'manual') throw new Error('Manual source required: ' + id)
+      if (manual && record[key].source !== 'manual') {
+        const url = key === 'publishedAt' && record[key].source === 'youtube-data-api' ? new URL(record[key].sourceUrl) : null
+        const importedDate = entry.platform === 'youtube' && url && !url.port
+          && ['www.youtube.com', 'youtube.com', 'm.youtube.com'].includes(url.hostname)
+          && url.pathname === '/watch' && url.searchParams.get('v') === entry.platformId
+          && !url.searchParams.has('key')
+        if (!importedDate) throw new Error('Manual source or matching YouTube API date required: ' + id)
+      }
       if (!manual && record[key].source === 'manual') throw new Error('Put manual values in overrides: ' + id)
     }
     for (const [source, attempt] of Object.entries(record.attempts ?? {})) {

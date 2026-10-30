@@ -27,7 +27,10 @@
 | Spotify 横向单曲条目 | `src/components/MusicSingleRow.tsx`、`src/styles.css` | `music-single-row`、`music-single-cover`、`music-single-play` |
 | 专辑详情、已确认曲目及单曲播放入口 | `src/components/MusicReleaseDetail.tsx` | `MusicReleaseDetail`、`music-release-header`、`music-track-list` |
 | Spotify 分组、已确认曲目搜索与播放来源选择 | `src/lib/musicViews.ts` | `createMusicViews`、`spotifySections`、`releaseDetail` |
-| Spotify 统一大卡片与“全部／专辑／EP”分类 | `src/pages/Music.tsx`、`src/lib/musicViews.ts`、`src/styles.css` | `spotifyCategory`、`spotifyCards`、`music-categories` |
+| Spotify 统一大卡片与可取消的“专辑／EP”分类 | `src/pages/Music.tsx`、`src/lib/musicViews.ts`、`src/styles.css` | `spotifyCategory`、`spotifyCards`、`music-categories` |
+| YouTube 原创／翻唱、时期／多成员筛选 | `src/pages/Music.tsx`、`src/lib/musicViews.ts` | `youtubeCards`、`classification`，不选择时显示全部；再次点击取消 |
+| 音乐分类 URL、刷新与历史恢复 | `src/lib/siteRoute.ts`、`src/hooks/usePageTransition.ts` | `changeMusicFilter`、`category`、`group`、`member` |
+| YouTube 卡片可选 Bilibili 外链 | `src/data/music/sources.json`、`src/lib/musicLibrary.ts`、`src/pages/Music.tsx` | `bilibiliUrl`、`validBilibiliVideoUrl`，仅外部索引，不接管播放 |
 | 音乐页面、卡片、搜索和筛选按钮 | `src/pages/Music.tsx` | `music-toolbar`、`music-grid`、`music-card` |
 | 音乐平台官方字标、半宽按钮、分类滑块 | `src/pages/Music.tsx`、`src/styles.css` | `platformLogos`、`.music-platform-labels`、`.music-switch-indicator` |
 | 平台及分类的内容过渡 | `src/hooks/usePageTransition.ts`、`src/styles.css` | `musicTransition`、`music-slide-in`、`music-slide-out` |
@@ -95,6 +98,8 @@
 | `scripts/official-player.test.mjs` | 官方控制器复用、真实状态、结束事件去重、切歌竞态、音量、关闭和 API 失败回退测试 |
 | `scripts/playback-queue.test.mjs` | 列表／搜索快照、专辑曲序、平台来源、边界、循环、失效事件与拖动边界测试 |
 | `scripts/helpers/player-harness.mjs` | 播放器钩子测试环境和官方 API 替身，不进入前端构建 |
+| `scripts/music-filter-group.test.mjs` | 筛选底板取消淡出、尺寸更新和换行定位测试 |
+| `scripts/music-filters.test.mjs` | 原创／翻唱、时期／多成员、可取消筛选、安全 Bilibili 外链、渲染、日期及筛选队列测试 |
 | `scripts/music-views.test.mjs` | C2 分区、去重、曲目搜索、曲序和详情渲染测试；复用现有 Vite／React，不增加依赖 |
 | `scripts/music-library.test.mjs` | C1 数据迁移、关系校验、版本隔离、来源去重及播放兼容测试 |
 | `scripts/music-catalog.test.mjs` | C4 官方目录覆盖、既有记录保护、日期／封面、版本、关联与扩充后的视图／队列测试 |
@@ -314,3 +319,42 @@ YouTube 浮窗按标题、视频、播放控件、进度条排列；通过 CSS �
 候选初次发现时间和已有人工字段保持，运行报告与稳定清单分离，避免每次刷新时间戳造成无意义 PR。固定 automation/music-discovery 审核分支只写 candidates.json，更新开放的草稿 PR，不强推、不自动合并；重复相同内容不创建新提交或 PR。开放审核分支的人工作品关系／元数据修改保留。上个 PR 未合并而关闭时暂停创建新 PR，等人工处理。
 
 工作流仅 workflow_dispatch、Node.js 22，先校验数据、运行测试和 /KMNZ/ 构建。需要配置 YOUTUBE_API_KEY 及仓库允许 Actions 创建 PR；无 Key 安全跳过，API／权限失败中止，不影响正式资料。Spotify 发现、定时调度和自动资料迁移尚未实现。候选清单不是上线曲库，仅合并清单不会新增网站歌曲；资料上线需人工在审核 PR 中编辑原音乐 JSON 并通过校验后合并，沿用既有 Pages 部署。操作及真实 API／PR 演练的限制见 docs/music-discovery.md。
+
+## 音乐分类与 Bilibili 索引
+
+在 `sources.json` 的 YouTube 来源上填写可选 `classification`。`contentType` 为 `original`／`cover`；原创界面只提供 `lita-liz`、`lita-tina-nero` 两个时期；旧 `special` 数据值仍兼容，但不再提供筛选按钮，旧筛选 URL 恢复全部原创。`performers` 是经核实的 KMNZ 成员数组；翻唱也支持 `coverMembers`（仅限 `cover`）。两字段接受 `LITA`／`lita`、`LIZ`／`liz`、`TINA`／`tina`、`NERO`／`nero`，筛选时合并去重为大写成员，允许多成员，不根据时期播放列表补造全部演唱人员；未知可省略。`evidenceUrls` 保存非空的 HTTPS 依据列表。未分类来源仍显示在默认全部列表。UI 不展示“全部”按钮，重复点击当前分类即可取消。
+
+视频分类以当前 `sources.json` 的人工维护结果为准；Fiction、未来図已由用户归入猫狗时期，Boarding 已归入三人时期，本次只移除特别收录筛选，不改音乐 JSON。Boarding 的官方封面与完整时间戳保持原样。当前导入库为 357 个歌曲记录、36 个发行、440 个来源；YouTube 281 个来源中原创 81 个、翻唱 200 个。LITA／LIZ／TINA／NERO 翻唱结果分别为 65／82／33／25，合作视频只保留一个来源，可跨成员出现；全部 YouTube 来源有完整发布时间，封面沿用实际尺寸校验、mqdefault 与占位回退。
+
+同一来源可选填 `bilibiliUrl`：仅接受 `https://www.bilibili.com/video/` 或 `https://bilibili.com/video/` 下有效格式的 BV／av 视频地址，可带分享参数。拒绝其他域名、短链、非 HTTPS、用户凭据及非视频页面。缺少地址不显示按钮，本次未编造或添加任何转载链接。沿用本地 `brand-bilibili.svg` 品牌小电视路径（Simple Icons 的 Bilibili 图形，与通用电视图标不同），仅标识外链目的地；来源与条件见 [图形](https://github.com/simple-icons/simple-icons/blob/develop/icons/bilibili.svg)、[CC0](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md) 和 [品牌免责声明](https://github.com/simple-icons/simple-icons/blob/develop/DISCLAIMER.md)。项目许可证不授予 Bilibili 商标许可，不表示官方授权或合作。
+
+分类分享 URL 示例：`#/music/youtube?category=original&group=lita-liz`、`#/music/youtube?category=cover&member=LITA`。旧 Spotify `?category=ep`／`albums` 继续生效；切换平台清除分类，当前队列继续使用播放时的结果快照。分类、外链安全、渲染、精确日期及队列回归测试见 `scripts/music-filters.test.mjs`；路由历史覆盖见 `scripts/site-route.test.mjs`。
+
+
+筛选外观与移动底板：`src/components/MusicFilterGroup.tsx`、`src/styles.css` 的 `.music-filter-bar`、`.music-categories`、`.music-category-indicator`；点击已选项会淡出底板并取消筛选。卡片筛选动效：`Music.tsx` 按稳定来源 ID 设置动画身份；CSS 的 `music-card-enter`／`music-card-leave` 控制轻微位移、缩放和模糊，`--music-duration` 为保留卡片重排时长，入场错峰最多 100ms。沿用现有页面过渡生命周期，快速切换取消过期动画，播放器不重挂载。系统减少动态效果偏好下禁用运动，不支持 View Transitions 时立即切换内容。
+
+
+音乐数据分类兼容：`src/lib/musicLibrary.ts` 的 `normalizeKMNZMember`／`youtubeCoverMembers` 只读取明确分类字段；不根据标题、日期或艺人猜测成员，不改写导入 JSON。`coverMembers` 和 `performers` 的字段类型、成员值、重复大小写成员、内容类型及证据均经严格校验；未知字段继续报错。小写成员 URL（如 `member=lita`）会恢复为标准大写筛选。测试见 `scripts/music-classification-compat.test.mjs`，包含当前整库初始化、多个成员共享同一来源、旧字段兼容、无副作用及播放器队列／缺失日期回退。
+
+
+## YouTube 导入后的日期补全
+
+LIZ 补录前的 195 条 YouTube 来源全部有有效完整发布时间：猫狗时期原创 55、三人时期原创 26（含 TINA 独立原创）、翻唱 114。本轮按 source ID／platformId 核对后，仅在 src/data/music-metadata.json 中补入 34 条日期；来自仓库根目录已导出的 lita-liz-playlist.json，和既有重叠日期按时间戳对照无冲突。本轮未请求实时 API，原 161 条有效日期、人工覆盖文件和全部封面保持原样。页面仍按 Asia/Tokyo 显示，按原始时间戳降序。
+
+scripts/update-music-metadata.mjs 的校验保留覆盖索引中来源为 youtube-data-api 的已验证 publishedAt，要求证据是与 platformId 匹配的 HTTPS YouTube 观看页且不含 key；其他人工字段规则不变。这样保留导入日期的真实来源，同时不会让自动更新覆盖它。scripts/music-published-at.test.mjs 覆盖全量日期、分组排序、旧值优先、无日期回退及错误来源保护。
+
+
+## LIZ 翻唱补录
+
+使用本地导出的官方 YouTube Data API v3 资料，按视频 ID 合并 LIZ Covers 播放列表 81 条与个人频道 5 首，重叠 4 首，新增 82 个独立歌曲记录及 YouTube 来源。`songs.json`／`sources.json` 只追加记录，不建立未经核实的 Spotify 或发行关联；LUVORATORRRRRY! 的官方简介确认 LITA 与 LIZ 合唱，单条来源同时进入两人的翻唱筛选，其余 81 条为 LIZ 独唱。简介中的成员社交链接不作为演唱人员依据。
+
+`src/data/music-metadata.json` 保存 82 条 videos.list 原始完整发布时间及官方封面，保留 API 来源、观看页证据和验证时间；80 张 maxresdefault 通过实际尺寸检查，Booo! 与メルティランドナイトメア使用实测有效的 mqdefault。既有自动元数据、人工覆盖、发行记录和播放器文件保持不变。日期仍按 Asia/Tokyo 展示，卡片按实际发布时间降序；保留懒加载、mqdefault 和最终占位回退。
+
+`scripts/fixtures/music-liz-covers.json` 保存精简的官方核对事实，`scripts/music-liz-covers.test.mjs` 验证 82 条唯一来源、合唱多成员筛选、同名作品独立身份、精确日期、封面回退及筛选后播放队列。原始 API 导出与一次性整理脚本不放进项目，不含前端密钥，不新增依赖或自动导入。
+
+
+## 四条合作翻唱补录
+
+按用户提供的视频 ID 追加《水星》（LITA、YACA）、《さらしもの》（somunia、LITA）、《Stormy》（NERO、VESPERBELL ヨミ）和《come again》（LITA、TINA），保留各自歌曲身份与合作署名，不关联未经核实的发行或 Spotify 来源。成员筛选只写 KMNZ 成员，come again 单条来源进入 LITA、TINA 两个筛选。三条日期与封面依据已有官方 API 导出写入自动元数据；somunia 视频日期来自官方观看页的完整 datePublished／uploadDate，封面经实际尺寸检查后与日期一起新增到人工覆盖，不冒充 API 数据。原有条目、人工字段及播放器保持不变。
+
+`scripts/fixtures/music-extra-covers.json` 保存精简核对事实；`scripts/music-extra-covers.test.mjs` 验证唯一来源、合作成员、日期来源、封面回退、搜索和队列兼容。

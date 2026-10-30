@@ -29,7 +29,9 @@ export function usePageTransition() {
     }
     const kind = from !== to ? 'page' : from === 'music' && music
       ? music.from.platform !== music.to.platform ? 'platform'
-        : music.to.platform === 'spotify' && music.from.category !== music.to.category && !music.from.releaseSourceId && !music.to.releaseSourceId ? 'category' : null
+        : !music.from.releaseSourceId && !music.to.releaseSourceId && (music.to.platform === 'spotify'
+          ? music.from.category !== music.to.category
+          : music.from.youtubeCategory !== music.to.youtubeCategory || music.from.youtubeGroup !== music.to.youtubeGroup || music.from.youtubeMember !== music.to.youtubeMember) ? 'category' : null
       : null
     if (!kind || !document.startViewTransition || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       apply()
@@ -39,8 +41,10 @@ export function usePageTransition() {
       : kind === 'platform' ? '.music-platform-labels [data-segment-value]' : '.music-category-labels [data-segment-value]'
     const values = Array.from(document.querySelectorAll<HTMLButtonElement>(selector), button => kind === 'page' ? button.dataset.navPage : button.dataset.segmentValue)
     const section = (page: Page) => page.startsWith('member-') ? 'members' : page
-    const before = values.indexOf(kind === 'page' ? section(from) : kind === 'platform' ? music!.from.platform : music!.from.category)
-    const after = values.indexOf(kind === 'page' ? section(to) : kind === 'platform' ? music!.to.platform : music!.to.category)
+    const categoryValue = (route: MusicRoute) => route.platform === 'spotify' ? route.category
+      : route.youtubeGroup ?? route.youtubeMember ?? route.youtubeCategory
+    const before = values.indexOf(kind === 'page' ? section(from) : kind === 'platform' ? music!.from.platform : categoryValue(music!.from))
+    const after = values.indexOf(kind === 'page' ? section(to) : kind === 'platform' ? music!.to.platform : categoryValue(music!.to))
     const direction = before >= 0 && after >= 0 && after < before || kind === 'page' && from.startsWith('member-') && to === 'members' ? 'backward' : 'forward'
     if (kind === 'page') root.dataset.pageTransition = direction
     else root.dataset.musicTransition = `${kind}-${direction}`

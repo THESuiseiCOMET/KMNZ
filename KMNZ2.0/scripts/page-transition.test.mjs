@@ -175,3 +175,21 @@ test('reselecting the active platform cancels a pending switch and reduced motio
     assert(updated); assert.equal(reduced.transitions.length, 0)
   } finally { await reduced.cleanup() }
 })
+
+test('YouTube primary, period and member toggles animate results, including deselection, without page motion', async()=>{
+  const h=harness()
+  try {
+    for(const [from,to] of [
+      [musicRoute(),musicRoute({youtubeCategory:'original'})],
+      [musicRoute({youtubeCategory:'original'}),musicRoute({youtubeCategory:'original',youtubeGroup:'special'})],
+      [musicRoute({youtubeCategory:'original',youtubeGroup:'special'}),musicRoute()],
+      [musicRoute({youtubeCategory:'cover'}),musicRoute({youtubeCategory:'cover',youtubeMember:'LITA'})],
+      [musicRoute({youtubeCategory:'cover',youtubeMember:'LITA'}),musicRoute({youtubeCategory:'cover'})],
+    ]) {
+      h.run('music','music',()=>{},{from,to})
+      assert(h.root.dataset.musicTransition.startsWith('category-'))
+      assert.equal(h.root.dataset.pageTransition,undefined)
+      h.transitions.at(-1).commit();h.transitions.at(-1).finish();await Promise.resolve()
+    }
+  } finally {await h.cleanup()}
+})
