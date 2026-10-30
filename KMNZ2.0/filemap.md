@@ -8,6 +8,7 @@
 | --- | --- | --- |
 | 顶部导航按钮名称与顺序 | `src/components/Header.tsx` | `const navigation` |
 | 导航涂鸦字体、悬停喷漆描边 | `src/components/Header.tsx`、`src/styles.css` | `.nav-street-label`、`--nav-outline-shift`、`--nav-outline-duration`、`--nav-tag-tilt` |
+| 选中导航的间歇描边 | `src/styles.css` | `--nav-selected-cycle`、`nav-spray-idle`，5.8 秒周期中前 86.2% 静止（约 5 秒），剩余约 0.8 秒播放 |
 | 点击导航后的粉笔圈选中效果 | `src/components/Header.tsx`、`src/styles.css` | `.nav-chalk-ring`、`--nav-chalk-width`、`--nav-chalk-duration`、`nav-chalk-draw` |
 | 导航图标悬停动画 | `src/styles.css` | `.settings-toggle`、`.navigation-toggle` |
 | 页面左右滑动与动态模糊 | `src/hooks/usePageTransition.ts`、`src/styles.css` | `page-slide-in`、`page-slide-out`、`--page-enter-x`、`--page-exit-x` |
@@ -45,6 +46,7 @@
 | 页面元数据兼容层 | `src/data/musicMetadata.ts` | `getMusicMetadata`、`sortMusicByDate` |
 | 日期校验、日本时间显示和稳定排序 | `src/lib/musicMetadata.ts` | `validPublishedAt`、`validReleaseDate`、`musicDate`、`sortMusicEntries` |
 | 全站常驻播放器内容 | `src/components/PlayerDock.tsx` | `PlayerDock` |
+| 浮窗视频与控件顺序、圆角及间距 | `src/styles.css` | `.music-player-panel:not(.is-cinema)`、`order`、`border-radius: 10px`、`gap: 8px` |
 | 导航栏右侧展开的图标设置 | `src/components/PlaybackSettings.tsx`、`src/components/Header.tsx`、`src/styles.css` | `SettingIcon`、`.playback-settings`、`.playback-setting-icon` |
 | 观影模式顶部播放控件 | `src/components/PlayerDock.tsx`、`src/styles.css` | `createPortal`、`.header-player-slot`、`.cinema-player-chrome` |
 | 播放器标题居中、关闭与标题栏拖动 | `src/components/PlayerDock.tsx`、`src/styles.css` | `music-player-heading`、`music-player-drag-handle` |
@@ -63,7 +65,8 @@
 
 - `src/assets/images/`：成员图片、首页海报、Logo 等素材。
 - `src/assets/fonts/`：本地字体资源。
-- 导航显示 `HOME / MUSIC / MEMBERS / HISTORY / ABOUT`，复用成员页的本地 `PermanentMarker.ttf`，不新增字体资源。标签主体轻微倾斜、交错角度；悬停和键盘焦点触发两层断续描边持续循环晃动，移开淡出，不改变导航栏高度。文字层来自 `navigation` 配置，新增页面自动套用样式及动画；按钮名称与可见英文一致，装饰层不重复朗读，减少动态效果偏好下不晃动。成员页面及其字体样式保留。
+- 导航显示 `HOME / MUSIC / MEMBERS / HISTORY / ABOUT`，复用成员页的本地 `PermanentMarker.ttf`，不新增字体资源。标签主体保留当前微调；悬停和键盘焦点时两层断续描边持续循环晃动，当前选中项未悬停时静止约 5 秒、短暂播放约 0.8 秒，移开悬停后重新等待。粉笔圈持续表示选中，主体文字始终清晰；非选中项移开淡出，不改变导航栏高度。文字层来自 `navigation` 配置，新增页面自动套用样式及动画；按钮名称与可见英文一致，装饰层不重复朗读，减少动态效果偏好下不晃动。成员页面及其字体样式保留。
+- 导航 Logo 保持静态，深浅主题使用原黑白图片，点击返回首页；不附加悬停动画。
 - `src/assets/icons/`：平台与播放器 SVG 图标；Lucide 图标许可证见同目录 `LICENSE-lucide.txt`。
 - `src/assets/icons/youtube-logo-light.svg`、`youtube-logo-dark.svg`：YouTube 官方品牌组件的完整 SVG 路径，分别使用黑／白字标和原红色图标；来源为 [YouTube 品牌资源](https://brand.youtube/youtube-logo) 及其公开组件脚本。`spotify-logo-light.svg`、`spotify-logo-dark.svg`：直接取自 [Spotify 官方完整 Logo 下载包](https://developer.spotify.com/images/guidelines/design/2024-spotify-full-logo.zip) 的 Black／White RGB SVG，保留完整图标与字标。
 - `public/favicon.ico`：浏览器标签图标。
@@ -79,6 +82,14 @@
 | `package.json` | npm 脚本、依赖 |
 | `vite.config.ts` | Vite 配置与网站路径 |
 | `scripts/update-music-metadata.mjs` | 手动获取官方元数据、校验、缓存与静态索引保存；不会改人工覆盖文件 |
+| `music-discovery/official-sources.json` | D1 官方来源白名单、音乐分类及有界扫描页数 |
+| `music-discovery/candidates.json` | D1 待审核来源清单，前端不读取；保留首次发现时间、官方原始字段、证据和人工备注 |
+| `scripts/discovery/core.mjs` | D1 YouTube API 发现、白名单／字段校验、平台来源去重与官方封面回退 |
+| `scripts/discover-music.mjs` | 本地发现预览、离线校验及候选清单原子保存；不修改五个正式音乐 JSON |
+| `scripts/publish-music-review.mjs` | 固定审核分支、草稿 PR 创建／幂等更新、快进更新及失败保护 |
+| `scripts/music-discovery.test.mjs`、`scripts/music-review.test.mjs` | D1 发现、重复运行、失败保护、人工编辑与 PR 工作流测试 |
+| `../.github/workflows/discover-music.yml` | D1 仅手动触发；先测试构建，再发现候选并更新草稿 PR；不部署、不自动合并 |
+| `docs/music-discovery.md` | D1 Secrets、Actions 手动操作、审核流程、能力限制与 D2 边界 |
 | `scripts/fetch-music-metadata.ps1` | Windows 系统网络请求；优先使用现有 PowerShell 7，遵循现有系统代理与执行策略 |
 | `scripts/load-typescript.mjs` | 本地工具及测试加载 TypeScript、相对模块和 JSON；复用已有 TypeScript 依赖 |
 | `scripts/official-player.test.mjs` | 官方控制器复用、真实状态、结束事件去重、切歌竞态、音量、关闭和 API 失败回退测试 |
@@ -235,6 +246,8 @@ YouTube 卡片沿用 16:9 封面，复用四角圆角与悬停放大；48px 液�
 
 ## 播放设置与影院模式
 
+YouTube 浮窗按标题、视频、播放控件、进度条排列；通过 CSS 调整顺序，不移动或重建媒体 host。视频左右各留 12px、四角 10px 圆角，保持 16:9；浮窗控件统一居中、间隔 8px，音量面板向上展开以避开底边。影院导航控件沿用原布局和间距。
+
 `src/components/PlaybackSettings.tsx` 位于导航齿轮旁，向右展开单图标设置栏，以裁切、位移及透明度动画收放，不改变导航高度；窄屏在齿轮下方展开以避免越界。图标切换浮窗／影院、背景磨砂、影院视频磨砂和音频可视化，状态、悬停标题与可访问名称保持同步。音频来源、设备及电平放在音频图标的小面板里。再次点击齿轮、点击外部或 Esc 关闭，关闭后不可聚焦；不使用模态遮罩。`scripts/playback-settings.test.mjs` 验证独立偏好、音频开始／取消、关闭与监听清理。`src/lib/playbackPreferences.ts` 校验并读取本地偏好；默认浮窗＋磨砂，存储不可用时正常降级。`scripts/playback-preferences.test.mjs` 验证解析、独立开关和存储失败。
 
 影院模式使用 `PlayerDock` 的 Portal 把原控制界面放入 Logo 与右侧导航之间的 `.header-player-slot`，随导航布局，不再依赖固定屏幕坐标；媒体 host 留在原位置，切换模式不重建 iframe。进度线收紧在同一导航高度内，保留播放按钮外观、导航高度、音量及切歌交互。控制区随可用宽度调整，同一个 YouTube 媒体 host 固定在导航下方的背景层，影院 iframe 按 16:9 等比放大、居中裁切以覆盖背景区域，横屏裁切上下、竖屏裁切左右，浮窗尺寸规则保持原样；磨砂玻璃层不拦截点击，主内容层仍可浏览音乐、成员、历程和关于页面；Spotify 沿用官方封面背景与右下角原生播放条。选歌不强制改变滚动位置；只改变布局，不重新创建 iframe／控制器，不修改队列和进度。原浮窗的拖动位置保留。影院有当前播放条目时卸载首页文案与轮播，暂停时保持，关闭播放或返回浮窗后恢复。影院“视频磨砂”使用覆盖在真实 iframe 上方的 `backdrop-filter`，视频本身不复制、不抓帧；玻璃层保持透明，不再叠加灰白／黑色主题蒙层；关闭时移除模糊，视频保留原始色彩和对比度，前景页面和导航控件保持清晰。Spotify 保留平台原生进度控制，页面底部预留空间避免遮挡内容。
@@ -293,3 +306,11 @@ YouTube 卡片沿用 16:9 封面，复用四角圆角与悬停放大；48px 液�
 `src/lib/playbackSession.ts` 和 `src/hooks/usePlaybackPersistence.ts` 将来源 ID、队列、模式、真实进度及播放意图保存在 sessionStorage；刷新读取时依据当前音乐库重新校验来源和专辑曲序，不信任缓存中的关系字段。关闭播放器清除记录，过期回调不覆盖新曲，损坏数据或存储受限时正常降级。`useOfficialPlayer.ts` 在原轮询／官方事件中发送 `PlayerCheckpoint`；YouTube 使用官方 loadVideoById／cueVideoById 的 startSeconds 恢复播放或暂停，不重建额外 iframe。恢复等待期间不以初始零秒覆盖已保存的进度。Spotify 只恢复当前选择的曲目／专辑入口和队列，不调用仅明确支持播客的 seek；音乐秒数和原生专辑内部曲目位置无法保证恢复。自动播放被拦截时保持暂停，沿用原播放按钮继续。没有持久化或自动重新申请音频可视化采集权限。
 
 `scripts/site-route.test.mjs` 验证路由、查询编码、历史、专辑返回和滚动；`scripts/playback-session.test.mjs` 验证队列／专辑恢复、暂停、无效数据和存储故障；`scripts/playback-persistence.test.mjs` 验证切歌、页面退出保存及关闭后的过期回调。播放器测试覆盖恢复请求、进度、自动播放受阻及同一控制器复用。
+
+## D1 官方来源发现与审核 PR
+
+音乐库仍为既有 146 条歌曲／版本、36 个发行、204 个平台来源。D1 只把通过官方频道、平台 ID、公开／可嵌入状态、完整日期及基础字段校验的来源放入独立候选清单，不生成站内歌曲身份或猜测发行关系。YouTube 从白名单频道的 uploads 播放列表分页读取，已存在来源（包括 listed:false）与待审／dismissed 候选按 C1 platformSourceKey 去重。官方高清封面沿用实际尺寸检查，失败回退 mqdefault 或 null；原元数据和人工覆盖从不写入。
+
+候选初次发现时间和已有人工字段保持，运行报告与稳定清单分离，避免每次刷新时间戳造成无意义 PR。固定 automation/music-discovery 审核分支只写 candidates.json，更新开放的草稿 PR，不强推、不自动合并；重复相同内容不创建新提交或 PR。开放审核分支的人工作品关系／元数据修改保留。上个 PR 未合并而关闭时暂停创建新 PR，等人工处理。
+
+工作流仅 workflow_dispatch、Node.js 22，先校验数据、运行测试和 /KMNZ/ 构建。需要配置 YOUTUBE_API_KEY 及仓库允许 Actions 创建 PR；无 Key 安全跳过，API／权限失败中止，不影响正式资料。Spotify 发现、定时调度和自动资料迁移尚未实现。候选清单不是上线曲库，仅合并清单不会新增网站歌曲；资料上线需人工在审核 PR 中编辑原音乐 JSON 并通过校验后合并，沿用既有 Pages 部署。操作及真实 API／PR 演练的限制见 docs/music-discovery.md。

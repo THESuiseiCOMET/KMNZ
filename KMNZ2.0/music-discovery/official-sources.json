@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "youtube": {
+    "maxPagesPerChannel": 2,
+    "channels": [
+      {
+        "id": "kmnz-youtube",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "evidenceUrl": "https://www.youtube.com/@KMNZOFFICIAL",
+        "categoryIds": ["10"]
+      }
+    ]
+  }
+}

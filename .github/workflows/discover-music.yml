@@ -1,0 +1,68 @@
+name: Discover KMNZ music (review only)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: kmnz-music-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    if: github.repository == 'THESuiseiCOMET/KMNZ' && github.ref == 'refs/heads/分支'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      pull-requests: write
+    defaults:
+      run:
+        working-directory: KMNZ2.0
+    steps:
+      - name: Check out publishing branch
+        uses: actions/checkout@v4
+        with:
+          ref: 分支
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: KMNZ2.0/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate existing library and review ledger
+        run: |
+          node scripts/update-music-metadata.mjs --check
+          node scripts/discover-music.mjs --check
+
+      - name: Run existing and discovery tests
+        run: node --test scripts/*.test.mjs
+
+      - name: Build GitHub Pages site
+        run: npm run build
+        env:
+          VITE_BASE_PATH: /KMNZ/
+
+      - name: Discover candidates and create or update draft review PR
+        run: node scripts/publish-music-review.mjs --publish
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DISCOVERY_REPORT_FILE: ${{ runner.temp }}/kmnz-discovery-report.json
+
+      - name: Save run report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kmnz-discovery-report
+          path: ${{ runner.temp }}/kmnz-discovery-report.json
+          if-no-files-found: ignore
+          retention-days: 14
