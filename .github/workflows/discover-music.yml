@@ -2,6 +2,10 @@ name: Discover KMNZ music (review only)
 
 on:
   workflow_dispatch:
+  push:
+    branches: ['分支']
+    paths:
+      - '.github/workflows/discover-music.yml'
 
 permissions:
   contents: read
@@ -12,7 +16,7 @@ concurrency:
 
 jobs:
   discover:
-    if: github.repository == 'THESuiseiCOMET/KMNZ' && github.ref == 'refs/heads/分支'
+    if: github.event_name == 'workflow_dispatch' && github.repository == 'THESuiseiCOMET/KMNZ' && github.ref == 'refs/heads/分支'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
