@@ -1,6 +1,6 @@
 # KMNZ Archive
 
-KMNZ 音乐与成员资料站，正在从原生 HTML/CSS/JavaScript 重构为 React + TypeScript + Vite。
+从原生 HTML/CSS/JavaScript 重构为 React + TypeScript + Vite。
 
 ## 版本
 
@@ -9,8 +9,6 @@ KMNZ 音乐与成员资料站，正在从原生 HTML/CSS/JavaScript 重构为 Re
 | 1.0 | [KMNZ1.0/](KMNZ1.0/) | 旧版完整归档 |
 | 2.0 | [KMNZ2.0/](KMNZ2.0/) | 新版开发中 |
 | 当前线上版 | 仓库根目录 | 暂时继续由 GitHub Pages 提供 |
-
-**迁移期间不删除根目录的旧站**，以免破坏现有 GitHub Pages 地址。
 
 线上网站：https://thesuiseicomet.github.io/KMNZ/
 
@@ -21,8 +19,6 @@ KMNZ 音乐与成员资料站，正在从原生 HTML/CSS/JavaScript 重构为 Re
 - 通过 YouTube / Spotify **官方嵌入方式**接入音乐
 - 成员、历程、音乐资料检索
 - 计划同时部署到 GitHub Pages 和 Cloudflare Pages
-
-本次仓库整理只完成目录归档与 2.0 工程初始化，播放器和正式发布尚未完成。
 
 ## 本地运行 2.0
 
