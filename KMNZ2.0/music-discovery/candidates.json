@@ -1,4 +1,2886 @@
 {
   "schemaVersion": 1,
-  "candidates": []
+  "candidates": [
+    {
+      "key": "youtube:video:-djyV7TJHZM",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "-djyV7TJHZM",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=-djyV7TJHZM",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "-djyV7TJHZM",
+        "title": "唱 - Ado (Cover) / KMNZ NERO",
+        "description": "なにはともあれ ご唱和あれ\n\n------------------------\n\nMC: KMNZ NERO（ https://x.com/kmnznero_ ）\n\nIllust: YARAN ( https://x.com/0YARAN0 )\nMovie,Direction: りぜ ( https://x.com/tuki_rise )\nLyric Motion: こん（ https://x.com/con_cg_ ）\nMIX: Meis Clauson ( https://x.com/meisclauson )\nOriginal: 唱 - Ado\nhttps://www.youtube.com/watch?v=pgXpM4l_MwI\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #ado #唱",
+        "publishedAt": "2024-06-01T12:00:07Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M10S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=-djyV7TJHZM"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/-djyV7TJHZM/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=-djyV7TJHZM"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:0K8gb8oeIYU",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "0K8gb8oeIYU",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=0K8gb8oeIYU",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "0K8gb8oeIYU",
+        "title": "KMNZ New Single「OPENER」 XFD",
+        "description": "KMNZ New Single「OPENER」CD受注受付中\nhttps://rkmusic.booth.pm/items/7705910\n期間：12月31(水) 23:59まで\n価格：3,000円（税込）\n\nRK Music公式BOOTH内「KMNSUPPLY」にて受注受付中！\n書き下ろし3曲＋Inst版3トラックの合計6トラックを収録。\n\n🐶収録曲🐾\nM1. OPENER\nLyrics：YACA IN DA HOUSE\nMusic：YACA IN DA HOUSE\n\nM2. Banger!!!\nLyrics：佐高陵平(Hifumi,inc.)\nMusic：佐高陵平(Hifumi,inc.)\n\nM3. THE AFTER\nLyrics：nyankobrq\nMusic：nyankobrq\n\n※CD版にのみinstも収録\n\n------------------------\n\n🐾 KMNZ LITA X\n https://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/kmnstreet\n\n🏠KMNCLUB - KMNZ YouTube Membership\n@KMNZ \n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #OPENER",
+        "publishedAt": "2025-12-26T10:00:34Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT2M41S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=0K8gb8oeIYU"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/0K8gb8oeIYU/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=0K8gb8oeIYU"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:1BzgFIOecYU",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "1BzgFIOecYU",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=1BzgFIOecYU",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "1BzgFIOecYU",
+        "title": "【KMNZ】New Single 『STAR-LIGHT』 シングルトレーラー",
+        "description": "🐶【8/14販売終了】 KMNZ新曲＆スペシャルアイテム🐱\n\n7/29 #KMNZ2ndワンマン で初披露の新曲『STAR-LIGHT』が収録されたNew Single\"\"STAR-LIGHT\"\"に加え、ライブタイトルロゴをあしらったKMNT、KMNHOODIE、ワンマンのKVが描かれたスケボーデッキなどがKMNSUPPLYに新登場！🔥\n\n受注期間は2023/8/14(月) 23:59まで。\nHZの皆さま、お見逃し無く！✨\nhttps://kmnsupply.stores.jp/\n\n🐶KMNSKOOL 収録曲🐱\nMusic by Baja\nLyrics by カンタロー\n\n1_STAR-LIGHT\n2_STAR-LIGHT(inst.)\n\n🐶Art & Design, Single Direction🐱 \nArtwork: しゅがお\n\n#KMNZ #KMNSUPPLY",
+        "publishedAt": "2023-08-10T06:27:48Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT50S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=1BzgFIOecYU"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/1BzgFIOecYU/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=1BzgFIOecYU"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:1cDVw_J7kNE",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "1cDVw_J7kNE",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=1cDVw_J7kNE",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "1cDVw_J7kNE",
+        "title": "Sleep Tight feat. まこと - Neko Hacker (Cover) / KMNZ LIZ",
+        "description": "どんな夢を見るの\n------------------------\n\nMC＆Mix: KMNZ LIZ\nMain Art: KMNZ LIZ\nOriginal:  https://www.youtube.com/watch?v=3IpcZcpPglE\n\n------------------------\n\n🐶 KMNZ LITA Twitter\nhttps://twitter.com/kmnzlita\n\n🐱 KMNZ LIZ Twitter\nhttps://twitter.com/kmnzliz\n\n🔊KMNSTREET - Official Twitter\nhttps://twitter.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://kmnsupply.stores.jp/\n\n------------------------\n\n#KMNZ",
+        "publishedAt": "2023-12-27T11:00:01Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M14S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=1cDVw_J7kNE"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/1cDVw_J7kNE/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=1cDVw_J7kNE"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:1vIRwg6wQXM",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "1vIRwg6wQXM",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=1vIRwg6wQXM",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "1vIRwg6wQXM",
+        "title": "TINA VERSE #GROWL #KMNZ",
+        "description": "",
+        "publishedAt": "2025-05-21T12:00:04Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT29S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=1vIRwg6wQXM"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/1vIRwg6wQXM/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=1vIRwg6wQXM"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:22Q2ugv7k3o",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "22Q2ugv7k3o",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=22Q2ugv7k3o",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "22Q2ugv7k3o",
+        "title": "ウェカピポ - SOUL'd OUT (Cover) / KMNZ",
+        "description": "NAH　 ウェカピポ 　YO！ \n\n------------------------\n\nMC：\nLITA（ https://x.com/kmnzlita ）\nTINA（ https://x.com/kmnztina_ ）\nNERO（ https://x.com/kmnznero_ ）\n\nIllustration：Bata零( https://x.com/bata_zero )\nMV：あげは（ https://x.com/ageage_kaza ）\nMix：Meis Clauson（ https://x.com/meisclauson ）\n\nOriginal：\nhttps://www.youtube.com/watch?v=2IZbzRj3CJk\n\n------------------------\n\n🐾 KMNZ LITA X\n https://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/kmnstreet\n\n🏠KMNCLUB - KMNZ YouTube Membership\n https://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #ウェカピポ #SOULdOUT",
+        "publishedAt": "2025-05-19T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT4M11S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=22Q2ugv7k3o"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/22Q2ugv7k3o/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=22Q2ugv7k3o"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:2yHMzAI1Vlg",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "2yHMzAI1Vlg",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=2yHMzAI1Vlg",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "2yHMzAI1Vlg",
+        "title": "DROP IN（Prod. by E TICKET PRODUCTION ）MV short ver #kmnz #dropin",
+        "description": "",
+        "publishedAt": "2025-05-17T12:00:04Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT27S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=2yHMzAI1Vlg"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/2yHMzAI1Vlg/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=2yHMzAI1Vlg"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:30h4k-Dud70",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "30h4k-Dud70",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=30h4k-Dud70",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "30h4k-Dud70",
+        "title": "ココロオドル - nobodyknows+ (Cover) / KMNZ",
+        "description": "呼応する心　響き続ける\n\n------------------------\n\nMC: KMNZ LITA（ https://x.com/kmnzlita ）\n　　KMNZ TINA（ https://x.com/kmnztina_ ）\n　　KMNZ NERO（ https://x.com/kmnznero_ ）\n\nIllust: bata零 ( https://x.com/bata_zero )\nMovie: あげは ( https://x.com/ageage_kaza )\nMIX: Meis Clauson ( https://x.com/meisclauson )\nOriginal: nobodyknows+「ココロオドル」OFFICIAL MUSIC VIDEO\nhttps://youtu.be/8pQuRe_2gBs\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #ココロオドル #nobodyknows+",
+        "publishedAt": "2024-10-26T12:00:07Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT4M14S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=30h4k-Dud70"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/30h4k-Dud70/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=30h4k-Dud70"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:5yZv6_XV7Qc",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "5yZv6_XV7Qc",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=5yZv6_XV7Qc",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "5yZv6_XV7Qc",
+        "title": "勘冴えて悔しいわ - ずっと真夜中でいいのに。 (Cover) / KMNZ TINA",
+        "description": "無意識に運べたら楽だろうな\n\n------------------------\n\nMC: KMNZ TINA（ https://x.com/kmnztina_ ）\n\nIllust・Movie: Saf ( https://x.com/safhatxyz )\nTrack : Zukio（ https://x.com/mzkch_ ）\nGuitar : 羽深創太（ https://x.com/SoutaHabuka ）\nMIX: Ejina ( https://x.com/_ejina )\nOriginal: 勘冴えて悔しいわ - ずっと真夜中でいいのに。\nhttps://www.youtube.com/watch?v=4QePrv24TBU\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://kmnsupply.stores.jp/\n\n------------------------\n\n#KMNZ #zutomayo #勘冴えて悔しいわ",
+        "publishedAt": "2024-05-29T12:00:07Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M58S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=5yZv6_XV7Qc"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/5yZv6_XV7Qc/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=5yZv6_XV7Qc"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:6JqzF5kt5y0",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "6JqzF5kt5y0",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=6JqzF5kt5y0",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "6JqzF5kt5y0",
+        "title": "ディア - Giga (Cover) / KMNZ TINA",
+        "description": "愛してバースデイ\n\n------------------------\n\nMC: KMNZ TINA（ https://x.com/kmnztina_ ）\n\nIllust: オス ( https://x.com/VvpXo )\nMovie: 耳野めめ ( https://x.com/knee_ )\nMIX: Meis Clauson ( https://x.com/meisclauson )\nOriginal: Giga - ディア(DEAR) ft.初音ミク\nhttps://youtu.be/Jki8Jxwt_k4\n\n------------------------\n\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ",
+        "publishedAt": "2024-11-07T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT2M55S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=6JqzF5kt5y0"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/6JqzF5kt5y0/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=6JqzF5kt5y0"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:756PewKyv4A",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "756PewKyv4A",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=756PewKyv4A",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "756PewKyv4A",
+        "title": "劣等上等 - Giga (Cover) / KMNZ TINA×VESPERBELL カスカ",
+        "description": "素手で、捨て身で、生き抜いて上等だわ\n\n------------------------\n\nMC: KMNZ TINA（ https://x.com/kmnztina_ ）\n　　VESPERBELL カスカ（ https://x.com/vesper_kasuka ）\n　　https://www.youtube.com/@VESPERBELL\n\nIllust: ハモンド華麗 ( https://x.com/hamondo_karei )\nMovie: Heetami ( https://x.com/heetami_ )\nMIX: 妃舞ゆにこ ( https://x.com/ema_yuni_ko )\nOriginal: Giga - '劣等上等'(BRING IT ON) ft.鏡音リン・レン【MV】\nhttps://youtu.be/oEkGC2HV7rc\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #Giga  #劣等上等",
+        "publishedAt": "2024-12-02T12:30:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M56S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=756PewKyv4A"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/756PewKyv4A/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=756PewKyv4A"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:7BObLnz1I3U",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "7BObLnz1I3U",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=7BObLnz1I3U",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "7BObLnz1I3U",
+        "title": "KMNZ New Single 「REVERSE」 XFD",
+        "description": "バーチャルガールズデュオ「KMNZ」が、\n半年の活動休止期間を経て2024年5月より3人体制で再始動！\n\nそのデビューシングルとなる「REVERSE」が、KMNZ公式グッズストア「KMNSUPPLY」にて受注スタート！\n新生KMNZ書き下ろし3曲＋Inst.版3トラックの合計6トラックを収録。\n\n■KMNSUPPLY 予約受付ページ\nhttps://kmnsupply.stores.jp/\n\n期間：2024.6.2(日) 22:00 - 6/26(水) 23:59\n価格：3,000円（税込）\n\n🐶収録曲🐾\n01. VERSE（Prod. by Snail's House）\n02. MID JOURNEY\n03. CALLING\n04. VERSE（Inst.）\n05. MID JOURNEY（Inst.）\n06. CALLING（Inst.）\n\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://twitter.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://twitter.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://twitter.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://twitter.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #VERSE #SnailsHouse",
+        "publishedAt": "2024-06-02T13:03:49Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT2M31S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=7BObLnz1I3U"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/7BObLnz1I3U/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=7BObLnz1I3U"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:7fLM1P06qTA",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "7fLM1P06qTA",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=7fLM1P06qTA",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "7fLM1P06qTA",
+        "title": "超 Super Star - SKRYU (Cover) / KMNZ LITA",
+        "description": "もう言わせないぜ What's your name\n\n------------------------\n\nMC: KMNZ LITA（ https://x.com/kmnzlita）\n\nIllust: tatamipi ( https://x.com/tatamipi )\nMovie: heetami ( https://x.com/heetami_ )\nMIX: Ejina ( https://x.com/_ejina )\nOriginal: SKRYU - 超 Super Star (Prod. Shin Sakiura)【Music Video】\nhttps://youtu.be/uCToQKuVPYg\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #超SuperStar #SKRYU",
+        "publishedAt": "2024-12-09T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M47S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=7fLM1P06qTA"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/7fLM1P06qTA/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=7fLM1P06qTA"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:7jRDmvhsfAs",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "7jRDmvhsfAs",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=7jRDmvhsfAs",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "7jRDmvhsfAs",
+        "title": "おつかれSUMMER - HALCALI (Cover) / KMNZ",
+        "description": "甘い夢見し乙女は人知れず…⛱\n\n------------------------\n\nMC：\nLITA（ https://x.com/kmnzlita ）\nTINA（ https://x.com/kmnztina_ ）\nNERO（ https://x.com/kmnznero_ ）\n\nIllustration：Bata零 ( https://x.com/bata_zero )\nMovie：ポコ ( https://x.com/poko_oi_0 )\nMix：バロン ( https://x.com/baron_mix )\n\nOriginal：\nhttps://www.youtube.com/watch?v=ViFHruS6oO8\n\n------------------------\n\n🐾 KMNZ LITA X\n https://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/kmnstreet\n\n🏠KMNCLUB - KMNZ YouTube Membership\n https://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://shop.reality-studios.inc/pages/rk-music\n\n------------------------\n\n#KMNZ #おつかれSUMMER",
+        "publishedAt": "2026-08-21T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT4M1S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=7jRDmvhsfAs"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/7jRDmvhsfAs/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=7jRDmvhsfAs"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:8H1abFkSLss",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "8H1abFkSLss",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=8H1abFkSLss",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "8H1abFkSLss",
+        "title": "TOKYO通信 ～Urbs Communication～ - SOUL'd OUT (Cover) / KMNZ LITA",
+        "description": "駆け抜けてこの時代の中で\nKEEP AN ATTITUDE TO LIVE UP\n\n------------------------\n\nMC：KMNZ LITA（ https://x.com/kmnzlita）\n\nIllustration：スドウ創太 ( https://x.com/sota_96 )\nMovie：耳野めめ ( https://x.com/knee_ )\nMIX：Ejina ( https://x.com/_ejina )\n\nOriginal：\nhttps://youtu.be/SO51jyCs3PA\n\n------------------------\n\n🐾 KMNZ LITA X\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #TOKYO通信 #souldout",
+        "publishedAt": "2024-08-08T12:00:07Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT5M52S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=8H1abFkSLss"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/8H1abFkSLss/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=8H1abFkSLss"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:8wCJCaUqa70",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "8wCJCaUqa70",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=8wCJCaUqa70",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "8wCJCaUqa70",
+        "title": "GOLDEN BUDDY feat.くるま - 礼賛 (Cover) / KMNZ",
+        "description": "いっちょ上がり！だ\nGOLDEN BUDDY\n\n------------------------\n\nMC：\nLITA（ https://x.com/kmnzlita ）\nTINA（ https://x.com/kmnztina_ ）\nNERO（ https://x.com/kmnznero_ ）\n\nIllustration：ido ( https://x.com/i_do_Anime )\nMovie：あげは ( https://x.com/ageage_kaza )\nMix：バロン ( https://x.com/baron3636 )\n\nOriginal：https://www.youtube.com/watch?v=KufyTQoi4-o\n\n------------------------\n\n🐾 KMNZ LITA X\n https://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/kmnstreet\n\n🏠KMNCLUB - KMNZ YouTube Membership\n https://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #GOLDENBUDDY #礼賛",
+        "publishedAt": "2025-12-30T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M11S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=8wCJCaUqa70"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/8wCJCaUqa70/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=8wCJCaUqa70"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:A6vUEwOhe_Y",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "A6vUEwOhe_Y",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=A6vUEwOhe_Y",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "A6vUEwOhe_Y",
+        "title": "柊マグネタイト feat. 可不 - 撫でんな(Cover) / KMNZ LIZ",
+        "description": "もう耐えらんない！\n------------------------\n\nMC＆Mix: KMNZ LIZ\nMain Art: けい\nMovie: モゆる（ https://twitter.com/m5gin ）\nOriginal:   https://www.youtube.com/watch?v=scmZJtHFN1c\n\n------------------------\n\n🐶 KMNZ LITA Twitter\nhttps://twitter.com/kmnzlita\n\n🐱 KMNZ LIZ Twitter\nhttps://twitter.com/kmnzliz\n\n🔊KMNSTREET - Official Twitter\nhttps://twitter.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://kmnsupply.stores.jp/\n\n------------------------\n\n#KMNZ #柊マグネタイト #撫でんな",
+        "publishedAt": "2023-09-29T12:00:15Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M9S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=A6vUEwOhe_Y"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/A6vUEwOhe_Y/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=A6vUEwOhe_Y"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:AGfF2BU2Psc",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "AGfF2BU2Psc",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=AGfF2BU2Psc",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "AGfF2BU2Psc",
+        "title": "Rambling Beast - DYES IWASAKI feat.RainyBlueBell (Cover) / KMNZ",
+        "description": "荒ぶりビート侵す悦びと歓声\n\n------------------------\n\nMC：\nLITA（ https://x.com/kmnzlita ）\nTINA（ https://x.com/kmnztina_ ）\nNERO（ https://x.com/kmnznero_ ）\n\nIllustration：MA_turi ( https://x.com/MATURIMU66 )\nMovie：HAR ( https://x.com/86_oO_ )\nMix：KMNZ TINA\n\nOriginal：\nhttps://www.youtube.com/watch?v=esv3gaHzmMU&list=RDesv3gaHzmMU&start_radio=1\n\n------------------------\n\n🐾 KMNZ LITA X\n https://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/kmnstreet\n\n🏠KMNCLUB - KMNZ YouTube Membership\n    / @kmnz  \n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://shop.reality-studios.inc/pages/rk-music\n\n------------------------\n\n#KMNZ #RamblingBeast",
+        "publishedAt": "2026-10-11T12:00:10Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M26S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=AGfF2BU2Psc"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/AGfF2BU2Psc/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=AGfF2BU2Psc"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:AHiEC4N58_c",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "AHiEC4N58_c",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=AHiEC4N58_c",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "AHiEC4N58_c",
+        "title": "KMNZ New Single「POSSE」 XFD",
+        "description": "KMNZ New Single「POSSE」\n\nRK Music公式BOOTH内「KMNSUPPLY」にて受注受付中！\n書き下ろし3曲＋Inst版3トラックの合計6トラックを収録。\n\n🔻ダウンロード・ストリーミングはこちら\nhttps://linkco.re/uxsEs3eh\n\n■KMNSUPPLY 予約受付ページ\nhttps://booth.pm/ja/items/7381779\n\n期間：9月30(火) 23:59まで\n価格：3,000円（税込）\n\n🐶収録曲🐾\nM1. POSSE\nLyrics：Fuma no KTR\nMusic：Oddy lozy, Fuma no KTR\nArrangement：Oddy lozy\n\nM2. Ride On\nLyrics：Takumi Sudo\nMusic：TAXON\nArrangement：TAXON\n\nM3. THREE,TWO,WAN!\nLyrics：ryona\nMusic：nerdwitchkomugichan\nArrangement：nerdwitchkomugichan\n\n※CD版にのみinstも収録\n------------------------\n\n🐾 KMNZ LITA X\n https://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/kmnstreet\n\n🏠KMNCLUB - KMNZ YouTube Membership\n https://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #POSSE",
+        "publishedAt": "2025-09-27T11:00:17Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT2M46S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=AHiEC4N58_c"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/AHiEC4N58_c/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=AHiEC4N58_c"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:AypTjLI9jtw",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "AypTjLI9jtw",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=AypTjLI9jtw",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "AypTjLI9jtw",
+        "title": "DROP IN（Prod. by E TICKET PRODUCTION ）MV short ver #kmnz #dropin",
+        "description": "",
+        "publishedAt": "2025-05-16T12:00:19Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT29S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=AypTjLI9jtw"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/AypTjLI9jtw/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=AypTjLI9jtw"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:Ct6Ey2WiLuQ",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "Ct6Ey2WiLuQ",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=Ct6Ey2WiLuQ",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "Ct6Ey2WiLuQ",
+        "title": "KMNZ New Single「Moon Engine」 XFD",
+        "description": "KMNZ New Single「Moon Engine」\nNOW ON RELEASE🔥\n\n🔻ダウンロード・ストリーミングはこちら\nhttps://linkco.re/shdFMUzp\n\n1.Moon Engine\nLyrics - Fuma no KTR\nMusic & Arranged by - Fuma no KTR, 八王子P , Oddy lozy\nRecorded by - Yuhi Sumino\nMixed by - Akihiro Furuichi(studio MSR)\n\n2.WANTED\nLyrics - IKUTO\nMusic & Arranged by - Oddy lozy , VOLTA\nRecorded by - Yuhi Sumino\nMixed by - VOLTA\n\n3.POPSTA\nLyrics - lilbesh ramko\nMusic & Arranged by - lilbesh ramko,hirihiri\nRecorded by - Yuhi Sumino\nMixed by - hirihiri\n\n------------------------\n\n🐾 KMNZ LITA X\n https://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/kmnstreet\n\n🏠KMNCLUB - KMNZ YouTube Membership\n https://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://shop.reality-studios.inc/pages/rk-music\n\n------------------------\n\n#KMNZ #MoonEngine",
+        "publishedAt": "2026-04-05T04:00:11Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT1M47S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=Ct6Ey2WiLuQ"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/Ct6Ey2WiLuQ/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=Ct6Ey2WiLuQ"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:E7SlTGPLtOU",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "E7SlTGPLtOU",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=E7SlTGPLtOU",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "E7SlTGPLtOU",
+        "title": "気分上々↑↑ - mihimaru GT  (Cover) / KMNZ",
+        "description": "針落とせ　音鳴らせ　パーリナイ\n\n------------------------\n\nMC: KMNZ LITA（ https://x.com/kmnzlita ）\n　　KMNZ TINA（ https://x.com/kmnztina_ ）\n　　KMNZ NERO（ https://x.com/kmnznero_ ）\n\nIllust: bata零 ( https://x.com/bata_zero )\nMovie: あげは ( https://x.com/ageage_kaza )\nMIX: Meis Clauson ( https://x.com/meisclauson )\nOriginal: mihimaru GT - 気分上々↑↑\nhttps://youtu.be/g0Pb5CDhndk\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #気分上々 #mihimaruGT",
+        "publishedAt": "2025-02-07T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M54S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=E7SlTGPLtOU"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/E7SlTGPLtOU/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=E7SlTGPLtOU"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:EG_BVGUPxsI",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "EG_BVGUPxsI",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=EG_BVGUPxsI",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "EG_BVGUPxsI",
+        "title": "天国と地獄 - UNISON SQUARE GARDEN (Cover) / KMNZ NERO×VESPERBELL ヨミ",
+        "description": "天国と地獄を数えろ\n\n------------------------\n\nMC: KMNZ NERO（ https://x.com/kmnznero_ ）\n　　VESPERBELL ヨミ（ https://x.com/vesper_yomi ）\n　　https://www.youtube.com/@VESPERBELL\n\nIllust: 510 ( https://x.com/510_gotoudayo )\nMovie: すいか ( https://x.com/Su1c4_mv )\nMIX: Ejina ( https://x.com/_ejina )\nOriginal: UNISON SQUARE GARDEN「天国と地獄」MV\nhttps://youtu.be/WIrfel05FMQ\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #unisonsquaregarden  #天国と地獄",
+        "publishedAt": "2024-11-18T12:30:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M53S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=EG_BVGUPxsI"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/EG_BVGUPxsI/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=EG_BVGUPxsI"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:EKJVmhPb9FI",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "EKJVmhPb9FI",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=EKJVmhPb9FI",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "EKJVmhPb9FI",
+        "title": "獣謳無尽 - picco × ど～ぱみん feat.KMNZ",
+        "description": "髄の髄までいっちゃうぞっ\n\n------------------------\n\nOriginal：\n獣謳無尽 / picco × ど～ぱみん feat.初音ミク, 重音テト, りむる\nhttps://youtu.be/r0DcfTFGDck\n\nMC：KMNZ\nMusic : picco ( https://x.com/picco_xxx )\n　　　 ど～ぱみん ( https://x.com/DTM_dopamine )\nIllustration : PORO ( https://x.com/apom6n )\nMovie & Design : CloA ( https://x.com/CloA_Planetaria )\n\n------------------------\n\n🐾 KMNZ LITA X\n https://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/kmnstreet\n\n🏠KMNCLUB - KMNZ YouTube Membership\n https://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://shop.reality-studios.inc/pages/rk-music\n\n------------------------\n\n#KMNZ #獣謳無尽\n\nSupported by Japan Creator Support Fund",
+        "publishedAt": "2026-02-25T11:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT2M55S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=EKJVmhPb9FI"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/EKJVmhPb9FI/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=EKJVmhPb9FI"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:F0GVjIC23B0",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "F0GVjIC23B0",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=F0GVjIC23B0",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "F0GVjIC23B0",
+        "title": "NERO VERSE #GROWL #KMNZ",
+        "description": "",
+        "publishedAt": "2025-05-20T12:00:27Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT29S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=F0GVjIC23B0"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/F0GVjIC23B0/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=F0GVjIC23B0"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:GR83ymvx1H8",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "GR83ymvx1H8",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=GR83ymvx1H8",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "GR83ymvx1H8",
+        "title": "阿婆擦れ - Creepy Nuts  (Cover) / KMNZ LITA×NERO",
+        "description": "初めての夜みたいに\n\n------------------------\n\nMC: KMNZ LITA（ https://x.com/kmnzlita ）\n　　KMNZ NERO（ https://x.com/kmnznero_ ）\n\n------------------------\n\nMV本編に記載しているクレジットにおいて\n「Illust」と「Mix」の記載が入れ違いになっております。\n正しいクレジットは以下の記載クレジットになります。\n\n------------------------\n\nIllust: oneha ( https://x.com/tgtmeni )\nMovie: heetami ( https://x.com/heetami_ )\nMIX: バロン ( https://x.com/baron3636 )\nOriginal:【MV】Creepy Nuts - 阿婆擦れ\nhttps://www.youtube.com/watch?v=n45loaN-49k\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #阿婆擦れ #creepynuts",
+        "publishedAt": "2025-03-18T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT4M39S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=GR83ymvx1H8"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/GR83ymvx1H8/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=GR83ymvx1H8"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:H8gE7dCoOLg",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "H8gE7dCoOLg",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=H8gE7dCoOLg",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "H8gE7dCoOLg",
+        "title": "1000年生きてる - いよわ feat.初音ミク (Cover) / KMNZ TINA",
+        "description": "狂ったフリでごまかしていこうぜ \n\n------------------------\n\nMC: KMNZ TINA（ https://x.com/kmnztina_ ）\n\nIllust: zest ( https://x.com/z_e_s_t )\nMovie: ヨワネヒトリ ( https://x.com/_ywnh )\nMIX: 妃舞ゆにこ ( https://x.com/ema_yuni_ko )\nOriginal: \n1000年生きてる / いよわ feat.初音ミク（living millennium / Iyowa feat.Hatsune Miku）\nhttps://youtu.be/3em-J9yYPAo\n\n------------------------\n\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #いよわ #1000年生きてる",
+        "publishedAt": "2024-11-25T12:00:23Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M15S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=H8gE7dCoOLg"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/H8gE7dCoOLg/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=H8gE7dCoOLg"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:J5FhYkcY6U4",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "J5FhYkcY6U4",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=J5FhYkcY6U4",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "J5FhYkcY6U4",
+        "title": "SPECIALZ - King Gnu (Cover) / KMNZ NERO",
+        "description": "誰が如何言おうと “U R MY SPECIAL”\n\n------------------------\n\nMC: KMNZ NERO（ https://x.com/kmnznero_ ）\n\nIllust: MATOBA ( https://x.com/ma10ba )\nMovie: らる ( https://x.com/rc2lx )\nMIX: 妃舞 ゆにこ ( https://x.com/ema_yuni_ko )\nOriginal: King Gnu - SPECIALZ\nhttps://youtu.be/fhzKLBZJC3w\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #kinggnu #SPECIALZ",
+        "publishedAt": "2024-09-05T12:00:07Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M55S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=J5FhYkcY6U4"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/J5FhYkcY6U4/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=J5FhYkcY6U4"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:J_o5CAOrNkQ",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "J_o5CAOrNkQ",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=J_o5CAOrNkQ",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "J_o5CAOrNkQ",
+        "title": "ウタジマン - うみくん feat.ずんちゃん (Cover) / KMNZ",
+        "description": "お一人サマ 気分は絶頂\n\n------------------------\n\nMC: KMNZ LITA（ https://x.com/kmnzlita ）\n　　KMNZ TINA（ https://x.com/kmnztina_ ）\n　　KMNZ NERO（ https://x.com/kmnznero_ ）\n\nMIX: Meis Clauson ( https://x.com/meisclauson )\nOriginal: これ歌える人類います？「『ウタジマン』vsずんちゃん」\nhttps://youtu.be/GKq9kva8XlM\n\n------------------------\n\n突如現れた激ウマ歌唱力を持つ謎の生物「ずんちゃん」。\n歌い手の存亡をかけた人類とずんちゃんの歌唱バトルが幕を開ける!!\n\nずんちゃんCH: https://www.youtube.com/@zunchan_music\n「歌ってみた」素材はこちら: https://drive.google.com/drive/u/0/folders/1olshyURlMw2l0IDYUdP7Vun5sdABHdQC?ths=true\n\n＜CREDIT＞\nCharacter:ずんちゃん(CVココル原人) https://x.com/zunchan_music\nLyric&Music:うみくん https://x.com/umi_babe\nArranged:Toshihiro https://x.com/Toshihiro1120\nCharacter design&Illustration: 以下さん https://x.com/ikasansensei\nMovie:mihako https://x.com/mihako_n4\nLyric font design:情緒セツ https://x.com/amethyst_7777\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #ウタジマン #ずんちゃん",
+        "publishedAt": "2024-10-12T12:00:31Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT2M33S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=J_o5CAOrNkQ"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/J_o5CAOrNkQ/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=J_o5CAOrNkQ"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:Jdt6XR1Eclk",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "Jdt6XR1Eclk",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=Jdt6XR1Eclk",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "Jdt6XR1Eclk",
+        "title": "ボーイフレンド - aiko (Cover) / KMNZ NERO",
+        "description": "好きよボーイフレンド\n\n------------------------\n\nMC: KMNZ NERO（ https://x.com/kmnznero_ ）\n\nIllust: メイ・メイ/𝓜𝓪𝔂𝓶𝓪𝔂 ( https://x.com/Maymay_pic )\nMovie: Heetami ( https://x.com/heetami_ )\nMIX: Ejina ( https://x.com/_ejina )\nOriginal: aiko- 『ボーイフレンド』music video\nhttps://www.youtube.com/watch?v=9Jh-FBYGaU4\n\n------------------------\n\n動画の一部分にてMIXのクレジットが誤っておりますが、\n上記のクレジットが正のものになります。\n申し訳ございません。\n\n------------------------\n\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #ボーイフレンド   #aiko",
+        "publishedAt": "2024-12-31T12:00:18Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT4M47S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=Jdt6XR1Eclk"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/Jdt6XR1Eclk/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=Jdt6XR1Eclk"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:K53Hfk8aoRw",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "K53Hfk8aoRw",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=K53Hfk8aoRw",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "K53Hfk8aoRw",
+        "title": "KMNZ  New Album「KMNREVIVAL」 XFD",
+        "description": "KMNZ New Album「KMNREVIVAL」\n\nRK Music公式BOOTH内「KMNSUPPLY」にて受注受付中！\n3人体制ver全8曲を収録した待望のカバーアルバム。\n\n■KMNSUPPLY 予約受付ページ\nhttps://booth.pm/ja/items/7099752\n\n期間：7月31(木) 23:59まで\n価格：4,000円（税込）\n\n🐶収録曲🐾\nM1. Augmentation 2025\nM2. R U GAME? 2025\nM3. TOKONATSU STYLE 2025\nM4. SKOOL 2025\nM5. WE ARE BACK 2025\nM6. OVERNIGHT 2025\nM7. Kickin The Pride 2025\nM8. STAR-LIGHT 2025\n\n------------------------\n\n🐾 KMNZ LITA X\n https://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/kmnstreet\n\n🏠KMNCLUB - KMNZ YouTube Membership\n https://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #KMNREVIVAL",
+        "publishedAt": "2025-07-16T11:00:35Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT6M13S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=K53Hfk8aoRw"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/K53Hfk8aoRw/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=K53Hfk8aoRw"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:KBy0UaZUvnY",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "KBy0UaZUvnY",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=KBy0UaZUvnY",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "KBy0UaZUvnY",
+        "title": "ウェカピポ - SOUL'd OUT (Cover) / KMNZ #cover #歌ってみた",
+        "description": "",
+        "publishedAt": "2025-05-19T13:30:16Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT23S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=KBy0UaZUvnY"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/KBy0UaZUvnY/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=KBy0UaZUvnY"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:KGfYtvwerqM",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "KGfYtvwerqM",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=KGfYtvwerqM",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "KGfYtvwerqM",
+        "title": "【ボイスコミック】KMNZ結成秘話「OUR DAYS ON THE KMNSTREET」",
+        "description": "LIZとLITAが出会い、KMNZを結成するまでの物語。\n\n「OUR DAYS ON THE KMNSTREET」\n作：研そうげん https://twitter.com/ken_sogen\n\n🐶原作漫画（X読み切り連載企画）🐱\nhttps://x.com/KMNSTREET/status/1662413417423200256?s=20\n\n🐶公式テーマソング『OUR DAYS』🐱\nhttps://www.youtube.com/watch?v=NFTnvgDcI2E\nProduced by: nerdwitchkomugichan\n\n🐶劇中歌『MC BATTLE』🐱\nhttps://www.youtube.com/watch?v=NVdQZ1k00N4\nLyricist: Kamui\nComposer: YACA IN DA HOUSE\n\n🐶Movie Credit🐱\nStory＆Art: 研そうげん\nMovie: しょうけい\n\nVC: \nKMNZ LITA\nKMNZ LIZ\n紫ヶ内ムゲイ\n仄幽\n蓮希るい\n\n------------------------\n\n🐶 KMNZ LITA Twitter\nhttps://twitter.com/kmnzlita\n\n🐱 KMNZ LIZ Twitter\nhttps://twitter.com/kmnzliz\n\n🔊KMNSTREET - Official Twitter\nhttps://twitter.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://kmnsupply.stores.jp/\n\n------------------------\n\n#KMNZ #研そうげん #OURDAYS",
+        "publishedAt": "2023-12-29T12:00:07Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT16M7S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=KGfYtvwerqM"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/KGfYtvwerqM/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=KGfYtvwerqM"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:MmIZDcltrMw",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "MmIZDcltrMw",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=MmIZDcltrMw",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "MmIZDcltrMw",
+        "title": "【ダイジェスト】KMNZ 2nd ONE-MAN LIVE『TYPE WILD』",
+        "description": "023/07/29(土) 開催 ＠池袋harevutai KMNZ 2nd ONEMAN LIVE『TYPE WILD』全KMNHZ待望のBlu-ray DHISCが遂に受注スタート！活動5周年にして初となった有観客・声出し有りのワンマンライブの熱狂をお楽しみに！\n\n🔻Blu-ray予約申し込みはこちら！\nhttps://kmnsupply.stores.jp/\n\n🔻受注期間\n2023.9.25 20:00 - 10.8 23:59\n\n----------------------\n\n🐶 KMNZ LITA Twitter\nhttps://twitter.com/kmnzlita\n\n🐱 KMNZ LIZ Twitter\nhttps://twitter.com/kmnzliz\n\n🔊KMNSTREET - Official Twitter\nhttps://twitter.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://kmnsupply.stores.jp/\n\n------------------------\n\n00:00 スタート！\n00:59 WE ARE BACK\n02:13 Kickin The Pride\n03:13 R U GAME?\n03:58 DAYDREAM\n04:39 Back to the kids\n05:34 Girl feat. KMNZ LIZ\n06:39 ゆれる（Cover）\n07:29 Summer Situation（Cover）\n08:20 Beat ＆ Beast\n09:31 OVERNIGHT\n10:22 STAR-LIGHT\n10:55 OUR DAYS\n11:48 Augmentation\n12:37 VR\n13:30 OPENING\n14:23 RECOAT\n15:22 HOMEY\n\n#KMNZ #KMNZ2ndワンマン",
+        "publishedAt": "2023-09-25T11:00:30Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT17M2S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=MmIZDcltrMw"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/MmIZDcltrMw/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=MmIZDcltrMw"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:OB1OxoHYa3s",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "OB1OxoHYa3s",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=OB1OxoHYa3s",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "OB1OxoHYa3s",
+        "title": "四季ノ唄 - MINMI (Cover) / KMNZ LITA",
+        "description": "優しさにあなたに　ふたたび会いに\n\n------------------------\n\nMC: KMNZ LITA（ https://x.com/kmnzlita）\n\nIllust: 510 ( https://x.com/510_gotoudayo )\nMovie: 柴崎コータ ( https://x.com/KotaShibasaki )\nMIX: Meis Clauson ( https://x.com/meisclauson )\nOriginal: 【サムライチャンプルー】四季ノ唄 / MINMI (Official Audio)\nhttps://youtu.be/c9O3OeA1cy4\n\n------------------------\n\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://kmnsupply.stores.jp/\n\n------------------------\n\n#KMNZ #MINMI #四季ノ唄",
+        "publishedAt": "2024-10-16T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT4M30S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=OB1OxoHYa3s"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/OB1OxoHYa3s/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=OB1OxoHYa3s"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:VgkQZSE3q98",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "VgkQZSE3q98",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=VgkQZSE3q98",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "VgkQZSE3q98",
+        "title": "【ダイジェスト】KMNPARTY 2025.08.15",
+        "description": "KMNPARTY\n2025.08.15 @代官山UNIT\n\n【MAIN FLOOR】\nKMNZ\nVESPERBELL\nnaykobrq&yaca\nミツキヨ\nHylen\nBatsu\nDJ WILDPARTY\nNor\n\n【DJ FLOOR】\nzukio\nMarble\nど～ぱみん\nAlicemetix\n駄菓子O型\ntempura\n\n------------------------\n\n🐾 KMNZ LITA X\n https://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/kmnstreet\n\n🏠KMNCLUB - KMNZ YouTube Membership\n https://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #KMNPARTY",
+        "publishedAt": "2025-09-12T10:00:56Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT1M13S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=VgkQZSE3q98"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/VgkQZSE3q98/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=VgkQZSE3q98"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:W6_T1tvUftQ",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "W6_T1tvUftQ",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=W6_T1tvUftQ",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "W6_T1tvUftQ",
+        "title": "死ぬな！ - こっちのけんと (Cover) / KMNZ LITA",
+        "description": "死ぬな！死ぬな！死ぬな！死ぬな！\n\n------------------------\n\nMC: KMNZ LITA（ https://x.com/kmnzlita）\n\nIllust: ゆっ子 ( https://x.com/matakite_4kaku )\nMovie: らる ( https://x.com/rc2lx )\nMIX: 妃舞ゆにこ ( https://x.com/ema_yuni_ko )\nOriginal: 死ぬな！ / こっちのけんと MV\nhttps://youtu.be/Z2wKQLY1XcQ\n\n------------------------\n\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #こっちのけんと #死ぬな！",
+        "publishedAt": "2024-11-13T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M28S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=W6_T1tvUftQ"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/W6_T1tvUftQ/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=W6_T1tvUftQ"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:WL-VZrXGalo",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "WL-VZrXGalo",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=WL-VZrXGalo",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "WL-VZrXGalo",
+        "title": "不可幸力 - Vaundy (Cover) / KMNZ NERO",
+        "description": "なぁ、なんて美しい世界だ\n\n------------------------\n\nMC: KMNZ NERO（ https://x.com/kmnznero_ ）\n\nIllust: 千以蔵 ( https://x.com/senizodesu )\nMovie: Heetami ( https://x.com/heetami_ )\nMIX: 妃舞 ゆにこ ( https://x.com/ema_yuni_ko )\nOriginal: 不可幸力 / Vaundy ：MUSIC VIDEO\nhttps://youtu.be/Gbz2C2gQREI\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #vaundy  #不可幸力",
+        "publishedAt": "2024-10-06T12:00:27Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M21S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=WL-VZrXGalo"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/WL-VZrXGalo/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=WL-VZrXGalo"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:WgS_dgH45Bg",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "WgS_dgH45Bg",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=WgS_dgH45Bg",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "WgS_dgH45Bg",
+        "title": "睡蓮花 - 湘南乃風 (Cover) / KMNZ",
+        "description": "濡れたまんまでイッちゃって!!!\n\n------------------------\n\nMC：\nLITA（ https://x.com/kmnzlita ）\nTINA（ https://x.com/kmnztina_ ）\nNERO（ https://x.com/kmnznero_ ）\n\nIllustration：Bata零 ( https://x.com/bata_zero )\nMV：あげは ( https://x.com/ageage_kaza )\nMIX：KMNZ TINA\n\nOriginal：\n睡蓮花 - 湘南乃風\nhttps://www.youtube.com/watch?v=PjGbnPYwt1g\n\n------------------------\n\n🐾 KMNZ LITA X\n https://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/kmnstreet\n\n🏠KMNCLUB - KMNZ YouTube Membership\n https://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #睡蓮花 #湘南乃風",
+        "publishedAt": "2025-08-29T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT7M17S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=WgS_dgH45Bg"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/WgS_dgH45Bg/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=WgS_dgH45Bg"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:XP8A9hcoMPA",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "XP8A9hcoMPA",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=XP8A9hcoMPA",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "XP8A9hcoMPA",
+        "title": "SOUL SOUP - Official髭男dism (Cover) / KMNZ NERO",
+        "description": "止めるな匙 続け渇き\n全ての未来に乾杯を\n\n------------------------\n\nMC: KMNZ NERO（ https://x.com/kmnznero_ ）\n\nIllust: 中村杏子 ( https://x.com/n_muragoya )\nMovie: suien ( https://x.com/ryu_yoshida47 )\nMIX: Meis Clauson ( https://x.com/meisclauson )\nOriginal: SOUL SOUP - Official髭男dism\nhttps://www.youtube.com/watch?v=-H_k7iwrWVY\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #Official髭男dism #SPYFAMILY",
+        "publishedAt": "2024-06-26T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT5M15S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=XP8A9hcoMPA"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/XP8A9hcoMPA/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=XP8A9hcoMPA"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:ZLZSxf3GdHY",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "ZLZSxf3GdHY",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=ZLZSxf3GdHY",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "ZLZSxf3GdHY",
+        "title": "NEW KMNZ TEASER CASE.2 / KMNZ",
+        "description": "NEXT STAGE\n→2024.05.25 Sat. 18:00 ON AIR!!\nRK Music Online Live Fes \"VOICE SPARK“\nhttps://x.com/KMNSTREET/status/1792178685191340498\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://twitter.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://twitter.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://twitter.com/kmnznero_\n\n------------------------\n\nMovie：Roly(しろいろモード)\nhttps://twitter.com/yosinO_mo\nhttps://twitter.com/Shiroiro_Mode\n\nCharacter Design：しゅがお\nhttps://twitter.com/haru_sugar02\n\nMIX: KMNCREW\n\n------------------------\n\n🔊KMNSTREET - Official X（旧Twitter）\nhttps://twitter.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ",
+        "publishedAt": "2024-05-19T10:00:34Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT1M11S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=ZLZSxf3GdHY"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/ZLZSxf3GdHY/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=ZLZSxf3GdHY"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:_h_ZpDiw4Lw",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "_h_ZpDiw4Lw",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=_h_ZpDiw4Lw",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "_h_ZpDiw4Lw",
+        "title": "閃光少女 - 東京事変 (Cover) / KMNZ LITA",
+        "description": "焼き付いてよ、一瞬の光で\n\n------------------------\n\nMC: KMNZ LITA（ https://x.com/kmnzlita）\n\nIllust: matumot ( https://x.com/matumot12 )\nMovie: さようなら ( https://x.com/O3Fbl )\nMIX: Ejina ( https://x.com/_ejina )\nOriginal: 東京事変 - 閃光少女\nhttps://youtu.be/5jsdarfpsLk\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #閃光少女 #東京事変",
+        "publishedAt": "2024-09-12T12:00:07Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M1S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=_h_ZpDiw4Lw"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/_h_ZpDiw4Lw/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=_h_ZpDiw4Lw"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:ajmb9R39Gwo",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "ajmb9R39Gwo",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=ajmb9R39Gwo",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "ajmb9R39Gwo",
+        "title": "【ダイジェスト】KMNZ 3rd ONE-MAN LIVE『KMNCULTURE』#KMNZ3rdONEMAN",
+        "description": "KMNZ 4th ONE-MAN LIVE AREA111 \nチケット一般販売のお知らせ\n\n開催日：2025年6月25日(水)\n会場：CLUB CITTA’\nOPEN 18;00 / START 19;00\n\nチケット一般販売は5月26日(月)20;00より、先着順にて受付開始となります。\n\n🎫一般販売\n2025年5月26日(水)20;00〜先着順にて受付開始\n※チケットの枚数には限りがあります\n※規定の枚数に達し次第、チケットは販売終了となります\n\n👇ご購入はこちらから！\nhttps://eplus.jp/sf/detail/4219010002-P0030004P021001?P1=0175\n\n------------------------\n\nKMNZ 4th ONE-MAN LIVE AREA111 \nGeneral Ticket Sales Announcement\n\nDate: Wednesday, June 25, 2025\nVenue: CLUB CITTA', Tokyo\nOPEN 18;00 / START 19;00\n\nGeneral ticket sales will begin at 20;00 on May 26 (Mon.) on a first-come, first-served basis.\n\n🎫General sales\nMay 26, 2025 (Mon.) 20;00 - June 18, 2025 (Wed.) 23;59\nAccepted on a first-come, first-served basis\n※Unlike the domestic version, there is a deadline for acceptance \n※There is a limit to the number of tickets available.\n※Tickets will be closed when the number of tickets reaches the specified number.\n\n👇Click here to purchase tickets!\nhttps://ib.eplus.jp/kmnz_area111\n\n------------------------\n\n2025.01.15\nKMNZ 3rd ONE-MAN LIVE KMNCULTURE\nat Spotify O-EAST\n\n00:00 OPENING\n01:15 VERSE\n02:06 MID JOURNEY\n02:37 LUNATIC BEAST\n03:15 CALLING\n04:09 BE NOISY!\n04:53 TOKYO通信(Cover)\n05:53 勘が冴えて悔しいわ(Cover)\n06:35 不可幸力(Cover)\n07:35 アンノウンマザーグース(Cover)\n08:58 FREELY\n09:31 NEY DAYS\n10:30 META FICTION\n11:30 SUNDAY NIGHT MAGIC \n12:44 WE ARE BACK2025 \n13:46 OVER NIGHT2025\n14:44 Augmentation2025\n15:45 STAR-LIGHT2025\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/r...\n\n------------------------\n\n #KMNZ #KMNZ3rdワンマン",
+        "publishedAt": "2025-05-24T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT17M32S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=ajmb9R39Gwo"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/ajmb9R39Gwo/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=ajmb9R39Gwo"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:bIL2tMw1A5I",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "bIL2tMw1A5I",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=bIL2tMw1A5I",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "bIL2tMw1A5I",
+        "title": "KMNZ 4th ONE-MAN LIVE「AREA111」【YouTube Music Weekend 10.0】",
+        "description": "2025年6月25日(水)に川崎CLUB CITTA'で開催されたKMNZ 4th ONE-MAN LIVE 「AREA111」の一部映像をお届けいたします。\n会場の熱気をぜひ体感してください。\n\nKMNZ 4th ONE-MAN LIVE AREA111\n開催日：2025年6月25日(水) \n会場：川崎CLUB CITTA'\n\n#YouTubeMusicWeekend\n------------------------\n\n世界で話題の、日本発のアーティストをYouTube Musicの「JAPANIQUE」プレイリストで聴こう\nhttps://music.youtube.com/playlist?list=RDCLAK5uy_lN7cCzqFOTV83PeDYGf_6N0DiMF4Pnl2E\n\n------------------------\n\n🐾 KMNZ LITA X\n https://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX\nhttps://x.com/kmnstreet\n\n🏠KMNCLUB - KMNZ YouTube Membership\n https://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n#KMNZ #AREA111",
+        "publishedAt": "2025-08-29T02:30:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT18M59S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=bIL2tMw1A5I"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/bIL2tMw1A5I/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=bIL2tMw1A5I"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:eGdl-Hkz85k",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "eGdl-Hkz85k",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=eGdl-Hkz85k",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "eGdl-Hkz85k",
+        "title": "NINOKUNI feat. 唾奇 - OZworld (Cover) / KMNZ LITA",
+        "description": "大人って何考えさせられる毎日\nけどあんまり意味はないらしい\n\n------------------------\n\nMC: KMNZ LITA（ https://x.com/kmnzlita）\n\nIllust: 510 ( https://x.com/510_gotoudayo )\nMovie: すいか ( https://x.com/Su1c4_mv )\nMIX: Meis Clauson ( https://x.com/meisclauson )\nOriginal: OZworld - NINOKUNI feat. 唾奇 (Prod. Howlin' Bear)\nhttps://youtu.be/BP2WeQyETiA?feature=shared\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #ozworld #ninokuni",
+        "publishedAt": "2024-07-09T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT4M18S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=eGdl-Hkz85k"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/eGdl-Hkz85k/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=eGdl-Hkz85k"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:g1Pd4OEBO8M",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "g1Pd4OEBO8M",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=g1Pd4OEBO8M",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "g1Pd4OEBO8M",
+        "title": "2026.01.12",
+        "description": "🎉KMNZ 5th ONE-MAN LIVE \"GOIN'UP\" 開催決定🎉\n\n📅：2026年1月12日（月・祝）\n📍：Zepp Shinjuku (TOKYO)\n⏰：開場 16:00 / 開演 17:00\n\n🎟️チケット情報\n・プレミアムチケット\n15,000円 (特典付/優先入場/整理番号/税込)\nプレミアムチケット特典グッズとして、当日「キービジュアルポストカード入りスタンド (KMNZ直筆サインメッセージ入り)」をお渡しいたします。\n\n・スタンダードチケット\n7,000円 (整理番号/税込)\n\n※会場にて入場時1ドリンク代が別途必要です。\n※未就学児入場不可となります。\n\n🐾メンバーシップ限定先行抽選販売\n2025年11月14日(金) 22:00 〜2025年11月30日(日) 23:59\n\n※KMNZメンバーシップ「KMNCLUB Members」以上に入会している方が対象となります。\n※チケット購入URLはYouTubeコミュニティー投稿およびDiscordサーバー内にてご案内させていただきます。\n\n👇メンバーシップは下記より入会いただけます。\nhttps://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n#KMNZ #GOINUP",
+        "publishedAt": "2025-11-07T12:18:28Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT39S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=g1Pd4OEBO8M"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/g1Pd4OEBO8M/mqdefault.jpg",
+        "width": 320,
+        "height": 180,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=g1Pd4OEBO8M"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:g_Mo5VQEbE0",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "g_Mo5VQEbE0",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=g_Mo5VQEbE0",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "g_Mo5VQEbE0",
+        "title": "平行線 - さユり (Cover) / KMNZ TINA",
+        "description": "どこにもいけない　願いの居場所を探してた\n\n------------------------\n\nMC: KMNZ TINA（ https://x.com/kmnztina_ ）\n\nIllust: A.YAMI ( https://x.com/ayaminakazawa )\nMovie: covox ( https://x.com/channel3_jp )\nMIX: 妃舞ゆにこ ( https://x.com/ema_yuni_ko )\nOriginal: \n酸欠少女さユり『平行線』MV(Short ver)アニメ「クズの本懐」EDテーマ\nhttps://www.youtube.com/watch?v=o9ol4uGatIg\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #平行線 #さユり",
+        "publishedAt": "2024-09-26T13:16:39Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT5M4S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=g_Mo5VQEbE0"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/g_Mo5VQEbE0/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=g_Mo5VQEbE0"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:gvWSyr1gBtU",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "gvWSyr1gBtU",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=gvWSyr1gBtU",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "gvWSyr1gBtU",
+        "title": "NIGHT DANCER - imase (Cover) / KMNZ NERO",
+        "description": "どうでもいいような 夜だけど\n二人刻もう\n\n------------------------\n\nMC: KMNZ NERO（ https://x.com/kmnznero_ ）\n\nIllust: ゐたみ ( https://x.com/itami_gomi )\nMovie: さようなら ( https://x.com/O3Fbl )\nMIX: Wac ( https://x.com/Wac0414 )\nOriginal: 【imase】NIGHT DANCER（MV）\nhttps://youtu.be/kagoEGKHZvU\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #imase #nightdancer",
+        "publishedAt": "2024-07-29T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M32S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=gvWSyr1gBtU"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/gvWSyr1gBtU/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=gvWSyr1gBtU"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:iEsIgmd6wgA",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "iEsIgmd6wgA",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=iEsIgmd6wgA",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "iEsIgmd6wgA",
+        "title": "NEW KMNZ TEASER CASE.1 / KMNZ",
+        "description": "NEXT TEASER “CASE.2” \n→ 2024.05.19 Sun. 19:00\n\n------------------------\n\nTeaser Director：Roly(しろいろモード)\nhttps://twitter.com/yosinO_mo\nhttps://twitter.com/Shiroiro_Mode\nMovie : あとり\nhttps://twitter.com/Atori_no_Atelie\n\nMIX: KMNCREW\n\n------------------------\n\n🐶 KMNZ LITA X（旧Twitter）\nhttps://twitter.com/kmnzlita\n\n🔊KMNSTREET - Official X（旧Twitter）\nhttps://twitter.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ",
+        "publishedAt": "2024-05-12T10:00:38Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT43S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=iEsIgmd6wgA"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/iEsIgmd6wgA/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=iEsIgmd6wgA"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:j85bFjcOxHA",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "j85bFjcOxHA",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=j85bFjcOxHA",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "j85bFjcOxHA",
+        "title": "かつて天才だった俺たちへ - Creepy Nuts (Cover) / KMNZ LITA",
+        "description": "かつて天才だった俺たちへ\n神童だった貴方へ\n\n------------------------\n\nMC: KMNZ LITA（ https://x.com/kmnzlita）\n\nIllust: しち ( https://x.com/neco071171 )\nMovie: 烈 ( https://x.com/re_tsu_ )\nMIX: Ejina ( https://x.com/_ejina )\nOriginal: Creepy Nuts - かつて天才だった俺たちへ\nhttps://www.youtube.com/watch?v=_dAzUOzWvrk\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #creepynuts #かつて天才だった俺たちへ",
+        "publishedAt": "2024-06-15T12:00:07Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M39S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=j85bFjcOxHA"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/j85bFjcOxHA/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=j85bFjcOxHA"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:jwIug5fFmjw",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "jwIug5fFmjw",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=jwIug5fFmjw",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "jwIug5fFmjw",
+        "title": "キティ - 25時、ナイトコードで。 × 鏡音レン (Cover) / KMNZ TINA",
+        "description": "答えは音の中。\nそしてあたしの中。\n\n------------------------\n\nMC: KMNZ TINA（ https://x.com/kmnztina_ ）\n\nIllust: 点七 ( https://x.com/tomo7xxxx )\nMovie: 耳野めめ ( https://x.com/knee_ )\nTrack : Zukio（ https://x.com/mzkch_ ）\nMIX: Ejina ( https://x.com/_ejina )\nOriginal: キティ - 25時、ナイトコードで。 × 鏡音レン\nhttps://youtu.be/l-OtSO4dsLM\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #プロセカ #キティ",
+        "publishedAt": "2024-06-19T12:00:07Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M26S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=jwIug5fFmjw"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/jwIug5fFmjw/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=jwIug5fFmjw"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:kWcETyPVm5o",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "kWcETyPVm5o",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=kWcETyPVm5o",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "kWcETyPVm5o",
+        "title": "Super Shooter - RIP SLYME (Cover) / KMNZ",
+        "description": "Now listen, yo!\n\n------------------------\n\nMC：\nLITA（ https://x.com/kmnzlita ）\nTINA（ https://x.com/kmnztina_ ）\nNERO（ https://x.com/kmnznero_ ）\n\nIllustration：フウタ ( https://x.com/_futaw/ )\nMV：あげは ( https://x.com/ageage_kaza )\nMIX：バロン ( https://x.com/baron3636 )\n\nOriginal：https://www.youtube.com/watch?v=acGqQn9rk0U&pp=0gcJCfwAo7VqN5tD\n\n------------------------\n\n🐾 KMNZ LITA X\n https://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/kmnstreet\n\n🏠KMNCLUB - KMNZ YouTube Membership\n https://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #SuperShooter #RIPSLYME",
+        "publishedAt": "2025-07-25T11:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT4M45S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=kWcETyPVm5o"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/kWcETyPVm5o/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=kWcETyPVm5o"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:lq1oVyqSWec",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "lq1oVyqSWec",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=lq1oVyqSWec",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "lq1oVyqSWec",
+        "title": "How Many Boogie - Fuma no KTR × SKRYU × WAZGOGG (Cover) / KMNZ",
+        "description": "おはようございやーす\n\n------------------------\n\nMC：\nLITA（ https://x.com/kmnzlita ）\nTINA（ https://x.com/kmnztina_ ）\nNERO（ https://x.com/kmnznero_ ）\n\nIllustration：こむぎ ( https://x.com/kmgs_illust )\nMovie：らる ( https://x.com/rc2lx )\nMix：バロン ( https://x.com/baron3636 )\n\nOriginal：https://www.youtube.com/watch?v=XymNT8uU5vs\n\n------------------------\n\n🎉KMNZ 5th ONE-MAN LIVE \"GOIN'UP\" 開催決定🎉\n\n📅：2026年1月12日（月・祝）\n📍：Zepp Shinjuku (TOKYO)\n⏰：開場 16:00 / 開演 17:00\n\n🎟️チケット情報\n・プレミアムチケット\n15,000円 (特典付/優先入場/整理番号/税込)\nプレミアムチケット特典グッズとして、当日「キービジュアルポストカード入りスタンド (KMNZ直筆サインメッセージ入り)」をお渡しいたします。\n\n・スタンダードチケット\n7,000円 (整理番号/税込)\n\n※会場にて入場時1ドリンク代が別途必要です。\n※未就学児入場不可となります。\n\n🐾メンバーシップ限定先行抽選販売\n2025年11月14日(金) 22:00 〜2025年11月30日(日) 23:59\n\n※KMNZメンバーシップ「KMNCLUB Members」以上に入会している方が対象となります。\n※チケット購入URLはYouTubeコミュニティー投稿およびDiscordサーバー内にてご案内させていただきます。\n\n👇メンバーシップは下記より入会いただけます。\nhttps://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n------------------------\n\n🐾 KMNZ LITA X\n https://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX\nhttps://x.com/kmnstreet\n\n🏠KMNCLUB - KMNZ YouTube Membership\n https://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #HowManyBoogie",
+        "publishedAt": "2025-10-30T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT2M44S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=lq1oVyqSWec"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/lq1oVyqSWec/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=lq1oVyqSWec"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:qJakb3XR5Gg",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "qJakb3XR5Gg",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=qJakb3XR5Gg",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "qJakb3XR5Gg",
+        "title": "LITA VERSE #GROWL #KMNZ",
+        "description": "",
+        "publishedAt": "2025-05-22T12:01:37Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT27S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=qJakb3XR5Gg"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/qJakb3XR5Gg/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=qJakb3XR5Gg"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:qeVMmg0mZt4",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "qeVMmg0mZt4",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=qeVMmg0mZt4",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "qeVMmg0mZt4",
+        "title": "ピポピポ -People People- feat. ななひら - Neko Hacker (Cover) / KMNZ LIZ",
+        "description": "ピポピポ\n------------------------\n\nMC＆Mix: KMNZ LIZ\nMain Art: KMNZ LIZ\nMovie: KMNZ LIZ\nOriginal:   https://www.youtube.com/watch?v=qyY3UhQhZK4\n\n------------------------\n\n🐶 KMNZ LITA Twitter\nhttps://twitter.com/kmnzlita\n\n🐱 KMNZ LIZ Twitter\nhttps://twitter.com/kmnzliz\n\n🔊KMNSTREET - Official Twitter\nhttps://twitter.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://kmnsupply.stores.jp/\n\n------------------------\n\n#KMNZ",
+        "publishedAt": "2023-11-20T12:00:49Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M31S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=qeVMmg0mZt4"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/qeVMmg0mZt4/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=qeVMmg0mZt4"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:rSA4PbWG5lM",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "rSA4PbWG5lM",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=rSA4PbWG5lM",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "rSA4PbWG5lM",
+        "title": "Summer Situation - STUTS×SIKK-O×鈴木真海子 (Cover) / KMNZ",
+        "description": "あまりある計画\n------------------------\n\nMC: KMNZ\nMovie: 生命ぜろ（ https://twitter.com/life_zer0_ ）\nMain Art: ききゆ（ https://twitter.com/atatame_m ）\nMusic: Zukio（ https://twitter.com/mzkch_ ）\nMIX: KMNZ LIZ\nOriginal: https://www.youtube.com/watch?v=HIZzYz1xk18\n\n------------------------\n\n🐶 KMNZ LITA Twitter\nhttps://twitter.com/kmnzlita\n\n🐱 KMNZ LIZ Twitter\nhttps://twitter.com/kmnzliz\n\n🔊KMNSTREET - Official Twitter\nhttps://twitter.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://kmnsupply.stores.jp/\n\n------------------------\n\n#KMNZ #SummerSituation #stuts",
+        "publishedAt": "2023-08-26T12:00:42Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT4M50S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=rSA4PbWG5lM"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/rSA4PbWG5lM/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=rSA4PbWG5lM"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:sNV1zsMll6A",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "sNV1zsMll6A",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=sNV1zsMll6A",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "sNV1zsMll6A",
+        "title": "ファタール - GEMN  (Cover) / KMNZ TINA × NERO",
+        "description": "いつかの後悔すら照らせるように\n\n------------------------\n\nMC: KMNZ TINA（ https://x.com/kmnztina_ ）\n　　KMNZ NERO（ https://x.com/kmnznero_ ）\n\nIllustration: ゆっ子 ( https://x.com/matakite_4kaku )\nMovie: 柴崎コータ ( https://x.com/KotaShibasaki )\nMIX: バロン ( https://x.com/baron3636 )\nOriginal: ファタール / GEMN - Fatal / GEMN\nhttps://youtu.be/8tQiWHXSGN0\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #ファタール #GEMN",
+        "publishedAt": "2025-04-03T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M41S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=sNV1zsMll6A"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/sNV1zsMll6A/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=sNV1zsMll6A"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:u9tUEUGSfug",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "u9tUEUGSfug",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=u9tUEUGSfug",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "u9tUEUGSfug",
+        "title": "相対性理論 - LOVEずっきゅん(Cover) / KMNZ LIZ",
+        "description": "💘\n------------------------\n\nMC＆Mix: KMNZ LIZ\nMain Art: けい\nMovie: モゆる（ https://twitter.com/m5gin ）\nMusic: https://youtu.be/DROEN23dgPI @SELA_  THX!!\nOriginal:   https://www.youtube.com/watch?v=nFG4oQE1Et8&t=0s\n\n------------------------\n\n🐶 KMNZ LITA Twitter\nhttps://twitter.com/kmnzlita\n\n🐱 KMNZ LIZ Twitter\nhttps://twitter.com/kmnzliz\n\n🔊KMNSTREET - Official Twitter\nhttps://twitter.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://kmnsupply.stores.jp/\n\n------------------------\n\n#KMNZ #相対性理論 #LOVEずっきゅん",
+        "publishedAt": "2023-08-18T12:00:57Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M20S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=u9tUEUGSfug"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/u9tUEUGSfug/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=u9tUEUGSfug"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:ucKTW6TTwEA",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "ucKTW6TTwEA",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=ucKTW6TTwEA",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "ucKTW6TTwEA",
+        "title": "KMNZ  New Single「WAVE」 XFD",
+        "description": "KMNZ New Single「WAVE」\n\nRK Music公式BOOTH内「KMNSUPPLY」にて受注受付中！\n書き下ろし3曲＋Inst版3トラックの合計6トラックを収録。\n\n■KMNSUPPLY 予約受付ページ\nhttps://booth.pm/ja/items/7099717\n\n期間：7月31(木) 23:59まで\n価格：3,000円（税込）\n\n🐶収録曲🐾\nM1. WAVE\nM2. Get Ur lit on\nM3. Hero in the heart\nM4. WAVE（instrumental）※フィジカル版限定収録\nM5. Get Ur lit on（instrumental）※フィジカル版限定収録\nM6. Hero in the heart（instrumental）※フィジカル版限定収録\n\n------------------------\n\n🐾 KMNZ LITA X\n https://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/kmnstreet\n\n🏠KMNCLUB - KMNZ YouTube Membership\n https://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #WAVE",
+        "publishedAt": "2025-07-08T11:34:21Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT2M20S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=ucKTW6TTwEA"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/ucKTW6TTwEA/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=ucKTW6TTwEA"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:vnEv8A8Q5tQ",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "vnEv8A8Q5tQ",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=vnEv8A8Q5tQ",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "vnEv8A8Q5tQ",
+        "title": "ヒッチコック - ヨルシカ (Cover) / KMNZ TINA",
+        "description": "あなただけを知りたいのは我儘ですか\n\n------------------------\n\nMC: KMNZ TINA（ https://x.com/kmnztina_ ）\n\nIllust: イノウエワラビ ( https://x.com/hidaka_sou )\nMovie: すいか ( https://x.com/Su1c4_mv )\nMIX: 妃舞ゆにこ ( https://x.com/ema_yuni_ko )\nOriginal: ヨルシカ - ヒッチコック (MUSIC VIDEO)\nhttps://youtu.be/t7MBzMP4OzY?feature=shared\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #ヒッチコック #ヨルシカ",
+        "publishedAt": "2024-08-28T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M47S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=vnEv8A8Q5tQ"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/vnEv8A8Q5tQ/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=vnEv8A8Q5tQ"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:w4rrLYMidT4",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "w4rrLYMidT4",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=w4rrLYMidT4",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "w4rrLYMidT4",
+        "title": "ラヴィ - すりぃ feat.鏡音レン (Cover) / KMNZ TINA",
+        "description": "噛み付いて骨まで\nチュッチュッチュッ\n\n------------------------\n\nMC: KMNZ TINA（ https://x.com/kmnztina_ ）\n\nIllust: きるしゅ ( https://x.com/Kill_schwa )\nMovie: ツモ太郎 ( https://x.com/tumotarot )\nMIX: Ejina ( https://x.com/_ejina )\nOriginal: ラヴィ(Lavie) / すりぃ feat.鏡音レン\nhttps://www.youtube.com/watch?v=mq88yUFdVng\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #コンパス #ラヴィ",
+        "publishedAt": "2024-07-18T12:00:07Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=w4rrLYMidT4"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/w4rrLYMidT4/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=w4rrLYMidT4"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:weThJ2lcLIo",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "weThJ2lcLIo",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=weThJ2lcLIo",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "weThJ2lcLIo",
+        "title": "どON - RIP SLYME (Cover) / KMNZ",
+        "description": "どON 続行中\n\n------------------------\n\nMC：\nLITA（ https://x.com/kmnzlita ）\nTINA（ https://x.com/kmnztina_ ）\nNERO（ https://x.com/kmnznero_ ）\n\nIllustration：Bata零 ( https://x.com/bata_zero?s=20)\nMovie：HAR ( https://x.com/86_oO_?s=20 )\nMix：バロン ( https://x.com/baron3636?s=20 )\n\nOriginal：\nhttps://youtu.be/MzUq3Bd6ZMU?si=iMfNkN7SQOo4ZCS_\n\n------------------------\n\n🐾 KMNZ LITA X\n https://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX\nhttps://x.com/kmnstreet\n\n🏠KMNCLUB - KMNZ YouTube Membership\n https://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #どON #RIPSLYME",
+        "publishedAt": "2026-01-06T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT3M44S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=weThJ2lcLIo"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/weThJ2lcLIo/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=weThJ2lcLIo"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:xb-JkjEUF5w",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "xb-JkjEUF5w",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=xb-JkjEUF5w",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "xb-JkjEUF5w",
+        "title": "イケナイ太陽 - ORANGE RANGE (Cover) / KMNZ",
+        "description": "きっと　キミじゃなきゃ　やだよ　\nあたし　イケナイ太陽\n\n------------------------\n\nKMNZ 4th ONE-MAN LIVE AREA111\n\n🛍️ライブグッズ事後受注販売中！\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n受注期間：7月31日(木)23:59まで\n\n------------------------\n\n🐶NEW Single「WAVE」& NEW Album「KMNREVIVAL」受注販売中！🎧\n\nNEW Single「WAVE」\nhttps://rkmusic.booth.pm/items/7099717\n\n💿収録曲\nM1. WAVE\nM2. Get Ur lit on\nM3. Hero in the heart\nM4. WAVE（instrumental）※フィジカル版限定収録\nM5. Get Ur lit on（instrumental）※フィジカル版限定収録\nM6. Hero in the heart（instrumental）※フィジカル版限定収録\n\nNEW Album「KMNREVIVAL」\nhttps://rkmusic.booth.pm/items/7099752\n\n💿収録曲\nM1. Augmentation 2025\nM2. R U GAME? 2025\nM3. TOKONATSU STYLE 2025\nM4. SKOOL 2025\nM5. WE ARE BACK 2025\nM6. OVERNIGHT 2025\nM7. Kickin The Pride 2025\nM8. STAR-LIGHT 2025\n\n------------------------\n\nMC: KMNZ LITA（ https://x.com/kmnzlita ）\n　　KMNZ TINA（ https://x.com/kmnztina_ ）\n　　KMNZ NERO（ https://x.com/kmnznero_ ）\n\nIllust: bata零 ( https://x.com/bata_zero )\nMovie: あげは ( https://x.com/ageage_kaza )\nMIX: Meis Clauson ( https://x.com/meisclauson )\nOriginal: ORANGE RANGE『イケナイ太陽』MV\nhttps://www.youtube.com/watch?v=UzeKDH29TW0\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #イケナイ太陽 #orangerange",
+        "publishedAt": "2024-08-18T12:30:07Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT4M",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=xb-JkjEUF5w"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/xb-JkjEUF5w/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=xb-JkjEUF5w"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:y8tq_0bGKvo",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "y8tq_0bGKvo",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=y8tq_0bGKvo",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "y8tq_0bGKvo",
+        "title": "こっから - SixTONES (Cover) / KMNZ",
+        "description": "こっから…🐶🐾\n\n------------------------\n\nMC：\nLITA（ https://x.com/kmnzlita ）\nTINA（ https://x.com/kmnztina_ ）\nNERO（ https://x.com/kmnznero_ ）\n\nIllustration：渡瀬しぃの ( https://x.com/Non7 )\nMovie：ポコ ( https://x.com/poko_oi_0 )\nMix：バロン ( https://x.com/baron_mix )\n\nOriginal：\nhttps://www.youtube.com/watch?v=yvHfl1JEPc0\n\n------------------------\n\n🐾 KMNZ LITA X\n https://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://x.com/kmnstreet\n\n🏠KMNCLUB - KMNZ YouTube Membership\n https://www.youtube.com/channel/UC68J5pWEshmwhDH45qnpIsg/join\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://shop.reality-studios.inc/pages/rk-music\n\n------------------------\n\n#KMNZ #こっから #SixTONES",
+        "publishedAt": "2026-05-26T11:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT4M",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=y8tq_0bGKvo"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/y8tq_0bGKvo/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=y8tq_0bGKvo"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:yTASHD-MWwE",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "yTASHD-MWwE",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=yTASHD-MWwE",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "yTASHD-MWwE",
+        "title": "come again - m-flo (Cover) / KMNZ LITA × TINA",
+        "description": "金曜日のスカラに君を忘れに、踊り明かすよ、今夜\n\n------------------------\n\nMC: KMNZ LITA（ https://x.com/kmnzlita ）\n　　KMNZ TINA（ https://x.com/kmnztina_ ）\n　　\nIllustration: わき ( https://x.com/wakikamaboko )\nMovie: 耳野めめ ( https://x.com/knee_ )\nMIX: 妃舞ゆにこ ( https://x.com/ema_yuni_ko )\n\nOriginal: m-flo / come again\nhttps://youtu.be/RNBiaZbFGII\n\n------------------------\n\n🐾 KMNZ LITA X\nhttps://x.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://x.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://x.com/kmnznero_\n\n🔊KMNSTREET - OfficialX\nhttps://x.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY - KMNZ Official merchandise store\nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #comeagain  #mflo",
+        "publishedAt": "2025-04-09T12:00:06Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT5M53S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=yTASHD-MWwE"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/yTASHD-MWwE/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=yTASHD-MWwE"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:y_pbg3VFEqs",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "y_pbg3VFEqs",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=y_pbg3VFEqs",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "y_pbg3VFEqs",
+        "title": "KMNZ  New Single 「DROPS」 XFD",
+        "description": "KMNZ New Single「DROPS」\n\nRK Music公式BOOTH内「KMNSUPPLY」にて受注受付中！\n新生KMNZ書き下ろし3曲＋Inst版3トラックの合計6トラックを収録。\n\n■KMNSUPPLY 予約受付ページ\nhttps://rkmusic.booth.pm/items/6690931\n\n期間：4月30(水) 23:59まで\n価格：3,000円（税込）\n\n🐶収録曲🐾\n1.DROP IN\n2.GROWL\n3.MIRROR\n4.DROP IN（inst）\n5.GROWL（inst）\n6.MIRROR（inst）\n\n------------------------\n\n🐾 KMNZ LITA X\nhttps://twitter.com/kmnzlita\n\n 🐾 KMNZ TINA X\nhttps://twitter.com/kmnztina_\n\n🐾 KMNZ NERO X\nhttps://twitter.com/kmnznero_\n\n🔊KMNSTREET - OfficialX\nhttps://twitter.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY \nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #DROPS",
+        "publishedAt": "2025-04-22T11:00:42Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT2M26S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=y_pbg3VFEqs"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/y_pbg3VFEqs/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=y_pbg3VFEqs"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    },
+    {
+      "key": "youtube:video:z9kOdzS85ms",
+      "platform": "youtube",
+      "kind": "video",
+      "platformId": "z9kOdzS85ms",
+      "officialSourceId": "kmnz-youtube",
+      "sourceUrl": "https://www.youtube.com/watch?v=z9kOdzS85ms",
+      "discoveredAt": "2026-10-30T06:33:53.038Z",
+      "raw": {
+        "id": "z9kOdzS85ms",
+        "title": "KMNZ New Single 「NOISY NIGHT」 XFD",
+        "description": "バーチャルガールズユニット「KMNZ」によって描かれる、\n「3通りの賑やかな夜」を描いたニューシングルが発売中！\n\nRK Music公式BOOTH内「KMNSUPPLY」にて受注スタート！\n新生KMNZ書き下ろし3曲＋Inst.版3トラックの合計6トラックを収録。\n\n■KMNSUPPLY 予約受付ページ\nhttps://rkmusic.booth.pm/items/6088667\n\n期間：2024.9.16(月) 22:00 - 9/30(月) 23:59\n価格：3,000円（税込）\n\n🐶収録曲🐾\n01. BE NOISY!（Prod. by 水槽）\n02. LUNATIC BEAST\n03. SUNDAY NIGHT MAGIC\n04. BE NOISY!（Inst.）\n05. LUNATIC BEAST（Inst.）\n06. SUNDAY NIGHT MAGIC（Inst.）\n\n------------------------\n\n🐾 KMNZ LITA X（旧Twitter）\nhttps://twitter.com/kmnzlita\n\n 🐾 KMNZ TINA X（旧Twitter）\nhttps://twitter.com/kmnztina_\n\n🐾 KMNZ NERO X（旧Twitter）\nhttps://twitter.com/kmnznero_\n\n🔊KMNSTREET - OfficialX（旧Twitter）\nhttps://twitter.com/KMNSTREET\n\n🏠KMNCLUB - KMNZ YouTube Membership\nhttps://www.youtube.com/@KMNZ\n\n💻KMNZ OFFICIAL SITE\nhttps://kmnz.jp\n\n👕KMNSUPPLY \nhttps://rkmusic.booth.pm/item_lists/rooT4603\n\n------------------------\n\n#KMNZ #BENOISY #水槽",
+        "publishedAt": "2024-09-28T11:30:11Z",
+        "channelId": "UCqSPZz3gDBxJP-xaME8w-yA",
+        "channelTitle": "KMNZ",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "duration": "PT2M31S",
+        "privacyStatus": "public",
+        "embeddable": true
+      },
+      "evidence": {
+        "provider": "youtube-data-api",
+        "channelUrl": "https://www.youtube.com/channel/UCqSPZz3gDBxJP-xaME8w-yA",
+        "uploadsPlaylistId": "UUqSPZz3gDBxJP-xaME8w-yA",
+        "channelsApiUrl": "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=UCqSPZz3gDBxJP-xaME8w-yA",
+        "playlistApiUrl": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=UUqSPZz3gDBxJP-xaME8w-yA&maxResults=50",
+        "videoApiUrl": "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatus&id=z9kOdzS85ms"
+      },
+      "cover": {
+        "url": "https://i.ytimg.com/vi/z9kOdzS85ms/maxresdefault.jpg",
+        "width": 1280,
+        "height": 720,
+        "source": "youtube-data-api",
+        "status": "verified",
+        "verifiedAt": "2026-10-30T06:33:53.038Z",
+        "sourceUrl": "https://www.youtube.com/watch?v=z9kOdzS85ms"
+      },
+      "review": {
+        "status": "pending",
+        "note": ""
+      }
+    }
+  ]
 }
