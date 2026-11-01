@@ -9974,5 +9974,33 @@
         "https://www.youtube.com/playlist?list=PLfRYX179JpFo"
       ]
     }
+  },
+  {
+    "id": "yt-admin-c9f4d87d29181fe4",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "AGfF2BU2Psc",
+    "externalUrl": "https://www.youtube.com/watch?v=AGfF2BU2Psc",
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, KMNZ TINA, KMNZ NERO",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-c9f4d87d29181fe4"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita",
+        "tina",
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=AGfF2BU2Psc"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1dkpn6CEMi"
   }
 ]
