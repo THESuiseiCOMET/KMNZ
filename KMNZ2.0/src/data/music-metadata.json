@@ -2060,5 +2060,15 @@
       "sourceUrl": "https://www.youtube.com/watch?v=yTASHD-MWwE",
       "verifiedAt": "2026-10-30T13:36:58.313Z"
     }
+  },
+  "yt-admin-c9f4d87d29181fe4": {
+    "platformId": "AGfF2BU2Psc",
+    "publishedAt": {
+      "value": "2026-10-11T12:00:10Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-11-01T18:37:39.545Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=AGfF2BU2Psc"
+    }
   }
 }
