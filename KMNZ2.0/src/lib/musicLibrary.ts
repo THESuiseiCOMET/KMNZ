@@ -77,6 +77,14 @@ export function normalizeKMNZMember(value: unknown): KMNZMember | null {
   return members.find(member => value === member || value === member.toLowerCase()) ?? null
 }
 
+export const streamMembers: readonly KMNZMember[] = ['LITA', 'TINA', 'NERO']
+
+export function youtubeStreamMembers(classification?: YouTubeClassification): KMNZMember[] {
+  if (classification?.contentType !== 'stream') return []
+  return [...new Set((classification.performers ?? []).map(normalizeKMNZMember)
+    .filter((member): member is KMNZMember => member !== null && streamMembers.includes(member)))]
+}
+
 export function youtubeCoverMembers(classification?: YouTubeClassification): KMNZMember[] {
   if (classification?.contentType !== 'cover') return []
   const members = [...(classification.coverMembers ?? []), ...(classification.performers ?? [])]
@@ -153,7 +161,7 @@ export function parseMusicLibrary(value: unknown): MusicLibrary {
     if (source.classification !== undefined) {
       if (source.platform !== 'youtube') fail(`${path}.classification`, 'YouTube only')
       const classification = object(source.classification, `${path}.classification`, ['contentType', 'originalGroup', 'coverMembers', 'performers', 'evidenceUrls'])
-      choice(classification.contentType, `${path}.classification.contentType`, ['original', 'cover'])
+      choice(classification.contentType, `${path}.classification.contentType`, ['original', 'cover', 'stream'])
       if (classification.originalGroup !== undefined) {
         if (classification.contentType !== 'original') fail(`${path}.classification.originalGroup`, 'original only')
         choice(classification.originalGroup, `${path}.classification.originalGroup`, ['lita-liz', 'lita-tina-nero', 'special'])
@@ -168,6 +176,12 @@ export function parseMusicLibrary(value: unknown): MusicLibrary {
           return value
         })
         if (!members.length || new Set(normalized).size !== members.length) fail(`${path}.classification.${field}`, 'expected unique confirmed members')
+      }
+      if (classification.contentType === 'stream') {
+        const members = array(classification.performers, `${path}.classification.performers`)
+        if (!members.length || members.some(member => !streamMembers.includes(normalizeKMNZMember(member)!))) {
+          fail(`${path}.classification.performers`, 'stream requires confirmed LITA | TINA | NERO')
+        }
       }
       const evidence = array(classification.evidenceUrls, `${path}.classification.evidenceUrls`)
       if (!evidence.length || new Set(evidence).size !== evidence.length) fail(`${path}.classification.evidenceUrls`, 'expected unique evidence URLs')

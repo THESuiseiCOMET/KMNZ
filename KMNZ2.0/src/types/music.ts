@@ -1,6 +1,6 @@
 export type MusicPlatform = 'youtube' | 'spotify'
 export type MediaKind = 'mv' | 'track' | 'album'
-export type YouTubeCategory = 'all' | 'original' | 'cover'
+export type YouTubeCategory = 'all' | 'original' | 'cover' | 'stream'
 export type OriginalGroup = 'lita-liz' | 'lita-tina-nero' | 'special'
 export type KMNZMember = 'LITA' | 'LIZ' | 'TINA' | 'NERO'
 export type MusicMemberCode = KMNZMember | Lowercase<KMNZMember>

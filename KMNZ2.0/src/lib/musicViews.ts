@@ -1,5 +1,5 @@
 import type { MusicEntry, MusicLibrary, MusicRelease, ReleaseTrack, Song, YouTubeCategory, OriginalGroup, KMNZMember } from '../types/music'
-import { createMusicLibraryIndex, toMusicCatalog, youtubeCoverMembers } from './musicLibrary'
+import { createMusicLibraryIndex, toMusicCatalog, youtubeCoverMembers, youtubeStreamMembers } from './musicLibrary'
 
 export interface ReleaseTrackView extends ReleaseTrack {
   song: Song
@@ -57,6 +57,7 @@ export function createMusicViews(library: MusicLibrary, catalog = toMusicCatalog
       if (category !== 'all' && classification?.contentType !== category) return false
       if (category === 'original' && group && classification?.originalGroup !== group) return false
       if (category === 'cover' && member && !youtubeCoverMembers(classification).includes(member)) return false
+      if (category === 'stream' && member && !youtubeStreamMembers(classification).includes(member)) return false
       return !query || matchesEntry(entry, query)
     })
   }

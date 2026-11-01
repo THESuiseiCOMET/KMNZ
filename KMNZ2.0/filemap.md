@@ -497,3 +497,9 @@ scripts/update-music-metadata.mjs 的校验保留覆盖索引中来源为 youtub
 - scripts/fixtures/music-trio-published.json：保存用户提供补丁中的 11 个稳定 source ID、视频 ID、原始发布时间和东京日期预期。
 - scripts/music-extra-covers.test.mjs / scripts/music-views.test.mjs：校验每个来源唯一、正式元数据合并后的精确时间戳、东京日期、三个成员筛选及实际卡片 time 标签和排序。
 - 本次核对发现：sources.json 已收录 11/11，music-metadata.overrides.json 已完整包含对应 API 日期且与桌面补丁一致；music-metadata.json 无这 11 条日期，由人工覆盖索引提供。实际 resolveMetadata / getMusicDate / Music 卡片链路正常，旧 dist 构建早于导入及补丁，不含这 11 个视频 ID；修复为重新构建，不重写现有日期、曲库或 UI。静态预览加载新构建需刷新页面。
+
+## YouTube Stream 分类
+
+- src/types/music.ts / src/lib/musicLibrary.ts：新增 stream 来源分类，使用 performers 记录已确认的 LITA、TINA、NERO；保留 Cover 与 Original 原有字段和校验。
+- src/lib/musicViews.ts / src/lib/siteRoute.ts / src/pages/Music.tsx：Stream 一级筛选和三名成员子筛选，复用搜索、排序、队列及 URL/会话筛选记忆；不自动重分类已有记录。
+- scripts/music-stream.test.mjs：分类校验、交叉成员去重、路由记忆、筛选队列、日期与实际页面渲染回归。

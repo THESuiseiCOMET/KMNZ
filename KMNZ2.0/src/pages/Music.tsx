@@ -13,7 +13,7 @@ import type { MusicRoute, MusicFilterAction } from '../lib/siteRoute'
 import playIcon from '../assets/icons/play.svg'
 import youtubeIcon from '../assets/icons/brand-youtube.svg'
 import bilibiliIcon from '../assets/icons/brand-bilibili.svg'
-import { validBilibiliVideoUrl } from '../lib/musicLibrary'
+import { validBilibiliVideoUrl, streamMembers } from '../lib/musicLibrary'
 import spotifyIcon from '../assets/icons/brand-spotify.svg'
 import youtubeLogoLight from '../assets/icons/youtube-logo-light.svg'
 import youtubeLogoDark from '../assets/icons/youtube-logo-dark.svg'
@@ -200,13 +200,16 @@ export default function Music({ locateRequest, selectedId, onSelect, route, onRo
             options={[['albums', 'LP'], ['ep', 'EP']] as const} active={spotifyCategory === 'all' ? null : spotifyCategory}
             onChange={value => filter({ type: 'spotify', value })} />
             : <MusicFilterGroup key="youtube" label="YouTube 分类"
-              options={[ ['original', 'Original'], ['cover', 'Cover']] as const} active={youtubeCategory === 'all' ? null : youtubeCategory}
+              options={[ ['original', 'Original'], ['cover', 'Cover'], ['stream', 'Stream']] as const} active={youtubeCategory === 'all' ? null : youtubeCategory}
               onChange={value => filter({ type: 'youtube', value })} />}
           {platform === 'youtube' && youtubeCategory === 'original' && <MusicFilterGroup secondary key="original" label="原创分类"
             options={[ ['lita-liz', 'LITA & LIZ'], ['lita-tina-nero', 'LITA & TINA & NERO']] as const}
             active={youtubeGroup === 'special' ? null : youtubeGroup} onChange={value => filter({ type: 'group', value })} />}
           {platform === 'youtube' && youtubeCategory === 'cover' && <MusicFilterGroup secondary key="cover" label="翻唱成员"
             options={[ ['LITA', 'LITA'], ['LIZ', 'LIZ'], ['TINA', 'TINA'], ['NERO', 'NERO']] as const}
+            active={youtubeMember} onChange={value => filter({ type: 'member', value })} />}
+          {platform === 'youtube' && youtubeCategory === 'stream' && <MusicFilterGroup secondary key="stream" label="Stream 成员"
+            options={streamMembers.map(member => [member, member] as const)}
             active={youtubeMember} onChange={value => filter({ type: 'member', value })} />}
         </div>
       </div>
