@@ -11,7 +11,7 @@ export function parseSiteRoute(hash: string, releaseIds: ReadonlySet<string>): S
   try {
     const [path, query = ''] = hash.replace(/^#\/?/, '').split('?')
     const parts = path.split('/').filter(Boolean).map(decodeURIComponent)
-    if (['music', 'members', 'history', 'about'].includes(parts[0]) && parts.length === 1) result.page = parts[0] as Page
+    if (['mv', 'music', 'members', 'history', 'about'].includes(parts[0]) && parts.length === 1) result.page = parts[0] as Page
     if (parts[0] === 'members' && parts.length === 2 && /^[1-4]$/.test(parts[1])) result.page = ('member-' + parts[1]) as Page
     if (parts[0] === 'music' && (parts.length === 1 || parts[1] === 'youtube' || parts[1] === 'spotify')) {
       result.page = 'music'
@@ -64,4 +64,27 @@ export function changeMusicFilter(route: MusicRoute, action: MusicFilterAction):
     case 'group': return action.value !== 'special' && route.platform === 'youtube' && route.youtubeCategory === 'original' ? { ...route, youtubeGroup: route.youtubeGroup === action.value ? null : action.value } : route
     case 'member': return route.platform === 'youtube' && route.youtubeCategory === 'cover' ? { ...route, youtubeMember: route.youtubeMember === action.value ? null : action.value } : route
   }
+}
+
+
+export const playlistMemoryKey = 'kmnzPlaylist:v1'
+export const playbackBrowseKey = 'kmnzPlaybackBrowse:v1'
+export interface MusicMemory { route: MusicRoute; scroll: number; panelScroll: number; sourceIds: string[] }
+export function parseMusicMemory(raw: string | null, releases: ReadonlySet<string>): MusicMemory | null {
+  try {
+    const value = JSON.parse(raw ?? 'null')
+    if (!value || typeof value.hash !== 'string' || !value.hash.startsWith('#/music/')) return null
+    const parsed = parseSiteRoute(value.hash, releases)
+    if (parsed.page !== 'music') return null
+    const number = (v: unknown) => typeof v === 'number' && Number.isFinite(v) && v >= 0 ? Math.min(v, 10000000) : 0
+    return { route: parsed.music, scroll: number(value.scroll), panelScroll: number(value.panelScroll), sourceIds: Array.isArray(value.sourceIds) ? value.sourceIds.filter((id: unknown): id is string => typeof id === 'string').slice(0, 2000) : [] }
+  } catch { return null }
+}
+export function readMusicMemory(releases: ReadonlySet<string>, key = playlistMemoryKey): MusicMemory | null {
+  try { return parseMusicMemory(sessionStorage.getItem(key), releases) } catch { return null }
+}
+export function saveMusicMemory(route: MusicRoute, key = playlistMemoryKey, sourceIds: string[] = []): MusicMemory {
+  const memory = { route: { ...route }, scroll: typeof window === 'undefined' ? 0 : window.scrollY, panelScroll: typeof document === 'undefined' ? 0 : document.querySelector('.music-release-pane')?.scrollTop ?? 0, sourceIds }
+  try { sessionStorage.setItem(key, JSON.stringify({ hash: siteRouteHash({ page: 'music', music: route }), scroll: memory.scroll, panelScroll: memory.panelScroll, sourceIds })) } catch { /* unavailable */ }
+  return memory
 }

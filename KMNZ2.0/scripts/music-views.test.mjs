@@ -256,6 +256,23 @@ test('real detail rendering and original YouTube cards',async t=>{
     const {default:Header}=await server.ssrLoadModule('/src/components/Header.tsx')
     const {default:AudioVisualizer}=await server.ssrLoadModule('/src/components/AudioVisualizer.tsx')
     const {default:Home}=await server.ssrLoadModule('/src/pages/Home.tsx')
+    await t.test('the eleven trio covers render exact publication timestamps and dates in each member filter',async()=>{
+      const facts=JSON.parse(await readFile(new URL('./fixtures/music-trio-published.json',import.meta.url),'utf8'))
+      for(const youtubeMember of ['LITA','TINA','NERO']){
+        const route={platform:'youtube',category:'all',search:'',releaseSourceId:null,youtubeCategory:'cover',youtubeGroup:null,youtubeMember}
+        const html=renderToStaticMarkup(createElement(Music,{selectedId:null,onSelect:()=>{},route}))
+        const cards=[...html.matchAll(/<article\b[\s\S]*?<\/article>/g)].map(match=>match[0])
+        const positions=[]
+        for(const fact of facts){
+          const matches=cards.filter(card=>card.includes('data-music-source="'+fact.sourceId+'"'))
+          assert.equal(matches.length,1,fact.videoId)
+          assert(matches[0].includes('dateTime="'+fact.publishedAt+'"'))
+          assert(matches[0].includes('>'+fact.date+'</time>'))
+          positions.push(cards.indexOf(matches[0]))
+        }
+        assert.deepEqual(positions,[...positions].sort((a,b)=>a-b))
+      }
+    })
     await t.test('music platform controls expose complete themed wordmarks and preserve filtered cards without extra players',()=>{
       for(const platform of ['youtube','spotify'])for(const category of ['all','albums','ep']) {
         const route={platform,category,search:'',releaseSourceId:null}
@@ -312,7 +329,12 @@ test('real detail rendering and original YouTube cards',async t=>{
         assert(html.includes(logo))
         const themedHeader=renderToStaticMarkup(createElement(Header,{page:'home',theme,onNavigate:()=>{},onToggleTheme:()=>{}}))
         assert(themedHeader.includes(logo))
-        assert(html.includes('<canvas'));assert(!html.includes('<button'));assert(!html.includes('audio-visualizer-tools'))
+        assert(!themedHeader.includes('header-tempo'))
+        const withTempo=renderToStaticMarkup(createElement(Header,{page:'mv',theme,tempoVisible:true,onNavigate:()=>{},onToggleTheme:()=>{}}))
+        assert(withTempo.includes('class="header-player-group"'))
+        assert.equal((withTempo.match(/<output/g)??[]).length,1)
+        assert(withTempo.includes('class="header-tempo" aria-label="估算 BPM" aria-live="off">BPM —</output>'))
+        assert(html.includes('<canvas'));assert(!html.includes('估算 BPM'));assert(!html.includes('<output'));assert(!html.includes('<button'));assert(!html.includes('audio-visualizer-tools'))
         assert(!html.includes('<iframe'));assert(!html.includes('<audio'));assert(!html.includes('<video'))
       }
       const header=renderToStaticMarkup(createElement(Header,{page:'home',theme:'light',concealed:true,onNavigate:()=>{},onToggleTheme:()=>{}}))
@@ -325,28 +347,31 @@ test('real detail rendering and original YouTube cards',async t=>{
       assert(!replacement.includes('这里展示团体成员资料'));assert(!replacement.includes('hero-inner'))
       assert(!replacement.includes('hero-carousel'));assert(!replacement.includes('等待音频信号'))
     })
-    await t.test('navigation keeps six ordered controls and a separate center player slot',()=>{
-      const html=renderToStaticMarkup(createElement(Header,{page:'home',theme:'light',onNavigate:()=>{},onToggleTheme:()=>{},playbackControls:createElement(Settings,{settings:{presentation:'floating',cinemaVideoFrosted:true,floatingBackgroundFrosted:true},onChange:()=>{}}),onHideNavigation:()=>{}}))
+    await t.test('navigation puts MV and PLAYLIST on the left and player plus six ordered controls on the right',()=>{
+      const html=renderToStaticMarkup(createElement(Header,{page:'music',theme:'light',onNavigate:()=>{},onToggleTheme:()=>{},playbackControls:createElement(Settings,{settings:{presentation:'floating',cinemaVideoFrosted:true,floatingBackgroundFrosted:true},onChange:()=>{}}),onHideNavigation:()=>{}}))
       const nav=html.match(/<nav\b[\s\S]*?<\/nav>/)?.[0]
       assert(nav)
       assert(!nav.includes('class="navigation-indicator"'))
-      for(const label of ['HOME','MUSIC','MEMBERS','HISTORY','ABOUT']) {
+      for(const label of ['MV','PLAYLIST','HISTORY','ABOUT']) {
         assert(nav.includes('aria-label="'+label+'"'))
         assert(nav.includes('class="nav-street-label" data-label="'+label+'" aria-hidden="true">'+label+'</span>'))
       }
       assert.equal((nav.match(/class="nav-chalk-ring"/g)??[]).length,1)
-      assert(nav.match(/<button\b[^>]*aria-label="HOME"[\s\S]*?<\/button>/)?.[0].includes('class="nav-chalk-ring"'))
+      assert(nav.match(/<button\b[^>]*aria-label="PLAYLIST"[\s\S]*?<\/button>/)?.[0].includes('class="nav-chalk-ring"'))
       const about=renderToStaticMarkup(createElement(Header,{page:'about',theme:'dark',onNavigate:()=>{},onToggleTheme:()=>{}}))
       assert.equal((about.match(/class="nav-chalk-ring"/g)??[]).length,1)
       assert(about.match(/<button\b[^>]*aria-label="ABOUT"[\s\S]*?<\/button>/)?.[0].includes('class="nav-chalk-ring"'))
-      assert(nav.indexOf('class="fullscreen-toggle"')>nav.indexOf('class="theme-toggle"'))
+      assert(!nav.includes('aria-label="HOME"'));assert(!nav.includes('aria-label="MEMBERS"'))
+      assert(html.includes('aria-label="打开 KMNZ 展示"'))
+      assert(html.indexOf('class="fullscreen-toggle"')>html.indexOf('class="theme-toggle"'))
       assert(!nav.includes('settings-toggle'));assert(!nav.includes('播放设置'))
-      assert(nav.indexOf('class="navigation-toggle"')>nav.indexOf('class="fullscreen-toggle"'))
+      assert(html.indexOf('class="navigation-toggle"')>html.indexOf('class="fullscreen-toggle"'))
       const labels=['切换到影院模式','背景磨砂','音频可视化','切换到深色主题','进入网页全屏','隐藏顶部导航栏']
-      for(let i=1;i<labels.length;i++)assert(nav.indexOf('aria-label="'+labels[i]+'"')>nav.indexOf('aria-label="'+labels[i-1]+'"'))
-      assert(nav.includes('隐藏顶部导航栏'))
-      assert(nav.includes('进入网页全屏'));assert.equal((nav.match(/fullscreen-corner-/g)??[]).length,2)
-      assert(html.indexOf('class="header-player-slot"')<html.indexOf('<nav'))
+      for(let i=1;i<labels.length;i++)assert(html.indexOf('aria-label="'+labels[i]+'"')>html.indexOf('aria-label="'+labels[i-1]+'"'))
+      assert(html.includes('隐藏顶部导航栏'))
+      assert(html.includes('进入网页全屏'));assert.equal((html.match(/fullscreen-corner-/g)??[]).length,2)
+      assert(html.indexOf('class="header-player-slot"')>html.indexOf('</nav>'))
+      assert(html.indexOf('class="header-player-slot"')<html.indexOf('class="header-preferences"'))
       assert(!nav.includes('header-player-slot'))
     })
     await t.test('direct toolbar exposes three icon controls without a panel or extra players',()=>{

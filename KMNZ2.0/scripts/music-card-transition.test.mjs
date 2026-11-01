@@ -35,3 +35,33 @@ test('snapshot measurement batches reads before writes and cleanup works for det
   cleanup(); cleanup()
   assert.equal(marked(nodes).length, 0)
 })
+
+
+const {prepareVisibleMusicContent,afterContentTransition}=await loadTypeScript(new URL('../src/lib/musicCardTransition.ts',import.meta.url))
+test('deep catalog snapshots include only current rows and visible bounded chrome',()=>{
+ const nodes=Array.from({length:281},(_,i)=>card({top:340+Math.floor(i/3)*246-23000,bottom:570+Math.floor(i/3)*246-23000}))
+ const toolbar=card({top:-23000,bottom:-22700}),pane=card({top:80,bottom:700,height:620})
+ const cleanup=prepareVisibleMusicContent({querySelectorAll:selector=>selector==='.music-card'?nodes:[toolbar,pane]},{width:1280,height:720})
+ assert(marked(nodes).length>0);assert(marked(nodes).length<=12)
+ assert.equal(toolbar.attributes.has('data-music-transition-chrome'),false)
+ assert.equal(pane.attributes.has('data-music-transition-chrome'),true)
+ cleanup();assert.equal(marked(nodes).length,0);assert.equal(pane.attributes.size,0)
+})
+
+test('locator waits for all content transitions and ignores stale mutation callbacks after cleanup',()=>{
+ const prior=Object.getOwnPropertyDescriptor(globalThis,'MutationObserver')
+ let observer,called=0
+ class Observer{constructor(fn){this.fn=fn;observer=this}observe(){}disconnect(){this.disconnected=true}}
+ Object.defineProperty(globalThis,'MutationObserver',{configurable:true,value:Observer})
+ const attrs=new Set(['data-page-transition']),root={hasAttribute:name=>attrs.has(name)}
+ try{
+  const cancel=afterContentTransition(()=>called++,root)
+  assert.equal(called,0);observer.fn();assert.equal(called,0)
+  attrs.delete('data-page-transition');attrs.add('data-music-transition');observer.fn();assert.equal(called,0)
+  attrs.clear();observer.fn();observer.fn();assert.equal(called,1);assert(observer.disconnected)
+  cancel()
+  attrs.add('data-page-transition');const cancelSecond=afterContentTransition(()=>called++,root)
+  cancelSecond();attrs.clear();observer.fn();assert.equal(called,1)
+  afterContentTransition(()=>called++,root);assert.equal(called,2)
+ }finally{if(prior)Object.defineProperty(globalThis,'MutationObserver',prior);else delete globalThis.MutationObserver}
+})

@@ -9666,5 +9666,313 @@
         "https://www.youtube.com/watch?v=yTASHD-MWwE"
       ]
     }
+  },
+  {
+    "id": "yt-cover-d0c838786864",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "7jRDmvhsfAs",
+    "externalUrl": "https://www.youtube.com/watch?v=7jRDmvhsfAs",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-d0c838786864"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, KMNZ TINA, KMNZ NERO · Original: HALCALI",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita",
+        "tina",
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=7jRDmvhsfAs",
+        "https://www.youtube.com/playlist?list=PLfRYX179JpFo"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-1a6e5649544e",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "y8tq_0bGKvo",
+    "externalUrl": "https://www.youtube.com/watch?v=y8tq_0bGKvo",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-1a6e5649544e"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, KMNZ TINA, KMNZ NERO · Original: SixTONES",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita",
+        "tina",
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=y8tq_0bGKvo",
+        "https://www.youtube.com/playlist?list=PLfRYX179JpFo"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-982c8ac0deb1",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "weThJ2lcLIo",
+    "externalUrl": "https://www.youtube.com/watch?v=weThJ2lcLIo",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-982c8ac0deb1"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, KMNZ TINA, KMNZ NERO · Original: RIP SLYME",
+      "year": 2026,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita",
+        "tina",
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=weThJ2lcLIo",
+        "https://www.youtube.com/playlist?list=PLfRYX179JpFo"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-d6a4ed08d02b",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "8wCJCaUqa70",
+    "externalUrl": "https://www.youtube.com/watch?v=8wCJCaUqa70",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-d6a4ed08d02b"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, KMNZ TINA, KMNZ NERO · Original: 礼賛",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita",
+        "tina",
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=8wCJCaUqa70",
+        "https://www.youtube.com/playlist?list=PLfRYX179JpFo"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-4980de31a450",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "lq1oVyqSWec",
+    "externalUrl": "https://www.youtube.com/watch?v=lq1oVyqSWec",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-4980de31a450"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, KMNZ TINA, KMNZ NERO · Original: Fuma no KTR × SKRYU × WAZGOGG",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita",
+        "tina",
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=lq1oVyqSWec",
+        "https://www.youtube.com/playlist?list=PLfRYX179JpFo"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-2c58963eb569",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "WgS_dgH45Bg",
+    "externalUrl": "https://www.youtube.com/watch?v=WgS_dgH45Bg",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-2c58963eb569"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, KMNZ TINA, KMNZ NERO · Original: 湘南乃風",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita",
+        "tina",
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=WgS_dgH45Bg",
+        "https://www.youtube.com/playlist?list=PLfRYX179JpFo"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-aa0c09d6e6a9",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "kWcETyPVm5o",
+    "externalUrl": "https://www.youtube.com/watch?v=kWcETyPVm5o",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-aa0c09d6e6a9"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, KMNZ TINA, KMNZ NERO · Original: RIP SLYME",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita",
+        "tina",
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=kWcETyPVm5o",
+        "https://www.youtube.com/playlist?list=PLfRYX179JpFo"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-07934dfcf359",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "22Q2ugv7k3o",
+    "externalUrl": "https://www.youtube.com/watch?v=22Q2ugv7k3o",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-07934dfcf359"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, KMNZ TINA, KMNZ NERO · Original: SOUL'd OUT",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita",
+        "tina",
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=22Q2ugv7k3o",
+        "https://www.youtube.com/playlist?list=PLfRYX179JpFo"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-f5d7e8bded47",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "E7SlTGPLtOU",
+    "externalUrl": "https://www.youtube.com/watch?v=E7SlTGPLtOU",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-f5d7e8bded47"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, KMNZ TINA, KMNZ NERO · Original: mihimaru GT",
+      "year": 2025,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita",
+        "tina",
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=E7SlTGPLtOU",
+        "https://www.youtube.com/playlist?list=PLfRYX179JpFo"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-4e4f6f6b0320",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "30h4k-Dud70",
+    "externalUrl": "https://www.youtube.com/watch?v=30h4k-Dud70",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-4e4f6f6b0320"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, KMNZ TINA, KMNZ NERO · Original: nobodyknows+",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita",
+        "tina",
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=30h4k-Dud70",
+        "https://www.youtube.com/playlist?list=PLfRYX179JpFo"
+      ]
+    }
+  },
+  {
+    "id": "yt-cover-c72970cb9411",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "xb-JkjEUF5w",
+    "externalUrl": "https://www.youtube.com/watch?v=xb-JkjEUF5w",
+    "target": {
+      "type": "song",
+      "songId": "song-cover-c72970cb9411"
+    },
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, KMNZ TINA, KMNZ NERO · Original: ORANGE RANGE",
+      "year": 2024,
+      "era": "new"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita",
+        "tina",
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=xb-JkjEUF5w",
+        "https://www.youtube.com/playlist?list=PLfRYX179JpFo"
+      ]
+    }
   }
 ]

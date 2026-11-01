@@ -9,7 +9,7 @@ const {parseSiteRoute:parse,siteRouteHash:hash}=routes
 const releases=new Set(['sp-album-1'])
 
 test('hash routes round-trip pages, member details, Spotify release, Unicode search and categories',()=>{
-  for(const value of ['#/','#/music/youtube','#/members','#/members/3','#/history','#/about','#/music/spotify/release/sp-album-1?category=ep&q=%E7%8C%AB+%26+KMNZ']) {
+  for(const value of ['#/','#/mv','#/music/youtube','#/members','#/members/3','#/history','#/about','#/music/spotify/release/sp-album-1?category=ep&q=%E7%8C%AB+%26+KMNZ']) {
     const route=parse(value,releases)
     assert.deepEqual(parse(hash(route),releases),route)
   }
@@ -40,6 +40,7 @@ function harness(initial='#/music/spotify?q=KMNZ',transition) {
   Object.defineProperty(globalThis,'window',{configurable:true,value:win})
   Object.defineProperty(globalThis,'sessionStorage',{configurable:true,value:{getItem:key=>store.get(key)??null,setItem:(key,value)=>store.set(key,value)}})
   const react={useState(value){const i=cursor++;slots[i]??={value:typeof value==='function'?value():value};return [slots[i].value,next=>{slots[i].value=next}]},useRef(value){const i=cursor++;return slots[i]??={current:value}},useCallback(fn,deps){const i=cursor++;if(!slots[i]||deps.some((value,j)=>!Object.is(value,slots[i].deps[j])))slots[i]={deps,value:fn};return slots[i].value},useEffect(fn,deps){const i=cursor++;if(!slots[i]||deps.some((v,j)=>!Object.is(v,slots[i].deps[j])))effects.push(()=>{slots[i]?.cleanup?.();slots[i]={deps,cleanup:fn()}})}}
+  react.useLayoutEffect=react.useEffect
   const module={exports:{}}
   new Function('require','module','exports',code)(name=>name==='react'?react:routes,module,module.exports)
   return {render(){cursor=0;const result=module.exports.useSiteRoute(releases,transition);effects.splice(0).forEach(fn=>fn());return result},win,entries,store,
@@ -154,4 +155,63 @@ test('opening, switching and closing Spotify track panels preserve list scroll a
     view.changeMusic({...view.route.music,platform:'youtube'});view=h.render();h.flush()
     assert.equal(h.win.scrollY,0)
   } finally {h.cleanup()}
+})
+
+
+test('PLAYLIST remembers filters and scroll through MV and unrelated pages',()=>{
+  const h=harness('#/music/youtube?category=cover&member=lita&q=night')
+  try {
+    let v=h.render();h.flush();const selected={...v.route.music};h.win.scrollY=1240
+    v.navigate('mv');v=h.render();h.flush();assert.equal(v.route.page,'mv');assert.equal(h.win.scrollY,0)
+    v.navigate('music');v=h.render();h.flush();assert.deepEqual(v.route.music,selected);assert.equal(h.win.scrollY,1240)
+    h.win.scrollY=1750;v.navigate('about');v=h.render();h.flush();h.win.scrollY=80
+    v.navigate('music');v=h.render();h.flush();assert.deepEqual(v.route.music,selected);assert.equal(h.win.scrollY,1750)
+    assert.equal(routes.parseMusicMemory(h.store.get(routes.playlistMemoryKey),releases).route.youtubeMember,'LITA')
+  } finally {h.cleanup()}
+})
+
+test('browsing memory and playback-selection memory do not overwrite each other',()=>{
+  const h=harness('#/music/youtube?category=cover&member=lita')
+  try {
+    let v=h.render();h.flush();h.win.scrollY=900
+    routes.saveMusicMemory(v.route.music,routes.playbackBrowseKey,['yt-a','yt-b'])
+    v.changeMusic({...v.route.music,youtubeMember:'nero'});v=h.render();h.flush();h.win.scrollY=400
+    v.navigate('about');v=h.render();h.flush()
+    assert.equal(routes.readMusicMemory(releases).route.youtubeMember,'NERO')
+    const playback=routes.readMusicMemory(releases,routes.playbackBrowseKey)
+    assert.equal(playback.route.youtubeMember,'LITA');assert.equal(playback.scroll,900);assert.deepEqual(playback.sourceIds,['yt-a','yt-b'])
+  } finally {h.cleanup()}
+})
+
+test('refreshing another page restores the last playlist context and its album pane scroll',()=>{
+  const h=harness('#/about');const previous=Object.getOwnPropertyDescriptor(globalThis,'document')
+  let pane={scrollTop:200}
+  Object.defineProperty(globalThis,'document',{configurable:true,value:{querySelector:()=>pane}})
+  try {
+    const route=parse('#/music/spotify/release/sp-album-1?category=ep&q=WAVE',releases).music
+    routes.saveMusicMemory(route);h.store.set('kmnzRouteScroll',JSON.stringify({[hash({page:'music',music:route})]:640}))
+    let v=h.render();h.flush();assert.equal(v.route.page,'about');assert.deepEqual(v.route.music,route)
+    pane.scrollTop=0;v.navigate('music');v=h.render();h.flush()
+    assert.equal(h.win.scrollY,640);assert.equal(pane.scrollTop,200)
+  } finally {h.cleanup();if(previous)Object.defineProperty(globalThis,'document',previous);else delete globalThis.document}
+})
+
+test('playlist memory rejects malformed data and normalizes unknown release and invalid positions',()=>{
+  for(const raw of [null,'{','{}','{"hash":"#/about"}','{"hash":"#/music/nope"}'])assert.equal(routes.parseMusicMemory(raw,releases),null)
+  const value=routes.parseMusicMemory(JSON.stringify({hash:'#/music/spotify/release/missing?category=ep',scroll:-3,panelScroll:'20',sourceIds:['yt-a',null,12]}),releases)
+  assert.equal(value.route.releaseSourceId,null);assert.equal(value.route.category,'ep');assert.equal(value.scroll,0);assert.equal(value.panelScroll,0);assert.deepEqual(value.sourceIds,['yt-a'])
+})
+
+
+test('deep playlist scroll is restored during layout commit, before any next-frame snapshot',()=>{
+ const h=harness('#/music/youtube?category=cover&member=LIZ')
+ try{
+  let v=h.render();h.flush();h.win.scrollY=23942
+  v.navigate('about');v=h.render();assert.equal(h.win.scrollY,0)
+  v.navigate('music');v=h.render();assert.equal(h.win.scrollY,23942)
+  assert.equal(v.route.music.youtubeMember,'LIZ')
+  v.navigate('mv');v=h.render();assert.equal(h.win.scrollY,0)
+  v.navigate('music');v=h.render();assert.equal(h.win.scrollY,23942)
+  h.flush();assert.equal(h.win.scrollY,23942)
+ }finally{h.cleanup()}
 })

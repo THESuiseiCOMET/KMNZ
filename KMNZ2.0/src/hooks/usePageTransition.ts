@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef } from 'react'
 import { flushSync } from 'react-dom'
-import { prepareVisibleMusicCards } from '../lib/musicCardTransition'
+import { prepareVisibleMusicCards, prepareVisibleMusicContent } from '../lib/musicCardTransition'
 import type { Page } from '../types'
 import type { MusicRoute } from '../lib/siteRoute'
 
@@ -28,14 +28,14 @@ export function usePageTransition() {
     delete root.dataset.pageTransition
     delete root.dataset.musicTransition
     let committed = false
-    let animateCards = false
+    let prepareCards: typeof prepareVisibleMusicCards | null = null
     const apply = () => {
       if (id !== request.current || committed) return
       committed = true
       flushSync(update)
-      if (animateCards) {
+      if (prepareCards) {
         cardCleanup.current?.()
-        cardCleanup.current = prepareVisibleMusicCards()
+        cardCleanup.current = prepareCards()
       }
     }
     const kind = from !== to ? 'page' : from === 'music' && music
@@ -44,7 +44,7 @@ export function usePageTransition() {
           ? music.from.category !== music.to.category
           : music.from.youtubeCategory !== music.to.youtubeCategory || music.from.youtubeGroup !== music.to.youtubeGroup || music.from.youtubeMember !== music.to.youtubeMember) ? 'category' : null
       : null
-    if (!kind || !document.startViewTransition || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (to === 'mv' || !kind || !document.startViewTransition || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       apply()
       return
     }
@@ -59,10 +59,8 @@ export function usePageTransition() {
     const direction = before >= 0 && after >= 0 && after < before || kind === 'page' && from.startsWith('member-') && to === 'members' ? 'backward' : 'forward'
     if (kind === 'page') root.dataset.pageTransition = direction
     else root.dataset.musicTransition = `${kind}-${direction}`
-    if (kind === 'category') {
-      animateCards = true
-      cardCleanup.current = prepareVisibleMusicCards()
-    }
+    prepareCards = kind === 'category' ? prepareVisibleMusicCards : prepareVisibleMusicContent
+    cardCleanup.current = prepareCards()
     const clear = () => {
       if (id !== request.current) return
       active.current = null

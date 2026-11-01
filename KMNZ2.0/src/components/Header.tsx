@@ -1,5 +1,5 @@
 import { useId, useRef, useState } from 'react'
-import type { MouseEvent, ReactNode } from 'react'
+import type { MouseEvent, ReactNode, Ref } from 'react'
 import { flushSync } from 'react-dom'
 import FullscreenToggle from './FullscreenToggle'
 import type { Section } from '../types'
@@ -13,14 +13,18 @@ interface HeaderProps {
   onToggleTheme: () => void
   onThemeSettled?: (theme: 'light' | 'dark') => void
   playbackControls?: ReactNode
+  tempoVisible?: boolean
+  tempoReadoutRef?: Ref<HTMLOutputElement>
   onHideNavigation?: () => void
+  onShowcase?: () => void
+  showcaseButtonRef?: Ref<HTMLButtonElement>
+  canOpenMV?: boolean
   concealed?: boolean
 }
 
 const navigation: { page: Section; label: string }[] = [
-  { page: 'home', label: 'HOME' },
-  { page: 'music', label: 'MUSIC' },
-  { page: 'members', label: 'MEMBERS' },
+  { page: 'mv', label: 'MV' },
+  { page: 'music', label: 'PLAYLIST' },
   { page: 'history', label: 'HISTORY' },
   { page: 'about', label: 'ABOUT' },
 ]
@@ -32,13 +36,20 @@ export default function Header({
                                  onToggleTheme,
                                  onThemeSettled,
                                  playbackControls,
+                                 tempoVisible = false,
+                                 tempoReadoutRef,
                                  onHideNavigation,
+                                 onShowcase,
+                                 showcaseButtonRef,
+                                 canOpenMV = false,
                                  concealed = false
                                }: HeaderProps) {
   const [open, setOpen] = useState(false)
   const [chalkMark, setChalkMark] = useState(0)
   const chalkFilterId = useId()
   const themeRequest = useRef(0)
+
+  const activePage = page === 'home' ? 'music' : page
 
   function navigate(next: Section) {
     if (next === page) setChalkMark(mark => mark + 1)
@@ -109,11 +120,12 @@ export default function Header({
       <header className="site-header" inert={concealed} aria-hidden={concealed || undefined}>
         <div className="container">
           <button
+              ref={showcaseButtonRef}
               className="site-title site-logo-button"
               type="button"
-              onClick={() => navigate('home')}
-              aria-label="返回 KMNZ 首页"
-              title="KMNZ 首页"
+              onClick={() => { setOpen(false); if (onShowcase) onShowcase(); else navigate('music') }}
+              aria-label="打开 KMNZ 展示"
+              title="KMNZ SHOWCASE"
           >
             <img
                 className="site-logo"
@@ -123,7 +135,6 @@ export default function Header({
             />
           </button>
 
-          <div className="header-player-slot" />
           <button
               className="nav-toggle"
               type="button"
@@ -149,11 +160,13 @@ export default function Header({
                     type="button"
                     className="nav-link"
                     aria-label={item.label}
+                    disabled={item.page === 'mv' && !canOpenMV}
+                    title={item.page === 'mv' ? canOpenMV ? '打开 MV 视图' : '选择 YouTube MV 或开启音频可视化' : undefined}
                     data-nav-page={item.page}
-                    aria-current={page === item.page ? 'page' : undefined}
+                    aria-current={activePage === item.page ? 'page' : undefined}
                     onClick={() => navigate(item.page)}
                 >
-                  {page === item.page && <span key={item.page + '-' + chalkMark} className="nav-chalk-ring" aria-hidden="true">
+                  {activePage === item.page && <span key={item.page + '-' + chalkMark} className="nav-chalk-ring" aria-hidden="true">
                     <svg viewBox="0 0 100 44" preserveAspectRatio="none" focusable="false">
                       <defs>
                         <filter id={chalkFilterId} x="-10%" y="-30%" width="120%" height="160%">
@@ -174,6 +187,12 @@ export default function Header({
               </div>
             </div>
 
+          </nav>
+          <div className="header-controls">
+            <div className="header-player-group">
+              <div className="header-player-slot" />
+              {tempoVisible && <output ref={tempoReadoutRef} className="header-tempo" aria-label="估算 BPM" aria-live="off">BPM —</output>}
+            </div>
             <div className="header-preferences">
             {playbackControls}
             {/* 深浅色主题切换按钮 */}
@@ -217,7 +236,7 @@ export default function Header({
           </button>}
 
             </div>
-          </nav>
+          </div>
         </div>
       </header>
   )

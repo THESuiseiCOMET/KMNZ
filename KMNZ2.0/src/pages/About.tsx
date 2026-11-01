@@ -19,26 +19,27 @@ interface AboutLink {
 
 const groups: { title: string; className?: string; links: AboutLink[] }[] = [
   {
-    title: 'KMNZ 官方',
+    title: 'KMNZ OFFICIAL',
     links: [
       { label: 'YouTube', icon: 'youtube', href: 'https://www.youtube.com/@KMNZOFFICIAL' },
       { label: 'YouTube Membership', icon: 'youtube', href: 'https://www.youtube.com/@KMNZ' },
       { label: 'X', icon: 'x', href: 'https://x.com/KMNSTREET' },
-      { label: 'OFFICIAL GOODS', icon: 'shoppingBag', href: 'https://shop.reality-studios.inc/collections/kmnz' },
+      { label: 'OFFICIAL GOODS', icon: 'shoppingBag', href: 'https://shop.reality-studios.inc/en/collections/kmnz' },
     ],
   },
   {
-    title: '音乐平台',
+    title: 'MUSIC PLATFORM',
     links: [
       { label: 'Spotify', icon: 'spotify', href: 'https://open.spotify.com/artist/4uWpa0r7BZUXJ1ip2LJysz' },
       { label: 'Apple Music', icon: 'appleMusic', href: 'https://itunes.apple.com/jp/artist/kmnz/1416494540' },
     ],
   },
   {
-    title: '成员账号',
+    title: 'MEMBER ACCOUNTS',
     className: 'about-member-links',
     links: [
       { label: 'LITA', icon: 'x', href: 'https://twitter.com/kmnzlita' },
+      { label: 'LIZ', icon: 'x', href: 'https://x.com/kmnzliz' },
       { label: 'TINA', icon: 'x', href: 'https://twitter.com/kmnztina_' },
       { label: 'NERO', icon: 'x', href: 'https://twitter.com/kmnznero_' },
     ],
@@ -98,7 +99,7 @@ export default function About() {
           <LinkCard link={{ label: 'Bilibili', icon: 'bilibili', href: 'https://space.bilibili.com/2149710' }} />
           <div className="about-qq">
             <div className="about-qq-heading">
-              <h4>QQ 群</h4>
+              <h4>QQ Group</h4>
               <span>389295995</span>
             </div>
             <button type="button" className="about-qr-button" aria-label="放大 QQ 群二维码" onClick={() => setQrOpen(true)}>

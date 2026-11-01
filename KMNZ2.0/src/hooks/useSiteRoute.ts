@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
-import { parseSiteRoute, siteRouteHash } from '../lib/siteRoute'
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { parseSiteRoute, siteRouteHash, readMusicMemory, saveMusicMemory } from '../lib/siteRoute'
 import type { MusicRoute, SiteRoute } from '../lib/siteRoute'
 import type { Page } from '../types'
 
@@ -22,21 +22,43 @@ function saveScroll(hash: string) {
 }
 
 export function useSiteRoute(releaseIds: ReadonlySet<string>, transition?: (from: Page, to: Page, update: () => void, music?: { from: MusicRoute; to: MusicRoute }) => void) {
-  const [route, setRoute] = useState(() => parseSiteRoute(window.location.hash, releaseIds))
+  const [route, setRoute] = useState(() => {
+    const initial = parseSiteRoute(window.location.hash, releaseIds)
+    if (initial.page !== 'music') initial.music = readMusicMemory(releaseIds)?.route ?? initial.music
+    return initial
+  })
   const latest = useRef(route)
   latest.current = route
   const frame = useRef(0)
+  const pendingScroll = useRef<{ hash: string; restore: boolean } | null>(null)
+  const restoreScroll = useCallback((hash: string) => {
+    window.scrollTo(0, storedScroll(hash))
+    const memory = readMusicMemory(releaseIds)
+    if (memory && siteRouteHash({ page: 'music', music: memory.route }) === hash && typeof document !== 'undefined') {
+      const pane = document.querySelector('.music-release-pane')
+      if (pane) pane.scrollTop = memory.panelScroll
+    }
+  }, [releaseIds])
   const scrollToRoute = useCallback((hash: string) => {
     window.cancelAnimationFrame(frame.current)
-    frame.current = window.requestAnimationFrame(() => window.scrollTo(0, storedScroll(hash)))
-  }, [])
-  const go = useCallback((next: SiteRoute, replace = false) => {
+    frame.current = window.requestAnimationFrame(() => restoreScroll(hash))
+  }, [restoreScroll])
+  useLayoutEffect(() => {
+    const pending = pendingScroll.current
+    if (!pending || pending.hash !== siteRouteHash(route)) return
+    pendingScroll.current = null
+    window.cancelAnimationFrame(frame.current)
+    if (pending.restore) restoreScroll(pending.hash)
+    else window.scrollTo(0, 0)
+  }, [route, restoreScroll])
+  const go = useCallback((next: SiteRoute, replace = false, restore = false) => {
     const before = siteRouteHash(latest.current), hash = siteRouteHash(next)
     if (hash === before) {
       transition?.(latest.current.page, next.page, () => {}, { from: latest.current.music, to: next.music })
       return
     }
     saveScroll(before)
+    if (latest.current.page === 'music') saveMusicMemory(latest.current.music)
     const keepScroll = releasePanelChange(latest.current, next)
     if (keepScroll) window.cancelAnimationFrame(frame.current)
     const update = () => {
@@ -44,8 +66,8 @@ export function useSiteRoute(releaseIds: ReadonlySet<string>, transition?: (from
       if (replace) window.history.replaceState(window.history.state, '', url)
       else window.history.pushState({ kmnzFrom: before }, '', url)
       latest.current = next
+      pendingScroll.current = !replace && !keepScroll ? { hash, restore } : null
       setRoute(next)
-      if (!replace && !keepScroll) { window.cancelAnimationFrame(frame.current); frame.current = window.requestAnimationFrame(() => window.scrollTo(0, 0)) }
     }
     if (transition) transition(latest.current.page, next.page, update, { from: latest.current.music, to: next.music })
     else update()
@@ -62,19 +84,20 @@ export function useSiteRoute(releaseIds: ReadonlySet<string>, transition?: (from
       const hash = siteRouteHash(next), before = siteRouteHash(latest.current)
       if (hash === before) return
       saveScroll(before)
+      if (latest.current.page === 'music') saveMusicMemory(latest.current.music)
       if (next.page !== 'music') next.music = latest.current.music
       const keepScroll = releasePanelChange(latest.current, next)
       if (keepScroll) window.cancelAnimationFrame(frame.current)
       const update = () => {
         latest.current = next
+        pendingScroll.current = keepScroll ? null : { hash, restore: true }
         setRoute(next)
         if (hash !== window.location.hash) window.history.replaceState(window.history.state, '', window.location.pathname + window.location.search + hash)
-        if (!keepScroll) scrollToRoute(hash)
       }
       if (transition) transition(latest.current.page, next.page, update, { from: latest.current.music, to: next.music })
       else update()
     }
-    function remember() { saveScroll(siteRouteHash(latest.current)) }
+    function remember() { saveScroll(siteRouteHash(latest.current)); if (latest.current.page === 'music') saveMusicMemory(latest.current.music) }
     window.addEventListener('hashchange', changed)
     window.addEventListener('popstate', changed)
     window.addEventListener('pagehide', remember)
@@ -92,7 +115,7 @@ export function useSiteRoute(releaseIds: ReadonlySet<string>, transition?: (from
       if (transition) transition(page, page, () => window.scrollTo(0, 0))
       else window.scrollTo(0, 0)
     }
-    else go({ ...latest.current, page })
+    else go({ ...latest.current, page }, false, page === 'music')
   }, [go, transition])
   const changeMusic = useCallback((music: MusicRoute, replace = false) => go({ page: 'music', music }, replace), [go])
   const backFromRelease = useCallback(() => {

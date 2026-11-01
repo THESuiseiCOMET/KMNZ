@@ -21,6 +21,7 @@ import mutedIcon from '../assets/icons/volume-x.svg'
 
 interface PlayerDockProps {
   entry: MusicEntry
+  onLocate?: () => void
   onClose: () => void
   onSkip: (direction: -1 | 1) => void
   requestId?: number
@@ -41,7 +42,7 @@ function PlayerIcon({ source }: { source: string }) {
   return <span className="music-player-icon" style={{ maskImage: mask, WebkitMaskImage: mask }} aria-hidden="true" />
 }
 
-export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode = 'sequence', onModeChange, canPrevious = true, canNext = true, onEnded, onObservation, onCheckpoint, resume, presentation: preferredPresentation = 'floating', videoFrosted = true }: PlayerDockProps) {
+export default function PlayerDock({ entry, onLocate, onClose, onSkip, requestId = 0, mode = 'sequence', onModeChange, canPrevious = true, canNext = true, onEnded, onObservation, onCheckpoint, resume, presentation: preferredPresentation = 'floating', videoFrosted = true }: PlayerDockProps) {
   const presentation = resolvePlayerPresentation(entry.platform, preferredPresentation)
   const spotify = entry.platform === 'spotify'
   const loop = mode === 'repeat-one'
@@ -205,6 +206,9 @@ export default function PlayerDock({ entry, onClose, onSkip, requestId = 0, mode
         <button type="button" onClick={() => onSkip(-1)} aria-label="上一首" title="上一首" disabled={!canPrevious || !canChangeSource}><PlayerIcon source={previousIcon} /></button>
         <button type="button" className="music-player-toggle" onClick={togglePlayback} disabled={!ready} aria-label={paused ? '播放歌曲' : '暂停歌曲'} title={error ?? (paused ? '播放' : '暂停')}><PlayerIcon source={paused ? playIcon : pauseIcon} /></button>
         <button type="button" onClick={() => onSkip(1)} aria-label="下一首" title="下一首" disabled={!canNext || !canChangeSource}><PlayerIcon source={nextIcon} /></button>
+        <button type="button" className="music-player-locate" onClick={onLocate} disabled={!onLocate} aria-label="定位当前播放" title="在曲库定位当前播放">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><circle cx="12" cy="12" r="6.5" /><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none" /><path d="M12 2v4m0 12v4M2 12h4m12 0h4" /></svg>
+        </button>
         {spotify && <button type="button" className="music-player-close" onClick={onClose} aria-label="关闭播放器并停止播放" title="关闭播放器">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
         </button>}

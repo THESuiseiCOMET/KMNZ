@@ -6,7 +6,9 @@ import { musicLibrary } from '../data/musicLibrary'
 import { createMusicViews } from '../lib/musicViews'
 import { createQueueSelections } from '../lib/playbackQueue'
 import type { PlaybackSelection } from '../types/playback'
-import { defaultMusicRoute, changeMusicFilter } from '../lib/siteRoute'
+import type { MusicLocateRequest } from '../lib/musicLocation'
+import { afterContentTransition } from '../lib/musicCardTransition'
+import { siteRouteHash, defaultMusicRoute, changeMusicFilter } from '../lib/siteRoute'
 import type { MusicRoute, MusicFilterAction } from '../lib/siteRoute'
 import playIcon from '../assets/icons/play.svg'
 import youtubeIcon from '../assets/icons/brand-youtube.svg'
@@ -24,6 +26,7 @@ import MusicReleaseDetail from '../components/MusicReleaseDetail'
 import { getMusicMetadata, getMusicDate, sortMusicByDate } from '../data/musicMetadata'
 
 interface MusicProps {
+  locateRequest?: MusicLocateRequest | null
   selectedId: string | null
   onSelect: (selection: PlaybackSelection) => void
   route?: MusicRoute
@@ -42,7 +45,7 @@ const platformLogos = {
 const views = createMusicViews(musicLibrary, musicCatalog)
 const queueSelections = createQueueSelections(musicLibrary)
 
-export default function Music({ selectedId, onSelect, route, onRouteChange, onReleaseBack }: MusicProps) {
+export default function Music({ locateRequest, selectedId, onSelect, route, onRouteChange, onReleaseBack }: MusicProps) {
   const [localRoute, setLocalRoute] = useState<MusicRoute>(defaultMusicRoute)
   const currentRoute = route ?? localRoute
   const { search, platform, category: spotifyCategory, youtubeCategory = 'all', youtubeGroup = null, youtubeMember = null, releaseSourceId } = currentRoute
@@ -55,6 +58,35 @@ export default function Music({ selectedId, onSelect, route, onRouteChange, onRe
   const setReleaseSourceId = (id: string | null) => updateRoute({ releaseSourceId: id })
   const setSearch = (search: string) => updateRoute({ search }, true)
   const filter = (action: MusicFilterAction) => updateRoute(changeMusicFilter(currentRoute, action))
+  const libraryRef = useRef<HTMLElement>(null)
+  const locationRoute = siteRouteHash({ page: 'music', music: currentRoute })
+  useEffect(() => {
+    if (!locateRequest || locationRoute !== siteRouteHash({ page: 'music', music: locateRequest.location.route })) return
+    const target = locateRequest.location
+    let first = 0, second = 0, timer = 0, node: HTMLElement | undefined, oldTab: string | null = null
+    function locate() {
+      first = requestAnimationFrame(() => { second = requestAnimationFrame(() => {
+        const candidates = Array.from(libraryRef.current?.querySelectorAll<HTMLElement>('[data-music-source]') ?? [])
+        node = candidates.find(item => item.dataset.musicSource === (target.sourceId ?? target.cardId)
+          && (!target.sourceId || Number(item.dataset.discNumber) === target.discNumber && Number(item.dataset.trackNumber) === target.trackNumber))
+          ?? candidates.find(item => item.dataset.musicSource === target.cardId)
+        if (!node) return
+        oldTab = node.getAttribute('tabindex')
+        node.tabIndex = -1
+        node.setAttribute('data-now-located', 'true')
+        node.scrollIntoView({ block: 'center', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' })
+        node.focus({ preventScroll: true })
+        timer = window.setTimeout(() => node?.removeAttribute('data-now-located'), 1800)
+      }) })
+    }
+    const cancelWait = afterContentTransition(locate)
+    return () => {
+      cancelWait()
+      cancelAnimationFrame(first); cancelAnimationFrame(second); window.clearTimeout(timer)
+      node?.removeAttribute('data-now-located')
+      if (node) { if (oldTab === null) node.removeAttribute('tabindex'); else node.setAttribute('tabindex', oldTab) }
+    }
+  }, [locateRequest, locationRoute])
   const albumButtons = useRef(new Map<string, HTMLButtonElement>())
   const returnSourceId = useRef<string | null>(null)
   useEffect(() => {
@@ -88,7 +120,7 @@ export default function Music({ selectedId, onSelect, route, onRouteChange, onRe
     const selected = selectedId === item.id || isRelease && selectedId !== null
       && views.sourceRelease(selectedId)?.id === views.sourceRelease(item.id)?.id
     return (
-      <article className={'music-card music-card-' + item.platform + (selected ? ' selected' : '') + (isRelease && releaseSourceId === item.id ? ' is-expanded' : '')} key={item.id}
+      <article data-music-source={item.id} className={'music-card music-card-' + item.platform + (selected ? ' selected' : '') + (isRelease && releaseSourceId === item.id ? ' is-expanded' : '')} key={item.id}
         style={{ '--music-card-transition': 'music-card-' + item.id, '--music-card-transition-class': 'music-filter-card music-filter-step-' + Math.min(position, 5) } as CSSProperties}>
         <div className="music-art-frame">
           <button
@@ -134,7 +166,7 @@ export default function Music({ selectedId, onSelect, route, onRouteChange, onRe
   const hasResults = platform === 'youtube' ? filtered.length > 0 : spotify.length > 0
 
   return (
-    <section className="page-section music-library" aria-label="音乐">
+    <section ref={libraryRef} className="page-section music-library" aria-label="音乐">
       <div className="music-toolbar">
         <label className="music-search">
           <span className="sr-only">搜索</span>

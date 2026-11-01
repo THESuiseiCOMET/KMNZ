@@ -31,7 +31,7 @@ function harness({ supported = true, reduced = false, throws = false } = {}) {
   Object.defineProperty(globalThis, 'window', { configurable: true, value: { matchMedia: () => ({ matches: reduced }) } })
   const react = { useRef: value => ({ current: value }), useCallback: fn => fn, useEffect: fn => cleanups.push(fn()) }
   const module = { exports: {} }
-  new Function('require', 'module', 'exports', code)(name => name === 'react' ? react : name === '../lib/musicCardTransition' ? { prepareVisibleMusicCards() { cardPreparations++; return () => cardReleases++ } } : { flushSync: fn => fn() }, module, module.exports)
+  new Function('require', 'module', 'exports', code)(name => name === 'react' ? react : name === '../lib/musicCardTransition' ? { prepareVisibleMusicCards() { cardPreparations++; return () => cardReleases++ }, prepareVisibleMusicContent() { cardPreparations++; return () => cardReleases++ } } : { flushSync: fn => fn() }, module, module.exports)
   const run = module.exports.usePageTransition()
   return {
     run, root, transitions, cards: () => ({ prepared: cardPreparations, released: cardReleases }),
@@ -219,4 +219,45 @@ test('rapid category switches and unmount clean only their own captures; reduced
   const reduced = harness({ reduced: true })
   try { reduced.run('music', 'music', () => {}, { from, to }); assert.deepEqual(reduced.cards(), { prepared: 0, released: 0 }) }
   finally { await reduced.cleanup() }
+})
+
+
+test('page and platform navigation prepare bounded content both before and after layout commit',async()=>{
+ const h=harness()
+ try{
+  h.run('about','music',()=>{assert.deepEqual(h.cards(),{prepared:1,released:0})})
+  h.transitions[0].commit();assert.deepEqual(h.cards(),{prepared:2,released:1})
+  h.transitions[0].finish();await Promise.resolve();assert.deepEqual(h.cards(),{prepared:2,released:2})
+  h.run('music','music',()=>{},{from:musicRoute(),to:musicRoute({platform:'spotify'})})
+  h.transitions[1].commit();h.transitions[1].finish();await Promise.resolve()
+  assert.deepEqual(h.cards(),{prepared:4,released:4})
+ }finally{await h.cleanup()}
+})
+
+test('entering MV commits immediately without retaining playlist or other page snapshots',async()=>{
+ const h=harness(),updates=[]
+ try{
+  for(const from of ['music','about','history'])h.run(from,'mv',()=>updates.push(from))
+  assert.deepEqual(updates,['music','about','history'])
+  assert.equal(h.transitions.length,0)
+  assert.deepEqual(h.cards(),{prepared:0,released:0})
+  assert.equal(h.root.dataset.pageTransition,undefined)
+  h.run('mv','music',()=>updates.push('playlist'))
+  assert.equal(h.transitions.length,1)
+  h.transitions[0].commit();assert.equal(updates.at(-1),'playlist')
+ }finally{await h.cleanup()}
+})
+
+test('entering MV cancels pending list captures and ignores their late commits',async()=>{
+ const h=harness(),updates=[]
+ try{
+  h.run('about','music',()=>updates.push('playlist'))
+  h.run('about','mv',()=>updates.push('mv'))
+  assert(h.transitions[0].skipped)
+  assert.deepEqual(h.cards(),{prepared:1,released:1})
+  h.transitions[0].commit();h.transitions[0].finish();await Promise.resolve()
+  assert.deepEqual(updates,['mv'])
+  assert.equal(h.root.dataset.pageTransition,undefined)
+  assert.equal(h.root.dataset.musicTransition,undefined)
+ }finally{await h.cleanup()}
 })

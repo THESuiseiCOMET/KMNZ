@@ -400,3 +400,100 @@ scripts/update-music-metadata.mjs 的校验保留覆盖索引中来源为 youtub
 ## Spotify 专用悬窗顺序
 
 `resolvePlayerPresentation` 在 App 和 PlayerDock 中统一将 Spotify 固定为浮窗，保留用户保存的 YouTube 观影偏好。Spotify 播放时模式按钮不可切换，磨砂按钮继续控制浮窗背景；不隐藏首页或把控件传送到导航。Spotify 悬窗按封面、官方 Embed、自定义控制行排列，没有重复歌名栏或无效循环按钮；关闭按钮位于下一首右侧。封面按钮承接原指针及键盘拖动、边界限制和触控处理，官方媒体 host 仍为同一节点，模式切换不重建 iframe。YouTube 的标题、循环、音量、进度条、观影布局及控制样式保持原样。
+
+## SHOWCASE V1
+
+- `src/components/Showcase.tsx`：双时代开场与真实素材映射；CLASSIC 左、NEW 右，小屏上下分镜。
+- `src/assets/showcase/`：用户提供的 LITALIZ.jpg、KMNZ-logo.svg 和三张成员贴纸原文件。新时期 LITANEROTINA.avif 与既有 `src/assets/images/kmnz2.avif` 的 SHA-256 完全一致，直接复用后者，避免重复素材。
+- `src/lib/showcase.ts`：四阶段状态、2000ms 转场、180ms 减少动态效果、会话键 `kmnzShowcaseEntered:v1`。
+- `src/hooks/useShowcase.ts`：会话入口、重复点击保护、转场清理、滚动锁定与焦点恢复；非首页深链接跳过开场。
+- `src/showcase.css`：独立作用域；海报裁切、纸带形状（Showcase.tsx 的 leftTear、rightTear、seamShape）、中轴 Logo、ENTER、左右/上下撕开及反向转场。
+- `src/App.tsx`：覆盖层与原 `.app` 并列挂载；开场期间原控制台 inert，不卸载页面或播放器；KMNZ Logo 按钮进入 SHOWCASE，ENTER 原路返回。
+- `scripts/showcase.test.mjs`：会话、深链接、状态竞争、计时器、减少动态效果、焦点/滚动恢复与播放器挂载回归。
+- V1 导航笔触揭示已由下述 V2 SPRAY REVEAL 替代；保留原导航、页面与播放器节点。
+
+### SHOWCASE 参考构图修正
+
+- `src/components/Showcase.tsx` 的 `leftTear`、`rightTear`：按参考的非对称走势定义海报断口，SVG clipPath 直接裁切独立官方插画；不再使用梯形裁切。
+- 中央 Logo 按用户选择与导航共用 `src/assets/images/KMNZLOGOW.webp`；`src/assets/showcase/ink-sticker.svg` 单独定义矢量堆墨、少量滴落和喷溅、白色模切边与偏移阴影。原导航资源和样式不变。
+- `src/assets/showcase/paper-texture.png`：用户提供的无文字背景参考，仅通过 `showcase-paper-cut`、`showcase-bottom-cut` 显示纸张/网点/底部墨纸；不显示参考中的人物，不作为整屏背景。
+- 海报顶部与高度：`src/showcase.css` 的 `.showcase-classic > img`、`.showcase-new > img`，桌面从 top:0 开始；移动端保持上下分镜并改用 cover 去掉居中空白。
+- 墨迹贴纸大小/字标位置：`.showcase-center`、`.showcase-logo-sticker`、`.showcase-logo`；纸张先轻微翘起后退场见 `showcase-sticker-peel`。
+- 会话键、路由和焦点管理沿用 V1；V2 仅延长转场并加入稳定回调。视觉对照见 `design-qa.md`。
+
+
+## SHOWCASE V2 · SPRAY REVEAL
+
+- `src/assets/showcase/ink-sticker.svg`：横向实心黑墨标牌、非规则白色模切边、滴墨和投影；`showcase.css` 的 `.showcase-center` / `.showcase-logo` 控制约 313 × 166px 贴纸及字标。桌面人物 translate/scale 保留用户微调，小屏独立取消横向偏移。
+- `src/assets/showcase/spray-can.svg`：原创漫画喷漆罐，喷嘴出口为 viewBox 坐标 (112,21)，瓶身嵌入未经修改的导航同款 KMNZLOGOW.webp。
+- `src/lib/sprayReveal.ts`：2000ms 有界时间线、可见区域测量结果、按弧长采样的轨迹与同步遮罩进度；导航、当前页面、实际播放器分段揭示，无播放器时不生成播放器段。
+- `src/components/SprayReveal.tsx`：独立非交互 SVG 覆盖层，测量并揭示原组件；喷嘴和遮罩共用采样，不复制或重挂载播放器。反向收回遮罩，卸载/结束清理 RAF、resize 和选中标记临时样式；尺寸变化安全完成转场。
+- `src/spray-reveal.css`：喷漆罐、有限颗粒和移动端尺寸；减少动态效果关闭喷罐，沿用 180ms 淡入淡出。
+- `src/App.tsx`：新覆盖层追加在原 app 之后；`useShowcase.ts` 的 enter/show/finish 为稳定回调，播放器刷新状态不重启转场。
+- `scripts/spray-reveal.test.mjs`：轨迹/喷嘴/遮罩同步、揭示顺序、可见区域、播放器缺省、边界覆盖、反向与 RAF 清理；`scripts/showcase.test.mjs` 保留挂载/会话/焦点回归并新增稳定回调检查。
+
+
+## 控制台导航与方格纸背景
+
+- `src/styles.css` 的 `--paper-cell` / `--paper-cycle` / `--paper-speed` / `--paper-line` / `--paper-major`：默认方格纸大小、完整循环高度、向上移动速度及格线对比度；`.app::before` 使用单一 fixed 合成图层。深浅主题分别设色，减少动态效果时静止；存在播放背景时隐藏并暂停，不盖住观影视频或 Spotify 封面。
+- `src/components/Header.tsx`：Logo、MUSIC / HISTORY / ABOUT 在中央容器左侧；`header-controls` 将原 `header-player-slot` 与六个原功能图标放在右侧。手机只折叠导航文字，播放/功能区继续可用；原播放节点通过既有 portal 进入插槽。
+- `src/App.tsx`：普通旧首页地址显示 MUSIC；隐藏 HOME 与旧成员列表但保留原文件、资料与成员详情深链接。点击 KMNZ Logo 进入 SHOWCASE，不改当前路由；旧 #/members 地址也打开 SHOWCASE。移除左下独立入口，返回焦点使用 Header 的 Logo 引用。
+- 音频可视化保留原采集与绘图逻辑，在原内部 home 路由使用独立区域，不显示已隐藏的欢迎文字或轮播。
+- `src/lib/showcase.ts` / `src/hooks/useShowcase.ts`：旧成员列表入口别名及小屏关闭菜单后的可见焦点恢复；喷涂代码、时长、海报、素材和原播放逻辑未改。
+- `scripts/music-views.test.mjs` / `scripts/showcase.test.mjs`：新导航分区、原六个控制顺序、隐藏页面、成员入口、可视化区域和焦点/播放器挂载回归。
+
+## MV / PLAYLIST 与播放定位记忆
+
+- src/components/Header.tsx：主导航为 MV / PLAYLIST / HISTORY / ABOUT；Logo 保留 SHOWCASE 入口。无当前 YouTube 时 MV 禁用。
+- src/App.tsx：再次点击选中的 PLAYLIST 进入 #/mv 并使用现有观影播放器；MV 保留 Music 实例但阻止其交互，导航选中与打圈跟随真实路由。点击定位不切歌、不改队列；定位请求只交给展开后的曲库，避免在隐藏面板提前滚动。
+- src/lib/siteRoute.ts：MusicMemory 及会话键 kmnzPlaylist:v1（最后浏览）/ kmnzPlaybackBrowse:v1（播放选择现场）；独立保存筛选、搜索、专辑、滚动、面板滚动与队列来源 ID。读取时沿用原路由校验，不信任未知发行或损坏存储。
+- src/hooks/useSiteRoute.ts：离开曲库、浏览器导航及 pagehide 保存浏览记忆；普通返回恢复页面与展开曲目面板的位置。在其他页面刷新也恢复此前音乐筛选。
+- src/lib/musicLocation.ts：依据实际 source ID 与已确认曲目关系定位；保留播放时筛选，必要时回到对应平台可见卡片；Spotify 只根据已确认的当前发行与原生曲目 URI 定位，不猜测跨平台关联。
+- src/components/PlayerDock.tsx：下一首旁增加定位图标，复用现有控件容器，未更改播放业务逻辑。
+- src/pages/Music.tsx / src/components/MusicReleaseDetail.tsx：卡片及曲目行提供定位标识；定位后聚焦、平滑居中滚动并短暂描边，减少动态效果时直接定位。
+- src/styles.css：MV 曲库收起、定位图标尺寸及短暂高亮；新增状态不作用于官方 iframe。
+- scripts/music-location.test.mjs：精确来源、播放筛选、独立发行、专辑曲序、已确认 URI、隐藏来源及专辑内 YouTube 播放回归。
+- scripts/site-route.test.mjs：MV 路由、页面往返筛选/滚动、两种记忆隔离、刷新与曲目面板恢复、无效存储校验。
+
+- 导航遮挡与鼠标焦点修正（src/styles.css）：页面/平台/筛选转场使用视口大小的静止底图、独立导航与悬窗层，内容动画位于它们下方；不再截取整张长音乐列表。主题扩散使用原有流程。三个 playback-control 选中仅改变图标颜色、保留原状态点，灰底/边框只在悬浮或键盘焦点出现；Logo 与三个按钮的鼠标焦点不显示 outline，键盘 focus-visible 保留。
+
+## 可视化限定 MV
+
+- src/App.tsx：移除旧 home 可视化跳转；首次点击立即请求采集并导航 #/mv，不等待共享结果再跳转。采集中/已开启时允许进入 MV；从其他页面再次点击复用原会话。在 MV 的独立 mv-visualizer 图层绘图，Music 实例与播放器原挂载位置保留。
+- src/components/PlaybackControls.tsx：visualizationVisible 区分页面位置；已有会话但不在 MV 时点击返回 MV，在 MV 点击关闭或取消等待。未更改按钮样式/排列。
+- src/components/Header.tsx：canOpenMV 包含当前 YouTube 或开启/等待中的可视化，提示与实际入口一致。
+- src/components/AudioVisualizer.tsx：允许 session=null，等待授权时使用现有圆环与旋转 Logo；获得会话后使用原音频绘制，卸载时清理 RAF/ResizeObserver。
+- src/styles.css：mv-visualizer 独立固定图层位于导航下方，不受隐藏曲库 main 的 inert/visibility 影响，不覆盖导航与播放交互。
+- scripts/visualizer-navigation.test.mjs / scripts/showcase.test.mjs：立即跳转、已有会话复用、等待请求去重、MV 关闭、仅 MV 绘图、空会话圆环/旋转及清理回归。
+
+## 长列表导航与定位黑屏修复
+
+- src/hooks/useSiteRoute.ts：将导航后的目标滚动保存在 pendingScroll，使用 useLayoutEffect 在真实页面提交后、转场新截图之前恢复；初始页面仍沿用原加载恢复。保留筛选、历史和专辑面板滚动。
+- src/lib/musicCardTransition.ts：prepareVisibleMusicContent 只标记视口内卡片及工具栏/曲目面板/空状态；afterContentTransition 在页面或分类动画结束后执行定位，支持取消、只执行一次并清理观察器。
+- src/hooks/usePageTransition.ts：页面和平台切换也采用前后可见节点截图，释放旧标记再测量提交后的当前视口，快速切换/失败/卸载沿用原清理。
+- src/pages/Music.tsx：定位等待内容过渡结束再平滑滚动，避免在截图动画中跨越数万像素；焦点与高亮保留。
+- src/styles.css：音乐主列表不再使用整块 main/music-results 快照。可见卡片使用有界的左右滑动与模糊；静止 root 快照仅为视口尺寸，site-navigation / site-player 分别保持导航与实际悬窗层级，无新增播放器 DOM。主题扩散不改。
+- scripts/site-route.test.mjs / scripts/page-transition.test.mjs / scripts/music-card-transition.test.mjs：深滚动在布局阶段恢复、前后视口截图范围、定位等待及过期回调取消；scripts/music-performance.test.mjs 接入真实转场辅助依赖，原缓存回归保留。
+
+## MV 直接显示与 Logo 角度记忆
+
+- src/hooks/usePageTransition.ts：进入 MV 立即提交并取消旧页面快照，避免短暂显示 PLAYLIST；返回曲库仍沿用现有转场与位置恢复。
+- src/components/AudioVisualizer.tsx：会话键 kmnzVisualizerRotation:v1 保存最后旋转角度，切页、换主题、重新开启与刷新后接续；离开时暂停，减少动态效果时保留角度但不旋转。仅卸载和 pagehide 写入存储，存储不可用时使用内存回退。
+- scripts/visualizer-navigation.test.mjs / scripts/page-transition.test.mjs：角度恢复、存储失败、减少动态效果、事件清理及 MV 无旧曲库快照回归。
+
+## BPM 联动旋转
+
+- src/lib/audioTempo.ts：使用共享音频的相对响度变化与低/中/高频起音变化，以 50Hz 重采样、最近最多 4 秒窗口估算节奏；最早积累 2.5 秒，每 250ms 检测、连续两次确认。鼓点间短暂静音不清空历史，持续静音/暂停/断流释放旧结果，弱相关容许短暂保留后转未知。弱相关、静音、暂停及采样中断回退默认速度，未写入曲库或冒充官方 BPM。defaultRotationSpeed / rotationDegreesPerBeat 控制基础转速与每拍旋转角度，smoothRotationSpeed 平滑调速。
+- src/components/AudioVisualizer.tsx：外圈 canvas 和 Logo 每帧使用同一角度、同一方向；保留角度记忆、主题、清理及减少动态效果支持。不修改播放器与音频权限流程。
+- scripts/audio-tempo.test.mjs：多种已知节奏、帧率、静音/平稳信号、变速、采样中断及速度平滑测试；现有可视化回归增加外圈与 Logo 角度一致检查。
+
+- BPM 读数（src/components/AudioVisualizer.tsx / src/styles.css）：导航栏播放控件旁显示 ≈ 整数 BPM；未知显示 BPM —，不展示默认转速对应的假 BPM。只在读数变化时更新 output 文本，不使用逐帧 React state。保留当前 defaultRotationSpeed=25、rotationDegreesPerBeat=50 的人工调整，调速平滑时间改为 450ms。
+- scripts/audio-tempo.test.mjs / scripts/audio-visualizer.test.mjs / scripts/visualizer-navigation.test.mjs：新增首次锁定时延、鼓点静音间隔、恒定响度下频谱节奏、真实绘图读数及静音清空回归；速度/角度断言基于可调参数。
+
+- BPM 导航栏位置（src/components/Header.tsx / src/App.tsx / src/styles.css）：Header 提供 output 引用给现有 AudioVisualizer，直接更新同一个读数，MV 画面不再渲染底部 BPM；可视化关闭或离开 MV 时隐藏，随导航栏一起收起。header-player-group 保留原播放器挂载容器，手机使用紧凑读数；无播放器或读数时不占位。未改检测、转速、角度记忆及播放逻辑。
+
+## 三狗翻唱 11 首日期回归
+
+- scripts/fixtures/music-trio-published.json：保存用户提供补丁中的 11 个稳定 source ID、视频 ID、原始发布时间和东京日期预期。
+- scripts/music-extra-covers.test.mjs / scripts/music-views.test.mjs：校验每个来源唯一、正式元数据合并后的精确时间戳、东京日期、三个成员筛选及实际卡片 time 标签和排序。
+- 本次核对发现：sources.json 已收录 11/11，music-metadata.overrides.json 已完整包含对应 API 日期且与桌面补丁一致；music-metadata.json 无这 11 条日期，由人工覆盖索引提供。实际 resolveMetadata / getMusicDate / Music 卡片链路正常，旧 dist 构建早于导入及补丁，不含这 11 个视频 ID；修复为重新构建，不重写现有日期、曲库或 UI。静态预览加载新构建需刷新页面。

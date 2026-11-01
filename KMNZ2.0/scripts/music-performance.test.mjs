@@ -11,6 +11,7 @@ const data = await loadTypeScript(new URL('../src/data/musicMetadata.ts', import
 const viewModel = await loadTypeScript(new URL('../src/lib/musicViews.ts', import.meta.url))
 const queue = await loadTypeScript(new URL('../src/lib/playbackQueue.ts', import.meta.url))
 const routes = await loadTypeScript(new URL('../src/lib/siteRoute.ts', import.meta.url))
+const contentTransition = await loadTypeScript(new URL('../src/lib/musicCardTransition.ts', import.meta.url))
 const model = await loadTypeScript(new URL('../src/lib/musicLibrary.ts', import.meta.url))
 
 test('date sorting does not construct a formatter or format display labels, and preserves epoch, precision and stable unknown dates', async () => {
@@ -61,7 +62,7 @@ function harness() {
   const module = { exports: {} }
   const viewFactory = { createMusicViews(...args) { const views = viewModel.createMusicViews(...args); return { ...views, youtubeCards(...args) { youtubeReads++; return views.youtubeCards(...args) }, spotifyCards(...args) { spotifyReads++; return views.spotifyCards(...args) } } } }
   const imports = { react, '../data/music': { musicCatalog: catalog }, '../data/musicLibrary': { musicLibrary: library }, '../lib/musicViews': viewFactory, '../lib/playbackQueue': queue,
-    '../lib/siteRoute': routes, '../lib/musicLibrary': model, '../data/musicMetadata': { ...data, getMusicMetadata(entry) { metadataReads++; return data.getMusicMetadata(entry) } },
+    '../lib/siteRoute': routes, '../lib/musicCardTransition': contentTransition, '../lib/musicLibrary': model, '../data/musicMetadata': { ...data, getMusicMetadata(entry) { metadataReads++; return data.getMusicMetadata(entry) } },
     '../hooks/useNavigationIndicator': { useNavigationIndicator: () => ({ linksRef: { current: null }, indicator: null }) } }
   new Function('require', 'module', 'exports', compiled)(name => imports[name] ?? (name.endsWith('.svg') ? 'icon.svg' : name.includes('/components/') ? () => null : require(name)), module, module.exports)
   return { render(props) { cursor = 0; return module.exports.default(props) }, counts: () => ({ metadataReads, youtubeReads, spotifyReads }) }

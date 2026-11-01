@@ -5,6 +5,7 @@ import ts from 'typescript'
 import {loadTypeScript} from './load-typescript.mjs'
 
 const {captureTabAudio,captureInputAudio,readAudioInputs,captureErrorMessage}=await loadTypeScript(new URL('../src/lib/audioCapture.ts',import.meta.url))
+const tempoModule=await loadTypeScript(new URL('../src/lib/audioTempo.ts',import.meta.url))
 const {audioShape,audioLevel,audioSignalThreshold}=await loadTypeScript(new URL('../src/lib/audioGeometry.ts',import.meta.url))
 const {monitorAudioSignal}=await loadTypeScript(new URL('../src/lib/audioSignal.ts',import.meta.url))
 
@@ -255,14 +256,16 @@ test('visualizer always requests tab audio and exposes no input device configura
 
 const viewSource=await readFile(new URL('../src/components/AudioVisualizer.tsx',import.meta.url),'utf8')
 const viewCode=ts.transpileModule(viewSource,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText
-function visualizerHarness({reduced=false,silent=false}={}) {
+function visualizerHarness({reduced=false,silent=false,bpm=null}={}) {
   const restore=[]
   function install(key,value){const previous=Object.getOwnPropertyDescriptor(globalThis,key);restore.push(()=>previous?Object.defineProperty(globalThis,key,previous):delete globalThis[key]);Object.defineProperty(globalThis,key,{configurable:true,value})}
   const effects=[],cleanups=[],refs=[];let cursor=0,nextFrame=0,frame,disconnected=false,strokes=0,circles=0,resizeCallback
+  let audioTime=0,ringAngle=0,muted=false
+  const level=()=>bpm===null?.45:.02+.35*Math.exp(-((audioTime%(60000/bpm))/(60000/bpm))*10)
   const fullscreen={id:'browser-fullscreen'}
   const documentMock={documentElement:{style:{overflow:'auto'}},fullscreenElement:fullscreen}
   install('document',documentMock)
-  install('window',{devicePixelRatio:1,matchMedia:()=>({matches:reduced})})
+  install('window',{devicePixelRatio:1,matchMedia:()=>({matches:reduced}),addEventListener(){},removeEventListener(){}})
   install('ResizeObserver',class {constructor(callback){resizeCallback=callback}observe(){}disconnect(){disconnected=true}})
   install('requestAnimationFrame',fn=>{frame=fn;return ++nextFrame})
   install('cancelAnimationFrame',()=>{frame=null})
@@ -271,18 +274,19 @@ function visualizerHarness({reduced=false,silent=false}={}) {
   new Function('require','module','exports',viewCode)(name=>{
     if(name==='react')return react
     if(name==='react/jsx-runtime')return {jsx:node,jsxs:node}
+    if(name==='../lib/audioTempo')return tempoModule
     if(name==='../lib/audioGeometry')return {audioShape,audioSignalThreshold}
     return {default:name}
   },module,module.exports)
-  const context={setTransform(){},clearRect(){},translate(){},beginPath(){},moveTo(){},lineTo(){},closePath(){},arc(){circles++},stroke(){strokes++}}
-  const image={style:{}}
+  const context={rotate(angle){ringAngle=angle*180/Math.PI},setTransform(){},clearRect(){},translate(){},beginPath(){},moveTo(){},lineTo(){},closePath(){},arc(){circles++},stroke(){strokes++}}
+  const image={style:{}},readout={textContent:'BPM —'}
   let bounds={width:1280,height:720}
   const canvas={getContext:()=>context,getBoundingClientRect:()=>bounds}
-  const analyser={frequencyBinCount:1024,fftSize:2048,getByteFrequencyData(a){a.fill(silent?0:200)},getFloatTimeDomainData(a){for(let i=0;i<a.length;i++)a[i]=silent?0:.45*Math.sin(i*.071)}}
-  const tree=module.exports.default({session:{analyser,sampleRate:48000,getState:()=>({context:'running',muted:false})},theme:'dark'})
-  function attach(value){if(!value||typeof value!=='object')return;if(value.props?.ref)value.props.ref.current=value.type==='canvas'?canvas:image;const children=value.props?.children;for(const child of Array.isArray(children)?children:[children])attach(child)}
+  const analyser={frequencyBinCount:1024,fftSize:2048,getByteFrequencyData(a){a.fill(silent?0:bpm===null?200:Math.min(255,level()*600))},getFloatTimeDomainData(a){for(let i=0;i<a.length;i++)a[i]=silent?0:level()*Math.sin(i*.071)}}
+  const tree=module.exports.default({session:{analyser,sampleRate:48000,getState:()=>({context:'running',muted})},theme:'dark',tempoReadoutRef:{current:readout}})
+  function attach(value){if(!value||typeof value!=='object')return;if(value.props?.ref)value.props.ref.current=value.type==='canvas'?canvas:value.type==='output'?readout:image;const children=value.props?.children;for(const child of Array.isArray(children)?children:[children])attach(child)}
   attach(tree);effects.forEach(fn=>cleanups.push(fn()))
-  return {step(time){const fn=frame;frame=null;fn?.(time)},get rotation(){return image.style.transform},get strokes(){return strokes},get circles(){return circles},get dimensions(){return [canvas.width,canvas.height]},
+  return {mute(){muted=true},get bpmText(){return readout.textContent},get ringAngle(){return ringAngle},step(time){audioTime=time;const fn=frame;frame=null;fn?.(time)},get rotation(){return image.style.transform},get strokes(){return strokes},get circles(){return circles},get dimensions(){return [canvas.width,canvas.height]},
     resize(width,height){bounds={width,height};resizeCallback()},
     cleanup(){cleanups.forEach(fn=>fn?.());assert.equal(documentMock.documentElement.style.overflow,'auto');assert.equal(documentMock.fullscreenElement,fullscreen);assert(disconnected);assert.equal(frame,null);restore.reverse().forEach(fn=>fn())}}
 }
@@ -312,4 +316,25 @@ test('declining or cancelling tab sharing silently returns to idle and permits r
     const retry=h.render().start();h.resolve();assert.equal(await retry,true);assert.equal(h.calls,2)
     h.render().stop();h.unmount()
   }
+})
+
+test('real visualizer rotates ring and logo together and smoothly follows the detected rhythm',()=>{
+ for(const bpm of [90,150]){
+  const h=visualizerHarness({bpm})
+  try{
+   assert.equal(h.bpmText,'BPM —')
+   let previous=0,speed=0
+   for(let time=0;time<16000;time+=1000/60){
+    h.step(time)
+    const angle=Number(h.rotation.slice(7,-4))
+    assert(Math.abs(angle-h.ringAngle)<1e-9)
+    speed=((angle-previous+360)%360)*60
+    previous=angle
+   }
+   assert(Math.abs(speed-tempoModule.tempoRotationSpeed(bpm))/tempoModule.tempoRotationSpeed(bpm)<.035, `unexpected rotation speed ${speed} for ${bpm} BPM`)
+   assert.match(h.bpmText,/^≈ \d+ BPM$/)
+   assert(Math.abs(Number(h.bpmText.match(/\d+/)[0])-bpm)<4)
+   h.mute();h.step(16020);assert.equal(h.bpmText,'BPM —')
+  }finally{h.cleanup()}
+ }
 })

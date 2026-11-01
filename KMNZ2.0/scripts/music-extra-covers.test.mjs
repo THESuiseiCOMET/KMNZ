@@ -54,3 +54,29 @@ test('cooperative source search returns one playable item and preserves source-s
     assert.equal(selection.origin.kind, 'search')
   }
 })
+
+const trioFacts = JSON.parse(await readFile(new URL('./fixtures/music-trio-published.json', import.meta.url), 'utf8'))
+
+test('eleven trio covers have unique sources and retain the supplied exact API timestamps and Tokyo dates', () => {
+  assert.equal(trioFacts.length, 11)
+  const cards = views.youtubeCards('', 'cover')
+  for (const fact of trioFacts) {
+    const sources = library.sources.filter(source => source.platform === 'youtube' && source.platformId === fact.videoId)
+    assert.equal(sources.length, 1, fact.videoId)
+    assert.equal(sources[0].id, fact.sourceId)
+    const entries = cards.filter(entry => entry.id === fact.sourceId)
+    assert.equal(entries.length, 1)
+    const entry = entries[0], data = getMusicMetadata(entry)
+    assert.equal(entry.platformId, fact.videoId)
+    assert.equal(entry.title, fact.title)
+    assert.equal(data.publishedAt.value, fact.publishedAt)
+    assert.equal(data.publishedAt.source, 'youtube-data-api')
+    assert.equal(data.publishedAt.status, 'verified')
+    assert.equal(data.publishedAt.sourceUrl, entry.externalUrl)
+    assert.equal(musicDate(entry, data).label, fact.date)
+    assert.equal(musicDate(entry, data).dateTime, fact.publishedAt)
+    for (const member of ['LITA', 'TINA', 'NERO']) {
+      assert.equal(views.youtubeCards('', 'cover', null, member).filter(entry => entry.id === fact.sourceId).length, 1)
+    }
+  }
+})
