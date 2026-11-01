@@ -2070,5 +2070,25 @@
       "verifiedAt": "2026-11-01T18:37:39.545Z",
       "sourceUrl": "https://www.youtube.com/watch?v=AGfF2BU2Psc"
     }
+  },
+  "yt-admin-274c3d7e43a342f0": {
+    "platformId": "rUYYkFnR_hA",
+    "publishedAt": {
+      "value": "2026-10-12T04:08:15Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-11-01T19:41:33.149Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=rUYYkFnR_hA"
+    }
+  },
+  "yt-admin-a211194b3ce8904f": {
+    "platformId": "uzofaOfqabA",
+    "publishedAt": {
+      "value": "2026-10-10T02:41:58Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-11-01T19:41:33.149Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=uzofaOfqabA"
+    }
   }
 }
