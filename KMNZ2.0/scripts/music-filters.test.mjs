@@ -146,7 +146,10 @@ test('Bilibili links accept only trusted HTTPS video pages, stay optional, and n
   delete value.sources[0].bilibiliUrl
   value.sources.find(source => source.platform === 'spotify').bilibiliUrl = 'https://www.bilibili.com/video/av170001'
   assert.throws(() => model.parseMusicLibrary(value), /bilibiliUrl/)
-  assert(!library.sources.some(source => source.bilibiliUrl))
+  const unbound = structuredClone(library)
+  for (const source of unbound.sources) delete source.bilibiliUrl
+  assert.doesNotThrow(() => model.parseMusicLibrary(unbound))
+  assert(model.toMusicCatalog(unbound).every(entry => entry.bilibiliUrl === undefined))
 })
 
 test('filter routes round-trip both levels and sanitize irrelevant or invalid filters without changing old Spotify URLs', () => {
@@ -165,9 +168,12 @@ test('filter routes round-trip both levels and sanitize irrelevant or invalid fi
 
 test('rendered filters omit All; Bilibili renders only for bound safe URLs and adds no player or duplicate card', async () => {
   const server = await createServer({ configFile: false, root: fileURLToPath(new URL('../', import.meta.url)), base: '/KMNZ/', server: { middlewareMode: true, hmr: false, watch: null }, appType: 'custom' })
+  let originalBindings = []
   try {
     const { default: Music } = await server.ssrLoadModule('/src/pages/Music.tsx')
     const { musicCatalog } = await server.ssrLoadModule('/src/data/music.ts')
+    originalBindings = musicCatalog.map(entry => [entry, entry.bilibiliUrl])
+    for (const [entry] of originalBindings) delete entry.bilibiliUrl
     const render = music => renderToStaticMarkup(createElement(Music, { route: music, selectedId: null, onSelect: () => {} }))
     for (const platform of ['youtube', 'spotify']) {
       const html = render({ ...base(), platform })
@@ -192,7 +198,13 @@ test('rendered filters omit All; Bilibili renders only for bound safe URLs and a
       entry.bilibiliUrl = 'javascript:alert(1)'
       assert(!render(base()).includes('music-bilibili-link'))
     } finally { delete entry.bilibiliUrl }
-  } finally { await server.close() }
+  } finally {
+    for (const [entry, url] of originalBindings) {
+      if (url === undefined) delete entry.bilibiliUrl
+      else entry.bilibiliUrl = url
+    }
+    await server.close()
+  }
 })
 
 test('removed special-filter URLs normalize to all originals without changing music data',()=>{
