@@ -10470,5 +10470,137 @@
       ]
     },
     "bilibiliUrl": "https://www.bilibili.com/video/BV1FsHg6pEaw"
+  },
+  {
+    "id": "yt-admin-0942dd3faed117f3",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "cBlLEvOlJ5g",
+    "externalUrl": "https://www.youtube.com/watch?v=cBlLEvOlJ5g",
+    "display": {
+      "subtitle": "Stream · KMNZ LITA",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-0942dd3faed117f3"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=cBlLEvOlJ5g"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1dLJ968EuJ"
+  },
+  {
+    "id": "yt-admin-e02a5d6688a38843",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "xXgT6YfOEdU",
+    "externalUrl": "https://www.youtube.com/watch?v=xXgT6YfOEdU",
+    "display": {
+      "subtitle": "Stream · KMNZ NERO",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-e02a5d6688a38843"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=xXgT6YfOEdU"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1mCnF6vEGc"
+  },
+  {
+    "id": "yt-admin-07dab43bd13471f7",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "jNGg5faykFY",
+    "externalUrl": "https://www.youtube.com/watch?v=jNGg5faykFY",
+    "display": {
+      "subtitle": "Stream · KMNZ NERO",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-07dab43bd13471f7"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=jNGg5faykFY"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1AQnF6cE1B"
+  },
+  {
+    "id": "yt-admin-3f6df700d2d4e5e0",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "cK-RwmyZa3o",
+    "externalUrl": "https://www.youtube.com/watch?v=cK-RwmyZa3o",
+    "display": {
+      "subtitle": "Stream · KMNZ NERO",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-3f6df700d2d4e5e0"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=cK-RwmyZa3o"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1Pznj6VER2"
+  },
+  {
+    "id": "yt-admin-33aaa1655f4fe26b",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "0JSOAaYEdQQ",
+    "externalUrl": "https://www.youtube.com/watch?v=0JSOAaYEdQQ",
+    "display": {
+      "subtitle": "Stream · KMNZ LITA, KMNZ TINA, KMNZ NERO",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-33aaa1655f4fe26b"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "lita",
+        "tina",
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=0JSOAaYEdQQ"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1TNJt6GEbL"
   }
 ]
