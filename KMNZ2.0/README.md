@@ -1,54 +1,89 @@
-# KMNZ 2.0 — React 页面视觉迁移
+# KMNZ 2.0
 
-当前正在把 KMNZ 1.0 的外观与内容迁移为 React + TypeScript + Vite 组件。
+KMNZ 当前网站，基于 **React + TypeScript + Vite**。源代码位于本目录，GitHub Pages 通过 GitHub Actions 构建并发布此项目。
 
-## 已实现
+- 线上地址：https://thesuiseicomet.github.io/KMNZ/
+- 历史版本：[../KMNZ1.0/](../KMNZ1.0/)
+- 文件定位：[filemap.md](filemap.md)
 
-- 保留 1.0 视觉风格：导航栏、海报背景、4 图轮播、成员头像和手写体名字、时间线、相关链接
-- 浅色 / 深色主题切换与浏览器主题偏好
-- 首页、成员列表、成员详情、历程、关于，以及音乐占位页面
-- 1.0 静态资源拷贝到 `src/assets/`，由 Vite 按需打包
-- **2.0 没有登录、注册、用户中心和密码重置功能**
+## 已实现的主要功能
 
-## 待实现
+- **SHOWCASE / CONSOLE**：双时代拼贴开场海报、ENTER 转场、KMNZ 喷漆揭示动画（SPRAY REVEAL），以及返回展示页的交互。
+- **页面与导航**：成员资料、历史、关于、音乐页面及 MV 视图；使用项目内的 Hash 路由，支持分享、浏览器前进/后退与音乐筛选状态。
+- **音乐索引**：YouTube MV／原创／翻唱／歌回与 Spotify 曲目、专辑、EP 的展示、搜索和筛选；Bilibili 视频可作为外部链接索引。
+- **全站常驻媒体播放器**：以 YouTube / Spotify 官方嵌入播放器为播放来源，提供播放队列和会话恢复等管理逻辑，站内页面切换尽量保持播放器挂载。
+- **界面体验**：浅色／深色主题、响应式布局、页面过渡和音频可视化等功能。
+- **音乐数据维护**：结构校验、元数据修正、测试，以及需要人工审核的发现候选流程。
 
-- React Router 路由与浏览器前进 / 后退、可分享的页面地址
-- YouTube 与 Spotify 官方嵌入播放器、全站连续播放与曲库
-- 内容更新、自动化测试、生产构建验证与线上部署
+当前 2.0 **没有登录、注册、用户中心或密码重置功能**；这些页面仅存在于归档的 1.0。
+
+第三方播放受浏览器自动播放策略、登录/地区/会员条件以及 Spotify、YouTube 平台限制影响。网页不能保证跨平台无缝续播或手机锁屏后始终播放；音视频文件由原平台托管，本站不提供下载或提取。
 
 ## 本地开发
 
+建议使用 Node.js **22**（与仓库 GitHub Actions 配置一致）。
+
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-如需明确指定本地端口，可执行：
+若需固定本地端口：
 
 ```bash
 npm run dev -- --port 5180 --strictPort
 ```
 
-构建：
+执行生产构建、预览及全部脚本测试：
 
 ```bash
 npm run build
+npm run preview
+node --test scripts/*.test.mjs
 ```
 
-Cloudflare Pages：根目录 `KMNZ2.0`，构建命令 `npm run build`，输出目录 `dist`。发布到 GitHub Pages 的子路径时配置 `VITE_BASE_PATH=/KMNZ/`。
+运行音乐数据与候选状态的离线检查：
 
-这是第一阶段迁移，尚未进行浏览器视觉对照验收。旧版仍保留在 `KMNZ1.0/`，根目录旧站不受本次修改影响。
+```bash
+node scripts/update-music-metadata.mjs --check
+node scripts/discover-music.mjs --check
+```
 
-## 音乐模块第一阶段（精选目录与播放）
+注意：`package.json` 当前没有单独的 `npm test` 命令，测试使用 `node --test`。
 
-- `src/data/music.ts`：音乐条目数据源，区分 YouTube MV、Spotify 曲目与专辑；新增曲目无需改播放器组件。
-- `src/pages/Music.tsx`：音乐搜索、平台筛选、时期筛选、作品卡片。
-- `src/components/PlayerDock.tsx`：真实官方 iframe 嵌入，放在 `App` 根部；切换站内栏目不会卸载。
-- YouTube 视频嵌入保持可见且不小于 200 × 200；不使用隐藏播放器或第三方音频提取。
-- 关闭播放器会卸载嵌入并停止播放；切换曲目会加载新嵌入。
-- 受浏览器自动播放限制，点击卡片后仍可能需要点击播放器内的播放按钮。
-- Spotify 播放长度、会员/登录、地区等限制由 Spotify 处理，网站不能保证全曲播放或跨平台无缝续播。
+## GitHub Pages 部署
 
-首版收录的是经过人工校核链接的少量官方条目，不代表完整 KMNZ 曲库。歌曲资源全部托管在平台方，本站不存储音频文件。
+工作流：[../.github/workflows/deploy-pages.yml](../.github/workflows/deploy-pages.yml)
 
-**下一阶段：** 扩大历史曲目数据、成员筛选、分类、专辑详情、收藏与播放队列；后续再评估 YouTube IFrame API / Spotify iFrame API 的程序化播放控制。
+- 发布分支：`分支`
+- 工作目录：`KMNZ2.0/`
+- 环境：Node.js 22；`npm ci` 后执行 `npm run build`
+- 构建时设置：`VITE_BASE_PATH=/KMNZ/`
+- 发布目录：`KMNZ2.0/dist/`，由 GitHub Actions 上传并部署
+
+`vite.config.ts` 根据 `VITE_BASE_PATH` 设置资源基础路径；未设置时默认 `/`，适合本地开发或根路径部署。路由由 `src/lib/siteRoute.ts` 中的 Hash 路由实现，因此不依赖服务器对应用子路径进行历史路由重写。
+
+## 主要目录与数据结构
+
+| 路径 | 内容 |
+| --- | --- |
+| `index.html`、`src/main.tsx`、`src/App.tsx` | Vite 页面入口、React 入口、应用状态和页面布局 |
+| `src/components/`、`src/pages/` | 展示、喷漆转场、导航、播放器与内容页面 |
+| `src/hooks/`、`src/lib/` | 播放、路由、动画及数据处理逻辑 |
+| `src/assets/`、`public/` | 由当前网站使用的图像、图标、字体及公共资源 |
+| `src/data/music/songs.json` | 歌曲与录音版本的稳定 ID |
+| `src/data/music/releases.json` | 专辑／发行版本、曲序与歌曲关联 |
+| `src/data/music/sources.json` | YouTube、Spotify 等平台的来源与显示信息 |
+| `src/data/music-metadata.json` | 自动收集或保存的元数据 |
+| `src/data/music-metadata.overrides.json` | 人工核实的元数据修正 |
+| `music-discovery/`、`scripts/` | 候选审查资料、更新工具和测试脚本 |
+
+更新歌曲时应维护 `songs`、`releases`、`sources` 的关联，不要只增加视频链接并绕过验证。音乐发现工作流不会直接把未审核的候选写入正式曲库。
+
+详细工作流参见 [docs/music-discovery.md](docs/music-discovery.md)，日常查找具体组件请用 [filemap.md](filemap.md)。
+
+## 维护提示
+
+- 保留官方 Spotify / YouTube 嵌入及现有播放器生命周期，不用隐藏播放器绕过平台限制。
+- `KMNZ1.0/` 是历史归档，不要把旧页面和 `KMNZ2.0/index.html` 混淆。
+- 开发前检查现有测试；修改 SHOWCASE 或播放器后验证站内切换和播放连续性。
