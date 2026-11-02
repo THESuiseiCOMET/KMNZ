@@ -10392,5 +10392,83 @@
       ]
     },
     "bilibiliUrl": "https://www.bilibili.com/video/BV1RR9PBzEik"
+  },
+  {
+    "id": "yt-admin-8ea56e53f07b0ea4",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "7pxb7HXo7D4",
+    "externalUrl": "https://www.youtube.com/watch?v=7pxb7HXo7D4",
+    "display": {
+      "subtitle": "Stream · KMNZ TINA",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-8ea56e53f07b0ea4"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=7pxb7HXo7D4"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1ThHF6BES4"
+  },
+  {
+    "id": "yt-admin-1a4e01aa52c731eb",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "0RRwtbMaEDQ",
+    "externalUrl": "https://www.youtube.com/watch?v=0RRwtbMaEDQ",
+    "display": {
+      "subtitle": "Stream · KMNZ NERO",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-1a4e01aa52c731eb"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=0RRwtbMaEDQ"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV11wnX65EzA"
+  },
+  {
+    "id": "yt-admin-d3a1da35442ba94d",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "SQqfj3oJey4",
+    "externalUrl": "https://www.youtube.com/watch?v=SQqfj3oJey4",
+    "display": {
+      "subtitle": "Stream · KMNZ NERO",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-d3a1da35442ba94d"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=SQqfj3oJey4"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1FsHg6pEaw"
   }
 ]
