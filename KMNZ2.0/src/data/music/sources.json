@@ -10054,5 +10054,343 @@
       ]
     },
     "bilibiliUrl": "https://www.bilibili.com/video/BV1khpe6bEYd"
+  },
+  {
+    "id": "yt-admin-a4de635034239320",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "4hPStEvQkFY",
+    "externalUrl": "https://www.youtube.com/watch?v=4hPStEvQkFY",
+    "display": {
+      "subtitle": "Stream · KMNZ TINA",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-a4de635034239320"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=4hPStEvQkFY"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV16Chc6DENX"
+  },
+  {
+    "id": "yt-admin-e3837e7c2bc033b4",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "2CEKUBudSMI",
+    "externalUrl": "https://www.youtube.com/watch?v=2CEKUBudSMI",
+    "display": {
+      "subtitle": "Stream · KMNZ TINA",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-e3837e7c2bc033b4"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=2CEKUBudSMI"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1SvbS6YEnE"
+  },
+  {
+    "id": "yt-admin-ba34a13e37029dea",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "7MfKPn39Jp8",
+    "externalUrl": "https://www.youtube.com/watch?v=7MfKPn39Jp8",
+    "display": {
+      "subtitle": "Stream · KMNZ TINA",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-ba34a13e37029dea"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=7MfKPn39Jp8"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1uMg66xE7n"
+  },
+  {
+    "id": "yt-admin-f797ab2bc0a14a9b",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "eNavyfm-i6E",
+    "externalUrl": "https://www.youtube.com/watch?v=eNavyfm-i6E",
+    "display": {
+      "subtitle": "Stream · KMNZ TINA",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-f797ab2bc0a14a9b"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=eNavyfm-i6E"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1kUNY6jE7g"
+  },
+  {
+    "id": "yt-admin-5794700ba6deaf36",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "oV4En0_JRIc",
+    "externalUrl": "https://www.youtube.com/watch?v=oV4En0_JRIc",
+    "display": {
+      "subtitle": "Stream · KMNZ TINA",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-5794700ba6deaf36"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=oV4En0_JRIc"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1M37J6EEqi"
+  },
+  {
+    "id": "yt-admin-55329ba9f0429b38",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "SrJr0nGx-Gw",
+    "externalUrl": "https://www.youtube.com/watch?v=SrJr0nGx-Gw",
+    "display": {
+      "subtitle": "Stream · KMNZ TINA",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-55329ba9f0429b38"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=SrJr0nGx-Gw"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1HBjM6TEPf"
+  },
+  {
+    "id": "yt-admin-3a0c01b054fa003d",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "XJ5RCdW1Ecw",
+    "externalUrl": "https://www.youtube.com/watch?v=XJ5RCdW1Ecw",
+    "display": {
+      "subtitle": "Stream · KMNZ TINA",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-3a0c01b054fa003d"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=XJ5RCdW1Ecw"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1CcEf6HEKD"
+  },
+  {
+    "id": "yt-admin-d6b36aff674f5109",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "8aNnEeNaARQ",
+    "externalUrl": "https://www.youtube.com/watch?v=8aNnEeNaARQ",
+    "display": {
+      "subtitle": "Stream · KMNZ TINA",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-d6b36aff674f5109"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=8aNnEeNaARQ"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1UnLe6DEG6"
+  },
+  {
+    "id": "yt-admin-4f447c09e422cab0",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "53KHajmwxzQ",
+    "externalUrl": "https://www.youtube.com/watch?v=53KHajmwxzQ",
+    "display": {
+      "subtitle": "Stream · KMNZ TINA",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-4f447c09e422cab0"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=53KHajmwxzQ"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1wA9bBpEZP"
+  },
+  {
+    "id": "yt-admin-4cf8847b3680194d",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "SN_42Mb3Ts0",
+    "externalUrl": "https://www.youtube.com/watch?v=SN_42Mb3Ts0",
+    "display": {
+      "subtitle": "Stream · KMNZ TINA",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-4cf8847b3680194d"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=SN_42Mb3Ts0"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1BpoHBKECP"
+  },
+  {
+    "id": "yt-admin-79388cdc8f23c593",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "3Vc02c_nUM0",
+    "externalUrl": "https://www.youtube.com/watch?v=3Vc02c_nUM0",
+    "display": {
+      "subtitle": "Stream · KMNZ TINA",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-79388cdc8f23c593"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=3Vc02c_nUM0"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1vrd9BJE71"
+  },
+  {
+    "id": "yt-admin-3f1a6942ae63d1d2",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "dvzpy_wXsIk",
+    "externalUrl": "https://www.youtube.com/watch?v=dvzpy_wXsIk",
+    "display": {
+      "subtitle": "Stream · KMNZ TINA",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-3f1a6942ae63d1d2"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=dvzpy_wXsIk"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1kjd4BQES7"
+  },
+  {
+    "id": "yt-admin-5d7697a0d12dede5",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "GMEUHg9Xdkg",
+    "externalUrl": "https://www.youtube.com/watch?v=GMEUHg9Xdkg",
+    "display": {
+      "subtitle": "Stream · KMNZ TINA",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-5d7697a0d12dede5"
+    },
+    "classification": {
+      "contentType": "stream",
+      "performers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=GMEUHg9Xdkg"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1RR9PBzEik"
   }
 ]

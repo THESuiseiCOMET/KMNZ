@@ -2090,5 +2090,135 @@
       "verifiedAt": "2026-11-01T19:41:33.149Z",
       "sourceUrl": "https://www.youtube.com/watch?v=uzofaOfqabA"
     }
+  },
+  "yt-admin-a4de635034239320": {
+    "platformId": "4hPStEvQkFY",
+    "publishedAt": {
+      "value": "2026-08-27T02:47:57Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-11-02T05:52:40.541Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=4hPStEvQkFY"
+    }
+  },
+  "yt-admin-e3837e7c2bc033b4": {
+    "platformId": "2CEKUBudSMI",
+    "publishedAt": {
+      "value": "2026-08-15T03:21:42Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-11-02T05:52:40.541Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=2CEKUBudSMI"
+    }
+  },
+  "yt-admin-ba34a13e37029dea": {
+    "platformId": "7MfKPn39Jp8",
+    "publishedAt": {
+      "value": "2026-07-22T05:01:22Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-11-02T05:52:40.541Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=7MfKPn39Jp8"
+    }
+  },
+  "yt-admin-f797ab2bc0a14a9b": {
+    "platformId": "eNavyfm-i6E",
+    "publishedAt": {
+      "value": "2026-07-14T13:26:45Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-11-02T05:52:40.541Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=eNavyfm-i6E"
+    }
+  },
+  "yt-admin-5794700ba6deaf36": {
+    "platformId": "oV4En0_JRIc",
+    "publishedAt": {
+      "value": "2026-06-27T02:54:54Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-11-02T05:52:40.541Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=oV4En0_JRIc"
+    }
+  },
+  "yt-admin-55329ba9f0429b38": {
+    "platformId": "SrJr0nGx-Gw",
+    "publishedAt": {
+      "value": "2026-06-15T15:18:56Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-11-02T05:52:40.541Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=SrJr0nGx-Gw"
+    }
+  },
+  "yt-admin-3a0c01b054fa003d": {
+    "platformId": "XJ5RCdW1Ecw",
+    "publishedAt": {
+      "value": "2026-06-11T02:06:20Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-11-02T05:52:40.541Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=XJ5RCdW1Ecw"
+    }
+  },
+  "yt-admin-d6b36aff674f5109": {
+    "platformId": "8aNnEeNaARQ",
+    "publishedAt": {
+      "value": "2026-05-22T02:50:25Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-11-02T05:52:40.541Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=8aNnEeNaARQ"
+    }
+  },
+  "yt-admin-4f447c09e422cab0": {
+    "platformId": "53KHajmwxzQ",
+    "publishedAt": {
+      "value": "2026-04-29T15:47:37Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-11-02T05:52:40.541Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=53KHajmwxzQ"
+    }
+  },
+  "yt-admin-4cf8847b3680194d": {
+    "platformId": "SN_42Mb3Ts0",
+    "publishedAt": {
+      "value": "2026-04-22T02:57:43Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-11-02T05:52:40.541Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=SN_42Mb3Ts0"
+    }
+  },
+  "yt-admin-79388cdc8f23c593": {
+    "platformId": "3Vc02c_nUM0",
+    "publishedAt": {
+      "value": "2026-04-18T08:31:37Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-11-02T05:52:40.541Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=3Vc02c_nUM0"
+    }
+  },
+  "yt-admin-3f1a6942ae63d1d2": {
+    "platformId": "dvzpy_wXsIk",
+    "publishedAt": {
+      "value": "2026-04-16T06:28:36Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-11-02T05:52:40.541Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=dvzpy_wXsIk"
+    }
+  },
+  "yt-admin-5d7697a0d12dede5": {
+    "platformId": "GMEUHg9Xdkg",
+    "publishedAt": {
+      "value": "2026-04-03T06:41:01Z",
+      "source": "youtube-data-api",
+      "status": "verified",
+      "verifiedAt": "2026-11-02T05:52:40.541Z",
+      "sourceUrl": "https://www.youtube.com/watch?v=GMEUHg9Xdkg"
+    }
   }
 }
