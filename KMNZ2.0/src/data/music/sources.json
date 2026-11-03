@@ -6530,7 +6530,8 @@
       "evidenceUrls": [
         "https://www.youtube.com/playlist?list=PLA8GJxLkt59ZoZ0pEOY7j1EcXZzI2bWmg"
       ]
-    }
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1RCUpYQEUe"
   },
   {
     "id": "yt-cover-607ea4655908",
@@ -10602,5 +10603,319 @@
       ]
     },
     "bilibiliUrl": "https://www.bilibili.com/video/BV1TNJt6GEbL"
+  },
+  {
+    "id": "yt-admin-8890c58625cd0645",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "6Ar7eQbG_6U",
+    "externalUrl": "https://www.youtube.com/watch?v=6Ar7eQbG_6U",
+    "display": {
+      "subtitle": "Cover · KMNZ TINA",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-8890c58625cd0645"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=6Ar7eQbG_6U"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1FUtt6HEUB"
+  },
+  {
+    "id": "yt-admin-2babbc9f36cb43e2",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "mMYg8VdIxuQ",
+    "externalUrl": "https://www.youtube.com/watch?v=mMYg8VdIxuQ",
+    "display": {
+      "subtitle": "Cover · KMNZ NERO",
+      "year": 2026,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-2babbc9f36cb43e2"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=mMYg8VdIxuQ"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1kVwXz3EXb"
+  },
+  {
+    "id": "yt-admin-f18a3bb8b4ef04c6",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "y42FLl4MVCQ",
+    "externalUrl": "https://www.youtube.com/watch?v=y42FLl4MVCQ",
+    "display": {
+      "subtitle": "Cover · KMNZ TINA",
+      "year": 2025,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-f18a3bb8b4ef04c6"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=y42FLl4MVCQ"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1xTY5zDEn6"
+  },
+  {
+    "id": "yt-admin-d68d50801c4df89c",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "uznvPdjJsUk",
+    "externalUrl": "https://www.youtube.com/watch?v=uznvPdjJsUk",
+    "display": {
+      "subtitle": "Cover · KMNZ LITA, KMNZ TINA, KMNZ NERO",
+      "year": 2025,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-d68d50801c4df89c"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita",
+        "tina",
+        "nero"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=uznvPdjJsUk"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1WKc3eaEss"
+  },
+  {
+    "id": "yt-admin-119a19f3482c8d59",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "iPUCM-QEaZ8",
+    "externalUrl": "https://www.youtube.com/watch?v=iPUCM-QEaZ8",
+    "display": {
+      "subtitle": "Cover · KMNZ LITA",
+      "year": 2024,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-119a19f3482c8d59"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=iPUCM-QEaZ8"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1YTCWYBE1u"
+  },
+  {
+    "id": "yt-admin-a45842ea9aa62bd0",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "756PewKyv4A",
+    "externalUrl": "https://www.youtube.com/watch?v=756PewKyv4A",
+    "display": {
+      "subtitle": "Cover · KMNZ TINA",
+      "year": 2024,
+      "era": "new"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-a45842ea9aa62bd0"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "tina"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=756PewKyv4A"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1op6KYXEWw"
+  },
+  {
+    "id": "yt-admin-cebdc110b338cff8",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "eni8o0qWTZw",
+    "externalUrl": "https://www.youtube.com/watch?v=eni8o0qWTZw",
+    "display": {
+      "subtitle": "Cover · KMNZ LITA",
+      "year": 2023,
+      "era": "classic"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-cebdc110b338cff8"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=eni8o0qWTZw"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1f64y177Qf"
+  },
+  {
+    "id": "yt-admin-e3ea880054109a86",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "DXTvLNowr-s",
+    "externalUrl": "https://www.youtube.com/watch?v=DXTvLNowr-s",
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2022,
+      "era": "classic"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-e3ea880054109a86"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=DXTvLNowr-s"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1u54y1Z7qX"
+  },
+  {
+    "id": "yt-admin-00f01de06f7af39b",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "kP_t4NT1y4A",
+    "externalUrl": "https://www.youtube.com/watch?v=kP_t4NT1y4A",
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2022,
+      "era": "classic"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-00f01de06f7af39b"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=kP_t4NT1y4A"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1N44y1P7dK"
+  },
+  {
+    "id": "yt-admin-88ea183ba2867aab",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "21M6AWjOhiY",
+    "externalUrl": "https://www.youtube.com/watch?v=21M6AWjOhiY",
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2021,
+      "era": "classic"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-88ea183ba2867aab"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=21M6AWjOhiY"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV16f4y1Y745"
+  },
+  {
+    "id": "yt-admin-a50e7e0239399032",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "t4gKVo7dLWo",
+    "externalUrl": "https://www.youtube.com/watch?v=t4gKVo7dLWo",
+    "display": {
+      "subtitle": "Cover · KMNZ LITA",
+      "year": 2021,
+      "era": "classic"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-a50e7e0239399032"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "lita"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=t4gKVo7dLWo"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1uB4y1F737"
+  },
+  {
+    "id": "yt-admin-c47bbf45fc54b41e",
+    "platform": "youtube",
+    "kind": "mv",
+    "platformId": "bHOGAg9G7_8",
+    "externalUrl": "https://www.youtube.com/watch?v=bHOGAg9G7_8",
+    "display": {
+      "subtitle": "Cover · KMNZ LIZ",
+      "year": 2020,
+      "era": "classic"
+    },
+    "target": {
+      "type": "song",
+      "songId": "song-admin-c47bbf45fc54b41e"
+    },
+    "classification": {
+      "contentType": "cover",
+      "coverMembers": [
+        "liz"
+      ],
+      "evidenceUrls": [
+        "https://www.youtube.com/watch?v=bHOGAg9G7_8"
+      ]
+    },
+    "bilibiliUrl": "https://www.bilibili.com/video/BV1La4y1x7zY"
   }
 ]
