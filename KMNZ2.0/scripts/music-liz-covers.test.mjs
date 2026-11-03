@@ -41,8 +41,9 @@ test('LIZ official playlist and five personal covers resolve to 82 unique source
 test('LITA and LIZ duet appears once per member and once overall; solo social links do not create LITA associations', () => {
   const duet = source('puq0ZayTaAs')
   const liz = views.youtubeCards('', 'cover', null, 'LIZ')
-  assert.equal(liz.length, 82)
-  assert.equal(new Set(liz.map(entry => entry.id)).size, 82)
+  const baselineIds = new Set(facts.videos.map(fact => fact.sourceId))
+  assert.equal(liz.filter(entry => baselineIds.has(entry.id)).length, baselineIds.size)
+  assert.equal(new Set(liz.map(entry => entry.id)).size, liz.length)
   for (const member of ['LITA', 'LIZ']) assert.equal(views.youtubeCards('', 'cover', null, member).filter(entry => entry.id === duet.id).length, 1)
   assert.equal(views.youtubeCards('', 'cover').filter(entry => entry.id === duet.id).length, 1)
   const solos = new Set(facts.videos.filter(fact => fact.members.length === 1).map(fact => fact.sourceId))

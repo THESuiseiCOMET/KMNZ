@@ -130,7 +130,13 @@ test('remixes, studio live sessions, 2025 versions and same-name editions remain
   const original=titled('TOKONATSU STYLE');const revised=titled('TOKONATSU STYLE 2025')
   assert(original.length>0&&revised.length>0)
   assert(revised.every(song=>song.version.kind==='other'))
-  for(const song of library.songs.filter(s=>/remix/i.test(s.title)))assert.equal(song.version.kind,'remix',song.title)
+  // Verify confirmed official remix recordings; a cover title alone does not classify its arrangement.
+  const remixes=fixture.sources.filter(fact=>/remix/i.test(fact.title))
+  assert(remixes.length>0)
+  for(const fact of remixes){
+    const song=index.songs.get(index.sources.get(fact.sourceId).target.songId)
+    assert.equal(song.version.kind,'remix',fact.title)
+  }
   const live=library.songs.filter(s=>s.version.kind==='live')
   assert.equal(live.length,2)
   for(const song of live)assert.match(song.title,/Studio Live Session/)
