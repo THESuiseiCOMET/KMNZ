@@ -2,6 +2,8 @@ import { useId, useRef, useState } from 'react'
 import type { MouseEvent, ReactNode, Ref } from 'react'
 import { flushSync } from 'react-dom'
 import FullscreenToggle from './FullscreenToggle'
+import IdlePlayerControls from './IdlePlayerControls'
+import { historyPageEnabled } from '../lib/siteRoute'
 import type { Section } from '../types'
 import logoBlack from '../assets/images/KMNZLOGOB.webp'
 import logoWhite from '../assets/images/KMNZLOGOW.webp'
@@ -18,12 +20,13 @@ interface HeaderProps {
   onHideNavigation?: () => void
   onShowcase?: () => void
   showcaseButtonRef?: Ref<HTMLButtonElement>
+  playerActive?: boolean
   canOpenMV?: boolean
   concealed?: boolean
 }
 
 const navigation: { page: Section; label: string }[] = [
-  { page: 'mv', label: 'MV' },
+  { page: 'mv', label: 'LET’S GROOVE' },
   { page: 'music', label: 'PLAYLIST' },
   { page: 'history', label: 'HISTORY' },
   { page: 'about', label: 'ABOUT' },
@@ -41,7 +44,8 @@ export default function Header({
                                  onHideNavigation,
                                  onShowcase,
                                  showcaseButtonRef,
-                                 canOpenMV = false,
+                                 playerActive = false,
+                                 canOpenMV = true,
                                  concealed = false
                                }: HeaderProps) {
   const [open, setOpen] = useState(false)
@@ -154,14 +158,14 @@ export default function Header({
           >
             <div className="navigation-links">
               <div className="navigation-labels">
-            {navigation.map((item) => (
+            {navigation.filter(item => historyPageEnabled || item.page !== 'history').map((item) => (
                 <button
                     key={item.page}
                     type="button"
                     className="nav-link"
                     aria-label={item.label}
                     disabled={item.page === 'mv' && !canOpenMV}
-                    title={item.page === 'mv' ? canOpenMV ? '打开 MV 视图' : '选择 YouTube MV 或开启音频可视化' : undefined}
+                    title={item.page === 'mv' ? canOpenMV ? '进入 LET’S GROOVE' : '播放 YouTube 视频或开启音频可视化' : undefined}
                     data-nav-page={item.page}
                     aria-current={activePage === item.page ? 'page' : undefined}
                     onClick={() => navigate(item.page)}
@@ -190,7 +194,8 @@ export default function Header({
           </nav>
           <div className="header-controls">
             <div className="header-player-group">
-              <div className="header-player-slot" />
+              <div className="header-media-slot" aria-label="Spotify 官方播放条" />
+              <div className="header-player-slot">{!playerActive && <IdlePlayerControls onChooseMusic={() => navigate('music')} />}</div>
               {tempoVisible && <output ref={tempoReadoutRef} className="header-tempo" aria-label="估算 BPM" aria-live="off">BPM —</output>}
             </div>
             <div className="header-preferences">

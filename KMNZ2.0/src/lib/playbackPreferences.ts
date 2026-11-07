@@ -1,30 +1,19 @@
-export type PlayerPresentation = 'floating' | 'cinema'
-export interface PlaybackPreferences {
-  presentation: PlayerPresentation
-  cinemaVideoFrosted: boolean
-  floatingBackgroundFrosted: boolean
-}
+export interface PlaybackPreferences { videoFrosted: boolean; coverFrosted: boolean }
 export const playbackPreferencesKey = 'kmnzPlaybackPreferences'
 
 export function parsePlaybackPreferences(raw: string | null): PlaybackPreferences {
-  const fallback: PlaybackPreferences = { presentation: 'floating', cinemaVideoFrosted: true, floatingBackgroundFrosted: true }
+  const fallback = { videoFrosted: true, coverFrosted: true }
   try {
-    const value: unknown = JSON.parse(raw ?? 'null')
-    if (!value || typeof value !== 'object') return fallback
-    const saved = value as { presentation?: unknown; cinemaVideoFrosted?: unknown; floatingBackgroundFrosted?: unknown; frosted?: { floating?: unknown } }
+    const value = JSON.parse(raw ?? 'null')
+    if (!value || typeof value !== 'object' || Array.isArray(value)) return fallback
+    // Read older saved background settings, but never restore a removed player mode.
     return {
-      presentation: saved.presentation === 'cinema' ? 'cinema' : 'floating',
-      cinemaVideoFrosted: typeof saved.cinemaVideoFrosted === 'boolean' ? saved.cinemaVideoFrosted : true,
-      floatingBackgroundFrosted: typeof saved.floatingBackgroundFrosted === 'boolean' ? saved.floatingBackgroundFrosted : typeof saved.frosted?.floating === 'boolean' ? saved.frosted.floating : true,
+      videoFrosted: typeof value.videoFrosted === 'boolean' ? value.videoFrosted : typeof value.cinemaVideoFrosted === 'boolean' ? value.cinemaVideoFrosted : true,
+      coverFrosted: typeof value.coverFrosted === 'boolean' ? value.coverFrosted : typeof value.floatingBackgroundFrosted === 'boolean' ? value.floatingBackgroundFrosted : typeof value.frosted?.floating === 'boolean' ? value.frosted.floating : true,
     }
   } catch { return fallback }
 }
-
 export function readPlaybackPreferences(): PlaybackPreferences {
   try { return parsePlaybackPreferences(localStorage.getItem(playbackPreferencesKey)) }
   catch { return parsePlaybackPreferences(null) }
-}
-
-export function resolvePlayerPresentation(platform: 'youtube' | 'spotify' | undefined, preferred: PlayerPresentation): PlayerPresentation {
-  return platform === 'spotify' ? 'floating' : preferred
 }

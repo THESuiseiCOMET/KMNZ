@@ -1,11 +1,13 @@
-import { showcaseDuration } from './showcase'
+import { showcaseDuration, showcasePosterExitDuration } from './showcase'
+
+// Choreographed 3-second performance; no proportional scaling of the old timeline.
 
 export interface SprayPoint { x: number; y: number }
 export interface SprayRect { x: number; y: number; width: number; height: number }
 export interface SprayPath { points: SprayPoint[]; distances: number[]; length: number; d: string }
-export interface SprayPass { path: SprayPath; regions: SprayRect[]; width: number; start: number; end: number }
-export interface SprayPlan { width: number; height: number; reach: number; entry: SprayPath; navigation: SprayPass; content: SprayPass; player: SprayPass | null; exit: SprayPath; travel: SprayPath; playerTravel: SprayPath | null }
-export const sprayTiming = { entry: 540, navigation: 680, navigationEnd: 1170, content: 1240, contentEnd: 1660, player: 1710, playerEnd: 1870, fade: 1870, end: 2000 } as const
+export interface SprayPass { path: SprayPath; width: number; start: number; end: number; gesture: 'navigation' | 'arc' | 'flick' | 'row' }
+export interface SprayPlan { width: number; height: number; reach: number; entry: SprayPath; passes: SprayPass[]; links: SprayPath[]; exit: SprayPath }
+export const sprayTiming = { posterExit: showcasePosterExitDuration, stencilFade: 900, stencilEnd: 1050, entry: 1050, navigation: 1050, navigationEnd: 1200, content: 1200, turn: 1700, contentEnd: 2800, flick: 2800, flickEnd: 2860, settle: 48, fade: 2930, end: showcaseDuration } as const
 const clamp = (value: number, min = 0, max = 1) => Math.min(max, Math.max(min, value))
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t
 const mix = (a: SprayPoint, b: SprayPoint, t: number): SprayPoint => ({ x: lerp(a.x, b.x, t), y: lerp(a.y, b.y, t) })
@@ -23,13 +25,6 @@ function curve(a: SprayPoint, b: SprayPoint, c: SprayPoint, d: SprayPoint): Spra
     return mix(mix(mix(a, b, t), mix(b, c, t), t), mix(mix(b, c, t), mix(c, d, t), t), t)
   }))
 }
-function verticalPass(rect: SprayRect): SprayPath {
-  const x = rect.x + rect.width / 2, y = rect.y, h = rect.height
-  const middle = { x: x + rect.width * .025, y: y + h / 2 }
-  const upper = curve({ x, y: y - 8 }, { x, y: y + h * .2 }, { x: middle.x, y: middle.y - h * .2 }, middle)
-  const lower = curve(middle, { x: middle.x, y: middle.y + h * .2 }, { x, y: y + h * .8 }, { x, y: y + h + 8 })
-  return sprayPath([...upper.points, ...lower.points.slice(1)])
-}
 export function sampleSprayPath(path: SprayPath, progress: number): SprayPoint & { angle: number } {
   const distance = path.length * clamp(progress)
   let i = path.distances.findIndex((value, index) => index > 0 && value >= distance)
@@ -43,58 +38,82 @@ export function visibleSprayRect(rect: SprayRect, width: number, height: number)
   const right = clamp(rect.x + rect.width, 0, width), bottom = clamp(rect.y + rect.height, 0, height)
   return right > left && bottom > top ? { x: left, y: top, width: right - left, height: bottom - top } : null
 }
-function bounds(rects: SprayRect[], fallback: SprayRect): SprayRect {
-  if (!rects.length) return fallback
-  const left = Math.min(...rects.map(r => r.x)), top = Math.min(...rects.map(r => r.y))
-  return { x: left, y: top, width: Math.max(...rects.map(r => r.x + r.width)) - left, height: Math.max(...rects.map(r => r.y + r.height)) - top }
+
+export function sprayGesture(progress: number, gesture: SprayPass['gesture']): number {
+  const t = clamp(progress)
+  if (gesture === 'row') return ease(t)
+  if (gesture === 'flick') return 1 - (1 - t) ** 3
+  const knots = gesture === 'navigation'
+    ? [[0, 0], [.18, .08], [.58, .79], [.64, .79], [1, 1]]
+    : [[0, 0], [.2, .1], [.56, .77], [.68, .77], [1, 1]]
+  for (let i = 1; i < knots.length; i++) {
+    const [end, to] = knots[i], [start, from] = knots[i - 1]
+    if (t <= end) return lerp(from, to, ease(fraction(t, start, end)))
+  }
+  return 1
 }
-export function createSprayPlan(width: number, height: number, navigation: SprayRect[], content: SprayRect, players: SprayRect[]): SprayPlan {
+const passProgress = (pass: SprayPass, time: number) => sprayGesture(fraction(time, pass.start, pass.end), pass.gesture)
+
+export function createSprayPlan(width: number, height: number, _navigation: SprayRect[]): SprayPlan {
   width = Math.max(1, width); height = Math.max(1, height)
-  const visible = (rects: SprayRect[]) => rects.map(r => visibleSprayRect(r, width, height)).filter((r): r is SprayRect => r !== null)
-  const nav = visible(navigation), media = visible(players)
-  const main = visibleSprayRect(content, width, height) ?? { x: 0, y: 70, width, height: Math.max(1, height - 70) }
-  const header = bounds(nav, { x: 24, y: 0, width: Math.max(1, width - 48), height: 64 })
-  const navY = header.y + header.height / 2
-  const navPath = sprayPath([{ x: Math.max(1, header.x - 8), y: navY }, { x: Math.min(width - 1, header.x + header.width + 8), y: navY }])
-  const contentPath = verticalPass(main)
-  const player = media.length ? bounds(media, main) : null
-  const playerPath = player ? verticalPass(player) : null
-  const first = sampleSprayPath(navPath, 0), navEnd = sampleSprayPath(navPath, 1), mainStart = sampleSprayPath(contentPath, 0), mainEnd = sampleSprayPath(contentPath, 1)
-  const last = playerPath ? sampleSprayPath(playerPath, 1) : mainEnd
+  const portrait = width < 761 || height > width
+  const slope = -.30, step = portrait ? 160 : 190
+  const rowCount = Math.ceil((height + Math.abs(slope) * (width - 32) + 30 - (step * 1.18 + 24) / 2) / step) + 1
+  const start = sprayTiming.content, finish = sprayTiming.contentEnd, gap = 26
+  const duration = (finish - start - gap * (rowCount - 1)) / rowCount
+  const passes: SprayPass[] = Array.from({ length: rowCount }, (_, i) => {
+    const y = i * step - 30
+    const left = { x: 16, y }, right = { x: width - 16, y: y + slope * (width - 32) }
+    return { path: sprayPath(i % 2 ? [right, left] : [left, right]), width: step * 1.18 + 24,
+      start: start + i * (duration + gap), end: start + i * (duration + gap) + duration, gesture: 'row' }
+  })
+  const navHeight = Math.min(height,64)
+  passes.unshift({path:sprayPath([{x:16,y:navHeight/2+5},{x:width-16,y:navHeight/2-5}]),width:navHeight+48,start:sprayTiming.navigation,end:sprayTiming.navigationEnd,gesture:'navigation'})
+  const flick = passes.at(-1)!.path
+  const first = sampleSprayPath(passes[0].path, 0), last = sampleSprayPath(flick, 1)
+  const links = passes.slice(1).map((pass, i) => {
+    const from = sampleSprayPath(passes[i].path, 1), to = sampleSprayPath(pass.path, 0)
+    return curve(from, { x: clamp(from.x + (i === 1 ? -30 : 30), 20, width - 20), y: lerp(from.y, to.y, .25) }, { x: clamp(to.x + (i === 1 ? 45 : -45), 20, width - 20), y: lerp(from.y, to.y, .7) }, to)
+  })
   return {
-    width, height, reach: width < 761 ? 22 : 30,
-    entry: curve({ x: Math.max(-50, first.x - 160), y: Math.min(height - 80, 240) }, { x: first.x - 80, y: 160 }, { x: first.x + 18, y: Math.max(5, first.y - 38) }, first),
-    navigation: { path: navPath, regions: nav, width: header.height + 16, start: sprayTiming.navigation, end: sprayTiming.navigationEnd },
-    content: { path: contentPath, regions: [main], width: main.width * 1.16 + 16, start: sprayTiming.content, end: sprayTiming.contentEnd },
-    player: playerPath && player ? { path: playerPath, regions: media, width: player.width * 1.14 + 16, start: sprayTiming.player, end: sprayTiming.playerEnd } : null,
-    travel: curve(navEnd, { x: width * .85, y: height * .15 }, { x: mainStart.x - 100, y: mainStart.y + 50 }, mainStart),
-    playerTravel: playerPath ? curve(mainEnd, { x: mainEnd.x + 100, y: mainEnd.y - 70 }, { x: player!.x + player!.width / 2 - 60, y: player!.y }, sampleSprayPath(playerPath, 0)) : null,
-    exit: curve(last, { x: Math.min(width - 12, last.x + 70), y: Math.min(height - 20, last.y - 80) }, { x: width + 30, y: height * .65 }, { x: width + 100, y: height * .75 }),
+    width, height, reach: portrait ? 22 : 30, passes, links,
+    entry: curve({ x: -50, y: Math.min(height - 80, 240) }, { x: first.x - 80, y: 160 }, { x: first.x + 18, y: Math.max(5, first.y - 38) }, first),
+    exit: curve(last, { x: Math.min(width - 12, last.x + 70), y: last.y - 65 }, { x: width + 30, y: height * .65 }, { x: width + 100, y: height * .75 }),
   }
 }
+
 export function sampleSpray(plan: SprayPlan, elapsed: number, reverse = false) {
   const time = clamp(reverse ? showcaseDuration - elapsed : elapsed, 0, showcaseDuration)
-  const nav = fraction(time, plan.navigation.start, plan.navigation.end)
-  const content = fraction(time, plan.content.start, plan.content.end)
-  const player = plan.player ? fraction(time, plan.player.start, plan.player.end) : 0
-  let stage: 'peel' | 'entry' | 'navigation' | 'travel' | 'content' | 'player' | 'exit' = 'peel'
-  let path = plan.entry, progress = fraction(time, sprayTiming.entry, sprayTiming.navigation), brush = 0
-  if (time >= sprayTiming.navigation && time < sprayTiming.navigationEnd) { stage = 'navigation'; path = plan.navigation.path; progress = nav; brush = plan.navigation.width }
-  else if (time >= sprayTiming.navigationEnd && time < sprayTiming.content) { stage = 'travel'; path = plan.travel; progress = fraction(time, sprayTiming.navigationEnd, sprayTiming.content) }
-  else if (time >= sprayTiming.content && time < sprayTiming.contentEnd) { stage = 'content'; path = plan.content.path; progress = content; brush = plan.content.width }
-  else if (plan.player && time >= sprayTiming.contentEnd && time < sprayTiming.player) { stage = 'travel'; path = plan.playerTravel!; progress = fraction(time, sprayTiming.contentEnd, sprayTiming.player) }
-  else if (plan.player && time >= sprayTiming.player && time < sprayTiming.playerEnd) { stage = 'player'; path = plan.player.path; progress = player; brush = plan.player.width }
-  else if (time >= (plan.player ? sprayTiming.playerEnd : sprayTiming.contentEnd)) { stage = 'exit'; path = plan.exit; progress = fraction(time, plan.player ? sprayTiming.playerEnd : sprayTiming.contentEnd, showcaseDuration) }
-  else if (time >= sprayTiming.entry) stage = 'entry'
-  const impact = sampleSprayPath(path, brush ? progress : ease(progress))
+  const reveals = plan.passes.map(pass => ({
+    progress: passProgress(pass, time), settled: passProgress(pass, time - sprayTiming.settle),
+    strength: fraction(time, pass.start, pass.start + 42), solid: fraction(time, pass.start + sprayTiming.settle, pass.start + sprayTiming.settle + 42),
+  }))
+  let stage: 'peel' | 'entry' | 'navigation' | 'travel' | 'content' | 'flick' | 'exit' = time >= sprayTiming.entry ? 'entry' : 'peel'
+  let path = plan.entry, progress = ease(fraction(time, sprayTiming.entry, plan.passes[0].start)), brush = 0, speed = 0
+  for (let i = 0; i < plan.passes.length; i++) {
+    const pass = plan.passes[i], next = plan.passes[i + 1]
+    if (time >= pass.start && time < pass.end) {
+      stage = pass.gesture === 'navigation' ? 'navigation' : 'content'
+      path = pass.path; progress = reveals[i].progress; brush = pass.width
+      speed = clamp((passProgress(pass, time + 1) - passProgress(pass, time - 1)) * pass.path.length / 32)
+      break
+    }
+    if (next && time >= pass.end && time < next.start) {
+      stage = 'travel'; path = plan.links[i]; progress = ease(fraction(time, pass.end, next.start)); break
+    }
+    if (!next && time >= pass.end) { stage = 'exit'; path = plan.exit; progress = ease(fraction(time, pass.end, showcaseDuration)) }
+  }
+  const impact = sampleSprayPath(path, progress), trail = sampleSprayPath(path, Math.max(0, progress - .035 * speed))
   const angle = impact.angle * Math.PI / 180
   return {
-    time, stage, progress, impact,
+    time, stage, progress, impact, trail, reveals, brush, speed,
     nozzle: { x: impact.x - Math.cos(angle) * plan.reach, y: impact.y - Math.sin(angle) * plan.reach, angle: impact.angle },
-    nav, content, player, brush,
-    opacity: fraction(time, sprayTiming.entry, sprayTiming.entry + 70) * (1 - fraction(time, 1930, 1990)),
+    opacity: fraction(time, sprayTiming.entry, sprayTiming.entry + 65) * (1 - fraction(time, 2820, 2980)),
     veil: 1 - fraction(time, sprayTiming.fade, showcaseDuration),
-    activeMark: fraction(time, sprayTiming.navigationEnd, sprayTiming.navigationEnd + 100),
+    activeMark: fraction(time, sprayTiming.navigationEnd + sprayTiming.settle, sprayTiming.navigationEnd + sprayTiming.settle + 70),
+    tag: 0,
+    stencil: fraction(time, sprayTiming.posterExit, 840) * (1 - fraction(time, sprayTiming.stencilFade, sprayTiming.stencilEnd)),
+    stencilProgress: fraction(time, sprayTiming.posterExit, 840),
   }
 }
 export interface SprayClock { now: () => number; request: (callback: (time: number) => void) => number; cancel: (id: number) => void }

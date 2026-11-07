@@ -144,10 +144,3 @@ test('unsupported remote loading and errors preserve queue state without pretend
   assert.equal(closed.items.length,0)
   assert(closed.requestId>queue.requestId)
 })
-
-test('drag bounds preserve the player inside desktop and mobile viewports',async()=>{
-  const {clampPlayerPosition}=await loadTypeScript(new URL('../src/lib/playerControls.ts',import.meta.url))
-  assert.deepEqual(clampPlayerPosition({x:5000,y:5000},{width:360,height:340},{left:0,top:0,width:1440,height:900}),{x:1068,y:548})
-  assert.deepEqual(clampPlayerPosition({x:-100,y:-100},{width:296,height:500},{left:0,top:0,width:320,height:640}),{x:12,y:12})
-  assert.deepEqual(clampPlayerPosition({x:900,y:900},{width:296,height:500},{left:0,top:100,width:320,height:640}),{x:12,y:228})
-})

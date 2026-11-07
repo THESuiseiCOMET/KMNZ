@@ -110,7 +110,7 @@ function findNode(tree,predicate){
   for(const child of [tree.props?.children].flat(Infinity)){const found=findNode(child,predicate);if(found)return found}
   return null
 }
-test('Spotify cover opens a panel while its title stays plain and its play button preserves list playback',()=>{
+test('Spotify cover opens a panel without a cover playback overlay',()=>{
   const h=harness(),changed=[],selected=[]
   const props={route:{...routes.defaultMusicRoute,platform:'spotify',category:'ep',search:'DROPS'},selectedId:null,onRouteChange:next=>changed.push(next),onSelect:selection=>selected.push(selection)}
   const tree=h.render(props),card=grid(tree).props.children.find(node=>node.key==='sp-drops')
@@ -122,8 +122,7 @@ test('Spotify cover opens a panel while its title stays plain and its play butto
   cover.props.onClick()
   assert.equal(changed[0].releaseSourceId,'sp-drops');assert.equal(changed[0].search,'DROPS');assert.equal(changed[0].category,'ep')
   const play=findNode(card,node=>node.props?.className==='music-cover-play')
-  play.props.onClick();assert.equal(changed.length,1)
-  assert.equal(selected[0].items[selected[0].index].sourceId,'sp-drops')
+  assert.equal(play,null);assert.equal(changed.length,1);assert.equal(selected.length,0)
   const opened=h.render({...props,route:changed[0]})
   assert.equal(grid(opened).props.children.length,1)
   const pane=findNode(opened,node=>node.props?.id==='music-release-pane')
@@ -131,7 +130,7 @@ test('Spotify cover opens a panel while its title stays plain and its play butto
   const detail=pane.props.children.props
   assert.deepEqual(detail.detail.tracks.map(track=>track.song.title),['DROP IN','GROWL','MIRROR'])
   detail.onSelect(detail.detail.tracks[1].playback,{discNumber:1,trackNumber:2})
-  assert.equal(selected[1].origin.kind,'album');assert.equal(selected[1].index,1)
-  assert.equal(selected[1].items[1].sourceId,detail.detail.tracks[1].playback.id)
+  assert.equal(selected[0].origin.kind,'album');assert.equal(selected[0].index,1)
+  assert.equal(selected[0].items[1].sourceId,detail.detail.tracks[1].playback.id)
   detail.onBack();assert.equal(changed.at(-1).releaseSourceId,null);assert.equal(changed.at(-1).search,'DROPS')
 })

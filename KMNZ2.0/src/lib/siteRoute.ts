@@ -3,6 +3,9 @@ import type { Page } from '../types'
 import type { MusicPlatform, YouTubeCategory, OriginalGroup, KMNZMember } from '../types/music'
 import type { SpotifyCategory } from './musicViews'
 
+// Temporarily hide HISTORY; set true to restore the page and navigation entry.
+export const historyPageEnabled = false
+
 export interface MusicRoute { platform: MusicPlatform; category: SpotifyCategory; youtubeCategory: YouTubeCategory; youtubeGroup: OriginalGroup | null; youtubeMember: KMNZMember | null; search: string; releaseSourceId: string | null }
 export interface SiteRoute { page: Page; music: MusicRoute }
 export const defaultMusicRoute: MusicRoute = { platform: 'youtube', category: 'all', youtubeCategory: 'all', youtubeGroup: null, youtubeMember: null, search: '', releaseSourceId: null }
@@ -18,7 +21,7 @@ export function parseSiteRoute(hash: string, releaseIds: ReadonlySet<string>): S
       const params = new URLSearchParams(query)
       result.music.platform = parts[1] === 'spotify' ? 'spotify' : 'youtube'
       const category = params.get('category')
-      if (result.music.platform === 'spotify') result.music.category = category === 'albums' || category === 'ep' ? category : 'all'
+      if (result.music.platform === 'spotify') result.music.category = 'all'
       else {
         result.music.youtubeCategory = category === 'original' || category === 'cover' || category === 'stream' ? category : 'all'
         const group = params.get('group'), member = params.get('member')
@@ -44,7 +47,7 @@ export function siteRouteHash(route: SiteRoute): string {
   if (music.platform === 'spotify' && music.releaseSourceId) path += '/release/' + encodeURIComponent(music.releaseSourceId)
   const params = new URLSearchParams()
   if (music.platform === 'spotify') {
-    if (music.category === 'albums' || music.category === 'ep') params.set('category', music.category)
+    // Old Spotify category links now resolve to the full library.
   } else if (music.youtubeCategory === 'original' || music.youtubeCategory === 'cover' || music.youtubeCategory === 'stream') {
     params.set('category', music.youtubeCategory)
     if (music.youtubeCategory === 'original' && (music.youtubeGroup === 'lita-liz' || music.youtubeGroup === 'lita-tina-nero')) params.set('group', music.youtubeGroup)
@@ -63,7 +66,7 @@ export type MusicFilterAction = { type: 'platform'; value: MusicPlatform }
 export function changeMusicFilter(route: MusicRoute, action: MusicFilterAction): MusicRoute {
   switch (action.type) {
     case 'platform': return action.value === route.platform ? route : { ...route, platform: action.value, category: 'all', youtubeCategory: 'all', youtubeGroup: null, youtubeMember: null, releaseSourceId: null }
-    case 'spotify': return route.platform === 'spotify' ? { ...route, category: route.category === action.value ? 'all' : action.value } : route
+    case 'spotify': return route.platform === 'spotify' ? { ...route, category: 'all' } : route
     case 'youtube': return route.platform === 'youtube' ? { ...route, youtubeCategory: route.youtubeCategory === action.value ? 'all' : action.value, youtubeGroup: null, youtubeMember: null } : route
     case 'group': return action.value !== 'special' && route.platform === 'youtube' && route.youtubeCategory === 'original' ? { ...route, youtubeGroup: route.youtubeGroup === action.value ? null : action.value } : route
     case 'member': return route.platform === 'youtube' && (route.youtubeCategory === 'cover' || (route.youtubeCategory === 'stream' && streamMembers.includes(action.value))) ? { ...route, youtubeMember: route.youtubeMember === action.value ? null : action.value } : route

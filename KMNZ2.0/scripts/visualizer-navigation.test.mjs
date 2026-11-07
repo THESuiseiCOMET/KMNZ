@@ -10,11 +10,11 @@ const source=await readFile(new URL('../src/components/PlaybackControls.tsx',imp
 const code=ts.transpileModule(source,{fileName:'PlaybackControls.tsx',compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText
 new Function('require','module','exports',code)(require,module,module.exports)
 const Controls=module.exports.default
-const settings={presentation:'floating',cinemaVideoFrosted:true,floatingBackgroundFrosted:true}
+const settings={videoFrosted:true,coverFrosted:true}
 function toggle(props={}){
  const calls=[]
  const tree=Controls({settings,onChange(){},onStartVisualization(){calls.push('open')},onStopVisualization(){calls.push('stop')},...props})
- return {button:tree.props.children[2].props.children[0],calls}
+ return {button:tree.props.children.find(child => child.props.className === 'visualizer-control').props.children[0],calls}
 }
 test('visualizer starts from any page independently of playback',()=>{
  for(const visualizationVisible of [false,true]){

@@ -12,22 +12,26 @@ export function useNavigationControl(hidden: boolean) {
     const button = document.querySelector<HTMLElement>('.site-header .navigation-toggle')
     const header = document.querySelector<HTMLElement>('.site-header')
     if (!button || !header) return
+    function updateNear(available = true) {
+      const viewport = { width: document.documentElement.clientWidth, height: window.innerHeight }
+      setNear(Boolean(available && pointer.current && isNearNavigationControl(pointer.current, latest.current, viewport)))
+    }
     function measure() {
       const rect = button!.getBoundingClientRect()
       const viewport = { width: document.documentElement.clientWidth, height: window.innerHeight }
-      const next = placeNavigationControl({ left: rect.left, top: rect.top, width: rect.width, height: rect.height }, header!.getBoundingClientRect(), hidden, viewport, latest.current)
+      const headerRect = header!.getBoundingClientRect()
+      const next = placeNavigationControl({ left: rect.left, top: rect.top - headerRect.top, width: rect.width, height: rect.height }, { top: 0 }, hidden, viewport, latest.current)
       const previous = latest.current
       if (['left', 'top', 'width', 'height'].some(key => Math.abs(next[key as keyof NavigationRect] - previous[key as keyof NavigationRect]) > .1)) {
         latest.current = next
         setPosition(next)
       }
-      const available = hidden || rect.width > 0 && rect.height > 0 && rect.bottom > 0 && rect.top < viewport.height
-      setNear(Boolean(available && pointer.current && isNearNavigationControl(pointer.current, latest.current, viewport)))
+      updateNear(hidden || rect.width > 0 && rect.height > 0)
     }
     function track(event: PointerEvent) {
       if (event.pointerType === 'touch') return
       pointer.current = { x: event.clientX, y: event.clientY }
-      measure()
+      updateNear()
     }
     function leave() { pointer.current = null; setNear(false) }
     function leaveWindow(event: PointerEvent) { if (event.relatedTarget === null) leave() }
@@ -37,14 +41,12 @@ export function useNavigationControl(hidden: boolean) {
     const group = button.closest('.header-preferences')
     if (group) resize.observe(group)
     window.addEventListener('resize', measure)
-    window.addEventListener('scroll', measure, { passive: true })
     window.addEventListener('pointermove', track, { passive: true })
     window.addEventListener('pointerout', leaveWindow, { passive: true })
     window.addEventListener('blur', leave)
     return () => {
       resize.disconnect()
       window.removeEventListener('resize', measure)
-      window.removeEventListener('scroll', measure)
       window.removeEventListener('pointermove', track)
       window.removeEventListener('pointerout', leaveWindow)
       window.removeEventListener('blur', leave)

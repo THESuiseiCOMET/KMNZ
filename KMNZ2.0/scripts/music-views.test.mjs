@@ -44,7 +44,8 @@ test('unknown-tracklist baseline separates one album and one single without inve
   assert.deepEqual(ids(sections.singles),['sp-mirror'])
   assert.deepEqual(views.releaseDetail(albumSource.id).tracks,[])
   assert.equal(views.releaseDetail(albumSource.id).release.tracklistStatus,'unknown')
-  for(const id of [mirror.id,wave.id,'missing']) assert.equal(views.releaseDetail(id),null)
+  assert.equal(views.releaseDetail(mirror.id).tracks.length,1)
+  for(const id of [wave.id,'missing']) assert.equal(views.releaseDetail(id),null)
 })
 
 test('Spotify EP/single releases use the singles section while albums/compilations retain the album section',()=>{
@@ -94,18 +95,12 @@ test('Spotify cards group the confirmed DROPS tracks into one release without re
   assert.equal(JSON.stringify(currentLibrary),before)
 })
 
-test('Spotify categories retain album and former single/EP membership, deduplicate cards and respect search',()=>{
-  const views=createMusicViews(currentLibrary)
-  const all=views.spotifyCards('');const albums=views.spotifyCards('','albums');const ep=views.spotifyCards('','ep')
-  assert(albums.length>0);assert(ep.length>0);assert.equal(all.length,albums.length+ep.length)
-  assert.equal(new Set(ids(all)).size,all.length)
-  assert.deepEqual(ids(all),[...ids(albums),...ids(ep)])
-  assert(albums.some(entry=>entry.id==='sp-kmnculture'))
-  assert(!ep.some(entry=>entry.id==='sp-kmnculture'))
-  assert(ep.some(entry=>entry.id==='sp-drops'))
-  assert(ep.some(entry=>entry.title==='HARMONICS'))
-  assert.deepEqual(views.spotifyCards('MIRROR','albums'),[])
-  assert.deepEqual(views.spotifyCards('no-match-spotify-card'),[])
+test('removed Spotify category arguments always return the full deduplicated searchable library',()=>{
+ const views=createMusicViews(currentLibrary),all=views.spotifyCards('')
+ assert.equal(new Set(ids(all)).size,all.length)
+ for(const legacy of ['albums','ep'])assert.deepEqual(views.spotifyCards('',legacy),all)
+ assert(views.spotifyCards('MIRROR','albums').some(entry=>entry.id==='sp-drops'))
+ assert.deepEqual(views.spotifyCards('no-match-spotify-card'),[])
 })
 
 test('incomplete or unverified hidden releases do not absorb their individual playable tracks',()=>{
@@ -285,9 +280,9 @@ test('real detail rendering and original YouTube cards',async t=>{
         assert(html.includes('music-platform-labels'));assert(html.includes('class="music-results music-browse'))
         assert(!html.includes('<iframe'))
         if(platform==='spotify') {
-          assert(html.includes('aria-label="Spotify 分类"'))
+          assert(!html.includes('aria-label="Spotify 分类"'))
           if(category === 'all') assert(!html.includes('class="music-category" data-segment-value="all"'))
-          else assert(html.includes('class="music-category" data-segment-value="'+category+'" aria-pressed="true"'))
+          else assert(!html.includes('class="music-category" data-segment-value="'+category+'" aria-pressed="true"'))
           assert.equal((html.match(/<article\b/g)??[]).length,createMusicViews(currentLibrary).spotifyCards('',category).length)
         } else assert(!html.includes('aria-label="Spotify 分类"'))
       }
@@ -300,14 +295,14 @@ test('real detail rendering and original YouTube cards',async t=>{
       assert.equal((html.match(/<article\b/g)??[]).length,1)
       assert(html.includes('aria-label="展开 DROPS 曲目" aria-expanded="true" aria-controls="music-release-pane"'))
       assert(html.includes('aria-label="关闭专辑曲目"'))
-      assert(html.includes('type="search"'));assert(html.includes('Spotify 分类'))
-      assert(html.includes('>LP</span>'));assert(html.includes('>EP</span>'))
+      assert(html.includes('type="search"'));assert(!html.includes('Spotify 分类'))
+      assert(!html.includes('>LP</span>'));assert(!html.includes('>EP</span>'))
       assert(!html.includes('music-release-title-button'));assert(!html.includes('返回 Spotify'))
       assert.equal((html.match(/class="music-track(?: selected)?"/g)??[]).length,3)
       assert(!html.includes('<iframe'));assert(!html.includes('music-player-embed'))
     })
     await t.test('visualizer switch is independent of playback and replaces home content while retaining its background',()=>{
-      const props={open:false,settings:{presentation:'cinema',cinemaVideoFrosted:true,floatingBackgroundFrosted:true},onChange:()=>{},onClose:()=>{}}
+      const props={open:false,settings:{videoFrosted:true,coverFrosted:true},onChange:()=>{},onClose:()=>{}}
       for(const presentation of ['floating','cinema']) {
         const initial=renderToStaticMarkup(createElement(Settings,{...props,settings:{...props.settings,presentation}}))
         const toggle=initial.match(/<button[^>]*aria-label="音频可视化"[^>]+>/)?.[0]
@@ -348,11 +343,12 @@ test('real detail rendering and original YouTube cards',async t=>{
       assert(!replacement.includes('hero-carousel'));assert(!replacement.includes('等待音频信号'))
     })
     await t.test('navigation puts MV and PLAYLIST on the left and player plus six ordered controls on the right',()=>{
-      const html=renderToStaticMarkup(createElement(Header,{page:'music',theme:'light',onNavigate:()=>{},onToggleTheme:()=>{},playbackControls:createElement(Settings,{settings:{presentation:'floating',cinemaVideoFrosted:true,floatingBackgroundFrosted:true},onChange:()=>{}}),onHideNavigation:()=>{}}))
+      const html=renderToStaticMarkup(createElement(Header,{page:'music',theme:'light',onNavigate:()=>{},onToggleTheme:()=>{},playbackControls:createElement(Settings,{settings:{videoFrosted:true,coverFrosted:true},onChange:()=>{}}),onHideNavigation:()=>{}}))
       const nav=html.match(/<nav\b[\s\S]*?<\/nav>/)?.[0]
       assert(nav)
       assert(!nav.includes('class="navigation-indicator"'))
-      for(const label of ['MV','PLAYLIST','HISTORY','ABOUT']) {
+      assert(!nav.includes('aria-label="HISTORY"'))
+      for(const label of ['LET’S GROOVE','PLAYLIST','ABOUT']) {
         assert(nav.includes('aria-label="'+label+'"'))
         assert(nav.includes('class="nav-street-label" data-label="'+label+'" aria-hidden="true">'+label+'</span>'))
       }
@@ -366,7 +362,7 @@ test('real detail rendering and original YouTube cards',async t=>{
       assert(html.indexOf('class="fullscreen-toggle"')>html.indexOf('class="theme-toggle"'))
       assert(!nav.includes('settings-toggle'));assert(!nav.includes('播放设置'))
       assert(html.indexOf('class="navigation-toggle"')>html.indexOf('class="fullscreen-toggle"'))
-      const labels=['切换到影院模式','背景磨砂','音频可视化','切换到深色主题','进入网页全屏','隐藏顶部导航栏']
+      const labels=['音频可视化','视频磨砂','切换到深色主题','进入网页全屏','隐藏顶部导航栏']
       for(let i=1;i<labels.length;i++)assert(html.indexOf('aria-label="'+labels[i]+'"')>html.indexOf('aria-label="'+labels[i-1]+'"'))
       assert(html.includes('隐藏顶部导航栏'))
       assert(html.includes('进入网页全屏'));assert.equal((html.match(/fullscreen-corner-/g)??[]).length,2)
@@ -374,63 +370,26 @@ test('real detail rendering and original YouTube cards',async t=>{
       assert(html.indexOf('class="header-player-slot"')<html.indexOf('class="header-preferences"'))
       assert(!nav.includes('header-player-slot'))
     })
-    await t.test('direct toolbar exposes three icon controls without a panel or extra players',()=>{
-      const html=renderToStaticMarkup(createElement(Settings,{settings:{presentation:'cinema',cinemaVideoFrosted:true,floatingBackgroundFrosted:true},onChange:()=>{}}))
-      assert.equal((html.match(/<button\b/g)??[]).length,3)
-      assert(html.includes('aria-label="切换到浮窗模式"'));assert(html.includes('aria-pressed="true"'))
-      assert(!html.includes('<dialog'));assert(!html.includes('<select'));assert(!html.includes('playback-settings'));assert(!html.includes('<iframe'))
+    await t.test('direct toolbar exposes background and visualizer controls without player mode selection',()=>{
+      const html=renderToStaticMarkup(createElement(Settings,{settings:{videoFrosted:true,coverFrosted:true},onChange:()=>{}}))
+      assert.equal((html.match(/<button\b/g)??[]).length,2)
+      assert(!html.includes('浮窗'));assert(!html.includes('影院模式'));assert(!html.includes('<iframe'))
     })
-    await t.test('cinema video glass is independent of cover frost and keeps one media host',()=>{
+    await t.test('video frost remains independent while provider mounting is deferred safely during SSR',()=>{
       const entry=toMusicCatalog(currentLibrary).find(entry=>entry.platform==='youtube')
-      for(const videoFrosted of [true,false]) {
-        const html=renderToStaticMarkup(createElement(PlayerDock,{entry,onClose:()=>{},onSkip:()=>{},presentation:'cinema',videoFrosted}))
-        assert.equal(html.includes('is-video-frosted'),videoFrosted)
-        assert.equal((html.match(/class="music-player-embed"/g)??[]).length,1)
-        assert(html.includes('class="cinema-video-glass" aria-hidden="true"'))
-      }
-      for(const presentation of ['floating','cinema']) {
-        const html=renderToStaticMarkup(createElement(Settings,{open:false,settings:{presentation,cinemaVideoFrosted:true},onChange:()=>{},onClose:()=>{}}))
-        assert.equal(html.includes('视频磨砂'),presentation==='cinema')
-        assert.equal(html.includes('背景磨砂'),presentation==='floating')
-        assert.equal((html.match(/role="switch"/g)??[]).length,2)
-      }
+      for(const videoFrosted of [true,false]){const html=renderToStaticMarkup(createElement(PlayerDock,{entry,onClose(){},onSkip(){},videoFrosted}));assert.equal(html.includes('is-video-frosted'),videoFrosted);assert(html.includes('cinema-video-glass'));assert(!html.includes('移动播放器'))}
     })
-    await t.test('cinema and floating layouts retain one official host and the original controls for both platforms',()=>{
-      const catalog=toMusicCatalog(currentLibrary)
-      for(const platform of ['youtube','spotify']) {
-        const entry=catalog.find(entry=>entry.platform===platform)
-        const props={entry,onClose:()=>{},onSkip:()=>{}}
-        const floating=renderToStaticMarkup(createElement(PlayerDock,props))
-        const cinema=renderToStaticMarkup(createElement(PlayerDock,{...props,presentation:'cinema'}))
-        if(platform==='youtube') assert(cinema.includes('music-player-panel is-cinema'))
-        else { assert.equal(cinema,floating);assert(!cinema.includes('is-cinema'));assert(!cinema.includes('music-player-loop'));assert(!cinema.includes('music-player-heading')) }
-        for(const html of [floating,cinema]) {
-          assert.equal((html.match(/class="music-player-embed"/g)??[]).length,1)
-          for(const label of ['上一首','下一首','播放歌曲',...(platform==='youtube'?['开启单曲循环']:[])]) assert(html.includes('aria-label="'+label+'"'))
-          assert(html.includes('class="music-player-toggle"'))
-        }
-        assert.equal(cinema.includes('aria-label="当前曲目"'),platform==='youtube')
-        assert(floating.includes('aria-label="移动播放器"'))
-      }
+    await t.test('both platforms render a header-only player shell without a floating cover or drag actions',()=>{
+      for(const entry of toMusicCatalog(currentLibrary).filter(entry=>entry.platform==='spotify'||entry.platform==='youtube').slice(0,5)){const html=renderToStaticMarkup(createElement(PlayerDock,{entry,onClose(){},onSkip(){}}));assert(html.includes('music-player-panel is-cinema'));assert(!html.includes('移动播放器'));assert(!html.includes('cover-drag'));assert(!html.includes('<iframe'))}
     })
     await t.test('YouTube does not create a thumbnail background behind the live cinema video',()=>{
       const entry=toMusicCatalog(currentLibrary).find(entry=>entry.platform==='youtube')
       assert.equal(renderToStaticMarkup(createElement(Backdrop,{entry})), '')
     })
-    await t.test('floating mode reuses official covers for both platforms with contextual frost and no extra hosts',()=>{
-      const catalog=toMusicCatalog(currentLibrary)
-      for(const platform of ['youtube','spotify']) {
-        const entry=catalog.find(entry=>entry.platform===platform)
-        const html=renderToStaticMarkup(createElement(Backdrop,{entry,presentation:'floating',frosted:true}))
-        assert(html.includes('playback-backdrop-'+platform))
-        assert(html.includes('is-frosted'))
-        assert(html.includes('aria-hidden="true"'))
-        assert.equal((html.match(/<img\b/g)??[]).length,1)
-        assert(!/<(?:iframe|video|audio|button|input)\b/.test(html))
-        assert(!html.includes('youtube.com/embed'))
-        if(platform==='youtube') assert(html.includes('i.ytimg.com/vi/'+entry.platformId+'/'))
-        else assert(/spotifycdn\.com\/image\/|i\.scdn\.co\/image\//.test(html))
-      }
+    await t.test('Spotify retains its cover background and YouTube uses its live video background',()=>{
+      const catalog=toMusicCatalog(currentLibrary),entry=catalog.find(entry=>entry.platform==='spotify')
+      const html=renderToStaticMarkup(createElement(Backdrop,{entry,frosted:true}));assert(html.includes('playback-backdrop-spotify'));assert(html.includes('is-frosted'));assert(!/<(?:iframe|video|audio|button|input)\b/.test(html))
+      assert.equal(renderToStaticMarkup(createElement(Backdrop,{entry:catalog.find(entry=>entry.platform==='youtube'),frosted:true})),'')
     })
     await t.test('closing playback removes the backdrop and missing artwork falls back without a broken player',()=>{
       assert.equal(renderToStaticMarkup(createElement(Backdrop,{entry:null})),'')
@@ -513,35 +472,10 @@ test('real detail rendering and original YouTube cards',async t=>{
       assert(!detail.includes('<iframe'))
     })
 
-    await t.test('Spotify dock shows one full artwork area and one official host with existing controls; YouTube and missing artwork remain safe',()=>{
-      const catalog=toMusicCatalog(currentLibrary)
-      const spotify=catalog.find(entry=>entry.id==='sp-mirror')
-      const renderDock=entry=>renderToStaticMarkup(createElement(PlayerDock,{entry,onClose:()=>{},onSkip:()=>{}}))
-      const html=renderDock(spotify)
-      assert(html.includes('music-player-spotify-cover'))
-      assert(html.includes('aria-label="MIRROR 封面"'))
-      assert(html.includes('image-cdn-ak.spotifycdn.com/image/ab67616d00001e02cac7cde695126b200c58052c'))
-      assert.equal((html.match(/class="music-player-embed"/g)??[]).length,1)
-      for(const label of ['移动播放器','关闭播放器并停止播放','上一首','播放歌曲','下一首']) assert(html.includes('aria-label="'+label+'"'))
-      assert(!html.includes('music-player-heading'));assert(!html.includes('music-player-loop'))
-      assert(html.indexOf('music-player-spotify-cover')<html.indexOf('music-player-frame spotify-frame'))
-      assert(html.indexOf('music-player-frame spotify-frame')<html.indexOf('class="music-player-controls"'))
-      assert(html.indexOf('aria-label="下一首"')<html.indexOf('aria-label="关闭播放器并停止播放"'))
-      const youtube=renderDock(catalog[0])
-      assert(!youtube.includes('music-player-spotify-cover'))
-      assert(youtube.includes('music-player-frame youtube-frame'))
-      assert(youtube.includes('aria-label="音量控制"'))
-      assert(youtube.includes('class="music-player-progress"'))
-      assert(youtube.indexOf('class="music-player-controls"') < youtube.indexOf('class="music-player-progress"'))
-      assert(youtube.indexOf('class="music-player-progress"') < youtube.indexOf('class="music-player-frame youtube-frame"'))
-      assert(youtube.includes('aria-label="播放进度"'))
-      assert(youtube.includes('aria-valuetext="0:00 / --:--"'))
-      assert(!html.includes('class="music-player-progress"'))
-      const missing=renderDock({...spotify,id:'sp-cover-missing-test'})
-      assert(missing.includes('music-player-spotify-cover'))
-      assert(missing.includes('music-cover-placeholder'))
+    await t.test('Spotify no longer renders a floating artwork player and a missing cover does not affect the provider shell',()=>{
+      const spotify=toMusicCatalog(currentLibrary).find(entry=>entry.platform==='spotify')
+      for(const entry of [spotify,{...spotify,id:'missing'}]){const html=renderToStaticMarkup(createElement(PlayerDock,{entry,onClose(){},onSkip(){}}));assert(!html.includes('spotify-cover'));assert(!html.includes('移动播放器'));assert(!html.includes('<img'));assert(html.includes('is-cinema'))}
     })
-
     await t.test('expanded YouTube catalog keeps official sources with rounded artwork, glass playback and branded links',()=>{
       const html=renderToStaticMarkup(createElement(Music,{selectedId:null,onSelect:()=>{}}))
       const expected=currentLibrary.sources.filter(source=>source.platform==='youtube').length
@@ -562,4 +496,14 @@ test('real detail rendering and original YouTube cards',async t=>{
       assert(!html.includes('<iframe'))
     })
   } finally { await server.close() }
+})
+
+
+test('every visible Spotify card expands, including both Kick it recordings, without inventing complete compilations',()=>{
+ const before=JSON.stringify(currentLibrary),views=createMusicViews(currentLibrary)
+ for(const card of views.spotifyCards('')){const detail=views.releaseDetail(card.id);assert(detail,card.title);assert(detail.tracks.length>0,card.title)}
+ for(const id of ['sp-virtuareal-02-kick-it-feat-kmnz','sp-virtuareal-best-01-remix-kick-it-feat-kmnz-kakeru-remix']){
+  const detail=views.releaseDetail(id);assert.equal(detail.entry.id,id);assert.equal(detail.release.tracklistStatus,'partial');assert.equal(detail.tracks.length,1);assert.equal(detail.tracks[0].playback.id,id)
+ }
+ assert.equal(JSON.stringify(currentLibrary),before)
 })

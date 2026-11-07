@@ -81,7 +81,7 @@ test('Spotify album and track selections request playback once after ready; bloc
   for(const entry of [spotify.find(entry=>entry.kind==='album'),spotify.find(entry=>entry.kind==='track')]) {
     const api=spotifyApi();const h=harness(api,entry)
     h.render();await tick();const controller=api.controllers[0]
-    assert.equal(controller.options.uri,uri(entry));assert.equal(controller.options.height,152)
+    assert.equal(controller.options.uri,uri(entry));assert.equal(controller.options.height,80)
     assert.deepEqual(controller.calls,[])
     controller.listeners.ready();controller.listeners.ready()
     assert.deepEqual(controller.calls,['play'])

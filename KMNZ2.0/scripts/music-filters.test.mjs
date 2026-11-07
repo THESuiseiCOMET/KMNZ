@@ -40,7 +40,7 @@ test('Spotify album and EP categories toggle to all, retain Single membership an
   let route = filter(base(), { type: 'platform', value: 'spotify' })
   for (const value of ['albums', 'ep']) {
     route = filter(route, { type: 'spotify', value })
-    assert.equal(route.category, value)
+    assert.equal(route.category, 'all')
     route = filter(route, { type: 'spotify', value })
     assert.equal(route.category, 'all')
   }
@@ -163,7 +163,7 @@ test('filter routes round-trip both levels and sanitize irrelevant or invalid fi
   assert.equal(read('#/music/youtube?category=cover&group=special&member=LIZ').youtubeGroup, null)
   assert.equal(read('#/music/youtube?category=original&group=invalid&member=LITA').youtubeMember, null)
   assert.equal(read('#/music/spotify?category=cover&group=special&member=LITA').category, 'all')
-  assert.equal(read('#/music/spotify?category=ep').category, 'ep')
+  assert.equal(read('#/music/spotify?category=ep').category, 'all')
 })
 
 test('rendered filters omit All; Bilibili renders only for bound safe URLs and adds no player or duplicate card', async () => {

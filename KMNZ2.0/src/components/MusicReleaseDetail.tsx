@@ -35,7 +35,7 @@ export default function MusicReleaseDetail({ detail, selectedId, onSelect, onBac
           <MusicCover entry={entry} metadata={metadata} />
         </div>
         <div className="music-release-info">
-          <p className="music-release-meta">{releaseLabels[release.kind]} · {release.artist}</p>
+          <p className="music-release-meta">{releaseLabels[release.kind]} · {release.artist} · {tracks.length} {tracks.length === 1 ? 'track' : 'tracks'}{release.tracklistStatus === 'partial' ? ' listed' : ''}</p>
           <h2 id="music-release-title" tabIndex={-1} ref={heading}>{release.title}</h2>
           {date && <time className="music-release-date" dateTime={date.dateTime}>{date.label}</time>}
           <div className="music-card-actions">

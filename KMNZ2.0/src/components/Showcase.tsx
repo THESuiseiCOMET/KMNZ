@@ -1,4 +1,8 @@
+import { useRef } from 'react'
 import type { RefObject } from 'react'
+import ShowcaseMusic from './ShowcaseMusic'
+import PosterLabels from './ShowcasePosterLabels'
+import { showcaseDuration, showcasePosterExitDuration } from '../lib/showcase'
 import type { ShowcasePhase } from '../lib/showcase'
 import classic from '../assets/showcase/LITALIZ.jpg'
 import modern from '../assets/images/kmnz2.avif'
@@ -18,36 +22,40 @@ const rightTear = 'M953 -8 C965 22 962 43 954 65 L957 79 949 91 952 103 C944 133
 const seamShape = leftTear + ' L1010 951 C985 916 969 881 952 846 L948 826 936 805 935 786 929 766 930 749 C910 703 898 662 889 615 L884 586 886 564 882 538 886 526 C881 500 897 460 898 420 L907 386 915 340 912 326 916 300 C919 255 928 216 934 183 L940 143 952 103 949 91 954 65 C964 31 962 11 953 -8 Z'
 const bottomTear = 'M-8 800 L31 807 61 804 91 811 126 808 159 813 194 811 231 817 266 813 302 817 338 812 375 817 414 815 451 820 488 816 527 823 565 821 604 828 641 826 677 833 715 829 752 835 789 833 827 839 865 836 904 842 944 840 981 848 1017 852 1054 866 1088 871 1120 886 1158 876 1194 880 1230 866 1266 866 1302 857 1338 861 1376 853 1413 857 1453 850 1491 846 1526 838 1564 836 1604 823 1640 820 1680 810 V951 H-8 Z'
 
-export default function Showcase({ phase, onEnter, enterRef }: {
-  phase: ShowcasePhase; onEnter: () => void; enterRef: RefObject<HTMLButtonElement | null>
+export default function Showcase({ phase, onEnter, enterRef, mediaActive = false }: {
+  mediaActive?: boolean; phase: ShowcasePhase; onEnter: () => void; enterRef: RefObject<HTMLButtonElement | null>
 }) {
+  const stage = useRef<HTMLElement>(null)
   if (phase === 'console') return null
   const busy = phase !== 'showcase'
-  return <section className="showcase" data-phase={phase} aria-label="KMNZ SHOWCASE" aria-busy={busy} inert={busy}>
+  return <section ref={stage} className="showcase" data-phase={phase} aria-label="KMNZ SHOWCASE" aria-busy={busy} inert={busy} style={{'--showcase-time':showcaseDuration+'ms','--showcase-exit-time':showcasePosterExitDuration+'ms','--showcase-return-delay':(showcaseDuration-showcasePosterExitDuration)+'ms'} as React.CSSProperties}>
     <svg className="showcase-masks" width="0" height="0" aria-hidden="true" focusable="false"><defs>
       <clipPath id="showcase-classic-cut" clipPathUnits="objectBoundingBox"><path transform="scale(.0005980861 .0010626993)" d={'M-8 -8 H777 ' + leftTear.slice(leftTear.indexOf('C')) + ' H-8 Z'} /></clipPath>
       <clipPath id="showcase-new-cut" clipPathUnits="objectBoundingBox"><path transform="scale(.0005980861 .0010626993)" d={rightTear + ' H1680 V-8 Z'} /></clipPath>
       <clipPath id="showcase-classic-mobile-cut" clipPathUnits="objectBoundingBox"><path d="M0 0H1V.446C.88 .438 .82 .451 .74 .442L.71 .447 .69 .442C.58 .451 .51 .44 .43 .448L.4 .443 .37 .448C.25 .439 .15 .451 0 .444Z" /></clipPath>
       <clipPath id="showcase-new-mobile-cut" clipPathUnits="objectBoundingBox"><path d="M0 .557C.13 .564 .19 .551 .29 .559L.32 .554 .35 .56C.46 .552 .55 .566 .64 .557L.68 .562 .71 .556C.81 .563 .89 .552 1 .559V1H0Z" /></clipPath>
     </defs></svg>
+    <ShowcaseMusic phase={phase} mediaActive={mediaActive} rootRef={stage} />
     <div className="showcase-paper" aria-hidden="true" />
     <figure className="showcase-poster showcase-classic" style={{ clipPath: 'var(--showcase-classic-clip)' }}>
       <img src={classic} alt="LITA 与 LIZ，经典时期主视觉" fetchPriority="high" decoding="async" draggable={false} />
-
+      <PosterLabels era="classic" phase={phase} />
     </figure>
     <figure className="showcase-poster showcase-new" style={{ clipPath: 'var(--showcase-new-clip)' }}>
       <img src={modern} alt="LITA、NERO 与 TINA，新时期主视觉" fetchPriority="high" decoding="async" draggable={false} />
-
+      <PosterLabels era="new" phase={phase} />
     </figure>
     <svg className="showcase-seam" viewBox="0 0 1672 941" preserveAspectRatio="none" aria-hidden="true" focusable="false">
       <defs>
         <clipPath id="showcase-paper-cut"><path d={seamShape} /></clipPath>
         <filter id="showcase-paper-fiber" x="-15%" y="-2%" width="130%" height="104%"><feTurbulence type="fractalNoise" baseFrequency=".12" numOctaves="2" seed="9" result="fiber" /><feDisplacementMap in="SourceGraphic" in2="fiber" scale="3" xChannelSelector="R" yChannelSelector="G" /></filter>
       </defs>
+      <g className="showcase-paper-groove" data-groove="paper">
       <path d={seamShape} fill="#f1f0eb" />
       <image href={paperTexture} width="1672" height="941" clipPath="url(#showcase-paper-cut)" preserveAspectRatio="none" />
       <path className="showcase-paper-edge" d={leftTear} filter="url(#showcase-paper-fiber)" />
       <path className="showcase-paper-edge showcase-paper-edge-right" d={rightTear} filter="url(#showcase-paper-fiber)" />
+      </g>
     </svg>
     <svg className="showcase-bottom" viewBox="0 0 1672 941" preserveAspectRatio="none" aria-hidden="true" focusable="false">
       <defs><clipPath id="showcase-bottom-cut"><path d={bottomTear} /></clipPath></defs>
@@ -56,16 +64,16 @@ export default function Showcase({ phase, onEnter, enterRef }: {
       <path d={bottomTear} fill="none" stroke="#f9f7ef" strokeWidth="3" filter="url(#showcase-paper-fiber)" />
     </svg>
     <div className="showcase-center">
-      <div className="showcase-logo-sticker">
+      <div className="showcase-logo-sticker"><div className="showcase-logo-groove" data-groove="logo">
         <img className="showcase-ink" src={ink} alt="" draggable={false} />
         <img className="showcase-logo" src={logo} alt="KMNZ" draggable={false} />
-      </div>
+      </div></div>
       <button ref={enterRef} type="button" className="showcase-enter" onClick={onEnter} disabled={busy} aria-label="ENTER，进入 KMNZ 网站">
         <span>ENTER</span><img src={arrow} alt="" aria-hidden="true" />
       </button>
     </div>
     <div className="showcase-stickers" aria-hidden="true">
-      {Object.entries(showcaseArtwork.stickers).map(([name, src]) => <span key={name} className={'showcase-sticker showcase-sticker-' + name}><img src={src} alt="" draggable={false} /></span>)}
+      {Object.entries(showcaseArtwork.stickers).map(([name, src]) => <span key={name} className={'showcase-sticker showcase-sticker-' + name}><span className="showcase-sticker-groove" data-groove={name==='lita'?'yellow':name==='nero'?'black':'white'}><img src={src} alt="" draggable={false} /></span></span>)}
     </div>
   </section>
 }
