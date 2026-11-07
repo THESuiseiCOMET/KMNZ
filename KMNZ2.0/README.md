@@ -60,13 +60,13 @@ Windows PowerShell 使用相同的 npm 命令即可；如果系统执行策略�
 | 模块 | 已有实现 | 边界 |
 | --- | --- | --- |
 | SHOWCASE | LITA / LIZ 经典时期与 LITA / NERO / TINA 新时期海报、撕纸、贴纸、ENTER、返回入口 | 视觉效果依赖浏览器对 SVG / CSS 的支持 |
-| SPRAY REVEAL | 进入／返回时的喷漆罐、笔触遮罩和转场状态机 | 动画目标时长 2 秒；减少动态效果时使用简短流程 |
-| 导航和主题 | MV、PLAYLIST、HISTORY、ABOUT，深浅主题、导航隐藏、全屏、界面过渡 | MV 入口受当前播放内容或音频可视化能力限制 |
-| 音乐目录 | YouTube / Spotify 分区，文本搜索，原创／翻唱／歌回、成员与发行分类筛选 | 仅显示已在静态数据中收录且符合展示规则的条目 |
-| 媒体播放器 | 官方 YouTube / Spotify 嵌入、全站播放队列、浮窗和部分影院控制、播放状态观察 | 第三方 API／浏览器权限／地区／登录限制可能影响能力 |
+| SPRAY REVEAL | 进入／返回时的喷漆罐、笔触遮罩和转场状态机 | 动画目标时长 3 秒；减少动态效果时使用简短流程 |
+| 导航和主题 | LET’S GROOVE、PLAYLIST、ABOUT，深浅主题、导航隐藏、全屏、界面过渡 | HISTORY 暂时隐藏 |
+| 音乐目录 | YouTube / Spotify 分区，文本搜索，YouTube 原创／翻唱／歌回和成员筛选，Spotify 封面展开曲目 | 仅显示已在静态数据中收录且符合展示规则的条目 |
+| 媒体播放器 | 官方 YouTube / Spotify 嵌入、全站播放队列、常驻导航栏控件、播放状态观察 | 第三方 API／浏览器权限／地区／登录限制可能影响能力 |
 | 媒体资料 | 曲目、发行与来源关联，封面、日期、人工修订、Bilibili 外部链接 | Bilibili 目前是**链接索引**，不是内置 Bilibili 播放器 |
 | 音频可视化 | 在兼容浏览器中申请标签页音频共享，绘制 Canvas 可视化和节奏估算 | 需要用户授权；不保证手机和所有浏览器支持；不是直接提取嵌入音频 |
-| 历程与关于 | 历史时间线、官方／成员相关链接、社区二维码 | 时间线内容更新仍依赖人工核对 |
+| 历程与关于 | 官方／成员相关链接、社区二维码 | 历史时间线源码保留，当前入口关闭 |
 | 成员资料 | 具备成员数据、列表组件和详情组件；详情 Hash 路由存在 | 当前 `App.tsx` **没有挂载 `Members.tsx` 列表**；`#/members` 主要用于展示 SHOWCASE，而非完整成员列表页 |
 
 **不包含的功能：** KMNZ 2.0 没有旧版的登录、注册、密码重置与用户中心。也没有可保证手机锁屏后台连续播放的原生播放器或 PWA 保活能力。
@@ -85,10 +85,10 @@ Windows PowerShell 使用相同的 npm 命令即可；如果系统执行策略�
 | `#/music/youtube?category=cover&member=TINA` | 翻唱分类与成员筛选示例 |
 | `#/music/youtube?category=stream&member=TINA` | 歌回分类示例 |
 | `#/music/youtube?category=original&group=lita-liz` | 经典时期原创分组示例 |
-| `#/music/spotify?category=albums` | Spotify 专辑筛选 |
 | `#/music/spotify/release/<来源ID>` | 已核实 Spotify 发行来源的曲目详情 |
-| `#/history`、`#/about` | 历程／关于 |
-| `#/mv` | MV／可视化视图；没有可用播放或可视化会回到音乐页 |
+| `#/about` | 关于及社区链接 |
+| `#/history` | 暂停显示，访问旧地址会转到曲库 |
+| `#/mv` | LET’S GROOVE；空闲时显示带白色扫光的 KMNZ 字形，播放后隐藏 |
 | `#/members` | 当前触发 SHOWCASE 的历史路由行为 |
 | `#/members/1` ～ `#/members/4` | 成员详情页，分别对应当前 `members.ts` 中的四条记录 |
 
@@ -198,18 +198,18 @@ songs / releases / sources JSON
 
 **歌曲 ≠ 平台视频 ≠ 专辑。** 同一首歌曲可能有多个平台来源、多个演出或版本；一个 Spotify 专辑来源可能对应包含多首歌的发行记录。内部 ID 用于稳定关联，不应因为封面、标题或列表顺序变化而随意修改。
 
-截至 2026-11-02、正式分支提交 `636876117c755a8717735d04b69da186e5c7cb09` 的数据快照（后续变动以 JSON 为准）：
+曲库快照取自已合并 Admin 批次的提交 `b66684f`。后续变动以 JSON 为准。
 
 | 数据 | 数量 |
 | --- | ---: |
-| 歌曲／录音版本 | 392 |
+| 歌曲／录音版本 | 404 |
 | 发行记录 | 36 |
-| YouTube `mv` 来源 | 316 |
+| YouTube `mv` 来源 | 328 |
 | Spotify `track` 来源 | 123 |
 | Spotify `album` 来源 | 36 |
-| 合计平台来源 | 475 |
-| YouTube 原创／翻唱／歌回分类 | 81 / 212 / 23 |
-| 附有 Bilibili 外部链接的条目 | 24 |
+| 合计平台来源 | 487 |
+| YouTube 原创／翻唱／歌回分类 | 81 / 224 / 23 |
+| 附有 Bilibili 外部链接的条目 | 37 |
 | `listed: false` 的隐藏来源 | 12 |
 
 ### 主要字段和校验规则
@@ -262,9 +262,9 @@ sources.json
 ### 播放来源和控件
 
 - **YouTube：** 通过官方 IFrame Player API 观察就绪、播放状态、时长和进度；支持在可用范围内的播放／暂停、跳转、音量、上一首／下一首及 `repeat-one`。
-- **Spotify：** 通过 Spotify iFrame API 和官方 embed 控制器；播放能力、加载新 URI、实际曲目状态等取决于平台返回的 API 能力。当前显示模式固定为浮窗，不能假定拥有与 YouTube 相同的进度控制或整首连续播放权限。
+- **Spotify：** 通过 Spotify iFrame API 和官方 embed 控制器；播放能力、加载新 URI、实际曲目状态等取决于平台返回的 API 能力。官方卡片在导航栏内，高 80 px。进度控制与完整曲目播放以平台实际能力为准。
 - **播放队列：** `createQueueSelections` 从列表或发行曲序构建队列；`queueReducer` 维护 `requestId`、状态、循环模式、结束事件和受限的前后切换。只有允许控制的来源才启用相应操作。
-- **显示：** 浮窗与影院模式由 `PlaybackPreferences` 决定，配合 `PlaybackBackdrop`、导航栏控件和视频磨砂等效果；Spotify 固定浮窗。关闭播放器会结束当前嵌入会话。
+- **显示：** 导航栏始终显示控件。未选歌时播放键进入 PLAYLIST，选歌后控制同一个官方嵌入实例。磨砂偏好分别用于视频或封面背景。关闭播放器会结束当前嵌入会话。
 
 ### 状态持久化
 
@@ -272,7 +272,7 @@ sources.json
 | --- | --- |
 | 播放队列、选中项、模式、部分进度 | `sessionStorage`：`kmnzPlaybackSession` |
 | 播放源浏览位置和筛选上下文 | `sessionStorage`：`kmnzPlaylist:v1`、`kmnzPlaybackBrowse:v1` |
-| 主题、显示模式、音量偏好 | `localStorage` |
+| 主题、磨砂、音量偏好 | `localStorage` |
 | SHOWCASE 已进入标记 | `sessionStorage`：`kmnzShowcaseEntered:v1` |
 | 页面滚动恢复 | `useSiteRoute` 中的 sessionStorage 路由记录 |
 
@@ -297,7 +297,9 @@ SHOWCASE 是视觉入口，正式应用内容称为 CONSOLE。当前主要依赖
 - 贴纸：`src/assets/showcase/LITA-stick.png`、`NERO-stick.png`、`TINA-stick.png`
 - 喷漆罐：`src/assets/showcase/spray-can.svg`
 
-当前状态机目标时长 **2000 ms**，`prefers-reduced-motion` 时使用约 **180 ms** 的缩短流程。请区分“设计目标”和“实际不同浏览器的表现”；动画相关修改必须测试进入、返回、深链接、移动视口、媒体播放期间的组件挂载与焦点恢复。
+转场共 **3000 ms**。海报在前 600 ms 退场，随后显示 KMNZ 字形。字形在 900–1050 ms 淡出，导航从 1050 ms 开始揭示，1200–2800 ms 进行斜向交替逐行喷涂。反向转场在最后 600 ms 恢复海报，减少动态效果使用约 180 ms 的流程。
+
+SHOWCASE 贴纸和姓名标签按 94 BPM 错拍。开发环境可选用本地开场音频校准相位，音频文件只用于本地预览，生产构建不包含该 MP3。
 
 喷漆动画只是原有 UI 的展示效果，**不得为动画复制一套导航或播放器，更不能在进入 CONSOLE 时重建正在播放的第三方 iframe**。
 
@@ -353,6 +355,10 @@ node scripts/discover-music.mjs
 `node scripts/discover-music.mjs --write` **只写候选文件**，不改线上音乐库。`scripts/publish-music-review.mjs --publish` 受运行环境校验限制，设计为在指定 GitHub Actions 发布分支执行，不是日常本地发布命令。
 
 完整设置、API 密钥、配额、异常恢复与人工审核方法请阅读 **[docs/music-discovery.md](docs/music-discovery.md)**。
+
+## 本地 Admin Mini
+
+安装依赖后，在 Windows 双击 `admin/start.bat`，或运行 `node admin/server.mjs --open`。服务只监听本机 `127.0.0.1:4194`，草稿和恢复日志保存在本地应用数据目录。新视频的标题和元数据查询需要环境变量 `YOUTUBE_API_KEY`。发布审核 PR 需要可用的 Git 和已登录的 GitHub CLI。源码随仓库维护，Pages 仅发布前台构建产物。
 
 ## 测试与质量检查
 

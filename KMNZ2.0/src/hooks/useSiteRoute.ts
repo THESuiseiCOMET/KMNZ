@@ -54,7 +54,7 @@ export function useSiteRoute(releaseIds: ReadonlySet<string>, transition?: (from
   const go = useCallback((next: SiteRoute, replace = false, restore = false) => {
     const before = siteRouteHash(latest.current), hash = siteRouteHash(next)
     if (hash === before) {
-      transition?.(latest.current.page, next.page, () => {}, { from: latest.current.music, to: next.music })
+      if (!replace) transition?.(latest.current.page, next.page, () => {}, { from: latest.current.music, to: next.music })
       return
     }
     saveScroll(before)
@@ -69,7 +69,9 @@ export function useSiteRoute(releaseIds: ReadonlySet<string>, transition?: (from
       pendingScroll.current = !replace && !keepScroll ? { hash, restore } : null
       setRoute(next)
     }
-    if (transition) transition(latest.current.page, next.page, update, { from: latest.current.music, to: next.music })
+    // Resolving the landing alias happens behind SHOWCASE, before any user navigation.
+    const landingRedirect = replace && latest.current.page === 'home' && next.page === 'music'
+    if (transition && !landingRedirect) transition(latest.current.page, next.page, update, { from: latest.current.music, to: next.music })
     else update()
   }, [transition])
 
@@ -117,7 +119,7 @@ export function useSiteRoute(releaseIds: ReadonlySet<string>, transition?: (from
     }
     else go({ ...latest.current, page }, false, page === 'music')
   }, [go, transition])
-  const changeMusic = useCallback((music: MusicRoute, replace = false) => go({ page: 'music', music }, replace), [go])
+  const changeMusic = useCallback((music: MusicRoute, replace = false) => go({ page: 'music', music: music.platform === 'spotify' ? {...music,category:'all'} : music }, replace), [go])
   const backFromRelease = useCallback(() => {
     const current = latest.current
     const listing = { ...current, music: { ...current.music, releaseSourceId: null } }

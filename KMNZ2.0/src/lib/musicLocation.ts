@@ -32,6 +32,7 @@ export function findMusicLocation(library: MusicLibrary, catalog: MusicEntry[], 
   if (!card) return null
   const track = release?.tracks.find(item => item.sourceIds.includes(sourceId) && (current.discNumber === undefined || current.discNumber === item.discNumber) && (current.trackNumber === undefined || current.trackNumber === item.trackNumber))
   const keepsFilters = preferred.platform === 'spotify' && (preferred.releaseSourceId === card.id || views.spotifyCards(preferred.search, preferred.category).some(item => item.id === card.id))
-  const route: MusicRoute = { ...(keepsFilters ? preferred : defaultMusicRoute), platform: 'spotify', releaseSourceId: card.kind === 'album' && (track || preferred.releaseSourceId === card.id) ? card.id : null }
-  return { route, cardId: card.id, ...(track && card.kind === 'album' ? { sourceId, discNumber: track.discNumber, trackNumber: track.trackNumber } : {}) }
+  const expandable = Boolean(views.releaseDetail(card.id))
+  const route: MusicRoute = { ...(keepsFilters ? preferred : defaultMusicRoute), platform: 'spotify', releaseSourceId: expandable && (track || preferred.releaseSourceId === card.id) ? card.id : null }
+  return { route, cardId: card.id, ...(track && expandable ? { sourceId, discNumber: track.discNumber, trackNumber: track.trackNumber } : {}) }
 }

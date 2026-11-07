@@ -1,6 +1,7 @@
 export type ShowcasePhase = 'showcase' | 'entering' | 'console' | 'returning'
 export const showcaseSessionKey = 'kmnzShowcaseEntered:v1'
-export const showcaseDuration = 2000
+export const showcaseDuration = 3000
+export const showcasePosterExitDuration = 600
 export const showcaseReducedDuration = 180
 
 export function initialShowcasePhase(page: string, storage?: Pick<Storage, 'getItem'>): ShowcasePhase {

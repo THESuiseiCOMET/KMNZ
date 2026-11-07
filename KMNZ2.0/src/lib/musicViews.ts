@@ -37,8 +37,13 @@ export function createMusicViews(library: MusicLibrary, catalog = toMusicCatalog
   function releaseDetail(sourceId: string): ReleaseView | null {
     const source = index.sources.get(sourceId)
     const entry = entries.get(sourceId)
-    if (!entry || source?.platform !== 'spotify' || source.target.type !== 'release') return null
-    const release = index.releases.get(source.target.releaseId)!
+    if (!entry || source?.platform !== 'spotify') return null
+    const known = source.target.releaseId ? index.releases.get(source.target.releaseId) : undefined
+    const release: MusicRelease | undefined = known ?? (source.target.type === 'song' ? {
+      id: 'recording-' + source.id, title: entry.title, artist: entry.artist, kind: 'single', tracklistStatus: 'complete',
+      tracks: [{songId:source.target.songId,discNumber:1,trackNumber:1,sourceIds:[source.id]}],
+    } : undefined)
+    if (!release) return null
     const tracks = [...release.tracks].sort((a, b) => a.discNumber - b.discNumber || a.trackNumber - b.trackNumber).map(track => {
       const available = track.sourceIds.map(id => entries.get(id)).filter((entry): entry is MusicEntry => Boolean(entry))
       return { ...track, song: index.songs.get(track.songId)!, playback: available.find(entry => entry.platform === 'spotify') ?? available[0] }
@@ -93,7 +98,7 @@ export function createMusicViews(library: MusicLibrary, catalog = toMusicCatalog
     return release ? releaseEntries.get(release.id) : undefined
   }
 
-  function spotifyCards(search: string, category: SpotifyCategory = 'all'): MusicEntry[] {
+  function spotifyCards(search: string, _legacyCategory: SpotifyCategory = 'all'): MusicEntry[] {
     const sections = spotifySections(search)
     const singles = new Map<string, MusicEntry>()
     for (const entry of sections.singles) {
@@ -103,8 +108,7 @@ export function createMusicViews(library: MusicLibrary, catalog = toMusicCatalog
         && ['single', 'ep'].includes(release.kind) && parent ? parent : entry
       singles.set(card.id, card)
     }
-    return category === 'albums' ? sections.albums
-      : category === 'ep' ? [...singles.values()] : [...sections.albums, ...singles.values()]
+    return [...sections.albums, ...singles.values()]
   }
 
   return { youtubeCards, releaseDetail, spotifySections, spotifyCards, sourceRelease, releaseEntryForSource }

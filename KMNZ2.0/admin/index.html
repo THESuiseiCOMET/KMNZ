@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="kmnz-token" content="KMNZ_CSRF_TOKEN">
+  <title>KMNZ Admin Mini</title>
+  <style>
+    :root{font-family:system-ui,"Microsoft YaHei",sans-serif;color:#eee;background:#17181b;color-scheme:dark;font-size:14px}*{box-sizing:border-box}body{margin:0}main{width:min(1160px,100%);margin:auto;padding:24px 18px 64px}header{display:flex;align-items:center;justify-content:space-between;gap:16px}h1{font-size:22px;margin:0}h2{font-size:17px;margin:0 0 16px}h3{font-size:14px}section{margin-top:20px;padding:20px;border:1px solid #414248;border-radius:12px;background:#202126}p{line-height:1.6}button,input,select,textarea{font:inherit}button{border:1px solid #73747c;background:#34363c;color:inherit;border-radius:6px;padding:9px 15px;cursor:pointer}button:hover{background:#454750}button:disabled{opacity:.45;cursor:default}.primary{background:#eee;color:#18191b;border-color:#eee}.primary:hover{background:#d8d8df}textarea{width:100%;min-height:84px;resize:vertical}input,select,textarea{border:1px solid #60616b;border-radius:5px;background:#16171b;color:inherit;padding:8px;min-width:0;max-width:100%}input[type=checkbox]{accent-color:#b1e5c9}label{display:block;color:#c8c9ce;margin:8px 0}label input[type=checkbox]{margin-right:7px}.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.grow{flex:1}.muted{color:#aeb0b9;font-size:12px}.notice{white-space:pre-wrap;padding:12px;border-left:3px solid #c9bb80;background:#292824;margin-top:16px;line-height:1.6}.notice:empty{display:none}.error{border-left-color:#f29999;color:#ffd4d4}.video{border-top:1px solid #45464e;padding:14px 0}.video:first-child{border-top:0}.video .fields{display:grid;grid-template-columns:2fr 1.3fr 1fr 1fr;gap:10px}.video input:not([type=checkbox]),.video select{width:100%}.meta{line-height:1.8;overflow-wrap:anywhere}.binding{display:grid;grid-template-columns:minmax(150px,1fr) minmax(200px,2fr) auto;gap:10px;align-items:center;margin:12px 0}.binding a{overflow-wrap:anywhere}a{color:#bce6fc}pre{padding:12px;background:#151619;border-radius:6px;white-space:pre-wrap;overflow-wrap:anywhere;max-height:420px;overflow:auto;font-size:12px}#result a{display:inline-block;margin:8px 0}[hidden]{display:none!important}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid #bce6fc;outline-offset:3px}.member{display:inline-flex;margin-right:12px;align-items:center}.empty{color:#aeb0b9;padding:6px 0}.file-list{line-height:1.8}.readonly{opacity:.65}@media(max-width:760px){.video .fields{grid-template-columns:1fr 1fr}.binding{grid-template-columns:1fr auto}.binding a{grid-column:1/-1}section{padding:16px}header{align-items:flex-start}}@media(max-width:430px){.video .fields{grid-template-columns:1fr}}
+
+.link-columns{display:grid;grid-template-columns:1fr 1fr;gap:18px}.link-columns textarea{min-height:160px}#bulk-settings{padding-bottom:16px;border-bottom:1px solid #45464e;margin-bottom:12px}#bulk-settings select{margin-left:10px}.video .fields{grid-template-columns:2fr 1fr 1fr}summary{cursor:pointer;color:#c8c9ce}details select{width:100%;margin-top:10px}#videos:not(:empty){color:inherit}@media(max-width:760px){.link-columns{grid-template-columns:1fr}.video .fields{grid-template-columns:1fr}}
+</style>
+</head>
+<body><main>
+  <header><h1>KMNZ Admin Mini</h1><div class="row"><button id="new-batch" type="button">清空列表</button><button id="purge-batch" type="button">彻底清除草稿</button></div></header>
+  <div id="clear-confirm" class="notice" hidden>清空待处理列表和输入框？批量设置保留，正式曲库不变，旧草稿仍保留。 <button id="confirm-clear" type="button">确认清空</button> <button id="cancel-clear" type="button">取消</button></div>
+  <div id="purge-confirm" class="notice" hidden><span id="purge-description"></span>本批次草稿、备份与临时文件将永久删除；以前批次和远程 PR 不受影响。<div class="row"><button id="confirm-purge" type="button">确认彻底清除</button><button id="cancel-purge" type="button">取消</button></div></div>
+  <div id="environment" class="notice" role="status"></div>
+  <div id="message" class="notice" role="status"></div>
+  <section id="links-panel"><h2>1 · 粘贴链接</h2>
+    <div class="link-columns">
+      <div><label for="youtube">YouTube 链接，每行一个</label><textarea id="youtube" placeholder="https://www.youtube.com/watch?v=…" spellcheck="false"></textarea></div>
+      <div><label for="bilibili">Bilibili 链接，按相同行号对应（可留空整列）</label><textarea id="bilibili" placeholder="https://www.bilibili.com/video/BV…" spellcheck="false"></textarea></div>
+    </div>
+    <p><button id="fetch-youtube" type="button">获取并按行配对</button></p>
+    <details><summary>只绑定已有来源</summary><p><button id="add-bilibili" type="button">添加 Bilibili 链接并手动选择来源</button></p></details>
+  </section>
+  <section id="edit-existing"><h2>编辑已有条目</h2><label>搜索标题、视频 ID 或 BV<input id="edit-query" type="search"></label><div class="row"><select id="edit-source" aria-label="选择已有条目"></select><button id="add-existing" type="button">加入编辑列表</button></div></section>
+  <section><h2>2 · 审核与关联</h2>
+    <div id="bulk-settings">
+      <div class="row">
+        <label>时期<select id="batch-era"><option value="new">新时期</option><option value="classic">经典时期</option></select></label>
+        <label>类型<select id="batch-type"><option value="stream">Stream</option><option value="cover">Cover</option><option value="original">Original</option></select></label>
+        <label id="batch-group-label" hidden>原创组别<select id="batch-group"><option value="">请选择</option><option value="lita-liz">LITA &amp; LIZ</option><option value="lita-tina-nero">LITA &amp; TINA &amp; NERO</option><option value="special">其他已确认原创</option></select></label>
+      </div>
+      <div id="batch-members" class="row" role="group" aria-label="批量默认成员">
+        <span>默认成员</span>
+        <label class="member"><input type="checkbox" value="LITA">LITA</label>
+        <label class="member"><input type="checkbox" value="LIZ">LIZ</label>
+        <label class="member"><input type="checkbox" value="TINA">TINA</label>
+        <label class="member"><input type="checkbox" value="NERO">NERO</label>
+      </div>
+      <div class="row"><label class="member"><input id="auto-members" type="checkbox" checked>优先按标题识别成员，未识别时使用默认成员</label><button id="apply-batch" type="button">应用到已勾选条目</button></div>
+    </div>
+    <div id="videos" class="empty">尚未添加新视频。</div><div id="bindings"></div><button id="refresh-bilibili-titles" type="button" hidden>重新获取 Bilibili 标题</button>
+  </section>
+  <section><h2>3 · 本地验收并创建 Draft PR</h2>
+    <div class="row"><button id="preview" type="button">生成变更预览</button><button id="apply-local" type="button" disabled>应用到本地并构建</button><button id="undo-local" type="button" hidden>撤回本地修改，继续编辑</button><button id="rebuild-local" type="button" hidden>重新构建本地预览</button><a id="local-preview" href="http://localhost:4193/KMNZ/#/music/youtube" target="_blank" rel="noopener noreferrer" hidden>打开本地网站</a></div>
+    <div id="review" hidden><div id="review-rows"></div><details><summary>查看本批次数据</summary><pre id="review-json"></pre></details>
+      <label><input id="approved" type="checkbox">我已在本地网页确认标题、分类、成员、日期和 BV 对应正确。</label>
+    </div>
+    <p><button id="publish" class="primary" type="button" disabled>创建 GitHub Draft PR</button></p>
+    <div id="result" role="status"></div>
+  </section>
+</main>
+<script id="app-code" type="text/plain">
+import { detectTitleMembers, artistFromMembers, initialReview, applyBatchSettings } from '/batch.mjs';
+const $ = id => document.getElementById(id);
+let token = document.querySelector('meta[name="kmnz-token"]').content;
+let state, locked = false, reviewToken = null, reviews = new Map(), edits = new Map(), bindings = [];
+const node = (tag,text,className) => {const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(className)e.className=className;return e;};
+const sourceId = async id => 'yt-admin-'+[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(id)))].map(b=>b.toString(16).padStart(2,'0')).join('').slice(0,16);
+const restartNotice='当前运行的是旧版 Admin 服务，尚不支持彻底清除草稿。请关闭 Admin 服务窗口，重新运行 admin/start.bat，再刷新本页；现有草稿会保留。';
+async function api(path,data,renewed=false){
+  if(path==='purge'&&!state?.capabilities?.purge)throw Error(restartNotice);
+  const response=await fetch('/api/'+path,{method:data===undefined?'GET':'POST',headers:data===undefined?{}:{'Content-Type':'application/json','X-KMNZ-Token':token},body:data===undefined?undefined:JSON.stringify(data)});
+  const result=await response.json();
+  if(!response.ok&&result.code==='SESSION_EXPIRED'&&data!==undefined&&!renewed){
+    const refresh=await fetch('/api/session',{headers:{'X-KMNZ-Session':'refresh'}});
+    if(!refresh.ok)throw Error('无法更新本机会话，请刷新 Admin 页面后重试；草稿已保留。');
+    const session=await refresh.json();
+    if(session.batchId!==state?.batch.id)throw Error('当前批次已变化，请刷新 Admin 页面核对后重试；未执行本次操作。');
+    if(typeof session.csrf!=='string'||!/^[a-f0-9]{64}$/.test(session.csrf))throw Error('无法更新本机会话，请刷新 Admin 页面后重试。');
+    token=session.csrf;return api(path,data,true);
+  }
+  if(!response.ok)throw Error(result.error+(result.recovery?'\n恢复目录：'+result.recovery:''));return result;
+}
+function message(text,error=false){$('message').textContent=text;$('message').classList.toggle('error',error);}
+function invalidate(){$('clear-confirm').hidden=true;$('purge-confirm').hidden=true;reviewToken=null;$('approved').checked=false;$('review').hidden=true;updatePublish();}
+function updatePublish(){
+  const applied=state?.batch.local?.status==='applied';
+  const localActive=Boolean(state?.batch.local&&state.batch.local.status!=='reverted');
+  const frozen=Boolean(state?.batch.publication?.pushAttempted)||localActive;
+  for(const control of document.querySelectorAll('#links-panel input,#links-panel textarea,#links-panel button,#bulk-settings input,#bulk-settings select,#bulk-settings button,#videos input,#videos select,#videos button,#edit-existing input,#edit-existing select,#edit-existing button,#bindings select,#bindings button')){
+    const liz=control.dataset.member==='LIZ'&&control.closest('.video')?.querySelector('[data-field="contentType"]').value==='stream';
+    control.disabled=locked||frozen||Boolean(liz)||(control.closest('#batch-members')&&control.value==='LIZ'&&$('batch-type').value==='stream');
+  }
+  $('purge-batch').disabled=locked||!state?.capabilities?.purge||Boolean(state?.batch.publication?.pushAttempted&&state.batch.publication.phase!=='complete');$('confirm-purge').disabled=locked;$('cancel-purge').disabled=locked;
+  $('refresh-bilibili-titles').disabled=locked||!state?.capabilities?.bilibiliTitles;
+  $('confirm-clear').disabled=locked;$('cancel-clear').disabled=locked;
+  $('new-batch').disabled=locked||(localActive&&state?.batch.publication?.phase!=='complete');$('approved').disabled=locked||(!applied&&!state?.batch.publication?.pushAttempted);
+  $('apply-local').disabled=locked||frozen||!reviewToken||Boolean(state?.stale);
+  $('undo-local').hidden=!localActive||Boolean(state?.batch.publication?.pushAttempted);$('undo-local').disabled=locked;
+  $('rebuild-local').hidden=!['applied','reverted'].includes(state?.batch.local?.status)||Boolean(state?.batch.local?.previewBuilt);$('rebuild-local').disabled=locked;
+  $('local-preview').hidden=!applied;
+  $('preview').disabled=locked||frozen||Boolean(state?.stale);
+  $('publish').disabled=locked||!reviewToken||!$('approved').checked||!state?.environment.canPublish||state?.stale||state?.batch.publication?.phase==='complete'||(!(applied&&state?.batch.local?.previewBuilt)&&!state?.batch.publication?.pushAttempted);
+}
+function readSettings(){return {era:$('batch-era').value,contentType:$('batch-type').value,originalGroup:$('batch-group').value,members:[...$('batch-members').querySelectorAll('input:checked')].map(input=>input.value),autoMembers:$('auto-members').checked};}
+function syncSettings(){
+  const stream=$('batch-type').value==='stream',liz=$('batch-members').querySelector('[value="LIZ"]');
+  liz.parentElement.hidden=stream;if(stream)liz.checked=false;
+  $('batch-group-label').hidden=$('batch-type').value!=='original';updatePublish();
+}
+function restoreSettings(settings={}){
+  $('batch-era').value=settings.era||'new';$('batch-type').value=settings.contentType||'stream';$('batch-group').value=settings.originalGroup||'';
+  $('auto-members').checked=settings.autoMembers!==false;
+  for(const input of $('batch-members').querySelectorAll('input'))input.checked=(settings.members||[]).includes(input.value);
+  syncSettings();
+}
+function showReview(review){
+  $('review').hidden=false;$('review-rows').replaceChildren();
+  const titles=new Map(state.sources.map(source=>[source.id,source.title]));
+  for(const item of review.items){titles.set(item.sourceId,item.title);$('review-rows').append(node('p',item.title+' · '+item.date+'（日本时间）\n'+item.publishedAt+' · '+item.duration,'meta'));}
+  for(const edit of review.edits||[])$('review-rows').append(node('p','修改：'+edit.title+' · '+edit.contentType+' · '+edit.members.join(' / ')+' → '+(edit.bilibiliUrl||'无 BV 绑定'),'meta'));
+  const historical=state.batch.publication?.phase==='complete';
+  for(const link of review.links){
+    $('review-rows').append(node('p','YouTube：'+(titles.get(link.sourceId)||link.sourceId)+' → '+link.url,'meta'),bilibiliTitleNode(link.url));
+    const current=state.sources.find(source=>source.id===link.sourceId)?.bilibiliUrl;
+    if(historical&&current&&current!==link.url)$('review-rows').append(node('p','当前曲库绑定：'+current,'notice'));
+  }
+  $('review-rows').append(node('p',review.changedFiles.join('\n'),'muted file-list'));$('review-json').textContent=JSON.stringify(review,null,2);for(const edit of review.edits||[])if(edit.bilibiliUrl)$('review-rows').append(bilibiliTitleNode(edit.bilibiliUrl));void refreshBilibiliTitles();
+}
+function collectReviews(){
+  return [...$('videos').querySelectorAll('.video:not([data-source-id])')].map(card=>{
+    const get=name=>card.querySelector('[data-field="'+name+'"]');
+    const members=[...card.querySelectorAll('[data-member]:checked')].map(input=>input.dataset.member);
+    const songId=get('songId').value;
+    return {videoId:card.dataset.id,selected:get('selected').checked,title:get('title').value,artist:state.songs.find(song=>song.id===songId)?.artist||artistFromMembers(members),contentType:get('contentType').value,era:get('era').value,originalGroup:get('originalGroup').value,songId,members,memberMode:card.dataset.memberMode};
+  });
+}
+function collectEdits(){
+  return [...$('videos').querySelectorAll('.video[data-source-id]')].map(card=>{
+    const get=name=>card.querySelector('[data-field="'+name+'"]');
+    return {sourceId:card.dataset.sourceId,videoId:card.dataset.id,selected:get('selected').checked,title:get('title').value,contentType:get('contentType').value,era:get('era').value,originalGroup:get('originalGroup').value,
+      members:[...card.querySelectorAll('[data-member]:checked')].map(input=>input.dataset.member),bilibiliUrl:get('bilibiliUrl').value,memberMode:'manual',confirmSharedTitle:Boolean(get('confirmSharedTitle')?.checked)};
+  });
+}
+function renderSourceOptions(){
+  const query=$('edit-query').value.trim().toLowerCase(),previous=$('edit-source').value;
+  $('edit-source').replaceChildren(option('','选择已有条目'));
+  for(const source of state.sources)if(!query||[source.title,source.videoId,source.bilibiliUrl||''].some(value=>value.toLowerCase().includes(query)))$('edit-source').append(option(source.id,source.title+' · '+source.videoId));
+  $('edit-source').value=previous;
+}
+const bilibiliTitles=new Map();
+function canonicalBVUrl(value){
+  if(/^BV1[1-9A-HJ-NP-Za-km-z]{9}$/.test(value))return 'https://www.bilibili.com/video/'+value;
+  try{const url=new URL(value),match=/^\/video\/(BV1[1-9A-HJ-NP-Za-km-z]{9})\/?$/.exec(url.pathname);return url.protocol==='https:'&&['www.bilibili.com','bilibili.com'].includes(url.hostname)&&!url.port&&!url.username&&!url.password&&match?'https://www.bilibili.com/video/'+match[1]:null;}catch{return null;}
+}
+function bilibiliTitleNode(url){const item=node('div','','meta');item.dataset.bilibiliTitle=canonicalBVUrl(url)||'';item.textContent='Bilibili：正在获取标题…';return item;}
+function updateBilibiliTitleLabels(){
+  for(const item of document.querySelectorAll('[data-bilibili-title]')){
+    const result=bilibiliTitles.get(item.dataset.bilibiliTitle);
+    item.textContent='Bilibili：'+(result?.title||result?.message||(item.dataset.bilibiliTitle?'正在获取标题…':'请填写有效的 BV 视频链接。'));
+  }
+}
+async function refreshBilibiliTitles(force=false){
+  const urls=[...new Set([...document.querySelectorAll('[data-bilibili-title]')].map(item=>item.dataset.bilibiliTitle).filter(Boolean))];
+  $('refresh-bilibili-titles').hidden=!urls.length;
+  if(!state?.capabilities?.bilibiliTitles){for(const url of urls)bilibiliTitles.set(url,{message:'请重启 Admin 服务并刷新页面以获取标题。'});updateBilibiliTitleLabels();return;}
+  const missing=urls.filter(url=>bilibiliTitles.get(url)?.status!=='loading'&&(force||!bilibiliTitles.has(url)));
+  if(!missing.length){updateBilibiliTitleLabels();return;}
+  for(const url of missing)bilibiliTitles.set(url,{status:'loading'});updateBilibiliTitleLabels();
+  try{
+    for(let offset=0;offset<missing.length;offset+=200){const result=await api('bilibili-titles',{urls:missing.slice(offset,offset+200),refresh:force});
+    for(const item of result.titles)if(missing.includes(item.url))bilibiliTitles.set(item.url,item);}
+  }catch{for(const url of missing)bilibiliTitles.set(url,{status:'error',message:'标题获取失败，请打开链接核对或重试。'});}
+  finally{for(const url of missing)if(bilibiliTitles.get(url)?.status==='loading')bilibiliTitles.set(url,{status:'error',message:'标题暂不可用，请重试。'});updateBilibiliTitleLabels();}
+}
+const collectBindings=()=>[...$('bindings').querySelectorAll('.binding')].map(row=>({url:row.dataset.url,sourceId:row.querySelector('select').value}));
+function option(value,text){const e=node('option',text);e.value=value;return e;}
+function selectField(name,options,value){const select=node('select');select.dataset.field=name;for(const [v,text]of options)select.append(option(v,text));select.value=value??'';return select;}
+function label(text,input){const e=node('label',text);e.append(input);return e;}
+async function render(){
+  const saved=new Map((state.batch.reviews||[]).map(row=>[row.videoId,row]));for(const [id,row]of reviews)saved.set(id,row);
+  $('videos').replaceChildren();const sourceOptions=state.sources.map(source=>[source.id,source.title+' · '+source.videoId+(source.bilibiliUrl?' · 已绑定':'')]);
+  const plannedSongs=[];
+  for(const raw of state.batch.videos){const id=await sourceId(raw.videoId),title=saved.get(raw.videoId)?.title||raw.apiTitle;plannedSongs.push([id.replace('yt-admin-','song-admin-'),title]);sourceOptions.push([id,'[本批次] '+title]);}
+  const savedEdits=new Map((state.batch.edits||[]).map(row=>[row.sourceId,row]));for(const [id,row]of edits)savedEdits.set(id,row);
+  const entries=[...state.batch.videos,...(state.batch.edits||[]).map(row=>({...row,isEdit:true,apiTitle:row.title,channelTitle:'编辑已有条目',publishedAt:'沿用现有日期',duration:''}))];
+  for(const raw of entries){
+    const row=raw.isEdit?savedEdits.get(raw.sourceId):saved.get(raw.videoId)||initialReview(raw,readSettings());
+    const card=node('article',undefined,'video');card.dataset.id=raw.videoId;card.dataset.memberMode=row.memberMode||'manual';
+    if(raw.isEdit)card.dataset.sourceId=raw.sourceId;
+    const check=node('input');check.type='checkbox';check.dataset.field='selected';check.checked=row.selected;
+    const top=node('div',undefined,'row'),remove=node('button','移除');remove.type='button';remove.setAttribute('aria-label','移除 '+row.title);
+    top.append(label(raw.videoId,check),remove);card.append(top,node('div',raw.channelTitle+' · '+raw.publishedAt+' · '+raw.duration,'muted meta'));
+    remove.addEventListener('click',()=>task(async()=>{
+      state=await api('remove',{videoId:raw.videoId,...(raw.isEdit?{sourceId:raw.sourceId}:{}),reviews:collectReviews(),edits:collectEdits(),bindings:collectBindings(),inputRows:{youtube:$('youtube').value,bilibili:$('bilibili').value}});
+      reviews=new Map(state.batch.reviews.map(row=>[row.videoId,row]));edits=new Map((state.batch.edits||[]).map(row=>[row.sourceId,row]));bindings=state.batch.bindings;
+      if(state.batch.inputRows){$('youtube').value=state.batch.inputRows.youtube;$('bilibili').value=state.batch.inputRows.bilibili;}
+      invalidate();await render();message('已从待处理列表移除，并清理对应 BV 配对；正式曲库未删除条目。');
+    }));
+    const fields=node('div',undefined,'fields'),title=node('input');title.dataset.field='title';title.value=row.title;title.maxLength=500;fields.append(label('标题',title));
+    fields.append(label('类型',selectField('contentType',[['','请选择'],['cover','Cover'],['original','Original'],['stream','Stream']],row.contentType)));
+    fields.append(label('时期',selectField('era',[['new','新时期'],['classic','经典时期']],row.era)));card.append(fields);
+    const members=node('div');
+    for(const name of ['LITA','LIZ','TINA','NERO']){const input=node('input');input.type='checkbox';input.dataset.member=name;input.checked=row.members.includes(name);const memberLabel=label(name,input);memberLabel.className='member';members.append(memberLabel);}card.append(members);
+    const hint=node('p','','muted');card.append(hint);
+    const group=label('原创组别',selectField('originalGroup',[['','请选择'],['lita-liz','LITA & LIZ'],['lita-tina-nero','LITA & TINA & NERO'],['special','其他已确认原创']],row.originalGroup));card.append(group);
+    const advanced=node('details'),summary=node('summary','关联已有歌曲（可选）');advanced.append(summary);
+    const linked=state.songs.find(song=>song.id===row.songId)||plannedSongs.filter(([id])=>id===row.songId).map(([id,title])=>({id,title}))[0];
+    const song=selectField('songId',[['','建立独立条目'],...(row.songId?[[row.songId,linked?.title||row.songId]]:[])],row.songId);advanced.append(song);card.append(advanced);advanced.hidden=Boolean(raw.isEdit);
+    if(raw.isEdit){const bv=node('input');bv.dataset.field='bilibiliUrl';bv.value=row.bilibiliUrl||'';card.append(label('Bilibili 链接（留空移除绑定）',bv));const bvTitle=bilibiliTitleNode(bv.value);card.append(bvTitle);bv.addEventListener('input',()=>{bvTitle.dataset.bilibiliTitle=canonicalBVUrl(bv.value)||'';bvTitle.textContent=bv.value?'Bilibili：修改完成后获取标题':'Bilibili：未绑定';});bv.addEventListener('change',()=>void refreshBilibiliTitles());
+      if(state.sources.find(source=>source.id===raw.sourceId)?.sharedTitle){const confirmTitle=node('input');confirmTitle.type='checkbox';confirmTitle.dataset.field='confirmSharedTitle';confirmTitle.checked=Boolean(row.confirmSharedTitle);card.append(label('修改标题时同步到同一录音的关联来源',confirmTitle));}
+    }
+    let loaded=false;advanced.addEventListener('toggle',()=>{if(!advanced.open||loaded)return;loaded=true;const current=song.value;song.replaceChildren(option('','建立独立条目'));for(const item of state.songs)song.append(option(item.id,item.title+' · '+item.artist));const own=plannedSongs[state.batch.videos.indexOf(raw)][0];for(const [id,text]of plannedSongs)if(id!==own)song.append(option(id,'[本批次新条目] '+text));song.value=current;});
+    function syncCard(){
+      const type=card.querySelector('[data-field="contentType"]').value;
+      group.hidden=type!=='original';const liz=card.querySelector('[data-member="LIZ"]');liz.parentElement.hidden=type==='stream';if(type==='stream')liz.checked=false;
+      const names=[...card.querySelectorAll('[data-member]:checked')].map(input=>input.dataset.member);
+      hint.textContent=names.length?({'title':'标题识别：','batch':'批量默认：','manual':'已选择：'}[card.dataset.memberMode]||'已选择：')+names.join(' / '):'请选择成员';
+      updatePublish();
+    }
+    card.addEventListener('input',event=>{
+      if(event.target.dataset.member)card.dataset.memberMode='manual';
+      if((event.target===title||event.target.dataset.field==='contentType')&&card.dataset.memberMode!=='manual'){
+        const inferred=readSettings().autoMembers?detectTitleMembers(title.value,card.querySelector('[data-field="contentType"]').value):[];
+        const names=inferred.length?inferred:readSettings().members;for(const input of card.querySelectorAll('[data-member]'))input.checked=names.includes(input.dataset.member);
+        card.dataset.memberMode=inferred.length?'title':'batch';
+      }
+      syncCard();invalidate();
+    });
+    $('videos').append(card);syncCard();
+  }
+  if(!entries.length)$('videos').append(node('p','尚未添加新视频。','empty'));
+  $('bindings').replaceChildren();
+  for(const binding of bindings){
+    const row=node('div',undefined,'binding');row.dataset.url=binding.url;
+    const anchor=node('a',binding.url);anchor.href=binding.url;anchor.target='_blank';anchor.rel='noopener noreferrer';
+    const select=selectField('sourceId',[['','选择 YouTube 来源'],...sourceOptions],binding.sourceId);select.setAttribute('aria-label','绑定 YouTube 来源');select.addEventListener('change',invalidate);
+    const remove=node('button','移除');remove.type='button';remove.addEventListener('click',()=>{row.remove();bindings=collectBindings();invalidate();});
+    const details=node('div');details.append(bilibiliTitleNode(binding.url),anchor);row.append(details,label('YouTube 来源',select),remove);$('bindings').append(row);
+  }
+  renderSourceOptions();
+  if(state.batch.local&&state.batch.local.status!=='reverted'&&state.batch.preview){reviewToken=state.batch.reviewToken;showReview(state.batch.preview);}
+  const warnings=[...state.environment.problems];if(!state.capabilities?.purge)warnings.push(restartNotice);if(!state.environment.youtubeConfigured)warnings.push('未配置 YOUTUBE_API_KEY：可先测试已有视频去重和 Bilibili 绑定。');
+  if(state.stale)warnings.push('草稿基线与当前曲库不同。请清空列表，旧草稿保留在仓库外。');$('environment').textContent=warnings.join('\n');
+  if(state.batch.publication?.pushAttempted){
+    reviewToken=state.batch.reviewToken;if(state.batch.preview)showReview(state.batch.preview);$('approved').checked=false;
+    if(state.batch.publication.prUrl){$('result').replaceChildren();const a=node('a','打开已有 Draft PR');a.href=state.batch.publication.prUrl;a.target='_blank';a.rel='noopener noreferrer';$('result').append(a);message('本批次已完成，显示的是发布时的历史预览。当前曲库的后续修正会单独标明；继续导入请清空列表。');}
+    else message('此批次已经尝试推送。请重新核对并确认后重试，或清空列表。\n恢复目录：'+state.batch.publication.workspace);
+  }
+  updatePublish();void refreshBilibiliTitles();
+}
+$('refresh-bilibili-titles').addEventListener('click',()=>void refreshBilibiliTitles(true));
+async function task(fn){if(locked)return;locked=true;updatePublish();try{await fn();}catch(error){message(error.message,true);}finally{locked=false;updatePublish();}}
+$('fetch-youtube').addEventListener('click',()=>task(async()=>{
+  const current=collectReviews(),currentBindings=collectBindings();message('正在获取视频并按输入行号配对…');
+  const result=await api('youtube',{input:$('youtube').value,bilibiliInput:$('bilibili').value,settings:readSettings(),reviews:current,bindings:currentBindings});
+  state=result;reviews=new Map(state.batch.reviews.map(row=>[row.videoId,row]));bindings=state.batch.bindings;invalidate();await render();
+  message(state.batch.notices.map(note=>(note.videoId||note.input)+': '+note.reason).join('\n')||'已获取并完成配对。请核对标题、成员和对应的 BV。');
+}));
+$('apply-batch').addEventListener('click',()=>task(async()=>{const settings=readSettings();reviews=new Map(collectReviews().map(row=>[row.videoId,row.selected?applyBatchSettings(row,settings):row]));edits=new Map(collectEdits().map(row=>[row.sourceId,row.selected?applyBatchSettings(row,settings):row]));bindings=collectBindings();invalidate();await render();message('已将批量设置应用到勾选的条目，仍可逐条修改。');}));
+$('bulk-settings').addEventListener('input',()=>{syncSettings();invalidate();});
+$('add-bilibili').addEventListener('click',()=>task(async()=>{reviews=new Map(collectReviews().map(row=>[row.videoId,row]));bindings=collectBindings();const result=await api('bilibili',{input:$('bilibili').value});bindings.push(...result.links.map(link=>({url:link.url,sourceId:''})));invalidate();await render();message('请选择每个 Bilibili 视频对应的 YouTube 来源。');}));
+$('preview').addEventListener('click',()=>task(async()=>{const current=collectReviews(),currentBindings=collectBindings();const result=await api('preview',{reviews:current,edits:collectEdits(),bindings:currentBindings,settings:readSettings()});state.batch.reviews=current;state.batch.bindings=currentBindings;reviews=new Map(current.map(row=>[row.videoId,row]));reviewToken=result.reviewToken;$('approved').checked=false;showReview(result.review);message('预览已通过现有数据校验与网站日期读取链路。请核对并勾选确认。');}));
+$('edit-query').addEventListener('input',renderSourceOptions);
+$('add-existing').addEventListener('click',()=>task(async()=>{
+  reviews=new Map(collectReviews().map(row=>[row.videoId,row]));edits=new Map(collectEdits().map(row=>[row.sourceId,row]));bindings=collectBindings();
+  state=await api('edit-source',{sourceId:$('edit-source').value});invalidate();await render();message('已加入编辑列表。修改后先应用到本地验收。');
+}));
+$('apply-local').addEventListener('click',()=>task(async()=>{
+  message('正在备份并应用到本地曲库、构建本地预览…');
+  try{state=await api('apply',{reviewToken});}
+  finally{state=await api('state');await render();$('approved').checked=false;}
+  message('已应用到本地并构建。请刷新本地网站检查，确认正确后勾选验收，再创建 Draft PR。');
+}));
+$('undo-local').addEventListener('click',()=>task(async()=>{try{state=await api('undo-local',{});}finally{state=await api('state');invalidate();await render();}message('已撤回本批次的本地修改并重建预览，待处理条目仍保留，可继续编辑。');}));
+$('rebuild-local').addEventListener('click',()=>task(async()=>{state=await api('local-build',{});await render();message('本地预览构建完成，请刷新本地网站验收。');}));
+$('approved').addEventListener('change',updatePublish);
+$('publish').addEventListener('click',()=>task(async()=>{
+  message('正在检查远端基线、隔离构建并创建 Draft PR，请勿关闭服务窗口…');
+  const poll=setInterval(()=>api('state').then(value=>{const phase=value.batch.publication?.phase;if(phase)message('当前步骤：'+phase);}).catch(()=>{}),1500);
+  try{const result=await api('publish',{reviewToken,confirmed:$('approved').checked,localConfirmed:$('approved').checked});$('result').replaceChildren();const a=node('a','打开 Draft PR');a.href=result.url;a.target='_blank';a.rel='noopener noreferrer';$('result').append(a);message('Draft PR 已创建或已恢复；未自动合并。');}
+  finally{clearInterval(poll);state=await api('state');await render();}
+}));
+$('new-batch').addEventListener('click',()=>{$('clear-confirm').hidden=false;});
+$('cancel-clear').addEventListener('click',()=>{$('clear-confirm').hidden=true;});
+$('confirm-clear').addEventListener('click',()=>task(async()=>{state=await api('new',{settings:readSettings()});reviews.clear();edits.clear();bindings=[];restoreSettings(state.batch.defaults);$('youtube').value='';$('bilibili').value='';invalidate();$('result').replaceChildren();await render();message('列表已清空，已读取最新曲库并保留批量设置。');}));
+$('purge-batch').addEventListener('click',()=>{
+  $('clear-confirm').hidden=true;
+  $('purge-description').textContent=state.batch.publication?.phase==='complete'?'本批次已创建 PR，仅清除本地草稿，已应用的曲库保留。':state.batch.local&&state.batch.local.status!=='reverted'?'将先撤回本批次已应用的曲库修改并重建本地预览，再清除草稿。':'将清除当前待处理条目、链接、关联和预览，正式曲库不变。';
+  $('purge-confirm').hidden=false;
+});
+$('cancel-purge').addEventListener('click',()=>{$('purge-confirm').hidden=true;});
+$('confirm-purge').addEventListener('click',()=>task(async()=>{
+  message('正在撤回本批次修改（如有）并清除草稿…');
+  try{state=await api('purge',{confirmed:true,batchId:state.batch.id,settings:readSettings()});}
+  catch(error){state=await api('state');await render();throw error;}
+  reviews.clear();edits.clear();bindings=[];restoreSettings(state.batch.defaults);$('youtube').value='';$('bilibili').value='';invalidate();$('result').replaceChildren();await render();
+  message(state.batch.notices.length?state.batch.notices.join('\n'):'当前草稿已彻底清除，可以直接开始新批次。批量设置已保留。');
+}));
+
+task(async()=>{state=await api('state');bindings=state.batch.bindings||[];restoreSettings(state.batch.defaults);$('youtube').value=state.batch.inputRows?.youtube||'';$('bilibili').value=state.batch.inputRows?.bilibili||'';await render();});
+</script>
+</body></html>

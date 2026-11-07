@@ -4,3 +4,9 @@ dist/
 .env.*.local
 *.tsbuildinfo
 .DS_Store
+
+# Local preview music: public distribution not yet authorized
+/src/assets/audio/*.mp3
+
+# Local metadata editor backups
+/src/data/music-metadata.overrides.json.backup-*

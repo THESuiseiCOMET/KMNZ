@@ -252,7 +252,7 @@ export function useOfficialPlayer(entry: MusicEntry, loop: boolean, onNext: () =
       void loadSpotifyApi().then(api => {
         if (cancelled) return
         const initial = settings.current.entry
-        api.createController(target, { uri: 'spotify:' + initial.kind + ':' + initial.platformId, width: '100%', height: 152 }, controller => {
+        api.createController(target, { uri: 'spotify:' + initial.kind + ':' + initial.platformId, width: '100%', height: 80 }, controller => {
           if (cancelled) { controller.destroy(); return }
           let initialized = false
           let lastRequest: string | undefined

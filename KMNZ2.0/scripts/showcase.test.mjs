@@ -59,9 +59,9 @@ test('transition state ignores repeated, opposing and stale finish actions',()=>
   for(const action of ['enter','return'])assert.equal(rules.showcaseStep(phase,action),phase)
   assert.equal(rules.showcaseStep(phase,'finish'),'showcase')
 })
-test('entering is immediate, writes only a session flag and unlocks/focuses console after 2000ms',()=>{
+test('entering is immediate, writes only a session flag and unlocks/focuses console after 3000ms',()=>{
   const h=harness();let v=h.render();assert.equal(v.blocked,true);assert.equal(h.doc.activeElement,h.enter);assert.equal(h.doc.documentElement.style.overflow,'hidden')
-  v.enter();v.enter();v.show();v=h.render();assert.equal(v.phase,'entering');assert.equal(h.stored(),'1');assert.equal(h.timers.size,1);assert.equal([...h.timers.values()][0].ms,2000)
+  v.enter();v.enter();v.show();v=h.render();assert.equal(v.phase,'entering');assert.equal(h.stored(),'1');assert.equal(h.timers.size,1);assert.equal([...h.timers.values()][0].ms,3000)
   h.expire();v=h.render();assert.equal(v.phase,'console');assert.equal(v.blocked,false);assert.equal(h.doc.documentElement.style.overflow,'clip');assert.equal(h.doc.activeElement,h.main);assert.equal(h.listeners.size,0)
   h.unmount()
 })
@@ -87,7 +87,7 @@ test('StrictMode effect replay leaves one timer/listener and restores scroll on 
 })
 test('showcase DOM uses supplied art, no extra player, native keyboard button and no inactive overlay',async()=>{
   const source=await readFile(new URL('../src/components/Showcase.tsx',import.meta.url),'utf8'),module={exports:{}}
-  new Function('require','module','exports',compile(source,true))(name=>name==='react/jsx-runtime'?require(name):name.endsWith('.css')?{}:name,module,module.exports)
+  new Function('require','module','exports',compile(source,true))(name=>name==='react'?{useRef:value=>({current:value})}:name==='react/jsx-runtime'?require(name):name.endsWith('.css')?{}:name.includes('ShowcaseMusic')||name.includes('ShowcasePosterLabels')?{__esModule:true,default:()=>null}:name.endsWith('/showcase')?rules:name,module,module.exports)
   const render=require('react-dom/server').renderToStaticMarkup
   assert.equal(render(module.exports.default({phase:'console',onEnter(){},enterRef:{current:null}})),'')
   const html=render(module.exports.default({phase:'showcase',onEnter(){},enterRef:{current:null}}))
@@ -106,7 +106,7 @@ test('App keeps the console and current player in the same reconciliation positi
   const deps={react,'./lib/siteRoute':siteRules,'./lib/musicLocation':locationRules,
     './hooks/useShowcase':{useShowcase:()=>({phase,blocked:phase!=='console',enter(){},show(){},enterButton:{current:null},returnButton:{current:null}})},
     './hooks/usePageTransition':{usePageTransition:()=>()=>{}},'./hooks/useSiteRoute':{useSiteRoute:()=>({route,navigate(page){events.push(['navigate',page])}})},
-    './hooks/useAudioVisualizer':{useAudioVisualizer:()=>({session:visualization,pending,start(){events.push(['start']);return new Promise(()=>{})},stop(){events.push(['stop'])}})},'./hooks/useNavigationControl':{useNavigationControl:()=>({})},
+    './hooks/useAudioVisualizer':{useAudioVisualizer:()=>({session:visualization,pending,start(){events.push(['start']);return new Promise(()=>{})},stop(){events.push(['stop'])}})},'./hooks/useNavigationControl':{useNavigationControl:()=>({})},'./hooks/useNavigationMotion':{useNavigationMotion(){}},'./hooks/useGrooveStandby':{useGrooveStandby:()=>false},
     './hooks/usePlaybackPersistence':{usePlaybackPersistence:()=>()=>{}},'./lib/playbackSession':{readPlaybackSession:()=>null},
     './lib/playbackPreferences':{readPlaybackPreferences:()=>({presentation:'floating'}),resolvePlayerPresentation:()=> 'floating'},
     './data/members':{members:[]},'./data/music':{musicCatalog:[entry]},'./data/musicLibrary':{musicLibrary:{schemaVersion:1,songs:[],releases:[],sources:[]}},
@@ -116,6 +116,7 @@ test('App keeps the console and current player in the same reconciliation positi
   for(const value of ['showcase','entering','console','returning','showcase']){
     phase=value;const result=module.exports.default(),children=result.props.children,app=children[1]
     assert.match(app.props.className,/with-music-player/);assert.equal(app.props.inert,value!=='console')
+    assert.equal(app.props.style?.opacity,value==='showcase'?0:undefined,'the first SHOWCASE commit hides the mounted console; spray phases remain visible')
     const index=app.props.children.findIndex(child=>child?.type==='./components/PlayerDock')
     assert(index>=0,JSON.stringify(app.props.children.map(child=>child&&({type:child.type,keys:Object.keys(child.props??{})}))))
     playerIndex??=index;assert.equal(index,playerIndex);assert.equal(app.props.children[index].props.entry,entry);assert.equal(app.props.children[index].props.requestId,27)
@@ -160,7 +161,7 @@ test('App keeps the console and current player in the same reconciliation positi
 
 test('reference texture is clipped to paper and ink footer; portraits and navigation logo remain original assets',async()=>{
   const source=await readFile(new URL('../src/components/Showcase.tsx',import.meta.url),'utf8'),module={exports:{}}
-  new Function('require','module','exports',compile(source,true))(name=>name==='react/jsx-runtime'?require(name):name.endsWith('.css')?{}:name,module,module.exports)
+  new Function('require','module','exports',compile(source,true))(name=>name==='react'?{useRef:value=>({current:value})}:name==='react/jsx-runtime'?require(name):name.endsWith('.css')?{}:name.includes('ShowcaseMusic')||name.includes('ShowcasePosterLabels')?{__esModule:true,default:()=>null}:name.endsWith('/showcase')?rules:name,module,module.exports)
   const header=await readFile(new URL('../src/components/Header.tsx',import.meta.url),'utf8')
   const logoPath=header.match(/import logoWhite from '([^']+)'/)[1]
   assert.equal(module.exports.showcaseArtwork.logo,logoPath)

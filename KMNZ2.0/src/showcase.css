@@ -1,5 +1,7 @@
 .showcase {
-  --showcase-time: 2000ms;
+  --showcase-time: 3000ms;
+  --showcase-exit-time: 600ms;
+  --showcase-return-delay: 2400ms;
   --showcase-classic-clip: url(#showcase-classic-cut);
   --showcase-new-clip: url(#showcase-new-cut);
   position: fixed; inset: 0; z-index: 300; isolation: isolate;
@@ -31,39 +33,39 @@ transform-origin: center; }
 .showcase-enter:focus-visible { outline: 3px solid #181818; outline-offset: 6px; }
 .showcase-stickers { position: absolute; inset: 0; pointer-events: none; }
 .showcase-sticker { position: absolute; display: block; width: clamp(75px,8.2vw,155px); aspect-ratio: 1; overflow: hidden; }
-.showcase-sticker > img { position: absolute; width: 270%; max-width: none; height: auto; }
+.showcase-sticker img { position: absolute; width: 270%; max-width: none; height: auto; }
 .showcase-sticker-lita { left: 51.7%; top: 20%; transform: rotate(-9deg); }
-.showcase-sticker-lita > img { left: -80%; top: -2%; }
+.showcase-sticker-lita img { left: -80%; top: -2%; }
 .showcase-sticker-nero { left: 42.2%; top: 63%; transform: rotate(-12deg); }
-.showcase-sticker-nero > img { left: -28%; top: -86%; }
+.showcase-sticker-nero img { left: -28%; top: -86%; }
 .showcase-sticker-tina { left: 51%; top: 70%; transform: rotate(11deg); }
-.showcase-sticker-tina > img { left: -145%; top: -115%; }
+.showcase-sticker-tina img { left: -145%; top: -115%; }
 
 .showcase-return { position: fixed; left: max(16px,env(safe-area-inset-left)); bottom: max(16px,env(safe-area-inset-bottom)); z-index: 90; min-height: 36px; padding: 5px 13px; border: 1px solid var(--border); border-radius: 4px; color: var(--muted); background: var(--surface); font: 400 12px/1.5 "Permanent Marker",sans-serif; letter-spacing: .04em; cursor: pointer; opacity: .8; }
 .showcase-return:hover,.showcase-return:focus-visible { opacity: 1; color: var(--text); }
-.showcase[data-phase="entering"] .showcase-classic { animation: showcase-left-out var(--showcase-time) both; }
-.showcase[data-phase="entering"] .showcase-new { animation: showcase-right-out var(--showcase-time) both; }
+.showcase[data-phase="entering"] .showcase-classic { animation: showcase-left-out var(--showcase-exit-time) both; }
+.showcase[data-phase="entering"] .showcase-new { animation: showcase-right-out var(--showcase-exit-time) both; }
 .showcase[data-phase] .showcase-poster { animation-timing-function: cubic-bezier(.45,0,.55,1); }
-.showcase[data-phase="entering"] .showcase-paper,.showcase[data-phase="entering"] .showcase-bottom { animation: showcase-paper-out var(--showcase-time) both; }
+.showcase[data-phase="entering"] .showcase-paper,.showcase[data-phase="entering"] .showcase-bottom { animation: showcase-paper-out var(--showcase-exit-time) both; }
 .showcase[data-phase="entering"] { background: transparent; }
-.showcase[data-phase="entering"] .showcase-seam { animation: showcase-tear-out var(--showcase-time) steps(1,end) both; }
-.showcase[data-phase="entering"] .showcase-center { animation: showcase-mark-out var(--showcase-time) both; }
-.showcase[data-phase="entering"] .showcase-logo-sticker { animation: showcase-sticker-peel var(--showcase-time) both; }
+.showcase[data-phase="entering"] .showcase-seam { animation: showcase-tear-out var(--showcase-exit-time) steps(1,end) both; }
+.showcase[data-phase="entering"] .showcase-center { animation: showcase-mark-out var(--showcase-exit-time) both; }
+.showcase[data-phase="entering"] .showcase-logo-sticker { animation: showcase-sticker-peel var(--showcase-exit-time) both; }
 .showcase[data-phase="entering"] .showcase-enter { transform: translate(3px,4px) rotate(3deg); box-shadow: 1px 1px 0 #181818; }
-.showcase[data-phase="entering"] .showcase-stickers { animation: showcase-right-out var(--showcase-time) both; }
+.showcase[data-phase="entering"] .showcase-stickers { animation: showcase-right-out var(--showcase-exit-time) both; }
 .showcase[data-phase="returning"] { background: transparent; }
-.showcase[data-phase="returning"] .showcase-classic { animation: showcase-left-out var(--showcase-time) reverse both; }
-.showcase[data-phase="returning"] .showcase-new,.showcase[data-phase="returning"] .showcase-stickers { animation: showcase-right-out var(--showcase-time) reverse both; }
-.showcase[data-phase="returning"] .showcase-paper,.showcase[data-phase="returning"] .showcase-bottom { animation: showcase-paper-out var(--showcase-time) reverse both; }
-.showcase[data-phase="returning"] .showcase-seam { animation: showcase-tear-out var(--showcase-time) steps(1,end) reverse both; }
-.showcase[data-phase="returning"] .showcase-center { animation: showcase-mark-out var(--showcase-time) reverse both; }
-.showcase[data-phase="returning"] .showcase-logo-sticker { animation: showcase-sticker-peel var(--showcase-time) reverse both; }
-@keyframes showcase-left-out { 0%,12% { transform: translateX(0) rotate(0); } 46%,100% { transform: translateX(-58%) rotate(-4deg); } }
-@keyframes showcase-right-out { 0%,12% { transform: translateX(0) rotate(0); } 46%,100% { transform: translateX(60%) rotate(4deg); } }
-@keyframes showcase-paper-out { 0%,22% { opacity: 1; } 43%,100% { opacity: 0; } }
-@keyframes showcase-tear-out { 0%,5% { transform: none; opacity: 1; } 9% { transform: translate(3px,-2px) rotate(.3deg); } 14% { transform: translate(-5px,3px) rotate(-.5deg); } 20% { transform: translate(8px,-20vh) rotate(6deg); opacity: .8; } 29%,100% { transform: translate(-5vw,-120vh) rotate(-12deg); opacity: 0; } }
-@keyframes showcase-mark-out { 0% { transform: translate(-50%,-50%) rotate(-7deg); opacity: 1; } 7% { transform: translate(-49.5%,-49.5%) rotate(-5deg); } 13% { transform: translate(-50.5%,-51%) rotate(-9deg); } 18% { transform: translate(-50%,-62%) rotate(-4deg); opacity: 1; } 26%,100% { transform: translate(-50%,-100vh) rotate(12deg); opacity: 0; } }
-@keyframes showcase-sticker-peel { 0% { transform: perspective(900px) rotateX(0); } 6% { transform: perspective(900px) rotateX(-10deg) rotate(-1deg); } 13% { transform: perspective(900px) rotateX(-21deg) rotate(-3deg) translateY(-3px); } 22%,100% { transform: perspective(900px) rotateX(-27deg) rotate(-5deg) translateY(-12px); } }
+.showcase[data-phase="returning"] .showcase-classic { animation: showcase-left-out var(--showcase-exit-time) reverse both; }
+.showcase[data-phase="returning"] .showcase-new,.showcase[data-phase="returning"] .showcase-stickers { animation: showcase-right-out var(--showcase-exit-time) reverse both; }
+.showcase[data-phase="returning"] .showcase-paper,.showcase[data-phase="returning"] .showcase-bottom { animation: showcase-paper-out var(--showcase-exit-time) reverse both; }
+.showcase[data-phase="returning"] .showcase-seam { animation: showcase-tear-out var(--showcase-exit-time) steps(1,end) reverse both; }
+.showcase[data-phase="returning"] .showcase-center { animation: showcase-mark-out var(--showcase-exit-time) reverse both; }
+.showcase[data-phase="returning"] .showcase-logo-sticker { animation: showcase-sticker-peel var(--showcase-exit-time) reverse both; }
+@keyframes showcase-left-out  { 0%,36.3636%  { transform: translateX(0) rotate(0); } 100%  { transform: translateX(-58%) rotate(-4deg); } }
+@keyframes showcase-right-out  { 0%,36.3636%  { transform: translateX(0) rotate(0); } 100%  { transform: translateX(60%) rotate(4deg); } }
+@keyframes showcase-paper-out  { 0%,51.1628%  { opacity: 1; } 100%  { opacity: 0; } }
+@keyframes showcase-tear-out  { 0%,17.2414%  { transform: none; opacity: 1; } 31.0345%  { transform: translate(3px,-2px) rotate(.3deg); } 48.2759%  { transform: translate(-5px,3px) rotate(-.5deg); } 68.9655%  { transform: translate(8px,-20vh) rotate(6deg); opacity: .8; } 100%  { transform: translate(-5vw,-120vh) rotate(-12deg); opacity: 0; } }
+@keyframes showcase-mark-out  { 0%  { transform: translate(-50%,-50%) rotate(-7deg); opacity: 1; } 26.9231%  { transform: translate(-49.5%,-49.5%) rotate(-5deg); } 50%  { transform: translate(-50.5%,-51%) rotate(-9deg); } 69.2308%  { transform: translate(-50%,-62%) rotate(-4deg); opacity: 1; } 100%  { transform: translate(-50%,-100vh) rotate(12deg); opacity: 0; } }
+@keyframes showcase-sticker-peel  { 0%  { transform: perspective(900px) rotateX(0); } 27.2727%  { transform: perspective(900px) rotateX(-10deg) rotate(-1deg); } 59.0909%  { transform: perspective(900px) rotateX(-21deg) rotate(-3deg) translateY(-3px); } 100%  { transform: perspective(900px) rotateX(-27deg) rotate(-5deg) translateY(-12px); } }
 @media (max-width: 760px), (max-aspect-ratio: 1/1) {
   .showcase { --showcase-classic-clip: url(#showcase-classic-mobile-cut); --showcase-new-clip: url(#showcase-new-mobile-cut); }
   .showcase-poster > img { left: 0; right: auto; width: 100%; height: 44%; object-fit: cover; object-position: 50% 0; transform: none; }
@@ -81,9 +83,9 @@ transform-origin: center; }
   .showcase[data-phase="entering"] .showcase-new,.showcase[data-phase="entering"] .showcase-stickers,.showcase[data-phase="returning"] .showcase-new,.showcase[data-phase="returning"] .showcase-stickers { animation-name: showcase-bottom-out; }
   .showcase[data-phase="entering"] .showcase-seam,.showcase[data-phase="returning"] .showcase-seam { animation-name: showcase-mobile-tear; }
 }
-@keyframes showcase-top-out { 0%,12% { transform: translateY(0) rotate(0); } 46%,100% { transform: translateY(-55%) rotate(-3deg); } }
-@keyframes showcase-bottom-out { 0%,12% { transform: translateY(0) rotate(0); } 46%,100% { transform: translateY(55%) rotate(3deg); } }
-@keyframes showcase-mobile-tear { 0%,5% { transform: translate(-50%,-50%) rotate(90deg); opacity: 1; } 12% { transform: translate(-50%,-49%) rotate(91deg); } 19% { transform: translate(-50%,-51%) rotate(88deg); opacity: .8; } 29%,100% { transform: translate(90%,-50%) rotate(100deg); opacity: 0; } }
+@keyframes showcase-top-out  { 0%,36.3636%  { transform: translateY(0) rotate(0); } 100%  { transform: translateY(-55%) rotate(-3deg); } }
+@keyframes showcase-bottom-out  { 0%,36.3636%  { transform: translateY(0) rotate(0); } 100%  { transform: translateY(55%) rotate(3deg); } }
+@keyframes showcase-mobile-tear  { 0%,17.2414%  { transform: translate(-50%,-50%) rotate(90deg); opacity: 1; } 41.3793%  { transform: translate(-50%,-49%) rotate(91deg); } 65.5172%  { transform: translate(-50%,-51%) rotate(88deg); opacity: .8; } 100%  { transform: translate(90%,-50%) rotate(100deg); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) {
   .showcase[data-phase] > [class],.showcase[data-phase] .showcase-logo-sticker { animation: none; }
   .showcase[data-phase="entering"] { animation: showcase-fade 180ms linear both; background: #f3f0e8; }
@@ -92,3 +94,25 @@ transform-origin: center; }
   .showcase-enter:hover { transform: rotate(3deg); }
 }
 @keyframes showcase-fade { from { opacity: 1; } to { opacity: 0; } }
+
+/* Short attacks, elastic returns, and long rests. Posters retain their original transforms. */
+.showcase-logo-groove{position:absolute;inset:0;transform-origin:50% 55%}
+.showcase-sticker-groove{position:absolute;inset:0;display:block;transform-origin:45% 70%}
+.showcase-sticker-nero .showcase-sticker-groove{transform-origin:65% 35%}
+.showcase-sticker-tina .showcase-sticker-groove{transform-origin:30% 75%}
+.showcase-paper-groove{transform-box:fill-box;transform-origin:center}
+.showcase-person-labels{position:absolute;inset:0;pointer-events:none}
+.showcase-person-label{position:absolute;visibility:hidden;transform:translate(-50%,-50%);font:clamp(15px,1.5vw,23px)/1.15 "Permanent Marker",sans-serif;color:#171717;white-space:nowrap}
+.showcase-label-arrival,.showcase-person-tag{display:block;transform-origin:45% 50%}
+.showcase-person-tag{background:#f8f4e8;padding:5px 13px 7px;clip-path:polygon(3% 5%,97% 0,100% 89%,4% 100%,0 45%);filter:drop-shadow(2px 3px 0 #1117)}
+.showcase[data-phase="showcase"] .showcase-person-label[data-ready="true"] .showcase-label-arrival{animation:showcase-label-slap 260ms var(--label-delay,0ms) both}
+@keyframes showcase-label-slap{0%{opacity:0;transform:translateY(-5px) rotate(-5deg) scale(.92)}45%{opacity:1;transform:translateY(1px) rotate(1.5deg) scale(1.035)}75%{transform:translateY(-.5px) rotate(-.5deg) scale(.995)}100%{opacity:1;transform:none}}
+.showcase[data-phase="showcase"] .showcase-enter:hover{animation:showcase-enter-scratch 300ms ease-out both;background:#fff96a;box-shadow:6px 7px 0 #181818}
+@keyframes showcase-enter-scratch{0%{transform:rotate(3deg)}18%{transform:translateX(-3px) rotate(1deg)}42%{transform:translateX(1px) rotate(4deg)}70%{transform:translateX(-.5px) rotate(2.5deg)}100%{transform:rotate(3deg)}}
+.showcase[data-phase="showcase"] .showcase-enter:active{animation:none;transform:translate(3px,4px) rotate(3deg);box-shadow:1px 1px 0 #181818}
+@media(max-width:760px),(max-aspect-ratio:1/1){.showcase-person-label{font-size:14px}.showcase-person-tag{padding:4px 8px}}
+@media(prefers-reduced-motion:reduce){.showcase[data-phase="showcase"] .showcase-person-label[data-ready="true"] .showcase-label-arrival,.showcase[data-phase="showcase"] .showcase-enter:hover{animation:none}}
+
+.showcase[data-phase="returning"] > [class],.showcase[data-phase="returning"] .showcase-logo-sticker{animation-delay:var(--showcase-return-delay)}
+@keyframes showcase-mobile-stickers-out{0%,36.3636%{transform:translateY(0)}100%{transform:translateY(120px)}}
+@media(max-width:760px),(max-aspect-ratio:1/1){.showcase[data-phase="entering"] .showcase-stickers,.showcase[data-phase="returning"] .showcase-stickers{animation-name:showcase-mobile-stickers-out}}

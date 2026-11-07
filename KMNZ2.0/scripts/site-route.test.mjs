@@ -14,7 +14,7 @@ test('hash routes round-trip pages, member details, Spotify release, Unicode sea
     assert.deepEqual(parse(hash(route),releases),route)
   }
   const detail=parse('#/music/spotify/release/sp-album-1?category=ep&q=%E7%8C%AB+%26+KMNZ',releases)
-  assert.equal(detail.music.search,'猫 & KMNZ');assert.equal(detail.music.category,'ep')
+  assert.equal(detail.music.search,'猫 & KMNZ');assert.equal(detail.music.category,'all')
   assert.equal(parse('#/members/4',releases).page,'member-4')
 })
 
@@ -64,7 +64,7 @@ test('release back uses browser history when available and supports directly ope
   const h=harness('#/music/spotify?category=ep')
   try {
     let view=h.render();view.changeMusic({...view.route.music,releaseSourceId:'sp-album-1'});view=h.render();assert.equal(view.route.music.releaseSourceId,'sp-album-1')
-    view.backFromRelease();view=h.render();assert.equal(view.route.music.releaseSourceId,null);assert.equal(view.route.music.category,'ep')
+    view.backFromRelease();view=h.render();assert.equal(view.route.music.releaseSourceId,null);assert.equal(view.route.music.category,'all')
   } finally {h.cleanup()}
   const direct=harness('#/music/spotify/release/sp-album-1')
   try {let view=direct.render();view.backFromRelease();view=direct.render();assert.equal(view.route.music.releaseSourceId,null);assert.equal(direct.entries.length,1)}finally{direct.cleanup()}
@@ -104,9 +104,9 @@ test('music route motion receives platform/category changes and repeated active 
     assert.equal(pending.length,0);assert.equal(h.render().route.music.platform,'youtube')
     view.changeMusic({...view.route.music,platform:'spotify'});pending.shift()();view=h.render();h.flush()
     assert.equal(view.route.music.platform,'spotify')
-    view.changeMusic({...view.route.music,category:'ep'});pending.shift()();view=h.render();h.flush()
-    assert.equal(view.route.music.category,'ep')
-    assert.equal(calls.at(-1).music.from.category,'all');assert.equal(calls.at(-1).music.to.category,'ep')
+    view.changeMusic({...view.route.music,category:'ep'});assert.equal(pending.length,0);view=h.render();h.flush()
+    assert.equal(view.route.music.category,'all')
+    assert.equal(calls.at(-1).music.from.category,'all');assert.equal(calls.at(-1).music.to.category,'all')
     assert(calls.every(call=>call.from==='music' && call.to==='music'))
     const count=h.entries.length
     view.changeMusic({...view.route.music,search:'MIRROR'},true);view=h.render()
@@ -144,7 +144,7 @@ test('opening, switching and closing Spotify track panels preserve list scroll a
     let view=h.render();h.flush();h.win.scrollY=480
     view.changeMusic({...view.route.music,releaseSourceId:'sp-album-1'});view=h.render();h.flush()
     assert.equal(h.win.scrollY,480);assert.equal(view.route.music.releaseSourceId,'sp-album-1')
-    assert.equal(view.route.music.search,'DROPS');assert.equal(view.route.music.category,'ep')
+    assert.equal(view.route.music.search,'DROPS');assert.equal(view.route.music.category,'all')
     h.win.scrollY=640;view.backFromRelease();view=h.render();h.flush()
     assert.equal(h.win.scrollY,640);assert.equal(view.route.music.releaseSourceId,null)
     view.changeMusic({...view.route.music,releaseSourceId:'sp-album-1'});view=h.render();h.flush()
@@ -199,7 +199,7 @@ test('refreshing another page restores the last playlist context and its album p
 test('playlist memory rejects malformed data and normalizes unknown release and invalid positions',()=>{
   for(const raw of [null,'{','{}','{"hash":"#/about"}','{"hash":"#/music/nope"}'])assert.equal(routes.parseMusicMemory(raw,releases),null)
   const value=routes.parseMusicMemory(JSON.stringify({hash:'#/music/spotify/release/missing?category=ep',scroll:-3,panelScroll:'20',sourceIds:['yt-a',null,12]}),releases)
-  assert.equal(value.route.releaseSourceId,null);assert.equal(value.route.category,'ep');assert.equal(value.scroll,0);assert.equal(value.panelScroll,0);assert.deepEqual(value.sourceIds,['yt-a'])
+  assert.equal(value.route.releaseSourceId,null);assert.equal(value.route.category,'all');assert.equal(value.scroll,0);assert.equal(value.panelScroll,0);assert.deepEqual(value.sourceIds,['yt-a'])
 })
 
 
@@ -213,5 +213,21 @@ test('deep playlist scroll is restored during layout commit, before any next-fra
   v.navigate('mv');v=h.render();assert.equal(h.win.scrollY,0)
   v.navigate('music');v=h.render();assert.equal(h.win.scrollY,23942)
   h.flush();assert.equal(h.win.scrollY,23942)
+ }finally{h.cleanup()}
+})
+
+
+test('landing normalization updates history immediately without capturing console over SHOWCASE',()=>{
+ const captures=[]
+ const h=harness('#/',(from,to,update)=>{captures.push([from,to]);update()})
+ try{
+  let view=h.render();assert.equal(view.route.page,'home');const count=h.entries.length
+  view.changeMusic(view.route.music,true);view=h.render()
+  assert.equal(view.route.page,'music');assert.equal(h.entries.length,count)
+  assert.equal(h.win.location.pathname,'/KMNZ/');assert.equal(h.win.location.hash,'#/music/youtube')
+  view.changeMusic(view.route.music,true);view=h.render()
+  assert.deepEqual(captures,[],'initial alias replacement and StrictMode replay must not start a browser view transition')
+  view.navigate('about');view=h.render()
+  assert.equal(view.route.page,'about');assert.deepEqual(captures,[['music','about']],'normal navigation still animates')
  }finally{h.cleanup()}
 })

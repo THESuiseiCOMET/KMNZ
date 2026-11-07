@@ -48,7 +48,7 @@ const queueSelections = createQueueSelections(musicLibrary)
 export default function Music({ locateRequest, selectedId, onSelect, route, onRouteChange, onReleaseBack }: MusicProps) {
   const [localRoute, setLocalRoute] = useState<MusicRoute>(defaultMusicRoute)
   const currentRoute = route ?? localRoute
-  const { search, platform, category: spotifyCategory, youtubeCategory = 'all', youtubeGroup = null, youtubeMember = null, releaseSourceId } = currentRoute
+  const { search, platform, youtubeCategory = 'all', youtubeGroup = null, youtubeMember = null, releaseSourceId } = currentRoute
   const platformIndicator = useNavigationIndicator(platform, false, '.music-tab[aria-pressed="true"]', '.music-tab')
   function updateRoute(patch: Partial<MusicRoute>, replace = false) {
     const next = { ...currentRoute, ...patch }
@@ -97,7 +97,7 @@ export default function Music({ locateRequest, selectedId, onSelect, route, onRo
   }, [releaseSourceId])
 
   const filtered = useMemo(() => platform === 'youtube' ? sortMusicByDate(views.youtubeCards(search, youtubeCategory, youtubeGroup, youtubeMember)) : [], [platform, search, youtubeCategory, youtubeGroup, youtubeMember])
-  const spotify = useMemo(() => platform === 'spotify' ? sortMusicByDate(views.spotifyCards(search, spotifyCategory)) : [], [platform, search, spotifyCategory])
+  const spotify = useMemo(() => platform === 'spotify' ? sortMusicByDate(views.spotifyCards(search)) : [], [platform, search])
   const detail = platform === 'spotify' && releaseSourceId ? views.releaseDetail(releaseSourceId) : null
 
   function selectFromList(entry: MusicEntry) {
@@ -108,14 +108,15 @@ export default function Music({ locateRequest, selectedId, onSelect, route, onRo
 
   function selectFromAlbum(entry: MusicEntry, position?: { discNumber: number; trackNumber: number }) {
     const selection = entry.kind === 'album' ? queueSelections.list([entry], entry.id)
-      : detail ? queueSelections.album(detail.release.id, entry.id, position) : null
+      : detail ? queueSelections.album(detail.release.id, entry.id, position) ?? queueSelections.list([entry], entry.id) : null
     if (selection) onSelect(selection)
   }
 
   function renderCard(item: MusicEntry, position: number) {
     const metadata = getMusicMetadata(item)
     const date = getMusicDate(item)
-    const isRelease = item.platform === 'spotify' && item.kind === 'album'
+    const cardDetail = item.platform === 'spotify' ? views.releaseDetail(item.id) : null
+    const isRelease = Boolean(cardDetail)
 
     const selected = selectedId === item.id || isRelease && selectedId !== null
       && views.sourceRelease(selectedId)?.id === views.sourceRelease(item.id)?.id
@@ -134,10 +135,10 @@ export default function Music({ locateRequest, selectedId, onSelect, route, onRo
         >
           <MusicCover entry={item} metadata={metadata} />
           </button>
-          <button type="button" className={'music-cover-play' + (item.platform === 'youtube' ? ' music-card-play-youtube' : '')}
+          {item.platform === 'youtube' && <button type="button" className={'music-cover-play' + (item.platform === 'youtube' ? ' music-card-play-youtube' : '')}
             onClick={() => selectFromList(item)} aria-label={'播放 ' + item.title}>
             <span className="music-card-icon" style={{ maskImage: `url("${playIcon}")`, WebkitMaskImage: `url("${playIcon}")` }} aria-hidden="true" />
-          </button>
+          </button>}
         </div>
         <div className={'music-card-body music-card-body-' + item.platform}>
           <div className="music-card-title">
@@ -148,7 +149,10 @@ export default function Music({ locateRequest, selectedId, onSelect, route, onRo
             </a>}
           </div>
 
-          {date && <time className="music-card-date" dateTime={date.dateTime}>{date.label}</time>}
+          <div className="music-card-meta">
+            {date && <time className="music-card-date" dateTime={date.dateTime}>{date.label}</time>}
+            {cardDetail && <span className="music-card-track-count">{cardDetail.tracks.length} {cardDetail.tracks.length === 1 ? 'track' : 'tracks'}{cardDetail.release.tracklistStatus === 'partial' ? ' listed' : ''}</span>}
+          </div>
           {item.platform === 'youtube' && <div className="music-source-links">
             <a href={item.externalUrl} target="_blank" rel="noopener noreferrer" className="music-external music-youtube-link" aria-label={'在 YouTube 打开 ' + item.title}>
               <span className="music-source-mark" style={{ maskImage: `url("${youtubeIcon}")`, WebkitMaskImage: `url("${youtubeIcon}")` }} aria-hidden="true" />
@@ -196,11 +200,8 @@ export default function Music({ locateRequest, selectedId, onSelect, route, onRo
           </div>
         </div>
         <div className="music-filter-bar">
-          {platform === 'spotify' ? <MusicFilterGroup key="spotify" label="Spotify 分类"
-            options={[['albums', 'LP'], ['ep', 'EP']] as const} active={spotifyCategory === 'all' ? null : spotifyCategory}
-            onChange={value => filter({ type: 'spotify', value })} />
-            : <MusicFilterGroup key="youtube" label="YouTube 分类"
-              options={[ ['original', 'Original'], ['cover', 'Cover'], ['stream', 'Stream']] as const} active={youtubeCategory === 'all' ? null : youtubeCategory}
+          {platform === 'youtube' && <MusicFilterGroup key="youtube" label="YouTube 分类"
+              options={[[ 'original', 'Original'], ['cover', 'Cover'], ['stream', 'Stream']] as const} active={youtubeCategory === 'all' ? null : youtubeCategory}
               onChange={value => filter({ type: 'youtube', value })} />}
           {platform === 'youtube' && youtubeCategory === 'original' && <MusicFilterGroup secondary key="original" label="原创分类"
             options={[ ['lita-liz', 'LITA & LIZ'], ['lita-tina-nero', 'LITA & TINA & NERO']] as const}
