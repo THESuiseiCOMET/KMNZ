@@ -1,6 +1,6 @@
 # KMNZ 2.0 文件位置速查
 
-本文件只用于查找和修改项目文件，不会显示在网页上。
+本文用于定位项目文件。早期迭代记录可能描述旧行为，现行规则见文末「当前版本维护入口」及 README。
 
 ## 常改的位置
 
@@ -426,11 +426,11 @@ scripts/update-music-metadata.mjs 的校验保留覆盖索引中来源为 youtub
 
 - `src/assets/showcase/ink-sticker.svg`：横向实心黑墨标牌、非规则白色模切边、滴墨和投影；`showcase.css` 的 `.showcase-center` / `.showcase-logo` 控制约 313 × 166px 贴纸及字标。桌面人物 translate/scale 保留用户微调，小屏独立取消横向偏移。
 - `src/assets/showcase/spray-can.svg`：原创漫画喷漆罐，喷嘴出口为 viewBox 坐标 (112,21)，瓶身嵌入未经修改的导航同款 KMNZLOGOW.webp。
-- `src/lib/sprayReveal.ts`：2000ms 有界时间线、可见区域测量结果、按弧长采样的轨迹与同步遮罩进度；导航、当前页面、实际播放器分段揭示，无播放器时不生成播放器段。
+- `src/lib/sprayReveal.ts`：2000ms GRAFFITI REVEAL 时间线；导航斜扫（640–1020ms）、两道交错弧线（1060–1380ms、1440–1760ms）与折笔收尾（1800–1850ms）。sprayGesture 控制加速/停顿/甩动，颗粒笔触与落后 48ms 的实心补清共用路径，揭示进度只增不减；播放器没有独立延迟。
 - `src/components/SprayReveal.tsx`：独立非交互 SVG 覆盖层，测量并揭示原组件；喷嘴和遮罩共用采样，不复制或重挂载播放器。反向收回遮罩，卸载/结束清理 RAF、resize 和选中标记临时样式；尺寸变化安全完成转场。
 - `src/spray-reveal.css`：喷漆罐、有限颗粒和移动端尺寸；减少动态效果关闭喷罐，沿用 180ms 淡入淡出。
 - `src/App.tsx`：新覆盖层追加在原 app 之后；`useShowcase.ts` 的 enter/show/finish 为稳定回调，播放器刷新状态不重启转场。
-- `scripts/spray-reveal.test.mjs`：轨迹/喷嘴/遮罩同步、揭示顺序、可见区域、播放器缺省、边界覆盖、反向与 RAF 清理；`scripts/showcase.test.mjs` 保留挂载/会话/焦点回归并新增稳定回调检查。
+- `scripts/spray-reveal.test.mjs`：动作节奏/喷嘴/遮罩同步、颗粒与实心累积、双弧线/竖屏路径、导航内播放控件与两侧悬窗、全视口边界覆盖、反向与 RAF 清理；`scripts/showcase.test.mjs` 保留挂载/会话/焦点回归并新增稳定回调检查。
 
 
 ## 控制台导航与方格纸背景
@@ -498,8 +498,45 @@ scripts/update-music-metadata.mjs 的校验保留覆盖索引中来源为 youtub
 - scripts/music-extra-covers.test.mjs / scripts/music-views.test.mjs：校验每个来源唯一、正式元数据合并后的精确时间戳、东京日期、三个成员筛选及实际卡片 time 标签和排序。
 - 本次核对发现：sources.json 已收录 11/11，music-metadata.overrides.json 已完整包含对应 API 日期且与桌面补丁一致；music-metadata.json 无这 11 条日期，由人工覆盖索引提供。实际 resolveMetadata / getMusicDate / Music 卡片链路正常，旧 dist 构建早于导入及补丁，不含这 11 个视频 ID；修复为重新构建，不重写现有日期、曲库或 UI。静态预览加载新构建需刷新页面。
 
+## KMNZ Admin Mini V1（本地工具）
+
+- admin/start.bat：检查 Node.js 22+ 和现有项目依赖，提示 gh 缺失，启动本地服务并打开浏览器；不安装软件、不提交文件。
+- admin/index.html：原生单页界面，批量视频获取、人工确认分类/成员/录音关联、Bilibili 来源绑定、日期及 JSON 变更预览、明确确认后创建 Draft PR；无 iframe、React 后台或数据库。
+- admin/server.mjs：复用 scripts/discovery/core.mjs 的 YouTube 分批请求和现有 C1/元数据校验；发布时间只写自动元数据，时长仅在本地草稿。仅监听 127.0.0.1:4194，校验 Host/Origin/请求令牌；读取服务器环境中的 YOUTUBE_API_KEY，启动时可从已忽略的项目 .env.local 加载。草稿和临时克隆位于仓库外 LOCALAPPDATA/KMNZAdminMini；通过 gh 动态查询默认分支、检查远端完整曲库和已核实元数据，隔离安装已有依赖/测试/构建，仅提交本批次涉及的歌曲/来源/自动元数据文件并创建 Draft PR，不自动合并。失败保留草稿/检查日志/临时目录；已推送批次重试先查询原分支和 PR，避免重复创建。远端落后即停止，不同步用户未提交修改。
+- scripts/admin-mini.test.mjs：视频去重/批量边界/无效日期、生产日期加载函数、人工元数据保留、同批次歌曲和 Bilibili 绑定、重复冲突、本机 HTTP 安全检查、草稿恢复、模拟远端落后及 Draft PR 幂等恢复。所有发布命令为模拟，不创建真实提交或 PR。
+
+- Admin API 请求诊断：admin/server.mjs 使用 Node 原生请求，连接异常时再回退现有 Windows 请求通道；HTTP 拒绝不切换通道重复请求。仅显示安全的 HTTP 状态和预定义原因，区分配额、密钥、API 启用、来源限制和网络错误，不返回响应原文、密钥或请求 URL；失败不写入草稿。scripts/admin-mini.test.mjs 覆盖备用通道及敏感信息屏蔽。
+
+- Bilibili 导入回归：scripts/music-filters.test.mjs 使用独立的未绑定样本验证可选外链和安全渲染，并恢复原数据；不再要求实际曲库完全没有 BV 绑定。admin/server.mjs 按依赖安装、项目测试、生产构建区分失败阶段并指向对应日志；scripts/admin-mini.test.mjs 覆盖提示与原始输出屏蔽。
+
 ## YouTube Stream 分类
 
 - src/types/music.ts / src/lib/musicLibrary.ts：新增 stream 来源分类，使用 performers 记录已确认的 LITA、TINA、NERO；保留 Cover 与 Original 原有字段和校验。
 - src/lib/musicViews.ts / src/lib/siteRoute.ts / src/pages/Music.tsx：Stream 一级筛选和三名成员子筛选，复用搜索、排序、队列及 URL/会话筛选记忆；不自动重分类已有记录。
-- scripts/music-stream.test.mjs：分类校验、交叉成员去重、路由记忆、筛选队列、日期与实际页面渲染回归。
+- admin/index.html / admin/server.mjs：支持 Stream 录入及成员校验，日期仍走原自动元数据链路，BV 绑定和草稿逻辑不变。
+- scripts/music-stream.test.mjs / scripts/admin-mini.test.mjs：分类校验、交叉成员去重、路由记忆、筛选队列、页面渲染及 Admin 日期读取回归。
+
+## Admin 批量录入与标题识别
+
+- admin/index.html：YouTube/Bilibili 两列按原始行号配对，顶部批量时期/类型/默认成员设置；标题识别优先、手动逐条修正保留，移除必填艺人框并将歌曲关联收起。预览以标题展示 BV；已完成批次保留历史，同时标明当前曲库的后续 BV 修正。
+- admin/batch.mjs：小型纯函数模块，共用于浏览器和本地服务，统一标题成员识别、自动署名、批量默认值和输入行解析；避免两端规则不一致，不增加依赖。
+- admin/server.mjs：在请求元数据前验证配对冲突，以视频 ID 保持去重/失败后的 BV 行号对应，原子保存成功草稿，自动生成缺省署名；原发布时间、人工覆盖和 Draft PR 发布逻辑不变。
+- scripts/admin-batch.test.mjs / scripts/admin-mini.test.mjs：自动识别与批量默认值、无艺人框导入、按行去重防错位、HTTP 草稿持久化、失败保留、手动覆盖优先及原发布流程回归；测试使用模拟官方返回，不创建真实 PR。
+
+- Admin 连续批次修复：admin/server.mjs 在“开始新批次”时重读并校验本地曲库，归档旧草稿后切换快照；读取失败保留旧批次和快照，批次进行中仍拦截外部数据变化。admin/index.html 保留上批时期/类型/成员设置，无需逐批重启；只有发布失败才附带恢复目录。scripts/admin-mini.test.mjs 覆盖同一进程连续批次、合并后去重、旧草稿归档及无效曲库恢复。
+
+## Admin 本地验收、编辑和列表管理
+
+- admin/index.html：增加已有 YouTube 条目的搜索编辑、标题/类型/时期/成员/BV 字段；“清空列表”保留批量设置并归档旧批次，单条移除同步清理 BV 和输入行。共享录音标题变更需明确确认。
+- admin/server.mjs：编辑及导入统一生成最小数据变更；预览后才能应用到本地，自动备份并构建 /KMNZ/，本地验收确认后才创建 Draft PR。PR 使用应用前基线及本批次差异，保留其他工作区修改；支持撤回、构建重试和进程重启后的恢复。
+- admin/local-data.mjs：独立的小型本地文件写入模块，以原始文本核对并逐文件原子替换；失败时回滚已写文件，检测到其他本地修改时拒绝覆盖。备份和草稿保留在仓库外。
+- scripts/admin-local-workflow.test.mjs：覆盖 BV 同批互换、共享标题保护、待处理列表清空/移除、本地应用/构建/撤回、PR 使用原基线、构建失败恢复、并发外部修改保护及重启恢复。测试采用隔离目录和模拟 GitHub，不创建真实 PR。
+
+## 当前版本维护入口
+
+- **SHOWCASE / SPRAY REVEAL**：`ShowcasePosterLabels.tsx` 按人物锚点定位标签，`showcaseGroove.ts` 使用 94 BPM 与 0.06 秒首拍偏移编排前景。开场音乐由 `ShowcaseMusic.tsx` / `showcaseAudio.ts` 独立管理，仅用于开发环境预览。转场以 `showcase.ts` 和 `sprayReveal.ts` 为准：600 ms 海报退场、900–1050 ms 字形淡出、1050 ms 开始导航、1200–2800 ms 斜向喷涂，3000 ms 完成。减少动态效果为 180 ms。
+- **曲库与播放器**：`Music.tsx` 和 `musicViews.ts` 负责 Spotify 卡片及确认曲目。曲数用英文与日期同行，部分收录显示 `listed`。旧 Spotify 筛选链接归入全部。导航栏播放由 `Header.tsx`、`PlayerDock.tsx`、`IdlePlayerControls.tsx` 管理，Spotify 官方卡片为 80 px。
+- **LET’S GROOVE**：保留 `#/mv`。待机时 `GrooveStandby.tsx` 用原 SVG 显示居中的白色 Logo，扫光周期 4.6 秒。官方播放确认或采集收到声音后，`useGrooveStandby.ts` 隐藏 Logo，暂停与切歌不闪回，关闭音源后恢复。
+- **导航与布局**：`styles.css` 的 `--max-width` 为 1280 px，与主内容共用 16–24 px 留白。`useNavigationMotion.ts` 在收放时仅做一次布局调整，随后用位移动画衔接；`useNavigationControl.ts` 缓存恢复按钮位置。About 双栏底部自动对齐。
+- **暂时隐藏的功能**：在 `siteRoute.ts` 将 `historyPageEnabled` 改为 `true` 可恢复 HISTORY；在 `App.tsx` 将 `themePeekEnabled` 改为 `true` 可恢复主题和导航角色弹图。
+- **Admin Mini**：`admin/start.bat` 支持复用本项目已启动服务。页面可重新获取过期会话并在同一批次内重试一次，旧服务缺少清除草稿能力时提示重启。`admin/bilibili.mjs` 提供双平台标题核对。发布 Git 步骤有独立日志，克隆只对已识别的网络错误重试一次。
